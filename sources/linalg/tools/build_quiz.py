@@ -26,7 +26,11 @@ import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.abspath(os.path.join(HERE, "..", "01《线性代数》题库刷题网页.html"))
+# 项目根（成品 HTML 所在目录）：默认 = tools 的上一级；
+# 平台构建（build_subject.py ← build_all.py）用环境变量 QUIZ_PROJECT_DIR 重定向，
+# 与 update_site.py 的 PRODUCT 定位保持同一逻辑，避免两边各写各的。
+PROJECT_DIR = os.path.abspath(os.environ.get("QUIZ_PROJECT_DIR") or os.path.join(HERE, ".."))
+OUT = os.path.join(PROJECT_DIR, "01《线性代数》题库刷题网页.html")
 
 
 def _katex_dir():
