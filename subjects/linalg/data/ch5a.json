@@ -1,0 +1,2242 @@
+{
+ "chapter": 5,
+ "questions": [
+  {
+   "id": "q-359",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.2 方阵的特征值与特征向量",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=\\begin{pmatrix}1&2\\\\0&3\\end{pmatrix}$，则 $A$ 的特征值为",
+   "options": [
+    "$1$ 与 $3$",
+    "$1$ 与 $-3$",
+    "$2$ 与 $2$",
+    "$-1$ 与 $3$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：特征值是使 $|\\lambda E-A|=0$ 成立的 $\\lambda$（§5.2）。\n$$|\\lambda E-A|=\\begin{vmatrix}\\lambda-1&-2\\\\0&\\lambda-3\\end{vmatrix}=(\\lambda-1)(\\lambda-3)=0,$$\n故特征值为 $1$ 与 $3$。\nB 错：$|-3E-A|=\\begin{vmatrix}-4&-2\\\\0&-6\\end{vmatrix}=24\\neq0$，$-3$ 不是特征值；\nC 错：$|2E-A|=\\begin{vmatrix}1&-2\\\\0&-1\\end{vmatrix}=-1\\neq0$，$2$ 不是特征值（虽然 $2+2=4$ 恰好等于主对角线元素之和，但「特征值之和等于迹」只是必要条件）；\nD 错：$|-E-A|=\\begin{vmatrix}-2&-2\\\\0&-4\\end{vmatrix}=8\\neq0$，$-1$ 不是特征值。",
+   "misconception": "⚠️易错点：把「特征值之和等于主对角线元素之和」当成充分条件来「凑」特征值。迹相同不能保证特征值相同，必须解特征方程 $|\\lambda E-A|=0$。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "特征值",
+     "code": "M([[1,2],[0,3]]).eigenvals()",
+     "expected": "{3: 1, 1: 1}"
+    }
+   ],
+   "idx": 358
+  },
+  {
+   "id": "q-395",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.1 向量的内积、长度及正交性",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\alpha=(1,0,-1)^{\\mathsf T}$，$\\beta=(1,1,0)^{\\mathsf T}$，则 $(\\alpha,\\beta)$ 的值为",
+   "options": [
+    "$1$",
+    "$0$",
+    "$2$",
+    "$-1$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：实向量的内积按分量相乘再求和（§5.1）：\n$$(\\alpha,\\beta)=1\\times1+0\\times1+(-1)\\times0=1.$$\nA：内积的计算结果就是 $1$，故本题选 A。\nB 错：把 $0\\times1$ 与 $(-1)\\times0$ 两项当作全部内容，漏掉了第一项 $1\\times1=1$。\nC 错：三个乘积项分别是 $1$、$0$、$0$，相加得 $1$，不会得到 $2$。\nD 错：三个乘积项全非负，和为 $1$，不会出现负号。",
+   "misconception": "⚠️易错点：逐项相乘时漏项或把负号带进结果；内积是「对应分量相乘后求和」，本题只有一项非零。",
+   "extension": null,
+   "tags": [
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "内积",
+     "code": "M([[1,0,-1]]).dot(M([[1,1,0]]))",
+     "expected": "1"
+    }
+   ],
+   "idx": 359
+  },
+  {
+   "id": "q-396",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.2 方阵的特征值与特征向量；题型改编自：考研数学真题（A+kE 的特征值）",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=\\begin{pmatrix}2&0\\\\0&3\\end{pmatrix}$，则 $A+2E$ 的两个特征值是",
+   "options": [
+    "$2$ 与 $3$",
+    "$0$ 与 $1$",
+    "$4$ 与 $5$",
+    "$4$ 与 $3$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$A+2E=\\begin{pmatrix}4&0\\\\0&5\\end{pmatrix}$ 是对角阵，其特征值即主对角线元素（§5.2）。\n更一般地：若 $\\lambda$ 是 $A$ 的特征值、$\\alpha\\neq0$ 满足 $A\\alpha=\\lambda\\alpha$，则 $(A+2E)\\alpha=(\\lambda+2)\\alpha$，故 $\\lambda+2$ 是 $A+2E$ 的特征值。\nC：对角阵 $\\mathrm{diag}(4,5)$ 的两个特征值正是 $4$ 与 $5$。\nA 错：$2$ 与 $3$ 是 $A$ 本身的特征值，加 $2E$ 后每个特征值都要加 $2$。\nB 错：把特征值整体减 $2$（对应的是 $A-2E=\\mathrm{diag}(0,1)$）才会得到 $0$ 与 $1$，本题是加。\nD 错：$A+2E$ 的两个对角元都是原对角元加了 $2$，故两个特征值都加了 $2$，不会出现只加一个的情形。",
+   "misconception": "⚠️易错点：把「加 $kE$」记成「特征值加 $k$」与「特征值乘 $k$」混用；前者才是对的（加法）。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编"
+   ],
+   "verify": [],
+   "idx": 360
+  },
+  {
+   "id": "q-397",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.3 相似矩阵",
+    "kind": "textbook"
+   },
+   "stem": "设 $A,B,C$ 均为 $n$ 阶方阵，若 $A\\sim B$ 且 $B\\sim C$，则下列结论**正确**的是",
+   "options": [
+    "$A=C$",
+    "$A\\sim C$",
+    "$A$ 与 $C$ 的特征值必不相同",
+    "$A$ 与 $C$ 的行列式必不相等"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：相似关系具有传递性（§5.3）。若 $B=P^{-1}AP$、$C=Q^{-1}BQ$，则\n$$C=Q^{-1}(P^{-1}AP)Q=(PQ)^{-1}A(PQ),$$\n即存在可逆矩阵 $PQ$ 使 $C=(PQ)^{-1}A(PQ)$，故 $A\\sim C$。\nB：相似关系具有传递性，所以 $A\\sim C$。\nA 错：相似只说明存在可逆矩阵把一个变成另一个，两个相似矩阵的元素可以完全不同。例如 $\\mathrm{diag}(1,2)$ 与 $\\begin{pmatrix}1&1\\\\0&2\\end{pmatrix}$ 的特征值都是 $1,2$ 且都可对角化，故两者相似，但显然不相等。\nC 错：相似矩阵有相同的特征多项式，特征值按重数计也相同。\nD 错：由 $|P^{-1}||P|=1$ 得 $|A|=|B|=|C|$，行列式同样相同。",
+   "misconception": "⚠️易错点：把「相似」当成「相等」；相似是存在可逆矩阵 $P$ 把 $A$ 变成 $B$，并不要求两个矩阵逐元素相同。",
+   "extension": null,
+   "tags": [
+    "概念",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 361
+  },
+  {
+   "id": "q-398",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.5 二次型及其标准形",
+    "kind": "textbook"
+   },
+   "stem": "二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2+2x_1x_3$ 的矩阵是",
+   "options": [
+    "$A=\\begin{pmatrix}1&1&0\\\\1&2&0\\\\0&0&3\\end{pmatrix}$",
+    "$A=\\begin{pmatrix}1&2&0\\\\2&2&0\\\\0&0&3\\end{pmatrix}$",
+    "$A=\\begin{pmatrix}1&0&2\\\\0&2&0\\\\2&0&3\\end{pmatrix}$",
+    "$A=\\begin{pmatrix}1&0&1\\\\0&2&0\\\\1&0&3\\end{pmatrix}$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二次型的矩阵取**对称**形式（§5.5）：$a_{ii}$ 取 $x_i^2$ 的系数，交叉项 $x_ix_j$ 的系数取一半后填入 $a_{ij}=a_{ji}$。\n本题 $x_1^2$ 的系数为 $1$，故 $a_{11}=1$；$x_2^2$ 的系数为 $2$，故 $a_{22}=2$；$x_3^2$ 的系数为 $3$，故 $a_{33}=3$；交叉项 $2x_1x_3$ 的系数为 $2$，取一半得 $a_{13}=a_{31}=1$；无 $x_1x_2$、$x_2x_3$ 项，故 $a_{12}=a_{21}=a_{23}=a_{32}=0$。\nD：所求矩阵为 $\\begin{pmatrix}1&0&1\\\\0&2&0\\\\1&0&3\\end{pmatrix}$。\nA 错：把交叉项错配到了 $x_1x_2$ 的位置上，矩阵里不该出现 $a_{12}=1$。\nB 错：把交叉项系数 $2$ 原样填进了 $a_{12}$ 与 $a_{21}$，对称约定要求取一半。\nC 错：同样是把交叉项系数 $2$ 直接填进 $a_{13}$（及 $a_{31}$），正确取值是 $1$。",
+   "misconception": "⚠️易错点：交叉项系数取一半——$2x_1x_3$ 对应 $a_{13}=a_{31}=1$ 而不是 $2$；这是本章最高频的取错点。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[1,0,1],[0,2,0],[1,0,3]]).det()",
+     "expected": "4"
+    },
+    {
+     "desc": "rank",
+     "code": "M([[1,0,1],[0,2,0],[1,0,3]]).rank()",
+     "expected": "3"
+    }
+   ],
+   "idx": 362
+  },
+  {
+   "id": "q-360",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.1 向量的内积、长度及正交性",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\alpha=(1,1,0)^{\\mathsf T}$，$\\beta=(1,0,1)^{\\mathsf T}$，则 $\\alpha$ 与 $\\beta$ 的夹角 $\\theta$ 为",
+   "options": [
+    "$\\dfrac{\\pi}{4}$",
+    "$\\dfrac{\\pi}{3}$",
+    "$\\dfrac{\\pi}{2}$",
+    "$\\dfrac{\\pi}{6}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：实空间两向量的夹角由内积给出（§5.1）\n$$\\cos\\theta=\\frac{(\\alpha,\\beta)}{\\|\\alpha\\|\\,\\|\\beta\\|}.$$\n其中 $(\\alpha,\\beta)=1\\times1+1\\times0+0\\times1=1$，$\\|\\alpha\\|=\\sqrt{1^2+1^2+0^2}=\\sqrt2$，$\\|\\beta\\|=\\sqrt{1^2+0^2+1^2}=\\sqrt2$，\n故 $\\cos\\theta=\\dfrac{1}{\\sqrt2\\cdot\\sqrt2}=\\dfrac12$，即 $\\theta=\\dfrac{\\pi}{3}$。\nA 错：$\\cos\\dfrac{\\pi}{4}=\\dfrac{\\sqrt2}{2}\\neq\\dfrac12$；\nC 错：$\\cos\\dfrac{\\pi}{2}=0$ 对应 $(\\alpha,\\beta)=0$，本题内积为 $1\\neq0$，两向量**不正交**；\nD 错：$\\cos\\dfrac{\\pi}{6}=\\dfrac{\\sqrt3}{2}>\\dfrac12$。\n**引申**：内积 $(\\alpha,\\beta)$ 的两个重要用途是判别正交（$=0$）与计算夹角；夹角公式也正是 Cauchy 不等式 $|(\\alpha,\\beta)|\\le\\|\\alpha\\|\\|\\beta\\|$ 的几何解释。",
+   "misconception": "⚠️易错点：把「长度」与「长度的平方」混用——$\\|\\alpha\\|^2=(\\alpha,\\alpha)=2$，而 $\\|\\alpha\\|=\\sqrt2$；夹角公式的分母是两个长度之积，不能漏掉开方。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "内积",
+     "code": "M([[1,1,0]]).dot(M([[1,0,1]]))",
+     "expected": "1"
+    },
+    {
+     "desc": "alpha 长度平方",
+     "code": "M([[1,1,0]]).dot(M([[1,1,0]]))",
+     "expected": "2"
+    },
+    {
+     "desc": "cos theta",
+     "code": "expand(M([[1,1,0]]).dot(M([[1,0,1]]))/(sqrt(2)*sqrt(2)))",
+     "expected": "1/2"
+    }
+   ],
+   "idx": 363
+  },
+  {
+   "id": "q-361",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.6",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.6 用配方法化二次型成标准形",
+    "kind": "textbook"
+   },
+   "stem": "用**配方法**把二次型 $f(x_1,x_2)=x_1^2-2x_1x_2+3x_2^2$ 化为标准形，所得结果为",
+   "options": [
+    "$y_1^2+3y_2^2$",
+    "$-y_1^2+4y_2^2$",
+    "$y_1^2+2y_2^2$",
+    "$y_1^2+y_2^2$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.6 配方法。先把含 $x_1$ 的项配成完全平方：\n$$f=(x_1^2-2x_1x_2)+3x_2^2=(x_1-x_2)^2+3x_2^2-x_2^2=(x_1-x_2)^2+2x_2^2.$$\n令 $y_1=x_1-x_2$，$y_2=x_2$，得标准形 $y_1^2+2y_2^2$。\n（用合同验算：$A=\\begin{pmatrix}1&-1\\\\-1&3\\end{pmatrix}$，取 $C=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$，则 $C^{\\mathsf T}AC=\\begin{pmatrix}1&0\\\\0&2\\end{pmatrix}$，与配方结果一致。）\nA 错：配方后 $x_2^2$ 的系数应为 $3-1=2$，不是 $3$——把 $(x_1-x_2)^2$ 中的 $x_2^2$ 漏算了一次；\nB 错：$A$ 满足 $a_{11}=1>0$ 且 $|A|=2>0$，故 $f$ 正定，标准形的系数必须全为正，不可能出现 $-y_1^2$；\nD 错：合同变换保持迹不变，$\\operatorname{tr}A=1+3=4$，而标准形 $y_1^2+y_2^2$ 的系数之和为 $2\\neq4$。",
+   "misconception": "⚠️易错点：配方时把 $(x_1-x_2)^2$ 展开后**漏掉** $x_2^2$ 项，或忘记从 $3x_2^2$ 中扣掉这 $1$，误得 $y_1^2+3y_2^2$。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "合同变换结果",
+     "code": "C=M([[1,1],[0,1]]); A=M([[1,-1],[-1,3]]); str(expand(C.T*A*C))",
+     "expected": "Matrix([[1, 0], [0, 2]])"
+    },
+    {
+     "desc": "正定性",
+     "code": "M([[1,-1],[-1,3]]).is_positive_definite",
+     "expected": "True"
+    }
+   ],
+   "idx": 364
+  },
+  {
+   "id": "q-399",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.7",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.7 正定二次型",
+    "kind": "textbook"
+   },
+   "stem": "关于正定二次型的判别，下列说法**正确**的是",
+   "options": [
+    "$f$ 正定 $\\iff$ $A$ 的各阶顺序主子式全大于零",
+    "$f$ 正定 $\\iff$ $A$ 的所有特征值互不相同",
+    "$f$ 正定 $\\iff$ $A$ 的特征值全为负数",
+    "$f$ 正定 $\\iff$ $|A|>0$ 即可"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.7 的 Sylvester 判别法——实对称矩阵 $A$ 正定 $\\iff$ 它的**各阶顺序主子式**（取前 $k$ 行前 $k$ 列所得子式）全大于零。\nA：这是正定的充要条件（顺序主子式判据）。\nB 错：正定只要求特征值全为正，允许重复。例如 $A=\\mathrm{diag}(2,2)$ 的特征值 $2$ 是二重，但 $A$ 正定。\nC 错：特征值全为负数对应的是**负定**（即 $-A$ 正定）。\nD 错：$|A|>0$ 只说明 $A$ 可逆（特征值都不为零），既不保证全为正也不保证全为负。反例 $A=\\mathrm{diag}(-1,-1)$ 满足 $|A|=1>0$，但 $f$ 是负定二次型。",
+   "misconception": "⚠️易错点：把「$|A|>0$」当作正定的充分条件；正定的判据必须用顺序主子式或特征值，不能只看行列式。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "正定判别",
+     "code": "M([[1,-1],[-1,2]]).is_positive_definite",
+     "expected": "True"
+    },
+    {
+     "desc": "二阶顺序主子式",
+     "code": "M([[1,-1],[-1,2]]).det()",
+     "expected": "1"
+    }
+   ],
+   "idx": 365
+  },
+  {
+   "id": "q-400",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.2 方阵的特征值与特征向量",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}$，则 $A$ 的特征值是",
+   "options": [
+    "$0$（二重）",
+    "$1$ 与 $-1$",
+    "$\\mathrm{i}$ 与 $-\\mathrm{i}$",
+    "$2$ 与 $-2$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：特征方程为 $|\\lambda E-A|=0$（§5.2）：\n$$|\\lambda E-A|=\\begin{vmatrix}\\lambda&1\\\\-1&\\lambda\\end{vmatrix}=\\lambda^2+1=0,$$\n故 $\\lambda=\\mathrm{i}$ 或 $\\lambda=-\\mathrm{i}$。\nC：$A$ 是实矩阵但特征值可以是复数（成共轭对出现），本题为 $\\mathrm{i}$ 与 $-\\mathrm{i}$。\nA 错：$\\lambda=0$ 时 $\\lambda^2+1=1\\neq0$，$0$ 不是特征值。\nB 错：$\\lambda=1$ 时 $\\lambda^2+1=2\\neq0$，$\\lambda=-1$ 时同样不成立。\nD 错：$\\lambda=\\pm2$ 时 $\\lambda^2+1=5\\neq0$。",
+   "misconception": "⚠️易错点：以为实矩阵的特征值一定是实数；实矩阵可以有复特征值，但必成共轭对出现且重数相同。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "特征值",
+     "code": "M([[0,-1],[1,0]]).eigenvals()",
+     "expected": "{-I: 1, I: 1}"
+    },
+    {
+     "desc": "特征多项式",
+     "code": "lam=symbols('lam'); expand(M([[0,-1],[1,0]]).charpoly(lam).as_expr())",
+     "expected": "lam**2 + 1"
+    }
+   ],
+   "idx": 366
+  },
+  {
+   "id": "q-401",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.2 方阵的特征值与特征向量",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\lambda_1,\\lambda_2$ 是方阵 $A$ 的两个不同的特征值，则下列结论**正确**的是",
+   "options": [
+    "它们对应的特征向量线性相关",
+    "它们对应的特征向量线性无关",
+    "它们对应的特征向量可能线性相关",
+    "仅凭条件无法判断"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.2 的重要定理——属于**不同**特征值的特征向量必定线性无关。\n证明思路：设 $k_1\\alpha_1+k_2\\alpha_2=0$，其中 $A\\alpha_1=\\lambda_1\\alpha_1$、$A\\alpha_2=\\lambda_2\\alpha_2$，且 $\\alpha_1,\\alpha_2\\neq0$。\n对等式两边作用 $A$ 得 $k_1\\lambda_1\\alpha_1+k_2\\lambda_2\\alpha_2=0$；用 $\\lambda_1$ 乘原式后与它相减，得 $k_2(\\lambda_2-\\lambda_1)\\alpha_2=0$。\n因 $\\alpha_2\\neq0$ 且 $\\lambda_1\\neq\\lambda_2$，必有 $k_2=0$，同理 $k_1=0$。\nB：所以它们对应的特征向量线性无关。\nA 错：与上面的推导矛盾，线性无关正是「特征值互异」带来的直接结论。\nC 错：只有在特征值相同（或所取向量为零向量）时才可能线性相关。\nD 错：该定理对任意方阵都成立，结论唯一确定。",
+   "misconception": "⚠️易错点：把「不同特征值」与「同一特征值」的结论搞混——同一特征值的多个特征向量可能线性相关。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "互异特征值",
+     "code": "M([[1,2],[0,3]]).eigenvals()",
+     "expected": "{3: 1, 1: 1}"
+    }
+   ],
+   "idx": 367
+  },
+  {
+   "id": "q-402",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.3 相似矩阵",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=\\begin{pmatrix}1&2\\\\0&3\\end{pmatrix}$，则与 $A$ 相似的矩阵是",
+   "options": [
+    "$A+E$",
+    "$-A$",
+    "$A^{-1}$",
+    "$A^{\\mathsf T}$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：相似矩阵有相同的特征多项式与相同的特征值（§5.3）。\n$A$ 的特征值为 $1,3$；$A^{\\mathsf T}$ 的特征值也是 $1,3$，且二者都因特征值互异而可对角化，故都相似于 $\\mathrm{diag}(1,3)$，由相似关系的传递性得 $A\\sim A^{\\mathsf T}$。\nD：$A^{\\mathsf T}$ 与 $A$ 的特征值相同且同属一个相似类，故 $A^{\\mathsf T}\\sim A$。\nA 错：$A+E=\\begin{pmatrix}2&2\\\\0&4\\end{pmatrix}$ 的特征值为 $2,4$，与 $A$ 的 $1,3$ 不同，故不相似。\nB 错：$-A$ 的特征值为 $-1,-3$，与 $A$ 不同，故不相似。\nC 错：$A^{-1}$ 的特征值为 $1,\\dfrac13$，与 $A$ 不同，故不相似。",
+   "misconception": "⚠️易错点：以为「$A+E$、$-A$、$A^{-1}$ 与 $A$ 有某种家族关系所以相似」；相似要求特征值（按重数计）完全一致。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "A 的特征值",
+     "code": "M([[1,2],[0,3]]).eigenvals()",
+     "expected": "{3: 1, 1: 1}"
+    },
+    {
+     "desc": "A+E 的特征值",
+     "code": "(M([[1,2],[0,3]])+eye(2)).eigenvals()",
+     "expected": "{4: 1, 2: 1}"
+    },
+    {
+     "desc": "A^T 的特征值",
+     "code": "M([[1,0],[2,3]]).eigenvals()",
+     "expected": "{1: 1, 3: 1}"
+    },
+    {
+     "desc": "A^{-1} 的特征值",
+     "code": "M([[1,2],[0,3]]).inv().eigenvals()",
+     "expected": "{1/3: 1, 1: 1}"
+    }
+   ],
+   "idx": 368
+  },
+  {
+   "id": "q-403",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.4 对称矩阵的对角化",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶实对称矩阵，则下列结论**一定**成立的是",
+   "options": [
+    "$A$ 的特征值全为实数",
+    "$A$ 的特征值可能为复数",
+    "$A$ 的所有特征值互不相同",
+    "$A$ 一定可相似对角化，但相似矩阵 $P$ 不能取为正交矩阵"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.4 实对称矩阵对角化定理的第一条：实对称矩阵 $A$ 的特征值**全为实数**。\n证明要点：设 $A\\alpha=\\lambda\\alpha$（$\\alpha\\neq0$），则 $A\\overline{\\alpha}=\\overline{\\lambda}\\overline{\\alpha}$；对称性保证 $x^{\\mathsf T}Ax\\in\\mathbf R$，比较 $\\overline{\\alpha}^{\\mathsf T}A\\overline{\\alpha}$ 的虚部即得 $\\lambda\\in\\mathbf R$。\nA：实对称矩阵的特征值全为实数，这是对称性的直接后果。\nB 错：与定理矛盾，实对称矩阵不会出现复特征值。\nC 错：对称矩阵可以有重特征值，例如 $\\mathrm{diag}(2,2)$ 的特征值 $2$ 是二重。\nD 错：正因为 $A$ 实对称，不但可相似对角化，而且**可以取 $P$ 为正交矩阵**，使 $Q^{\\mathsf T}AQ$ 为对角阵。",
+   "misconception": "⚠️易错点：把「实对称矩阵特征值全为实」与「实矩阵特征值全为实」混为一谈；后者并不成立。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "特征值全实",
+     "code": "M([[2,0],[0,3]]).eigenvals()",
+     "expected": "{2: 1, 3: 1}"
+    },
+    {
+     "desc": "正交对角化",
+     "code": "Q=M([[1/sqrt(2),1/sqrt(2)],[1/sqrt(2),-1/sqrt(2)]]); A=M([[2,1],[1,2]]); str(expand(Q.T*A*Q))",
+     "expected": "Matrix([[3, 0], [0, 1]])"
+    }
+   ],
+   "idx": 369
+  },
+  {
+   "id": "q-404",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.5 二次型及其标准形",
+    "kind": "textbook"
+   },
+   "stem": "关于二次型的标准形与规范形，下列说法**正确**的是",
+   "options": [
+    "同一二次型的标准形是唯一确定的",
+    "规范形的系数只能取 $1$ 或 $-1$",
+    "同一二次型的**规范形**是唯一确定的",
+    "标准形的系数一定等于二次型矩阵的特征值"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.5 惯性定理——实二次型的规范形由它的正、负惯性指数 $(p,q)$ 唯一确定，与所作的合同变换无关；而标准形的系数则取决于所选的变换。\nC：规范形由 $(p,q)$ 唯一确定，故同一二次型的规范形唯一。\nA 错：标准形的系数随所用的合同变换而变，可以有无穷多种（只要求正、负号的个数与惯性指数一致）。\nB 错：规范形中还会出现零项（零惯性指数 $n-r$ 个变量不出现），故系数还可以取 $0$。\nD 错：只有用**正交变换**化标准形时系数才是矩阵的特征值；用配方法得到的系数一般并非特征值。",
+   "misconception": "⚠️易错点：把「标准形」与「规范形」混为一谈——标准形系数是具体数值（可随变换而变），规范形系数只有 $1$、$-1$（及零项）。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 370
+  },
+  {
+   "id": "q-362",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.4 对称矩阵的对角化",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=\\begin{pmatrix}1&1&1\\\\1&1&1\\\\1&1&1\\end{pmatrix}$，则 $A$ 的特征值及可对角化性为",
+   "options": [
+    "特征值全为 $1$，且 $A$ 可对角化",
+    "特征值为 $3,0,0$，且 $A$ **不可**对角化",
+    "特征值全为 $0$，且 $A$ 可对角化",
+    "特征值为 $3,0,0$，且 $A$ 可对角化"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$A=\\mathbf{1}\\mathbf{1}^{\\mathsf T}$（$\\mathbf{1}=(1,1,1)^{\\mathsf T}$），故 $A\\mathbf{1}=3\\mathbf{1}$，$3$ 是特征值；又 $\\operatorname{tr}A=3$、$|A|=0$，故另外两个特征值为 $0,0$，特征值为 $3,0,0$。\n可对角化性：$A$ 是**实对称矩阵**，由 §5.4，对称矩阵一定可以用正交变换对角化（重特征值的几何重数等于代数重数）。直接验证：$r(A)=1$，故零特征值对应的特征子空间维数为 $3-1=2$，等于其重数 $2$；$r(A-3E)=2$，故 $3$ 的特征子空间维数为 $3-2=1$，等于其重数 $1$。两种特征值的维数都等于重数，故 $A$ 可对角化。\nA 错：$A$ 不是单位矩阵，$3$ 是特征值（$A\\mathbf{1}=3\\mathbf{1}\\neq0$），特征值不全为 $1$；\nB 错：「有重特征值就不可对角化」只对一般矩阵成立，实对称矩阵必可对角化；\nC 错：$|A|=0$ 只说明有零特征值，$3$ 同样是特征值。",
+   "misconception": "⚠️易错点：把「有重特征值」等同于「不可对角化」。对一般矩阵重根可能导致不可对角化，但**实对称矩阵必可对角化**——这是本章最高频的辨析陷阱。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "难点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "特征值",
+     "code": "M([[1,1,1],[1,1,1],[1,1,1]]).eigenvals()",
+     "expected": "{3: 1, 0: 2}"
+    },
+    {
+     "desc": "r(A)",
+     "code": "M([[1,1,1],[1,1,1],[1,1,1]]).rank()",
+     "expected": "1"
+    },
+    {
+     "desc": "r(A-3E)",
+     "code": "(M([[1,1,1],[1,1,1],[1,1,1]])-3*eye(3)).rank()",
+     "expected": "2"
+    }
+   ],
+   "idx": 371
+  },
+  {
+   "id": "q-363",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.5 二次型及其标准形",
+    "kind": "textbook"
+   },
+   "stem": "设二次型 $f(x)=x^{\\mathsf T}Ax$ 的矩阵为 $A=\\begin{pmatrix}1&1&0\\\\1&1&0\\\\0&0&-1\\end{pmatrix}$，则下列结论**正确**的是",
+   "options": [
+    "$f$ 的秩为 $1$",
+    "$f$ 的正、负惯性指数分别为 $2,0$",
+    "$f$ 的规范形为 $z_1^2+z_2^2$",
+    "$f$ 的秩为 $2$，正惯性指数为 $1$，负惯性指数为 $1$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.5 二次型的秩与惯性指数。$A$ 的前两行前两列构成的子块 $\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}$ 的特征值为 $2$ 与 $0$，第三个特征值为 $-1$，故 $A$ 的特征值为 $2,0,-1$。\n于是非零特征值有 $2$ 个，故 $r(A)=2$（$A$ 对称，秩等于非零特征值的个数）；正特征值只有 $2$ 这一个，故正惯性指数 $p=1$；负特征值只有 $-1$ 这一个，故负惯性指数 $q=1$；零特征值 $0$ 对应零变量。规范形为 $z_1^2-z_2^2$。\nA 错：$r(A)=2$（不是 $1$）——$A$ 的前两行相同，故 $|A|=0$，但第三行 $(0,0,-1)$ 与前两行不共线，故 $r(A)=2$ 而不是 $1$；\nB 错：正惯性指数为 $1$（不是 $2$），且负惯性指数为 $1$（不是 $0$）；\nC 错：存在负特征值 $-1$，故 $f$ 不是正定的，规范形应为 $z_1^2-z_2^2$ 而不是 $z_1^2+z_2^2$。",
+   "misconception": "⚠️易错点：把「秩」与「非零特征值的个数」以及「惯性指数」混为一谈。$r(A)=p+q$ 是**对称矩阵**才有的等式；一般矩阵的秩是线性无关列（行）数。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "难点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "特征值",
+     "code": "M([[1,1,0],[1,1,0],[0,0,-1]]).eigenvals()",
+     "expected": "{2: 1, 0: 1, -1: 1}"
+    },
+    {
+     "desc": "r(A)",
+     "code": "M([[1,1,0],[1,1,0],[0,0,-1]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "|A|（前两行相同故为 0）",
+     "code": "M([[1,1,0],[1,1,0],[0,0,-1]]).det()",
+     "expected": "0"
+    }
+   ],
+   "idx": 372
+  },
+  {
+   "id": "q-405",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.4 对称矩阵的对角化",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶实对称矩阵且 $A^2=E$，则下列结论**一定**成立的是",
+   "options": [
+    "$A=E$",
+    "$A$ 正定",
+    "$A$ 可正交对角化为 $E$",
+    "$A$ 的特征值只能取 $1$ 或 $-1$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：设 $\\lambda$ 是 $A$ 的特征值，$A\\alpha=\\lambda\\alpha$（$\\alpha\\neq0$）。则\n$$A^2\\alpha=A(\\lambda\\alpha)=\\lambda A\\alpha=\\lambda^2\\alpha=E\\alpha=\\alpha,$$\n因 $\\alpha\\neq0$，必有 $\\lambda^2=1$，即 $\\lambda=1$ 或 $\\lambda=-1$。\nD：所以 $A$ 的特征值只能取 $1$ 或 $-1$。\nA 错：反例 $A=\\mathrm{diag}(1,-1)$，它实对称且 $A^2=E$，但 $A\\neq E$。\nB 错：同一个 $A=\\mathrm{diag}(1,-1)$ 有特征值 $-1$，不是正定矩阵（正定要求特征值全为正）。\nC 错：由上可知 $A$ 可正交对角化为 $\\mathrm{diag}(1,\\dots,1,-1,\\dots,-1)$，但并非必然为 $E$；只有在 $A=E$ 时才得到 $E$。",
+   "misconception": "⚠️易错点：由 $A^2=E$ 推出「$A=E$」——$A^2=E$ 只说明 $A$ 是「对合阵」，还可能是 $\\mathrm{diag}(1,-1)$ 这类矩阵。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 373
+  },
+  {
+   "id": "q-406",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.7",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.7 正定二次型；题型改编自：中科大《线性代数》历年考题（含参正定判定）",
+    "kind": "textbook"
+   },
+   "stem": "设 $f(x,y,z)=x^2+4y^2+z^2+xz+2txy+2tyz$，则 $f$ 正定的充要条件是",
+   "options": [
+    "$|t|<2$",
+    "$|t|<\\sqrt2$",
+    "$|t|<\\sqrt3$",
+    "$t>0$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：写出对称矩阵（交叉项系数取一半）\n$$A=\\begin{pmatrix}1&t&\\dfrac12\\\\t&4&t\\\\\\dfrac12&t&1\\end{pmatrix},$$\n由 §5.7 的 Sylvester 判据，各阶顺序主子式为\n$$A_1=1>0,\\qquad A_2=4-t^2,\\qquad A_3=|A|=3-t^2.$$\n三者同时大于零要求 $t^2<3$，即 $|t|<\\sqrt3$。\nC：故充要条件是 $|t|<\\sqrt3$。\nA 错：$|t|<2$ 只保证 $A_2>0$；当 $\\sqrt3<|t|<2$ 时 $A_3=3-t^2<0$，$f$ 已经不定。\nB 错：$|t|<\\sqrt2$ 是**充分**条件而不是充要条件，例如 $t=\\sqrt{2.5}$ 满足 $t^2=2.5<3$，$f$ 仍正定，但已超出 $|t|<\\sqrt2$。\nD 错：$t$ 的取值只与绝对值有关，$t$ 与 $-t$ 的情形完全对称，充要条件不可能只写 $t>0$。",
+   "misconception": "⚠️易错点：只算到二阶顺序主子式就收尾，漏掉三阶条件 $3-t^2>0$；或者把 $xz$ 项的系数 $\\dfrac12$ 写错。",
+   "extension": null,
+   "tags": [
+    "真题改编",
+    "含参",
+    "难点"
+   ],
+   "verify": [
+    {
+     "desc": "二阶顺序主子式",
+     "code": "t=symbols('t'); A=M([[1,t,Rational(1,2)],[t,4,t],[Rational(1,2),t,1]]); expand(A[:2,:2].det())",
+     "expected": "4 - t**2"
+    },
+    {
+     "desc": "三阶顺序主子式",
+     "code": "t=symbols('t'); A=M([[1,t,Rational(1,2)],[t,4,t],[Rational(1,2),t,1]]); expand(A.det())",
+     "expected": "3 - t**2"
+    },
+    {
+     "desc": "t=1 时正定",
+     "code": "M([[1,1,Rational(1,2)],[1,4,1],[Rational(1,2),1,1]]).is_positive_definite",
+     "expected": "True"
+    }
+   ],
+   "idx": 374
+  },
+  {
+   "id": "q-364",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.1 向量的内积、长度及正交性",
+    "kind": "textbook"
+   },
+   "stem": "关于实向量的内积与正交，下列说法正确的有",
+   "options": [
+    "内积满足对称性：$(\\alpha,\\beta)=(\\beta,\\alpha)$",
+    "非零向量 $\\alpha$ 与 $\\beta$ 正交，当且仅当 $(\\alpha,\\beta)=0$",
+    "若 $\\alpha,\\beta$ 都非零且 $\\alpha\\perp\\beta$，则 $\\alpha,\\beta$ 线性无关",
+    "正交关系具有传递性：若 $\\alpha\\perp\\beta$ 且 $\\beta\\perp\\gamma$，则 $\\alpha\\perp\\gamma$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.1。实数域上 $(\\alpha,\\beta)=\\sum_{i=1}^n x_iy_i$，满足 $(\\alpha,\\beta)=(\\beta,\\alpha)$（A）；$(\\alpha,\\beta)=0$ 即定义为正交（B）；若 $\\alpha\\perp\\beta$ 且两者非零，设 $k_1\\alpha+k_2\\beta=0$，两边与 $\\alpha$ 作内积得 $k_2(\\beta,\\alpha)=0$，故 $k_2=0$，同理 $k_1=0$，故线性无关（C）。\nD 错：正交关系**没有传递性**。反例：$\\alpha=(1,0,0)^{\\mathsf T}$，$\\beta=(0,1,0)^{\\mathsf T}$，$\\gamma=(1,0,1)^{\\mathsf T}$，则 $(\\alpha,\\beta)=0$、$(\\beta,\\gamma)=0$，但 $(\\alpha,\\gamma)=1\\neq0$，即 $\\alpha$ 与 $\\gamma$ 不正交。",
+   "misconception": "⚠️易错点：默认「垂直于垂直就垂直」。正交只对同一对向量成立，没有传递性；也不要把正交与「线性无关」记混——非零向量正交 $\\iff$ 线性无关。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "反例内积 alpha.gamma",
+     "code": "M([[1,0,0]]).dot(M([[1,0,1]]))",
+     "expected": "1"
+    },
+    {
+     "desc": "反例内积 beta.gamma",
+     "code": "M([[0,1,0]]).dot(M([[1,0,1]]))",
+     "expected": "0"
+    }
+   ],
+   "idx": 375
+  },
+  {
+   "id": "q-365",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.2 方阵的特征值与特征向量",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶方阵，关于 $A$ 的特征值与特征向量，下列说法正确的有",
+   "options": [
+    "$\\lambda$ 是 $A$ 的特征值 $\\iff$ $|\\lambda E-A|=0$",
+    "若 $\\lambda$ 是 $A$ 的特征值，则齐次方程组 $(\\lambda E-A)x=0$ 的解空间是由属于 $\\lambda$ 的特征向量生成的线性子空间",
+    "$A$ 的全部特征值（按重数计）之和等于 $A$ 的主对角线元素之和",
+    "$A$ 的全部特征值之积等于 $A$ 的秩"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.2。特征值定义为使 $|\\lambda E-A|=0$ 成立的 $\\lambda$（A）；属于 $\\lambda$ 的特征向量正是 $(\\lambda E-A)x=0$ 的非零解，连同零向量构成解空间 $N(A-\\lambda E)$（特征子空间）（B）；特征多项式 $|\\lambda E-A|=\\lambda^n-a_{11}\\lambda^{n-1}+\\cdots+(-1)^n|A|$ 由韦达定理给出「特征值之和 $=$ 主对角线元素之和、特征值之积 $=$ $|A|$」（C）。\nD 错：特征值之积等于行列式 $|A|$，而不是秩。例如 $A=\\begin{pmatrix}1&0\\\\0&1\\end{pmatrix}$，特征值之积为 $1$，而 $r(A)=2$；又如 $A=\\begin{pmatrix}0&1\\\\0&0\\end{pmatrix}$，特征值之积为 $0$ 而 $r(A)=1$。",
+   "misconception": "⚠️易错点：把「特征值之积」记成行列式是对的，但记成秩就错了；另外「特征值之和 $=$ 迹」必须**按重数计**。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "反例1 特征值",
+     "code": "M([[1,0],[0,1]]).eigenvals()",
+     "expected": "{1: 2}"
+    },
+    {
+     "desc": "反例1 秩",
+     "code": "M([[1,0],[0,1]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "反例2 特征值",
+     "code": "M([[0,1],[0,0]]).eigenvals()",
+     "expected": "{0: 2}"
+    },
+    {
+     "desc": "反例2 秩",
+     "code": "M([[0,1],[0,0]]).rank()",
+     "expected": "1"
+    }
+   ],
+   "idx": 376
+  },
+  {
+   "id": "q-407",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.1 向量的内积、长度及正交性",
+    "kind": "textbook"
+   },
+   "stem": "关于正交向量组，下列说法正确的有",
+   "options": [
+    "正交向量组中各向量的长度必须相等",
+    "正交向量组中任意两个向量都相互正交",
+    "正交向量组中的向量必定线性无关",
+    "正交向量组中向量的个数不超过所在空间的维数 $n$"
+   ],
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.1。\nB：正交向量组的定义就是其中任意两个向量的内积都为零。\nC：若 $\\alpha_1,\\dots,\\alpha_s$ 两两正交且全非零，设 $\\sum k_i\\alpha_i=0$，与 $\\alpha_j$ 作内积得 $k_j\\|\\alpha_j\\|^2=0$，故 $k_j=0$，所以线性无关。\nD：由 C 知正交向量组线性无关，而 $\\mathbf R^n$ 中线性无关的向量最多 $n$ 个。\nA 错：正交只要求两两内积为零，对长度没有要求。例如 $(1,0)^{\\mathsf T}$ 与 $(0,2)^{\\mathsf T}$ 相互正交但长度不同。",
+   "misconception": "⚠️易错点：把「正交」误解成「长度相等」或「夹角相等」；正交只讲内积为零。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "正交组内积",
+     "code": "M([[1,1,0]]).dot(M([[1,-1,0]]))",
+     "expected": "0"
+    }
+   ],
+   "idx": 377
+  },
+  {
+   "id": "q-408",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.2 方阵的特征值与特征向量",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶方阵，$\\lambda$ 是 $A$ 的一个特征值，则下列结论正确的有",
+   "options": [
+    "$A-\\lambda E$ 的行列式等于零",
+    "$A-\\lambda E$ 的秩小于 $n$",
+    "$A-\\lambda E$ 的秩等于 $n$",
+    "$A-\\lambda E$ 的零空间由属于 $\\lambda$ 的特征向量（连同零向量）生成"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.2。$\\lambda$ 是特征值 $\\iff|\\lambda E-A|=0$，而 $|A-\\lambda E|=|\\lambda E-A|$（行列式在转置下不变）。\nA：$|A-\\lambda E|=|\\lambda E-A|=0$。\nB：$A-\\lambda E$ 奇异，故 $r(A-\\lambda E)<n$。\nD：$A-\\lambda E$ 的零空间即 $N(A-\\lambda E)$，其中每个非零向量满足 $A\\alpha=\\lambda\\alpha$，正好是属于 $\\lambda$ 的特征向量。\nC 错：矩阵 $A-\\lambda E$ 奇异，行列式为零，其秩必小于 $n$（否则它可逆，零空间只有零向量，与存在非零特征向量矛盾）。",
+   "misconception": "⚠️易错点：把「奇异」记成「秩等于 $n$」；秩等于 $n$ 意味着可逆，与存在非零特征向量直接矛盾。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "expand((M([[1,2],[0,3]])-3*eye(2)).det())",
+     "expected": "0"
+    },
+    {
+     "desc": "rank",
+     "code": "(M([[1,2],[0,3]])-3*eye(2)).rank()",
+     "expected": "1"
+    }
+   ],
+   "idx": 378
+  },
+  {
+   "id": "q-409",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.5 二次型及其标准形",
+    "kind": "textbook"
+   },
+   "stem": "关于二次型与其矩阵的对应关系，下列说法正确的有",
+   "options": [
+    "每个 $n$ 元实二次型都对应唯一一个**对称**矩阵 $A$，使 $f(x)=x^{\\mathsf T}Ax$",
+    "二次型的矩阵可以不取对称形式",
+    "二次型的秩等于其矩阵的秩",
+    "两个写法不同的二次型可以对应同一个矩阵"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.5。二次型按 $f(x)=\\sum_{i,j}a_{ij}x_ix_j$ 展开，约定 $a_{ij}=a_{ji}$（交叉项系数取一半），故对称矩阵唯一确定（A）；二次型的秩就是其矩阵的秩（C）；矩阵完全由各系数决定，系数相同则二次型相同，因此同一矩阵只对应一个二次型（D）。\nA：对称矩阵的取法保证了唯一性。\nC：二次型的秩按定义就是对应矩阵的秩。\nD：二次型由系数决定，矩阵相同就意味着系数相同，二次型也相同（写法可以不同，展开后一致）。\nB 错：若不取对称形式，$x_ix_j$ 的系数在 $a_{ij}$ 与 $a_{ji}$ 之间的分配就不唯一，矩阵随之不唯一，故必须约定取对称形式。",
+   "misconception": "⚠️易错点：以为交叉项的系数可以「拆开」分别放进 $a_{ij}$ 与 $a_{ji}$——对称约定要求各取一半，矩阵才唯一。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "rank",
+     "code": "M([[1,0,1],[0,2,0],[1,0,3]]).rank()",
+     "expected": "3"
+    }
+   ],
+   "idx": 379
+  },
+  {
+   "id": "q-410",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.7",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.7 正定二次型",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶实对称矩阵，$f(x)=x^{\\mathsf T}Ax$，关于 $f$ 的正定性，下列说法正确的有",
+   "options": [
+    "$f$ 正定 $\\iff$ 对一切非零向量 $x$ 都有 $x^{\\mathsf T}Ax>0$",
+    "$f$ 正定 $\\iff$ $A$ 的所有特征值都为正数",
+    "$f$ 正定 $\\iff$ $A$ 的各阶顺序主子式全大于零",
+    "$f$ 正定 $\\iff$ $A$ 的所有特征值互不相同"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.7 与 §5.4。\nA：这是正定二次型的定义本身。\nB：由 §5.4 的正交对角化 $Q^{\\mathsf T}AQ=\\mathrm{diag}(\\lambda_1,\\dots,\\lambda_n)$，有 $x^{\\mathsf T}Ax=(Qy)^{\\mathsf T}\\Lambda(Qy)=\\sum\\lambda_iy_i^2$，故全正 $\\iff$ 特征值全为正。\nC：Sylvester 判别法（顺序主子式全大于零）。\nD 错：正定只要求特征值全为正，允许重复。例如 $\\mathrm{diag}(2,2)$ 正定但特征值相同。",
+   "misconception": "⚠️易错点：把「特征值互不相同」当成正定的必要条件；正定允许重特征值，只要全为正。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "必背"
+   ],
+   "verify": [
+    {
+     "desc": "正定",
+     "code": "M([[1,-1],[-1,2]]).is_positive_definite",
+     "expected": "True"
+    },
+    {
+     "desc": "det",
+     "code": "M([[1,-1],[-1,2]]).det()",
+     "expected": "1"
+    }
+   ],
+   "idx": 380
+  },
+  {
+   "id": "q-366",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.3 相似矩阵",
+    "kind": "textbook"
+   },
+   "stem": "设 $A,B$ 均为 $n$ 阶方阵，且 $B=P^{-1}AP$（$P$ 可逆）。则下列结论正确的有",
+   "options": [
+    "$A$ 与 $B$ 有相同的特征多项式，从而有相同的特征值",
+    "$|A|=|B|$",
+    "$r(A)=r(B)$",
+    "$A$ 与 $B$ 有相同的特征向量"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.3 相似矩阵的基本性质。\nA：$|\\lambda E-B|=|P^{-1}(\\lambda E-A)P|=|P^{-1}|\\,|\\lambda E-A|\\,|P|=|\\lambda E-A|$，故特征多项式与特征值都相同；\nB：在 A 中令 $\\lambda=0$ 即得 $|B|=|A|$（也可由 $|P^{-1}||P|=1$ 直接算出）；\nC：$B=P^{-1}AP$，由 §3.2 的秩的乘法规律 $r(PA)=r(AP)$ 得 $r(B)=r(A)$。\nD 错：相似变换把特征向量**一并变换**——若 $A\\alpha=\\lambda\\alpha$，则 $B(P^{-1}\\alpha)=P^{-1}A\\alpha=\\lambda(P^{-1}\\alpha)$，即 $A$ 的特征向量 $\\alpha$ 对应的是 $B$ 的特征向量 $P^{-1}\\alpha$，二者一般不是同一个向量。",
+   "misconception": "⚠️易错点：认为相似矩阵「连特征向量都一样」。相似保持的是**特征值**这一层不变量，特征向量会被 $P^{-1}$ 改写。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "B=P^-1AP",
+     "code": "P=M([[1,0],[0,2]]); A=M([[1,2],[0,3]]); str(P.inv()*A*P)",
+     "expected": "Matrix([[1, 4], [0, 3]])"
+    },
+    {
+     "desc": "特征值不变",
+     "code": "P=M([[1,0],[0,2]]); A=M([[1,2],[0,3]]); str((P.inv()*A*P).eigenvals())",
+     "expected": "{3: 1, 1: 1}"
+    }
+   ],
+   "idx": 381
+  },
+  {
+   "id": "q-367",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.7",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.7 正定二次型",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶实对称矩阵，关于 $A$ 的正定性，下列结论正确的有",
+   "options": [
+    "$A$ 正定 $\\iff$ $A$ 的全部特征值都为正数",
+    "$A$ 正定 $\\iff$ $A$ 的各阶顺序主子式全大于零",
+    "若 $A$ 正定，则 $-A$ 也正定",
+    "若 $A$ 正定，则 $A$ 的主对角线元素 $a_{ii}$ 全大于零"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.7 正定二次型的判别法。实对称矩阵 $A$ 正定 $\\iff$ $A$ 的特征值全为正数（A，这是 §5.4 正交对角化的直接推论）；正定 $\\iff$ 各阶顺序主子式全大于零（Sylvester 判据）（B）；正定时对任意 $x\\neq0$ 有 $x^{\\mathsf T}Ax>0$，取 $x=e_i$ 即得 $a_{ii}=e_i^{\\mathsf T}Ae_i>0$（D）。\nC 错：$-A$ 的特征值是 $A$ 的特征值的相反数，若 $A$ 正定则 $-A$ 的特征值全为负，$-A$ 是**负定**而不是正定。",
+   "misconception": "⚠️易错点：以为「正定」对取负号封闭。$-A$ 是负定的；只有当 $A$ 奇异（$f$ 半正定）时才可能同时有零特征值，但 $-A$ 仍然不是正定矩阵。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "正定矩阵",
+     "code": "M([[2,1],[1,2]]).is_positive_definite",
+     "expected": "True"
+    },
+    {
+     "desc": "其特征值",
+     "code": "M([[2,1],[1,2]]).eigenvals()",
+     "expected": "{3: 1, 1: 1}"
+    },
+    {
+     "desc": "取负后不正定",
+     "code": "M([[-2,-1],[-1,-2]]).is_positive_definite",
+     "expected": "False"
+    }
+   ],
+   "idx": 382
+  },
+  {
+   "id": "q-368",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.4 对称矩阵的对角化",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶实对称矩阵，下列结论正确的有",
+   "options": [
+    "$A$ 的特征值全为实数",
+    "属于 $A$ 的不同特征值的特征向量相互正交",
+    "存在正交矩阵 $Q$，使 $Q^{\\mathsf T}AQ=\\mathrm{diag}(\\lambda_1,\\dots,\\lambda_n)$，其中 $\\lambda_i$ 为 $A$ 的特征值",
+    "若 $\\lambda$ 是 $A$ 的 $r$ 重特征值，则属于 $\\lambda$ 的线性无关特征向量只有 $n-r$ 个"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.4 实对称矩阵的对角化定理：① 特征值全为实数（A）；② 属于不同特征值的特征向量相互正交（B）；③ 存在正交矩阵 $Q$ 使 $Q^{\\mathsf T}AQ=\\mathrm{diag}(\\lambda_1,\\dots,\\lambda_n)$，$Q$ 的列向量构成 $A$ 的标准正交特征向量组（C）；④ 每个特征值的**重数等于其特征子空间的维数**，即 $r$ 重特征值恰有 $r$ 个线性无关的特征向量。\nD 错：个数应是 $r$ 而不是 $n-r$。例如 $A=\\begin{pmatrix}2&0\\\\0&2\\end{pmatrix}$，$2$ 是 $2$ 重特征值，属于 $2$ 的线性无关特征向量有 $2$ 个（如 $(1,0)^{\\mathsf T},(0,1)^{\\mathsf T}$），而不是 $n-r=0$ 个。",
+   "misconception": "⚠️易错点：把「不同特征值的特征向量正交」扩大到「同一特征值的特征向量也正交」，或者把重数 $r$ 与 $n-r$ 记混。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "反例内积",
+     "code": "M([[1,0]]).dot(M([[0,1]]))",
+     "expected": "0"
+    },
+    {
+     "desc": "同特征值两向量内积",
+     "code": "M([[1,0]]).dot(M([[2,0]]))",
+     "expected": "2"
+    }
+   ],
+   "idx": 383
+  },
+  {
+   "id": "q-411",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.2 方阵的特征值与特征向量；题型改编自：考研数学真题（A+kE、A^2、A^{-1}、A^n 的特征值）",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶可逆方阵，$\\lambda$ 是 $A$ 的一个特征值，则下列结论正确的有",
+   "options": [
+    "$A^{-1}$ 的特征值是 $\\lambda$ 的倒数 $1/\\lambda$",
+    "$A+E$ 的特征值是 $\\lambda$ 的 2 倍",
+    "$A^2$ 的特征值是 $\\lambda^2$",
+    "$A^k$（$k\\in\\mathbf N^{*}$）的特征值是 $\\lambda^k$"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：设 $A\\alpha=\\lambda\\alpha$ 且 $\\alpha\\neq0$，则\n$$A^{-1}\\alpha=\\frac1\\lambda\\alpha,\\qquad A^2\\alpha=\\lambda^2\\alpha,\\qquad A^k\\alpha=\\lambda^k\\alpha,$$\n同一个特征向量 $\\alpha$ 同时是 $A^{-1}$、$A^2$、$A^k$ 的特征向量。\nA：$A$ 可逆故其特征值都不为零，由上式取倒数即得。\nC：$A^2\\alpha=\\lambda^2\\alpha$。\nD：由 $A^k\\alpha=\\lambda^k\\alpha$ 立得。\nB 错：$A+E$ 的特征值是 $\\lambda+1$（因为 $(A+E)\\alpha=(\\lambda+1)\\alpha$），并非 $\\lambda$ 的 2 倍。",
+   "misconception": "⚠️易错点：把「加 $E$」记成「乘以 $2$」——$(A+E)$ 的特征值是 $\\lambda+1$，$(2A)$ 的特征值才是 $2\\lambda$。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "真题改编"
+   ],
+   "verify": [
+    {
+     "desc": "A^{-1} 特征值",
+     "code": "M([[1,2],[0,3]]).inv().eigenvals()",
+     "expected": "{1/3: 1, 1: 1}"
+    },
+    {
+     "desc": "A+E 特征值",
+     "code": "(M([[1,2],[0,3]])+eye(2)).eigenvals()",
+     "expected": "{4: 1, 2: 1}"
+    },
+    {
+     "desc": "A^2 特征值",
+     "code": "(M([[1,2],[0,3]])**2).eigenvals()",
+     "expected": "{9: 1, 1: 1}"
+    }
+   ],
+   "idx": 384
+  },
+  {
+   "id": "q-412",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.3 相似矩阵",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶方阵，关于 $A$ 的相似对角化，下列说法正确的有",
+   "options": [
+    "若 $A$ 有 $n$ 个互不相同的特征值，则 $A$ 可相似对角化",
+    "若 $A$ 可相似对角化，则 $A$ 的 $n$ 个特征值必互不相同",
+    "若 $A$ 可相似对角化，则 $A$ 的每个特征值的几何重数等于其代数重数",
+    "若 $A$ 有重特征值，则 $A$ 一定无法相似对角化"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.3。\nA：特征值互异时，$n$ 个特征向量必然线性无关（分属不同特征值），可作 $P$ 的列构成可逆矩阵，故可对角化。\nC：$P^{-1}AP=\\Lambda$ 成立时，属于 $\\lambda$ 的特征子空间维数恰为该特征值在 $\\Lambda$ 中出现的次数，即几何重数等于代数重数。\nD：重特征值只说明要额外验证几何重数。例如 $A=\\mathrm{diag}(2,2)$ 有二重特征值 $2$，但它可对角化（本身已是对角阵）。\nB 错：可对角化并不要求特征值互异，$\\mathrm{diag}(2,2)$ 可对角化但特征值重复。",
+   "misconception": "⚠️易错点：把「特征方程有 $n$ 个根」当成可对角化的充分条件；必要条件是能凑齐 $n$ 个**线性无关的特征向量**。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "上三角阵特征值",
+     "code": "M([[1,1,0],[0,2,1],[0,0,3]]).eigenvals()",
+     "expected": "{3: 1, 2: 1, 1: 1}"
+    },
+    {
+     "desc": "r(A-2E)",
+     "code": "(M([[1,1,0],[0,2,1],[0,0,3]])-2*eye(3)).rank()",
+     "expected": "2"
+    }
+   ],
+   "idx": 385
+  },
+  {
+   "id": "q-413",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.4 对称矩阵的对角化",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶实对称矩阵，关于 $A$ 的正交对角化，下列说法正确的有",
+   "options": [
+    "$A$ 的特征值全为实数",
+    "属于 $A$ 的不同特征值的特征向量相互正交",
+    "$A$ 的特征值可能为复数",
+    "存在正交矩阵 $Q$ 使 $Q^{\\mathsf T}AQ$ 为对角阵，且对角元为 $A$ 的特征值"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.4 实对称矩阵的对角化定理。\nA：实对称矩阵的特征值全为实数。\nB：属于不同特征值的特征向量相互正交，这是 §5.4 的正交性定理。\nD：由 §5.4，存在正交矩阵 $Q$，使 $Q^{\\mathsf T}AQ=\\mathrm{diag}(\\lambda_1,\\dots,\\lambda_n)$，其中 $\\lambda_i$ 为 $A$ 的特征值。\nC 错：实对称矩阵的特征值一律为实数，不会出现复特征值。",
+   "misconception": "⚠️易错点：把「不同特征值的特征向量正交」扩大成「任意两个特征向量正交」——同一特征值的情形需另用施密特正交化。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "特征值全实",
+     "code": "M([[2,0],[0,3]]).eigenvals()",
+     "expected": "{2: 1, 3: 1}"
+    },
+    {
+     "desc": "正交对角化",
+     "code": "Q=M([[1/sqrt(2),1/sqrt(2)],[1/sqrt(2),-1/sqrt(2)]]); A=M([[2,1],[1,2]]); str(expand(Q.T*A*Q))",
+     "expected": "Matrix([[3, 0], [0, 1]])"
+    }
+   ],
+   "idx": 386
+  },
+  {
+   "id": "q-414",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.1 向量的内积、长度及正交性",
+    "kind": "textbook"
+   },
+   "stem": "关于向量的内积与长度，下列说法正确的有",
+   "options": [
+    "Cauchy 不等式 $|(\\alpha,\\beta)|\\le\\|\\alpha\\|\\,\\|\\beta\\|$ 对任意实向量成立",
+    "三角不等式 $\\|\\alpha+\\beta\\|\\le\\|\\alpha\\|+\\|\\beta\\|$ 成立",
+    "$\\|\\alpha+\\beta\\|=\\|\\alpha\\|+\\|\\beta\\|$ 对任意 $\\alpha,\\beta$ 成立",
+    "若 $\\alpha\\perp\\beta$，则 $\\|\\alpha+\\beta\\|^2=\\|\\alpha\\|^2+\\|\\beta\\|^2$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.1 内积诱导的欧氏范数性质。\nA：Cauchy 不等式给出 $|(\\alpha,\\beta)|\\le\\|\\alpha\\|\\,\\|\\beta\\|$，等号当且仅当 $\\alpha,\\beta$ 线性相关。\nB：三角不等式是欧氏空间范数的基本性质。\nD：$\\|\\alpha+\\beta\\|^2=(\\alpha+\\beta,\\alpha+\\beta)=\\|\\alpha\\|^2+2(\\alpha,\\beta)+\\|\\beta\\|^2$，正交时交叉项为零。\nC 错：等号当且仅当两向量同向。例如 $\\alpha=\\beta=(1,0)^{\\mathsf T}$ 时左边为 $\\sqrt2$，右边为 $2$。",
+   "misconception": "⚠️易错点：把「长度可加」当作恒等式；只有同向时 $\\|\\alpha+\\beta\\|=\\|\\alpha\\|+\\|\\beta\\|$ 才成立。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "同向时长度可加",
+     "code": "M([[1,1]]).dot(M([[1,1]]))",
+     "expected": "2"
+    },
+    {
+     "desc": "正交内积",
+     "code": "M([[1,1,0]]).dot(M([[1,-1,0]]))",
+     "expected": "0"
+    }
+   ],
+   "idx": 387
+  },
+  {
+   "id": "q-415",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.5 二次型及其标准形",
+    "kind": "textbook"
+   },
+   "stem": "设 $f(x)=x^{\\mathsf T}Ax$，$A$ 为 $n$ 阶实对称矩阵，关于 $f$ 的秩与惯性指数，下列说法正确的有",
+   "options": [
+    "$f$ 的秩等于矩阵 $A$ 的秩",
+    "$f$ 的正惯性指数 $p$ 与负惯性指数 $q$ 满足 $r=p+q$",
+    "$f$ 的正惯性指数等于 $A$ 的正特征值的个数",
+    "$f$ 的正惯性指数等于 $A$ 的正特征值之和"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.5 惯性定理与 §5.4。\nA：二次型的秩就是其矩阵的秩。\nB：合同变换不改变秩，合同化为对角阵后非零对角元恰有 $p+q$ 个。\nC：$A$ 正交对角化后 $x^{\\mathsf T}Ax=\\sum\\lambda_iy_i^2$，正特征值的个数即正惯性指数。\nD 错：惯性指数数的是**个数**而不是求和。例如 $A=\\mathrm{diag}(1,2)$ 的正惯性指数为 $2$，而正特征值之和为 $3$。",
+   "misconception": "⚠️易错点：把惯性指数与特征值的和或积混为一谈；惯性指数数的是正、负、零特征值的**个数**。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "特征值",
+     "code": "M([[1,-1,0],[-1,2,0],[0,0,3]]).eigenvals()",
+     "expected": "{3/2 - sqrt(5)/2: 1, sqrt(5)/2 + 3/2: 1, 3: 1}"
+    },
+    {
+     "desc": "rank",
+     "code": "M([[1,-1,0],[-1,2,0],[0,0,3]]).rank()",
+     "expected": "3"
+    }
+   ],
+   "idx": 388
+  },
+  {
+   "id": "q-369",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.5 二次型及其标准形",
+    "kind": "textbook"
+   },
+   "stem": "关于二次型、合同变换与规范形，下列说法正确的有",
+   "options": [
+    "每个 $n$ 元实二次型都有唯一确定的**对称**矩阵 $A$，使 $f(x)=x^{\\mathsf T}Ax$",
+    "作可逆线性变换 $x=Cy$（$C$ 可逆）后，二次型的矩阵由 $A$ 变为 $C^{\\mathsf T}AC$，这称为**合同**变换",
+    "任意两个 $n$ 阶实对称矩阵都合同",
+    "$A$ 与 $B$（均为实对称阵）合同 $\\iff$ 它们有相同的秩和相同的正惯性指数"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.5。二次型 $f(x)=\\sum_{i,j}a_{ij}x_ix_j$ 的矩阵取对称形式：$a_{ii}$ 为 $x_i^2$ 的系数，$a_{ij}=a_{ji}$ 取交叉项系数的一半，故对称阵 $A$ 唯一（A）；变量变换 $x=Cy$ 使 $f=x^{\\mathsf T}Ax=y^{\\mathsf T}C^{\\mathsf T}ACy$，矩阵由 $A$ 变为 $C^{\\mathsf T}AC$，这正是合同变换（B）；由惯性定理，$A,B$ 合同 $\\iff$ 秩相同且正惯性指数相同（D）。\nC 错：合同保持**惯性指数**（正特征值个数与负特征值个数），并非任意两个实对称矩阵都合同。反例 $A=\\begin{pmatrix}1&0\\\\0&0\\end{pmatrix}$（$p=1,q=0$，正定）与 $B=\\begin{pmatrix}-1&0\\\\0&0\\end{pmatrix}$（$p=0,q=1$，负定）：二者秩都是 $1$，但惯性指数不同，故**不合同**。\n**引申**：合同变换要求 $C$ 可逆但形式为 $C^{\\mathsf T}AC$（作用在矩阵两边），而相似变换是 $P^{-1}AP$（形式为共轭）。对**实对称矩阵**而言，由「特征值决定惯性」可知相似与合同恰好一致；但对一般矩阵二者毫不相干。",
+   "misconception": "⚠️易错点：把合同与相似混为一谈，或者认为「秩相同就合同」。合同要同时看秩和正惯性指数。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "难点",
+    "跨章"
+   ],
+   "verify": [
+    {
+     "desc": "A 的特征值",
+     "code": "M([[1,0],[0,0]]).eigenvals()",
+     "expected": "{1: 1, 0: 1}"
+    },
+    {
+     "desc": "B 的特征值",
+     "code": "M([[-1,0],[0,0]]).eigenvals()",
+     "expected": "{-1: 1, 0: 1}"
+    },
+    {
+     "desc": "A 的秩",
+     "code": "M([[1,0],[0,0]]).rank()",
+     "expected": "1"
+    },
+    {
+     "desc": "B 的秩",
+     "code": "M([[-1,0],[0,0]]).rank()",
+     "expected": "1"
+    }
+   ],
+   "idx": 389
+  },
+  {
+   "id": "q-416",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.6",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.6 用配方法化二次型成标准形；题型改编自：考研数学真题（二次型化标准形）",
+    "kind": "textbook"
+   },
+   "stem": "关于用配方法把二次型化为标准形，下列说法正确的有",
+   "options": [
+    "配方法所得标准形的系数一定等于二次型矩阵的特征值",
+    "配方法中所作的线性变换一定是可逆的",
+    "配方法与正交变换所得标准形的系数一般不同，但两者的规范形相同",
+    "配方法所得标准形的系数之和等于原二次型矩阵 $A$ 的迹"
+   ],
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.6 与 §5.5。\nB：配方是逐步作系数为 $1$ 的一次换元（如 $y_1=x_1+x_2$），每次换元都可逆，累积得到的变换矩阵 $C$ 也可逆。\nC：配方法给出的是合同变换，正交变换给出的是正交相似，二者系数一般不同；但合同变换保持惯性指数，故规范形相同。\nD：合同变换保持迹，因为 $\\mathrm{tr}(C^{\\mathsf T}AC)=\\mathrm{tr}(AC^{\\mathsf T}C)=\\mathrm{tr}(A\\cdot C^{\\mathsf T}C)=\\mathrm{tr}A$，故标准形系数之和等于 $\\mathrm{tr}A$。\nA 错：只有用**正交变换**化标准形时系数才是特征值。例：$f=x_1^2+4x_1x_2+8x_2^2$ 配方法得 $y_1^2+4y_2^2$，系数为 $1,4$，而 $A=\\begin{pmatrix}1&2\\\\2&8\\end{pmatrix}$ 的特征值是 $\\dfrac{9\\pm\\sqrt{65}}2$，与 $1,4$ 不同。",
+   "misconception": "⚠️易错点：以为配方法得到的系数就是特征值——只有正交变换才把二次型系数与特征值联系起来。",
+   "extension": null,
+   "tags": [
+    "真题改编",
+    "难点"
+   ],
+   "verify": [
+    {
+     "desc": "配方法合同结果",
+     "code": "C=M([[1,-2],[0,1]]); A=M([[1,2],[2,8]]); str(expand(C.T*A*C))",
+     "expected": "Matrix([[1, 0], [0, 4]])"
+    },
+    {
+     "desc": "矩阵特征值",
+     "code": "M([[1,2],[2,8]]).eigenvals()",
+     "expected": "{9/2 - sqrt(65)/2: 1, sqrt(65)/2 + 9/2: 1}"
+    }
+   ],
+   "idx": 390
+  },
+  {
+   "id": "q-417",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.3 相似矩阵",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶可逆矩阵，$P$ 为 $n$ 阶可逆矩阵，则下列结论正确的有",
+   "options": [
+    "$P^{-1}AP$ 与 $A$ 相似",
+    "$P^{\\mathsf T}AP$ 与 $A$ 合同",
+    "$P^{-1}AP$ 与 $A$ 有相同的特征值",
+    "$P^{\\mathsf T}AP$ 与 $A$ 有相同的特征值"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.3 相似变换与 §5.5 合同变换。\nA：相似变换的定义就是 $B=P^{-1}AP$。\nB：合同变换的定义就是 $B=P^{\\mathsf T}AC$（$C$ 可逆），取 $C=P$ 即得。\nC：$|\\lambda E-P^{-1}AP|=|P^{-1}(\\lambda E-A)P|=|\\lambda E-A|$，特征多项式相同故特征值相同。\nD 错：合同变换只保持惯性指数，一般不保持特征值。反例 $A=E$，$P=\\begin{pmatrix}2&0\\\\0&1\\end{pmatrix}$，则 $P^{\\mathsf T}AP=\\begin{pmatrix}4&0\\\\0&1\\end{pmatrix}$，特征值是 $4,1$，与 $A$ 的 $1,1$ 不同。",
+   "misconception": "⚠️易错点：把合同与相似混为一谈——合同是 $C^{\\mathsf T}AC$（作用在矩阵两边），相似是 $P^{-1}AP$（共轭），二者性质不同。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "相似保持特征值",
+     "code": "P=M([[2,0],[0,1]]); A=M([[1,2],[0,3]]); str((P.inv()*A*P).eigenvals())",
+     "expected": "{3: 1, 1: 1}"
+    },
+    {
+     "desc": "合同一般不保持特征值",
+     "code": "A=eye(2); P=M([[2,0],[0,1]]); str((P.T*A*P).eigenvals())",
+     "expected": "{4: 1, 1: 1}"
+    }
+   ],
+   "idx": 391
+  },
+  {
+   "id": "q-370",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.2 方阵的特征值与特征向量",
+    "kind": "textbook"
+   },
+   "stem": "若 $\\lambda_0$ 是方阵 $A$ 的特征值，则齐次线性方程组 $(A-\\lambda_0E)x=0$ 必有非零解。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：特征值的定义（§5.2）：$\\lambda_0$ 是 $A$ 的特征值，当且仅当 $|A-\\lambda_0E|=0$，即 $A-\\lambda_0E$ 奇异；由 §3.3 线性方程组解的判定，齐次方程组 $(A-\\lambda_0E)x=0$ 有非零解，其非零解就是属于 $\\lambda_0$ 的特征向量。\n反过来说，若该方程组只有零解，则 $\\lambda_0$ **不是** $A$ 的特征值。",
+   "misconception": "⚠️易错点：把特征向量与任意非零解混为一谈——非零解必须与特征值 $\\lambda_0$ 绑定才有意义；且零向量对任何 $\\lambda$ 都满足 $A0=\\lambda0$，故不能作特征向量。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "定义"
+   ],
+   "verify": [],
+   "idx": 392
+  },
+  {
+   "id": "q-418",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.1 向量的内积、长度及正交性",
+    "kind": "textbook"
+   },
+   "stem": "若实向量 $\\alpha,\\beta$ 都非零且 $\\alpha\\perp\\beta$，则它们的夹角为 $\\dfrac{\\pi}{2}$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.1 的夹角公式 $\\cos\\theta=\\dfrac{(\\alpha,\\beta)}{\\|\\alpha\\|\\,\\|\\beta\\|}$。正交意味着 $(\\alpha,\\beta)=0$，两向量非零保证分母不为零，故 $\\cos\\theta=0$，即 $\\theta=\\dfrac{\\pi}{2}$。\nB 错：若选「错误」则与上面的计算矛盾；本题命题成立，应选「正确」。",
+   "misconception": "⚠️易错点：忘记夹角公式的分母是两个向量的长度之积；非零是取夹角的前提。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 393
+  },
+  {
+   "id": "q-419",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.2 方阵的特征值与特征向量",
+    "kind": "textbook"
+   },
+   "stem": "若 $\\lambda_1,\\lambda_2$ 是方阵 $A$ 的两个不同的特征值，则它们对应的特征向量线性无关。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.2 的定理——属于不同特征值的特征向量必定线性无关（证明见本章简答题）。\nB 错：若选「错误」则与该定理矛盾；本题命题成立，应选「正确」。",
+   "misconception": "⚠️易错点：把结论用到同一特征值上——同一特征值的多个特征向量可能线性相关。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 394
+  },
+  {
+   "id": "q-420",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.3 相似矩阵",
+    "kind": "textbook"
+   },
+   "stem": "相似矩阵 $A,B$ 有相同的特征多项式，故它们有相同的特征向量。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：前半句正确，后半句不成立（§5.3）。\n相似矩阵确实有相同的特征多项式与相同的特征值，但特征向量会被相似变换**改写**：若 $A\\alpha=\\lambda\\alpha$，则 $B(P^{-1}\\alpha)=\\lambda(P^{-1}\\alpha)$，$A$ 的特征向量 $\\alpha$ 对应的是 $B$ 的特征向量 $P^{-1}\\alpha$，二者一般并不相同。\nA 错：把「特征值相同」错误地推广成「特征向量相同」，后半句不成立，故整个命题为假。",
+   "misconception": "⚠️易错点：相似保持的是**特征值**这一层不变量，特征向量会被 $P^{-1}$ 改写。",
+   "extension": null,
+   "tags": [
+    "易错",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "相似后特征向量被改写",
+     "code": "P=M([[1,1],[0,1]]); A=M([[1,2],[0,3]]); str(P.inv()*M([1,1]))",
+     "expected": "Matrix([[0], [1]])"
+    }
+   ],
+   "idx": 395
+  },
+  {
+   "id": "q-421",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.5 二次型及其标准形",
+    "kind": "textbook"
+   },
+   "stem": "二次型 $f(x_1,x_2)=2x_1x_2$ 的矩阵是 $\\begin{pmatrix}0&2\\\\2&0\\end{pmatrix}$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.5，二次型的矩阵取对称形式，交叉项 $x_ix_j$ 的系数取一半。\n本题只有交叉项 $2x_1x_2$，故 $a_{11}=a_{22}=0$，$a_{12}=a_{21}=1$，矩阵应为 $\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$。\nA 错：题给的矩阵把交叉项系数 $2$ 原样填进了 $a_{12}$ 与 $a_{21}$；按对称约定应取一半，故命题为假。",
+   "misconception": "⚠️易错点：交叉项系数取一半这一条是二次型写矩阵时的第一大失分点。",
+   "extension": null,
+   "tags": [
+    "易错",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 396
+  },
+  {
+   "id": "q-422",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.6",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.6 用配方法化二次型成标准形",
+    "kind": "textbook"
+   },
+   "stem": "用配方法把二次型化为标准形时，所作的线性变换一定是可逆的。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.6。配方法是逐步把含 $x_1$ 的项配成完全平方并作换元 $y_1=x_1+\\cdots$，每次换元都是初等的（系数为 $1$），因此累积得到的变换矩阵 $C$ 满足 $|C|\\neq0$，即变换可逆；只有可逆变换才能保持二次型的等价性。\nB 错：若选「错误」则与上述换元过程矛盾；本题命题成立，应选「正确」。",
+   "misconception": "⚠️易错点：以为「配方可以随意换元」；换元的系数必须非零，否则二次型会被改变。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 397
+  },
+  {
+   "id": "q-423",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.7",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.7 正定二次型",
+    "kind": "textbook"
+   },
+   "stem": "正定二次型 $f$ 对一切非零向量 $x$ 都有 $f(x)>0$，且 $f(0)=0$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.7。正定的定义是「对一切非零向量 $x$ 有 $f(x)=x^{\\mathsf T}Ax>0$」；而 $f(0)=0^{\\mathsf T}A0=0$ 对任何二次型都成立，这与正定性并不矛盾——正定只对非零向量提要求。\nB 错：若选「错误」则与定义矛盾；本题命题成立，应选「正确」。",
+   "misconception": "⚠️易错点：看到 $f(0)=0$ 就以为与正定矛盾；正定的量词是「一切非零向量」，原点不在其内。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 398
+  },
+  {
+   "id": "q-371",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.1 向量的内积、长度及正交性",
+    "kind": "textbook"
+   },
+   "stem": "任意两个非零向量 $\\alpha,\\beta$ 线性相关，当且仅当 $\\alpha\\perp\\beta$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：命题错误（§5.1 与 §4.2）。\n正方向不成立：若 $\\alpha\\perp\\beta$ 且两者非零，则 $\\alpha,\\beta$ 必然**线性无关**（设 $k_1\\alpha+k_2\\beta=0$，与 $\\alpha$ 作内积得 $k_2(\\beta,\\alpha)=0$，故 $k_2=0$，同理 $k_1=0$），这与「线性相关」正相反。\n逆方向也不成立：线性相关的两个非零向量互相平行（$\\beta=k\\alpha$，$k\\neq0$），此时 $(\\alpha,\\beta)=k\\|\\alpha\\|^2\\neq0$，**不**正交。\n故这个充要关系两头都不成立，正确说法是「两个非零向量正交 $\\iff$ 它们线性无关」。",
+   "misconception": "⚠️易错点：把「正交」与「线性相关／线性无关」的关系记反。正确结论是：两个非零向量正交 $\\iff$ 线性无关。",
+   "extension": null,
+   "tags": [
+    "易错",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 399
+  },
+  {
+   "id": "q-372",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.7",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.7 正定二次型",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为实对称矩阵，则 $A$ 正定的充要条件是 $A$ 的各阶顺序主子式都大于零。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.7 的 Sylvester 判别法（正定判别法）：实对称矩阵 $A$ 正定 $\\iff$ $A$ 的**各阶顺序主子式** $A_k$（取前 $k$ 行前 $k$ 列所得子式）全大于零。\n要点：① 前提是 $A$ 为**实对称矩阵**，非对称矩阵不能用此判据；② 判据用的是**顺序**主子式 $A_1,A_2,\\dots,A_n$（前导主子式），不是任意挑选的主子式；③ 这与「特征值全为正」的判据等价。",
+   "misconception": "⚠️易错点：忘记「实对称」这个前提，或者把「顺序主子式」写成「任意主子式」。",
+   "extension": null,
+   "tags": [
+    "必背",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "正定矩阵的顺序主子式",
+     "code": "M([[2,1],[1,2]])[0,0]",
+     "expected": "2"
+    },
+    {
+     "desc": "二阶顺序主子式",
+     "code": "M([[2,1],[1,2]]).det()",
+     "expected": "3"
+    }
+   ],
+   "idx": 400
+  },
+  {
+   "id": "q-373",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.4 对称矩阵的对角化",
+    "kind": "textbook"
+   },
+   "stem": "实对称矩阵 $A$ 的任意两个特征向量都相互正交。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：命题错误（§5.4）。正交定理说的是：**属于不同特征值的**特征向量相互正交，而不是任意两个特征向量都正交。\n反例：$A=\\begin{pmatrix}2&0\\\\0&2\\end{pmatrix}$ 的特征值只有 $2$（二重），$(1,0)^{\\mathsf T}$ 与 $(2,0)^{\\mathsf T}$ 都是属于 $2$ 的特征向量，但它们共线，内积为 $2\\neq0$，并不正交。\n只有当两个特征向量属于**不同**特征值时才保证正交；同一特征值的特征向量之间要另外设法（如用施密特正交化）才能得到正交组。",
+   "misconception": "⚠️易错点：把「不同特征值的特征向量正交」扩大成「任意两个特征向量正交」。",
+   "extension": null,
+   "tags": [
+    "易错",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "同特征值两向量内积",
+     "code": "M([[1,0]]).dot(M([[2,0]]))",
+     "expected": "2"
+    }
+   ],
+   "idx": 401
+  },
+  {
+   "id": "q-424",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.2 方阵的特征值与特征向量",
+    "kind": "textbook"
+   },
+   "stem": "若方阵 $A$ 的特征值都是实数，则 $A$ 一定是实对称矩阵。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：命题为假。特征值全为实数只说明谱落在实轴上，与矩阵是否对称无关。\n反例：$A=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ 的特征多项式为 $(\\lambda-1)^2$，特征值 $1$（二重）是实数，但 $A^{\\mathsf T}=\\begin{pmatrix}1&0\\\\1&1\\end{pmatrix}\\neq A$，显然不是实对称矩阵。\nA 错：把「特征值全为实」误当成「实对称」的充分条件；「实对称 $\\Rightarrow$ 特征值全为实」只是单向成立的结论。",
+   "misconception": "⚠️易错点：把必要条件当充分条件；「实对称 $\\Rightarrow$ 特征值全实」不能反推。",
+   "extension": null,
+   "tags": [
+    "易错",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "反例的特征值",
+     "code": "M([[1,1],[0,1]]).eigenvals()",
+     "expected": "{1: 2}"
+    }
+   ],
+   "idx": 402
+  },
+  {
+   "id": "q-425",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.4 对称矩阵的对角化",
+    "kind": "textbook"
+   },
+   "stem": "实对称矩阵 $A$ 总能找出一组两两正交的特征向量，它们构成 $\\mathbf R^n$ 的一组标准正交基。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.4。实对称矩阵每个特征值的几何重数等于代数重数，故每个特征子空间都能取出一组基；在每个特征子空间内部再用施密特正交化（§5.1）即得两两正交的特征向量，不同特征子空间的向量之间又自动正交，故合起来是 $\\mathbf R^n$ 的一组标准正交基。\nB 错：若选「错误」则与 §5.4 的对角化定理矛盾；本题命题成立，应选「正确」。",
+   "misconception": "⚠️易错点：以为「同一特征值下的特征向量本来就不正交」所以凑不出标准正交基——可以在特征子空间内正交化。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "正交对角化",
+     "code": "Q=M([[1/sqrt(2),1/sqrt(2)],[1/sqrt(2),-1/sqrt(2)]]); A=M([[2,1],[1,2]]); str(expand(Q.T*A*Q))",
+     "expected": "Matrix([[3, 0], [0, 1]])"
+    }
+   ],
+   "idx": 403
+  },
+  {
+   "id": "q-426",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.3 相似矩阵",
+    "kind": "textbook"
+   },
+   "stem": "若 $A$ 与 $B$ 相似，则 $A$ 与 $B$ 的特征向量也相同。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：命题为假（§5.3）。相似保持的是特征值与特征多项式，特征向量会被变换矩阵改写。\n反例：取 $A=\\begin{pmatrix}1&2\\\\0&3\\end{pmatrix}$，$P=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$，则 $B=P^{-1}AP=\\mathrm{diag}(1,3)$。$(1,1)^{\\mathsf T}$ 是 $A$ 的属于 $3$ 的特征向量，而 $B$ 的属于 $3$ 的特征向量是 $(0,1)^{\\mathsf T}$，二者不同。\nA 错：把「相似保持特征值」错误地说成「相似保持特征向量」。",
+   "misconception": "⚠️易错点：把「特征值相同」与「特征向量相同」混为一谈，这是本章最经典的陷阱。",
+   "extension": null,
+   "tags": [
+    "易错",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 404
+  },
+  {
+   "id": "q-427",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.5 二次型及其标准形",
+    "kind": "textbook"
+   },
+   "stem": "两个二次型合同，当且仅当它们的矩阵有相同的秩。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：命题为假（§5.5 惯性定理）。两个实对称矩阵合同 $\\iff$ 它们的**秩相同且正惯性指数相同**，只给秩不够。\n反例：$A_1=\\begin{pmatrix}1&0\\\\0&0\\end{pmatrix}$ 与 $A_2=\\begin{pmatrix}-1&0\\\\0&0\\end{pmatrix}$ 的秩都是 $1$，但正惯性指数分别是 $1$ 与 $0$，二者不合同。\nA 错：漏掉了「正惯性指数相同」这一必要且充分的条件。",
+   "misconception": "⚠️易错点：以为「秩相同就合同」；合同要同时看秩与正惯性指数。",
+   "extension": null,
+   "tags": [
+    "易错",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "反例1 特征值",
+     "code": "M([[1,0],[0,0]]).eigenvals()",
+     "expected": "{1: 1, 0: 1}"
+    }
+   ],
+   "idx": 405
+  },
+  {
+   "id": "q-428",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.4 对称矩阵的对角化",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为实对称矩阵，$Q$ 为正交矩阵，则 $Q^{\\mathsf T}AQ$ 与 $A$ 有相同的特征值。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：正交矩阵满足 $Q^{-1}=Q^{\\mathsf T}$（§5.1、§5.4），故\n$$Q^{\\mathsf T}AQ=Q^{-1}AQ,$$\n这正是相似变换（§5.3），故二者特征多项式相同、特征值相同（按重数计）。\n（要点：这里用的是**相似**而不是合同——一般合同变换并不保持特征值，只有当 $Q$ 正交时 $Q^{\\mathsf T}=Q^{-1}$，才恰好成为相似变换。）\nB 错：若选「错误」则与正交矩阵的定义和相似变换的性质矛盾；本题命题成立，应选「正确」。",
+   "misconception": "⚠️易错点：以为「正交变换也是合同，所以只保持惯性指数」；正交矩阵的特殊之处恰在于它同时是相似变换。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "正交相似保持特征值",
+     "code": "Q=M([[1/sqrt(2),1/sqrt(2)],[1/sqrt(2),-1/sqrt(2)]]); A=M([[2,1],[1,2]]); str((Q.inv()*A*Q).eigenvals())",
+     "expected": "{3: 1, 1: 1}"
+    }
+   ],
+   "idx": 406
+  },
+  {
+   "id": "q-374",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.1 向量的内积、长度及正交性",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\alpha=(1,2,2)^{\\mathsf T}$，则 $\\|\\alpha\\|=$ ______ 。",
+   "options": null,
+   "answer": [
+    "3"
+   ],
+   "accept": [
+    "3"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：向量的长度（§5.1）$\\|\\alpha\\|=\\sqrt{(\\alpha,\\alpha)}$，故\n$\\|\\alpha\\|=\\sqrt{1^2+2^2+2^2}=\\sqrt9=3$。",
+   "misconception": "⚠️易错点：把长度写成 $\\|\\alpha\\|^2=9$（那是平方范数），或忘记开方。",
+   "extension": null,
+   "tags": [
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "长度",
+     "code": "sqrt(M([[1,2,2]]).dot(M([[1,2,2]])))",
+     "expected": "3"
+    },
+    {
+     "desc": "长度平方",
+     "code": "M([[1,2,2]]).dot(M([[1,2,2]]))",
+     "expected": "9"
+    }
+   ],
+   "idx": 407
+  },
+  {
+   "id": "q-375",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.2 方阵的特征值与特征向量",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=\\begin{pmatrix}1&1\\\\0&2\\end{pmatrix}$，则 $A$ 的两个特征值中**较大**的那个是 ______ 。",
+   "options": null,
+   "answer": [
+    "2"
+   ],
+   "accept": [
+    "2"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$|\\lambda E-A|=\\begin{vmatrix}\\lambda-1&-1\\\\0&\\lambda-2\\end{vmatrix}=(\\lambda-1)(\\lambda-2)$，故特征值为 $1$ 与 $2$，较大者是 $2$（§5.2）。",
+   "misconception": "⚠️易错点：把特征方程写成 $|A-\\lambda E|$ 时把根的符号搞乱；本题两种写法同解，但 $n$ 为奇数时 $|A-\\lambda E|=-|\\lambda E-A|$。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "特征值",
+     "code": "M([[1,1],[0,2]]).eigenvals()",
+     "expected": "{2: 1, 1: 1}"
+    }
+   ],
+   "idx": 408
+  },
+  {
+   "id": "q-429",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.1 向量的内积、长度及正交性",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\alpha=(1,1,0)^{\\mathsf T}$，$\\beta=(1,-1,0)^{\\mathsf T}$，则 $(\\alpha,\\beta)=$ ______ 。",
+   "options": null,
+   "answer": [
+    "0"
+   ],
+   "accept": [
+    "0",
+    "零"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§5.1 内积 $(\\alpha,\\beta)=1\\times1+1\\times(-1)+0\\times0=0$，故这两个向量相互正交。",
+   "misconception": "⚠️易错点：把第二个分量的乘积写成 $1\\times1$，忽略了两者符号相反。",
+   "extension": null,
+   "tags": [
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "内积",
+     "code": "M([[1,1,0]]).dot(M([[1,-1,0]]))",
+     "expected": "0"
+    }
+   ],
+   "idx": 409
+  },
+  {
+   "id": "q-430",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §5.2 方阵的特征值与特征向量",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}$，则 $A$ 的两个特征值之积为 ______ 。",
+   "options": null,
+   "answer": [
+    "-2"
+   ],
+   "accept": [
+    "-2"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：由韦达定理，$n$ 阶矩阵特征值之积等于 $|A|$（§5.2）。$|A|=1\\times4-2\\times3=4-6=-2$。",
+   "misconception": "⚠️易错点：特征值之和等于迹（本题是 $1+4=5$），特征值之积才等于行列式，两者别记混。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[1,2],[3,4]]).det()",
+     "expected": "-2"
+    }
+   ],
+   "idx": 410
+  }
+ ]
+}

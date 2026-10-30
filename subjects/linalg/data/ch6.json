@@ -1,0 +1,1378 @@
+{
+ "chapter": 6,
+ "questions": [
+  {
+   "id": "q-465",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.1 线性空间的定义与性质（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $V$ 是数域 $F$ 上的线性空间。下列命题中，必为真的是",
+   "options": [
+    "$V$ 中存在两个线性无关的非零向量",
+    "$V$ 含零向量，且对向量的加法与数乘封闭",
+    "$V$ 中每个向量都可唯一表示成有限多个基向量的线性组合",
+    "$V$ 必为有限维空间"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：线性空间的定义（§6.1）要求：$V$ 是 $F$ 上向量的**非空**集合，且对加法、数乘**封闭**——任取 $\\alpha,\\beta\\in V$ 有 $\\alpha+\\beta\\in V$，任取 $\\lambda\\in F$ 有 $\\lambda\\alpha\\in V$。取 $\\lambda=0$ 得 $0\\alpha=\\boldsymbol{0}\\in V$，故零向量必在 $V$ 中，这正是 B 的内容。\nA 不一定成立：平凡线性空间 $V=\\{\\boldsymbol{0}\\}$ 也是线性空间，但其中不存在两个线性无关的非零向量。\nC 错：只有**有限维**空间才有有限的一组基；无限维空间（如实系数多项式空间）的基是无限集，「有限多个基向量的线性组合」张不成整个 $V$。\nD 错：多项式空间、多项式矩阵空间都是无限维线性空间。",
+   "misconception": "⚠️易错点：默认「线性空间 = 有限维」。线性空间的定义**不要求有限维**，有限维只是附加条件。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 464
+  },
+  {
+   "id": "q-471",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.1 线性空间的定义与性质（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $V$ 是数域 $F$ 上的线性空间，下列集合按通常运算构成线性空间的是",
+   "options": [
+    "$\\mathbb{R}$",
+    "$\\{(x,y)\\mid x+y=1\\}$",
+    "$\\{x\\in\\mathbb{R}\\mid x>0\\}$",
+    "$\\{(x,y)\\mid xy=0\\}$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：线性空间的定义（§6.1）要求 $V$ 非空，且对加法与数乘都封闭（任取 $\\alpha,\\beta\\in V$ 有 $\\alpha+\\beta\\in V$，任取 $\\lambda\\in F$ 有 $\\lambda\\alpha\\in V$）。\nA 正确：$\\mathbb{R}$ 按通常加法与数乘是标准的一维线性空间。\nB 错：集合里没有零向量 $(0,0)$，且 $(1,0)+(0,1)=(1,1)\\notin V$，加法不封闭。\nC 错：取 $\\lambda=-1$，$-1\\cdot 1=-1$ 不在集合中，数乘不封闭。\nD 错：$(1,0)+(0,1)=(1,1)$ 不满足 $xy=0$，两个坐标轴的并集对加法不封闭。",
+   "misconception": "⚠️易错点：只验算「加法封闭」就下结论，忘了数乘封闭与零向量必须在集合内。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 465
+  },
+  {
+   "id": "q-472",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.2 维数、基与坐标（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $V$ 是 $3$ 维线性空间，则 $V$ 的任意一组基含有的向量个数是",
+   "options": [
+    "$2$",
+    "$4$",
+    "取决于所选的这一组基",
+    "$3$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.2 基与维数——$n$ 维线性空间的**每组**基都恰含 $n$ 个向量，这个 $n$ 称为该空间的**维数**，它只由空间本身决定，与选哪一组基无关。\nA 错：两个向量张成的子空间维数至多为 $2$，张不成 $3$ 维空间。\nB 错：四个向量必然线性相关，不是一组基。\nC 错：维数是空间的固有属性，换一组基不改变基中向量的个数。\nD 正确：$V$ 是 $3$ 维空间，任何一组基都含 $3$ 个向量。",
+   "misconception": "⚠️易错点：把「基」与「任意极大线性无关组」在无限维空间混为一谈——有限维里两者等价。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 466
+  },
+  {
+   "id": "q-473",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.4 线性变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $T:\\mathbb{R}^2\\to\\mathbb{R}^2$，$T(x,y)=(x+y,\\ x-y)$，则 $T$ 是",
+   "options": [
+    "线性变换",
+    "非线性变换",
+    "连续但非线性的变换",
+    "零变换"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：线性变换的判定（§6.4）是保持加法与数乘两条：$T(\\alpha+\\beta)=T(\\alpha)+T(\\beta)$，$T(\\lambda\\alpha)=\\lambda T(\\alpha)$。本题 $T$ 由矩阵 $\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}$ 给出，矩阵型映射必为线性变换。\nA 正确：逐项验证 $T(\\alpha+\\beta)=T(\\alpha)+T(\\beta)$、$T(\\lambda\\alpha)=\\lambda T(\\alpha)$ 均成立。\nB 错：$T$ 写成矩阵形式，矩阵乘法对向量是线性的。\nC 错：连续性是分析性质，无法替代线性判定。\nD 错：$T(1,0)=(1,1)\\neq\\boldsymbol{0}$，$T$ 并非零变换。",
+   "misconception": "⚠️易错点：拿「连续」「可导」这类分析性质代替线性判定。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 467
+  },
+  {
+   "id": "q-474",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\alpha_1,\\alpha_2,\\alpha_3$ 是 $V$ 的一组基，$\\beta_1,\\beta_2,\\beta_3$ 是 $V$ 的另一组基，过渡矩阵 $P$ 的第 $1$ 列是",
+   "options": [
+    "$\\beta_1$ 在基 $\\beta$ 下的坐标",
+    "$\\alpha_1$ 在基 $\\beta$ 下的坐标",
+    "$\\beta_1$ 在基 $\\alpha$ 下的坐标",
+    "$\\alpha_1$ 在基 $\\alpha$ 下的坐标"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.3 过渡矩阵的定义——$P$ 由 $\\beta_1,\\dots,\\beta_n$ 在基 $\\alpha$ 下的坐标**按列排成**，即 $P=\\big([\\beta_1]_\\alpha\\ \\cdots\\ [\\beta_n]_\\alpha\\big)$，故第 $1$ 列是 $\\beta_1$ 在基 $\\alpha$ 下的坐标。\nA 错：$\\beta_1$ 在基 $\\beta$ 下的坐标是单位列向量 $(1,0,0)^T$，那是单位矩阵 $I$ 的列。\nB 错：$\\alpha_1$ 在基 $\\beta$ 下的坐标属于另一个矩阵（即 $P^{-1}$ 的列）。\nC 正确：过渡矩阵的列就是新基向量在旧基下的坐标。\nD 错：$\\alpha_1$ 在基 $\\alpha$ 下的坐标也是 $(1,0,0)^T$，与 $P$ 的列无关。",
+   "misconception": "⚠️易错点：把过渡矩阵 $P$ 与坐标变换矩阵 $P^{-1}$ 记混，方向一旦搞反整条公式就错。",
+   "extension": null,
+   "tags": [
+    "高频",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 468
+  },
+  {
+   "id": "q-475",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $V$ 与 $W$ 的维数分别为 $2$ 与 $3$，$T$ 是从 $V$ 到 $W$ 的线性变换。$T$ 关于所选基的矩阵是",
+   "options": [
+    "$2\\times2$ 矩阵",
+    "$3\\times2$ 矩阵",
+    "$2\\times3$ 矩阵",
+    "$3\\times3$ 矩阵"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.5 矩阵表示式——矩阵的第 $j$ 列是 $T(\\alpha_j)$ 在 $W$ 的基下的坐标，故**列数**等于定义域基的个数 $\\dim V$，**行数**等于陪域基的个数 $\\dim W$。本题 $\\dim V=2,\\dim W=3$，故矩阵是 $3\\times2$。\nA 错：$2\\times2$ 的行数只能对应 $2$ 维的陪域，与 $\\dim W=3$ 不符。\nB 正确：$3$ 行 $2$ 列，与定义域 $2$ 维、陪域 $3$ 维一致。\nC 错：$2\\times3$ 的列数对应 $3$ 维的定义域，方向正好相反。\nD 错：$3\\times3$ 要求 $\\dim V=\\dim W=3$。",
+   "misconception": "⚠️易错点：把「行=定义域维数、列=陪域维数」记反——记住列向量是 $T(\\alpha_j)$ 的坐标。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 469
+  },
+  {
+   "id": "q-476",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.1 线性空间的定义与性质（选学）",
+    "kind": "textbook"
+   },
+   "stem": "关于线性空间的性质，下列正确的有",
+   "options": [
+    "$V$ 中含零向量 $\\boldsymbol{0}$",
+    "对任取 $\\alpha\\in V$，有 $-\\alpha\\in V$",
+    "$V$ 必为有限维空间",
+    "$V$ 中任意两元素之差仍在 $V$ 中"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：线性空间的定义（§6.1）——$V$ 非空，对加法与数乘封闭，由此可以推出零向量与负向量存在。\nA 正确：取 $\\lambda=0$ 有 $0\\alpha=\\boldsymbol{0}\\in V$。\nB 正确：取 $\\lambda=-1$ 有 $-\\alpha\\in V$。\nC 错：实系数多项式空间、多项式矩阵空间都是无限维线性空间。\nD 正确：$\\alpha-\\beta=\\alpha+(-1)\\beta$，两次封闭性即得。",
+   "misconception": "⚠️易错点：默认「线性空间 = 有限维」——定义并不要求有限维。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 470
+  },
+  {
+   "id": "q-477",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.2 维数、基与坐标（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $V$ 是 $n$ 维线性空间，下列说法正确的有",
+   "options": [
+    "$V$ 的任意一组基恰含 $n$ 个向量",
+    "$V$ 中任意 $n$ 个线性无关的向量都构成 $V$ 的一组基",
+    "$V$ 中任意 $n$ 个向量都构成 $V$ 的一组基",
+    "$V$ 的维数等于 $V$ 的任意一组基中向量的个数"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.2 基的判定定理——一组向量是基，当且仅当它线性无关并且张成 $V$；$n$ 维空间中基含 $n$ 个向量。\nA 正确：这是维数的定义，维数与基的选取无关。\nB 正确：$n$ 维空间中 $n$ 个线性无关向量必然张成 $V$，否则其张成空间维数不超过 $n-1$，与线性无关矛盾。\nC 错：$n$ 个向量可能线性相关，例如其中一个是另一个的 $2$ 倍，此时无法张成 $V$。\nD 正确：维数就是任一组基中向量的个数。",
+   "misconception": "⚠️易错点：漏掉「线性无关」这一半，只凭「有 $n$ 个向量」就断定是基。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 471
+  },
+  {
+   "id": "q-478",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.4 线性变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $T$ 是线性空间 $V$ 到 $W$ 的线性变换，下列结论正确的有",
+   "options": [
+    "$T(\\boldsymbol{0})=\\boldsymbol{0}$",
+    "$T(-\\alpha)=-T(\\alpha)$",
+    "$T(\\alpha+\\beta)=T(\\alpha)+T(\\beta)$",
+    "$T$ 必为一一映射"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：线性变换的定义（§6.4）就是保持加法与数乘，由此可推出前三条。\nA 正确：取 $\\alpha=\\beta=\\boldsymbol{0}$ 或 $\\lambda=0$ 即得。\nB 正确：$T(-\\alpha)=T((-1)\\alpha)=-T(\\alpha)$。\nC 正确：这正是保持加法这一条。\nD 错：投影 $T(x,y)=(x,0)$ 是线性变换，但核非零，并非一一映射。",
+   "misconception": "⚠️易错点：把「线性」等同于「单射、可逆」——线性只约束加法与数乘的保持。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 472
+  },
+  {
+   "id": "q-466",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.4 线性变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $T$ 是线性空间 $V$ 到 $W$ 的一个映射。关于 $T$ 是否为线性变换，下列说法正确的有",
+   "options": [
+    "$T(\\alpha+\\beta)=T(\\alpha)+T(\\beta)$（保持加法）",
+    "$T(\\lambda\\alpha)=\\lambda T(\\alpha)$（保持数乘）",
+    "$T$ 必为可逆映射",
+    "零变换 $T(\\alpha)=0$ 是线性变换"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：线性变换的定义（§6.4）恰好就是保持加法与数乘两条，故 A、B 正确；把 $\\alpha=\\boldsymbol{0}$ 或 $\\lambda=0$ 代入即可看出零变换满足这两条，D 正确。\nC 错：线性变换**未必可逆**。例如 $T:\\mathbb{R}^2\\to\\mathbb{R}^2$，$T(x,y)=(x,0)$ 是线性变换，但 $\\ker T\\neq\\{0\\}$，不可逆。",
+   "misconception": "⚠️易错点：把「线性」当成「可逆」。线性只约束加法与数乘的保持，与单射、满射无关。",
+   "extension": null,
+   "tags": [
+    "高频",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 473
+  },
+  {
+   "id": "q-479",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $T:V\\to W$ 线性，$\\dim V=3$，$\\dim W=3$，$T$ 关于所选基的矩阵为 $A$，下列说法正确的有",
+   "options": [
+    "$T$ 可逆当且仅当 $A$ 可逆",
+    "$T$ 的秩等于 $A$ 的秩",
+    "$\\dim\\ker T=3-r(A)$",
+    "$T$ 可逆时 $T^{-1}$ 关于相应基的矩阵为 $A^{-1}$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.5 矩阵表示式与秩–零化度定理——$\\dim V=\\dim W$ 时线性映射可逆 $\\Leftrightarrow$ 满射 $\\Leftrightarrow\\ r(A)=3\\Leftrightarrow A$ 可逆；核空间维数等于定义域维数减秩。\nA 正确：同维情形下可逆性在 $T$ 与 $A$ 之间完全对应。\nB 正确：像空间的维数就是矩阵的秩。\nC 正确：秩–零化度定理给出 $\\dim\\ker T=\\dim V-r(A)=3-r(A)$。\nD 正确：逆变换的矩阵恰为 $A^{-1}$（由 $A^{-1}A=I$ 直接验证）。",
+   "misconception": "⚠️易错点：忽略「定义域与陪域同维」这个前提，把「可逆 $\\Leftrightarrow A$ 可逆」搬到维数不同的情形。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 474
+  },
+  {
+   "id": "q-480",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\alpha$ 与 $\\beta$ 是线性空间 $V$ 的两组基，过渡矩阵 $P$ 的各列由 $\\beta$ 中向量在 $\\alpha$ 下的坐标拼成。下列说法正确的有",
+   "options": [
+    "$P$ 可逆",
+    "$P$ 的第 $j$ 列是 $\\beta_j$ 在基 $\\alpha$ 下的坐标",
+    "对任意 $v\\in V$ 有 $[v]_\\alpha=P[v]_\\beta$",
+    "$P$ 只由 $\\beta$ 决定，与 $\\alpha$ 的选取无关"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.3 基变换与坐标变换——过渡矩阵 $P=([\\beta_1]_\\alpha\\ \\cdots\\ [\\beta_n]_\\alpha)$，它把 $\\beta$ 下的坐标映到 $\\alpha$ 下的坐标。\nA 正确：$\\beta$ 是基，故 $P$ 可逆，其逆即 $\\alpha$ 中向量在 $\\beta$ 下的坐标矩阵。\nB 正确：这是过渡矩阵的定义。\nC 正确：坐标变换公式 $[v]_\\alpha=P[v]_\\beta$。\nD 错：$P$ 同时依赖两组基的选取，换一组 $\\alpha$ 它就变。",
+   "misconception": "⚠️易错点：以为过渡矩阵是「基的变换」，其实它同时记录了两组基，方向是 $\\beta$ 坐标 $\\to$ $\\alpha$ 坐标。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 475
+  },
+  {
+   "id": "q-467",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.2 维数、基与坐标（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\alpha_1,\\dots,\\alpha_n$ 是线性空间 $V$ 的一组向量。则 $\\alpha_1,\\dots,\\alpha_n$ 是 $V$ 的一组基，当且仅当它们线性无关且能张成 $V$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.2 基的定义与判定定理——$V$ 的一组向量是 $V$ 的一组基，**当且仅当**它们线性无关并且张成 $V$。线性无关保证坐标表示的**唯一性**，张成保证坐标表示的**存在性**，两者缺一不可。\n若 $V$ 为 $n$ 维空间，则每组基恰含 $n$ 个向量，这个 $n$ 称为 $V$ 的**维数**。",
+   "misconception": "⚠️易错点：只强调其中一条——只线性无关张不成整个空间，只张成则坐标表示不唯一。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 476
+  },
+  {
+   "id": "q-481",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.1 线性空间的定义与性质（选学）",
+    "kind": "textbook"
+   },
+   "stem": "平凡线性空间 $\\{\\boldsymbol{0}\\}$ 按通常运算构成线性空间。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.1 线性空间的定义——集合非空且对加法与数乘封闭即可。$\\{\\boldsymbol{0}\\}$ 非空，且 $\\boldsymbol{0}+\\boldsymbol{0}=\\boldsymbol{0}$、$\\lambda\\boldsymbol{0}=\\boldsymbol{0}$ 都落在集合内，故它确实是（平凡）线性空间。",
+   "misconception": "⚠️易错点：以为「只含零向量」太特殊，不算线性空间——它恰好是最简单的线性空间。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 477
+  },
+  {
+   "id": "q-482",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.2 维数、基与坐标（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $V$ 是 $n$ 维线性空间，则 $V$ 中任意 $n$ 个向量都构成 $V$ 的一组基。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.2 基的判定定理要求**既线性无关又张成 $V$**，两条缺一不可。\nA 错：$n$ 个向量未必线性无关，例如其中一个恰是另一个的 $2$ 倍，此时它们张成的空间维数不到 $n$，张不成 $V$。",
+   "misconception": "⚠️易错点：只数向量个数（$n$ 个）就断定是基，忘了还要线性无关。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 478
+  },
+  {
+   "id": "q-483",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.4 线性变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "零变换 $T(\\alpha)=\\boldsymbol{0}$ 是线性变换。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.4 线性变换的判定——$T(\\alpha+\\beta)=\\boldsymbol{0}=\\boldsymbol{0}+\\boldsymbol{0}$，$T(\\lambda\\alpha)=\\boldsymbol{0}=\\lambda\\boldsymbol{0}=\\lambda T(\\alpha)$，两条保持性都成立。",
+   "misconception": "⚠️易错点：以为「映成零」就退化了，不算变换——零变换是合法的线性变换。",
+   "extension": null,
+   "tags": [
+    "基础"
+   ],
+   "verify": [],
+   "idx": 479
+  },
+  {
+   "id": "q-484",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.2 维数、基与坐标（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $V$ 是 $n$ 维线性空间，$\\alpha_1,\\dots,\\alpha_n$ 是 $V$ 中 $n$ 个线性无关的向量，则 $\\alpha_1,\\dots,\\alpha_n$ 是 $V$ 的一组基。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.2 判定定理的推论——在 $n$ 维空间中，$n$ 个线性无关向量必然张成 $V$：否则它们张成的子空间维数 $\\le n-1$，与它们线性无关矛盾。故它们既线性无关又张成 $V$，是一组基。",
+   "misconception": "⚠️易错点：只记住「线性无关 $\\Rightarrow$ 基」，忘了这个结论依赖「$V$ 是 $n$ 维」这一前提。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 480
+  },
+  {
+   "id": "q-485",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $T:V\\to W$ 线性且 $\\dim V=\\dim W=n$，则 $T$ 可逆当且仅当 $T$ 为一一映射。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.5 秩–零化度定理——$\\dim\\ker T=\\dim V-r(T)$。当 $\\dim V=\\dim W=n$ 时：$T$ 为一一映射 $\\Leftrightarrow\\ker T=\\{\\boldsymbol{0}\\}\\Leftrightarrow r(T)=n\\Leftrightarrow T$ 为满射 $\\Leftrightarrow T$ 可逆。",
+   "misconception": "⚠️易错点：漏掉「两边维数相同」这个前提，在 $\\dim V\\neq\\dim W$ 时也套用单射即可逆。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 481
+  },
+  {
+   "id": "q-468",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\alpha_1,\\alpha_2,\\alpha_3$ 是 $\\mathbb{R}^3$ 的一组基，则在基 $\\alpha_1,\\alpha_2,\\alpha_3$ 下，向量 $\\boldsymbol{\\beta}=\\alpha_1+2\\alpha_2+3\\alpha_3$ 的坐标是 ______。",
+   "options": null,
+   "answer": [
+    "(1,2,3)",
+    "1,2,3",
+    "(1,2,3)^T",
+    "{1,2,3}"
+   ],
+   "accept": [
+    "(1,2,3)",
+    "1,2,3",
+    "(1,2,3)^T",
+    "(1,2,3)^t",
+    "{1,2,3}",
+    "(1,2,3)T"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：坐标的定义（§6.2）——向量在基 $\\alpha_1,\\alpha_2,\\alpha_3$ 下的坐标，就是把它写成基向量的线性组合时**各系数构成的有序数组**。\n这里 $\\boldsymbol{\\beta}=\\alpha_1+2\\alpha_2+3\\alpha_3$，系数依次为 $1,2,3$，故坐标为 $(1,2,3)^{\\mathsf T}$。\n**引申**：坐标依赖于所选的基；换成另一组基，同一个向量的坐标一般会变，这正是基变换与坐标变换要处理的问题（§6.3）。",
+   "misconception": "⚠️易错点：把 $\\alpha_1+2\\alpha_2+3\\alpha_3$ 当成答案——那是向量的**表示式**，坐标只是那三个**系数**。",
+   "extension": null,
+   "tags": [
+    "高频",
+    "概念"
+   ],
+   "verify": [],
+   "idx": 482
+  },
+  {
+   "id": "q-486",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.2 维数、基与坐标（选学）",
+    "kind": "textbook"
+   },
+   "stem": "实数域上的 $\\mathbb{R}^3$ 按通常运算作为线性空间，其维数是",
+   "options": null,
+   "answer": [
+    "3"
+   ],
+   "accept": [
+    "3",
+    "三"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.2 维数的定义——$\\mathbb{R}^3$ 的标准基 $\\boldsymbol{e}_1,\\boldsymbol{e}_2,\\boldsymbol{e}_3$ 线性无关且张成 $\\mathbb{R}^3$，故 $\\dim\\mathbb{R}^3=3$，即每个标准基向量各贡献一个维度。\n**考点出处**：同济《线性代数》第六版 §6.2 维数、基与坐标（选学）。",
+   "misconception": "⚠️易错点：把「坐标个数」与「维数」在一般空间里混为一谈——只有坐标空间 $\\mathbb{R}^n$ 才等于 $n$。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 483
+  },
+  {
+   "id": "q-487",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.1 线性空间的定义与性质（选学）",
+    "kind": "textbook"
+   },
+   "stem": "线性空间 $V$ 中零向量的个数是",
+   "options": null,
+   "answer": [
+    "1"
+   ],
+   "accept": [
+    "1",
+    "一"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.1 线性空间的公理——由数乘分配律与 $1\\alpha=\\alpha$ 可证零向量唯一：若 $\\boldsymbol{0}'=\\boldsymbol{0}$，则 $\\boldsymbol{0}'=\\boldsymbol{0}'+\\boldsymbol{0}=\\boldsymbol{0}$。故零向量恰有一个。\n**考点出处**：同济《线性代数》第六版 §6.1 线性空间的定义与性质（选学）。",
+   "misconception": "⚠️易错点：以为零向量可以是任意多个——零向量的存在与唯一性都是公理推出来的。",
+   "extension": null,
+   "tags": [
+    "基础"
+   ],
+   "verify": [],
+   "idx": 484
+  },
+  {
+   "id": "q-488",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.4 线性变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $T:V\\to W$ 是线性变换且 $T$ 为一一映射，则 $T$ 的核空间 $\\ker T$ 的维数是",
+   "options": null,
+   "answer": [
+    "0"
+   ],
+   "accept": [
+    "0",
+    "零"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.4–6.5——核空间 $\\ker T=\\{\\alpha\\mid T(\\alpha)=\\boldsymbol{0}\\}$ 是 $V$ 的子空间；$T$ 为一一映射意味着核中只含零向量，故 $\\ker T=\\{\\boldsymbol{0}\\}$，其维数为 $0$。\n**考点出处**：同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）。",
+   "misconception": "⚠️易错点：把「一一映射」与「满射」混用——同维时二者等价，异维时未必。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 485
+  },
+  {
+   "id": "q-489",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $V$ 是 $4$ 维线性空间，$T:V\\to W$ 线性且 $T$ 的秩为 $2$，则核空间 $\\ker T$ 的维数是",
+   "options": null,
+   "answer": [
+    "2"
+   ],
+   "accept": [
+    "2",
+    "二"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.5 秩–零化度定理——$\\dim\\ker T=\\dim V-r(T)=4-2=2$。这正是「定义域维数 = 像空间维数 + 核空间维数」的直接应用。\n**考点出处**：同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）。",
+   "misconception": "⚠️易错点：把 $r(T)$ 当成 $\\dim\\ker T$；两者之和才是定义域维数。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 486
+  },
+  {
+   "id": "q-490",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "在线性空间 $V$ 中，设 $\\alpha_1,\\alpha_2,\\alpha_3$ 是一组基，$\\beta_1=\\alpha_1,\\ \\beta_2=\\alpha_1+\\alpha_2,\\ \\beta_3=\\alpha_1+\\alpha_3$ 也是一组基。过渡矩阵 $P$（列向量为 $\\beta_j$ 在基 $\\alpha$ 下的坐标）的行列式 $|P|$ 是",
+   "options": null,
+   "answer": [
+    "1"
+   ],
+   "accept": [
+    "1",
+    "一"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§6.3 过渡矩阵——$P$ 的三列依次为 $(1,0,0)^T$、$(1,1,0)^T$、$(1,0,1)^T$，即 $P=\\begin{pmatrix}1&1&1\\\\0&1&0\\\\0&0&1\\end{pmatrix}$，它是上三角矩阵且对角线全为 $1$，故 $|P|=1$。\n**考点出处**：同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）。",
+   "misconception": "⚠️易错点：把过渡矩阵的列写成「新基在旧基下的坐标」以外的顺序，列一换，行列式就变。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "|P|",
+     "code": "M([[1,1,1],[0,1,0],[0,0,1]]).det()",
+     "expected": "1"
+    }
+   ],
+   "idx": 487
+  },
+  {
+   "id": "q-491",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.1 线性空间的定义与性质（选学）",
+    "kind": "textbook"
+   },
+   "stem": "简述线性空间的定义要点（数域、集合、运算与公理）。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "设 $F$ 是数域，$V$ 是 $F$ 上向量的集合，$V$ 上定义了加法与数乘运算，且满足：\n（1）$V$ 非空；\n（2）加法交换律 $\\alpha+\\beta=\\beta+\\alpha$；\n（3）加法结合律 $(\\alpha+\\beta)+\\gamma=\\alpha+(\\beta+\\gamma)$；\n（4）存在零向量 $\\boldsymbol{0}\\in V$，对任意 $\\alpha$ 有 $\\alpha+\\boldsymbol{0}=\\alpha$；\n（5）每个 $\\alpha$ 存在负向量 $-\\alpha$，使 $\\alpha+(-\\alpha)=\\boldsymbol{0}$；\n（6）数乘结合律 $(\\lambda\\mu)\\alpha=\\lambda(\\mu\\alpha)$；\n（7）数乘对加法的分配律 $\\lambda(\\alpha+\\beta)=\\lambda\\alpha+\\lambda\\beta$；\n（8）数乘对数乘的加法分配律 $(\\lambda+\\mu)\\alpha=\\lambda\\alpha+\\mu\\alpha$；\n（9）$1\\alpha=\\alpha$。\n满足以上条件的 $V$ 称为数域 $F$ 上的线性空间（向量空间）。",
+   "points": [
+    {
+     "text": "说明对象是数域 $F$ 上的向量集合 $V$，且定义了加法与数乘两种运算",
+     "partial": 2
+    },
+    {
+     "text": "写出与零向量、负向量的存在性以及加法交换律、结合律有关的公理",
+     "partial": 2
+    },
+    {
+     "text": "写出数乘的结合律、两条分配律以及 $1\\alpha=\\alpha$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：同济《线性代数》第六版 §6.1 线性空间的定义与性质（选学）。定义部分要把「运算规则」与「零向量、负向量的存在唯一性」分开写，答题时按公理逐条列出即可。\n**考点出处**：同济《线性代数》第六版 §6.1 线性空间的定义与性质（选学）。",
+   "misconception": "⚠️易错点：只写「对加法与数乘封闭」两条，把运算律与零/负向量的存在性漏掉；后者正是与「子空间判定」区分开的地方。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 488
+  },
+  {
+   "id": "q-492",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.2 维数、基与坐标（选学）",
+    "kind": "textbook"
+   },
+   "stem": "写出向量组成为线性空间一组基的等价刻画，并说明维数为什么与基的选取无关。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "（1）等价刻画：设 $\\alpha_1,\\dots,\\alpha_n\\in V$，则它们是 $V$ 的一组基 $\\Longleftrightarrow$ 它们线性无关且张成 $V$；\n$\\Longleftrightarrow$ 它们是极大线性无关组（再加入任何一个 $V$ 中的向量就线性相关）；\n$\\Longleftrightarrow$ 在 $n$ 维空间中 $n$ 个线性无关的向量（此时它们必张成 $V$）。\n（2）维数与基无关：设 $\\alpha_1,\\dots,\\alpha_n$ 与 $\\beta_1,\\dots,\\beta_m$ 是 $V$ 的两组基。\n由 $\\beta_j=\\sum_i c_{ij}\\alpha_i$ 及 $\\alpha_i=\\sum_j d_{ji}\\beta_j$ 代入得 $\\sum_i c_{ij}d_{ji}=\\delta_{ij}$，即 $CD=I$，\n故 $C$ 可逆且 $m=n$。因此任何两组基含有的向量个数都相同，这个共同的个数就是 $V$ 的维数，记作 $\\dim V=n$。",
+   "points": [
+    {
+     "text": "给出基的等价刻画：线性无关且张成 $V$，并指出与极大线性无关组的等价性",
+     "partial": 2
+    },
+    {
+     "text": "说明 $n$ 维空间中 $n$ 个线性无关向量必为基这一推论",
+     "partial": 2
+    },
+    {
+     "text": "证明两组基含有的向量个数相同（借助过渡矩阵可逆或维数唯一性），从而维数与基的选取无关",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：同济《线性代数》第六版 §6.2 维数、基与坐标（选学）。基的判定定理给出前两条等价刻画；维数的唯一性由过渡矩阵 $C D=I$ 可逆推出。\n**考点出处**：同济《线性代数》第六版 §6.2 维数、基与坐标（选学）。",
+   "misconception": "⚠️易错点：只答「线性无关且张成」，没解释维数为何与基无关；后半问才是考查点。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 489
+  },
+  {
+   "id": "q-469",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\alpha_1,\\alpha_2,\\alpha_3$ 与 $\\beta_1,\\beta_2,\\beta_3$ 是三维线性空间 $V$ 的两组基。说明基变换矩阵与坐标变换矩阵之间的关系。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**答案（§6.3 基变换与坐标变换）**：记\n$$\\boldsymbol{\\alpha}=(\\alpha_1,\\alpha_2,\\alpha_3)^{\\mathsf T},\\qquad \\boldsymbol{\\beta}=(\\beta_1,\\beta_2,\\beta_3)^{\\mathsf T}.$$\n由基的定义，$\\boldsymbol{\\beta}$ 的每个向量都能唯一地表示成 $\\boldsymbol{\\alpha}$ 的线性组合，故存在**唯一**的矩阵 $P=(p_{ij})_{3\\times3}$ 使\n$$\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}P\\qquad(P\\text{ 为可逆矩阵，称 }P\\text{ 为基变换矩阵}).$$\n设向量 $\\boldsymbol{\\xi}$ 在基 $\\boldsymbol{\\alpha}$ 与基 $\\boldsymbol{\\beta}$ 下的坐标分别为 $\\boldsymbol{x}$ 与 $\\boldsymbol{y}$，即\n$$\\boldsymbol{\\xi}=\\boldsymbol{\\alpha}\\boldsymbol{x}=\\boldsymbol{\\beta}\\boldsymbol{y}.$$\n把 $\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}P$ 代入右端并约去 $\\boldsymbol{\\alpha}$（$\\boldsymbol{\\alpha}$ 的元素线性无关，可作左乘消去），得\n$$\\boldsymbol{x}=P\\boldsymbol{y}\\quad\\Longrightarrow\\quad \\boldsymbol{y}=P^{-1}\\boldsymbol{x}.$$\n**结论**：由旧基 $\\boldsymbol{\\alpha}$ 的坐标换到新基 $\\boldsymbol{\\beta}$ 的坐标要乘**基变换矩阵的逆矩阵** $P^{-1}$；反之从新基坐标换回旧基坐标要乘 $P$。两个方向的变换矩阵互为逆矩阵。\n**补充**：$P$ 的第 $j$ 列正是 $\\beta_j$ 在基 $\\boldsymbol{\\alpha}$ 下的坐标。",
+   "points": [
+    {
+     "text": "写出基变换矩阵的定义式 $\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}P$，并指出 $P$ 可逆且唯一",
+     "partial": 2
+    },
+    {
+     "text": "由 $\\boldsymbol{\\alpha}\\boldsymbol{x}=\\boldsymbol{\\beta}\\boldsymbol{y}$ 推出 $\\boldsymbol{x}=P\\boldsymbol{y}$，即 $\\boldsymbol{y}=P^{-1}\\boldsymbol{x}$",
+     "partial": 2
+    },
+    {
+     "text": "得出结论：坐标变换矩阵与基变换矩阵互为逆矩阵，并说明换基方向",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§6.3 基变换与坐标变换。\n**考点出处**：同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）。",
+   "misconception": "⚠️易错点：把方向搞反——用**旧基坐标换新基坐标**要乘 $P^{-1}$（过渡矩阵的逆），不是乘 $P$。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "重点"
+   ],
+   "verify": [],
+   "idx": 490
+  },
+  {
+   "id": "q-493",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.4 线性变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "写出映射 $T:V\\to W$ 成为线性变换的充要条件，并据此证明 $T(\\boldsymbol{0})=\\boldsymbol{0}$ 与 $T(-\\alpha)=-T(\\alpha)$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "（1）充要条件：$T$ 是线性变换 $\\Longleftrightarrow$ 对任意 $\\alpha,\\beta\\in V$ 与任意 $\\lambda\\in F$ 有\n$T(\\alpha+\\beta)=T(\\alpha)+T(\\beta)$（保持加法）且 $T(\\lambda\\alpha)=\\lambda T(\\alpha)$（保持数乘）。\n（2）推论：\n取 $\\lambda=0$，由保持数乘得 $T(\\boldsymbol{0})=T(0\\cdot\\boldsymbol{0})=0\\cdot T(\\boldsymbol{0})=\\boldsymbol{0}$；\n取 $\\alpha=\\beta=\\boldsymbol{0}$ 由保持加法同样得 $T(\\boldsymbol{0})=T(\\boldsymbol{0})+T(\\boldsymbol{0})$，两边减 $T(\\boldsymbol{0})$ 亦得 $T(\\boldsymbol{0})=\\boldsymbol{0}$。\n再取 $\\lambda=-1$：$T(-\\alpha)=T((-1)\\alpha)=(-1)T(\\alpha)=-T(\\alpha)$。",
+   "points": [
+    {
+     "text": "写出线性变换的等价定义（保持加法与保持数乘两条）并说明其充分必要性",
+     "partial": 2
+    },
+    {
+     "text": "由 $\\lambda=0$ 推出 $T(\\boldsymbol{0})=\\boldsymbol{0}$，并给出完整推导",
+     "partial": 2
+    },
+    {
+     "text": "由 $\\lambda=-1$ 推出 $T(-\\alpha)=-T(\\alpha)$，说明负向量映射关系",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：同济《线性代数》第六版 §6.4 线性变换（选学）。线性变换的定义本身就给这两条；两个推论都是把 $0$ 与 $-1$ 代进数乘保持性即可。\n**考点出处**：同济《线性代数》第六版 §6.4 线性变换（选学）。",
+   "misconception": "⚠️易错点：只答两条保持性而不做后续推导，丢掉第（2）问的采分点。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 491
+  },
+  {
+   "id": "q-494",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "写出过渡矩阵 $P$ 的定义与坐标变换公式，并说明 $P$ 可逆的原因。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "设 $\\alpha=(\\alpha_1,\\dots,\\alpha_n)$ 与 $\\beta=(\\beta_1,\\dots,\\beta_n)$ 是线性空间 $V$ 的两组基。\n（1）定义：记 $[\\beta_j]_\\alpha$ 为 $\\beta_j$ 在基 $\\alpha$ 下的坐标列向量，令\n$P=\\big([\\beta_1]_\\alpha\\ \\big|\\ \\cdots\\ \\big|\\ [\\beta_n]_\\alpha\\big)$，$P$ 称为**从基 $\\beta$ 到基 $\\alpha$ 的过渡矩阵**。\n（2）坐标变换公式：对任意 $v\\in V$，有 $[v]_\\alpha=P[v]_\\beta$；反解得 $[v]_\\beta=P^{-1}[v]_\\alpha$。\n（3）$P$ 可逆：记 $Q=\\big([\\alpha_1]_\\beta\\ \\big|\\ \\cdots\\ \\big|\\ [\\alpha_n]_\\beta\\big)$，由坐标表示的唯一性可得 $PQ=QP=I$，\n故 $P$ 可逆且 $P^{-1}=Q$，即逆过渡矩阵的列是 $\\alpha$ 中向量在 $\\beta$ 下的坐标。",
+   "points": [
+    {
+     "text": "给出过渡矩阵 $P$ 的定义：列向量为新基向量在旧基下的坐标",
+     "partial": 2
+    },
+    {
+     "text": "写出坐标变换公式 $[v]_\\alpha=P[v]_\\beta$ 及其逆用形式",
+     "partial": 2
+    },
+    {
+     "text": "论证 $P$ 可逆（用 $PQ=I$ 或两组基互为坐标唯一性），并指出 $P^{-1}$ 的列的含义",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）。过渡矩阵把「$\\beta$ 下坐标」映射为「$\\alpha$ 下坐标」，方向务必分清。\n**考点出处**：同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）。",
+   "misconception": "⚠️易错点：把公式方向写反（写成 $[v]_\\beta=P[v]_\\alpha$）；记住「列是旧基下坐标，结果给旧基」。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 492
+  },
+  {
+   "id": "q-495",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）",
+    "kind": "textbook"
+   },
+   "stem": "说明线性变换矩阵表示式的构造方法，以及如何由矩阵求出核空间与像空间的维数。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "设 $\\alpha_1,\\dots,\\alpha_n$ 是 $V$ 的基，$\\beta_1,\\dots,\\beta_m$ 是 $W$ 的基，$T:V\\to W$ 线性。\n（1）构造方法：记 $T(\\alpha_j)=\\sum_{i=1}^{m}a_{ij}\\beta_i$（$j=1,\\dots,n$），令 $A=(a_{ij})_{m\\times n}$，则 $A$ 是 $T$ 关于这两组基的矩阵；\n等价地，$A$ 的第 $j$ 列就是 $T(\\alpha_j)$ 在基 $\\beta$ 下的坐标。\n（2）核空间：$T(\\alpha)=\\boldsymbol{0}$ 等价于 $A[v]_\\alpha=\\boldsymbol{0}$，故核空间在基 $\\alpha$ 下的坐标集合就是齐次方程组 $A\\boldsymbol{x}=\\boldsymbol{0}$ 的解空间，\n于是 $\\dim\\ker T=n-r(A)$。\n（3）像空间：$T(V)$ 在基 $\\beta$ 下的坐标恰为 $A$ 的列空间（列是各 $T(\\alpha_j)$ 的坐标），故 $\\dim\\operatorname{im}T=r(A)$，\n且 $r(A)+n_{\\ker}=n$。",
+   "points": [
+    {
+     "text": "写出矩阵表示式的构造：第 $j$ 列是 $T(\\alpha_j)$ 在陪域基下的坐标",
+     "partial": 2
+    },
+    {
+     "text": "说明核空间对应齐次方程组 $A\\boldsymbol{x}=\\boldsymbol{0}$ 的解空间",
+     "partial": 2
+    },
+    {
+     "text": "说明像空间对应 $A$ 的列空间，给出 $\\dim\\operatorname{im}T=r(A)$ 与 $\\dim\\ker T=n-r(A)$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）。矩阵把线性变换完全转化为矩阵运算，这是本章与前三章的衔接点。\n**考点出处**：同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）。",
+   "misconception": "⚠️易错点：把像空间说成「行空间」——像空间是**列**空间，因为列向量是 $T(\\alpha_j)$ 的坐标。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 493
+  },
+  {
+   "id": "q-496",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.2 维数、基与坐标（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $W$ 是 $\\mathbb{R}^3$ 的一个子空间，$W=\\operatorname{span}\\{(1,1,0)^T,\\ (0,1,1)^T\\}$。求 $\\dim W$ 与 $W$ 的一组基。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "把两个生成向量按列排成矩阵\n$B=\\begin{pmatrix}1&0\\\\1&1\\\\0&1\\end{pmatrix}$。\n两列不成比例，故线性无关，于是 $r(B)=2$，$\\dim W=2$。\n又因这两个向量本身就是 $W$ 的生成组且线性无关，故它们就是 $W$ 的一组基。",
+   "points": [
+    {
+     "text": "写出两个生成向量并排成矩阵",
+     "partial": 2
+    },
+    {
+     "text": "用秩或不成比例说明它们线性无关，得 $r(B)=2$",
+     "partial": 2
+    },
+    {
+     "text": "由维数公式得 $\\dim W=2$",
+     "partial": 2
+    },
+    {
+     "text": "说明这两个生成向量本身就是 $W$ 的一组基",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§6.2——线性无关向量个数等于张成空间的维数，且线性无关的生成组本身就是一组基。\n**考点出处**：同济《线性代数》第六版 §6.2 维数、基与坐标（选学）。",
+   "misconception": "⚠️易错点：只说「两个向量张成空间」就认为维数是 $2$，忘了先验证线性无关（若两向量成比例，维数只有 $1$）。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "生成向量矩阵的秩",
+     "code": "M([[1,0],[1,1],[0,1]]).rank()",
+     "expected": "2"
+    }
+   ],
+   "idx": 494
+  },
+  {
+   "id": "q-497",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "在 $\\mathbb{R}^2$ 中取两组基 $\\alpha=(\\boldsymbol{e}_1,\\boldsymbol{e}_2)$ 与 $\\beta=((1,1)^T,\\ (0,1)^T)$。求从基 $\\beta$ 到基 $\\alpha$ 的过渡矩阵 $P$ 与 $|P|$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\beta_1=(1,1)^T=\\boldsymbol{e}_1+\\boldsymbol{e}_2$ 在基 $\\alpha$ 下的坐标是 $(1,1)^T$；\n$\\beta_2=(0,1)^T=\\boldsymbol{e}_2$ 在基 $\\alpha$ 下的坐标是 $(0,1)^T$。\n按列排成过渡矩阵 $P=\\begin{pmatrix}1&0\\\\1&1\\end{pmatrix}$。\n它是对角线全为 $1$ 的上三角矩阵，故 $|P|=1\\times1=1\\neq0$，$P$ 可逆（其逆为 $\\begin{pmatrix}1&0\\\\-1&1\\end{pmatrix}$）。",
+   "points": [
+    {
+     "text": "写出 $\\beta_1,\\beta_2$ 各自在基 $\\alpha$ 下的坐标",
+     "partial": 2
+    },
+    {
+     "text": "按列拼成过渡矩阵 $P$",
+     "partial": 2
+    },
+    {
+     "text": "计算行列式 $|P|=1$",
+     "partial": 2
+    },
+    {
+     "text": "由 $|P|\\neq0$ 说明 $P$ 可逆",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§6.3 过渡矩阵的定义——列向量是 $\\beta$ 中向量在 $\\alpha$ 下的坐标。\n**考点出处**：同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）。",
+   "misconception": "⚠️易错点：把过渡矩阵写成 $\\begin{pmatrix}0&1\\\\1&1\\end{pmatrix}$（行与列写反）——记住「按列排」。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "|P|",
+     "code": "M([[1,0],[1,1]]).det()",
+     "expected": "1"
+    }
+   ],
+   "idx": 495
+  },
+  {
+   "id": "q-498",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $T:\\mathbb{R}^3\\to\\mathbb{R}^2$，$T(x,y,z)=(x+2y,\\ y+z)$。求 $T$ 关于自然基的矩阵 $A$，并求 $A$ 的秩与像空间 $\\operatorname{im}T$ 的维数。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由 $T(\\boldsymbol{e}_1)=(1,0)^T$，$T(\\boldsymbol{e}_2)=(2,1)^T$，$T(\\boldsymbol{e}_3)=(0,1)^T$，\n按列排成 $A=\\begin{pmatrix}1&2&0\\\\0&1&1\\end{pmatrix}$。\n第一行 $(1,2,0)$ 与第二行 $(0,1,1)$ 不成比例，故两行线性无关，$r(A)=2$。\n由 $\\dim\\operatorname{im}T=r(A)$ 得 $\\dim\\operatorname{im}T=2$，即像空间就是整个 $\\mathbb{R}^2$，此时 $T$ 为满射。",
+   "points": [
+    {
+     "text": "求出 $T$ 在三个自然基向量上的像",
+     "partial": 2
+    },
+    {
+     "text": "按列拼成矩阵 $A=\\begin{pmatrix}1&2&0\\\\0&1&1\\end{pmatrix}$",
+     "partial": 2
+    },
+    {
+     "text": "算出 $r(A)=2$（两行线性无关）",
+     "partial": 2
+    },
+    {
+     "text": "由 $\\dim\\operatorname{im}T=r(A)$ 给出像空间维数为 $2$ 并说明 $T$ 满射",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§6.5 矩阵表示式（列是 $T(\\alpha_j)$ 的坐标）与秩–像空间维数公式 $\\dim\\operatorname{im}T=r(A)$。\n**考点出处**：同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）。",
+   "misconception": "⚠️易错点：把 $T(x,y,z)$ 的系数按**行**排成 $\\begin{pmatrix}1&2&0\\\\0&1&1\\end{pmatrix}$ 的转置，行的位置就错了。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "rank(A)",
+     "code": "M([[1,2,0],[0,1,1]]).rank()",
+     "expected": "2"
+    }
+   ],
+   "idx": 496
+  },
+  {
+   "id": "q-499",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.4 线性变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $T:\\mathbb{R}^4\\to\\mathbb{R}^3$ 的矩阵为 $A=\\begin{pmatrix}1&1&0&0\\\\2&2&0&0\\\\0&0&0&1\\end{pmatrix}$。求 $T$ 的秩、$\\dim\\ker T$ 与 $\\dim\\operatorname{im}T$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$A$ 的第 $2$ 行是第 $1$ 行的 $2$ 倍，而第 $1$ 行与第 $3$ 行 $(0,0,0,1)$ 不成比例，故 $r(A)=2$，即 $r(T)=2$。\n由秩–零化度定理，$\\dim\\ker T=\\dim\\mathbb{R}^4-r(T)=4-2=2$。\n由 $\\dim\\operatorname{im}T=r(T)=2$ 得像空间维数为 $2$。\n（另可直接解 $A\\boldsymbol{x}=\\boldsymbol{0}$：方程组等价于 $x_1+x_2=0$ 与 $x_4=0$，自由变量为 $x_2,x_3$，解空间维数 $2$。）",
+   "points": [
+    {
+     "text": "分析 $A$ 的行向量，指出第 2 行是第 1 行的倍数，得 $r(A)=2$",
+     "partial": 2
+    },
+    {
+     "text": "由秩–零化度定理写出 $\\dim\\ker T=4-2=2$",
+     "partial": 2
+    },
+    {
+     "text": "写出 $\\dim\\operatorname{im}T=r(T)=2$",
+     "partial": 2
+    },
+    {
+     "text": "（加分点）直接解出 $A\\boldsymbol{x}=\\boldsymbol{0}$ 并指出自由变量个数",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§6.5 秩–零化度定理 $\\dim\\ker T=\\dim V-r(T)$ 与 $\\dim\\operatorname{im}T=r(T)$。\n**考点出处**：同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）。",
+   "misconception": "⚠️易错点：把 $\\dim\\ker T$ 算成 $3-2=1$——用的是**定义域**维数 $4$，不是陪域维数 $3$。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "rank(A)",
+     "code": "M([[1,1,0,0],[2,2,0,0],[0,0,0,1]]).rank()",
+     "expected": "2"
+    }
+   ],
+   "idx": 497
+  },
+  {
+   "id": "q-470",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $T$ 是 $\\mathbb{R}^3$ 上的线性变换，已知\n$$T(\\boldsymbol{e}_1)=\\begin{pmatrix}2\\\\0\\\\1\\end{pmatrix},\\quad T(\\boldsymbol{e}_2)=\\begin{pmatrix}0\\\\1\\\\1\\end{pmatrix},\\quad T(\\boldsymbol{e}_3)=\\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix},$$\n其中 $\\boldsymbol{e}_1,\\boldsymbol{e}_2,\\boldsymbol{e}_3$ 为 $\\mathbb{R}^3$ 的标准基。求 $T$ 的矩阵表示式 $A$；并判断 $T$ 是否为可逆变换，若可逆求出 $T^{-1}$ 的矩阵表示式。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：求 $T$ 的矩阵表示式**。\n在标准基下，$T$ 的矩阵表示式的第 $j$ 列，就是 $T(\\boldsymbol{e}_j)$ 在该基下的坐标（§6.5）。故\n$$A=\\begin{pmatrix}2&0&1\\\\0&1&1\\\\1&1&0\\end{pmatrix}.$$\n即对任意 $\\boldsymbol{x}=(x_1,x_2,x_3)^{\\mathsf T}$，\n$$T(\\boldsymbol{x})=A\\boldsymbol{x}=\\begin{pmatrix}2x_1+x_3\\\\x_2+x_3\\\\x_1+x_2\\end{pmatrix}.$$\n\n**第二步：判断可逆性**。\n$$|A|=2\\begin{vmatrix}1&1\\\\1&0\\end{vmatrix}+1\\begin{vmatrix}0&1\\\\1&1\\end{vmatrix}=2\\times(-1)+1\\times(-1)=-3\\neq0,$$\n故 $A$ 可逆，从而 $T$ 是**可逆变换**。\n\n**第三步：求 $T^{-1}$ 的矩阵表示式**。\n由 $A^{-1}=\\dfrac{1}{|A|}A^*$，其中 $A^*$ 为 $A$ 的伴随矩阵。计算各代数余子式得\n$$A^*=\\begin{pmatrix}-1&1&-1\\\\1&-1&-2\\\\-1&-2&2\\end{pmatrix},$$\n于是\n$$A^{-1}=-\\dfrac13\\begin{pmatrix}-1&1&-1\\\\1&-1&-2\\\\-1&-2&2\\end{pmatrix}=\\begin{pmatrix}\\dfrac13&-\\dfrac13&\\dfrac13\\\\-\\dfrac13&\\dfrac13&\\dfrac23\\\\\\dfrac13&\\dfrac23&-\\dfrac23\\end{pmatrix}.$$\n即 $T^{-1}$ 的矩阵表示式为 $A^{-1}$。",
+   "points": [
+    {
+     "text": "写出 $T$ 的矩阵表示式 $A$（以 $T(\\boldsymbol{e}_j)$ 作为第 $j$ 列）",
+     "partial": 2
+    },
+    {
+     "text": "算出 $|A|=-3\\neq0$ 并据此判定 $T$ 为可逆变换",
+     "partial": 2
+    },
+    {
+     "text": "正确求出伴随矩阵 $A^*$ 并得出 $A^{-1}$ 的各个元素",
+     "partial": 2
+    },
+    {
+     "text": "结论完整：矩阵表示式 $A$、可逆性结论、逆变换的矩阵表示式 $A^{-1}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§6.5 线性变换的矩阵表示式——$T$ 在基 $\\boldsymbol{e}_1,\\boldsymbol{e}_2,\\boldsymbol{e}_3$ 下的矩阵第 $j$ 列即 $T(\\boldsymbol{e}_j)$ 在该基下的坐标；可逆性归结为 $A$ 可逆（§2.3），逆矩阵用 $A^{-1}=\\dfrac{1}{|A|}A^*$（§2.3）。\n**考点出处**：同济《线性代数》第六版 §6.5 线性变换的矩阵表示式（选学）；次要考点 §2.3 逆矩阵。",
+   "misconception": "⚠️易错点：把 $T(\\boldsymbol{e}_j)$ 当成 $A$ 的**行**而不是**列**；以及算伴随矩阵时漏掉转置（$A^*=(A_{ji})$）。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "难点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "|A|",
+     "code": "M([[2,0,1],[0,1,1],[1,1,0]]).det()",
+     "expected": "-3"
+    },
+    {
+     "desc": "A^-1",
+     "code": "str(M([[2,0,1],[0,1,1],[1,1,0]]).inv())",
+     "expected": "Matrix([[1/3, -1/3, 1/3], [-1/3, 1/3, 2/3], [1/3, 2/3, -2/3]])"
+    },
+    {
+     "desc": "伴随矩阵",
+     "code": "str(M([[2,0,1],[0,1,1],[1,1,0]]).adjugate())",
+     "expected": "Matrix([[-1, 1, -1], [1, -1, -2], [-1, -2, 2]])"
+    }
+   ],
+   "idx": 498
+  },
+  {
+   "id": "q-500",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\alpha=(\\alpha_1,\\alpha_2,\\alpha_3)$ 是线性空间 $V$ 的一组基，$\\beta=(\\alpha_1+\\alpha_2,\\ \\alpha_2+\\alpha_3,\\ \\alpha_3)$ 也是 $V$ 的一组基。求从基 $\\beta$ 到基 $\\alpha$ 的过渡矩阵 $P$，并求向量 $v=\\alpha_1+2\\alpha_2+3\\alpha_3$ 在基 $\\beta$ 下的坐标。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\beta_1=\\alpha_1+\\alpha_2$ 在基 $\\alpha$ 下的坐标为 $(1,1,0)^T$；\n$\\beta_2=\\alpha_2+\\alpha_3$ 在基 $\\alpha$ 下的坐标为 $(0,1,1)^T$；\n$\\beta_3=\\alpha_3$ 在基 $\\alpha$ 下的坐标为 $(0,0,1)^T$。\n按列排成 $P=\\begin{pmatrix}1&0&0\\\\1&1&0\\\\0&1&1\\end{pmatrix}$，$|P|=1$，故 $P$ 可逆，\n$P^{-1}=\\begin{pmatrix}1&0&0\\\\-1&1&0\\\\1&-1&1\\end{pmatrix}$。\n由 $[v]_\\alpha=(1,2,3)^T$ 与坐标变换公式 $[v]_\\beta=P^{-1}[v]_\\alpha$，\n$[v]_\\beta=\\begin{pmatrix}1&0&0\\\\-1&1&0\\\\1&-1&1\\end{pmatrix}\\begin{pmatrix}1\\\\2\\\\3\\end{pmatrix}=\\begin{pmatrix}1\\\\1\\\\2\\end{pmatrix}$，\n即 $v=\\beta_1+\\beta_2+2\\beta_3$。",
+   "points": [
+    {
+     "text": "写出 $\\beta_1,\\beta_2,\\beta_3$ 各自在基 $\\alpha$ 下的坐标",
+     "partial": 2
+    },
+    {
+     "text": "按列拼成过渡矩阵 $P$ 并算出 $|P|=1$（可逆）",
+     "partial": 2
+    },
+    {
+     "text": "求出逆矩阵 $P^{-1}$",
+     "partial": 2
+    },
+    {
+     "text": "由 $[v]_\\beta=P^{-1}[v]_\\alpha$ 得到坐标 $(1,1,2)^T$ 并写成 $v=\\beta_1+\\beta_2+2\\beta_3$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§6.3 基变换与坐标变换——过渡矩阵的列是新基向量在旧基下的坐标，坐标变换公式为 $[v]_\\alpha=P[v]_\\beta$，故求 $\\beta$ 下坐标要用 $P^{-1}$。\n**考点出处**：同济《线性代数》第六版 §6.3 基变换与坐标变换（选学）。",
+   "misconception": "⚠️易错点：方向搞反——要 $\\beta$ 下坐标应左乘 $P^{-1}$，直接左乘 $P$ 得到的是 $\\alpha$ 下坐标。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "计算",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "|P|",
+     "code": "M([[1,0,0],[1,1,0],[0,1,1]]).det()",
+     "expected": "1"
+    },
+    {
+     "desc": "[v]_β = P^{-1}[v]_α",
+     "code": "P=M([[1,0,0],[1,1,0],[0,1,1]]); v=M([[1],[2],[3]]); w=P.inv()*v; [w[i,0] for i in range(3)]",
+     "expected": "[1, 1, 2]"
+    }
+   ],
+   "idx": 499
+  }
+ ]
+}

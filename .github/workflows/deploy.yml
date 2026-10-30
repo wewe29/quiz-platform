@@ -1,0 +1,56 @@
+name: build-and-deploy
+
+# 平台部署流水线：CI 就是部署者——每次 push 都从 sources/ 镜像重新构建全部学科，
+# 门禁不过、平台校验不过都发不出去（不存在「构建漂移」）。
+# 见《应用化实施方案与迭代计划.md》迭代 0/1 与 docs/decisions.md。
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  pages: write
+  id-token: write
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps
+        run: pip install sympy
+
+      - name: Build all subjects (content gates + export + validate)
+        env:
+          PYTHONIOENCODING: utf-8
+        run: python tools/platform/build_all.py --dist
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

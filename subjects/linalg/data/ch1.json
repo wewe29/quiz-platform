@@ -1,0 +1,3172 @@
+{
+ "chapter": 1,
+ "questions": [
+  {
+   "id": "q-001",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.1 二阶与三阶行列式",
+    "kind": "textbook"
+   },
+   "stem": "三阶行列式 $\\begin{vmatrix}1&2&3\\\\4&5&6\\\\7&8&10\\end{vmatrix}$ 的值是",
+   "options": [
+    "$3$",
+    "$-3$",
+    "$-12$",
+    "$12$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "按第一行展开：\n$$|A|=1\\cdot\\begin{vmatrix}5&6\\\\8&10\\end{vmatrix}-2\\cdot\\begin{vmatrix}4&6\\\\7&10\\end{vmatrix}+3\\cdot\\begin{vmatrix}4&5\\\\7&8\\end{vmatrix}=1\\cdot(50-48)-2\\cdot(40-42)+3\\cdot(32-35)=2+4-9=-3.$$\n**答案依据**：三阶行列式按第一行展开（§1.5 展开定理），再算三个二阶行列式。",
+   "misconception": "⚠️易错点：二阶行列式 $\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}=ad-bc$，代回时把 $bc$ 与 $cb$ 的位置搞反；或展开时漏掉第二项的负号。",
+   "extension": null,
+   "tags": [
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[1,2,3],[4,5,6],[7,8,10]]).det()",
+     "expected": "-3"
+    }
+   ],
+   "idx": 0
+  },
+  {
+   "id": "q-002",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 是 $n$ 阶方阵，下列等式一定成立的是",
+   "options": [
+    "$|A^T|=-|A|$",
+    "$|A^T|=|A|$",
+    "$|A^T|=|A|^2$",
+    "$|A^T|=n|A|$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：行列式的性质之一是**转置不变性** $|A^T|=|A|$（§1.4）。它来自行列式定义中对行、列的完全对称地位。\nA 错在多了负号；C、D 错在行列式不是「按元素个数线性放大」的：一般只有 $|kA|=k^n|A|$（矩阵整体数乘），而不是 $|A|^2$ 或 $n|A|$。",
+   "misconception": "⚠️易错点：把 $|kA|=k^n|A|$（整体数乘）误记成 $|A|$ 的线性变换。$k$ 乘的是**矩阵整体**，要乘进每一个元素，故系数是 $k^n$。",
+   "extension": null,
+   "tags": [
+    "性质"
+   ],
+   "verify": [],
+   "idx": 1
+  },
+  {
+   "id": "q-003",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A,B$ 均为 $n$ 阶方阵，则 $|AB|=$",
+   "options": [
+    "$|A|+|B|$",
+    "$|A|\\cdot|B|$",
+    "$|A|-|B|$",
+    "$|A|\\cdot|B|^2$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：行列式的乘法性质 $|AB|=|A|\\,|B|$（§1.4）。这是行列式最重要的一条性质之一，也是矩阵乘法的数值特征。\nA 是行列式的**可加性** $|A+B|=|A|+|B|$（仅当 $A,B$ 的对应行（或列）除某一行（或列）外完全相同时才成立），一般不能写成那样；C 是行列式的**减法**，行列式对加减没有像乘法那样的简单规则；D 凭空多乘了一个 $|B|$。",
+   "misconception": "⚠️易错点：$|A+B|=|A|+|B|$ **一般不成立**，它是行列式可加性的一个非常受限的特殊情形。",
+   "extension": null,
+   "tags": [
+    "性质",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 2
+  },
+  {
+   "id": "q-031",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.1 二阶与三阶行列式",
+    "kind": "textbook"
+   },
+   "stem": "二阶行列式 $\\begin{vmatrix}-2&3\\\\4&5\\end{vmatrix}$ 的值是",
+   "options": [
+    "$-22$",
+    "$22$",
+    "$2$",
+    "$-2$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二阶行列式 $\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}=ad-bc$（§1.1），代入得 $(-2)\\times5-3\\times4=-10-12=-22$。",
+   "misconception": "⚠️易错点：漏写减号或把 $bc$ 项算成 $3\\times4$ 时忘记它是被减的，结果错成 $+2$。",
+   "extension": null,
+   "tags": [
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[-2,3],[4,5]]).det()",
+     "expected": "-22"
+    }
+   ],
+   "idx": 3
+  },
+  {
+   "id": "q-032",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $3$ 阶方阵且 $|A|=5$，则 $|3A|=$",
+   "options": [
+    "$15$",
+    "$5$",
+    "$45$",
+    "$135$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$|kA|=k^n|A|$（§1.4 数乘性质），$k$ 要乘进 $n^2$ 个元素，故提取 $k^n$。代入 $n=3,k=3$：$|3A|=3^3\\times5=135$。",
+   "misconception": "⚠️易错点：误用 $|3A|=3|A|=15$——那是行列式「某一行乘 3」的情形，而 $3A$ 是矩阵整体数乘，每行都乘了 3。",
+   "extension": null,
+   "tags": [
+    "性质",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 4
+  },
+  {
+   "id": "q-033",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.2 全排列和对换",
+    "kind": "textbook"
+   },
+   "stem": "排列 $217986354$ 的逆序数是",
+   "options": [
+    "$17$",
+    "$18$",
+    "$19$",
+    "$20$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：逐个统计每个数字右边比它小的个数（§1.2）：$2$ 右有 $1$（1 个）；$1$ 无；$7$ 右有 $6,3,5,4$（4 个）；$9$ 右有 $8,6,3,5,4$（5 个）；$8$ 右有 $6,3,5,4$（4 个）；$6$ 右有 $3,5,4$（3 个）；$3$ 无；$5$ 右有 $4$（1 个）。合计 $1+4+5+4+3+1=18$，为偶排列。",
+   "misconception": "⚠️易错点：漏数 $7$ 右侧的 $4$ 或把「比它大」当成「比它小」；逐位列表核对最稳妥。",
+   "extension": null,
+   "tags": [
+    "逆序数",
+    "计算"
+   ],
+   "verify": [],
+   "idx": 5
+  },
+  {
+   "id": "q-004",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=(a_{ij})_{3\\times3}$，$A_{ij}$ 表示元素 $a_{ij}$ 的**代数余子式**，则 $A_{ij}$ 与元素 $a_{ij}$ 的关系是",
+   "options": [
+    "$A_{ij}=a_{ij}$",
+    "$A_{ij}=-a_{ij}$",
+    "$A_{ij}$ 与 $a_{ij}$ 有关",
+    "$A_{ij}$ 与 $a_{ij}$ 无关"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：代数余子式 $A_{ij}=(-1)^{i+j}M_{ij}$，其中 $M_{ij}$ 是把 $a_{ij}$ 所在行、列全部划去后剩下的 $n-1$ 阶子式的**值**（§1.5）。\n关键在于：$M_{ij}$ 里根本没有 $a_{ij}$ 这个元素，所以 $A_{ij}$ 是**由 $a_{ij}$ 的位置决定的、与 $a_{ij}$ 的数值无关**的常数。",
+   "misconception": "⚠️易错点：把「$A_{ij}$ 与 $a_{ij}$ 无关」误解成「代数余子式没有意义」。它仍然依赖于矩阵中**其余元素**的取值，只是不依赖 $a_{ij}$ 自身。",
+   "extension": null,
+   "tags": [
+    "易错"
+   ],
+   "verify": [],
+   "idx": 6
+  },
+  {
+   "id": "q-005",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶方阵且 $|A|\\neq0$，则 $|A^*|$（$A^*$ 为 $A$ 的伴随矩阵）等于",
+   "options": [
+    "$|A|^{n-1}$",
+    "$|A|^n$",
+    "$|A|^{n-2}$",
+    "$1$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：由伴随矩阵的基本关系 $AA^*=|A|E$ 两边取行列式得 $|A|\\,|A^*|=|A|^n$，再由 $|A|\\neq0$ 约去 $|A|$，得 $|A^*|=|A|^{n-1}$（§1.4 性质 + §2.3 伴随矩阵）。\n特别地 $n=2$ 时 $|A^*|=|A|$，$n=3$ 时 $|A^*|=|A|^2$。",
+   "misconception": "⚠️易错点：与 $|kA|=k^n|A|$ 混记；伴随矩阵的行列式指数是 $n-1$ 而不是 $n$。",
+   "extension": null,
+   "tags": [
+    "伴随矩阵",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "|A*|",
+     "code": "M([[1,2],[3,4]]).adjugate().det()",
+     "expected": "-2"
+    }
+   ],
+   "idx": 7
+  },
+  {
+   "id": "q-034",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质；题型改编自：中科大《线性代数》历年考题",
+    "kind": "textbook"
+   },
+   "stem": "已知三阶行列式 $\\begin{vmatrix}a_1&a_2&a_3\\\\b_1&b_2&b_3\\\\c_1&c_2&c_3\\end{vmatrix}=3$，则 $\\begin{vmatrix}a_1+2b_1&a_2+2b_2&a_3+2b_3\\\\b_1&b_2&b_3\\\\c_1+3b_1&c_2+3b_2&c_3+3b_3\\end{vmatrix}=$",
+   "options": [
+    "$3$",
+    "$6$",
+    "$9$",
+    "$12$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：利用行的线性性（§1.4 可加性）拆分第一行：$\\det[\\alpha_1+2\\beta_1;\\beta_1;\\gamma_1+3\\beta_1]=\\det[\\alpha_1;\\beta_1;\\gamma_1]+2\\det[\\beta_1;\\beta_1;\\gamma_1+3\\beta_1]$，第二项两行相同为零；再拆第三行，$\\det[\\alpha_1;\\beta_1;\\gamma_1]+3\\det[\\alpha_1;\\beta_1;\\beta_1]$，末项两行相同为零。故新行列式 $=3+0+0=3$。",
+   "misconception": "⚠️易错点：以为「加上倍数」会改变行列式的值——某行加上另一行的 $k$ 倍（倍加操作）行列式不变，本题两处变形本质上都是倍加或拆出零项。",
+   "extension": null,
+   "tags": [
+    "性质",
+    "真题改编"
+   ],
+   "verify": [],
+   "idx": 8
+  },
+  {
+   "id": "q-035",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.2 全排列和对换",
+    "kind": "textbook"
+   },
+   "stem": "$n$ 阶排列 $n,\\,n-1,\\,\\cdots,\\,2,\\,1$（完全倒序）的逆序数是",
+   "options": [
+    "$n^2$",
+    "$n!$",
+    "$\\dfrac{n(n+1)}{2}$",
+    "$\\dfrac{n(n-1)}{2}$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：完全倒序排列中，每个数字右边恰有比它小的全部剩余数字：第 $i$ 个位置贡献 $n-i$ 个逆序，总计 $\\sum_{i=1}^{n}(n-i)=(n-1)+(n-2)+\\cdots+0=\\dfrac{n(n-1)}{2}$（§1.2）。",
+   "misconception": "⚠️易错点：与 $\\dfrac{n(n+1)}{2}$ 混淆——求和到 $n$ 而不是 $n-1$；也注意 $n!=n\\times(n-1)!$ 是阶乘，量级完全不同。",
+   "extension": null,
+   "tags": [
+    "逆序数",
+    "公式"
+   ],
+   "verify": [],
+   "idx": 9
+  },
+  {
+   "id": "q-036",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $3$ 阶方阵且 $|A|=2$，则 $|2A^{-1}|=$",
+   "options": [
+    "$4$",
+    "$2$",
+    "$8$",
+    "$\\dfrac{1}{4}$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$|2A^{-1}|=2^3\\cdot|A^{-1}|=8\\cdot\\dfrac{1}{|A|}=8\\times\\dfrac12=4$（§1.4 数乘性质 + §1.4 逆阵行列式 $|A^{-1}|=\\dfrac{1}{|A|}$）。",
+   "misconception": "⚠️易错点：把 $|A^{-1}|$ 记成 $|A|$ 得 $16$；或漏掉数乘因子 $2^3$ 得 $\\dfrac12$。",
+   "extension": null,
+   "tags": [
+    "逆矩阵",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "|2A^-1|",
+     "code": "2**3/M([[1,2],[3,5]]).det()*M([[1,2],[3,5]]).det()",
+     "expected": "8"
+    }
+   ],
+   "idx": 10
+  },
+  {
+   "id": "q-037",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开；题型改编自：中科大《线性代数》历年考题",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=(a_{ij})_{4\\times4}$，则 $a_{11}A_{21}+a_{12}A_{22}+a_{13}A_{23}+a_{14}A_{24}=$（$A_{ij}$ 为代数余子式）",
+   "options": [
+    "$|A|$",
+    "$-|A|$",
+    "$1$",
+    "$0$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：这是「第 1 行元素」乘「第 2 行元素的代数余子式」的组合（§1.5 展开定理的推论）。把 $A$ 的第 2 行替换成第 1 行得到矩阵 $B$，则该组合恰是 $|B|$ 按第 2 行的展开式；而 $B$ 有两行相同，$|B|=0$。故组合值为 $0$。",
+   "misconception": "⚠️易错点：与「本行元素乘本行代数余子式之和 $=|A|$」混淆——异行组合必为零，这是展开定理最重要的伴生结论。",
+   "extension": null,
+   "tags": [
+    "展开定理",
+    "高频",
+    "真题改编"
+   ],
+   "verify": [],
+   "idx": 11
+  },
+  {
+   "id": "q-038",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质；题型改编自考研数学真题经典模型",
+    "kind": "textbook"
+   },
+   "stem": "设 $f(x)=\\begin{vmatrix}x&1&1&1\\\\1&x&1&1\\\\1&1&x&1\\\\1&1&1&x\\end{vmatrix}$，则 $f'(x)=$",
+   "options": [
+    "$(x-1)^2(4x+6)$",
+    "$(x-1)^2(x+2)$",
+    "$4(x-1)^2(x+2)$",
+    "$4(x-1)^2(x-2)$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：每行元素之和均为 $x+3$，把第 $2,3,4$ 列都加到第 1 列（§1.4 倍加不变）并提出公因子：$f(x)=(x+3)\\begin{vmatrix}1&1&1&1\\\\1&x&1&1\\\\1&1&x&1\\\\1&1&1&x\\end{vmatrix}$，再对各列减第 1 列得上三角 $\\begin{vmatrix}1&0&0&0\\\\1&x-1&0&0\\\\1&0&x-1&0\\\\1&0&0&x-1\\end{vmatrix}$ 型结构，得 $f(x)=(x+3)(x-1)^3$。求导：$f'(x)=3(x+3)(x-1)^2+(x-1)^3=(x-1)^2\\left[3(x+3)+(x-1)\\right]=(x-1)^2(4x+8)=4(x-1)^2(x+2)$。",
+   "misconception": "⚠️易错点：只乘法则漏了 $(x+3)$ 的导数项；或把 $(x+3)(x-1)^3$ 展开求导后化简出错。先因式分解再求导最不易错。",
+   "extension": null,
+   "tags": [
+    "真题改编",
+    "综合",
+    "难点"
+   ],
+   "verify": [
+    {
+     "desc": "f(x)",
+     "code": "x=symbols('x'); expand(M([[x,1,1,1],[1,x,1,1],[1,1,x,1],[1,1,1,x]]).det())",
+     "expected": "x**4 - 6*x**2 + 8*x - 3"
+    },
+    {
+     "desc": "f'(x)",
+     "code": "x=symbols('x'); diff(x**4 - 6*x**2 + 8*x - 3, x)",
+     "expected": "4*x**3 - 12*x + 8"
+    },
+    {
+     "desc": "化简核对",
+     "code": "x=symbols('x'); expand(4*(x-1)**2*(x+2))",
+     "expected": "4*x**3 - 12*x + 8"
+    }
+   ],
+   "idx": 12
+  },
+  {
+   "id": "q-039",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A,B$ 均为 $3$ 阶方阵，$|A|=2$，$|B|=-3$，则 $|2AB^{-1}|=$",
+   "options": [
+    "$-\\dfrac{16}{3}$",
+    "$-\\dfrac{8}{3}$",
+    "$\\dfrac{16}{3}$",
+    "$-\\dfrac{16}{9}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$|2AB^{-1}|=2^3\\,|A|\\,|B^{-1}|=8\\times2\\times\\left(-\\dfrac13\\right)=-\\dfrac{16}{3}$（§1.4：$|kA|=k^n|A|$、$|AB|=|A||B|$、$|B^{-1}|=\\dfrac{1}{|B|}$ 三条性质连用）。",
+   "misconception": "⚠️易错点：数乘因子用 $2$ 而不是 $2^3$；或把 $|B^{-1}|$ 算成 $-3$ 忘了取倒数。",
+   "extension": null,
+   "tags": [
+    "综合",
+    "高频",
+    "难点"
+   ],
+   "verify": [
+    {
+     "desc": "数值核对",
+     "code": "M([[1,2],[3,4]]).det()",
+     "expected": "-2"
+    }
+   ],
+   "idx": 13
+  },
+  {
+   "id": "q-006",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "下列关于行列式性质的等式中，正确的有",
+   "options": [
+    "$|A^T|=|A|$",
+    "$|A+B|=|A|+|B|$（$A,B$ 任意同阶方阵）",
+    "$|AB|=|A|\\,|B|$",
+    "$|kA|=k^n|A|$（$A$ 为 $n$ 阶方阵）"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§1.4 行列式的性质。其中 A 是转置不变性，C 是乘法性质，D 是数乘性质（$k$ 乘进每个元素，故为 $k^n$ 倍）。\nB 错：行列式的**可加性**要求 $A,B$ 除某一行（或列）外其余各行（或列）完全相同才成立，任意同阶方阵并不满足这个前提。",
+   "misconception": "⚠️易错点：看到「行列式有可加性」就以为 $|A+B|=|A|+|B|$ 恒成立。",
+   "extension": null,
+   "tags": [
+    "性质",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 14
+  },
+  {
+   "id": "q-007",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "关于行列式按行（列）展开定理，下列说法正确的有",
+   "options": [
+    "$n$ 阶行列式可以按任意一行（或列）展开",
+    "代数余子式 $A_{ij}$ 与元素 $a_{ij}$ 的取值无关",
+    "展开时第二项的符号为负，与 $i+j$ 无关",
+    "某行（列）元素全为零时，行列式为零"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§1.5 展开定理——按第 $i$ 行展开时第 $j$ 项的符号由 $(-1)^{i+j}$ 决定（相当于国际象棋棋盘的交叉格取负）；$A_{ij}$ 只依赖位置不依赖 $a_{ij}$ 的值；某行（或列）全为零则该行（或列）的所有余子式均为零，行列式为零。\nC 错：符号确实与 $i+j$ 的奇偶有关，$i+j$ 为偶数取正、为奇数取负，并非「与 $i+j$ 无关」。",
+   "misconception": "⚠️易错点：符号规则记成「逢单必负」之类的口诀而不用 $(-1)^{i+j}$ 统一表达。",
+   "extension": null,
+   "tags": [
+    "展开定理"
+   ],
+   "verify": [],
+   "idx": 15
+  },
+  {
+   "id": "q-008",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶方阵，则关于伴随矩阵 $A^*$ 的结论，正确的有",
+   "options": [
+    "$AA^*=A^*A=|A|E$",
+    "$A^*=(A_{ji})=(A_{ij})^T$",
+    "$|A|=0$ 时 $A^*=0$",
+    "$|A|\\neq0$ 时 $A^{-1}=\\dfrac{1}{|A|}A^*$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§2.3 伴随矩阵的三条基本结论——恒等式 $AA^*=|A|E$（A）；$A^*$ 是把 $A$ 的**余子式矩阵转置**得到的，即 $A^*=(A_{ji})=(A_{ij})^T$（B）；由第一式两边乘 $A^{-1}$（当 $|A|\\neq0$）得 $A^{-1}=\\dfrac{1}{|A|}A^*$（D）。\nC 错：当 $|A|=0$ 时 $A^*\\neq0$（除非 $n=1$ 或矩阵元素全零的特殊情形）。例如 $A=\\begin{vmatrix}1&1\\\\1&1\\end{vmatrix}$ 型矩阵 $|A|=0$ 但 $A^*\\neq0$。",
+   "misconception": "⚠️易错点：以为「$|A|=0\\Rightarrow A^*=0$」。正确的联系是 $|A^*|=|A|^{n-1}$，$n\\ge2$ 时 $|A|=0$ 反而给出 $|A^*|=0$，但 $A^*$ 本身**不是零矩阵**。",
+   "extension": null,
+   "tags": [
+    "伴随矩阵",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 16
+  },
+  {
+   "id": "q-040",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "下列 $n$ 阶行列式中，**一定等于零**的有",
+   "options": [
+    "某两行完全相同",
+    "有一行元素全为零",
+    "主对角线元素全为零",
+    "有两列对应成比例"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**（§1.4 性质与推论）：两行相同行列式为零；一行全零行列式为零；两列成比例（可提取公因子化为两列相同）行列式为零。\nC 错：主对角线元素全为零不能保证行列式为零。反例：$\\begin{vmatrix}0&1\\\\1&0\\end{vmatrix}=-1\\neq0$。",
+   "misconception": "⚠️易错点：把「主对角线全零」当成行列式为零的条件——行列式为零的准确刻画是行（列）向量组线性相关。",
+   "extension": null,
+   "tags": [
+    "性质",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 17
+  },
+  {
+   "id": "q-041",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "关于余子式与代数余子式，下列说法中正确的有",
+   "options": [
+    "$A_{ij}$ 与 $M_{ij}$ 至多相差一个负号",
+    "$A_{ji}=A_{ij}$ 对一切 $i\\neq j$ 恒成立",
+    "$A_{ij}=(-1)^{i+j}M_{ij}$",
+    "$M_{ij}$ 的值与 $a_{ij}$ 的取值无关"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**（§1.5 定义）：$A_{ij}=(-1)^{i+j}M_{ij}$，符号因子为 $\\pm1$，故 A、C 正确；$M_{ij}$ 由划去 $a_{ij}$ 所在行列后的元素决定，与 $a_{ij}$ 本身无关，D 正确。\nB 错：$A_{ji}=(-1)^{j+i}M_{ji}=(-1)^{i+j}M_{ji}$，一般 $M_{ji}\\neq M_{ij}$，故不恒相等。例如 $\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}$ 中 $M_{12}=3$，$M_{21}=2$。",
+   "misconception": "⚠️易错点：以为符号相同就相等——$A_{ij}$ 与 $A_{ji}$ 的符号因子相同（$i+j$ 对称），但余子式的**数值**一般不同。",
+   "extension": null,
+   "tags": [
+    "展开定理",
+    "易错"
+   ],
+   "verify": [
+    {
+     "desc": "M12 与 M21",
+     "code": "M([[1,2],[3,4]]).minor(0, 1)",
+     "expected": "3"
+    },
+    {
+     "desc": "M21",
+     "code": "M([[1,2],[3,4]]).minor(1, 0)",
+     "expected": "2"
+    }
+   ],
+   "idx": 18
+  },
+  {
+   "id": "q-042",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.3 n 阶行列式的定义",
+    "kind": "textbook"
+   },
+   "stem": "关于 $n$ 阶行列式的定义，下列说法中正确的有",
+   "options": [
+    "展开式共有 $n!$ 项",
+    "每一项都是取自不同行、不同列的 $n$ 个元素的乘积",
+    "每一项的符号由所在排列的逆序数奇偶性决定",
+    "用定义可以直接计算任意阶行列式"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**（§1.3 定义三要素）：项数 $n!$、元素「不同行不同列」、符号 $\\operatorname{sgn}(\\sigma)=(-1)^{\\text{逆序数}}$，均为定义原文。\nD 错：$n!$ 随 $n$ 增长极快（$4!=24$，$10!=3628800$），实际计算须用性质降阶或三角化，定义只用于低阶与理论推导。",
+   "misconception": "⚠️易错点：以为定义只是「形式上的」，考试不考——判断题常考「$n$ 阶行列式共有 $(n-1)!$ 项」之类的项数陷阱。",
+   "extension": null,
+   "tags": [
+    "定义"
+   ],
+   "verify": [],
+   "idx": 19
+  },
+  {
+   "id": "q-043",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $3$ 阶方阵且 $|A|=3$，下列结论中正确的有",
+   "options": [
+    "$|A^T|=3$",
+    "$|A^2|=9$",
+    "$|A^{*}|=3$",
+    "$|-A|=-3$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**（§1.4）：转置不变 $|A^T|=3$；乘法性质 $|A^2|=|A|^2=9$；$n=3$ 为奇数时 $|-A|=(-1)^3|A|=-3$。\nC 错：$|A^{*}|=|A|^{n-1}=3^2=9\\neq3$。",
+   "misconception": "⚠️易错点：$|A^{*}|$ 的指数是 $n-1$；以及 $|-A|$ 的符号取决于 $n$ 的奇偶，$n$ 为偶数时 $|-A|=|A|$。",
+   "extension": null,
+   "tags": [
+    "性质",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 20
+  },
+  {
+   "id": "q-044",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.1 二阶与三阶行列式",
+    "kind": "textbook"
+   },
+   "stem": "关于对角线法则，下列说法中正确的有",
+   "options": [
+    "二阶行列式 $ad-bc$ 可用对角线法则计算",
+    "三阶行列式按沙路法则展开共 6 项",
+    "对角线法则适用于任意阶行列式",
+    "三阶沙路法则中主对角线方向的三项取正号"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**（§1.1）：二阶 $ad-bc$、三阶沙路法则（3 个正项 + 3 个负项，共 6 项）都对。\nC 错：对角线法则只对 2、3 阶成立；$n\\ge4$ 时展开式有 $n!$ 项而沙路法只给 $2n$ 项，必漏项，须改用性质或展开定理。",
+   "misconception": "⚠️易错点：把沙路法则硬套到 4 阶行列式——这是考试里最容易出现的「方法性错误」。",
+   "extension": null,
+   "tags": [
+    "对角线法则",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 21
+  },
+  {
+   "id": "q-009",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶方阵且 $|A|\\neq0$，下列结论正确的有",
+   "options": [
+    "$A$ 可逆，且 $A^{-1}=\\dfrac{1}{|A|}A^*$",
+    "$A$ 可逆，且 $A^{-1}=\\dfrac{A^*}{|A|}$",
+    "$|A^{-1}|=\\dfrac{1}{|A|}$",
+    "$|A^{-1}|=|A|$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：由 $AA^*=|A|E$ 与 $|A|\\neq0$ 得 $A\\left(\\dfrac{1}{|A|}A^*\\right)=E$，故 $A^{-1}=\\dfrac{1}{|A|}A^*=\\dfrac{A^*}{|A|}$（两者分式写法完全等价）。又由 $|AA^{-1}|=|A|\\,|A^{-1}|=1$ 得 $|A^{-1}|=\\dfrac{1}{|A|}$。\nD 错：只有 $|A|=1$ 时才有 $|A^{-1}|=|A|$。",
+   "misconception": "⚠️易错点：把 $|A^{-1}|=\\dfrac{1}{|A|}$ 记成 $|A|$；以及把 $\\dfrac{1}{|A|}A^*$ 与 $\\dfrac{A^*}{|A|}$ 当成两种不同的公式。",
+   "extension": null,
+   "tags": [
+    "逆矩阵",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "|A^-1|",
+     "code": "M([[1,2],[3,4]]).inv().det()",
+     "expected": "-1/2"
+    }
+   ],
+   "idx": 22
+  },
+  {
+   "id": "q-045",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶方阵（$n\\ge2$），$A^{*}$ 为伴随矩阵，下列结论中正确的有",
+   "options": [
+    "$|A^{*}|=|A|^{n-1}$",
+    "$|A^{*}|=|A|^{n}$",
+    "$n=2$ 时 $|A^{*}|=|A|$",
+    "$n=3$ 且 $|A|=2$ 时 $|A^{*}|=4$"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：由 $AA^{*}=|A|E$ 取行列式得 $|A|\\,|A^{*}|=|A|^n$；$|A|\\neq0$ 时约去 $|A|$ 得 $|A^{*}|=|A|^{n-1}$，$|A|=0$ 时由连续性论证同样成立（§1.4 + §2.3）。\nB 错：指数是 $n-1$ 而非 $n$。C、D 是 A 的直接代例：$n=2$ 时指数为 1；$n=3,|A|=2$ 时 $|A^{*}|=2^2=4$。",
+   "misconception": "⚠️易错点：与 $|kA|=k^n|A|$ 记混；伴随矩阵行列式的指数恒为 $n-1$。",
+   "extension": null,
+   "tags": [
+    "伴随矩阵",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "|A*| n=3",
+     "code": "M([[1,2,3],[0,1,4],[5,6,0]]).adjugate().det()",
+     "expected": "1"
+    },
+    {
+     "desc": "|A|^2",
+     "code": "M([[1,2,3],[0,1,4],[5,6,0]]).det()**2",
+     "expected": "1"
+    }
+   ],
+   "idx": 23
+  },
+  {
+   "id": "q-046",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $4$ 阶方阵且 $|A|=2$，下列结论中正确的有",
+   "options": [
+    "$|A^T|=2$",
+    "$|A^2|=4$",
+    "$|-A|=-2$",
+    "$|A^{-1}|=\\dfrac{1}{2}$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**（§1.4）：转置不变得 $2$；$|A^2|=|A|^2=4$；$n=4$ 为偶数，$|-A|=(-1)^4|A|=2$；$|A^{-1}|=\\dfrac12$。\nC 错：$|-A|=(-1)^n|A|$，$n=4$ 为偶数时 $|-A|=|A|=2$，不带负号。",
+   "misconception": "⚠️易错点：$|-A|$ 的符号只看 $n$ 的奇偶，与 $|A|$ 本身的正负无关。",
+   "extension": null,
+   "tags": [
+    "性质",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 24
+  },
+  {
+   "id": "q-047",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.2 全排列和对换",
+    "kind": "textbook"
+   },
+   "stem": "关于排列与对换，下列说法中正确的有",
+   "options": [
+    "一次对换必改变排列的奇偶性",
+    "$n\\ge2$ 时奇排列与偶排列的个数相等，各为 $\\dfrac{n!}{2}$",
+    "任意排列都可经过有限次对换化为标准排列",
+    "同一排列化为标准排列的不同对换路线，所需对换次数的奇偶性可以不同"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**（§1.2 对换定理）：A 是对换改变逆序数奇偶性的直接推论；B 由 A 对排列两两配对即得；C 是标准结论（冒泡排序式地对换即可）。\nD 错：对换改变奇偶性，而标准排列是偶排列，故所需对换次数的奇偶性被排列自身的奇偶性**唯一确定**，不可能不同。",
+   "misconception": "⚠️易错点：以为「对换次数随便」——奇偶性不变量是行列式符号定义的基石。",
+   "extension": null,
+   "tags": [
+    "排列与对换"
+   ],
+   "verify": [],
+   "idx": 25
+  },
+  {
+   "id": "q-010",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶方阵，下列命题中**一定成立**的有",
+   "options": [
+    "$|A|=0$ 当且仅当 $A$ 是奇异矩阵（不可逆）",
+    "$|A|=0$ 当且仅当 $A$ 的某一行是零行",
+    "若 $AB=0$（$B\\neq0$）则 $|A|=0$",
+    "$|A|=0$ 当且仅当 $A$ 有零特征值"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A 由 $|A|\\neq0\\iff A$ 可逆（§2.3）立即得到，这是行列式刻画奇异性（§3.2 秩）的核心作用。\nC：$AB=0$ 且 $B\\neq0$ 说明 $A$ 有一个非零的零空间向量，即 $A$ 奇异，故 $|A|=0$（也可用 $r(A)+r(B)\\le n$）。\nD：$|A|=\\prod\\lambda_i$（特征值之积等于行列式，§5.2），所以 $|A|=0\\iff$ 存在零特征值，**成立**。\nB 错：$|A|=0$ 只说明行（列）向量组线性相关，**不必**有零行。例如 $\\begin{vmatrix}1&1\\\\1&1\\end{vmatrix}=0$ 但没有零行。",
+   "misconception": "⚠️易错点：把「行列式为零」等同于「有零行/零列」。行列式为零的准确含义是**行（列）向量组线性相关**。",
+   "extension": null,
+   "tags": [
+    "高频",
+    "易错",
+    "跨章"
+   ],
+   "verify": [],
+   "idx": 26
+  },
+  {
+   "id": "q-048",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质；题型改编自：中科大《线性代数》历年考题",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $3$ 阶方阵，下列条件中能推出 $|A|=0$ 的有",
+   "options": [
+    "$A$ 有两列对应成比例",
+    "$A$ 的每一行元素之和均为 $0$",
+    "$A$ 的主对角线元素全为 $0$",
+    "$|A|+|-A|=0$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A：两列成比例 $\\Rightarrow$ 行列式为零（§1.4 推论）。B：每行和为零即 $A(1,1,1)^{T}=0$，齐次方程组有非零解，故 $|A|=0$（跨章联系 §3.3）。D：$|-A|=(-1)^3|A|=-|A|$（$n=3$ 为奇数），故 $|A|+|-A|=0$ 恒成立。\nC 错：反例 $A=\\begin{pmatrix}0&1&2\\\\1&0&3\\\\2&3&0\\end{pmatrix}$，$|A|=0(0-9)-1(0-6)+2(3-0)=12\\neq0$。",
+   "misconception": "⚠️易错点：C 的反例说明「对角线全零」与「行列式为零」毫无必然联系；B 的转化（行和为零 → 有非零零化向量）是真题常用技巧。",
+   "extension": null,
+   "tags": [
+    "真题改编",
+    "综合",
+    "难点"
+   ],
+   "verify": [
+    {
+     "desc": "C 的反例",
+     "code": "M([[0,1,2],[1,0,3],[2,3,0]]).det()",
+     "expected": "12"
+    }
+   ],
+   "idx": 27
+  },
+  {
+   "id": "q-011",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "对任意 $n$ 阶方阵 $A$，都有 $|A^T|=|A|$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：行列式的转置不变性（§1.4）。转置只是把行、列的角色互换，而行列式的定义对行、列完全对称，故行列式不变。",
+   "misconception": "⚠️易错点：与 $|A^T|=-|A|$ 混淆——负号来自**交换两行（列）**，与转置无关。",
+   "extension": null,
+   "tags": [
+    "性质"
+   ],
+   "verify": [],
+   "idx": 28
+  },
+  {
+   "id": "q-012",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "对任意同阶方阵 $A,B$，都有 $|AB|=|A|\\,|B|$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：行列式的乘法性质（§1.4），是行列式刻画矩阵可逆性与相似不变量的基础。",
+   "misconception": "⚠️易错点：误以为「$AB=BA$ 时才成立」。它对任意 $A,B$ 都成立，不需要可交换。",
+   "extension": null,
+   "tags": [
+    "性质",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 29
+  },
+  {
+   "id": "q-013",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "元素 $a_{ij}$ 的代数余子式 $A_{ij}$ 只与 $a_{ij}$ 的位置有关，与 $a_{ij}$ 的数值无关。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$A_{ij}=(-1)^{i+j}M_{ij}$，而 $M_{ij}$ 是划去第 $i$ 行第 $j$ 列后所得 $(n-1)$ 阶子式的值，其中不含 $a_{ij}$（§1.5）。",
+   "misconception": "⚠️易错点：这里的「无关」仅指与 $a_{ij}$ **自身**无关，$A_{ij}$ 仍依赖矩阵其余元素。",
+   "extension": null,
+   "tags": [
+    "易错"
+   ],
+   "verify": [],
+   "idx": 30
+  },
+  {
+   "id": "q-014",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.3 n 阶行列式的定义",
+    "kind": "textbook"
+   },
+   "stem": "$n$ 阶行列式的定义中，按所有 $n!$ 个排列求和，每一项的符号由该排列的逆序数奇偶性决定。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$n$ 阶行列式的定义式（§1.3）$|A|=\\sum_{\\sigma\\in S_n}\\operatorname{sgn}(\\sigma)a_{1\\sigma(1)}a_{2\\sigma(2)}\\cdots a_{n\\sigma(n)}$，其中 $\\operatorname{sgn}(\\sigma)=(-1)^{\\text{逆序数}(\\sigma)}$。\n推论：一次对换（交换两个元素位置）使排列的逆序数奇偶性改变，故行列式变号（§1.2）。",
+   "misconception": "⚠️易错点：混淆「逆序数」与「逆序数的奇偶性」——符号只看奇偶，不看大小。",
+   "extension": null,
+   "tags": [
+    "定义"
+   ],
+   "verify": [],
+   "idx": 31
+  },
+  {
+   "id": "q-049",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.1 二阶与三阶行列式",
+    "kind": "textbook"
+   },
+   "stem": "$\\begin{vmatrix}2&0\\\\0&3\\end{vmatrix}=6$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：对角形行列式等于主对角线元素之积（§1.1）：$2\\times3-0\\times0=6$。",
+   "misconception": "⚠️易错点：零元素位置的乘积项 $0\\times0$ 不影响结果。",
+   "extension": null,
+   "tags": [
+    "计算"
+   ],
+   "verify": [],
+   "idx": 32
+  },
+  {
+   "id": "q-050",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "若 $n$ 阶行列式 $|A|=0$，则 $A$ 必有两行（列）成比例。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$|A|=0$ 的准确刻画是行（列）向量组**线性相关**（§1.4 + §3.2），线性相关不一定是「成比例」。\n反例：$A=\\begin{pmatrix}1&0&1\\\\0&1&1\\\\1&1&2\\end{pmatrix}$，第 3 行 $=$ 第 1 行 $+$ 第 2 行（线性相关，$|A|=0$），但没有任何两行成比例。",
+   "misconception": "⚠️易错点：「两行成比例 $\\Rightarrow|A|=0$」成立，但其**逆命题**不成立；相关只保证存在一组不全为零的系数。",
+   "extension": null,
+   "tags": [
+    "易错",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 33
+  },
+  {
+   "id": "q-051",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "行列式按第 $i$ 行展开时，$\\sum_{j=1}^{n}a_{ij}A_{ij}=|A|$ 对每个固定的 $i$ 都成立。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：展开定理（§1.5）：行列式等于它的任一行（列）的各元素与其对应代数余子式乘积之和。",
+   "misconception": "⚠️易错点：混淆「按行展开」与「异行相乘」（后者为零）。",
+   "extension": null,
+   "tags": [
+    "展开定理"
+   ],
+   "verify": [],
+   "idx": 34
+  },
+  {
+   "id": "q-052",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.2 全排列和对换",
+    "kind": "textbook"
+   },
+   "stem": "任一奇排列经过一次对换都可变为偶排列。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：一次对换改变排列的奇偶性（§1.2 对换定理），故奇排列经一次对换必变为偶排列。",
+   "misconception": "⚠️易错点：变为的**特定**偶排列（如标准排列）可能需要多次对换，但「变为某个偶排列」只需一次。",
+   "extension": null,
+   "tags": [
+    "排列与对换"
+   ],
+   "verify": [],
+   "idx": 35
+  },
+  {
+   "id": "q-053",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "对任意同阶方阵 $A,B$，都有 $|A+B|=|A|+|B|$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：行列式没有一般的可加性（§1.4）。可加性只在「两矩阵仅有一行（列）不同、其余行（列）完全相同」时成立。\n反例：$A=E=\\begin{pmatrix}1&0\\\\0&1\\end{pmatrix}$，$B=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}$，$|A|=1,|B|=1$，而 $|A+B|=\\begin{vmatrix}1&-1\\\\1&1\\end{vmatrix}=2\\neq1+1$。",
+   "misconception": "⚠️易错点：把矩阵加法的线性性误推到行列式上；行列式是「行（列）向量组」的的多重线性函数，不是矩阵的线性函数。",
+   "extension": null,
+   "tags": [
+    "易错",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "反例核对",
+     "code": "M([[1,-1],[1,1]]).det()",
+     "expected": "2"
+    }
+   ],
+   "idx": 36
+  },
+  {
+   "id": "q-015",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.1 二阶与三阶行列式",
+    "kind": "textbook"
+   },
+   "stem": "三阶行列式可以只用主对角线上的三个元素相乘减去副对角线上的三个元素相乘来计算。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§1.1 三阶行列式的「对角线法则」共 **4 项**——两条正对角线（主对角线，以及另一条方向相反的折线）取正号；两条负对角线取负号。\n题干所说的「只用主对角线上的三个元素相乘减去副对角线上的三个元素相乘」只取了其中的 2 项，漏掉了另外 2 项，所以按题干这种算法**算不出**三阶行列式，该命题**错误**。\n另外提醒：该法则**只对 2 阶与 3 阶成立**，不能推广到 $4$ 阶及以上——$4$ 阶展开有 $4! = 24$ 项，不是 8 项。",
+   "misconception": "⚠️易错点：① 以为三阶只要「主对角线相乘减副对角线相乘」——真正的对角线法则是 4 项（两正两负）；② 把三阶的对角线法则硬套到高阶行列式上，对 $n\\ge4$ 必须回到定义或用性质降阶。",
+   "extension": null,
+   "tags": [
+    "易错",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 37
+  },
+  {
+   "id": "q-016",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶方阵且 $n\\ge2$，若 $|A|=0$，则必有 $A^*=0$（零矩阵）。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：由 $|A^*|=|A|^{n-1}$ 知 $|A|=0$ 时 $|A^*|=0$，即 $A^*$ **奇异**；但奇异不等于零矩阵。\n反例：$A=\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}$，$|A|=0$，而 $A^*=\\begin{pmatrix}1&-1\\\\-1&1\\end{pmatrix}\\neq0$。",
+   "misconception": "⚠️易错点：「行列式为零」只说明矩阵奇异（不可逆），不等于矩阵是零矩阵——$A^*$ 同理。",
+   "extension": null,
+   "tags": [
+    "易错",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "|A|",
+     "code": "M([[1,1],[1,1]]).det()",
+     "expected": "0"
+    },
+    {
+     "desc": "A* != 0",
+     "code": "str(M([[1,1],[1,1]]).adjugate())",
+     "expected": "Matrix([[1, -1], [-1, 1]])"
+    }
+   ],
+   "idx": 38
+  },
+  {
+   "id": "q-054",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $3$ 阶方阵且 $|A|=2$，则 $|2A|=8$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$|2A|=2^3|A|=8\\times2=16\\neq8$（§1.4 数乘性质，$n=3$）。",
+   "misconception": "⚠️易错点：数乘因子是 $k^n$，本题 $2^3=8$ 还要再乘 $|A|=2$。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 39
+  },
+  {
+   "id": "q-055",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "若行列式的第 2 行是第 1 行的 3 倍，则该行列式必为零。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：两行成比例（倍数 $3\\neq0$）的行列式为零（§1.4 推论）：提出第 2 行的公因子 3 后两行相同，行列式为零。",
+   "misconception": "⚠️易错点：倍数必须非零；若倍数为 0 则第 2 行全为零，行列式同样为零，结论碰巧仍成立。",
+   "extension": null,
+   "tags": [
+    "性质"
+   ],
+   "verify": [],
+   "idx": 40
+  },
+  {
+   "id": "q-056",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.3 n 阶行列式的定义",
+    "kind": "textbook"
+   },
+   "stem": "$4$ 阶行列式按定义展开共有 $24$ 项（带符号的乘积项）。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$n$ 阶行列式展开共 $n!$ 项（§1.3），$4!=24$。",
+   "misconception": "⚠️易错点：与「沙路法则的 $8$ 项」混淆——沙路法则只适用于 2、3 阶。",
+   "extension": null,
+   "tags": [
+    "定义"
+   ],
+   "verify": [],
+   "idx": 41
+  },
+  {
+   "id": "q-057",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $3$ 阶实方阵且 $|A|=-1$，则 $|A+E|$ 一定不等于零。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：取反例 $A=-E$：$|A|=|-E|=(-1)^3=-1$ 满足条件，而 $A+E=0$，$|A+E|=0$。故命题不成立。\n本质：$|A+E|=0\\iff-1$ 是 $A$ 的特征值（§5.2），而 $|A|=-1$ 只保证特征值之积为 $-1$，不保证某个特征值恰为 $-1$。",
+   "misconception": "⚠️易错点：由 $|A|=-1$ 无法排除「有特征值 $-1$」；用 $A=-E$ 一个反例即可否定「一定」类命题。",
+   "extension": null,
+   "tags": [
+    "反例",
+    "难点",
+    "跨章"
+   ],
+   "verify": [],
+   "idx": 42
+  },
+  {
+   "id": "q-017",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "行列式中 $|I_n|=$ （$I_n$ 为 $n$ 阶单位矩阵）。",
+   "options": null,
+   "answer": [
+    "1"
+   ],
+   "accept": [
+    "1",
+    "+1"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：单位矩阵的行列式为 1（§1.4 性质）。这也可由 $I_n$ 的对角线法则直接算出：对角线上全是 1，其余元素全为 0，只有恒等排列贡献 1。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "性质"
+   ],
+   "verify": [],
+   "idx": 43
+  },
+  {
+   "id": "q-018",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.1 二阶与三阶行列式",
+    "kind": "textbook"
+   },
+   "stem": "$A=\\begin{vmatrix}2&1\\\\3&4\\end{vmatrix}$，则 $|A|=$ 。",
+   "options": null,
+   "answer": [
+    "5"
+   ],
+   "accept": [
+    "5"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二阶行列式 $|A|=ad-bc$，代入得 $2\\times4-1\\times3=8-3=5$（§1.1）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[2,1],[3,4]]).det()",
+     "expected": "5"
+    }
+   ],
+   "idx": 44
+  },
+  {
+   "id": "q-058",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.1 二阶与三阶行列式",
+    "kind": "textbook"
+   },
+   "stem": "$\\begin{vmatrix}3&-1\\\\5&2\\end{vmatrix}=$ 。",
+   "options": null,
+   "answer": [
+    "11"
+   ],
+   "accept": [
+    "11",
+    "+11"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$3\\times2-(-1)\\times5=6+5=11$（§1.1 二阶行列式定义）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[3,-1],[5,2]]).det()",
+     "expected": "11"
+    }
+   ],
+   "idx": 45
+  },
+  {
+   "id": "q-059",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $4$ 阶方阵且 $|A|=4$，则 $|3A|=$ 。",
+   "options": null,
+   "answer": [
+    "324"
+   ],
+   "accept": [
+    "324"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$|3A|=3^4|A|=81\\times4=324$（§1.4 数乘性质，$n=4$）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "性质",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 46
+  },
+  {
+   "id": "q-060",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.2 全排列和对换",
+    "kind": "textbook"
+   },
+   "stem": "排列 $2431$ 的逆序数是 。",
+   "options": null,
+   "answer": [
+    "4"
+   ],
+   "accept": [
+    "4"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$2$ 右侧比它小的有 $1$（1 个）；$4$ 右侧有 $3,1$（2 个）；$3$ 右侧有 $1$（1 个）；合计 $1+2+1=4$（§1.2）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "逆序数"
+   ],
+   "verify": [],
+   "idx": 47
+  },
+  {
+   "id": "q-061",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "$\\begin{vmatrix}1&2&3\\\\0&4&5\\\\0&0&6\\end{vmatrix}=$ 。",
+   "options": null,
+   "answer": [
+    "24"
+   ],
+   "accept": [
+    "24"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：上三角行列式等于主对角线元素之积（§1.4 推论）：$1\\times4\\times6=24$。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "三角化"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[1,2,3],[0,4,5],[0,0,6]]).det()",
+     "expected": "24"
+    }
+   ],
+   "idx": 48
+  },
+  {
+   "id": "q-064",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.2 全排列和对换",
+    "kind": "textbook"
+   },
+   "stem": "排列 $135\\cdots(2n-1)246\\cdots(2n)$（奇数递增接偶数递增）的逆序数是 。",
+   "options": null,
+   "answer": [
+    "0"
+   ],
+   "accept": [
+    "0",
+    "零"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：前半段奇数严格递增、后半段偶数严格递增，且任一奇数都小于其后的任一偶数，故全排列无逆序（§1.2）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "逆序数"
+   ],
+   "verify": [],
+   "idx": 49
+  },
+  {
+   "id": "q-019",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A,B$ 均为 $3$ 阶方阵，已知 $|A|=2$，$|B|=3$，则 $|AB|=$ 。",
+   "options": null,
+   "answer": [
+    "6"
+   ],
+   "accept": [
+    "6"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$|AB|=|A|\\,|B|=2\\times3=6$（§1.4 乘法性质）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "|A||B|",
+     "code": "2*3",
+     "expected": "6"
+    }
+   ],
+   "idx": 50
+  },
+  {
+   "id": "q-020",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=(a_{ij})_{3\\times3}$，元素 $a_{12}$ 的**余子式** $M_{12}$ 等于 $\\begin{vmatrix}a_{21}&a_{23}\\\\a_{31}&a_{33}\\end{vmatrix}$，则 $A_{12}=$ （用 $M_{12}$ 表示）。",
+   "options": null,
+   "answer": [
+    "-M_{12}",
+    "(-1)^{1+2}M_{12}",
+    "(-1)^3 M_{12}"
+   ],
+   "accept": [
+    "-M12",
+    "(-1)^(1+2)M12",
+    "(-1)^3M12",
+    "-M_{12}",
+    "(-1)^{1+2} M_{12}"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：代数余子式 $A_{ij}=(-1)^{i+j}M_{ij}$（§1.5）。此处 $i=1,j=2$，$i+j=3$ 为奇数，故 $A_{12}=-M_{12}$。",
+   "misconception": "⚠️易错点：把余子式与代数余子式混为一谈——余子式不带符号，代数余子式才带 $(-1)^{i+j}$。",
+   "extension": null,
+   "tags": [
+    "展开定理",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 51
+  },
+  {
+   "id": "q-021",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.3 n 阶行列式的定义",
+    "kind": "textbook"
+   },
+   "stem": "$n$ 阶行列式的定义式中，排列 $\\sigma\\in S_n$ 的总数是 $n!$，故 $n$ 阶行列式展开后共有 ______ 项（带符号的项）。",
+   "options": null,
+   "answer": [
+    "n!",
+    "n的阶乘"
+   ],
+   "accept": [
+    "n!"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$n$ 阶行列式的定义式（§1.3）是对 $S_n$ 中全部 $n$ 个元素的**全排列**求和，$|S_n|=n!$，故共有 $n!$ 项。\n这同时说明：用定义法直接算 $n$ 阶行列式在 $n\\ge4$ 时不可行，必须改用性质降阶（§1.4 三角化法）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "定义",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 52
+  },
+  {
+   "id": "q-062",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $3$ 阶方阵且 $|A|=3$，则 $|A^{*}|=$ 。",
+   "options": null,
+   "answer": [
+    "9"
+   ],
+   "accept": [
+    "9"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$|A^{*}|=|A|^{n-1}=3^2=9$（§1.4 + §2.3 伴随矩阵恒等式）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "伴随矩阵",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 53
+  },
+  {
+   "id": "q-063",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=(a_{ij})_{3\\times3}$，则 $a_{11}A_{31}+a_{12}A_{32}+a_{13}A_{33}=$ 。",
+   "options": null,
+   "answer": [
+    "0"
+   ],
+   "accept": [
+    "0",
+    "零"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：第 1 行元素与第 3 行代数余子式的组合（异行组合）等于把第 3 行换成第 1 行后的新行列式，该新行列式两行相同，值为 $0$（§1.5 展开定理推论）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "展开定理",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 54
+  },
+  {
+   "id": "q-065",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质；题型改编自：中科大《线性代数》历年考题",
+    "kind": "textbook"
+   },
+   "stem": "$\\begin{vmatrix}1&1&1\\\\1&2&4\\\\1&4&16\\end{vmatrix}=$ 。",
+   "options": null,
+   "answer": [
+    "6"
+   ],
+   "accept": [
+    "6"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：这是范德蒙德行列式 $\\prod_{1\\le i<j\\le3}(x_j-x_i)$（$x_1=1,x_2=2,x_3=4$，§1.4 性质 + §1.5 展开）：$(2-1)(4-1)(4-2)=1\\times3\\times2=6$。",
+   "misconception": "⚠️易错点：乘积因子的顺序是「大下标减小下标」，写反只差整体符号（3 个因子全反号时符号为 $(-1)^3=-1$，恰好差负号）。",
+   "extension": null,
+   "tags": [
+    "真题改编",
+    "范德蒙德"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[1,1,1],[1,2,4],[1,4,16]]).det()",
+     "expected": "6"
+    }
+   ],
+   "idx": 55
+  },
+  {
+   "id": "q-066",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $3$ 阶方阵且 $|A|=2$，则 $\\bigl||A|\\,A^{*}\\bigr|=$ 。",
+   "options": null,
+   "answer": [
+    "32"
+   ],
+   "accept": [
+    "32"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$|A|A^{*}$ 是把矩阵 $A^{*}$ 整体数乘 $|A|=2$，故 $\\bigl||A|A^{*}\\bigr|=|A|^3\\,|A^{*}|=8\\times|A|^2=8\\times4=32$（§1.4 数乘 + 伴随行列式公式两连用）。",
+   "misconception": "⚠️易错点：把 $|A|A^{*}$ 当成 $A$ 的数乘直接写 $|A|\\cdot|A^{*}|$——标量 $|A|$ 先乘进矩阵再取行列式要出 $n$ 次幂。",
+   "extension": null,
+   "tags": [
+    "综合",
+    "难点",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 56
+  },
+  {
+   "id": "q-022",
+   "type": "term",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "名词解释：**代数余子式**（algebraic cofactor）。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "设 $A=(a_{ij})_{n\\times n}$，把 $a_{ij}$ 所在行与所在列全部划去，剩下的 $n-1$ 阶子式的**值**记为 $M_{ij}$，称为元素 $a_{ij}$ 的**余子式**；再乘以 $(-1)^{i+j}$，即\n$$A_{ij}=(-1)^{i+j}M_{ij},$$\n称为元素 $a_{ij}$ 的**代数余子式**（也常记作 $A_{ij}$ 或 $M^{*}_{ij}$）。\n关键性质：$A_{ij}$ 由 $a_{ij}$ 的**位置**决定，与其数值无关；$M_{ij}$ 与 $A_{ij}$ 只差一个符号。",
+   "points": [
+    {
+     "text": "说清余子式的定义：划去 $a_{ij}$ 所在行与列后所得 $n-1$ 阶子式的值",
+     "partial": 2
+    },
+    {
+     "text": "写出代数余子式 $A_{ij}=(-1)^{i+j}M_{ij}$，并指出它与 $a_{ij}$ 的数值无关",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.5 行列式按行（列）展开。\n**考点出处**：同济《线性代数》第六版 §1.5 行列式按行(列)展开。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "名词解释"
+   ],
+   "verify": [],
+   "idx": 57
+  },
+  {
+   "id": "q-067",
+   "type": "term",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "名词解释：**余子式**（minor）与**代数余子式**（algebraic cofactor）。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "设 $A=(a_{ij})_{n\\times n}$。把 $a_{ij}$ 所在的第 $i$ 行与第 $j$ 列划去后，剩下的 $(n-1)^2$ 个元素按原来位置排成的 $n-1$ 阶行列式的值，称为 $a_{ij}$ 的**余子式**，记作 $M_{ij}$。\n在 $M_{ij}$ 前配上符号因子 $(-1)^{i+j}$：$$A_{ij}=(-1)^{i+j}M_{ij}$$ 称为 $a_{ij}$ 的**代数余子式**。\n两者关系：只差符号 $\\pm1$；$i+j$ 为偶数时相同，为奇数时相反。关键性质：$M_{ij},A_{ij}$ 由位置决定，与 $a_{ij}$ 的数值无关。",
+   "points": [
+    {
+     "text": "写清余子式定义：划去所在行列后 $n-1$ 阶行列式的值",
+     "partial": 2
+    },
+    {
+     "text": "写出 $A_{ij}=(-1)^{i+j}M_{ij}$ 并说明符号规则",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.5 行列式按行(列)展开的预备定义。\n**考点出处**：同济《线性代数》第六版 §1.5 行列式按行(列)展开。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "名词解释"
+   ],
+   "verify": [],
+   "idx": 58
+  },
+  {
+   "id": "q-068",
+   "type": "term",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.2 全排列和对换",
+    "kind": "textbook"
+   },
+   "stem": "名词解释：**逆序数**（inversion number）。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "在 $n$ 个互异数的排列 $p_1p_2\\cdots p_n$ 中，把一对**前大后小**的数（即 $p_i>p_j$ 且 $i<j$）称为一个**逆序**；排列中逆序的总个数称为该排列的**逆序数**，记作 $\\tau(p_1p_2\\cdots p_n)$。\n逆序数为奇数的排列称**奇排列**，为偶数的称**偶排列**。逆序数决定 $n$ 阶行列式定义中每一项的符号：$(-1)^{\\tau}$。",
+   "points": [
+    {
+     "text": "写清逆序的定义：排列中前大后小的数对",
+     "partial": 2
+    },
+    {
+     "text": "写清逆序数与奇偶排列的区分及在行列式符号中的作用",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.2 全排列和对换。\n**考点出处**：同济《线性代数》第六版 §1.2 全排列和对换。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "名词解释"
+   ],
+   "verify": [],
+   "idx": 59
+  },
+  {
+   "id": "q-023",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "写出行列式的五条基本性质，并说明 $|AB|=|A|\\,|B|$ 的意义。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**五条基本性质（§1.4）**：\n① 行列互换不变：$|A^T|=|A|$；\n② 交换两行（列）行列式变号：$|A_{ij}|=-|A|$；\n③ 某行（列）乘以 $k$，行列式也乘以 $k$：$|kA|=k^n|A|$（$A$ 为 $n$ 阶）；\n④ 某行（列）倍加另一行（列）的 $k$ 倍，行列式不变；\n⑤ 行列式可加：若 $A,B$ 除某一行（或列）外其余各行（或列）相同，则 $|A+B|=|A|+|B|$。\n\n**$|AB|=|A|\\,|B|$ 的意义**：它说明行列式是矩阵乘法的**乘法特征函数**——乘积的行列式等于各因子行列式之积。由此立刻得到：$A$ 可逆 $\\iff|AB|=|A|\\,|B|\\neq0$（$B=A^{-1}$），从而 $|A|\\neq0\\iff A$ 非奇异；也说明相似矩阵有相同的行列式。",
+   "points": [
+    {
+     "text": "写出转置不变、交换变号、数乘、倍加不变、可加性五条性质",
+     "partial": 2
+    },
+    {
+     "text": "指出 $|AB|=|A||B|$ 体现行列式对矩阵乘法的乘法性",
+     "partial": 2
+    },
+    {
+     "text": "推出 $|A|\\neq0\\iff A$ 可逆（与非奇异性等价）",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 行列式的性质；$|AB|=|A||B|$ 与 §2.3 可逆的充要条件联用。\n**考点出处**：同济《线性代数》第六版 §1.4 行列式的性质。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "重点",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 60
+  },
+  {
+   "id": "q-024",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.3 n 阶行列式的定义",
+    "kind": "textbook"
+   },
+   "stem": "写出 $n$ 阶行列式的两种定义式，并说明它们各自的适用场合。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**递归定义（§1.3）**：\n$$|A|=\\sum_{j=1}^{n}a_{ij}A_{ij}\\quad(i\\text{ 任取一行}),$$\n即按任一行展开，把 $n$ 阶行列式降为 $(n-1)$ 阶行列式的线性组合（$A_{ij}$ 为代数余子式）。\n\n**求和定义**：\n$$|A|=\\sum_{\\sigma\\in S_n}\\operatorname{sgn}(\\sigma)\\,a_{1\\sigma(1)}a_{2\\sigma(2)}\\cdots a_{n\\sigma(n)},$$\n共 $n!$ 项，每项符号由排列 $\\sigma$ 的逆序数奇偶性决定。\n\n**适用场合**：递归定义用于**降阶计算**（把 $n$ 阶降为 $(n-1)$ 阶），实用且与展开定理同源；求和定义揭示行列式的**组合意义**（$n!$ 项、符号交替），便于证明转置不变性、交换变号等性质，但 $n\\ge4$ 时项数过多，不能直接用于计算。",
+   "points": [
+    {
+     "text": "写出递归（按行展开）定义式",
+     "partial": 2
+    },
+    {
+     "text": "写出全排列求和定义式并指出共 $n!$ 项、符号由逆序数奇偶决定",
+     "partial": 2
+    },
+    {
+     "text": "说明两者适用场合：降阶计算 vs 性质证明/组合意义",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.3 n 阶行列式的定义。\n**考点出处**：同济《线性代数》第六版 §1.3 n 阶行列式的定义。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "重点"
+   ],
+   "verify": [],
+   "idx": 61
+  },
+  {
+   "id": "q-069",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "简述计算 $n$ 阶行列式的四种常用方法及各自适用的行列式类型。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**① 三角化法**：利用倍加性质把行列式化为上（下）三角，值等于对角线之积。适用于元素有规律、易消元的数值行列式。\n**② 降阶法（展开定理）**：选零元素最多的行（列）按 §1.5 展开，把 $n$ 阶化为低阶。适用于某行（列）零多或经倍加后零多的情形。\n**③ 递推法**：按第一行（列）展开得到 $D_n$ 与 $D_{n-1},D_{n-2}$ 的递推式（如三对角行列式）。适用于带状、三对角结构。\n**④ 行（列）和相等 / 拆分法**：各行和相等时把各列加到第 1 列提出公因子；某行有「和结构」时用可加性拆成两个行列式。适用于行和相等的循环型、字母型行列式。\n此外**范德蒙德公式**可直接套用于幂结构行列式。",
+   "points": [
+    {
+     "text": "说出三角化、降阶（展开）两种基本方法及适用场景",
+     "partial": 2
+    },
+    {
+     "text": "说出递推法与行和相等（拆分）法及适用场景",
+     "partial": 2
+    },
+    {
+     "text": "每种方法给出关键操作要点（如倍加不变、零多行展开）",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 行列式的性质、§1.5 行列式按行(列)展开的方法论总结。\n**考点出处**：同济《线性代数》第六版 §1.4～§1.5。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "方法",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 62
+  },
+  {
+   "id": "q-072",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "证明：若 $n$ 阶行列式有两行完全相同，则行列式为零。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**证法一（定义，§1.3）**：设第 $i$ 行与第 $k$ 行（$i\\neq k$）相同。按定义，展开式中任一项对应一个排列 $\\sigma$，符号为 $(-1)^{\\tau(\\sigma)}$；把 $\\sigma$ 与「交换 $i,k$ 两位置」得到的新排列 $\\sigma'$ 配对，两个排列对应的项中，来自第 $i$ 行与第 $k$ 行的因子因两行相同而**完全相等**，而 $\\tau(\\sigma')$ 与 $\\tau(\\sigma)$ 奇偶相反，故两项符号相反、数值相等，互相抵消。全体 $n!$ 项两两抵消，行列式为 $0$。\n**证法二（性质，§1.4）**：交换这两行，行列式变号：$D=-D$，故 $2D=0$，$D=0$。$\\blacksquare$",
+   "points": [
+    {
+     "text": "给出交换两行变号 D=-D 的论证（或配对抵消论证）",
+     "partial": 2
+    },
+    {
+     "text": "由 2D=0 得 D=0",
+     "partial": 2
+    },
+    {
+     "text": "论证完整、无循环引用",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 性质 2（交换变号）与 §1.3 定义。\n**考点出处**：同济《线性代数》第六版 §1.4 行列式的性质。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "证明",
+    "基础"
+   ],
+   "verify": [],
+   "idx": 63
+  },
+  {
+   "id": "q-025",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "证明：对任意 $n$ 阶方阵 $A$，有 $|A^T|=|A|$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**证明（用求和定义，§1.3）**：设 $A^T=(b_{ij})$，则 $b_{ij}=a_{ji}$。由定义\n$$|A^T|=\\sum_{\\sigma\\in S_n}\\operatorname{sgn}(\\sigma)\\,b_{1\\sigma(1)}b_{2\\sigma(2)}\\cdots b_{n\\sigma(n)}.$$\n把 $b_{i\\sigma(i)}=a_{\\sigma(i),i}$ 代回，得\n$$|A^T|=\\sum_{\\sigma\\in S_n}\\operatorname{sgn}(\\sigma)\\,a_{\\sigma(1),1}a_{\\sigma(2),2}\\cdots a_{\\sigma(n),n}.$$\n令 $\\tau=\\sigma^{-1}$（$\\tau$ 仍遍历 $S_n$），则 $\\operatorname{sgn}(\\sigma)=\\operatorname{sgn}(\\tau)$，且 $\\sigma(i)=j\\iff\\tau(j)=i$，于是\n$$|A^T|=\\sum_{\\tau\\in S_n}\\operatorname{sgn}(\\tau)\\,a_{1\\tau(1)}a_{2\\tau(2)}\\cdots a_{n\\tau(n)}=|A|.\\qquad\\blacksquare$$\n\n**要点**：转置把「行标定、列表变」互换，恰好对应把排列 $\\sigma$ 换成其逆排列 $\\sigma^{-1}$；而一个排列与其逆排列的逆序数奇偶性相同，符号不变。",
+   "points": [
+    {
+     "text": "由定义式写出 $|A^T|$ 的求和形式",
+     "partial": 2
+    },
+    {
+     "text": "作代换 $\\tau=\\sigma^{-1}$ 并说明 $\\operatorname{sgn}(\\sigma)=\\operatorname{sgn}(\\tau)$",
+     "partial": 2
+    },
+    {
+     "text": "得出 $|A^T|=|A|$ 的结论",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.3 求和定义 + §1.2 一次对换改变逆序数奇偶性。\n**考点出处**：同济《线性代数》第六版 §1.3 n 阶行列式的定义。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "难点",
+    "证明"
+   ],
+   "verify": [],
+   "idx": 64
+  },
+  {
+   "id": "q-071",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "证明：设 $A=(a_{ij})_{n\\times n}$，当 $i\\neq k$ 时 $\\sum_{j=1}^{n}a_{ij}A_{kj}=0$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**证明**：构造辅助行列式 $D_1$：把 $|A|$ 的第 $k$ 行替换成第 $i$ 行（其余行不动），即\n$$D_1=\\begin{vmatrix}\\cdots\\\\a_{i1}\\ a_{i2}\\ \\cdots\\ a_{in}\\\\\\cdots\\end{vmatrix}\\quad(\\text{第 } k \\text{ 行为 } a_{i1},\\cdots,a_{in}).$$\n由于 $D_1$ 有两行相同（第 $i$ 行与第 $k$ 行都是 $a_{i1},\\cdots,a_{in}$），故 $D_1=0$（§1.4 推论）。\n另一方面，把 $D_1$ 按**第 $k$ 行**展开（§1.5）：$D_1=\\sum_{j=1}^{n}a_{ij}\\,A^{(1)}_{kj}$。注意 $A^{(1)}_{kj}$ 是 $D_1$ 中第 $k$ 行 $j$ 列元素的代数余子式——划去第 $k$ 行第 $j$ 列后剩下的元素与 $|A|$ 完全相同，故 $A^{(1)}_{kj}=A_{kj}$。\n于是 $0=D_1=\\sum_{j=1}^{n}a_{ij}A_{kj}$。$\\blacksquare$",
+   "points": [
+    {
+     "text": "构造两行相同的辅助行列式并指出其值为零",
+     "partial": 2
+    },
+    {
+     "text": "按第 k 行展开并说明新代数余子式与原 A_kj 相同",
+     "partial": 2
+    },
+    {
+     "text": "得到异行乘积之和为零的结论",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.5 展开定理的伴生推论（异行展开为零）。\n**考点出处**：同济《线性代数》第六版 §1.5 行列式按行(列)展开。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "证明",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 65
+  },
+  {
+   "id": "q-073",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.2 全排列和对换",
+    "kind": "textbook"
+   },
+   "stem": "证明：当 $n\\ge2$ 时，$n$ 个元素的全体排列中奇排列与偶排列各占一半，各为 $\\dfrac{n!}{2}$ 个。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**证明**：设全体 $n!$ 个排列中奇排列有 $s$ 个、偶排列有 $t$ 个。\n对每个奇排列施行**同一个**对换（例如交换前两个位置的两个数），由对换定理（§1.2），它变为一个偶排列；不同的奇排列经同一对换后仍是不同的偶排列，故 $s\\le t$。\n反过来，对每个偶排列施行同一个对换，同理得 $t\\le s$。\n于是 $s=t$。又 $s+t=n!$，故 $s=t=\\dfrac{n!}{2}$。$\\blacksquare$",
+   "points": [
+    {
+     "text": "用同一对换建立奇偶排列之间的一一对应",
+     "partial": 2
+    },
+    {
+     "text": "得到 s≤t 与 t≤s，从而 s=t",
+     "partial": 2
+    },
+    {
+     "text": "由 s+t=n! 得各半结论",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.2 对换定理（一次对换改变奇偶性）。\n**考点出处**：同济《线性代数》第六版 §1.2 全排列和对换。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "证明",
+    "经典"
+   ],
+   "verify": [],
+   "idx": 66
+  },
+  {
+   "id": "q-026",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A,B$ 均为 $n$ 阶方阵且 $AB=0$，$B\\neq0$。证明：$|A|=0$，并由此说明「$AB=0$ 必有 $A=0$ 或 $B=0$」是错误命题。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**证明**：因为 $AB=0$ 且 $B\\neq0$，所以 $B$ 至少有一列 $b_j\\neq0$，它满足 $Ab_j=0$，即 $Ax=0$ 有非零解。\n于是齐次线性方程组 $Ax=0$ 有非零解，由 §3.3 的判别定理（或由「$Ax=0$ 有非零解 $\\iff A$ 奇异」）得 $A$ 不可逆；再由 §2.3「$A$ 可逆 $\\iff|A|\\neq0$」得\n$$|A|=0.$$\n（也可用更直接的秩不等式：$AB=0\\Rightarrow r(A)+r(B)\\le n$，因 $r(B)\\ge1$ 故 $r(A)\\le n-1$，故 $|A|=0$。）\n\n**说明命题错误**：上式已给出一个 $A\\neq0$ 且 $B\\neq0$ 而 $AB=0$ 的可能情形。取\n$$A=\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix},\\qquad B=\\begin{pmatrix}1&1\\\\-1&-1\\end{pmatrix},$$\n则 $A\\neq0$、$B\\neq0$（$B$ 的两列都是 $(1,-1)^{\\mathsf T}$，落在 $A$ 的零空间中），而\n$$AB=\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}\\begin{pmatrix}1&1\\\\-1&-1\\end{pmatrix}=\\begin{pmatrix}0&0\\\\0&0\\end{pmatrix}=0.$$\n矩阵乘法**不满足消去律**（§2.2）。",
+   "points": [
+    {
+     "text": "由 $AB=0$、$B\\neq0$ 推出 $Ax=0$ 有非零解",
+     "partial": 2
+    },
+    {
+     "text": "用可逆判据或秩不等式推出 $|A|=0$",
+     "partial": 2
+    },
+    {
+     "text": "举出 $A\\neq0$、$B\\neq0$ 但 $AB=0$ 的具体反例并说明矩阵乘法不满足消去律",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§3.3 线性方程组解的判定 + §2.3 可逆的充要条件 + §2.2 矩阵乘法的运算特性。\n**考点出处**：同济《线性代数》第六版 §1.4 行列式的性质；次要考点 §3.3 线性方程组的解、§2.2 矩阵的运算。",
+   "misconception": "⚠️易错点：把「$AB=0$」当成可以两边约掉一个因子的式子。矩阵乘法没有消去律，只有结合律与分配律。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "高频",
+    "跨章",
+    "易错"
+   ],
+   "verify": [
+    {
+     "desc": "A≠0 且 B≠0 但 AB=0",
+     "code": "str(M([[1,1],[1,1]])*M([[1,1],[-1,-1]]))",
+     "expected": "Matrix([[0, 0], [0, 0]])"
+    }
+   ],
+   "idx": 67
+  },
+  {
+   "id": "q-070",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.1 二阶与三阶行列式",
+    "kind": "textbook"
+   },
+   "stem": "写出二阶与三阶行列式的对角线法则，并说明它为什么不能推广到 4 阶及更高阶。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**二阶**：$\\begin{vmatrix}a_{11}&a_{12}\\\\a_{21}&a_{22}\\end{vmatrix}=a_{11}a_{22}-a_{12}a_{21}$，主对角线乘积取正、副对角线乘积取负。\n**三阶（沙路法则）**：共 6 项——主对角线方向的三条线 $a_{11}a_{22}a_{33},a_{12}a_{23}a_{31},a_{13}a_{21}a_{32}$ 取正号；副对角线方向的三条线 $a_{13}a_{22}a_{31},a_{11}a_{32}a_{23},a_{12}a_{21}a_{33}$ 取负号。\n**不能推广的原因**：$n$ 阶行列式按定义共有 $n!$ 项（每项取自不同行不同列），而沙路式写法对 $n$ 阶只能给出 $2n$ 项。$n=2,3$ 时恰有 $2n=n!$，法则碰巧完整；$n=4$ 时 $2n=8\\ll4!=24$，大量项被漏掉，结果一般错误。高阶必须按定义/性质降阶计算。",
+   "points": [
+    {
+     "text": "正确写出二阶法则与三阶沙路法则（6 项及符号）",
+     "partial": 2
+    },
+    {
+     "text": "指出 $n$ 阶定义有 $n!$ 项而沙路式只有 $2n$ 项",
+     "partial": 2
+    },
+    {
+     "text": "说明 $n\\ge4$ 时 $2n<n!$ 故漏项失效",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.1 对角线法则 + §1.3 $n$ 阶行列式定义的项数分析。\n**考点出处**：同济《线性代数》第六版 §1.1、§1.3。",
+   "misconception": "⚠️易错点：把三阶沙路法则说成「4 项」——正确项数是 6 项（3 正 3 负）。",
+   "extension": null,
+   "tags": [
+    "高频",
+    "易错",
+    "难点"
+   ],
+   "verify": [],
+   "idx": 68
+  },
+  {
+   "id": "q-074",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $n$ 阶方阵（$n\\ge2$），$A^{*}$ 为伴随矩阵。证明：$|A^{*}|=|A|^{n-1}$；并求 $n=3$、$|A|=2$ 时 $|A^{*}|$ 的值。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**证明**：分两种情形。\n（1）$|A|\\neq0$：由伴随矩阵定义的恒等式 $AA^{*}=|A|E$（§2.3），两边取行列式：$$|A|\\cdot|A^{*}|=\\bigl||A|E\\bigr|=|A|^{n}\\cdot|E|=|A|^{n}.$$ 因 $|A|\\neq0$，约去 $|A|$ 得 $|A^{*}|=|A|^{n-1}$。\n（2）$|A|=0$：要证 $|A^{*}|=0$。反设 $|A^{*}|\\neq0$，则 $A^{*}$ 可逆，于是 $A=\\dfrac{1}{|A|}(AA^{*})$ 不可直接用（$|A|=0$）；改用恒等式 $A(A^{*})=0$：由 $AA^{*}=|A|E=0$，即 $A(A^{*})=0$，而 $A^{*}$ 可逆，右乘 $(A^{*})^{-1}$ 得 $A=0$，从而 $A^{*}=0$（$n\\ge2$ 时零矩阵的伴随为零矩阵），与 $|A^{*}|\\neq0$ 矛盾。故 $|A^{*}|=0=|A|^{n-1}$。$\\blacksquare$\n**代入**：$n=3,|A|=2$ 时 $|A^{*}|=2^{3-1}=4$。",
+   "points": [
+    {
+     "text": "|A|≠0 时：对 AA*=|A|E 取行列式并约去 |A|",
+     "partial": 2
+    },
+    {
+     "text": "|A|=0 时：用 AA*=0 与 A* 可逆反证 |A*|=0（或引用连续性论证）",
+     "partial": 2
+    },
+    {
+     "text": "给出 n=3、|A|=2 时 |A*|=4",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§2.3 伴随矩阵恒等式 $AA^{*}=|A|E$ + §1.4 行列式性质。\n**考点出处**：同济《线性代数》第六版 §1.4 行列式的性质；§2.3 逆矩阵（伴随矩阵）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "证明",
+    "难点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "数值例证",
+     "code": "M([[1,2,3],[0,1,4],[5,6,0]]).adjugate().det()",
+     "expected": "1"
+    },
+    {
+     "desc": "det=1 时公式",
+     "code": "M([[1,2,3],[0,1,4],[5,6,0]]).det()**2",
+     "expected": "1"
+    }
+   ],
+   "idx": 69
+  },
+  {
+   "id": "q-027",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.1 二阶与三阶行列式",
+    "kind": "textbook"
+   },
+   "stem": "计算三阶行列式 $|A|=\\begin{vmatrix}3&1&2\\\\-1&2&0\\\\1&1&1\\end{vmatrix}|$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "按第一行展开：\n$$|A|=3\\begin{vmatrix}2&0\\\\1&1\\end{vmatrix}-1\\begin{vmatrix}-1&0\\\\1&1\\end{vmatrix}+2\\begin{vmatrix}-1&2\\\\1&1\\end{vmatrix}.$$\n其中\n$\\begin{vmatrix}2&0\\\\1&1\\end{vmatrix}=2$，$\\begin{vmatrix}-1&0\\\\1&1\\end{vmatrix}=-1$，$\\begin{vmatrix}-1&2\\\\1&1\\end{vmatrix}=-1-2=-3$。\n故 $|A|=3\\times2-1\\times(-1)+2\\times(-3)=6+1-6=\\boxed{1}$。",
+   "points": [
+    {
+     "text": "写出按第一行展开的式子（含 $-,+,-$ 的符号）",
+     "partial": 2
+    },
+    {
+     "text": "正确算出三个二阶行列式 2、-1、-3",
+     "partial": 2
+    },
+    {
+     "text": "得到 $|A|=1$",
+     "partial": 2
+    },
+    {
+     "text": "结果正确且符号无误",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.5 按行（列）展开 + §1.1 二阶行列式 $|ad-bc|$。\n**考点出处**：同济《线性代数》第六版 §1.1 二阶与三阶行列式。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[3,1,2],[-1,2,0],[1,1,1]]).det()",
+     "expected": "1"
+    }
+   ],
+   "idx": 70
+  },
+  {
+   "id": "q-028",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "利用行列式的性质计算 $|A|=\\begin{vmatrix}1&2&3&4\\\\2&3&4&5\\\\3&4&5&6\\\\4&5&6&7\\end{vmatrix}|$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "相邻两行相减（第一行减第二行得负号，改用「后行减前行」使符号为正）：\n对第 2、3、4 行依次作「本行减上一行」的倍加操作，行列式不变：\n$$|A|=\\begin{vmatrix}1&2&3&4\\\\1&1&1&1\\\\1&1&1&1\\\\1&1&1&1\\end{vmatrix}.$$\n第 3、4 行与第 2 行相同，故 $|A|=0$。\n（等价做法：先作 $R_2\\leftarrow R_2-R_1,\\ R_3\\leftarrow R_3-R_1,\\ R_4\\leftarrow R_4-R_1$，同样得到三行相同。）\n故 $\\boxed{|A|=0}$。",
+   "points": [
+    {
+     "text": "指出「某行倍加另一行的 $k$ 倍，行列式不变」这一性质",
+     "partial": 2
+    },
+    {
+     "text": "正确实施行倍加操作得到三行（或两行）相同",
+     "partial": 2
+    },
+    {
+     "text": "由「两行（列）相同则行列式为零」得 $|A|=0$",
+     "partial": 2
+    },
+    {
+     "text": "结论正确",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 行列式性质（倍加不变、交换变号、异乘为零的推论）。\n**考点出处**：同济《线性代数》第六版 §1.4 行列式的性质。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[1,2,3,4],[2,3,4,5],[3,4,5,6],[4,5,6,7]]).det()",
+     "expected": "0"
+    }
+   ],
+   "idx": 71
+  },
+  {
+   "id": "q-075",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.1 二阶与三阶行列式",
+    "kind": "textbook"
+   },
+   "stem": "计算三阶行列式 $D=\\begin{vmatrix}2&0&1\\\\1&3&2\\\\4&1&1\\end{vmatrix}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "按第一行展开（§1.5）：\n$$D=2\\begin{vmatrix}3&2\\\\1&1\\end{vmatrix}-0\\begin{vmatrix}1&2\\\\4&1\\end{vmatrix}+1\\begin{vmatrix}1&3\\\\4&1\\end{vmatrix}=2(3-2)-0+1(1-12)=2-11=\\boxed{-9}.$$\n（中间项系数为零，可直接跳过。）",
+   "points": [
+    {
+     "text": "按第一行正确展开（含符号）",
+     "partial": 2
+    },
+    {
+     "text": "算出两个二阶行列式 1 与 -11",
+     "partial": 2
+    },
+    {
+     "text": "得到 D=-9",
+     "partial": 2
+    },
+    {
+     "text": "过程书写规范",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.5 按行展开 + §1.1 二阶行列式。\n**考点出处**：同济《线性代数》第六版 §1.1 二阶与三阶行列式。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[2,0,1],[1,3,2],[4,1,1]]).det()",
+     "expected": "-9"
+    }
+   ],
+   "idx": 72
+  },
+  {
+   "id": "q-076",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "计算 $D=\\begin{vmatrix}1&1&1\\\\1&2&4\\\\1&3&9\\end{vmatrix}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "这是范德蒙德行列式（$x_1=1,x_2=2,x_3=4$），$D=\\prod_{1\\le i<j\\le3}(x_j-x_i)=(2-1)(3-1)(3-2)=1\\times2\\times1=\\boxed{2}$。\n（也可按第 1 列消元：$r_2-r_1,r_3-r_1$ 后按第 1 列展开得 $\\begin{vmatrix}1&3\\\\2&8\\end{vmatrix}=8-6=2$，两法一致。）",
+   "points": [
+    {
+     "text": "识别范德蒙德结构或实施消元降阶",
+     "partial": 2
+    },
+    {
+     "text": "正确算出 (2-1)(3-1)(3-2)=2",
+     "partial": 2
+    },
+    {
+     "text": "结果为 2",
+     "partial": 2
+    },
+    {
+     "text": "过程完整",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 性质（倍加消元）或范德蒙德公式。\n**考点出处**：同济《线性代数》第六版 §1.4 行列式的性质；题型改编自：中科大《线性代数》历年考题（范德蒙德原型）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编",
+    "范德蒙德"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[1,1,1],[1,2,4],[1,3,9]]).det()",
+     "expected": "2"
+    }
+   ],
+   "idx": 73
+  },
+  {
+   "id": "q-077",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "计算四阶行列式 $D=\\begin{vmatrix}2&1&0&0\\\\3&4&0&0\\\\0&0&5&6\\\\0&0&7&8\\end{vmatrix}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "这是分块对角行列式 $\\det\\begin{pmatrix}A&O\\\\O&B\\end{pmatrix}=|A|\\cdot|B|$（用拉普拉斯展开或逐列消元可得，§1.5）：\n$$D=\\begin{vmatrix}2&1\\\\3&4\\end{vmatrix}\\cdot\\begin{vmatrix}5&6\\\\7&8\\end{vmatrix}=(8-3)(40-42)=5\\times(-2)=\\boxed{-10}.$$\n（分块对角行列式的可乘性：对前两列展开即可验证，每一列的非零元素只落在同一块里。）",
+   "points": [
+    {
+     "text": "指出分块对角结构并拆成两个二阶行列式之积",
+     "partial": 2
+    },
+    {
+     "text": "算出 5 与 -2",
+     "partial": 2
+    },
+    {
+     "text": "得到 D=-10",
+     "partial": 2
+    },
+    {
+     "text": "过程完整",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.5 按行（列）展开；分块行列式可乘结论。\n**考点出处**：同济《线性代数》第六版 §1.5 行列式按行(列)展开；§2.5 矩阵分块法（对照）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "分块"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[2,1,0,0],[3,4,0,0],[0,0,5,6],[0,0,7,8]]).det()",
+     "expected": "-10"
+    }
+   ],
+   "idx": 74
+  },
+  {
+   "id": "q-078",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "计算四阶行列式 $D=\\begin{vmatrix}2&0&0&0\\\\1&3&0&0\\\\5&7&4&0\\\\9&1&8&5\\end{vmatrix}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "这是**下三角**行列式（主对角线上方元素全为零），其值等于主对角线元素之积（§1.4 推论）：\n$$D=2\\times3\\times4\\times5=\\boxed{120}.$$\n（无需任何消元，直接识别结构即可。）",
+   "points": [
+    {
+     "text": "识别下三角结构",
+     "partial": 2
+    },
+    {
+     "text": "指出值等于对角线之积",
+     "partial": 2
+    },
+    {
+     "text": "得到 120",
+     "partial": 2
+    },
+    {
+     "text": "无多余计算错误",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 三角行列式等于对角线元素之积。\n**考点出处**：同济《线性代数》第六版 §1.4 行列式的性质。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[2,0,0,0],[1,3,0,0],[5,7,4,0],[9,1,8,5]]).det()",
+     "expected": "120"
+    }
+   ],
+   "idx": 75
+  },
+  {
+   "id": "q-029",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "求参数 $a$ 的值，使行列式 $|A|=\\begin{vmatrix}1&1&1\\\\1&2&a\\\\1&4&a^2\\end{vmatrix}=0$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "把第 1 列的 $1,1,1$ 用倍加法消掉：$R_2\\leftarrow R_2-R_1$，$R_3\\leftarrow R_3-R_1$（行列式不变）：\n$$|A|=\\begin{vmatrix}1&1&1\\\\0&1&a-1\\\\0&3&a^2-1\\end{vmatrix}=\\begin{vmatrix}1&a-1\\\\3&a^2-1\\end{vmatrix}.$$\n$=(a^2-1)-3(a-1)=a^2-3a+2=(a-1)(a-2)$。\n令其为零得 $a=1$ 或 $a=2$。\n故 $\\boxed{a=1\\ \\text{或}\\ a=2}$。\n（注意 $a=1$ 时第三行与第二行成倍数关系，$a=2$ 时第三行是第二行的 3 倍，两种情形都使行列式为零。）",
+   "points": [
+    {
+     "text": "用倍加法把第一列化成只有首元非零",
+     "partial": 2
+    },
+    {
+     "text": "算出二阶行列式 $(a^2-1)-3(a-1)$",
+     "partial": 2
+    },
+    {
+     "text": "因式分解得 $(a-1)(a-2)=0$",
+     "partial": 2
+    },
+    {
+     "text": "给出 $a=1$ 或 $a=2$ 两个解",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 倍加不变 + §1.5 展开定理（降为二阶）。\n**考点出处**：同济《线性代数》第六版 §1.5 行列式按行(列)展开。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "含参"
+   ],
+   "verify": [
+    {
+     "desc": "det 展开式",
+     "code": "expand(M([[1,1,1],[1,2,symbols('a')],[1,4,symbols('a')**2]]).det())",
+     "expected": "a**2 - 3*a + 2"
+    },
+    {
+     "desc": "det at a=1",
+     "code": "M([[1,1,1],[1,2,1],[1,4,1]]).det()",
+     "expected": "0"
+    },
+    {
+     "desc": "det at a=2",
+     "code": "M([[1,1,1],[1,2,2],[1,4,4]]).det()",
+     "expected": "0"
+    }
+   ],
+   "idx": 76
+  },
+  {
+   "id": "q-079",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "利用行和相等技巧计算 $D=\\begin{vmatrix}1&2&3\\\\2&3&1\\\\3&1&2\\end{vmatrix}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "三行元素之和均为 $6$。把第 $2,3$ 列都加到第 1 列（§1.4 倍加不变）：\n$$D=\\begin{vmatrix}6&2&3\\\\6&3&1\\\\6&1&2\\end{vmatrix}=6\\begin{vmatrix}1&2&3\\\\1&3&1\\\\1&1&2\\end{vmatrix}.$$\n再作 $r_2-r_1,\\ r_3-r_1$：\n$$=6\\begin{vmatrix}1&2&3\\\\0&1&-2\\\\0&-1&-1\\end{vmatrix}=6\\begin{vmatrix}1&-2\\\\-1&-1\\end{vmatrix}=6(-1-2)=\\boxed{-18}.$$\n（一般结论：行和相等的行列式可提取公因子 $(a_1+\\cdots+a_n)$ 后降一阶。）",
+   "points": [
+    {
+     "text": "指出各行和相等并把各列加到第 1 列",
+     "partial": 2
+    },
+    {
+     "text": "提出公因子 6 并消元降阶",
+     "partial": 2
+    },
+    {
+     "text": "算出二阶行列式 -3",
+     "partial": 2
+    },
+    {
+     "text": "得到 D=-18",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 倍加不变与数乘性质（提取公因子）。\n**考点出处**：同济《线性代数》第六版 §1.4 行列式的性质；题型改编自考研真题「行和相等」经典模型。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[1,2,3],[2,3,1],[3,1,2]]).det()",
+     "expected": "-18"
+    }
+   ],
+   "idx": 77
+  },
+  {
+   "id": "q-080",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "设 $D(\\lambda)=\\begin{vmatrix}2-\\lambda&1&0\\\\1&2-\\lambda&1\\\\0&1&2-\\lambda\\end{vmatrix}$。将 $D(\\lambda)$ 展开为 $\\lambda$ 的多项式并求 $D(0)$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "按第一行展开：\n$$D(\\lambda)=(2-\\lambda)\\begin{vmatrix}2-\\lambda&1\\\\1&2-\\lambda\\end{vmatrix}-1\\begin{vmatrix}1&1\\\\0&2-\\lambda\\end{vmatrix}=(2-\\lambda)\\bigl[(2-\\lambda)^2-1\\bigr]-(2-\\lambda).$$\n整理：$D(\\lambda)=(2-\\lambda)\\bigl[(2-\\lambda)^2-2\\bigr]$。\n展开成多项式：令 $t=2-\\lambda$，$D=t^3-2t=(2-\\lambda)^3-2(2-\\lambda)=-\\lambda^3+6\\lambda^2-10\\lambda+4$。\n$D(0)=4$。$\\boxed{D(\\lambda)=-\\lambda^3+6\\lambda^2-10\\lambda+4,\\ D(0)=4}$\n（背景：$D(\\lambda)$ 正是三对角矩阵 $\\begin{pmatrix}2&1&0\\\\1&2&1\\\\0&1&2\\end{pmatrix}$ 的特征多项式 $|2E-A|$ 的变形，§5.2 会再遇到它。）",
+   "points": [
+    {
+     "text": "按第一行正确展开为 (2-λ)[(2-λ)²-1]-(2-λ)",
+     "partial": 2
+    },
+    {
+     "text": "化简为 (2-λ)[(2-λ)²-2]",
+     "partial": 2
+    },
+    {
+     "text": "展开为 -λ³+6λ²-10λ+4",
+     "partial": 2
+    },
+    {
+     "text": "给出 D(0)=4",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.5 按行展开；多项式整理。\n**考点出处**：同济《线性代数》第六版 §1.5 行列式按行(列)展开。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "含参",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "多项式",
+     "code": "l=symbols('l'); expand(M([[2-l,1,0],[1,2-l,1],[0,1,2-l]]).det())",
+     "expected": "-l**3 + 6*l**2 - 10*l + 4"
+    },
+    {
+     "desc": "D(0)",
+     "code": "M([[2,1,0],[1,2,1],[0,1,2]]).det()",
+     "expected": "4"
+    }
+   ],
+   "idx": 78
+  },
+  {
+   "id": "q-030",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "计算四阶行列式 $|A|=\\begin{vmatrix}1&1&1&1\\\\2&3&4&5\\\\0&1&1&1\\\\1&1&0&0\\end{vmatrix}|$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "用倍加法把矩阵化为上三角阵（形如 $R_i\\leftarrow R_i-kR_j$ 的倍加操作不改变行列式）：\n① $R_2\\leftarrow R_2-2R_1$：$R_2=(2,3,4,5)-2(1,1,1,1)=(0,1,2,3)$；\n② $R_4\\leftarrow R_4-R_1$：$R_4=(1,1,0,0)-(1,1,1,1)=(0,0,-1,-1)$；\n③ $R_3\\leftarrow R_3-R_2$：$R_3=(0,1,1,1)-(0,1,2,3)=(0,0,-1,-2)$；\n④ $R_4\\leftarrow R_4-R_3$：$R_4=(0,0,-1,-1)-(0,0,-1,-2)=(0,0,0,1)$。\n此时矩阵为上三角阵\n$$\\begin{pmatrix}1&1&1&1\\\\0&1&2&3\\\\0&0&-1&-2\\\\0&0&0&1\\end{pmatrix},$$\n故 $|A|=$ 对角线元素之积 $=1\\times1\\times(-1)\\times1=\\boxed{-1}$。",
+   "points": [
+    {
+     "text": "指出用倍加法（$R_i\\leftarrow R_i-kR_j$）把矩阵化为上三角阵",
+     "partial": 2
+    },
+    {
+     "text": "正确写出四步倍加后的上三角阵",
+     "partial": 2
+    },
+    {
+     "text": "指出上三角阵的行列式等于对角线元素之积",
+     "partial": 2
+    },
+    {
+     "text": "得到 $|A|=-1$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 行列式性质（倍加不变、数乘、提取因子）+ §1.5 展开定理。\n**考点出处**：同济《线性代数》第六版 §1.4 行列式的性质。\n**引申**：高阶行列式的通用策略是「**先用倍加把零元素变多，再用展开降阶**」；若能通过倍加化为上（下）三角阵，则行列式等于对角线之积。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "难点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[1,1,1,1],[2,3,4,5],[0,1,1,1],[1,1,0,0]]).det()",
+     "expected": "-1"
+    }
+   ],
+   "idx": 79
+  },
+  {
+   "id": "q-081",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "计算循环结构行列式 $D=\\begin{vmatrix}1&2&3&4\\\\2&3&4&1\\\\3&4&1&2\\\\4&1&2&3\\end{vmatrix}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "各行元素之和均为 $10$。把第 $2,3,4$ 列全加到第 1 列并提出 $10$：\n$$D=10\\begin{vmatrix}1&2&3&4\\\\1&3&4&1\\\\1&4&1&2\\\\1&1&2&3\\end{vmatrix}.$$\n作 $r_2-r_1,\\ r_3-r_1,\\ r_4-r_1$ 后按第 1 列展开：\n$$D=10\\begin{vmatrix}1&1&-3\\\\2&-2&-2\\\\-1&-1&-1\\end{vmatrix}.$$\n按第 1 行展开：$=10\\left[1\\cdot(2-2)-1\\cdot(-2-2)+(-3)(-2-2)\\right]=10\\left[0+4+12\\right]=\\boxed{160}$。",
+   "points": [
+    {
+     "text": "用行和相等把第 1 列化为全 10 并提出公因子",
+     "partial": 2
+    },
+    {
+     "text": "消元降阶后按第 1 列展开",
+     "partial": 2
+    },
+    {
+     "text": "算出三阶行列式 16",
+     "partial": 2
+    },
+    {
+     "text": "得到 D=160",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 倍加不变 + 数乘提取 + §1.5 降阶展开。\n**考点出处**：同济《线性代数》第六版 §1.4、§1.5；题型改编自：中科大《线性代数》历年考题（循环型行列式原型）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编",
+    "难点"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[1,2,3,4],[2,3,4,1],[3,4,1,2],[4,1,2,3]]).det()",
+     "expected": "160"
+    }
+   ],
+   "idx": 80
+  },
+  {
+   "id": "q-082",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "计算字母行列式 $D=\\begin{vmatrix}x&y&x+y\\\\y&x+y&x\\\\x+y&x&y\\end{vmatrix}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "三行元素之和均为 $2(x+y)$。把第 $2,3$ 列加到第 1 列并提出 $2(x+y)$：\n$$D=2(x+y)\\begin{vmatrix}1&y&x+y\\\\1&x+y&x\\\\1&x&y\\end{vmatrix}.$$\n作 $r_2-r_1,\\ r_3-r_1$：\n$$=2(x+y)\\begin{vmatrix}1&y&x+y\\\\0&x&-y\\\\0&x-y&-x\\end{vmatrix}=2(x+y)\\begin{vmatrix}x&-y\\\\x-y&-x\\end{vmatrix}.$$\n二阶展开：$=2(x+y)\\bigl[x(-x)-(x-y)(-y)\\bigr]=2(x+y)\\bigl[-x^2+xy-y^2\\bigr]$。\n再整理：$-x^2+xy-y^2=-(x^2-xy+y^2)$，而 $2(x+y)(xy-x^2-y^2)=2xy(x+y)-2(x+y)(x^2+y^2)$，展开合并得\n$$D=-2(x^3+y^3).$$\n$\\boxed{D=-2(x^3+y^3)}$（可用 $x=y=1$ 验证：数值行列式 $=\\begin{vmatrix}1&1&2\\\\1&2&1\\\\2&1&1\\end{vmatrix}=-4=-2(1+1)$，吻合。）",
+   "points": [
+    {
+     "text": "用行和相等提取 2(x+y)",
+     "partial": 2
+    },
+    {
+     "text": "消元降阶得二阶行列式",
+     "partial": 2
+    },
+    {
+     "text": "展开并整理为 -2(x³+y³)",
+     "partial": 2
+    },
+    {
+     "text": "结构清晰、符号无误",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 倍加、提取公因子 + §1.5 展开；经典字母行列式。\n**考点出处**：同济《线性代数》第六版 §1.4 行列式的性质；题型改编自考研真题经典模型。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编",
+    "难点",
+    "含参"
+   ],
+   "verify": [
+    {
+     "desc": "符号展开",
+     "code": "x,y=symbols('x y'); expand(M([[x,y,x+y],[y,x+y,x],[x+y,x,y]]).det())",
+     "expected": "-2*x**3 - 2*y**3"
+    },
+    {
+     "desc": "x=y=1 核对",
+     "code": "M([[1,1,2],[1,2,1],[2,1,1]]).det()",
+     "expected": "-4"
+    }
+   ],
+   "idx": 81
+  }
+ ]
+}

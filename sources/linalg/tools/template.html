@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大学《线性代数》题库刷题</title>
+<meta name="description" content="/*__SUMMARY_DESC__*/">
+<style>
+/*__APP_CSS__*/
+</style>
+<style>
+/*__KATEX_CSS__*/
+</style>
+</head>
+<body>
+<a class="skip-link" href="#quiz">跳到题目区</a>
+
+<header class="hud" id="hud">
+  <div class="hud-inner">
+    <div class="hud-top">
+      <div class="hud-title">
+        <h1>大学《线性代数》题库刷题</h1>
+        <p class="hud-sub">/*__SUMMARY_SUB__*/</p>
+      </div>
+      <div class="hud-metrics">
+        <div class="metric"><span class="metric-k">进度</span><span class="metric-v" id="m-progress">0 / 0</span></div>
+        <div class="metric"><span class="metric-k">用时</span><span class="metric-v" id="m-time">00:00</span></div>
+        <div class="metric"><span class="metric-k">得分</span><span class="metric-v" id="m-score">0 / 0</span></div>
+        <div class="metric"><span class="metric-k">得分率</span><span class="metric-v" id="m-rate">—</span></div>
+        <div class="metric"><span class="metric-k">客观正确率</span><span class="metric-v" id="m-acc">—</span></div>
+      </div>
+    </div>
+    <div class="progress" role="progressbar" aria-label="答题进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+    <div class="hud-actions">
+      <button type="button" class="btn" id="btn-finish">结束本次并结算</button>
+      <button type="button" class="btn" id="btn-reset">重新开始（清空本次）</button>
+      <button type="button" class="btn btn-ghost" id="btn-stats">统计面板</button>
+      <button type="button" class="btn btn-ghost" id="btn-wrong">错题本</button>
+      <button type="button" class="btn btn-ghost" id="btn-sheet">答题卡</button>
+      <button type="button" class="btn btn-ghost" id="btn-theme">主题：跟随系统</button>
+    </div>
+  </div>
+</header>
+
+<div class="storage-warn" id="storage-warn" hidden>当前浏览器无法使用本地存储，本次作答记录不会被保存。</div>
+
+<div class="layout">
+  <aside class="filters" id="filters" aria-label="筛选与排序">
+    <details class="filter-block" open>
+      <summary>题型</summary>
+      <div class="chips" id="f-types"></div>
+    </details>
+    <details class="filter-block" open>
+      <summary>难度</summary>
+      <div class="chips" id="f-diffs"></div>
+    </details>
+    <details class="filter-block" open>
+      <summary>章节</summary>
+      <div class="chips" id="f-chapters"></div>
+    </details>
+    <details class="filter-block" open>
+      <summary>练习设置</summary>
+      <div class="field">
+        <label for="f-mode">练习模式</label>
+        <select id="f-mode">
+          <option value="single">单题聚焦（一屏一题，推荐）</option>
+          <option value="list">列表分页（每页 20 题）</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-order">排序</label>
+        <select id="f-order">
+          <option value="difficulty_desc">难度降序（困难 → 基础，默认）</option>
+          <option value="difficulty_asc">难度升序（基础 → 困难）</option>
+          <option value="chapter">按章节顺序</option>
+          <option value="type">按题型顺序</option>
+        </select>
+      </div>
+      <label class="switch"><input type="checkbox" id="f-shuffle"><span>随机乱序</span></label>
+      <label class="switch"><input type="checkbox" id="f-wrongonly"><span>只看错题本</span></label>
+      <div class="field">
+        <label for="f-kw">关键词</label>
+        <input type="search" id="f-kw" placeholder="题干/解析中搜索…">
+      </div>
+      <p class="hint kbd-hint">⌨️ 单题模式：← → 切题 · A–D 选选项 · Enter 确认多选</p>
+      <p class="hint" id="f-count">—</p>
+    </details>
+    <details class="filter-block">
+      <summary>题库说明</summary>
+      <div class="about">
+        <p><b>内容来源</b>：以同济大学《工程数学·线性代数》第六版（高等教育出版社，2014）为基准出题，每题标注考点出处。</p>
+        <p><b>素材盘点</b>：本机<b>不存在</b>《线性代数》课程资料；全部线性代数内容仅以机器学习课程内嵌的 5 页课件（<code>E:\机器学习\01机器学习-引言.pptx</code> slide 30 / 39–43）与 4 份笔记形式存在。故本库 /*__ABOUT_COUNT__*/ 题按公开教材出题，磁盘资料仅作对照与「引申」。</p>
+        /*__ABOUT_EXTRA__*/
+        <p><b>判分口径</b>：客观题自动判分；简答与计算题<b>由你按采分点自评</b>（勾选「得到 / 未得到」），不伪装成自动判分。</p>
+        <p><b>多选计分</b>：全对得满分；<b>少选、错选均 0 分</b>。</p>
+        <p><b>零外部依赖</b>：公式渲染库与字体全部内嵌，页面运行时<b>不发任何网络请求</b>，断网亦可正常使用。</p>
+      </div>
+    </details>
+  </aside>
+
+  <main id="quiz" class="quiz" tabindex="-1"></main>
+</div>
+
+<section class="panel" id="panel-stats" hidden aria-label="统计面板">
+  <h2>统计面板</h2>
+  <div class="stat-grid" id="stat-grid"></div>
+  <h3>答案位置统计（题库实测，非声称）</h3>
+  <div id="pos-stat"></div>
+  <h3>分值口径（副口径；主口径为题数）</h3>
+  <div id="score-table"></div>
+</section>
+
+<section class="panel" id="panel-sheet" hidden aria-label="答题卡">
+  <h2>答题卡</h2>
+  <div class="sheet-legend" id="sheet-legend"></div>
+  <div class="sheet-grid" id="sheet-grid"></div>
+</section>
+
+<section class="panel" id="panel-wrong" hidden aria-label="错题本">
+  <h2>错题本 <span class="muted" id="wrong-count"></span></h2>
+  <div class="wrong-actions">
+    <button type="button" class="btn" id="btn-wrong-practice">只练这些题</button>
+    <button type="button" class="btn btn-ghost" id="btn-wrong-clear">清空错题本</button>
+  </div>
+  <div id="wrong-list"></div>
+</section>
+
+<footer class="foot">
+  /*__SUMMARY_FOOTER__*/
+  /*__FOOTER_EXTRA__*/
+  <p>内容基准：同济大学数学系《工程数学·线性代数》第六版（ISBN 978-7-04-039661-4）。/*__CH6_NOTE__*/</p>
+  /*__EXT_NOTE__*/
+</footer>
+
+<script>window.__BANK__ = /*__BANK__*/;</script>
+<script>/*__KATEX_JS__*/</script>
+<script>/*__AUTORENDER_JS__*/</script>
+<script>
+/*__APP_JS__*/
+</script>
+</body>
+</html>

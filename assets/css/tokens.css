@@ -1,0 +1,93 @@
+/* 复习刷题平台 — 全局设计令牌与共享原子
+   变量体系源自线性代数单文件版 app.css（实测可用），令牌只在此定义一次；
+   学科子站（subject.css）与门户（portal.css）各自引用，不允许重复定义变量。 */
+
+:root{
+  --ink:#1a1a1a;
+  --ink-2:#444;
+  --ink-3:#666;
+  --ink-4:#999;
+  --rule:#e5e5e5;
+  --hairline:#efefef;
+  --mute:#f7f7f7;
+  --accent:#1d4ed8;
+  --accent-soft:#eef2ff;
+  --ok:#0f7b46;
+  --ok-soft:#e8f6ef;
+  --bad:#b42318;
+  --bad-soft:#fdeceb;
+  --mid:#8a5a00;
+  --mid-soft:#fff5e0;
+  --code-bg:#f4f4f6;
+  --panel-bg:#ffffff;
+  --page-bg:#fbfbfc;
+  --radius:10px;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px rgba(0,0,0,.05);
+  --hud-h:132px;
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--page-bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Hiragino Sans","Microsoft YaHei","微软雅黑","Helvetica Neue",Arial,sans-serif;
+  font-size:16px;line-height:1.75;
+  -webkit-text-size-adjust:100%;
+}
+h1,h2,h3{line-height:1.35;margin:0;}
+p{margin:0 0 .6em;}
+code{background:var(--code-bg);padding:.1em .35em;border-radius:4px;font-size:.9em;
+  font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;word-break:break-all;}
+.muted{color:var(--ink-3);font-weight:400;font-size:.9em;}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:8px 14px;z-index:99;}
+.skip-link:focus{left:8px;top:8px;}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+/* ---------- 共享原子 ---------- */
+.btn{appearance:none;border:1px solid var(--rule);background:var(--panel-bg);color:var(--ink);border-radius:8px;
+  padding:6px 13px;font-size:13.5px;font-family:inherit;cursor:pointer;text-decoration:none;
+  transition:border-color .15s,background .15s;display:inline-flex;align-items:center;gap:6px;}
+.btn:hover{border-color:#c9ccd1;background:#fafafa;}
+.btn:active{transform:translateY(1px);}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff;}
+.btn-primary:hover{background:#1e40af;border-color:#1e40af;}
+.btn-ghost{background:transparent;color:var(--ink-2);}
+.btn-sm{padding:3px 9px;font-size:12.5px;}
+.panel{max-width:1400px;margin:0 auto 24px;padding:20px;background:var(--panel-bg);border:1px solid var(--rule);border-radius:var(--radius);box-shadow:var(--shadow);}
+.panel h2{font-size:17px;margin-bottom:12px;}
+.panel h3{font-size:14px;color:var(--ink-2);margin:18px 0 8px;}.empty{text-align:center;color:var(--ink-3);padding:40px 10px;font-size:14px;}
+table.simple{width:100%;border-collapse:collapse;font-size:13px;}
+table.simple th,table.simple td{border-bottom:1px solid var(--hairline);padding:6px 8px;text-align:left;}
+table.simple th{color:var(--ink-3);font-weight:600;font-size:12px;}
+table.simple td.num,table.simple th.num{text-align:right;font-variant-numeric:tabular-nums;}
+
+/* ---------- 深色主题（仅令牌；组件覆盖在各自 css 中） ---------- */
+[data-theme="dark"]{
+  color-scheme:dark;
+  --ink:#e8e8ea;
+  --ink-2:#c3c6cc;
+  --ink-3:#9aa0a8;
+  --ink-4:#6b7078;
+  --rule:#2c2f36;
+  --hairline:#24262c;
+  --mute:#1c1e24;
+  --accent:#8aa7ff;
+  --accent-soft:#1d2b55;
+  --ok:#4cc38a;
+  --ok-soft:#132e21;
+  --bad:#f07167;
+  --bad-soft:#391b19;
+  --mid:#e0a63f;
+  --mid-soft:#332712;
+  --code-bg:#26282f;
+  --panel-bg:#17181d;
+  --page-bg:#0f1013;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+}
+[data-theme="dark"] body{background:var(--page-bg);color:var(--ink);}
+[data-theme="dark"] .btn{background:#1d1f25;}
+[data-theme="dark"] .btn:hover{border-color:#3a3e46;background:#22242b;}
+[data-theme="dark"] .btn-primary{color:#0f1013;}
+[data-theme="dark"] .btn-primary:hover{background:#a3b9ff;border-color:#a3b9ff;}
+[data-theme="dark"] code{background:var(--code-bg);}

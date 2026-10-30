@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>复习刷题平台</title>
+<meta name="description" content="多学科大学课程刷题平台：线性代数、高等数学、机器学习、数据可视化。逐题解析与考点出处，进度本地保存，可安装、可离线。">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/portal.css">
+<script>
+/* 主题预置：避免深色系统下白屏闪烁；子站设置加载后会按其自身配置覆盖 */
+(function(){try{
+  var p=localStorage.getItem('quiz-platform-theme');
+  var d=p? p==='dark' : !!(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.setAttribute('data-theme',d?'dark':'light');
+}catch(e){}})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#portal-main">跳到主内容</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <h1>复习刷题平台</h1>
+      <p class="muted">逐题解析 · 采分点自评 · 进度保存在你的浏览器</p>
+    </div>
+    <button type="button" class="btn btn-ghost" id="portal-theme">主题：跟随系统</button>
+  </div>
+</header>
+
+<main id="portal-main" class="portal-main">
+  <section class="aggregate" id="aggregate" hidden>
+    <span class="agg-item">累计作答 <b id="agg-answered">—</b> 题</span>
+    <span class="agg-item">客观正确率 <b id="agg-acc">—</b></span>
+    <span class="agg-item">待订正错题 <b id="agg-wrong">—</b></span>
+    <span class="muted">数据只存在本机，可用子站「导出/导入」迁移</span>
+  </section>
+
+  <section class="cards" id="cards" aria-label="学科列表">
+    <div class="empty">学科列表加载中…</div>
+  </section>
+
+  <section class="panel about-platform">
+    <h2>关于本平台</h2>
+    <p>这是一套<b>静态、零第三方依赖</b>的刷题小应用：题目数据与界面分离，每门学科一个子站，
+       逐题配解析与考点出处；计算与分析大题按采分点自评，不伪装成自动判分。</p>
+    <p>进度数据保存在浏览器 localStorage（按学科分命名空间），<b>不上传服务器</b>；
+       跨设备迁移用子站里的导出/导入功能。安装到桌面/手机后可离线使用已缓存的章节。</p>
+    <p class="muted">源码与题库构建门禁：<a href="https://github.com/wewe29/quiz-platform" rel="noopener">github.com/wewe29/quiz-platform</a>
+       · 线性代数单文件离线版：<a href="https://wewe29.github.io/linear-algebra-quiz/" rel="noopener">linear-algebra-quiz</a></p>
+  </section>
+</main>
+
+<footer class="foot muted">
+  <p>构建产物由门禁流水线自动生成并校验（manifest + SHA256 + 预算检查），任何一道门禁不过都不会发布。</p>
+</footer>
+
+<script src="assets/js/portal.js"></script>
+</body>
+</html>

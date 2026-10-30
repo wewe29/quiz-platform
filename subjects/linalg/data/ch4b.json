@@ -1,0 +1,2293 @@
+{
+ "chapter": 4,
+ "questions": [
+  {
+   "id": "q-281",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.2 向量组的线性相关性",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\boldsymbol{\\alpha}_1=(1,0,0)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_2=(0,1,0)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_3=(1,1,0)^{\\mathsf T}$，则这三个向量中线性无关的向量最多有 ______ 个。",
+   "options": null,
+   "answer": [
+    "2"
+   ],
+   "accept": [
+    "2",
+    "2个",
+    "2 个",
+    "两"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：由 $\\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2$ 知三者的秩为 $2$，故线性无关的向量个数最多为 $2$（取 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 即可达到）。\n（§4.3：线性无关向量的最大个数 $=$ 向量组的秩。）",
+   "misconception": "⚠️易错点：答成 3。线性无关向量的**个数**受秩限制，秩为 2 时最多只能取 2 个。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "重点"
+   ],
+   "verify": [
+    {
+     "desc": "三向量作列的矩阵的秩",
+     "code": "M([[1,0,1],[0,1,1],[0,0,0]]).rank()",
+     "expected": "2"
+    }
+   ],
+   "idx": 310
+  },
+  {
+   "id": "q-282",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.3 向量组的秩",
+    "kind": "textbook"
+   },
+   "stem": "向量组 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 的秩，等于它的 ______ 中所含向量的个数。",
+   "options": null,
+   "answer": [
+    "极大线性无关组"
+   ],
+   "accept": [
+    "极大线性无关组",
+    "极大无关组",
+    "极大线性无关向量组",
+    "极大无关向量组"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.3 的定义——向量组的秩就是它的**极大线性无关组**所含向量的个数。极大线性无关组的含义是：本身线性无关，而向量组中任何 $r+1$ 个向量都线性相关。\n配套定理（§4.3）：向量组的秩 $=$ 以该向量组为列构成的矩阵的秩。",
+   "misconception": "⚠️易错点：术语要写全——教材原文是「**极大线性无关组**」，漏掉「线性」二字虽意思相近，但不是标准表述。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "必背"
+   ],
+   "verify": [
+    {
+     "desc": "示例：秩（= 极大线性无关组个数）为 2",
+     "code": "M([[1,2],[0,1],[1,1]]).rank()",
+     "expected": "2"
+    }
+   ],
+   "idx": 311
+  },
+  {
+   "id": "q-283",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.4 线性方程组的解的结构",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $m\\times n$ 矩阵且 $r(A)=r$，则齐次线性方程组 $A\\boldsymbol{x}=0$ 的基础解系含有 ______ 个线性无关的解向量。",
+   "options": null,
+   "answer": [
+    "n-r"
+   ],
+   "accept": [
+    "n-r",
+    "n-r个",
+    "n - r",
+    "n－r",
+    "n-r(个)"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.4 齐次线性方程组解的结构——基础解系由 $n-r(A)$ 个线性无关的解向量构成，它们恰好张成整个解空间，故解空间的维数也是 $n-r(A)$。\n（当 $r(A)=n$ 时基础解系为空，只有零解，维数为 $0$。）",
+   "misconception": "⚠️易错点：写成 $r$ 或 $n$。正确答案是**自由未知量的个数** $n-r(A)$。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "重点",
+    "必背"
+   ],
+   "verify": [
+    {
+     "desc": "示例：n-r（3 元 2 阶系数阵）",
+     "code": "3 - M([[1,1,1],[1,2,3]]).rank()",
+     "expected": "1"
+    }
+   ],
+   "idx": 312
+  },
+  {
+   "id": "q-329",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.1 向量组及其线性组合",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\boldsymbol{\\alpha}=(1,-1,2,0)^{\\mathsf T}$，$\\boldsymbol{\\beta}=(0,3,-1,1)^{\\mathsf T}$，则 $\\boldsymbol{\\alpha}-2\\boldsymbol{\\beta}=$ ______。",
+   "options": null,
+   "answer": [
+    "(1,-7,4,-2)"
+   ],
+   "accept": [
+    "(1,-7,4,-2)",
+    "(1, -7, 4, -2)",
+    "1,-7,4,-2",
+    "(1,-7,4,-2)^T",
+    "(1,-7,4,-2)^{\\mathsf T}"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.1 线性组合是逐分量的加减：$2\\boldsymbol{\\beta}=(0,6,-2,2)^{\\mathsf T}$，于是\n$$\\boldsymbol{\\alpha}-2\\boldsymbol{\\beta}=(1,-1,2,0)^{\\mathsf T}-(0,6,-2,2)^{\\mathsf T}=(1,-7,4,-2)^{\\mathsf T}.$$",
+   "misconception": "⚠️易错点：第二个分量算成 $-1-(-6)$ 或把 $3\\times2$ 的符号搞反；建议先写出 $2\\boldsymbol{\\beta}$ 再逐分量相减。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "计算"
+   ],
+   "verify": [
+    {
+     "desc": "α-2β 的四个分量",
+     "code": "str(list(M([1,-1,2,0])-2*M([0,3,-1,1])))",
+     "expected": "[1, -7, 4, -2]"
+    }
+   ],
+   "idx": 313
+  },
+  {
+   "id": "q-330",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.2 向量组的线性相关性",
+    "kind": "textbook"
+   },
+   "stem": "当向量组 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 线性无关时，方程组 $k_1\\boldsymbol{\\alpha}_1+\\cdots+k_s\\boldsymbol{\\alpha}_s=\\boldsymbol{0}$ 只有 ______ 解。",
+   "options": null,
+   "answer": [
+    "零解"
+   ],
+   "accept": [
+    "零解",
+    "0",
+    "全零",
+    "零解(全零)",
+    "只有零解",
+    "零"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.2——线性无关的定义就是「只有全零系数解」，即 $k_1=\\dots=k_s=0$，故该方程组只有零解。",
+   "misconception": "⚠️易错点：把「线性无关」与「无解」混为一谈。这里是**有解且唯一**，且这个解只能是零解。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "重点",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 314
+  },
+  {
+   "id": "q-331",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.3 向量组的秩",
+    "kind": "textbook"
+   },
+   "stem": "以向量组 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 为列向量构成的矩阵的秩，就是该向量组的 ______。",
+   "options": null,
+   "answer": [
+    "秩"
+   ],
+   "accept": [
+    "秩",
+    "矩阵的秩",
+    "矩阵秩",
+    "rank"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.3 的定理——向量组的秩等于以该向量组为列向量构成的矩阵的秩；等价地，也等于以它为行向量构成的矩阵的秩。",
+   "misconception": "⚠️易错点：把答案写成「极大线性无关组的个数」。两者数值相同，但题目问的是与**矩阵的秩**的关系，填「秩」最贴切。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 315
+  },
+  {
+   "id": "q-332",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.4 线性方程组的解的结构",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\boldsymbol{x}_1,\\boldsymbol{x}_2$ 都是线性方程组 $A\\boldsymbol{x}=b$ 的解，则 $\\boldsymbol{x}_1-\\boldsymbol{x}_2$ 一定满足方程 $A\\boldsymbol{x}=$ ______。",
+   "options": null,
+   "answer": [
+    "0"
+   ],
+   "accept": [
+    "0",
+    "零",
+    "零向量",
+    "0(零向量)",
+    "0（零向量）"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.4——$A(\\boldsymbol{x}_1-\\boldsymbol{x}_2)=A\\boldsymbol{x}_1-A\\boldsymbol{x}_2=b-b=\\boldsymbol{0}$，故 $\\boldsymbol{x}_1-\\boldsymbol{x}_2$ 是齐次方程组 $A\\boldsymbol{x}=0$ 的解。",
+   "misconception": "⚠️易错点：作差时把 $b-b$ 写成 $2b$；或者把 $\\boldsymbol{x}_1-\\boldsymbol{x}_2$ 拿去代入原方程组（它并不满足原方程组）。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "重点",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 316
+  },
+  {
+   "id": "q-333",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.5 向量空间",
+    "kind": "textbook"
+   },
+   "stem": "在 $R^3$ 中，集合 $W=\\{(x,y,z)^{\\mathsf T}\\mid x+y+z=0\\}$ 是 $R^3$ 的子空间，因为它是某个 ______ 线性方程组的解集。",
+   "options": null,
+   "answer": [
+    "齐次"
+   ],
+   "accept": [
+    "齐次",
+    "齐次的",
+    "齐次线性",
+    "齐次线性方程",
+    "齐次线性方程组"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.4 与 §4.5——齐次线性方程组的解集含零向量且对加法与数乘封闭，故是 $R^3$ 的子空间；而非齐次方程组（如 $x+y+z=1$）的解集不含零向量，不是子空间。",
+   "misconception": "⚠️易错点：只看到「是一个方程组的解集」就说成子空间。关键区别在**齐次与非齐次**。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "重点",
+    "跨章"
+   ],
+   "verify": [],
+   "idx": 317
+  },
+  {
+   "id": "q-284",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.5 向量空间",
+    "kind": "textbook"
+   },
+   "stem": "在 $R^3$ 中，$W_1=\\{(x,y,z)^{\\mathsf T}\\mid x+y+z=0\\}$ 是 $R^3$ 的子空间，而 $W_2=\\{(x,y,z)^{\\mathsf T}\\mid x+y+z=1\\}$ 不是子空间。判断 $W_2$ 不是子空间的依据是：$W_2$ 中不含 ______ 向量。",
+   "options": null,
+   "answer": [
+    "零"
+   ],
+   "accept": [
+    "零",
+    "零向量",
+    "0",
+    "零向量(0,0,0)",
+    "(0,0,0)",
+    "零（0）"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.5——子空间必含零向量（由封闭性推出：取任一 $\\boldsymbol{\\alpha}\\in W$，则 $0\\boldsymbol{\\alpha}=\\boldsymbol{0}\\in W$）。\n$W_2$ 中每个向量满足 $x+y+z=1$，而零向量的分量和为 $0\\neq1$，故 $\\boldsymbol{0}\\notin W_2$，$W_2$ 不是子空间。\n相对地，$W_1$ 由**齐次**线性方程给出，对加法与数乘都封闭，故是子空间——这与 §4.4「齐次方程组的解集是子空间、非齐次方程组的解集不是子空间」完全对应。",
+   "misconception": "⚠️易错点：以为「集合里都是实数坐标所以是向量空间」。判据是**含零向量 + 对加法与数乘封闭**，缺一不可。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "跨章"
+   ],
+   "verify": [
+    {
+     "desc": "零向量的分量和为 0，不等于 1，故零向量∉W2",
+     "code": "sum(M([0,0,0]))",
+     "expected": "0"
+    }
+   ],
+   "idx": 318
+  },
+  {
+   "id": "q-334",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.1 向量组及其线性组合",
+    "kind": "textbook"
+   },
+   "stem": "若两组向量 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 与 $\\boldsymbol{\\beta}_1,\\dots,\\boldsymbol{\\beta}_t$ 等价，则它们的秩 ______（填「相等」或「不等」）。",
+   "options": null,
+   "answer": [
+    "相等"
+   ],
+   "accept": [
+    "相等",
+    "一样",
+    "相同",
+    "相等。"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.1 与 §4.3——等价的两组向量张成同一个子空间，故维数（秩）相同。注意这只是必要条件：秩相等的两组未必等价。",
+   "misconception": "⚠️易错点：把「秩相等」反过来当成「等价」的充分条件。秩相等只说明维数相同，位置可能不同。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "易错",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 319
+  },
+  {
+   "id": "q-335",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.2 向量组的线性相关性",
+    "kind": "textbook"
+   },
+   "stem": "向量组 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 线性相关的充要条件是：存在一组 ______ 的常数 $k_1,\\dots,k_s$，使 $k_1\\boldsymbol{\\alpha}_1+\\cdots+k_s\\boldsymbol{\\alpha}_s=\\boldsymbol{0}$。",
+   "options": null,
+   "answer": [
+    "不全为零"
+   ],
+   "accept": [
+    "不全为零",
+    "不全为0",
+    "不全为零的",
+    "不全为0的",
+    "不全为零(不全为0)"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.2 的定义——「存在**不全为零**的常数 $k_1,\\dots,k_s$」。若允许全零系数，任何向量组都会「线性相关」，定义就失去意义。",
+   "misconception": "⚠️易错点：漏掉「不全为零」四个字。这四个字是线性相关定义的核心限定。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "必背",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 320
+  },
+  {
+   "id": "q-336",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.4 线性方程组的解的结构",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 是 $m\\times n$ 矩阵且 $r(A)<n$，非齐次方程组 $A\\boldsymbol{x}=b$ 有解，则它的解集是零空间 $N(A)$ 的一个 ______。",
+   "options": null,
+   "answer": [
+    "陪集"
+   ],
+   "accept": [
+    "陪集",
+    "一个陪集",
+    "陪集(平移)",
+    "平移",
+    "陪集（平移）"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.4——通解 $\\boldsymbol{x}=\\boldsymbol{x}_0+\\sum c_i\\boldsymbol{\\eta}_i$，即解集 $=Z(A)+\\boldsymbol{x}_0$，是零空间的一个**平移**，抽象代数中称为**陪集**。",
+   "misconception": "⚠️易错点：写成「子空间」。非齐次解集不含零向量，它只能是一个陪集（平移）。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "易错",
+    "跨章"
+   ],
+   "verify": [],
+   "idx": 321
+  },
+  {
+   "id": "q-285",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.3 向量组的秩",
+    "kind": "textbook"
+   },
+   "stem": "若向量组 $\\boldsymbol{\\alpha}_1=(1,0,1)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_2=(0,1,1)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_3=(1,1,2)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_4=(1,0,0)^{\\mathsf T}$，则这四个向量的极大线性无关组含有的向量个数是 ______。",
+   "options": null,
+   "answer": [
+    "3"
+   ],
+   "accept": [
+    "3",
+    "3个",
+    "3 个",
+    "三"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.3——极大线性无关组所含向量的个数即该向量组的秩。\n第一步：$\\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2$，故这四个向量的秩 $\\le 3$；\n第二步：$\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_4$ 的行列式为 $-1\\neq0$，故三者线性无关，秩 $\\ge3$；\n综合得秩 $=3$，即极大线性无关组含 $3$ 个向量。",
+   "misconception": "⚠️易错点：只做到 $\\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2$ 就写「秩为 2」，漏掉了 $\\boldsymbol{\\alpha}_4$ 这个新的独立方向。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "计算",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "四向量作列的矩阵的秩",
+     "code": "M([[1,0,1,1],[0,1,1,0],[1,1,2,0]]).rank()",
+     "expected": "3"
+    },
+    {
+     "desc": "α1,α2,α4 的行列式（非零，故线性无关）",
+     "code": "M([[1,0,1],[0,1,0],[1,1,0]]).det()",
+     "expected": "-1"
+    }
+   ],
+   "idx": 322
+  },
+  {
+   "id": "q-337",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.3 向量组的秩",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 是 $m\\times n$ 矩阵且 $r(A)=r$。方程组 $A\\boldsymbol{x}=0$ 的解空间的维数与 $A$ 的列空间的维数之和等于 ______。",
+   "options": null,
+   "answer": [
+    "n"
+   ],
+   "accept": [
+    "n",
+    "未知量个数",
+    "n(未知量个数)",
+    "n（未知量个数）"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§4.4 与 §4.3——解空间维数为 $n-r(A)$，列空间维数即 $r(A)$，两者相加 $=n$（$n$ 是未知量的个数）。这就是「秩－零化度定理」。",
+   "misconception": "⚠️易错点：把 $n$ 写成 $m$ 或 $n+r$。$m$ 是方程个数，与维数公式无关。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "示例：解空间维数 + 列空间维数（4 元 3 阶系数阵）",
+     "code": "len(M([[1,0,1,0],[0,1,1,0],[0,0,1,1]]).nullspace()) + M([[1,0,1,0],[0,1,1,0],[0,0,1,1]]).rank()",
+     "expected": "4"
+    }
+   ],
+   "idx": 323
+  },
+  {
+   "id": "q-338",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.5 向量空间",
+    "kind": "textbook"
+   },
+   "stem": "在 $R^4$ 中取四个线性无关的向量 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3,\\boldsymbol{\\alpha}_4$，记 $W_1=L(\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2)$，$W_2=L(\\boldsymbol{\\alpha}_3,\\boldsymbol{\\alpha}_4)$，则 $\\dim(W_1\\cap W_2)=$ ______。",
+   "options": null,
+   "answer": [
+    "0"
+   ],
+   "accept": [
+    "0",
+    "零",
+    "0维",
+    "零维",
+    "0（零）"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：若 $\\boldsymbol{v}\\in W_1\\cap W_2$，则 $\\boldsymbol{v}=a\\boldsymbol{\\alpha}_1+b\\boldsymbol{\\alpha}_2=c\\boldsymbol{\\alpha}_3+d\\boldsymbol{\\alpha}_4$，即 $a\\boldsymbol{\\alpha}_1+b\\boldsymbol{\\alpha}_2-c\\boldsymbol{\\alpha}_3-d\\boldsymbol{\\alpha}_4=\\boldsymbol{0}$。四个 $\\boldsymbol{\\alpha}$ 线性无关，故 $a=b=c=d=0$，即 $W_1\\cap W_2=\\{\\boldsymbol{0}\\}$，维数为 $0$。",
+   "misconception": "⚠️易错点：以为两个二维子空间的交一定是「一条直线」。交空间的维数由两组向量**合起来**是否线性无关决定。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "重点"
+   ],
+   "verify": [
+    {
+     "desc": "四个 α 作列的矩阵的秩（为 4，即线性无关）",
+     "code": "M([[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]).rank()",
+     "expected": "4"
+    }
+   ],
+   "idx": 324
+  },
+  {
+   "id": "q-286",
+   "type": "term",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.2 向量组的线性相关性",
+    "kind": "textbook"
+   },
+   "stem": "名词解释：**线性相关**（linearly dependent）与**线性无关**（linearly independent）。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "设 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 是 $R^n$ 中的 $s$ 个向量。若存在**不全为零**的实数 $k_1,\\dots,k_s$，使得\n$$k_1\\boldsymbol{\\alpha}_1+k_2\\boldsymbol{\\alpha}_2+\\cdots+k_s\\boldsymbol{\\alpha}_s=\\boldsymbol{0},$$\n则称向量组 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ **线性相关**；若上式只有 $k_1=\\dots=k_s=0$ 这一种解，则称该向量组**线性无关**。\n\n**关键理解**：线性相关 $\\iff$ 存在一个**非平凡的**系数组合把向量组「压」成零向量；线性无关 $\\iff$ 不存在这样的组合。\n\n**基本推论**：\n① 含零向量的向量组一定线性相关；\n② $s>n$（向量个数超过维数）时必然线性相关；\n③ 线性无关组的任意部分组仍线性无关；\n④ 向量组线性相关 $\\iff$ 以该向量组为列构成的矩阵的秩小于向量个数 $s$。",
+   "points": [
+    {
+     "text": "写清线性相关的定义：存在不全为零的系数 $k_1,\\dots,k_s$ 使 $\\sum k_i\\boldsymbol{\\alpha}_i=\\boldsymbol{0}$",
+     "partial": 2
+    },
+    {
+     "text": "指出线性无关是「只有全零系数解」的情形，并补充「含零向量必相关」「$s>n$ 必相关」等推论",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.2 向量组的线性相关性的定义及其基本推论。\n**考点出处**：同济《线性代数》第六版 §4.2 向量组的线性相关性。",
+   "misconception": "⚠️易错点：把定义里的「**不全为零**」漏掉——若允许全零系数，任何向量组都会「线性相关」，定义就失效了。",
+   "extension": null,
+   "tags": [
+    "名词解释",
+    "必背",
+    "重点"
+   ],
+   "verify": [
+    {
+     "desc": "示例：三向量秩为 2（<3，故相关）",
+     "code": "M([[1,0,1],[0,1,1],[0,0,0]]).rank()",
+     "expected": "2"
+    }
+   ],
+   "idx": 325
+  },
+  {
+   "id": "q-287",
+   "type": "term",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.3 向量组的秩",
+    "kind": "textbook"
+   },
+   "stem": "名词解释：**极大线性无关组**与向量组的**秩**。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "设 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 是 $R^n$ 中的 $s$ 个向量。如果其中的一部分向量 $\\boldsymbol{\\alpha}_{i_1},\\dots,\\boldsymbol{\\alpha}_{i_r}$ **线性无关**，而向量组中**任何** $r+1$ 个向量都线性相关，则称 $\\boldsymbol{\\alpha}_{i_1},\\dots,\\boldsymbol{\\alpha}_{i_r}$ 是该向量组的一个**极大线性无关组**。\n\n向量组的**秩**就是它的极大线性无关组所含向量的个数，记作 $r(\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s)$。极大线性无关组本身**不唯一**（可以换），但**个数唯一**——都等于秩。\n\n**重要定理（§4.3）**：\n① 向量组的秩 $=$ 以该向量组为列向量构成的矩阵的秩；\n② 向量组的任一向量都可由任取的一个极大线性无关组线性表示；\n③ 线性无关向量的最大个数就是该向量组的秩。",
+   "points": [
+    {
+     "text": "写出极大线性无关组的定义：本身线性无关，且向量组中任何 $r+1$ 个向量都线性相关",
+     "partial": 2
+    },
+    {
+     "text": "写出秩的定义（极大线性无关组所含向量个数）并指出个数唯一、与矩阵的秩相等",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.3 向量组的秩与极大线性无关组。\n**考点出处**：同济《线性代数》第六版 §4.3 向量组的秩。",
+   "misconception": "⚠️易错点：以为「极大线性无关组是唯一的」。它**不唯一**（可换底），唯一的是它的**个数**即秩。",
+   "extension": null,
+   "tags": [
+    "名词解释",
+    "必背"
+   ],
+   "verify": [
+    {
+     "desc": "示例：秩（= 极大线性无关组个数）为 3",
+     "code": "M([[1,0,1,1],[0,1,1,0],[1,1,2,0]]).rank()",
+     "expected": "3"
+    }
+   ],
+   "idx": 326
+  },
+  {
+   "id": "q-288",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.1 向量组及其线性组合",
+    "kind": "textbook"
+   },
+   "stem": "写出向量组等价的定义，并说明向量组等价与「秩相等」之间的关系。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**定义（§4.1）**：设 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 与 $\\boldsymbol{\\beta}_1,\\dots,\\boldsymbol{\\beta}_t$ 是两组向量。若 $\\boldsymbol{\\beta}_1,\\dots,\\boldsymbol{\\beta}_t$ 中每一个向量都可由 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 线性表示，**且** $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 中每一个向量都可由 $\\boldsymbol{\\beta}_1,\\dots,\\boldsymbol{\\beta}_t$ 线性表示，则称这两个向量组**等价**。\n\n**几何意义**：两组向量**张成同一个子空间**。记 $L(\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s)$ 为由 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 张成的子空间，则\n$$L(\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s)=L(\\boldsymbol{\\beta}_1,\\dots,\\boldsymbol{\\beta}_t).$$\n\n**与秩的关系**：等价 $\\Rightarrow$ 秩相等（张成同一子空间，维数自然相同）；但**反之不成立**。\n反例（$R^3$ 中）：$\\boldsymbol{\\alpha}_1=(1,0,0)^{\\mathsf T},\\boldsymbol{\\alpha}_2=(0,1,0)^{\\mathsf T}$ 与 $\\boldsymbol{\\beta}_1=(1,0,0)^{\\mathsf T},\\boldsymbol{\\beta}_2=(0,0,1)^{\\mathsf T}$ 的秩都是 $2$，但二者张成的子空间不同，故不等价。\n\n**注**：若两组向量不仅秩相等，而且都是同一个子空间的基（如都取自 $L$ 中的极大线性无关组），则它们等价——这正是「秩相等 + 同处一个空间」的用法。",
+   "points": [
+    {
+     "text": "写出等价定义：两个方向的线性表示都能成立",
+     "partial": 2
+    },
+    {
+     "text": "指出等价即两组向量张成同一个子空间",
+     "partial": 2
+    },
+    {
+     "text": "说明「等价推出秩相等，但秩相等推不出等价」，并举出秩相等而不等价的反例",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.1 向量组等价；配合 §4.3 的秩。\n**考点出处**：同济《线性代数》第六版 §4.1 向量组及其线性组合。",
+   "misconception": "⚠️易错点：把「秩相等」当作「等价」的充要条件——它只是必要条件。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "必背"
+   ],
+   "verify": [
+    {
+     "desc": "反例中第一组向量的秩",
+     "code": "M([[1,0],[0,1],[0,0]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "反例中第二组向量的秩（相等但不等价）",
+     "code": "M([[1,0],[0,0],[0,1]]).rank()",
+     "expected": "2"
+    }
+   ],
+   "idx": 327
+  },
+  {
+   "id": "q-339",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.1 向量组及其线性组合",
+    "kind": "textbook"
+   },
+   "stem": "说明「向量的线性组合」「线性表示」与「向量组的等价」这三个概念之间的关系，并写出向量组等价的两个方向上的要求。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**① 线性组合与线性表示（§4.1）**：给定向量组 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_m$ 与常数 $k_1,\\dots,k_m$，形如 $k_1\\boldsymbol{\\alpha}_1+\\cdots+k_m\\boldsymbol{\\alpha}_m$ 的向量称为这组向量的一个**线性组合**；若这个线性组合恰好等于某个给定向量 $\\boldsymbol{\\beta}$，就称 $\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_m$ **线性表示**。\n\n**② 与张成空间的关系**：记 $L(\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_m)=\\{k_1\\boldsymbol{\\alpha}_1+\\cdots+k_m\\boldsymbol{\\alpha}_m\\mid k_i\\in R\\}$，它是这些向量张成的子空间。于是「$\\boldsymbol{\\beta}$ 可由 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_m$ 线性表示」与「$\\boldsymbol{\\beta}\\in L(\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_m)$」说的是同一件事。\n\n**③ 向量组等价（§4.1）**：设 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 与 $\\boldsymbol{\\beta}_1,\\dots,\\boldsymbol{\\beta}_t$ 是两组向量。若 $\\boldsymbol{\\beta}_1,\\dots,\\boldsymbol{\\beta}_t$ 中每一个向量都可由 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 线性表示，**并且** $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 中每一个向量都可由 $\\boldsymbol{\\beta}_1,\\dots,\\boldsymbol{\\beta}_t$ 线性表示，则称这两个向量组**等价**。\n\n**④ 三者的关系**：等价 $\\iff$ 两组向量张成同一个子空间，即 $L(\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s)=L(\\boldsymbol{\\beta}_1,\\dots,\\boldsymbol{\\beta}_t)$；等价 $\\Rightarrow$ 两组的秩相等（§4.3），而秩相等只说明两个子空间的维数相同、位置可能不同，反之未必成立。",
+   "points": [
+    {
+     "text": "写出线性组合与线性表示的定义，并指出「可线性表示」等价于「落在张成子空间内」",
+     "partial": 2
+    },
+    {
+     "text": "写出向量组等价的两个方向上的要求，并说明等价等价于两组张成同一子空间",
+     "partial": 2
+    },
+    {
+     "text": "说明等价与秩相等的关系（等价推出秩相等，秩相等未必等价）",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.1 向量组及其线性组合（线性组合、线性表示、向量组等价）。\n**考点出处**：同济《线性代数》第六版 §4.1 向量组及其线性组合。",
+   "misconception": "⚠️易错点：把等价只写成「一个方向可以表示」——等价要求**两个方向**都成立，这是它与「秩相等」的本质区别。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 328
+  },
+  {
+   "id": "q-340",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.2 向量组的线性相关性",
+    "kind": "textbook"
+   },
+   "stem": "证明：设向量组 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 线性无关，则它的任意部分组（例如 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_3$）也线性无关。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**证明**：设部分组为 $\\boldsymbol{\\alpha}_{i_1},\\dots,\\boldsymbol{\\alpha}_{i_t}$（$t\\le s$）。反设它线性相关，则由 §4.2 的定义，存在不全为零的数 $k_1,\\dots,k_t$，使\n$$k_1\\boldsymbol{\\alpha}_{i_1}+k_2\\boldsymbol{\\alpha}_{i_2}+\\cdots+k_t\\boldsymbol{\\alpha}_{i_t}=\\boldsymbol{0}.$$\n把这组系数补到原来的 $s$ 个位置上：令 $k_{i_j}=k_j$（$j=1,\\dots,t$），其余系数取 $0$，则得到\n$$k_1\\boldsymbol{\\alpha}_1+k_2\\boldsymbol{\\alpha}_2+\\cdots+k_s\\boldsymbol{\\alpha}_s=\\boldsymbol{0},$$\n且这组系数不全为零（$k_1,\\dots,k_t$ 中至少有一个非零）。这与 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 线性无关矛盾。故部分组线性无关。$\\blacksquare$\n\n**要点**：结论的方向是「无关 $\\Rightarrow$ 部分组无关」；反方向的「相关 $\\Rightarrow$ 部分组相关」并不成立（§4.2 中有反例）。",
+   "points": [
+    {
+     "text": "设出部分组并反设它线性相关，写出不全为零的系数关系",
+     "partial": 2
+    },
+    {
+     "text": "把系数补零扩充成原向量组的一组不全为零的系数关系",
+     "partial": 2
+    },
+    {
+     "text": "由原组线性无关导出矛盾，并指出结论的方向性",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.2 线性相关性的定义与基本推论。\n**考点出处**：同济《线性代数》第六版 §4.2 向量组的线性相关性。",
+   "misconception": "⚠️易错点：证完后把结论方向说反。「无关 $\\Rightarrow$ 部分组无关」成立，「相关 $\\Rightarrow$ 部分组相关」不成立。",
+   "extension": null,
+   "tags": [
+    "证明",
+    "重点",
+    "高频"
+   ],
+   "verify": [],
+   "idx": 329
+  },
+  {
+   "id": "q-341",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.3 向量组的秩",
+    "kind": "textbook"
+   },
+   "stem": "写出向量组的秩与极大线性无关组的定义，并说明如何用初等行变换求出一个向量组的秩和一个极大线性无关组。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**① 极大线性无关组（§4.3）**：设 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 是 $R^n$ 中的 $s$ 个向量。若其中一部分 $\\boldsymbol{\\alpha}_{i_1},\\dots,\\boldsymbol{\\alpha}_{i_r}$ **线性无关**，而该向量组中**任何** $r+1$ 个向量都线性相关，则称 $\\boldsymbol{\\alpha}_{i_1},\\dots,\\boldsymbol{\\alpha}_{i_r}$ 是该向量组的一个**极大线性无关组**。\n\n**② 秩的定义**：向量组的秩 $=$ 其极大线性无关组所含向量的个数，记 $r(\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s)$。极大线性无关组**不唯一**（可以换底），但**个数唯一**，都等于秩。\n\n**③ 与矩阵的秩的关系（§4.3）**：向量组的秩 $=$ 以该向量组为列向量构成的矩阵的秩（也等于以它为行向量构成的矩阵的秩）。\n\n**④ 求法**：以这些向量为列作矩阵 $A$，用初等行变换把 $A$ 化为行阶梯形 $B$（§3.1）。$B$ 的非零行个数就是 $r(A)$，即向量组的秩；而 $B$ 中**有主元**（该列首个非零元素所在的那一列）的那些列，与 $A$ 中对应的列向量构成原向量组的一个极大线性无关组。\n\n**要点**：取列时必须回到**原矩阵** $A$ 去取对应的列向量，并且只取**有主元**的列；任取前 $r$ 列不一定线性无关。",
+   "points": [
+    {
+     "text": "写出极大线性无关组的定义（本身线性无关且任何 r+1 个向量都相关）",
+     "partial": 2
+    },
+    {
+     "text": "写出秩的定义及它与矩阵秩相等的定理",
+     "partial": 2
+    },
+    {
+     "text": "说明用初等行变换求秩与极大无关组的步骤，并强调取有主元的列",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.3 向量组的秩与极大线性无关组；求法配合 §3.1 初等变换。\n**考点出处**：同济《线性代数》第六版 §4.3 向量组的秩。",
+   "misconception": "⚠️易错点：行变换后随手取前几列。必须取**有主元**的列，并回到**原矩阵**取对应的列向量。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "方法",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 330
+  },
+  {
+   "id": "q-342",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.4 线性方程组的解的结构",
+    "kind": "textbook"
+   },
+   "stem": "说明线性方程组 $A\\boldsymbol{x}=b$ 的解的个数如何由 $r(A)$ 与 $r(A\\mid b)$ 决定，并说明有无穷多解时通解中自由参数的个数。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**① 三种情形（§4.4，配合 §3.3 的秩判别定理）**：\n- 若 $r(A)=r(A\\mid b)=n$（$A$ 为 $n$ 阶方阵且可逆）：方程组有**唯一解**；\n- 若 $r(A)=r(A\\mid b)<n$：方程组有**无穷多解**；\n- 若 $r(A)<r(A\\mid b)$：方程组**无解**。\n\n**② 无穷多解时的通解**：此时相容，先求出一个特解 $\\boldsymbol{x}_0$（把常数项换成 0 解齐次方程组，或把增广矩阵化为阶梯形后令自由未知量取 0），再求齐次方程组 $A\\boldsymbol{x}=0$ 的基础解系 $\\boldsymbol{\\eta}_1,\\dots,\\boldsymbol{\\eta}_{n-r}$，则通解为\n$$\\boldsymbol{x}=\\boldsymbol{x}_0+c_1\\boldsymbol{\\eta}_1+\\cdots+c_{n-r(A)}\\boldsymbol{\\eta}_{n-r(A)},\\qquad c_i\\in R.$$\n自由参数（自由未知量）个数为 $n-r(A)$。\n\n**③ 三种情形的来源**：把增广矩阵化为阶梯形后只会出现三种形态——系数行全为主元（唯一解）、出现零行且对应常数为 0（有无穷多解）、出现 $0=c\\,(c\\neq0)$（无解）。它们本质上是 $r(A)$ 与 $r(A\\mid b)$ 大小关系的直接反映。",
+   "points": [
+    {
+     "text": "写出三种情形（唯一解、无穷多解、无解）及其与 r(A)、r(A|b) 的大小关系",
+     "partial": 2
+    },
+    {
+     "text": "说明无穷多解时如何求特解与基础解系，并写出通解的结构",
+     "partial": 2
+    },
+    {
+     "text": "指出自由参数的个数为 n-r(A)，并解释三种情形的来源",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.4 线性方程组的解的结构（通解＝特解＋齐次通解）；判别用 §3.3 的秩判别定理。\n**考点出处**：同济《线性代数》第六版 §4.4 线性方程组的解的结构。",
+   "misconception": "⚠️易错点：把 $r(A)<r(A\\mid b)$ 与其它情形记混。无解时是增广矩阵的秩**大于**系数矩阵的秩，差值就是矛盾的来源。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 331
+  },
+  {
+   "id": "q-343",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.5 向量空间；题型改编自：中科大《线性代数》历年考题（张成子空间的维数与基模型）",
+    "kind": "textbook"
+   },
+   "stem": "说明如何求向量组 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 张成的子空间 $L(\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s)$ 的一组基与维数，并说明该子空间为什么是 $R^n$ 的子空间。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**① 为什么是子空间（§4.5）**：$L(\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s)=\\{k_1\\boldsymbol{\\alpha}_1+\\cdots+k_s\\boldsymbol{\\alpha}_s\\}$。取 $k_1=\\dots=k_s=0$ 得零向量在其中；对任意 $\\boldsymbol{u}=k_1\\boldsymbol{\\alpha}_1+\\cdots+k_s\\boldsymbol{\\alpha}_s$ 与 $\\boldsymbol{v}=l_1\\boldsymbol{\\alpha}_1+\\cdots+l_s\\boldsymbol{\\alpha}_s$，有\n$$\\boldsymbol{u}+\\boldsymbol{v}=(k_1+l_1)\\boldsymbol{\\alpha}_1+\\cdots+(k_s+l_s)\\boldsymbol{\\alpha}_s,\\qquad c\\boldsymbol{u}=(ck_1)\\boldsymbol{\\alpha}_1+\\cdots+(ck_s)\\boldsymbol{\\alpha}_s,$$\n二者仍在 $L$ 中，故 $L$ 对加法与数乘封闭，又非空且含零向量，由 §4.5 的判定定理知 $L$ 是 $R^n$ 的子空间。\n\n**② 求基与维数（§4.3、§4.5）**：以 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 为列作矩阵 $A$，用初等行变换化为行阶梯形：非零行的个数即 $r(A)$，也就是 $\\dim L$；$A$ 中与阶梯形**有主元**的列相对应的那些列向量构成 $L$ 的一组**基**。\n\n**③ 基与维数的性质**：基不唯一（可以换底），但个数唯一；$\\dim L=r(A)\\le n$。若向量组本身线性无关，则它自身就是 $L$ 的一组基，此时 $\\dim L=s$。",
+   "points": [
+    {
+     "text": "说明 L 的定义并验证它对加法与数乘封闭、含零向量，故是子空间",
+     "partial": 2
+    },
+    {
+     "text": "说明用初等行变换求秩与有主元的列，从而得到 L 的一组基",
+     "partial": 2
+    },
+    {
+     "text": "指出基不唯一但维数唯一，且 dim L = r(A) ≤ n",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.5 向量空间与子空间；§4.3 向量组的秩与极大线性无关组。\n**考点出处**：同济《线性代数》第六版 §4.5 向量空间。",
+   "misconception": "⚠️易错点：把「张成空间」与「极大线性无关组」混为一谈。$L$ 由**全部**向量张成，它的基只能从这些向量中挑选。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "真题改编"
+   ],
+   "verify": [],
+   "idx": 332
+  },
+  {
+   "id": "q-289",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.4 线性方程组的解的结构",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 为 $m\\times n$ 矩阵且 $r(A)<n$。说明齐次线性方程组 $A\\boldsymbol{x}=0$ 的解的结构：基础解系是什么？通解如何写出？解空间的维数是多少？",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**基础解系**：把系数矩阵 $A$ 用初等行变换化为行阶梯形，再继续化为**最简阶梯形**（每列的首个非零元素上方与下方全为零），找出**自由未知量** $x_{r+1},\\dots,x_n$（其中 $r=r(A)$）。令自由未知量依次取 $1$、其余自由未知量取 $0$，解出对应的 $n-r$ 个线性无关的解向量\n$$\\boldsymbol{\\eta}_1,\\boldsymbol{\\eta}_2,\\dots,\\boldsymbol{\\eta}_{n-r},$$\n它们就构成该方程组的**基础解系**。\n\n**通解**：齐次方程组的全部解恰为基础解系的任意线性组合\n$$\\boldsymbol{x}=c_1\\boldsymbol{\\eta}_1+c_2\\boldsymbol{\\eta}_2+\\cdots+c_{n-r}\\boldsymbol{\\eta}_{n-r},\\qquad c_1,\\dots,c_{n-r}\\in R.$$\n\n**解空间**：全部解构成 $R^n$ 的一个 $n-r(A)$ 维线性子空间，维数为 $n-r(A)$；当 $r(A)=n$ 时基础解系为空、只有零解、维数为 $0$。\n\n**要点**：基础解系**不唯一**（取法不同则结果不同），但**个数唯一**，等于 $n-r(A)$，也就是解空间的维数；基础解系必须由原方程组**解出**，不能任意取。",
+   "points": [
+    {
+     "text": "说明基础解系的求法：化为最简阶梯形、令自由未知量取单位列求基本解",
+     "partial": 2
+    },
+    {
+     "text": "写出通解形式：$\\boldsymbol{x}=\\sum c_i\\boldsymbol{\\eta}_i$，共 $n-r(A)$ 个自由参数",
+     "partial": 2
+    },
+    {
+     "text": "指出解空间是 $n-r(A)$ 维子空间，基础解系个数等于解空间维数",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.4 线性方程组的解的结构（齐次方程组）；求基础解系要配合 §3.1 初等变换。\n**考点出处**：同济《线性代数》第六版 §4.4 线性方程组的解的结构。",
+   "misconception": "⚠️易错点：化到行阶梯形就停下，忘了继续化成**最简阶梯形**（或忘了「每列挑一个自由未知量」），结果自由未知量选错、方程解错。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "示例：基础解系含 n-r=1 个向量",
+     "code": "len(M([[1,1,1],[1,2,3]]).nullspace())",
+     "expected": "1"
+    },
+    {
+     "desc": "示例：基础解系的三个分量",
+     "code": "str(list(M([[1,1,1],[1,2,3]]).nullspace()[0]))",
+     "expected": "[1, -2, 1]"
+    }
+   ],
+   "idx": 333
+  },
+  {
+   "id": "q-290",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.4 线性方程组的解的结构",
+    "kind": "textbook"
+   },
+   "stem": "设非齐次线性方程组 $A\\boldsymbol{x}=b$ 有解。说明它的解集的结构：特解与通解的关系是什么？解集是不是线性空间？",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**前提**：$A\\boldsymbol{x}=b$ 有解 $\\iff r(A)=r(A\\mid b)$（§3.3 秩判别定理）。此时先求出一个**特解** $\\boldsymbol{x}_0$（把常数项换成 $0$ 再解齐次方程组即可；等价地把增广矩阵化为阶梯形后读出自由未知量取 $0$ 的那一组解）。\n\n**通解**：非齐次方程组的全部解为\n$$\\boldsymbol{x}=\\boldsymbol{x}_0+c_1\\boldsymbol{\\eta}_1+\\cdots+c_{n-r}\\boldsymbol{\\eta}_{n-r},$$\n其中 $\\boldsymbol{\\eta}_1,\\dots,\\boldsymbol{\\eta}_{n-r}$ 是齐次方程组 $A\\boldsymbol{x}=0$ 的基础解系，$c_i$ 为任意实数。反之，式中任取值都满足原方程组，因为 $A\\boldsymbol{x}_0=b$ 而 $A\\boldsymbol{\\eta}_i=\\boldsymbol{0}$。\n\n**解集的几何结构**：解集**不是**线性空间，而是「一个特解 $\\boldsymbol{x}_0$ 加上零空间（齐次解空间）」的**平移**：\n$$\\{\\boldsymbol{x}\\mid A\\boldsymbol{x}=b\\}=\\boldsymbol{x}_0+Z(A),$$\n其中 $Z(A)=\\{\\boldsymbol{\\eta}\\mid A\\boldsymbol{\\eta}=0\\}$ 是齐次解空间，维数为 $n-r(A)$。理由：解集不含零向量（若 $\\boldsymbol{0}$ 是解则 $b=A\\boldsymbol{0}=\\boldsymbol{0}$，与非齐次矛盾），而线性子空间必含零向量。\n\n**要点**：特解不唯一（任取一个即可），但不同特解之差必是齐次方程组的解。\n\n**引申**：把解集看成「零空间的一个平移」，正是抽象代数中**陪集**的标准模型；§4.5 的子空间概念在这里与 §4.4 的解结构接上了。",
+   "points": [
+    {
+     "text": "说明有解条件 $r(A)=r(A|b)$ 并先求出一个特解",
+     "partial": 2
+    },
+    {
+     "text": "写出通解 = 特解 + 齐次通解的线性组合，并说明其正确性",
+     "partial": 2
+    },
+    {
+     "text": "指出解集是「特解 + 零空间」的平移，不是线性空间（不含零向量）",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.4 非齐次线性方程组解的结构，配合 §3.3 秩判别定理与 §4.5 子空间。\n**考点出处**：同济《线性代数》第六版 §4.4 线性方程组的解的结构。",
+   "misconception": "⚠️易错点：非齐次方程组的解集**不是**线性子空间（不含零向量），这是本节最常被答错的辨析点。",
+   "extension": null,
+   "tags": [
+    "重点",
+    "易错",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "示例：r(A)",
+     "code": "M([[1,1,1],[1,2,3]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "示例：r(A|b)（与 r(A) 相等，故有解）",
+     "code": "M([[1,1,1,1],[1,2,3,2]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "示例：特解 x0=(0,1,0) 代入系数阵的结果",
+     "code": "str(list(M([[1,1,1],[1,2,3]])*M([[0],[1],[0]])))",
+     "expected": "[1, 2]"
+    }
+   ],
+   "idx": 334
+  },
+  {
+   "id": "q-344",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.1 向量组及其线性组合",
+    "kind": "textbook"
+   },
+   "stem": "说明向量 $\\boldsymbol{\\beta}$ 由向量组 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_m$ 线性表示时，表示系数的个数与向量组线性相关性之间的关系，并举例说明。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**① 两种情形（§4.1、§4.2）**：\n- 若 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_m$ **线性无关**，则 $\\boldsymbol{\\beta}$ 可表示时表示系数**唯一**：若 $k_1\\boldsymbol{\\alpha}_1+\\cdots+k_m\\boldsymbol{\\alpha}_m=l_1\\boldsymbol{\\alpha}_1+\\cdots+l_m\\boldsymbol{\\alpha}_m$，则 $(k_i-l_i)$ 是一组不全为零就违反无关性，故 $k_i=l_i$。\n- 若该向量组**线性相关**，则表示系数**不唯一**：可表示时有无穷多种表示（相关关系给出无穷多组非平凡系数，加到原表示上即可）。\n\n**② 例子**：取 $\\boldsymbol{\\alpha}_1=(1,0)^{\\mathsf T},\\boldsymbol{\\alpha}_2=(2,0)^{\\mathsf T}$（线性相关），则 $\\boldsymbol{\\beta}=(1,0)^{\\mathsf T}$ 有两种表示：$\\boldsymbol{\\beta}=1\\boldsymbol{\\alpha}_1+0\\boldsymbol{\\alpha}_2=0\\boldsymbol{\\alpha}_1+\\dfrac12\\boldsymbol{\\alpha}_2$。\n若改取 $\\boldsymbol{\\alpha}_1=(1,0)^{\\mathsf T},\\boldsymbol{\\alpha}_2=(0,1)^{\\mathsf T}$（线性无关），则 $\\boldsymbol{\\beta}=(3,-1)^{\\mathsf T}$ 的表示唯一：$\\boldsymbol{\\beta}=3\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2$。\n\n**③ 几何解释**：表示式的个数取决于「系数空间」中解的个数——无关时 $k_1\\boldsymbol{\\alpha}_1+\\cdots+k_m\\boldsymbol{\\alpha}_m=\\boldsymbol{0}$ 只有零解（解空间是零空间），相关时该方程组有无穷多解。这与 §4.4 中「基础解系含 $n-r(A)$ 个向量 ⇒ 自由参数有 $n-r(A)$ 个」是同一件事。",
+   "points": [
+    {
+     "text": "说明向量组线性无关时表示系数唯一，并给出证明思路",
+     "partial": 2
+    },
+    {
+     "text": "说明向量组线性相关时表示系数不唯一，并举出具体的两组向量与两种表示",
+     "partial": 2
+    },
+    {
+     "text": "从解空间（自由参数）的角度解释两种情形的差别",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.1 线性表示；§4.2 线性相关性；与 §4.4 齐次方程组解的结构相互印证。\n**考点出处**：同济《线性代数》第六版 §4.1 向量组及其线性组合。",
+   "misconception": "⚠️易错点：以为「表示式唯一」是线性组合本身的性质。它依赖于向量组**线性无关**这个前提。",
+   "extension": null,
+   "tags": [
+    "高频",
+    "易错"
+   ],
+   "verify": [],
+   "idx": 335
+  },
+  {
+   "id": "q-345",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.2 向量组的线性相关性",
+    "kind": "textbook"
+   },
+   "stem": "给出判定一组向量线性相关或线性无关的两种常用方法，并说明每种方法的依据、适用场合以及各自的易错点。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**方法一：定义法（解系数方程组，§4.2）**：写出方程组 $k_1\\boldsymbol{\\alpha}_1+\\cdots+k_s\\boldsymbol{\\alpha}_s=\\boldsymbol{0}$，考察它是否有非零解。存在一组不全为零的 $k_i$ 则线性相关；只有零解则线性无关。\n**依据**：线性相关性的定义本身。**适用**：向量个数少（2～3 个）且元素具体时最直接。**易错点**：算出「有解」就下结论——必须确认解**不全为零**；全零解不说明任何问题。\n\n**方法二：矩阵法（算秩或行列式，§4.2＋§4.3）**：以这些向量为列作矩阵 $A$。向量组线性无关 $\\iff r(A)=s$（$s$ 是向量个数），线性相关 $\\iff r(A)<s$。当向量个数等于维数（$s=n$，矩阵为方阵）时还可以直接用行列式：$|A|\\neq0$ 则无关，$|A|=0$ 则相关。\n**依据**：秩是极大线性无关组的大小（§4.3），而 $r(A)=s$ 当且仅当 $A$ 的列向量线性无关。**适用**：向量个数较多时用行变换求秩更省力。**易错点**：把 $r(A)<s$ 中的 $s$ 写成向量所在空间的维数 $n$；或把行变换后「有主元的列个数」与「秩」混为一谈（两者数值相同，但意义不同）。\n\n**补充方法：极大无关组法**——先求出一个极大线性无关组，再看其余向量是否落在它张成的空间内（落在里面则整个向量组相关）。\n\n**含参讨论提示**：必须用**充分必要条件**的写法，两头都验证；只举出一个使向量组相关的参数值就收工，是最常见的失分点。",
+   "points": [
+    {
+     "text": "写出定义法（解系数方程组）的步骤、依据与易错点",
+     "partial": 2
+    },
+    {
+     "text": "写出矩阵法（以向量为列作矩阵，看秩或行列式）的步骤、依据与易错点",
+     "partial": 2
+    },
+    {
+     "text": "说明两种方法各自的适用场合，并补充含参讨论必须两头验证",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.2 线性相关性的定义与判定；§4.3 秩；§1.5 行列式与秩的关系。\n**考点出处**：同济《线性代数》第六版 §4.2 向量组的线性相关性。",
+   "misconception": "⚠️易错点：把 $r(A)<s$ 中的 $s$ 写成向量所在空间的维数 $n$。$s$ 是**向量个数**，$n$ 是**维数**。",
+   "extension": null,
+   "tags": [
+    "方法",
+    "高频",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 336
+  },
+  {
+   "id": "q-346",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.4 线性方程组的解的结构",
+    "kind": "textbook"
+   },
+   "stem": "说明含参线性方程组解的讨论方法：如何按参数取值把方程组分情况讨论，每种情形下解的个数与通解的写法如何确定？",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**① 总思路**：把参数记作 $k$，写出系数矩阵 $A(k)$ 与增广矩阵 $(A(k)\\mid b)$，按 $|A(k)|$ 是否为零把 $k$ 的取值区间分开，然后对每个区间分别计算 $r(A(k))$ 与 $r(A(k)\\mid b)$，用 §4.4 的三种情形判定解的个数。\n\n**② 讨论步骤**：\n1. **$|A(k)|\\neq0$ 的情形**（即 $k\\neq k_0$）：$A(k)$ 可逆，方程组至多一个解；再检验相容性，相容时解唯一（此时 $r(A)=n$）。\n2. **$k=k_0$ 的情形**：此时 $|A(k)|=0$，必须回到增广矩阵比较 $r(A(k))$ 与 $r(A(k)\\mid b)$。二者相等则有无穷多解；$r(A(k)\\mid b)>r(A(k))$ 则无解。\n3. **写通解**：无穷多解时先求特解 $\\boldsymbol{x}_0$，再求齐次方程组 $A(k_0)\\boldsymbol{x}=0$ 的基础解系 $\\boldsymbol{\\eta}_1,\\dots,\\boldsymbol{\\eta}_{n-r}$，写\n$$\\boldsymbol{x}=\\boldsymbol{x}_0+c_1\\boldsymbol{\\eta}_1+\\cdots+c_{n-r}\\boldsymbol{\\eta}_{n-r},$$自由参数个数为 $n-r$。\n\n**③ 典型例子**：$\\begin{cases}x_1+x_2+x_3=1\\\\2x_1+2x_2+kx_3=3\\end{cases}$。第二式减第一式的 2 倍得 $(k-2)x_3=1$：$k\\neq2$ 时 $x_3=\\dfrac1{k-2}$，$x_1+x_2=1-\\dfrac1{k-2}$，有无穷多解（一个自由参数）；$k=2$ 时方程变成 $0=1$，无解。\n\n**易错点**：只求出 $|A(k)|=0$ 的 $k$ 就不管 $k\\neq k_0$ 的情形；或在 $k=k_0$ 处只算 $|A|$ 就下结论——必须回到**增广矩阵**比较两个秩。",
+   "points": [
+    {
+     "text": "写出总思路：先看含参行列式把参数区间分开，再对每个区间用秩判别",
+     "partial": 2
+    },
+    {
+     "text": "说明 k=k0 处必须比较 r(A) 与 r(A|b) 来区分无解与无穷多解",
+     "partial": 2
+    },
+    {
+     "text": "写出无穷多解时通解的构造（特解 + 基础解系），并给出典型例子的计算",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.4 线性方程组的解的结构 + §3.3 秩判别定理。\n**考点出处**：同济《线性代数》第六版 §4.4 线性方程组的解的结构。",
+   "misconception": "⚠️易错点：只用 $|A(k)|$ 判别就收工。$|A(k)|=0$ 只说明秩小于 $n$，有解还是无解要看 $r(A\\mid b)$。",
+   "extension": null,
+   "tags": [
+    "含参",
+    "高频",
+    "方法"
+   ],
+   "verify": [],
+   "idx": 337
+  },
+  {
+   "id": "q-291",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.5 向量空间",
+    "kind": "textbook"
+   },
+   "stem": "写出向量空间与子空间的定义，说明 $W$ 是 $V$ 的子空间的判定定理，并解释「$W$ 非空且含零向量」为什么还不够。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**向量空间（§4.5）**：设 $K$ 是数域，$V$ 是由 $K$ 上向量组成的非空集合。若对任意 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}\\in V$ 及任意 $k,l\\in K$，都有 $k\\boldsymbol{\\alpha}+l\\boldsymbol{\\beta}\\in V$（即对向量的**加法**和**数乘**都封闭），则称 $V$ 是 $K$ 上的**向量空间**（线性空间）。\n\n**子空间**：设 $V$ 是数域 $K$ 上的向量空间，$W$ 是 $V$ 的非空子集。若 $W$ 本身也是 $K$ 上的向量空间，则称 $W$ 是 $V$ 的**子空间**。\n\n**判定定理**：设 $W$ 是 $V$ 的非空子集，则\n$$W\\text{ 是 }V\\text{ 的子空间}\\iff W\\text{ 对向量的加法与数乘封闭}\\iff \\forall\\boldsymbol{\\alpha},\\boldsymbol{\\beta}\\in W,\\;\\forall k,l\\in K:\\;k\\boldsymbol{\\alpha}+l\\boldsymbol{\\beta}\\in W.$$\n**推论**：若 $W$ 是子空间，则 $\\boldsymbol{0}\\in W$，且对任意 $\\boldsymbol{\\alpha}\\in W$ 有 $-\\boldsymbol{\\alpha}\\in W$（分别取 $k=0$ 与 $k=-1$）。\n\n**为什么「非空 + 含零向量」还不够**：这两个条件只说明 $W$ 里有 $\\boldsymbol{0}$，却**不能**保证 $W$ 对运算封闭。\n反例：在 $R^3$ 中取 $W=\\{\\boldsymbol{0},\\boldsymbol{e}_1\\}=\\{(0,0,0)^{\\mathsf T},(1,0,0)^{\\mathsf T}\\}$。它非空且含零向量，但 $\\boldsymbol{e}_1+\\boldsymbol{e}_1=(2,0,0)^{\\mathsf T}\\notin W$，对加法不封闭，故不是子空间。\n另一个反例：$W=\\{(x,y,z)^{\\mathsf T}\\mid x+y+z=1\\}$ 不含零向量，直接被排除。\n\n**引申**：把 §4.3 的极大线性无关组与本节的子空间结合起来，就得到「子空间的基与维数」——极大线性无关组即子空间的一组基，其个数即该子空间的维数（教材第 6 章选学部分）。",
+   "points": [
+    {
+     "text": "写出向量空间的定义（$K$ 上向量集合对线性组合封闭）与子空间的定义（非空子集且本身是向量空间）",
+     "partial": 2
+    },
+    {
+     "text": "写出子空间判定定理（非空 + 对加法与数乘封闭）及零向量、负向量的推论",
+     "partial": 2
+    },
+    {
+     "text": "举出「非空且含零向量但对加法不封闭」的反例并说明其不是子空间",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.5 向量空间与子空间的定义及判定定理。\n**考点出处**：同济《线性代数》第六版 §4.5 向量空间。",
+   "misconception": "⚠️易错点：把「含零向量」当成子空间的充分条件。子空间要求对加法、数乘**封闭**，零向量只是封闭性的推论之一。",
+   "extension": "引申：子空间的基与维数见教材第 6 章（选学）——§4.3 的极大线性无关组即子空间的一组基。",
+   "tags": [
+    "难点",
+    "重点",
+    "跨章"
+   ],
+   "verify": [
+    {
+     "desc": "反例：e1+e1=(2,0,0) 不在 W={0,e1} 中",
+     "code": "str(list(M([1,0,0]) + M([1,0,0])))",
+     "expected": "[2, 0, 0]"
+    }
+   ],
+   "idx": 338
+  },
+  {
+   "id": "q-347",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.2 向量组的线性相关性；题型改编自：中科大《线性代数》历年考题（线性无关的证明模板）",
+    "kind": "textbook"
+   },
+   "stem": "证明：设 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3$ 线性无关，记 $\\boldsymbol{\\beta}_1=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2+\\boldsymbol{\\alpha}_3$，$\\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_1+3\\boldsymbol{\\alpha}_2+5\\boldsymbol{\\alpha}_3$，$\\boldsymbol{\\beta}_3=\\boldsymbol{\\alpha}_1+9\\boldsymbol{\\alpha}_2+25\\boldsymbol{\\alpha}_3$，则 $\\boldsymbol{\\beta}_1,\\boldsymbol{\\beta}_2,\\boldsymbol{\\beta}_3$ 线性无关。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**证明（系数行列式法）**：设\n$$k_1\\boldsymbol{\\beta}_1+k_2\\boldsymbol{\\beta}_2+k_3\\boldsymbol{\\beta}_3=\\boldsymbol{0}.$$\n把三个 $\\boldsymbol{\\beta}$ 按定义代入，按 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3$ 归并同类项：\n$$(k_1+k_2+k_3)\\boldsymbol{\\alpha}_1+(k_1+3k_2+9k_3)\\boldsymbol{\\alpha}_2+(k_1+5k_2+25k_3)\\boldsymbol{\\alpha}_3=\\boldsymbol{0}.$$\n由于 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3$ 线性无关，三个系数必须全为零，即\n$$\\begin{cases}k_1+k_2+k_3=0\\\\k_1+3k_2+9k_3=0\\\\k_1+5k_2+25k_3=0.\\end{cases}$$\n该齐次方程组的系数行列式为\n$$C=\\begin{pmatrix}1&1&1\\\\1&3&5\\\\1&9&25\\end{pmatrix},\\qquad |C|=1\\cdot(3\\cdot25-5\\cdot9)-1\\cdot(1\\cdot25-5\\cdot1)+1\\cdot(1\\cdot9-3\\cdot1)=30-20+6=16\\neq0.$$\n由克拉默法则（或 §4.3 的秩结论）该方程组只有零解 $k_1=k_2=k_3=0$。故 $\\boldsymbol{\\beta}_1,\\boldsymbol{\\beta}_2,\\boldsymbol{\\beta}_3$ 线性无关。$\\blacksquare$\n\n**说明**：这个系数行列式是**范德蒙德行列式**：形如 $\\begin{pmatrix}1&1&1\\\\1&x_2&x_2^{2}\\\\1&x_3&x_3^{2}\\end{pmatrix}$（此处 $x_2=3,x_3=5$），其值为 $(x_2-1)(x_3-1)(x_3-x_2)=2\\cdot4\\cdot2=16$，与直接展开一致。\n\n**关键思想**：**线性组合的线性组合仍是线性组合**，所以原向量组线性无关时，新向量组线性无关 $\\iff$ 系数矩阵可逆（行列式非零）。",
+   "points": [
+    {
+     "text": "设出线性组合为零的方程并按 α 归并同类项，得到关于 k 的齐次方程组",
+     "partial": 2
+    },
+    {
+     "text": "写出系数矩阵并算出其行列式为 16≠0，由克拉默法则推出 k1=k2=k3=0",
+     "partial": 2
+    },
+    {
+     "text": "得出 β 组线性无关的结论，并指出该行列式是范德蒙德行列式与「线性组合的线性组合」这一关键思想",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.2 线性相关性的判定（以向量为列的矩阵秩等于向量个数）+ §1.5 行列式按行展开 + §2.4 克拉默法则。\n**考点出处**：同济《线性代数》第六版 §4.2 向量组的线性相关性；题型改编自：中科大《线性代数》历年考题（线性无关的证明模板）。",
+   "misconception": "⚠️易错点：归并同类项时把系数写错（例如把 $\\boldsymbol{\\beta}_2$ 的 $\\boldsymbol{\\alpha}_2$ 系数写成 5）。务必逐项对照三个 $\\boldsymbol{\\beta}$ 的定义。",
+   "extension": null,
+   "tags": [
+    "真题改编",
+    "证明",
+    "难点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "系数行列式的值（非零，故 β 组无关）",
+     "code": "M([[1,1,1],[1,3,5],[1,9,25]]).det()",
+     "expected": "16"
+    }
+   ],
+   "idx": 339
+  },
+  {
+   "id": "q-348",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.5 向量空间",
+    "kind": "textbook"
+   },
+   "stem": "证明：设 $V$ 是数域 $K$ 上的向量空间，$W$ 是 $V$ 的非空子集，则 $W$ 是 $V$ 的子空间的充分必要条件是对向量的加法与数乘封闭；并说明这一判据为什么不能只用「含零向量」来代替。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**① 必要性**：设 $W$ 是 $V$ 的子空间。由 §4.5，$W$ 本身是 $K$ 上的向量空间，故对任意 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}\\in W$ 与任意 $k,l\\in K$ 都有 $k\\boldsymbol{\\alpha}+l\\boldsymbol{\\beta}\\in W$；特别地取 $k=1,l=0$ 与 $k=0,l=1$ 得 $\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}\\in W$，取 $k=l=0$ 得 $\\boldsymbol{0}\\in W$。故封闭性必要。\n\n**② 充分性**：设 $W\\neq\\varnothing$ 且对加法、数乘封闭。任取 $\\boldsymbol{\\alpha}\\in W$，由数乘封闭（标量取 0）得 $\\boldsymbol{0}=0\\boldsymbol{\\alpha}\\in W$；再由数乘封闭（标量取 $-1$）得 $-\\boldsymbol{\\alpha}\\in W$。于是 $W$ 中每个向量都有加法单位元与加法逆元，且运算封闭，因此 $W$ 构成 $K$ 上的向量空间，即 $V$ 的子空间。$\\blacksquare$\n\n**③ 为什么「含零向量」不足以代替封闭性**：含零向量只是封闭性的一个推论，而非它的全部。反例：在 $R^3$ 中取 $W=\\{\\boldsymbol{0},(1,0,0)^{\\mathsf T}\\}$，它非空且含零向量，但 $(1,0,0)^{\\mathsf T}+(1,0,0)^{\\mathsf T}=(2,0,0)^{\\mathsf T}\\notin W$，对加法不封闭，故不是子空间。另一个反例是 $W=\\{(x,y,z)^{\\mathsf T}\\mid x+y+z=1\\}$，它不含零向量。\n\n**④ 补充（有限维）**：在有限维向量空间中，若 $W\\subseteq V$ 且 $\\dim W=\\dim V$，则 $W=V$——因为 $W$ 的基也是 $V$ 中的一组线性无关向量，其个数等于 $V$ 的维数，故它必为 $V$ 的基。",
+   "points": [
+    {
+     "text": "证明必要性：由 W 是向量空间推出对加法与数乘封闭，并推出零向量、负向量在 W 中",
+     "partial": 2
+    },
+    {
+     "text": "证明充分性：由封闭性推出零向量与加法逆元在 W 中，从而 W 是向量空间",
+     "partial": 2
+    },
+    {
+     "text": "举出「非空且含零向量但对加法不封闭」的反例说明该判据不能被削弱，并补充有限维空间中维数相同则空间相等的说明",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.5 向量空间与子空间的定义及判定定理；§4.3 极大线性无关组与维数。\n**考点出处**：同济《线性代数》第六版 §4.5 向量空间。",
+   "misconception": "⚠️易错点：把「含零向量」当成充分条件。零向量只是封闭性的推论之一，判定必须回到**加法与数乘封闭**两条硬指标。",
+   "extension": null,
+   "tags": [
+    "难点",
+    "证明",
+    "重点"
+   ],
+   "verify": [],
+   "idx": 340
+  },
+  {
+   "id": "q-292",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.2 向量组的线性相关性",
+    "kind": "textbook"
+   },
+   "stem": "判断向量组 $\\boldsymbol{\\alpha}_1=(1,1,0)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_2=(2,2,1)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_3=(1,1,1)^{\\mathsf T}$ 是否线性相关；若是，求出一组不全为零的系数 $k_1,k_2,k_3$ 使 $k_1\\boldsymbol{\\alpha}_1+k_2\\boldsymbol{\\alpha}_2+k_3\\boldsymbol{\\alpha}_3=\\boldsymbol{0}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "以三个向量为列构成矩阵\n$$A=\\begin{pmatrix}1&2&1\\\\1&2&1\\\\0&1&1\\end{pmatrix}.$$\n由 §4.2 与 §3.2，向量组线性相关 $\\iff r(A)<3\\iff|A|=0$。\n\n$$|A|=1\\cdot\\begin{vmatrix}2&1\\\\1&1\\end{vmatrix}-2\\cdot\\begin{vmatrix}1&1\\\\0&1\\end{vmatrix}+1\\cdot\\begin{vmatrix}1&2\\\\0&1\\end{vmatrix}=1\\cdot(2-1)-2\\cdot(1-0)+1\\cdot(1-0)=1-2+1=0.$$\n故向量组**线性相关**。\n\n**求系数**：由 $k_1\\boldsymbol{\\alpha}_1+k_2\\boldsymbol{\\alpha}_2+k_3\\boldsymbol{\\alpha}_3=\\boldsymbol{0}$ 得方程组\n$$\\begin{cases}k_1+2k_2+k_3=0\\\\k_1+2k_2+k_3=0\\\\k_2+k_3=0\\end{cases}\\Longrightarrow\\begin{cases}k_1=-k_2\\\\k_3=-k_2\\end{cases}.$$\n取 $k_2=1$，得 $k_1=-1,\\;k_3=-1$，即\n$$1\\cdot\\boldsymbol{\\alpha}_1+1\\cdot\\boldsymbol{\\alpha}_2+(-1)\\cdot\\boldsymbol{\\alpha}_3=\\boldsymbol{0},$$\n等价地 $\\boldsymbol{\\alpha}_2=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_3$。\n\n**验证**：$(1,1,0)^{\\mathsf T}-(2,2,1)^{\\mathsf T}+(1,1,1)^{\\mathsf T}=(0,0,0)^{\\mathsf T}$ ✓",
+   "points": [
+    {
+     "text": "写出以三向量为列的矩阵，并用 $|A|=0$ 判定线性相关",
+     "partial": 2
+    },
+    {
+     "text": "正确算出 $|A|=0$（行列式展开无误）",
+     "partial": 2
+    },
+    {
+     "text": "解出系数关系 $k_1=-k_2,\\;k_3=-k_2$ 并给出一组具体系数",
+     "partial": 2
+    },
+    {
+     "text": "写出关系式并回代验证为零向量",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.2 线性相关性的判定（以向量为列的矩阵秩小于列数）+ §1.5 行列式按行展开。\n**考点出处**：同济《线性代数》第六版 §4.2 向量组的线性相关性。",
+   "misconception": "⚠️易错点：算出 $|A|=0$ 后**不求系数**就收工。判定相关只是第一步，本题还要求写出那组「不全为零」的系数。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "三向量作列的矩阵的秩为 2（<3，故相关）",
+     "code": "M([[1,2,1],[1,2,1],[0,1,1]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "关系式 α1-α2+α3=0 的验证结果",
+     "code": "str(M([1,1,0]) - M([2,2,1]) + M([1,1,1]))",
+     "expected": "Matrix([[0], [0], [0]])"
+    }
+   ],
+   "idx": 341
+  },
+  {
+   "id": "q-293",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.3 向量组的秩",
+    "kind": "textbook"
+   },
+   "stem": "求向量组 $\\boldsymbol{\\alpha}_1=(1,1,0)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_2=(0,1,1)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_3=(1,2,1)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_4=(2,3,1)^{\\mathsf T}$ 的秩，并求出一个极大线性无关组。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "以四个向量为列作矩阵\n$$A=\\begin{pmatrix}1&0&1&2\\\\1&1&2&3\\\\0&1&1&1\\end{pmatrix}.$$\n作初等行变换（§3.1）：\n$$R_2\\leftarrow R_2-R_1\\;\\Longrightarrow\\;\\begin{pmatrix}1&0&1&2\\\\0&1&1&1\\\\0&1&1&1\\end{pmatrix}\\xrightarrow{\\;R_3\\leftarrow R_3-R_2\\;}\\;\\begin{pmatrix}1&0&1&2\\\\0&1&1&1\\\\0&0&0&0\\end{pmatrix}.$$\n非零行数为 $2$，故 $r(A)=2$；由 §4.3，向量组的秩为 $\\boxed{2}$。\n\n非零行对应的列是第 1、2 列，故取 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$。验证它们线性无关：\n$$\\begin{vmatrix}1&0\\\\1&1\\end{vmatrix}=1\\neq0,$$\n即取前两行所得二阶子式非零，故 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性无关。\n\n又 $\\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2$，$\\boldsymbol{\\alpha}_4=2\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2$，其余两个向量都在 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 张成的子空间内，故 $\\{\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2\\}$ 是一个**极大线性无关组**。\n\n**答案**：秩为 $2$，极大线性无关组可取 $\\{\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2\\}$。",
+   "points": [
+    {
+     "text": "写出以四个向量为列的矩阵并作初等行变换",
+     "partial": 2
+    },
+    {
+     "text": "由非零行数读出秩 $r(A)=2$",
+     "partial": 2
+    },
+    {
+     "text": "指出 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性无关（二阶子式非零）",
+     "partial": 2
+    },
+    {
+     "text": "写出极大线性无关组并说明 $\\boldsymbol{\\alpha}_3,\\boldsymbol{\\alpha}_4$ 可由它表示",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.3 向量组的秩 $=$ 矩阵的秩（§3.2）；极大线性无关组由初等行变换后有主元的列给出（§3.1）。\n**考点出处**：同济《线性代数》第六版 §4.3 向量组的秩。",
+   "misconception": "⚠️易错点：行变换后随手取前两列——必须取**有主元（首列非零）**的那些列，并回到**原矩阵**去取对应的列向量。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "基础",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "四向量作列的矩阵的秩",
+     "code": "M([[1,0,1,2],[1,1,2,3],[0,1,1,1]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "α1,α2 的二阶子式（非零，故线性无关）",
+     "code": "M([[1,0],[1,1]]).det()",
+     "expected": "1"
+    }
+   ],
+   "idx": 342
+  },
+  {
+   "id": "q-294",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.1 向量组及其线性组合",
+    "kind": "textbook"
+   },
+   "stem": "判断向量 $\\boldsymbol{\\beta}=(1,2,3)^{\\mathsf T}$ 能否由向量组 $\\boldsymbol{\\alpha}_1=(1,0,1)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_2=(0,1,1)^{\\mathsf T}$ 线性表示；若能，求出表示式。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "设 $\\boldsymbol{\\beta}=k_1\\boldsymbol{\\alpha}_1+k_2\\boldsymbol{\\alpha}_2$，按分量列出方程：\n$$k_1\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}+k_2\\begin{pmatrix}0\\\\1\\\\1\\end{pmatrix}=\\begin{pmatrix}1\\\\2\\\\3\\end{pmatrix}\\Longleftrightarrow\\begin{cases}k_1=1\\\\k_2=2\\\\k_1+k_2=3\\end{cases}.$$\n第一个方程给出 $k_1=1$，第二个方程给出 $k_2=2$；代回第三个方程检验：$1+2=3$ 成立，方程组相容，故 $\\boldsymbol{\\beta}$ **可以**由 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性表示，且\n$$\\boxed{\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}_1+2\\boldsymbol{\\alpha}_2}.$$\n\n（由于 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性无关——其前两行组成的二阶子式为 $\\begin{vmatrix}1&0\\\\0&1\\end{vmatrix}=1\\neq0$——该表示式是**唯一**的。）",
+   "points": [
+    {
+     "text": "设出待定系数并列出三个分量方程",
+     "partial": 2
+    },
+    {
+     "text": "解出 $k_1=1,\\;k_2=2$ 并检验第三个方程相容",
+     "partial": 2
+    },
+    {
+     "text": "给出表示式 $\\boldsymbol{\\beta}=\\boldsymbol{\\alpha}_1+2\\boldsymbol{\\alpha}_2$",
+     "partial": 2
+    },
+    {
+     "text": "指出该向量组线性无关故表示式唯一",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.1 线性组合与线性表示；唯一性由 §4.2 线性无关给出。\n**考点出处**：同济《线性代数》第六版 §4.1 向量组及其线性组合。",
+   "misconception": "⚠️易错点：只解出两个方程就下结论，**不检验第三个方程**。三个分量方程必须同时成立，否则该向量不能被表示。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "基础"
+   ],
+   "verify": [
+    {
+     "desc": "α1+2α2 的结果（应等于 β）",
+     "code": "str(M([1,0,1]) + 2*M([0,1,1]))",
+     "expected": "Matrix([[1], [2], [3]])"
+    }
+   ],
+   "idx": 343
+  },
+  {
+   "id": "q-349",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.1 向量组及其线性组合",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\boldsymbol{\\alpha}_1=(1,2,0)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_2=(0,1,1)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_3=(1,0,1)^{\\mathsf T}$，求向量 $\\boldsymbol{\\beta}=(2,3,3)^{\\mathsf T}$ 由它们线性表示的表示式，并说明该表示式是否唯一。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步（设出待定系数）**：设 $\\boldsymbol{\\beta}=k_1\\boldsymbol{\\alpha}_1+k_2\\boldsymbol{\\alpha}_2+k_3\\boldsymbol{\\alpha}_3$，按分量列出方程（§4.1）：\n$$\\begin{cases}k_1+k_3=2\\\\2k_1+k_2=3\\\\k_2+k_3=3.\\end{cases}$$\n**第二步（解方程组）**：由第一式 $k_3=2-k_1$，由第三式 $k_2=3-k_3=1+k_1$，代入第二式得 $2k_1+1+k_1=3$，即 $3k_1=2$，$k_1=\\dfrac23$；于是 $k_2=1+\\dfrac23=\\dfrac53$，$k_3=2-\\dfrac23=\\dfrac43$。\n\n**第三步（表示式）**：\n$$\\boxed{\\boldsymbol{\\beta}=\\dfrac23\\boldsymbol{\\alpha}_1+\\dfrac53\\boldsymbol{\\alpha}_2+\\dfrac43\\boldsymbol{\\alpha}_3}.$$\n**检验**：$\\dfrac23(1,2,0)^{\\mathsf T}+\\dfrac53(0,1,1)^{\\mathsf T}+\\dfrac43(1,0,1)^{\\mathsf T}=(\\dfrac23+\\dfrac43,\\dfrac43+\\dfrac53,\\dfrac53+\\dfrac43)^{\\mathsf T}=(2,3,3)^{\\mathsf T}$ ✓\n\n**第四步（唯一性）**：以三个向量为列作矩阵\n$$A=\\begin{pmatrix}1&0&1\\\\2&1&0\\\\0&1&1\\end{pmatrix},\\qquad |A|=1\\cdot(1\\cdot1-0\\cdot1)+1\\cdot(2\\cdot1-1\\cdot0)=1+2=3\\neq0,$$\n故 $A$ 可逆、三个向量线性无关，表示式**唯一**。",
+   "points": [
+    {
+     "text": "设出待定系数并正确列出三个分量方程",
+     "partial": 2
+    },
+    {
+     "text": "解出 k1=2/3、k2=5/3、k3=4/3",
+     "partial": 2
+    },
+    {
+     "text": "写出表示式并回代检验",
+     "partial": 2
+    },
+    {
+     "text": "用行列式非零说明表示式唯一",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.1 线性表示（列分量方程并解线性方程组）；唯一性由 §4.2 线性无关保证，判定用 §1.5 行列式。\n**考点出处**：同济《线性代数》第六版 §4.1 向量组及其线性组合。",
+   "misconception": "⚠️易错点：三个分量方程只解两个就作答。必须三个方程同时成立（本题先由第一、三式定出 $k_3$、$k_2$ 再代入第二式）。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "基础",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "唯一表示系数",
+     "code": "list(M([[1,0,1],[2,1,0],[0,1,1]]).inv()*M([[2],[3],[3]]))",
+     "expected": "[2/3, 5/3, 4/3]"
+    },
+    {
+     "desc": "系数矩阵的行列式（非零，故表示唯一）",
+     "code": "M([[1,0,1],[2,1,0],[0,1,1]]).det()",
+     "expected": "3"
+    }
+   ],
+   "idx": 344
+  },
+  {
+   "id": "q-350",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.2 向量组的线性相关性",
+    "kind": "textbook"
+   },
+   "stem": "设 $k$ 为常数，$\\boldsymbol{\\alpha}_1=(1,0,0)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_2=(0,1,0)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_3=(1,1,k)^{\\mathsf T}$。讨论这三个向量线性相关、线性无关的条件；在线性相关时求出一组不全为零的系数。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步（写成矩阵）**：以三个向量为列作矩阵\n$$A=\\begin{pmatrix}1&0&1\\\\0&1&1\\\\0&0&k\\end{pmatrix}.$$\n**第二步（算行列式）**：$A$ 是上三角矩阵，$|A|=1\\cdot1\\cdot k=k$。\n\n**第三步（讨论）**：由 §4.2 与 §4.3，三向量线性无关 $\\iff r(A)=3\\iff|A|\\neq0$，线性相关 $\\iff|A|=0$。因此\n- $k\\neq0$ 时，$|A|=k\\neq0$，三向量**线性无关**；\n- $k=0$ 时，$|A|=0$，三向量**线性相关**。\n\n**第四步（求相关时的系数）**：$k=0$ 时 $\\boldsymbol{\\alpha}_3=(1,1,0)^{\\mathsf T}=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2$，故\n$$1\\cdot\\boldsymbol{\\alpha}_1+1\\cdot\\boldsymbol{\\alpha}_2-1\\cdot\\boldsymbol{\\alpha}_3=\\boldsymbol{0},$$\n即一组不全为零的系数为 $(k_1,k_2,k_3)=(1,1,-1)$。\n\n**第五步（验证）**：$(1,0,0)^{\\mathsf T}+(0,1,0)^{\\mathsf T}-(1,1,0)^{\\mathsf T}=(0,0,0)^{\\mathsf T}$ ✓",
+   "points": [
+    {
+     "text": "写出以三向量为列的矩阵并算出含参行列式 |A|=k",
+     "partial": 2
+    },
+    {
+     "text": "用 |A|≠0 无关、|A|=0 相关给出两种情形的结论",
+     "partial": 2
+    },
+    {
+     "text": "在 k=0 时写出关系式并给出一组不全为零的系数",
+     "partial": 2
+    },
+    {
+     "text": "回代验证并写出最终结论",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.2 线性相关性的判定（以向量为列的矩阵秩小于向量个数）+ §1.5 行列式按行展开。\n**考点出处**：同济《线性代数》第六版 §4.2 向量组的线性相关性。",
+   "misconception": "⚠️易错点：把「$k=0$ 时相关」只写成一句话就收工——题目还要求给出那组「不全为零」的系数，必须写出来并回代验证。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "含参",
+    "基础",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "含参行列式",
+     "code": "expand(M([[1,0,1],[0,1,1],[0,0,symbols('k')]]).det())",
+     "expected": "k"
+    },
+    {
+     "desc": "k=0 时三向量作列的矩阵的秩",
+     "code": "M([[1,0,1],[0,1,1],[0,0,0]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "k≠0（取 k=1）时三向量作列的矩阵的秩",
+     "code": "M([[1,0,1],[0,1,1],[0,0,1]]).rank()",
+     "expected": "3"
+    }
+   ],
+   "idx": 345
+  },
+  {
+   "id": "q-351",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.3 向量组的秩",
+    "kind": "textbook"
+   },
+   "stem": "求向量组 $\\boldsymbol{\\alpha}_1=(2,1,0)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_2=(1,0,1)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_3=(3,1,1)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_4=(1,1,-1)^{\\mathsf T}$ 的秩，求出一个极大线性无关组，并把其余向量用它线性表示。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步（作矩阵）**：以四个向量为列作矩阵\n$$A=\\begin{pmatrix}2&1&3&1\\\\1&0&1&1\\\\0&1&1&-1\\end{pmatrix}.$$\n**第二步（行变换）**：交换第 1、2 行，再作 $R_2\\leftarrow R_2-2R_1$、$R_3\\leftarrow R_3-R_2$：\n$$A\\longrightarrow\\begin{pmatrix}1&0&1&1\\\\2&1&3&1\\\\0&1&1&-1\\end{pmatrix}\\xrightarrow{\\;R_2\\leftarrow R_2-2R_1\\;}\\begin{pmatrix}1&0&1&1\\\\0&1&1&-1\\\\0&1&1&-1\\end{pmatrix}\\xrightarrow{\\;R_3\\leftarrow R_3-R_2\\;}\\begin{pmatrix}1&0&1&1\\\\0&1&1&-1\\\\0&0&0&0\\end{pmatrix}.$$\n非零行有 2 行，故 $r(A)=2$，向量组的秩为 $\\boxed{2}$。\n\n**第三步（取有主元的列）**：阶梯形中第 1、2 列有主元，故取 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$。验证它们线性无关：\n$$\\begin{vmatrix}2&1\\\\1&0\\end{vmatrix}=2\\cdot0-1\\cdot1=-1\\neq0.$$\n**第四步（用极大无关组表示其余向量）**：\n$$\\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2=(2,1,0)^{\\mathsf T}+(1,0,1)^{\\mathsf T}=(3,1,1)^{\\mathsf T},$$\n$$\\boldsymbol{\\alpha}_4=\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2=(2,1,0)^{\\mathsf T}-(1,0,1)^{\\mathsf T}=(1,1,-1)^{\\mathsf T}.$$\n**答案**：秩为 $2$，极大线性无关组可取 $\\{\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2\\}$，其余两个向量由它表示如上。",
+   "points": [
+    {
+     "text": "写出以四向量为列的矩阵并作初等行变换得到阶梯形",
+     "partial": 2
+    },
+    {
+     "text": "由非零行数读出秩 r=2",
+     "partial": 2
+    },
+    {
+     "text": "指出极大线性无关组为 {α1,α2} 并用二阶子式验证其线性无关",
+     "partial": 2
+    },
+    {
+     "text": "把 α3、α4 用该组表示：α3=α1+α2，α4=α1-α2",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.3 向量组的秩 $=$ 矩阵的秩（§3.2）；极大线性无关组由初等行变换后有主元的列给出（§3.1）。\n**考点出处**：同济《线性代数》第六版 §4.3 向量组的秩。",
+   "misconception": "⚠️易错点：算出秩后不把其余向量表示出来，或把表示式的系数写错。极大线性无关组之外的每个向量都必须能由它表示。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "基础",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "四向量作列的矩阵的秩",
+     "code": "M([[2,1,3,1],[1,0,1,1],[0,1,1,-1]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "α1,α2 作列的矩阵的二阶子式（非零，故线性无关）",
+     "code": "M([[2,1],[1,0]]).det()",
+     "expected": "-1"
+    },
+    {
+     "desc": "α3=α1+α2 的验证结果",
+     "code": "str(M([2,1,0])+M([1,0,1]))",
+     "expected": "Matrix([[3], [1], [1]])"
+    }
+   ],
+   "idx": 346
+  },
+  {
+   "id": "q-352",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.4 线性方程组的解的结构",
+    "kind": "textbook"
+   },
+   "stem": "讨论参数 $a$ 的取值，使方程组 $\\begin{cases}x_1+x_2+x_3=1\\\\2x_1+2x_2+a x_3=3\\end{cases}$ 分别有唯一解、无解或无穷多解，并在有解时写出通解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步（消元）**：用第二式减去第一式的 2 倍：\n$$(2x_1+2x_2+a x_3)-(2x_1+2x_2+2x_3)=3-2\\quad\\Longrightarrow\\quad (a-2)x_3=1.$$\n这一步把含参问题化为一元一次方程，$a=2$ 与 $a\\neq2$ 是分界点。\n\n**第二步（$a\\neq2$）**：$(a-2)x_3=1$ 给出 $x_3=\\dfrac{1}{a-2}$；代回第一式得 $x_1+x_2=1-\\dfrac{1}{a-2}$。此时系数矩阵\n$$A=\\begin{pmatrix}1&1&1\\\\2&2&a\\end{pmatrix}$$\n的两行不成比例，故 $r(A)=2$；增广矩阵 $\\begin{pmatrix}1&1&1&1\\\\2&2&a&3\\end{pmatrix}$ 的秩也是 2，方程组相容。又 $r(A)=2<n=3$，有 $n-r=1$ 个自由未知量，故有**无穷多解**。\n\n**通解**：令 $x_2=t$，则 $x_1=1-\\dfrac{1}{a-2}-t$，$x_3=\\dfrac{1}{a-2}$，即\n$$\\boldsymbol{x}=\\begin{pmatrix}1-\\dfrac{1}{a-2}\\\\0\\\\\\dfrac{1}{a-2}\\end{pmatrix}+t\\begin{pmatrix}-1\\\\1\\\\0\\end{pmatrix},\\qquad t\\in R.$$\n\n**第三步（$a=2$）**：上式变成 $0\\cdot x_3=1$，矛盾。此时 $A=\\begin{pmatrix}1&1&1\\\\2&2&2\\end{pmatrix}$ 的两行成比例，$r(A)=1$，而增广矩阵 $\\begin{pmatrix}1&1&1&1\\\\2&2&2&3\\end{pmatrix}$ 的秩为 2，$r(A\\mid b)=2>1=r(A)$，故方程组**无解**。\n\n**结论**：$a\\neq2$ 时有无穷多解（一个自由参数），$a=2$ 时无解；任何 $a$ 都没有唯一解（$r(A)\\le2<3$，$A$ 始终不可逆）。",
+   "points": [
+    {
+     "text": "消元得到 (a-2)x3=1，指出 a=2 与 a≠2 是分界",
+     "partial": 2
+    },
+    {
+     "text": "a≠2 时求出 x3 与 x1+x2 的关系，并用两个秩说明相容",
+     "partial": 2
+    },
+    {
+     "text": "写出 a≠2 时的通解（特解 + 基础解系形式）",
+     "partial": 2
+    },
+    {
+     "text": "a=2 时用 r(A)=1<r(A|b)=2 说明无解，并给出总结论",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.4 非齐次线性方程组解的结构（三种情形与通解）+ §3.3 秩判别定理。\n**考点出处**：同济《线性代数》第六版 §4.4 线性方程组的解的结构。",
+   "misconception": "⚠️易错点：把 $a\\neq2$ 的情形判成「唯一解」。两个方程、三个未知量，自由未知量有 $n-r=1$ 个，故是**无穷多解**；唯一解要求 $r(A)=n$。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "含参",
+    "基础",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "a=3 时系数矩阵的秩",
+     "code": "M([[1,1,1],[2,2,3]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "a=3 时增广矩阵的秩（与 r(A) 相等，故相容）",
+     "code": "M([[1,1,1,1],[2,2,3,3]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "a=2 时系数矩阵的秩",
+     "code": "M([[1,1,1],[2,2,2]]).rank()",
+     "expected": "1"
+    },
+    {
+     "desc": "a=2 时增广矩阵的秩（大于 r(A)，故无解）",
+     "code": "M([[1,1,1,1],[2,2,2,3]]).rank()",
+     "expected": "2"
+    }
+   ],
+   "idx": 347
+  },
+  {
+   "id": "q-353",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.5 向量空间；题型改编自：中科大《线性代数》历年考题（张成子空间的维数与基模型）",
+    "kind": "textbook"
+   },
+   "stem": "取 $\\boldsymbol{\\alpha}_1=(1,1,0)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_2=(0,1,1)^{\\mathsf T}$。求向量组 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 张成的子空间 $L(\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2)$ 的一组基与维数，并说明 $L(\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2)$ 是 $R^3$ 的子空间。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步（判断无关性）**：以两个向量为列作矩阵\n$$A=\\begin{pmatrix}1&0\\\\1&1\\\\0&1\\end{pmatrix},\\qquad |A|=\\begin{vmatrix}1&0\\\\1&1\\end{vmatrix}=1\\neq0,$$\n故 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 线性无关，它们自身就是 $L(\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2)$ 的一组基。\n\n**第二步（维数）**：基中向量的个数即维数，故\n$$\\dim L(\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2)=2,$$\n也等于 $r(A)=2$（§4.3）。该子空间还可以写成\n$$L(\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2)=\\{(x,y,z)^{\\mathsf T}\\mid z=y-x\\},$$\n即三维空间中一个经过原点的平面。\n\n**第三步（说明是子空间）**：$L(\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2)=\\{k_1\\boldsymbol{\\alpha}_1+k_2\\boldsymbol{\\alpha}_2\\mid k_1,k_2\\in R\\}$。取 $k_1=k_2=0$ 得零向量在其中；设 $\\boldsymbol{u}=k_1\\boldsymbol{\\alpha}_1+k_2\\boldsymbol{\\alpha}_2$、$\\boldsymbol{v}=l_1\\boldsymbol{\\alpha}_1+l_2\\boldsymbol{\\alpha}_2$，则\n$$\\boldsymbol{u}+\\boldsymbol{v}=(k_1+l_1)\\boldsymbol{\\alpha}_1+(k_2+l_2)\\boldsymbol{\\alpha}_2,\\qquad c\\boldsymbol{u}=(ck_1)\\boldsymbol{\\alpha}_1+(ck_2)\\boldsymbol{\\alpha}_2,$$\n仍属于 $L$，故 $L$ 对加法与数乘封闭；又 $L$ 非空且含零向量，由 §4.5 的判定定理知 $L$ 是 $R^3$ 的子空间。",
+   "points": [
+    {
+     "text": "写出矩阵并算出二阶子式非零，得两向量线性无关",
+     "partial": 2
+    },
+    {
+     "text": "指出 α1、α2 自身即为 L 的一组基，维数为 2",
+     "partial": 2
+    },
+    {
+     "text": "写出 L 的线性组合定义并验证其对加法与数乘封闭",
+     "partial": 2
+    },
+    {
+     "text": "用判定定理得出 L 是 R^3 的子空间的结论",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.5 向量空间与子空间的判定定理；§4.3 向量组的秩与极大线性无关组。\n**考点出处**：同济《线性代数》第六版 §4.5 向量空间。",
+   "misconception": "⚠️易错点：把「张成的子空间」当成「这些向量本身」。只有当向量组线性无关时，它自身才是一组基。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "基础",
+    "真题改编"
+   ],
+   "verify": [
+    {
+     "desc": "两向量作列的矩阵的秩（为 2）",
+     "code": "M([[1,0],[1,1],[0,1]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "二阶子式（非零，故两向量无关）",
+     "code": "M([[1,0],[1,1]]).det()",
+     "expected": "1"
+    }
+   ],
+   "idx": 348
+  },
+  {
+   "id": "q-295",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.4 线性方程组的解的结构",
+    "kind": "textbook"
+   },
+   "stem": "求齐次线性方程组 $\\begin{cases}x_1+x_2+x_3=0\\\\x_1+2x_2+3x_3=0\\end{cases}$ 的基础解系，并写出它的通解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "系数矩阵作初等行变换：\n$$\\begin{pmatrix}1&1&1\\\\1&2&3\\end{pmatrix}\\xrightarrow{\\;R_2\\leftarrow R_2-R_1\\;}\\begin{pmatrix}1&1&1\\\\0&1&2\\end{pmatrix}\\xrightarrow{\\;R_1\\leftarrow R_1-R_2\\;}\\begin{pmatrix}1&0&-1\\\\0&1&2\\end{pmatrix}.$$\n最简阶梯形中 $x_3$ 是自由未知量，第一行给出 $x_1-x_3=0$，第二行给出 $x_2+2x_3=0$，即 $x_1=x_3,\\;x_2=-2x_3$。\n\n令自由未知量 $x_3=1$（其余自由未知量取 $0$），得基本解\n$$\\boldsymbol{\\eta}_1=\\begin{pmatrix}1\\\\-2\\\\1\\end{pmatrix}.$$\n**检验**：$1+(-2)+1=0$ ✓；$1+2\\times(-2)+3\\times1=0$ ✓。\n\n由于 $r(A)=2$，$n-r(A)=3-2=1$，故基础解系只含 $1$ 个向量：$\\left\\{\\begin{pmatrix}1\\\\-2\\\\1\\end{pmatrix}\\right\\}$。\n\n**通解**为\n$$\\boldsymbol{x}=c\\begin{pmatrix}1\\\\-2\\\\1\\end{pmatrix},\\qquad c\\in R,$$\n即 $x_1=c,\\;x_2=-2c,\\;x_3=c$。",
+   "points": [
+    {
+     "text": "对系数矩阵作初等行变换得到最简阶梯形",
+     "partial": 2
+    },
+    {
+     "text": "识别自由未知量并求出基本解向量 $(1,-2,1)^{\\mathsf T}$",
+     "partial": 2
+    },
+    {
+     "text": "写出基础解系并说明其个数为 $n-r(A)=1$",
+     "partial": 2
+    },
+    {
+     "text": "写出通解 $\\boldsymbol{x}=c\\boldsymbol{\\eta}_1$ 并回代检验",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.4 齐次线性方程组解的结构，配合 §3.1 初等行变换求基础解系。\n**考点出处**：同济《线性代数》第六版 §4.4 线性方程组的解的结构。",
+   "misconception": "⚠️易错点：化到行阶梯形就停下，忘了继续化成**最简阶梯形**（或忘了「每列挑一个自由未知量」），结果自由未知量选错、方程解错。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "基础解系含 n-r=1 个向量",
+     "code": "len(M([[1,1,1],[1,2,3]]).nullspace())",
+     "expected": "1"
+    },
+    {
+     "desc": "基础解系的三个分量",
+     "code": "str(list(M([[1,1,1],[1,2,3]]).nullspace()[0]))",
+     "expected": "[1, -2, 1]"
+    }
+   ],
+   "idx": 349
+  },
+  {
+   "id": "q-296",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.4 线性方程组的解的结构",
+    "kind": "textbook"
+   },
+   "stem": "求非齐次线性方程组 $\\begin{cases}x_1+x_2+x_3=1\\\\x_1+2x_2+3x_3=2\\end{cases}$ 的通解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "增广矩阵作初等行变换：\n$$\\begin{pmatrix}1&1&1&1\\\\1&2&3&2\\end{pmatrix}\\xrightarrow{\\;R_2\\leftarrow R_2-R_1\\;}\\begin{pmatrix}1&1&1&1\\\\0&1&2&1\\end{pmatrix}\\xrightarrow{\\;R_1\\leftarrow R_1-R_2\\;}\\begin{pmatrix}1&0&-1&0\\\\0&1&2&1\\end{pmatrix}.$$\n第二行给出 $x_2+2x_3=1$，第一行给出 $x_1-x_3=0$，故 $x_1=x_3$，$x_2=1-2x_3$。令自由未知量 $x_3=t$，则\n$$x_1=t,\\qquad x_2=1-2t,\\qquad x_3=t.$$\n\n**求特解**：取 $t=0$，得一个特解 $\\boldsymbol{x}_0=\\begin{pmatrix}0\\\\1\\\\0\\end{pmatrix}$（检验：$0+1+0=1$ ✓，$0+2\\times1+0=2$ ✓）。\n\n**求齐次部分**：对应齐次方程组 $x_1+x_2+x_3=0,\\;x_1+2x_2+3x_3=0$ 的基础解系为 $\\boldsymbol{\\eta}_1=\\begin{pmatrix}1\\\\-2\\\\1\\end{pmatrix}$（$r(A)=2$，故 $n-r=1$）。\n\n**通解**（§4.4 的「特解 + 齐次通解」）：\n$$\\boldsymbol{x}=\\begin{pmatrix}0\\\\1\\\\0\\end{pmatrix}+t\\begin{pmatrix}1\\\\-2\\\\1\\end{pmatrix},\\qquad t\\in R.$$\n检验：$A\\begin{pmatrix}t\\\\1-2t\\\\t\\end{pmatrix}=\\begin{pmatrix}t+1-2t+t\\\\t+2(1-2t)+3t\\end{pmatrix}=\\begin{pmatrix}1\\\\2\\end{pmatrix}$ ✓",
+   "points": [
+    {
+     "text": "对增广矩阵作初等行变换并解出 $x_1,x_2$ 与自由未知量 $x_3$ 的关系",
+     "partial": 2
+    },
+    {
+     "text": "求出一个特解 $\\boldsymbol{x}_0=(0,1,0)^{\\mathsf T}$",
+     "partial": 2
+    },
+    {
+     "text": "写出齐次方程组的基础解系 $\\boldsymbol{\\eta}_1=(1,-2,1)^{\\mathsf T}$",
+     "partial": 2
+    },
+    {
+     "text": "写出通解「特解 + $t\\boldsymbol{\\eta}_1$」并回代检验",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.4 非齐次线性方程组解的结构（特解 + 齐次通解）。\n**考点出处**：同济《线性代数》第六版 §4.4 线性方程组的解的结构。",
+   "misconception": "⚠️易错点：把特解与齐次基础解系**混着写**（在特解上再加参数项）。记住：特解是一个**固定的向量**，带参数的是齐次解。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "示例：r(A)=r(A|b)，故有解",
+     "code": "M([[1,1,1,1],[1,2,3,2]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "特解 x0=(0,1,0) 代入系数阵的结果",
+     "code": "str(list(M([[1,1,1],[1,2,3]])*M([[0],[1],[0]])))",
+     "expected": "[1, 2]"
+    },
+    {
+     "desc": "齐次基础解系的三个分量",
+     "code": "str(list(M([[1,1,1],[1,2,3]]).nullspace()[0]))",
+     "expected": "[1, -2, 1]"
+    }
+   ],
+   "idx": 350
+  },
+  {
+   "id": "q-297",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.3 向量组的秩",
+    "kind": "textbook"
+   },
+   "stem": "求向量组 $\\boldsymbol{\\alpha}_1=(1,1,1)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_2=(1,2,4)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_3=(2,3,5)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_4=(1,1,2)^{\\mathsf T}$ 的秩，并求出一个极大线性无关组。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "以四个向量为列作矩阵\n$$A=\\begin{pmatrix}1&1&2&1\\\\1&2&3&1\\\\1&4&5&2\\end{pmatrix}.$$\n作初等行变换：\n$$R_3\\leftarrow R_3-R_1\\;\\Longrightarrow\\;\\begin{pmatrix}1&1&2&1\\\\1&2&3&1\\\\0&3&3&1\\end{pmatrix}\\xrightarrow{\\;R_2\\leftarrow R_2-R_1\\;}\\begin{pmatrix}1&1&2&1\\\\0&1&1&0\\\\0&3&3&1\\end{pmatrix}\\xrightarrow{\\;R_3\\leftarrow R_3-3R_2\\;}\\begin{pmatrix}1&1&2&1\\\\0&1&1&0\\\\0&0&0&1\\end{pmatrix}.$$\n非零行数为 $3$，故 $r(A)=3$，向量组的秩为 $\\boxed{3}$。\n\n有主元（首列非零）的列是第 1、2、4 列，故取 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_4$。验证它们线性无关：\n$$\\begin{vmatrix}1&1&1\\\\1&2&1\\\\1&4&2\\end{vmatrix}=1\\cdot(2\\cdot2-1\\cdot4)-1\\cdot(1\\cdot2-1\\cdot1)+1\\cdot(1\\cdot4-2\\cdot1)=0-1+2=1\\neq0,$$\n故三者线性无关；又 $\\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2$，所以 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_4$ 正是极大线性无关组。\n\n**答案**：秩为 $3$，极大线性无关组可取 $\\{\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_4\\}$。",
+   "points": [
+    {
+     "text": "写出以四个向量为列的矩阵并作初等行变换",
+     "partial": 2
+    },
+    {
+     "text": "由非零行数读出秩 $r(A)=3$",
+     "partial": 2
+    },
+    {
+     "text": "指出极大线性无关组为 $\\{\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_4\\}$ 并验证行列式非零",
+     "partial": 2
+    },
+    {
+     "text": "说明 $\\boldsymbol{\\alpha}_3=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2$，其余向量可由该组表示",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.3 向量组的秩 $=$ 矩阵的秩（§3.2）；极大线性无关组由初等行变换后有主元的列确定（§3.1）。\n**考点出处**：同济《线性代数》第六版 §4.3 向量组的秩。",
+   "misconception": "⚠️易错点：行变换后随手取前几列——必须取**有主元（该列首非零）**的那些列，且要回到**原矩阵**取对应的列向量。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "重点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "四向量作列的矩阵的秩",
+     "code": "M([[1,1,2,1],[1,2,3,1],[1,4,5,2]]).rank()",
+     "expected": "3"
+    },
+    {
+     "desc": "α1,α2,α4 的行列式（非零，故线性无关）",
+     "code": "M([[1,1,1],[1,2,1],[1,4,2]]).det()",
+     "expected": "1"
+    }
+   ],
+   "idx": 351
+  },
+  {
+   "id": "q-354",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.1 向量组及其线性组合",
+    "kind": "textbook"
+   },
+   "stem": "设向量组 $\\boldsymbol{\\alpha}_1=(1,0,0)^{\\mathsf T}$，$\\boldsymbol{\\alpha}_2=(0,1,0)^{\\mathsf T}$ 与向量组 $\\boldsymbol{\\beta}_1=(1,1,0)^{\\mathsf T}$，$\\boldsymbol{\\beta}_2=(1,-1,0)^{\\mathsf T}$。判断这两组向量是否等价，并写出两个方向的线性表示式。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步（写出两个方向的表示式）**：\n方向一（$\\boldsymbol{\\beta}$ 组由 $\\boldsymbol{\\alpha}$ 组表示）：\n$$\\boldsymbol{\\beta}_1=\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2,\\qquad \\boldsymbol{\\beta}_2=\\boldsymbol{\\alpha}_1-\\boldsymbol{\\alpha}_2.$$\n方向二（$\\boldsymbol{\\alpha}$ 组由 $\\boldsymbol{\\beta}$ 组表示）：\n$$\\boldsymbol{\\alpha}_1=\\dfrac{1}{2}(\\boldsymbol{\\beta}_1+\\boldsymbol{\\beta}_2),\\qquad \\boldsymbol{\\alpha}_2=\\dfrac{1}{2}(\\boldsymbol{\\beta}_1-\\boldsymbol{\\beta}_2).$$\n**第二步（结论）**：两个方向的表示都成立，按 §4.1 的定义，两组向量**等价**。\n\n**第三步（几何说明）**：两组向量都张成同一个平面 $L=\\{(x,y,0)^{\\mathsf T}\\mid x,y\\in R\\}$，等价正是「张成同一子空间」的另一种说法。两组的秩都等于 2（$\\begin{vmatrix}1&1\\\\1&-1\\end{vmatrix}=-2\\neq0$，$\\begin{vmatrix}1&0\\\\0&1\\end{vmatrix}=1\\neq0$）。注意：**秩相等只是等价的必要条件**，这里能断定等价，是因为两个方向的表示式都能给出。",
+   "points": [
+    {
+     "text": "写出 β 组由 α 组表示的两个表示式",
+     "partial": 2
+    },
+    {
+     "text": "写出 α 组由 β 组表示的两个表示式（用 1/2 的组合）",
+     "partial": 2
+    },
+    {
+     "text": "依据 §4.1 的定义得出两组等价的结论",
+     "partial": 2
+    },
+    {
+     "text": "用张成同一子空间与秩相等作几何说明，指出秩相等只是必要条件",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.1 向量组等价（互相可以线性表示）；§4.3 秩与张成空间。\n**考点出处**：同济《线性代数》第六版 §4.1 向量组及其线性组合。",
+   "misconception": "⚠️易错点：只验证一个方向就宣布等价。等价要求**两个方向**都能线性表示。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "易错"
+   ],
+   "verify": [
+    {
+     "desc": "α1=（β1+β2）/2 的验证结果",
+     "code": "str((M([1,1,0])+M([1,-1,0]))/2)",
+     "expected": "Matrix([[1], [0], [0]])"
+    },
+    {
+     "desc": "α2=（β1-β2）/2 的验证结果",
+     "code": "str((M([1,1,0])-M([1,-1,0]))/2)",
+     "expected": "Matrix([[0], [1], [0]])"
+    }
+   ],
+   "idx": 352
+  },
+  {
+   "id": "q-355",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.4 线性方程组的解的结构；题型改编自：中科大《线性代数》历年考题（两方程组公共解模型）",
+    "kind": "textbook"
+   },
+   "stem": "求线性方程组 $\\begin{cases}x_1+x_2=3\\\\x_1-x_2=1\\end{cases}$ 与 $\\begin{cases}x_1+2x_2=4\\\\2x_1-x_2=3\\end{cases}$ 的公共解，并说明公共解与「联立求解」的关系。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步（联立成一个方程组）**：公共解必须同时满足两个方程组的四个方程，即\n$$\\begin{cases}x_1+x_2=3\\\\x_1-x_2=1\\\\x_1+2x_2=4\\\\2x_1-x_2=3.\\end{cases}$$\n**第二步（消元）**：用第一式减第二式得 $2x_2=2$，即 $x_2=1$；代回第二式得 $x_1=2$。再代回第三、四式检验：$2+2\\times1=4$ ✓，$2\\times2-1=3$ ✓。\n\n**第三步（结论）**：公共解为\n$$\\boxed{(x_1,x_2)=(2,1)}.$$\n（也可以把四个方程的系数与常数项放在一起，用一次初等行变换化阶梯形：$\\begin{pmatrix}1&1&3\\\\1&-1&1\\\\1&2&4\\\\2&-1&3\\end{pmatrix}$ 化简后读出 $x_1=2,\\ x_2=1$，结果相同。）\n\n**第四步（关系说明）**：两个方程组的公共解集恰好是「把两组方程联立后所得方程组」的解集——这就是公共解与联立求解的关系。推广地，若两个方程组同解，则把它们的方程合并后联立求解得到的解集就同时是两者的解集；判别同解可借助秩的必要条件：两方程组同解必有 $r(A)=r(C)$ 且 $r(A\\mid b)=r(C\\mid d)$（仅必要，反之不成立）。",
+   "points": [
+    {
+     "text": "把两个方程组的四个方程联立，写出公共解应满足的方程组",
+     "partial": 2
+    },
+    {
+     "text": "消元解出 x1=2、x2=1 并回代检验四个方程",
+     "partial": 2
+    },
+    {
+     "text": "给出公共解的结论",
+     "partial": 2
+    },
+    {
+     "text": "说明公共解与联立求解的关系，并指出同解的秩的必要条件",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.4 线性方程组的解的结构（解集即方程组的解集）；公共解的求法配合 §3.1 初等行变换与 §3.3 秩判别。\n**考点出处**：同济《线性代数》第六版 §4.4 线性方程组的解的结构。",
+   "misconception": "⚠️易错点：只解出一个方程组就当作公共解。公共解必须**同时**满足两个方程组的所有方程，答案要回代检验。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "真题改编"
+   ],
+   "verify": [
+    {
+     "desc": "(2,1) 代入第一个方程组",
+     "code": "str(list(M([[1,1],[1,-1]])*M([[2],[1]])))",
+     "expected": "[3, 1]"
+    },
+    {
+     "desc": "(2,1) 代入第二个方程组",
+     "code": "str(list(M([[1,2],[2,-1]])*M([[2],[1]])))",
+     "expected": "[4, 3]"
+    }
+   ],
+   "idx": 353
+  },
+  {
+   "id": "q-356",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.3 向量组的秩",
+    "kind": "textbook"
+   },
+   "stem": "设 $A$ 是以 $s$ 个向量 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$（取自 $R^n$）为列构成的矩阵。证明下列三个命题等价：(1) 向量组线性无关；(2) $r(A)=s$；(3) 方程组 $A\\boldsymbol{x}=\\boldsymbol{0}$ 只有零解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**证明**：\n\n**(2)$\\Rightarrow$(1)**：$r(A)=s$ 表示存在 $s$ 个线性无关的列向量。若 $\\boldsymbol{\\alpha}_1,\\dots,\\boldsymbol{\\alpha}_s$ 线性相关，则存在不全为零的 $k_1,\\dots,k_s$ 使 $A\\boldsymbol{k}=\\boldsymbol{0}$（$\\boldsymbol{k}=(k_1,\\dots,k_s)^{T}$），即 $A$ 的列向量被压在维数小于 $s$ 的子空间中，$r(A)<s$，与 $r(A)=s$ 矛盾。故向量组线性无关。\n\n**(1)$\\Rightarrow$(3)**：若 $A\\boldsymbol{x}=\\boldsymbol{0}$ 有非零解 $\\boldsymbol{x}=(x_1,\\dots,x_s)^{T}$，则 $x_1\\boldsymbol{\\alpha}_1+\\cdots+x_s\\boldsymbol{\\alpha}_s=\\boldsymbol{0}$ 且系数不全为零，这与 (1) 矛盾。故只有零解。\n\n**(3)$\\Rightarrow$(2)**：若 (3) 成立而 $r(A)<s$，则 $A$ 的列向量组线性相关，由 (1) 的逆否命题知存在不全为零的 $k$ 使 $A\\boldsymbol{k}=\\boldsymbol{0}$，即 $A\\boldsymbol{x}=\\boldsymbol{0}$ 有非零解，与 (3) 矛盾。故 $r(A)=s$。三个命题等价。$\\blacksquare$\n\n**说明**：三个命题是同一件事的三个侧面——列空间的维数（秩）等于列数 $s$，等价于列向量张成的空间是「满」的（没有非平凡的零组合）。这一结论也把 §4.3 的秩与 §4.4 的解空间维数连了起来：解空间维数 $=n-r(A)$，当 $r(A)=s$ 时零空间退化为 $\\{\\boldsymbol{0}\\}$。",
+   "points": [
+    {
+     "text": "证明 (2)⇒(1)：用 r(A)=s 与列向量相关的秩小于 s 矛盾",
+     "partial": 2
+    },
+    {
+     "text": "证明 (1)⇒(3)：用非零解直接给出非平凡系数关系",
+     "partial": 2
+    },
+    {
+     "text": "证明 (3)⇒(2)：用逆否命题把零空间的非零解与 r(A)<s 对应起来",
+     "partial": 2
+    },
+    {
+     "text": "说明三个命题的统一含义（秩等于列数、列空间满、零空间为零）",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.2 线性相关性的判定；§4.3 秩与极大线性无关组；§4.4 齐次方程组解的结构（解空间维数 $n-r(A)$）。\n**考点出处**：同济《线性代数》第六版 §4.3 向量组的秩。",
+   "misconception": "⚠️易错点：把「零空间只有零解」与「零空间维数为 0」当成两件事——它们说的是同一件事，但表述的对象不同，别把对象写错。",
+   "extension": null,
+   "tags": [
+    "证明",
+    "高频",
+    "重点"
+   ],
+   "verify": [
+    {
+     "desc": "示例：方阵满秩（秩等于列数，故列向量无关）",
+     "code": "M([[1,2],[3,4]]).rank()",
+     "expected": "2"
+    },
+    {
+     "desc": "示例：满秩方阵的齐次方程组只有零解（零空间为空）",
+     "code": "len(M([[1,2],[3,4]]).nullspace())",
+     "expected": "0"
+    }
+   ],
+   "idx": 354
+  },
+  {
+   "id": "q-298",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.5 向量空间",
+    "kind": "textbook"
+   },
+   "stem": "在 $R^3$ 中判断下列集合是否为 $R^3$ 的子空间，并说明理由：(1) $W_1=\\{(x,y,z)^{\\mathsf T}\\mid x+y+z=0\\}$；(2) $W_2=\\{(x,y,z)^{\\mathsf T}\\mid x+y+z=1\\}$；(3) $W_3=\\{(x,y,z)^{\\mathsf T}\\mid x\\cdot y=0\\}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**判定依据（§4.5）**：设 $W$ 是 $V$ 的非空子集，则 $W$ 是 $V$ 的子空间 $\\iff W$ 非空且对向量的加法与数乘封闭。\n\n**(1) $W_1$ 是子空间**：非空（含 $\\boldsymbol{0}=(0,0,0)^{\\mathsf T}$）。设 $\\boldsymbol{\\alpha},\\boldsymbol{\\beta}\\in W_1$，其分量和均为 $0$；则 $\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}$ 的分量和为 $0+0=0$，故 $\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}\\in W_1$；对任意 $k\\in R$，$k\\boldsymbol{\\alpha}$ 的分量和为 $k\\cdot0=0$，故 $k\\boldsymbol{\\alpha}\\in W_1$。所以 $W_1$ 是子空间。\n（从方程角度看：$W_1$ 是**齐次**线性方程 $x+y+z=0$ 的解集，与 §4.4 一致。）\n\n**(2) $W_2$ 不是子空间**：$\\boldsymbol{0}$ 的分量和为 $0\\neq1$，故 $\\boldsymbol{0}\\notin W_2$，而子空间必含零向量。（对应 §4.4：非齐次方程组的解集不是子空间。）\n\n**(3) $W_3$ 不是子空间**：取 $\\boldsymbol{\\alpha}=(1,0,0)^{\\mathsf T}$ 与 $\\boldsymbol{\\beta}=(0,1,0)^{\\mathsf T}$，二者都满足 $x\\cdot y=0$，故都属于 $W_3$；但\n$$\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}=(1,1,0)^{\\mathsf T},$$\n其分量乘积为 $1\\cdot1=1\\neq0$，故 $\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}\\notin W_3$，$W_3$ 对加法不封闭，所以不是子空间。\n\n**引申**：$W_3$ 的几何意义是平面 $x=0$ 与平面 $y=0$ 的**并集**（两个子空间之并一般不再是子空间）；一般地，由**非线性**（或非齐次一次）条件给出的集合通常不是子空间，判定时必须回到「加法、数乘封闭」这两条硬指标。",
+   "points": [
+    {
+     "text": "写出子空间判定定理（非空 + 对加法与数乘封闭）作为统一依据",
+     "partial": 2
+    },
+    {
+     "text": "判定 $W_1$ 是子空间：非空，且证明其对加法与数乘封闭",
+     "partial": 2
+    },
+    {
+     "text": "判定 $W_2$ 不是子空间：$W_2$ 不含零向量",
+     "partial": 2
+    },
+    {
+     "text": "判定 $W_3$ 不是子空间：举出反例 $(1,0,0)^{\\mathsf T}+(0,1,0)^{\\mathsf T}=(1,1,0)^{\\mathsf T}$，说明对加法不封闭",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.5 向量空间与子空间的判定定理；与 §4.4「齐次解集是子空间、非齐次解集不是子空间」相互印证。\n**考点出处**：同济《线性代数》第六版 §4.5 向量空间。",
+   "misconception": "⚠️易错点：把「$xy=0$ 里含 $0$」当成子空间。只看**是否含零向量**不够，必须验证**对加法与数乘封闭**——$W_3$ 含零向量却对加法不封闭。",
+   "extension": "引申：$W_3$ 是平面 $x=0$ 与平面 $y=0$ 的并集；两个子空间之并一般不再是子空间。",
+   "tags": [
+    "难点",
+    "重点",
+    "跨章"
+   ],
+   "verify": [
+    {
+     "desc": "W1 中向量 (1,2,-3) 的分量和为 0",
+     "code": "sum(M([1,2,-3]))",
+     "expected": "0"
+    },
+    {
+     "desc": "数乘封闭：3(1,2,-3) 的分量和仍为 0",
+     "code": "sum(M([1,2,-3])*3)",
+     "expected": "0"
+    },
+    {
+     "desc": "W2 中零向量的分量和为 0，不等于 1",
+     "code": "sum(M([0,0,0]))",
+     "expected": "0"
+    },
+    {
+     "desc": "W3 反例：(1,0,0)+(0,1,0)",
+     "code": "str(list(M([1,0,0]) + M([0,1,0])))",
+     "expected": "[1, 1, 0]"
+    },
+    {
+     "desc": "该向量的 x·y = 1 ≠ 0，故不在 W3 中",
+     "code": "M([1,1,0])[0]*M([1,1,0])[1]",
+     "expected": "1"
+    }
+   ],
+   "idx": 355
+  },
+  {
+   "id": "q-357",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.4 线性方程组的解的结构；题型改编自：中科大《线性代数》历年考题（同解判据模型）",
+    "kind": "textbook"
+   },
+   "stem": "设线性方程组 $A\\boldsymbol{x}=b$ 与 $C\\boldsymbol{x}=d$ 同解。证明：必有 $r(A)=r(C)$ 且 $r(A\\mid b)=r(C\\mid d)$；并举例说明这两个等式成立还不足以保证两个方程组同解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步（由同解得相容）**：两个方程组同解，自然都有解，故由 §3.3 的秩判别定理\n$$r(A)=r(A\\mid b),\\qquad r(C)=r(C\\mid d).$$\n**第二步（由同解得解空间维数相同）**：设 $A$ 为 $m\\times n$ 矩阵。同解意味着两个方程组的解集相同，记为 $S$。非齐次方程组 $A\\boldsymbol{x}=b$ 的解集是零空间 $N(A)=\\{\\boldsymbol{x}\\mid A\\boldsymbol{x}=0\\}$ 的一个平移，故\n$$\\dim S=\\dim N(A)=n-r(A).$$\n同理 $\\dim S=n-r(C)$。由 $\\dim S$ 的唯一性得 $n-r(A)=n-r(C)$，即 $r(A)=r(C)$。\n\n**第三步（合并）**：把第一步与第二步合起来即得 $r(A)=r(C)$ 且 $r(A\\mid b)=r(C\\mid d)$。$\\blacksquare$\n\n**第四步（反例：条件不充分）**：取方程组 $\\mathrm{I}: x_1=0$ 与 $\\mathrm{II}: x_2=0$（都在 $R^2$ 中）。\n- 系数矩阵 $A=\\begin{pmatrix}1&0\\end{pmatrix}$，$C=\\begin{pmatrix}0&1\\end{pmatrix}$，故 $r(A)=r(C)=1$；\n- 增广矩阵 $\\begin{pmatrix}1&0&0\\end{pmatrix}$ 与 $\\begin{pmatrix}0&1&0\\end{pmatrix}$ 的秩也是 1，即 $r(A\\mid b)=r(C\\mid d)=1$；\n- 但 $\\mathrm{I}$ 的解集是 $\\{(0,t)^{T}\\mid t\\in R\\}$，$\\mathrm{II}$ 的解集是 $\\{(t,0)^{T}\\mid t\\in R\\}$，二者不同：$(0,1)^{T}$ 满足 $\\mathrm{I}$ 而不满足 $\\mathrm{II}$（代入 $\\mathrm{II}$ 得 $1\\neq0$）。\n\n**结论**：$r(A)=r(C)$ 且 $r(A\\mid b)=r(C\\mid d)$ 是同解的**必要**条件，判定同解还需更强的条件（等价地：把两组方程联立后所得方程组的解集与二者的解集相同）。",
+   "points": [
+    {
+     "text": "由同解说明两个方程组都相容，得 r(A)=r(A|b)、r(C)=r(C|d)",
+     "partial": 2
+    },
+    {
+     "text": "由同解说明解集相同，用维数 n-r(A)=n-r(C) 得 r(A)=r(C)",
+     "partial": 2
+    },
+    {
+     "text": "合并得到 r(A)=r(C) 且 r(A|b)=r(C|d) 的必要条件结论",
+     "partial": 2
+    },
+    {
+     "text": "给出 x1=0 与 x2=0 的反例，说明两个等式不足以保证同解",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.4 线性方程组的解的结构（解集＝零空间的平移，维数 $n-r(A)$）+ §3.3 秩判别定理。\n**考点出处**：同济《线性代数》第六版 §4.4 线性方程组的解的结构；题型改编自：中科大《线性代数》历年考题（同解判据模型）。",
+   "misconception": "⚠️易错点：把必要条件当成充分条件。$r(A)=r(C)$ 且 $r(A\\mid b)=r(C\\mid d)$ 只说明两方程组「秩相同」，判别同解还要看解集是否重合。",
+   "extension": null,
+   "tags": [
+    "真题改编",
+    "证明",
+    "难点",
+    "高频"
+   ],
+   "verify": [
+    {
+     "desc": "反例中第一个系数矩阵的秩",
+     "code": "M([[1,0]]).rank()",
+     "expected": "1"
+    },
+    {
+     "desc": "反例中第二个系数矩阵的秩",
+     "code": "M([[0,1]]).rank()",
+     "expected": "1"
+    },
+    {
+     "desc": "(0,1) 不满足第二个方程组 x2=0",
+     "code": "str(list(M([[0,1]])*M([[0],[1]])))",
+     "expected": "[1]"
+    }
+   ],
+   "idx": 356
+  },
+  {
+   "id": "q-358",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.5 向量空间",
+    "kind": "textbook"
+   },
+   "stem": "在 $R^3$ 中，设 $a$ 为常数。判断下列集合是否为 $R^3$ 的子空间，并说明理由：(1) $W_1=\\{(x,y,z)^{\\mathsf T}\\mid x+a y-z=0\\}$；(2) $W_2=\\{(x,y,z)^{\\mathsf T}\\mid x+a y-z=1\\}$；(3) $W_3=\\{(x,y,z)^{\\mathsf T}\\mid x^{2}+y^{2}+z^{2}=1\\}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**判定依据（§4.5）**：设 $W$ 是 $V$ 的非空子集，则 $W$ 是 $V$ 的子空间 $\\iff W$ 非空且对向量的加法与数乘封闭（等价地：含零向量且封闭）。\n\n**(1) $W_1$ 是子空间（对任意 $a$ 都成立）**：$W_1$ 非空，且零向量满足 $0+a\\cdot0-0=0$。设 $\\boldsymbol{\\alpha}=(x_1,y_1,z_1)^{T},\\boldsymbol{\\beta}=(x_2,y_2,z_2)^{T}\\in W_1$，则 $x_i+a y_i-z_i=0$（$i=1,2$）。于是\n$$(\\boldsymbol{\\alpha}+\\boldsymbol{\\beta})\\text{ 满足 } (x_1+x_2)+a(y_1+y_2)-(z_1+z_2)=(x_1+a y_1-z_1)+(x_2+a y_2-z_2)=0,$$\n而 $c\\boldsymbol{\\alpha}$ 满足 $cx_1+ca y_1-cz_1=c(x_1+a y_1-z_1)=0$。故 $W_1$ 对加法与数乘封闭，是子空间。\n（几何上：$x+ay-z=0$ 是过原点的平面；它正是**齐次**线性方程的解集，与 §4.4 呼应。）\n\n**(2) $W_2$ 不是子空间（对任意 $a$ 都成立）**：零向量的分量为 0，代入 $x+a y-z=1$ 得 $0\\neq1$，故 $\\boldsymbol{0}\\notin W_2$。子空间必含零向量，因此 $W_2$ 不是子空间。（它是非齐次方程 $x+ay-z=1$ 的解集，是一个不经过原点的平面。）\n\n**(3) $W_3$ 不是子空间**：零向量满足 $0+0+0=0\\neq1$，故 $\\boldsymbol{0}\\notin W_3$，已经可以否定。它对加法也不封闭：取 $\\boldsymbol{\\alpha}=(1,0,0)^{T}$ 与 $\\boldsymbol{\\beta}=(0,1,0)^{T}$，二者都满足分量平方和为 1，属于 $W_3$；但 $\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}=(1,1,0)^{T}$ 的分量平方和为 $1+1=2\\neq1$，故 $\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}\\notin W_3$。（$W_3$ 是单位球面，由**非线性**条件给出，一般不是子空间。）",
+   "points": [
+    {
+     "text": "写出子空间判定定理作为统一依据",
+     "partial": 2
+    },
+    {
+     "text": "判定 W1 是子空间并证明其对加法与数乘封闭",
+     "partial": 2
+    },
+    {
+     "text": "判定 W2 不是子空间（不含零向量），并指出与 (1) 的区别在齐次与非齐次",
+     "partial": 2
+    },
+    {
+     "text": "判定 W3 不是子空间（不含零向量且对加法不封闭），说明非线性条件给出的一般情形",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.5 向量空间与子空间的判定定理；与 §4.4「齐次解集是子空间、非齐次解集不是子空间」相互印证。\n**考点出处**：同济《线性代数》第六版 §4.5 向量空间。",
+   "misconception": "⚠️易错点：以为「只差一个常数」的 $W_1$ 与 $W_2$ 地位相同。齐次方程的解集含原点是子空间，非齐次的不含原点。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "难点",
+    "重点",
+    "含参"
+   ],
+   "verify": [
+    {
+     "desc": "W1 中向量 (1,0,1) 满足 x+2y-z=0（取 a=2）",
+     "code": "M([1,0,1])[0]+2*M([1,0,1])[1]-M([1,0,1])[2]",
+     "expected": "0"
+    },
+    {
+     "desc": "零向量不满足 W2 的条件 x+2y-z=1",
+     "code": "M([0,0,0])[0]+2*M([0,0,0])[1]-M([0,0,0])[2]",
+     "expected": "0"
+    },
+    {
+     "desc": "W3 中 (1,0,0)+(0,1,0)=(1,1,0) 的分量平方和为 2，不等于 1",
+     "code": "str(M([[1,1,0]]).dot(M([[1],[1],[0]])))",
+     "expected": "2"
+    }
+   ],
+   "idx": 357
+  }
+ ]
+}

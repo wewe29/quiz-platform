@@ -1,0 +1,14 @@
+{
+ "schema": "quiz-platform-registry-v1",
+ "subjects": [
+  {
+   "id": "linalg",
+   "name": "线性代数",
+   "textbook": "同济大学《工程数学·线性代数》第六版",
+   "url": "subjects/linalg/",
+   "total": 500,
+   "chapters": 6,
+   "realExamTagged": 50
+  }
+ ]
+}
