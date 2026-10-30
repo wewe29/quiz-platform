@@ -28,14 +28,15 @@ def find_katex_dist(subject_dir):
     candidates = []
     if env:
         candidates.append(env)
+    # 平台级共享 vendor（一次拷贝，全学科用；CI/异机不依赖本机 node_modules）
+    candidates.append(os.path.join(PLATFORM, "tools", "vendor", "katex", "dist"))
     sid = os.path.basename(os.path.normpath(subject_dir))
-    mirror = os.path.join(PLATFORM, "sources", sid, "tools", "vendor", "katex", "dist")
-    candidates.append(mirror)
+    candidates.append(os.path.join(PLATFORM, "sources", sid, "tools", "vendor", "katex", "dist"))
     candidates.append(r"D:\workspace\5-docs\exam\数据库\node_modules\katex\dist")
     for c in candidates:
         if c and os.path.isdir(c):
             return c
-    raise SystemExit("[katex] 找不到 KaTeX 发行版；设 KATEX_DIR 或把 dist 放入 sources/<id>/tools/vendor/katex/dist")
+    raise SystemExit("[katex] 找不到 KaTeX 发行版；设 KATEX_DIR 或在 tools/vendor/katex/dist 放置发行版")
 
 
 def main():

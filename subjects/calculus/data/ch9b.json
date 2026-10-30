@@ -1,0 +1,2107 @@
+{
+ "chapter": 9,
+ "questions": [
+  {
+   "id": "ky-2015-11-9f4776",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2015 年考研数学（一）第 11 题",
+    "kind": "exam-original",
+    "year": 2015,
+    "region": "全国",
+    "paper": "2015 年考研数学（一）",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2015年解析/2015年解析.md"
+   },
+   "stem": "若函数 $z = z(x, y)$ 由方程 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 确定，则 $\\left. \\mathrm{d}z \\right|_{(0,1)} =$ ________.",
+   "options": null,
+   "answer": [
+    "$-\\mathrm{d}x$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$-\\mathrm{d}x$\n【解】方法一 将 $x = 0, y = 1$ 代入 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 中，得 $z = 0, \\mathrm{e}^z + xyz + x + \\cos x = 2$ 两边分别对 $x, y$ 求偏导得\n\n$$\n\\mathrm {e} ^ {z} \\cdot \\frac {\\partial z}{\\partial x} + y (z + x \\frac {\\partial z}{\\partial x}) + 1 - \\sin x = 0, \\quad \\mathrm {e} ^ {z} \\cdot \\frac {\\partial z}{\\partial y} + x (z + y \\frac {\\partial z}{\\partial y}) = 0,\n$$\n\n代入得 $\\left.\\frac{\\partial z}{\\partial x}\\right|_{(0,1)} = -1,\\left.\\frac{\\partial z}{\\partial y}\\right|_{(0,1)} = 0,$\n\n故 $\\mathrm{d}z\\Big|_{(0,1)} = \\frac{\\partial z}{\\partial x}\\Big|_{(0,1)}\\mathrm{d}x + \\frac{\\partial z}{\\partial y}\\Big|_{(0,1)}\\mathrm{d}y = -\\mathrm{d}x.$\n\n方法二 将 $x = 0, y = 1$ 代入 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 中得 $z = 0$ .\n\n$\\mathrm{e}^z + xyz + x + \\cos x = 2$ 两边求全微分得\n\n$$\n\\mathrm {e} ^ {z} \\mathrm {d} z + y z \\mathrm {d} x + x z \\mathrm {d} y + x y \\mathrm {d} z + \\mathrm {d} x - \\sin x \\mathrm {d} x = 0,\n$$\n\n将 $x = 0, y = 1, z = 0$ 代入得 $\\mathrm{d}z|_{(0,1)} = -\\mathrm{d}x$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 662
+  },
+  {
+   "id": "ky-2016-11-f88627",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2016 年考研数学（一）第 11 题",
+    "kind": "exam-original",
+    "year": 2016,
+    "region": "全国",
+    "paper": "2016 年考研数学（一）",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2016年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2016年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2016年解析/2016年解析.md"
+   },
+   "stem": "设函数 $f(u, v)$ 可微， $z = z(x, y)$ 由方程 $(x + 1)z - y^2 = x^2f(x - z, y)$ 确定，则 $\\mathrm{d}z|_{(0,1)} =$ ______.",
+   "options": null,
+   "answer": [
+    "$-\\mathrm{d}x + 2\\mathrm{d}y$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$-\\mathrm{d}x + 2\\mathrm{d}y$\n【解】 将 $x = 0, y = 1$ 代入得 $z = 1$ .\n\n$(x + 1)z - y^{2} = x^{2}f(x - z,y)$ 两边关于 $x$ 求偏导得\n\n$$\nz + (x + 1) z _ {x} ^ {\\prime} = 2 x f (x - z, y) + x ^ {2} f _ {1} ^ {\\prime} (x - z, y) \\cdot \\left(1 - z _ {x} ^ {\\prime}\\right),\n$$\n\n将 $x = 0, y = 1, z = 1$ 代入得 $z_x'(0,1) = -1$\n\n$(x + 1)z - y^{2} = x^{2}f(x - z,y)$ 两边关于 $y$ 求偏导得\n\n$$\n(x + 1) z _ {y} ^ {\\prime} - 2 y = x ^ {2} \\left[ f _ {1} ^ {\\prime} (x - z, y) \\left(- z _ {y} ^ {\\prime}\\right) + f _ {y} ^ {\\prime} (x - z, y) \\right],\n$$\n\n将 $x = 0, y = 1, z = 1$ 代入得 $z_{y}^{\\prime}(0,1) = 2$ ，故 $\\mathrm{d}z|_{(0,1)} = -\\mathrm{d}x + 2\\mathrm{d}y$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 663
+  },
+  {
+   "id": "ky-2017-11-f95aa5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2017 年考研数学（一）第 11 题",
+    "kind": "exam-original",
+    "year": 2017,
+    "region": "全国",
+    "paper": "2017 年考研数学（一）",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2017年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2017年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2017年解析/2017年解析.md"
+   },
+   "stem": "若曲线积分 $\\int_{L} \\frac{x \\mathrm{~d} x - a y \\mathrm{~d} y}{x^{2} + y^{2} - 1}$ 在区域 $D = \\{(x, y) \\mid x^{2} + y^{2} < 1\\}$ 内与路径无关, 则 $a =$",
+   "options": null,
+   "answer": [
+    "-1"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：-1\n【解】 $P = \\frac{x}{x^2 + y^2 - 1},\\quad Q = -\\frac{ay}{x^2 + y^2 - 1},$\n\n$$\n\\frac {\\partial P}{\\partial y} = - \\frac {2 x y}{\\left(x ^ {2} + y ^ {2} - 1\\right) ^ {2}}, \\quad \\frac {\\partial Q}{\\partial x} = \\frac {2 a x y}{\\left(x ^ {2} + y ^ {2} - 1\\right) ^ {2}},\n$$\n\n因为曲线积分与路径无关，所以 $\\frac{\\partial Q}{\\partial x} = \\frac{\\partial P}{\\partial y}$ 故 $a = -1$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 664
+  },
+  {
+   "id": "c9-t1",
+   "type": "term",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.3",
+   "knowledgePoints": [
+    "9.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.3 全微分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "名词解释：全微分。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "若函数 $z=f(x,y)$ 在点 $(x,y)$ 的全增量 $\\Delta z=f(x+\\Delta x,y+\\Delta y)-f(x,y)$ 可表示为 $\\Delta z=A\\Delta x+B\\Delta y+o(\\rho)$（$\\rho=\\sqrt{\\Delta x^2+\\Delta y^2}$，$A,B$ 不依赖于 $\\Delta x,\\Delta y$），则称 $f$ 在该点可微，线性主部 $A\\Delta x+B\\Delta y$ 称为全微分，记作 $dz=A\\,dx+B\\,dy$；可微时 $A=f_x$，$B=f_y$，故 $dz=f_x\\,dx+f_y\\,dy$。",
+   "points": [
+    {
+     "text": "定义：全增量可写成线性主部加高阶无穷小 $\\Delta z=A\\Delta x+B\\Delta y+o(\\rho)$，线性主部即全微分 $dz$。",
+     "partial": 2
+    },
+    {
+     "text": "系数与运算：可微时 $A=f_x$、$B=f_y$，$dz=f_xdx+f_ydy$；近似计算与误差估计以 $\\Delta z\\approx dz$ 为基础。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：全微分定义与可微条件见 §9.3。\n**考点出处**：同济《高等数学》第七版 §9.3 全微分。",
+   "misconception": "⚠️易错点：$\\rho$ 是两点距离而非 $\\Delta x$；「偏导存在」不等于「可微」，$A,B$ 的存在性由可微性保证。",
+   "extension": null,
+   "tags": [
+    "全微分",
+    "概念",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 665
+  },
+  {
+   "id": "c9-t2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.1 多元函数的基本概念",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "简答：二重极限 $\\lim\\limits_{(x,y)\\to(0,0)}f(x,y)$ 与一元函数极限有何本质区别？如何判定二重极限不存在？",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "本质区别：一元函数 $x\\to x_0$ 只有左右两个方向，而 $(x,y)\\to(0,0)$ 要求点以**任意方式**（任意路径、任意速度）趋近时函数值都趋于同一极限。因此二重极限更难存在。判定不存在的方法：找两条特殊路径（如 $y=kx$、$y=x^2$、沿坐标轴）使函数趋于不同极限；或沿某路径极限不存在（如含振荡因子），则原二重极限不存在。",
+   "points": [
+    {
+     "text": "定义差异：一元极限只有左右两方向；二重极限要求任意路径趋近时极限都存在且相同。",
+     "partial": 2
+    },
+    {
+     "text": "判定不存在的常用手法：取 $y=kx$ 得极限随 $k$ 变化（如 $\\dfrac{xy}{x^2+y^2}$ 沿 $y=kx$ 趋于 $\\dfrac{k}{1+k^2}$ → 极限不存在）；注意沿一切直线极限相同仍不够，还要检查曲线路径（如 $y=x^2$）。",
+     "partial": 2
+    },
+    {
+     "text": "与连续、偏导的关系：二重极限存在且等于该点函数值 $\\iff$ 连续；偏导存在推不出连续。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：二重极限的定义、路径法判定不存在及经典反例见 §9.1。\n**考点出处**：同济《高等数学》第七版 §9.1 多元函数的基本概念。",
+   "misconception": "⚠️易错点：「沿任意直线极限相同」不等于二重极限存在（$\\dfrac{x^2y}{x^4+y^2}$ 沿一切直线极限为 0，沿 $y=x^2$ 极限为 $\\dfrac12$）。",
+   "extension": "引申：$\\dfrac{x^2y}{x^4+y^2}$ 沿直线全为 0 而沿抛物线 $y=kx^2$ 趋于 $\\dfrac{k}{1+k^2}$，是「直线检验不足够」的招牌反例。",
+   "tags": [
+    "二重极限",
+    "简答",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 666
+  },
+  {
+   "id": "c9-c1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.2 偏导数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $z=x^2y+\\sin(xy)$，求 $\\dfrac{\\partial^2 z}{\\partial x\\partial y}$。",
+   "options": null,
+   "answer": [
+    "2*x+cos(x*y)-x*y*sin(x*y)"
+   ],
+   "accept": null,
+   "answerText": "先对 $x$ 求偏导：$\\dfrac{\\partial z}{\\partial x}=2xy+y\\cos(xy)$。\n再对 $y$ 求偏导：\n$$\\dfrac{\\partial^2 z}{\\partial x\\partial y}=2x+\\cos(xy)-xy\\sin(xy).$$\n（$\\cos(xy)$ 对 $y$ 求导为 $-x\\sin(xy)$，与 $y$ 相乘得 $-xy\\sin(xy)$。）\n由混合偏导连续定理（§9.2），$\\dfrac{\\partial^2z}{\\partial y\\partial x}$ 与之相等。",
+   "points": [
+    {
+     "text": "先求 $z_x=2xy+y\\cos(xy)$（$y$ 冻结）。",
+     "partial": 2
+    },
+    {
+     "text": "再对 $y$ 求导：$2xy\\to 2x$；$y\\cos(xy)\\to\\cos(xy)+y\\cdot[-x\\sin(xy)]$。",
+     "partial": 2
+    },
+    {
+     "text": "合并得 $2x+\\cos(xy)-xy\\sin(xy)$。",
+     "partial": 2
+    },
+    {
+     "text": "指出混合偏导在此（连续条件下）与求导次序无关。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：二阶混合偏导与求导次序无关定理（§9.2）。\n**考点出处**：同济《高等数学》第七版 §9.2 偏导数。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "二阶偏导",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "混合偏导",
+     "code": "z=x**2*y+sin(x*y); simplify(diff(z, x, y) - (2*x+cos(x*y)-x*y*sin(x*y)))",
+     "expected": "0"
+    }
+   ],
+   "idx": 667
+  },
+  {
+   "id": "ky-2007-6-006337",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2007 年考研数学（一）第 6 题",
+    "kind": "exam-original",
+    "year": 2007,
+    "region": "全国",
+    "paper": "2007 年考研数学（一）",
+    "number": "6",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2007年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2007年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2007年解析/2007年解析.md"
+   },
+   "stem": "设曲线 $L: f(x, y) = 1 (f(x, y)$ 具有一阶连续偏导数) 过第 II 象限内的点 $M$ 和第 IV 象限内的点 $N$ , $\\Gamma$ 为 $L$ 上从点 $M$ 到点 $N$ 的一段弧, 则下列积分小于零的是( )",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】 $\\int_{\\Gamma}f(x,y)\\mathrm{d}x = \\int_{\\Gamma}\\mathrm{d}x,\\quad \\int_{\\Gamma}f(x,y)\\mathrm{d}y = \\int_{\\Gamma}\\mathrm{d}y,$\n\n因为 $\\mathrm{dx} > 0, \\mathrm{dy} < 0$ ，所以 $\\int_{\\Gamma} f(x, y) \\mathrm{d}y = \\int_{\\Gamma} \\mathrm{d}y < 0$ ，应选(B).\n\n方法点评：对坐标的曲线积分 $\\int_{L} P(x, y) \\mathrm{d}x + Q(x, y) \\mathrm{d}y$ 中，当 $L$ 的方向是从左到右时， $\\mathrm{d}x > 0$ ，当 $L$ 的方向是从右到左时， $\\mathrm{d}x < 0$ ；当 $L$ 的方向是从下到上时， $\\mathrm{d}y > 0$ ，当 $L$ 的方向是从上到下时， $\\mathrm{d}y < 0$ 。",
+   "points": [
+    {
+     "text": "【解】 $\\int_{\\Gamma}f(x,y)\\mathrm{d}x = \\int_{\\Gamma}\\mathrm{d}x,\\quad \\int_{\\Gamma}f(x,y)\\mathrm{d}y = \\int_{\\Gamma}\\mathrm{d}y,$",
+     "partial": 2
+    },
+    {
+     "text": "因为 $\\mathrm{dx} > 0, \\mathrm{dy} < 0$ ，所以 $\\int_{\\Gamma} f(x, y) \\mathrm{d}y = \\int_{\\Gamma} \\mathrm{d}y < 0$ ，应选(B).",
+     "partial": 2
+    },
+    {
+     "text": "方法点评：对坐标的曲线积分 $\\int_{L} P(x, y) \\mathrm{d}x + Q(x, y) \\mathrm{d}y$ 中，当 $L$ 的方向是从左到右时， $\\mathrm{d}x > 0$ ，当 $L$ 的方向是从右到左时， $\\mathrm{d}x < 0$ ；",
+     "partial": 2
+    },
+    {
+     "text": "当 $L$ 的方向是从下到上时， $\\mathrm{d}y > 0$ ，当 $L$ 的方向是从上到下时， $\\mathrm{d}y < 0$ 。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：B\n【解】 $\\int_{\\Gamma}f(x,y)\\mathrm{d}x = \\int_{\\Gamma}\\mathrm{d}x,\\quad \\int_{\\Gamma}f(x,y)\\mathrm{d}y = \\int_{\\Gamma}\\mathrm{d}y,$\n\n因为 $\\mathrm{dx} > 0, \\mathrm{dy} < 0$ ，所以 $\\int_{\\Gamma} f(x, y) \\mathrm{d}y = \\int_{\\Gamma} \\mathrm{d}y < 0$ ，应选(B).\n\n方法点评：对坐标的曲线积分 $\\int_{L} P(x, y) \\mathrm{d}x + Q(x, y) \\mathrm{d}y$ 中，当 $L$ 的方向是从左到右时， $\\mathrm{d}x > 0$ ，当 $L$ 的方向是从右到左时， $\\mathrm{d}x < 0$ ；当 $L$ 的方向是从下到上时， $\\mathrm{d}y > 0$ ，当 $L$ 的方向是从上到下时， $\\mathrm{d}y < 0$ 。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 668
+  },
+  {
+   "id": "ky-2008-2-e73f31",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.7",
+   "knowledgePoints": [
+    "9.7"
+   ],
+   "source": {
+    "text": "2008 年考研数学（一）第 2 题",
+    "kind": "exam-original",
+    "year": 2008,
+    "region": "全国",
+    "paper": "2008 年考研数学（一）",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2008年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2008年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2008年解析/2008年解析.md"
+   },
+   "stem": "函数 $f(x, y) = \\arctan \\frac{x}{y}$ 在点 (0,1) 处的梯度等于（ ）",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】 $\\frac{\\partial f}{\\partial x} = \\frac{1}{1 + \\frac{x^2}{y^2}}\\cdot \\frac{1}{y} = \\frac{y}{x^2 + y^2},\\quad \\frac{\\partial f}{\\partial y} = \\frac{1}{1 + \\frac{x^2}{y^2}}\\cdot \\left(-\\frac{x}{y^2}\\right) = -\\frac{x}{x^2 + y^2},$\n\n由 $\\frac{\\partial f}{\\partial x}\\bigg|_{(0,1)} = 1,\\frac{\\partial f}{\\partial y}\\bigg|_{(0,1)} = 0$ ，则 $f(x,y)$ 在(0，1）处的梯度为 $\\pmb{i}$ ，应选（A).",
+   "points": [
+    {
+     "text": "【解】 $\\frac{\\partial f}{\\partial x} = \\frac{1}{1 + \\frac{x^2}{y^2}}\\cdot \\frac{1}{y} = \\frac{y}{x^2 + y^2},\\quad \\frac{\\partial f}{\\partial y} = \\frac{1}{1 + \\frac{x^2}{y^2}}\\cdot \\left(-\\frac{x}{y^2}\\right) = -\\frac{x}{x^2 + y^2},$",
+     "partial": 2
+    },
+    {
+     "text": "由 $\\frac{\\partial f}{\\partial x}\\bigg|_{(0,1)} = 1,\\frac{\\partial f}{\\partial y}\\bigg|_{(0,1)} = 0$ ，则 $f(x,y)$ 在(0，1）处的梯度为 $\\pmb{i}$ ，应选（A).",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：A\n【解】 $\\frac{\\partial f}{\\partial x} = \\frac{1}{1 + \\frac{x^2}{y^2}}\\cdot \\frac{1}{y} = \\frac{y}{x^2 + y^2},\\quad \\frac{\\partial f}{\\partial y} = \\frac{1}{1 + \\frac{x^2}{y^2}}\\cdot \\left(-\\frac{x}{y^2}\\right) = -\\frac{x}{x^2 + y^2},$\n\n由 $\\frac{\\partial f}{\\partial x}\\bigg|_{(0,1)} = 1,\\frac{\\partial f}{\\partial y}\\bigg|_{(0,1)} = 0$ ，则 $f(x,y)$ 在(0，1）处的梯度为 $\\pmb{i}$ ，应选（A).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 669
+  },
+  {
+   "id": "ky-2010-2-64e227",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2010 年考研数学（一）第 2 题",
+    "kind": "exam-original",
+    "year": 2010,
+    "region": "全国",
+    "paper": "2010 年考研数学（一）",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2010年解析/2010年解析.md"
+   },
+   "stem": "设函数 $z = z(x, y)$ 由方程 $F\\left(\\frac{y}{x}, \\frac{z}{x}\\right) = 0$ 确定，其中 $F$ 为可微函数，且 $F_{2}^{\\prime} \\neq 0$ ，则 $x \\frac{\\partial z}{\\partial x} + y \\frac{\\partial z}{\\partial y} =$ （）",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】 方法一 复合函数求导法则\n\n$F\\left(\\frac{y}{x}, \\frac{z}{x}\\right) = 0$ 两边对 $x$ 求偏导，得 $-\\frac{y}{x^2} F_1' + \\frac{x \\frac{\\partial z}{\\partial x} - z}{x^2} F_2' = 0$ ，解得 $\\frac{\\partial z}{\\partial x} = \\frac{1}{x F_2'} (y F_1' + z F_2')$\n\n$F\\left(\\frac{y}{x}, \\frac{z}{x}\\right) = 0$ 两边对 $y$ 求偏导，得 $\\frac{1}{x} F_{1}' + \\frac{1}{x} F_{2}' \\frac{\\partial z}{\\partial y} = 0$ ，解得 $\\frac{\\partial z}{\\partial y} = -\\frac{F_{1}'}{F_{2}'}.$\n\n于是 $x\\frac{\\partial z}{\\partial x} +y\\frac{\\partial z}{\\partial y} = \\frac{1}{F_2'} (yF_1' + zF_2') - \\frac{yF_1'}{F_2'} = z$ ，应选(B).\n\n方法二 公式法\n\n令 $G(x,y,z) = F\\left(\\frac{y}{x},\\frac{z}{x}\\right)$\n\n由 $G_{x}^{\\prime} = -\\frac{y}{x^{2}} F_{1}^{\\prime} - \\frac{z}{x^{2}} F_{2}^{\\prime}$ ， $G_{y}^{\\prime} = \\frac{1}{x} F_{1}^{\\prime}$ ， $G_{z}^{\\prime} = \\frac{1}{x} F_{2}^{\\prime}$ ，得\n\n$$\n\\frac {\\partial z}{\\partial x} = - \\frac {G _ {x} ^ {\\prime}}{G _ {z} ^ {\\prime}} = \\frac {\\frac {y}{x ^ {2}} F _ {1} ^ {\\prime} + \\frac {z}{x ^ {2}} F _ {2} ^ {\\prime}}{\\frac {1}{x} F _ {2} ^ {\\prime}} = \\frac {1}{x F _ {2} ^ {\\prime}} (y F _ {1} ^ {\\prime} + z F _ {2} ^ {\\prime}), \\quad \\frac {\\partial z}{\\partial y} = - \\frac {G _ {y} ^ {\\prime}}{G _ {z} ^ {\\prime}} = - \\frac {\\frac {1}{x} F _ {1} ^ {\\prime}}{\\frac {1}{x} F _ {2} ^ {\\prime}} = - \\frac {F _ {1} ^ {\\prime}}{F _ {2} ^ {\\prime}},\n$$\n\n于是 $x\\frac{\\partial z}{\\partial x} +y\\frac{\\partial z}{\\partial y} = \\frac{1}{F_2'} (yF_1' + zF_2') - \\frac{yF_1'}{F_2'} = z$ ，应选(B).\n\n方法三 全微分法\n\n$F\\left(\\frac{y}{x}, \\frac{z}{x}\\right) = 0$ 两边求全微分，得 $F_{1}^{\\prime} \\mathrm{d}\\left(\\frac{y}{x}\\right) + F_{2}^{\\prime} \\mathrm{d}\\left(\\frac{z}{x}\\right) = 0$ ，整理得\n\n$$\nF _ {1} ^ {\\prime} \\cdot \\frac {x \\mathrm {d} y - y \\mathrm {d} x}{x ^ {2}} + F _ {2} ^ {\\prime} \\cdot \\frac {x \\mathrm {d} z - z \\mathrm {d} x}{x ^ {2}} = 0,\n$$\n\n从而有 $\\mathrm{d}z = \\frac{1}{xF_2'} (yF_1' + zF_2')\\mathrm{d}x - \\frac{F_1'}{F_2'}\\mathrm{d}y,$\n\n于是 $\\frac{\\partial z}{\\partial x} = \\frac{1}{xF_2'} (yF_1' + zF_2')$ ， $\\frac{\\partial z}{\\partial y} = -\\frac{F_1'}{F_2'}$\n\n故 $x\\frac{\\partial z}{\\partial x} +y\\frac{\\partial z}{\\partial y} = \\frac{1}{F_2'} (yF_1' + zF_2') - \\frac{yF_1'}{F_2'} = z$ ，应选(B).",
+   "points": [
+    {
+     "text": "【解】 方法一 复合函数求导法则",
+     "partial": 2
+    },
+    {
+     "text": "$F\\left(\\frac{y}{x}, \\frac{z}{x}\\right) = 0$ 两边对 $x$ 求偏导，得 $-\\frac{y}{x^2} F_1' + \\frac{x \\frac{\\partial z}{\\partial x} - z}{x^2} F_2' = 0$ ，解得 $\\frac{\\partial z}{\\partial x} = \\frac{1}{x F_2'} (y F_1' + z F_2')$",
+     "partial": 2
+    },
+    {
+     "text": "$F\\left(\\frac{y}{x}, \\frac{z}{x}\\right) = 0$ 两边对 $y$ 求偏导，得 $\\frac{1}{x} F_{1}' + \\frac{1}{x} F_{2}' \\frac{\\partial z}{\\partial y} = 0$ ，解得 $\\frac{\\partial z}{\\partial y} = -\\frac{F_{1}'}{F_{2}'}.$",
+     "partial": 2
+    },
+    {
+     "text": "于是 $x\\frac{\\partial z}{\\partial x} +y\\frac{\\partial z}{\\partial y} = \\frac{1}{F_2'} (yF_1' + zF_2') - \\frac{yF_1'}{F_2'} = z$ ，应选(B).",
+     "partial": 2
+    },
+    {
+     "text": "方法二 公式法",
+     "partial": 2
+    },
+    {
+     "text": "令 $G(x,y,z) = F\\left(\\frac{y}{x},\\frac{z}{x}\\right)$；由 $G_{x}^{\\prime} = -\\frac{y}{x^{2}} F_{1}^{\\prime} - \\frac{z}{x^{2}} F_{2}^{\\prime}$ ， $G_{y}^{\\prime} = \\frac{1}{x} F_{1}^{\\prime}$ ， $G_{z}^{\\prime} = \\frac{1}{x} F_{2}^{\\prime}$ ，得；$$\n\\frac {\\partial z}{\\partial x} = - \\frac {G _ {x} ^ {\\prime}}{G _ {z} ^ {\\prime}} = \\frac {\\frac {y}{x ^ {2}} F _ {1} ^ {\\prime} + \\frac {z}{x ^ {2}} F _ {2} ^ {\\prime}}{\\frac {1}{x} F _ {2} ^ {\\prime}} = \\frac {1}{x F _ {2} ^ {\\prime}} (y F _ {1} ^ {\\prime} + z F _ {2} ^ {\\prime}), \\quad \\frac {\\partial z}{\\partial y} = - \\frac {G _ {y} ^ {\\prime}}{G _ {z} ^ {\\prime}} = - \\frac {\\frac {1}{x} F _ {1} ^ {\\prime}}{\\frac {1}{x} F _ {2} ^ {\\prime}} = - \\frac {F _ {1} ^ {\\prime}}{F _ {2} ^ {\\prime}},\n$$；方法三 全微分法；$F\\left(\\frac{y}{x}, \\frac{z}{x}\\right) = 0$ 两边求全微分，得 $F_{1}^{\\prime} \\mathrm{d}\\left(\\frac{y}{x}\\right) + F_{2}^{\\prime} \\mathrm{d}\\left(\\frac{z}{x}\\right) = 0$ ，整理得；$$\nF _ {1} ^ {\\prime} \\cdot \\frac {x \\mathrm {d} y - y \\mathrm {d} x}{x ^ {2}} + F _ {2} ^ {\\prime} \\cdot \\frac {x \\mathrm {d} z - z \\mathrm {d} x}{x ^ {2}} = 0,\n$$；从而有 $\\mathrm{d}z = \\frac{1}{xF_2'} (yF_1' + zF_2')\\mathrm{d}x - \\frac{F_1'}{F_2'}\\mathrm{d}y,$；于是 $\\frac{\\partial z}{\\partial x} = \\frac{1}{xF_2'} (yF_1' + zF_2')$ ， $\\frac{\\partial z}{\\partial y} = -\\frac{F_1'}{F_2'}$；故 $x\\frac{\\partial z}{\\partial x} +y\\frac{\\partial z}{\\partial y} = \\frac{1}{F_2'} (yF_1' + zF_2') - \\frac{yF_1'}{F_2'} = z$ ，应选(B).",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：B\n【解】 方法一 复合函数求导法则\n\n$F\\left(\\frac{y}{x}, \\frac{z}{x}\\right) = 0$ 两边对 $x$ 求偏导，得 $-\\frac{y}{x^2} F_1' + \\frac{x \\frac{\\partial z}{\\partial x} - z}{x^2} F_2' = 0$ ，解得 $\\frac{\\partial z}{\\partial x} = \\frac{1}{x F_2'} (y F_1' + z F_2')$\n\n$F\\left(\\frac{y}{x}, \\frac{z}{x}\\right) = 0$ 两边对 $y$ 求偏导，得 $\\frac{1}{x} F_{1}' + \\frac{1}{x} F_{2}' \\frac{\\partial z}{\\partial y} = 0$ ，解得 $\\frac{\\partial z}{\\partial y} = -\\frac{F_{1}'}{F_{2}'}.$\n\n于是 $x\\frac{\\partial z}{\\partial x} +y\\frac{\\partial z}{\\partial y} = \\frac{1}{F_2'} (yF_1' + zF_2') - \\frac{yF_1'}{F_2'} = z$ ，应选(B).\n\n方法二 公式法\n\n令 $G(x,y,z) = F\\left(\\frac{y}{x},\\frac{z}{x}\\right)$\n\n由 $G_{x}^{\\prime} = -\\frac{y}{x^{2}} F_{1}^{\\prime} - \\frac{z}{x^{2}} F_{2}^{\\prime}$ ， $G_{y}^{\\prime} = \\frac{1}{x} F_{1}^{\\prime}$ ， $G_{z}^{\\prime} = \\frac{1}{x} F_{2}^{\\prime}$ ，得\n\n$$\n\\frac {\\partial z}{\\partial x} = - \\frac {G _ {x} ^ {\\prime}}{G _ {z} ^ {\\prime}} = \\frac {\\frac {y}{x ^ {2}} F _ {1} ^ {\\prime} + \\frac {z}{x ^ {2}} F _ {2} ^ {\\prime}}{\\frac {1}{x} F _ {2} ^ {\\prime}} = \\frac {1}{x F _ {2} ^ {\\prime}} (y F _ {1} ^ {\\prime} + z F _ {2} ^ {\\prime}), \\quad \\frac {\\partial z}{\\partial y} = - \\frac {G _ {y} ^ {\\prime}}{G _ {z} ^ {\\prime}} = - \\frac {\\frac {1}{x} F _ {1} ^ {\\prime}}{\\frac {1}{x} F _ {2} ^ {\\prime}} = - \\frac {F _ {1} ^ {\\prime}}{F _ {2} ^ {\\prime}},\n$$\n\n于是 $x\\frac{\\partial z}{\\partial x} +y\\frac{\\partial z}{\\partial y} = \\frac{1}{F_2'} (yF_1' + zF_2') - \\frac{yF_1'}{F_2'} = z$ ，应选(B).\n\n方法三 全微分法\n\n$F\\left(\\frac{y}{x}, \\frac{z}{x}\\right) = 0$ 两边求全微分，得 $F_{1}^{\\prime} \\mathrm{d}\\left(\\frac{y}{x}\\right) + F_{2}^{\\prime} \\mathrm{d}\\left(\\frac{z}{x}\\right) = 0$ ，整理得\n\n$$\nF _ {1} ^ {\\prime} \\cdot \\frac {x \\mathrm {d} y - y \\mathrm {d} x}{x ^ {2}} + F _ {2} ^ {\\prime} \\cdot \\frac {x \\mathrm {d} z - z \\mathrm {d} x}{x ^ {2}} = 0,\n$$\n\n从而有 $\\mathrm{d}z = \\frac{1}{xF_2'} (yF_1' + zF_2')\\mathrm{d}x - \\frac{F_1'}{F_2'}\\mathrm{d}y,$\n\n于是 $\\frac{\\partial z}{\\partial x} = \\frac{1}{xF_2'} (yF_1' + zF_2')$ ， $\\frac{\\partial z}{\\partial y} = -\\frac{F_1'}{F_2'}$\n\n故 $x\\frac{\\partial z}{\\partial x} +y\\frac{\\partial z}{\\partial y} = \\frac{1}{F_2'} (yF_1' + zF_2') - \\frac{yF_1'}{F_2'} = z$ ，应选(B).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 670
+  },
+  {
+   "id": "c9-c2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.4",
+   "knowledgePoints": [
+    "9.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.4 多元复合函数的求导法则",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $z=\\dfrac{x^2}{y^2}\\ln(xy)$，求 $\\dfrac{\\partial z}{\\partial x}$。",
+   "options": null,
+   "answer": [
+    "(x/y^2)*(2*ln(x*y)+1)"
+   ],
+   "accept": null,
+   "answerText": "令 $u=\\dfrac{x}{y}$，$v=xy$，则 $z=u^2\\ln v$。链式法则：\n$$\\frac{\\partial z}{\\partial x}=\\frac{\\partial z}{\\partial u}\\cdot\\frac{\\partial u}{\\partial x}+\\frac{\\partial z}{\\partial v}\\cdot\\frac{\\partial v}{\\partial x}=2u\\ln v\\cdot\\frac1y+\\frac{u^2}{v}\\cdot y=\\frac{2x}{y^2}\\ln(xy)+\\frac{x^2/y^2}{xy}\\cdot y=\\frac{x}{y^2}\\left[2\\ln(xy)+1\\right].$$",
+   "points": [
+    {
+     "text": "设中间变量 $u=\\dfrac{x}{y}$、$v=xy$，则 $z=u^2\\ln v$。",
+     "partial": 2
+    },
+    {
+     "text": "链式法则：$z_x=z_u\\cdot u_x+z_v\\cdot v_x=2u\\ln v\\cdot\\dfrac1y+\\dfrac{u^2}{v}\\cdot y$。",
+     "partial": 2
+    },
+    {
+     "text": "代回并化简得 $\\dfrac{x}{y^2}\\left[2\\ln(xy)+1\\right]$。",
+     "partial": 2
+    },
+    {
+     "text": "直接把 $z$ 写成 $\\dfrac{x^2}{y^2}\\ln(xy)$ 用乘积与链式法则求导可交叉验证。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：多元复合函数链式法则（§9.4）。\n**考点出处**：同济《高等数学》第七版 §9.4 多元复合函数的求导法则。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "链式法则",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "偏导核验",
+     "code": "z=(x/y)**2*log(x*y); simplify(diff(z, x) - (x/y**2)*(2*log(x*y)+1))",
+     "expected": "0"
+    }
+   ],
+   "idx": 671
+  },
+  {
+   "id": "ky-2013-2-6e5a11",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2013 年考研数学（一）第 2 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学（一）",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2013年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2013年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2013年解析/2013年解析.md"
+   },
+   "stem": "曲面 $x^{2} + \\cos (xy) + yz + x = 0$ 在点 $(0,1,-1)$ 处的切平面方程为( )",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】 令 $F(x,y,z) = x^{2} + \\cos (xy) + yz + x$\n\n则 $n = (F_x', F_y', F_z') = (2x - y\\sin(xy) + 1, -x\\sin(xy) + z, y)$ ,\n\n曲面 $x^{2} + \\cos (xy) + yz + x = 0$ 在点(0,1，-1）处的法向量为 $\\pmb {n} = (1, - 1,1)$\n\n切平面方程为 $\\pi : (x - 0) - (y - 1) + (z + 1) = 0$ ，即 $\\pi : x - y + z = -2$ ，应选(A).",
+   "points": [
+    {
+     "text": "【解】 令 $F(x,y,z) = x^{2} + \\cos (xy) + yz + x$",
+     "partial": 2
+    },
+    {
+     "text": "则 $n = (F_x', F_y', F_z') = (2x - y\\sin(xy) + 1, -x\\sin(xy) + z, y)$ ,",
+     "partial": 2
+    },
+    {
+     "text": "曲面 $x^{2} + \\cos (xy) + yz + x = 0$ 在点(0,1，-1）处的法向量为 $\\pmb {n} = (1, - 1,1)$",
+     "partial": 2
+    },
+    {
+     "text": "切平面方程为 $\\pi : (x - 0) - (y - 1) + (z + 1) = 0$ ，即 $\\pi : x - y + z = -2$ ，应选(A).",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：A\n【解】 令 $F(x,y,z) = x^{2} + \\cos (xy) + yz + x$\n\n则 $n = (F_x', F_y', F_z') = (2x - y\\sin(xy) + 1, -x\\sin(xy) + z, y)$ ,\n\n曲面 $x^{2} + \\cos (xy) + yz + x = 0$ 在点(0,1，-1）处的法向量为 $\\pmb {n} = (1, - 1,1)$\n\n切平面方程为 $\\pi : (x - 0) - (y - 1) + (z + 1) = 0$ ，即 $\\pi : x - y + z = -2$ ，应选(A).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 672
+  },
+  {
+   "id": "ky-2018-2-cfc6be",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2018 年考研数学（一）第 2 题",
+    "kind": "exam-original",
+    "year": 2018,
+    "region": "全国",
+    "paper": "2018 年考研数学（一）",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2018年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2018年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2018年解析/2018年解析.md"
+   },
+   "stem": "过点 $(1,0,0), (0,1,0)$ , 且与曲面 $z = x^2 + y^2$ 相切的平面为( )",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】 设切点为 $(x_0, y_0, z_0)$ ，则\n\n$$\n\\left\\{ \\begin{array}{l} z _ {0} = x _ {0} ^ {2} + y _ {0} ^ {2}, \\\\ (2 x _ {0}, 2 y _ {0}, - 1) \\cdot (1, - 1, 0) = 0, \\\\ (2 x _ {0}, 2 y _ {0}, - 1) \\cdot (x _ {0} - 1, y _ {0}, z _ {0}) = 0, \\end{array} \\right.\n$$\n\n解之得 $\\begin{cases} x_0 = 0, \\\\ y_0 = 0, \\\\ z_0 = 0, \\end{cases}$ 或 $\\begin{cases} x_0 = 1, \\\\ y_0 = 1, \\\\ z_0 = 2, \\end{cases}$\n\n故所求切平面为 $z = 0$ 或 $2x + 2y - z = 2$ . 应选(B).",
+   "points": [
+    {
+     "text": "【解】 设切点为 $(x_0, y_0, z_0)$ ，则",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\left\\{ \\begin{array}{l} z _ {0} = x _ {0} ^ {2} + y _ {0} ^ {2}, \\\\ (2 x _ {0}, 2 y _ {0}, - 1) \\cdot (1, - 1, 0) = 0, \\\\ (2 x _ {0}, 2 y _ {0}, - 1) \\cdot (x _ {0} - 1, y _ {0}, z _ {0}) = 0, \\end{array} \\right.\n$$",
+     "partial": 2
+    },
+    {
+     "text": "解之得 $\\begin{cases} x_0 = 0, \\\\ y_0 = 0, \\\\ z_0 = 0, \\end{cases}$ 或 $\\begin{cases} x_0 = 1, \\\\ y_0 = 1, \\\\ z_0 = 2, \\end{cases}$",
+     "partial": 2
+    },
+    {
+     "text": "故所求切平面为 $z = 0$ 或 $2x + 2y - z = 2$ . 应选(B).",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：B\n【解】 设切点为 $(x_0, y_0, z_0)$ ，则\n\n$$\n\\left\\{ \\begin{array}{l} z _ {0} = x _ {0} ^ {2} + y _ {0} ^ {2}, \\\\ (2 x _ {0}, 2 y _ {0}, - 1) \\cdot (1, - 1, 0) = 0, \\\\ (2 x _ {0}, 2 y _ {0}, - 1) \\cdot (x _ {0} - 1, y _ {0}, z _ {0}) = 0, \\end{array} \\right.\n$$\n\n解之得 $\\begin{cases} x_0 = 0, \\\\ y_0 = 0, \\\\ z_0 = 0, \\end{cases}$ 或 $\\begin{cases} x_0 = 1, \\\\ y_0 = 1, \\\\ z_0 = 2, \\end{cases}$\n\n故所求切平面为 $z = 0$ 或 $2x + 2y - z = 2$ . 应选(B).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 673
+  },
+  {
+   "id": "zk-202210-14",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 14 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 14,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设 $z = z(x,y)$ 由方程 $z^3 - 3xyz = a^3$ 所确定，求 $\\dfrac{\\partial z}{\\partial y}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：构造 $F(x,y,z) = 0$。**\n\n$$F(x, y, z) = z^3 - 3xyz - a^3$$\n\n（$a^3$ 求导后为 0，写不写进 $F$ 都不影响结果，但**规范写法是全部移到一边**。）\n\n**第二步：求 $F_y$ 与 $F_z$。**\n\n求 $F_y$ 时把 $x, z$ 当常数：\n\n$$F_y = -3xz$$\n\n求 $F_z$ 时把 $x, y$ 当常数：\n\n$$F_z = 3z^2 - 3xy$$\n\n**第三步：套隐函数求偏导公式。**\n\n$$\\frac{\\partial z}{\\partial y} = -\\frac{F_y}{F_z} = -\\frac{-3xz}{3z^2 - 3xy}$$\n\n**第四步：约分整理。**\n\n$$-\\frac{-3xz}{3(z^2 - xy)} = \\frac{3xz}{3(z^2-xy)} = \\boxed{\\frac{xz}{z^2 - xy}}$$\n\n**独立验算（直接对 $y$ 求偏导）**：把 $z$ 看作 $y$ 的函数，对方程两边求关于 $y$ 的偏导：\n\n$$3z^2\\frac{\\partial z}{\\partial y} - 3x\\left(z + y\\frac{\\partial z}{\\partial y}\\right) = 0$$\n\n$$3z^2 z_y - 3xz - 3xy\\,z_y = 0 \\quad\\Longrightarrow\\quad z_y\\left(3z^2 - 3xy\\right) = 3xz \\quad\\Longrightarrow\\quad z_y = \\frac{xz}{z^2 - xy} ✓$$\n\n与公式法结果一致。",
+   "points": [
+    {
+     "text": "构造 $F(x,y,z) = 0$。\n\n$$F(x, y, z) = z^3 - 3xyz - a^3$$\n\n（$a^3$ 求导后为 0，写不写进 $F$ 都不影响结果，但规范写法是全部移到一边。）",
+     "partial": 2
+    },
+    {
+     "text": "求 $F_y$ 与 $F_z$。\n\n求 $F_y$ 时把 $x, z$ 当常数：\n\n$$F_y = -3xz$$\n\n求 $F_z$ 时把 $x, y$ 当常数：\n\n$$F_z = 3z^2 - 3xy$$",
+     "partial": 2
+    },
+    {
+     "text": "套隐函数求偏导公式。\n\n$$\\frac{\\partial z}{\\partial y} = -\\frac{F_y}{F_z} = -\\frac{-3xz}{3z^2 - 3xy}$$",
+     "partial": 2
+    },
+    {
+     "text": "约分整理。",
+     "partial": 2
+    },
+    {
+     "text": "$$-\\frac{-3xz}{3(z^2 - xy)} = \\frac{3xz}{3(z^2-xy)} = \\boxed{\\frac{xz}{z^2 - xy}}$$",
+     "partial": 2
+    },
+    {
+     "text": "独立验算（直接对 $y$ 求偏导）：把 $z$ 看作 $y$ 的函数，对方程两边求关于 $y$ 的偏导：；$$3z^2\\frac{\\partial z}{\\partial y} - 3x\\left(z + y\\frac{\\partial z}{\\partial y}\\right) = 0$$；$$3z^2 z_y - 3xz - 3xy\\,z_y = 0 \\quad\\Longrightarrow\\quad z_y\\left(3z^2 - 3xy\\right) = 3xz \\quad\\Longrightarrow\\quad z_y = \\frac{xz}{z^2 - xy} ✓$$；与公式法结果一致。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：隐函数求偏导数（多元函数微分学）。\n**考点出处**：隐函数求偏导数（多元函数微分学）\n**第一步：构造 $F(x,y,z) = 0$。**\n\n$$F(x, y, z) = z^3 - 3xyz - a^3$$\n\n（$a^3$ 求导后为 0，写不写进 $F$ 都不影响结果，但**规范写法是全部移到一边**。）\n\n**第二步：求 $F_y$ 与 $F_z$。**\n\n求 $F_y$ 时把 $x, z$ 当常数：\n\n$$F_y = -3xz$$\n\n求 $F_z$ 时把 $x, y$ 当常数：\n\n$$F_z = 3z^2 - 3xy$$\n\n**第三步：套隐函数求偏导公式。**\n\n$$\\frac{\\partial z}{\\partial y} = -\\frac{F_y}{F_z} = -\\frac{-3xz}{3z^2 - 3xy}$$\n\n**第四步：约分整理。**\n\n$$-\\frac{-3xz}{3(z^2 - xy)} = \\frac{3xz}{3(z^2-xy)} = \\boxed{\\frac{xz}{z^2 - xy}}$$\n\n**独立验算（直接对 $y$ 求偏导）**：把 $z$ 看作 $y$ 的函数，对方程两边求关于 $y$ 的偏导：\n\n$$3z^2\\frac{\\partial z}{\\partial y} - 3x\\left(z + y\\frac{\\partial z}{\\partial y}\\right) = 0$$\n\n$$3z^2 z_y - 3xz - 3xy\\,z_y = 0 \\quad\\Longrightarrow\\quad z_y\\left(3z^2 - 3xy\\right) = 3xz \\quad\\Longrightarrow\\quad z_y = \\frac{xz}{z^2 - xy} ✓$$\n\n与公式法结果一致。",
+   "misconception": "- **公式带负号，而 $F_y$ 本身也带负号，两个负号恰好抵消**：$\\dfrac{\\partial z}{\\partial y} = -\\dfrac{-3xz}{\\cdots} = +\\dfrac{3xz}{\\cdots}$。**这是本题最容易多写或少写一个负号的地方。**答案里**没有**负号。\n- **分子分母别写反**：分子是 $F_y$（**所求变量**对应的偏导），分母是 $F_z$（**方程所确定变量**对应的偏导）。写反会得到 $\\dfrac{z^2-xy}{xz}$。\n- **对 $y$ 求偏导时 $x$ 是常数，但 $z$ 不是**：$-3xyz$ 对 $y$ 求偏导，$x$ 提出来，$z$ 整体当常数（因为我们是在求 $F_y$，把 $x,y,z$ 当独立变量），得 $-3xz$。**这是隐函数法的关键约定：在求 $F$ 的偏导时，$x$、$y$、$z$ 三个变量地位平等。**\n- **结果里保留 $z$ 是完全正常的**：本题是隐函数，$z$ 无法（也不必）解成 $x,y$ 的显式表达式。**千万不要试图把 $z$ 解出来。**\n- **口诀**：**\"隐函数求偏导，交叉求导带负号；分子是对所求变量的偏导，分母是对被确定变量的偏导。\"**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 674
+  },
+  {
+   "id": "zk-202210-15",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 15 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 15,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "判断函数 $f(x,y) = 2x^2 - 5x + xy^2 + 2y$ 在点 $(1, -1)$ 处是否取得极值？若取得极值，说明是极大值还是极小值。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：求两个一阶偏导，并验证 $(1,-1)$ 是驻点。**\n\n$$f_x = 4x - 5 + y^2$$\n\n代入 $(1,-1)$：$4\\times1 - 5 + (-1)^2 = 4 - 5 + 1 = 0$ ✓\n\n$$f_y = 2xy + 2$$\n\n代入 $(1,-1)$：$2\\times1\\times(-1) + 2 = -2 + 2 = 0$ ✓\n\n两个一阶偏导同时为 0，所以 **$(1,-1)$ 是驻点**，极值判别法可以使用。\n\n**第二步：求三个二阶偏导。**\n\n$$f_{xx} = 4, \\qquad f_{xy} = 2y, \\qquad f_{yy} = 2x$$\n\n**第三步：代入点 $(1,-1)$，记 $A, B, C$。**\n\n$$A = f_{xx}(1,-1) = 4$$\n\n$$B = f_{xy}(1,-1) = 2\\times(-1) = -2$$\n\n$$C = f_{yy}(1,-1) = 2\\times1 = 2$$\n\n**第四步：算判别式并下结论。**\n\n$$B^2 - AC = (-2)^2 - 4\\times2 = 4 - 8 = -4 < 0$$\n\n且\n\n$$A = 4 > 0$$\n\n所以函数在点 $(1,-1)$ 处**取得极值，且为极小值**。\n\n（等价写法：$AC - B^2 = 8 - 4 = 4 > 0$，同样判为有极值。）",
+   "points": [
+    {
+     "text": "求两个一阶偏导，并验证 $(1,-1)$ 是驻点。",
+     "partial": 2
+    },
+    {
+     "text": "$$f_x = 4x - 5 + y^2$$",
+     "partial": 2
+    },
+    {
+     "text": "代入 $(1,-1)$：$4\\times1 - 5 + (-1)^2 = 4 - 5 + 1 = 0$ ✓",
+     "partial": 2
+    },
+    {
+     "text": "$$f_y = 2xy + 2$$",
+     "partial": 2
+    },
+    {
+     "text": "代入 $(1,-1)$：$2\\times1\\times(-1) + 2 = -2 + 2 = 0$ ✓",
+     "partial": 2
+    },
+    {
+     "text": "两个一阶偏导同时为 0，所以 $(1,-1)$ 是驻点，极值判别法可以使用。；求三个二阶偏导。\n\n$$f_{xx} = 4, \\qquad f_{xy} = 2y, \\qquad f_{yy} = 2x$$；代入点 $(1,-1)$，记 $A, B, C$。\n\n$$A = f_{xx}(1,-1) = 4$$\n\n$$B = f_{xy}(1,-1) = 2\\times(-1) = -2$$\n\n$$C = f_{yy}(1,-1) = 2\\times1 = 2$$；算判别式并下结论。\n\n$$B^2 - AC = (-2)^2 - 4\\times2 = 4 - 8 = -4 < 0$$\n\n且\n\n$$A = 4 > 0$$\n\n所以函数在点 $(1,-1)$ 处取得极值，且为极小值。\n\n（等价写法：$AC - B^2 = 8 - 4 = 4 > 0$，同样判为有极值。）",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：二元函数的极值判别（多元函数微分学）。\n**考点出处**：二元函数的极值（多元函数微分学）\n**第一步：求两个一阶偏导，并验证 $(1,-1)$ 是驻点。**\n\n$$f_x = 4x - 5 + y^2$$\n\n代入 $(1,-1)$：$4\\times1 - 5 + (-1)^2 = 4 - 5 + 1 = 0$ ✓\n\n$$f_y = 2xy + 2$$\n\n代入 $(1,-1)$：$2\\times1\\times(-1) + 2 = -2 + 2 = 0$ ✓\n\n两个一阶偏导同时为 0，所以 **$(1,-1)$ 是驻点**，极值判别法可以使用。\n\n**第二步：求三个二阶偏导。**\n\n$$f_{xx} = 4, \\qquad f_{xy} = 2y, \\qquad f_{yy} = 2x$$\n\n**第三步：代入点 $(1,-1)$，记 $A, B, C$。**\n\n$$A = f_{xx}(1,-1) = 4$$\n\n$$B = f_{xy}(1,-1) = 2\\times(-1) = -2$$\n\n$$C = f_{yy}(1,-1) = 2\\times1 = 2$$\n\n**第四步：算判别式并下结论。**\n\n$$B^2 - AC = (-2)^2 - 4\\times2 = 4 - 8 = -4 < 0$$\n\n且\n\n$$A = 4 > 0$$\n\n所以函数在点 $(1,-1)$ 处**取得极值，且为极小值**。\n\n（等价写法：$AC - B^2 = 8 - 4 = 4 > 0$，同样判为有极值。）",
+   "misconception": "- **必须先验证两个一阶偏导都为 0**：如果给定点不是驻点，判别法根本不能用。**这一步官方给了 2 分，不能省。**\n- **判别式是 $B^2 - AC$，不是 $AC - B^2$**：本题 $B^2-AC = -4 < 0$ 才表示\"有极值\"。**若把定义记反，符号判断会完全颠倒，可能把\"有极值\"读成\"无极值\"。**\n- **$A > 0$ 取极小、$A < 0$ 取极大**：本题 $A = 4 > 0$，是**极小值**。别写成极大值。\n- **$f_x = 4x - 5 + y^2$ 里的 $-5$ 不能漏**：来自 $-5x$ 求导。漏掉会使 $f_x(1,-1) = 4+1 = 5 \\ne 0$，从而错误地判定\"$(1,-1)$ 不是驻点\"。\n- **$f_{xy} = 2y$ 代 $(1,-1)$ 得 $-2$，负号别丢**。本题丢了负号 $B^2$ 仍是 4，**不影响结论**；但换一道 $A$ 较小的题就会出错。\n- **看清题目问什么**：本题问的是\"是否取得极值、是极大还是极小\"，**不需要算极值点处的函数值**。多做不加分，还容易算错。\n- **同槽位对照**：本课程 2024.04 第 15 题、2024.10 第 7 题（只问驻点）都在这个位置，属于\"极值判别三步走\"的固定套路：**验驻点 → 求二阶偏导 → 看 $B^2-AC$ 与 $A$ 的符号。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 675
+  },
+  {
+   "id": "zk-202304-14",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2023 年 4 月 自考 00023 高等数学（工本）第 14 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 14,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求函数 $u = xy^2z$ 在点 $(1, 1, 1)$ 处的梯度。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：求三个一阶偏导。**\n\n对 $x$ 求导时 $y^2z$ 当常数：\n\n$$\\frac{\\partial u}{\\partial x} = y^2z$$\n\n对 $y$ 求导时 $xz$ 当常数，**注意 $y^2$ 的指数要落下来**：\n\n$$\\frac{\\partial u}{\\partial y} = x \\cdot 2y \\cdot z = 2xyz$$\n\n对 $z$ 求导时 $xy^2$ 当常数：\n\n$$\\frac{\\partial u}{\\partial z} = xy^2$$\n\n**第二步：写出梯度的一般表达式。**\n\n$$\\mathrm{grad}\\,u = \\left\\{y^2z,\\ 2xyz,\\ xy^2\\right\\}$$\n\n**第三步：代入点 $(1,1,1)$。**\n\n$$\\mathrm{grad}\\,u(1,1,1) = \\left\\{1^2\\times1,\\ 2\\times1\\times1\\times1,\\ 1\\times1^2\\right\\} = \\{1,\\ 2,\\ 1\\}$$\n\n$$\\boxed{\\mathrm{grad}\\,u(1,1,1) = \\{1,\\ 2,\\ 1\\}}$$",
+   "points": [
+    {
+     "text": "求三个一阶偏导。",
+     "partial": 2
+    },
+    {
+     "text": "对 $x$ 求导时 $y^2z$ 当常数：",
+     "partial": 2
+    },
+    {
+     "text": "$$\\frac{\\partial u}{\\partial x} = y^2z$$",
+     "partial": 2
+    },
+    {
+     "text": "对 $y$ 求导时 $xz$ 当常数，注意 $y^2$ 的指数要落下来：",
+     "partial": 2
+    },
+    {
+     "text": "$$\\frac{\\partial u}{\\partial y} = x \\cdot 2y \\cdot z = 2xyz$$",
+     "partial": 2
+    },
+    {
+     "text": "对 $z$ 求导时 $xy^2$ 当常数：；$$\\frac{\\partial u}{\\partial z} = xy^2$$；写出梯度的一般表达式。\n\n$$\\mathrm{grad}\\,u = \\left\\{y^2z,\\ 2xyz,\\ xy^2\\right\\}$$；代入点 $(1,1,1)$。\n\n$$\\mathrm{grad}\\,u(1,1,1) = \\left\\{1^2\\times1,\\ 2\\times1\\times1\\times1,\\ 1\\times1^2\\right\\} = \\{1,\\ 2,\\ 1\\}$$\n\n$$\\boxed{\\mathrm{grad}\\,u(1,1,1) = \\{1,\\ 2,\\ 1\\}}$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：梯度的定义与偏导数计算（多元函数微分学）。\n**考点出处**：梯度（多元函数微分学）\n**第一步：求三个一阶偏导。**\n\n对 $x$ 求导时 $y^2z$ 当常数：\n\n$$\\frac{\\partial u}{\\partial x} = y^2z$$\n\n对 $y$ 求导时 $xz$ 当常数，**注意 $y^2$ 的指数要落下来**：\n\n$$\\frac{\\partial u}{\\partial y} = x \\cdot 2y \\cdot z = 2xyz$$\n\n对 $z$ 求导时 $xy^2$ 当常数：\n\n$$\\frac{\\partial u}{\\partial z} = xy^2$$\n\n**第二步：写出梯度的一般表达式。**\n\n$$\\mathrm{grad}\\,u = \\left\\{y^2z,\\ 2xyz,\\ xy^2\\right\\}$$\n\n**第三步：代入点 $(1,1,1)$。**\n\n$$\\mathrm{grad}\\,u(1,1,1) = \\left\\{1^2\\times1,\\ 2\\times1\\times1\\times1,\\ 1\\times1^2\\right\\} = \\{1,\\ 2,\\ 1\\}$$\n\n$$\\boxed{\\mathrm{grad}\\,u(1,1,1) = \\{1,\\ 2,\\ 1\\}}$$",
+   "misconception": "- **梯度是向量，必须写成三个分量的形式**：$\\{1,2,1\\}$ 或 $\\boldsymbol{i}+2\\boldsymbol{j}+\\boldsymbol{k}$。**只写一个数（比如 $2$）是没有分的。**\n- **对 $y$ 求偏导时的指数 2 是本题唯一的坑**：$xy^2z \\to 2xyz$。**忘了落指数会得到 $\\{1,1,1\\}$。**\n- **三个偏导别串位**：$z$ 的偏导是 $xy^2$（不含 $z$ 本身），不是 $xy^2z$。\n- **官方评分参考是两段式给分**：三个偏导写对给 **3 分**，梯度写对再给 **3 分**。**这说明即使最后代点算错，偏导写对也能拿一半分——过程一定要写全。**\n- 梯度指向函数增长最快的方向，模长是最大方向导数：$|\\mathrm{grad}\\,u(1,1,1)| = \\sqrt{1+4+1} = \\sqrt6$。这个后续结论偶尔会一起考。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 676
+  },
+  {
+   "id": "zk-202304-15",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2023 年 4 月 自考 00023 高等数学（工本）第 15 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 15,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设 $z = z(x,y)$ 由方程 $x^3 + y^3 + z^3 - 3xyz = 0$ 所确定，求 $\\dfrac{\\partial z}{\\partial x}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：构造 $F(x,y,z) = 0$。**\n\n$$F(x, y, z) = x^3 + y^3 + z^3 - 3xyz$$\n\n**第二步：求 $F_x$（把 $y, z$ 都当常数）。**\n\n$$F_x = 3x^2 - 3yz$$\n\n（$x^3$ 求导得 $3x^2$；$-3xyz$ 中 $yz$ 整个是常数，对 $x$ 求导得 $-3yz$。）\n\n**第三步：求 $F_z$（把 $x, y$ 都当常数）。**\n\n$$F_z = 3z^2 - 3xy$$\n\n**第四步：套隐函数求偏导公式。**\n\n$$\\frac{\\partial z}{\\partial x} = -\\frac{F_x}{F_z} = -\\frac{3x^2 - 3yz}{3z^2 - 3xy}$$\n\n**第五步：约分整理。**\n\n$$= -\\frac{3(x^2 - yz)}{3(z^2 - xy)} = -\\frac{x^2 - yz}{z^2 - xy} = \\frac{yz - x^2}{z^2 - xy}$$\n\n$$\\boxed{\\frac{\\partial z}{\\partial x} = \\frac{yz - x^2}{z^2 - xy}}$$",
+   "points": [
+    {
+     "text": "构造 $F(x,y,z) = 0$。\n\n$$F(x, y, z) = x^3 + y^3 + z^3 - 3xyz$$",
+     "partial": 2
+    },
+    {
+     "text": "求 $F_x$（把 $y, z$ 都当常数）。\n\n$$F_x = 3x^2 - 3yz$$\n\n（$x^3$ 求导得 $3x^2$；$-3xyz$ 中 $yz$ 整个是常数，对 $x$ 求导得 $-3yz$。）",
+     "partial": 2
+    },
+    {
+     "text": "求 $F_z$（把 $x, y$ 都当常数）。\n\n$$F_z = 3z^2 - 3xy$$",
+     "partial": 2
+    },
+    {
+     "text": "套隐函数求偏导公式。\n\n$$\\frac{\\partial z}{\\partial x} = -\\frac{F_x}{F_z} = -\\frac{3x^2 - 3yz}{3z^2 - 3xy}$$",
+     "partial": 2
+    },
+    {
+     "text": "约分整理。",
+     "partial": 2
+    },
+    {
+     "text": "$$= -\\frac{3(x^2 - yz)}{3(z^2 - xy)} = -\\frac{x^2 - yz}{z^2 - xy} = \\frac{yz - x^2}{z^2 - xy}$$；$$\\boxed{\\frac{\\partial z}{\\partial x} = \\frac{yz - x^2}{z^2 - xy}}$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：隐函数求偏导数（多元函数微分学）。\n**考点出处**：隐函数求偏导数（多元函数微分学）\n**第一步：构造 $F(x,y,z) = 0$。**\n\n$$F(x, y, z) = x^3 + y^3 + z^3 - 3xyz$$\n\n**第二步：求 $F_x$（把 $y, z$ 都当常数）。**\n\n$$F_x = 3x^2 - 3yz$$\n\n（$x^3$ 求导得 $3x^2$；$-3xyz$ 中 $yz$ 整个是常数，对 $x$ 求导得 $-3yz$。）\n\n**第三步：求 $F_z$（把 $x, y$ 都当常数）。**\n\n$$F_z = 3z^2 - 3xy$$\n\n**第四步：套隐函数求偏导公式。**\n\n$$\\frac{\\partial z}{\\partial x} = -\\frac{F_x}{F_z} = -\\frac{3x^2 - 3yz}{3z^2 - 3xy}$$\n\n**第五步：约分整理。**\n\n$$= -\\frac{3(x^2 - yz)}{3(z^2 - xy)} = -\\frac{x^2 - yz}{z^2 - xy} = \\frac{yz - x^2}{z^2 - xy}$$\n\n$$\\boxed{\\frac{\\partial z}{\\partial x} = \\frac{yz - x^2}{z^2 - xy}}$$",
+   "misconception": "- **公式里的负号必须带**：$\\dfrac{\\partial z}{\\partial x} = -\\dfrac{F_x}{F_z}$。**漏掉负号会得到 $\\dfrac{x^2-yz}{z^2-xy}$，是最常见的失分点。**\n- **分子分母不要写反**：分子是**对所求变量 $x$ 的偏导** $F_x$，分母是**对方程所确定的因变量 $z$ 的偏导** $F_z$。写反得到 $\\dfrac{z^2-xy}{yz-x^2}$，完全颠倒。\n- **$F_x$ 里的 $-3yz$ 别算错**：$-3xyz$ 对 $x$ 求导时，$yz$ 整体是常数因子，**不要顺手把 $y$ 也求导**。\n- **最后一定把符号收拾干净**：$-\\dfrac{x^2-yz}{z^2-xy}$ 与 $\\dfrac{yz-x^2}{z^2-xy}$ 是同一个式子；但写成 $\\dfrac{x^2-yz}{z^2-xy}$ 就错了（差一个负号）。\n- **结果里保留 $z$ 是完全正常的**：隐函数不必（也常常不能）解出显式表达式。\n- **口诀**：**\"隐函数求偏导，交叉求导带负号；分子是对所求变量的偏导，分母是对因变量的偏导。\"**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 677
+  },
+  {
+   "id": "zk-202310-13",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 13 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 13,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $u = \\ln\\sqrt{x^2 + y^2 + z^2}$，求全微分 $\\mathrm{d}u$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：先化简函数，避免直接对\"根号套根号\"求导。**\n\n利用对数性质 $\\ln\\sqrt{a} = \\ln a^{1/2} = \\dfrac{1}{2}\\ln a$：\n\n$$u = \\ln\\sqrt{x^2+y^2+z^2} = \\frac{1}{2}\\ln(x^2+y^2+z^2)$$\n\n**⚠️ 这一步化简极其关键**，它把\"对数里套根号\"变成了\"对数里套平方和\"，求导难度大幅下降。\n\n**第二步：求三个偏导数。**\n\n对 $x$ 求偏导（$y, z$ 视为常数），用链式法则 $\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\ln g(x) = \\dfrac{g'(x)}{g(x)}$：\n\n$$\\frac{\\partial u}{\\partial x} = \\frac{1}{2}\\cdot\\frac{2x}{x^2+y^2+z^2} = \\frac{x}{x^2+y^2+z^2}$$\n\n（注意 $\\dfrac{1}{2}$ 与求导产生的 $2x$ 中的 $2$ 恰好约掉。）\n\n同理：\n\n$$\\frac{\\partial u}{\\partial y} = \\frac{y}{x^2+y^2+z^2}, \\qquad \\frac{\\partial u}{\\partial z} = \\frac{z}{x^2+y^2+z^2}$$\n\n**第三步：套全微分公式。**\n\n$$\\mathrm{d}u = \\frac{\\partial u}{\\partial x}\\mathrm{d}x + \\frac{\\partial u}{\\partial y}\\mathrm{d}y + \\frac{\\partial u}{\\partial z}\\mathrm{d}z$$\n\n$$= \\frac{x}{x^2+y^2+z^2}\\mathrm{d}x + \\frac{y}{x^2+y^2+z^2}\\mathrm{d}y + \\frac{z}{x^2+y^2+z^2}\\mathrm{d}z$$\n\n提取公分母：\n\n$$\\boxed{\\mathrm{d}u = \\frac{1}{x^2+y^2+z^2}\\left(x\\,\\mathrm{d}x + y\\,\\mathrm{d}y + z\\,\\mathrm{d}z\\right)}$$\n\n**第四步：验算。**\n\n直接用原式求 $\\dfrac{\\partial u}{\\partial x}$，看看是否一致：\n\n$$\\frac{\\partial u}{\\partial x} = \\frac{1}{\\sqrt{x^2+y^2+z^2}}\\cdot\\frac{1}{2\\sqrt{x^2+y^2+z^2}}\\cdot 2x = \\frac{x}{x^2+y^2+z^2} \\quad ✅$$\n\n与第二步结果一致。",
+   "points": [
+    {
+     "text": "先化简函数，避免直接对\"根号套根号\"求导。\n\n利用对数性质 $\\ln\\sqrt{a} = \\ln a^{1/2} = \\dfrac{1}{2}\\ln a$：\n\n$$u = \\ln\\sqrt{x^2+y^2+z^2} = \\frac{1}{2}\\ln(x^2+y^2+z^2)$$\n\n⚠️ 这一步化简极其关键，它把\"对数里套根号\"变成了\"对数里套平方和\"，求导难度大幅下降。",
+     "partial": 2
+    },
+    {
+     "text": "求三个偏导数。\n\n对 $x$ 求偏导（$y, z$ 视为常数），用链式法则 $\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\ln g(x) = \\dfrac{g'(x)}{g(x)}$：\n\n$$\\frac{\\partial u}{\\partial x} = \\frac{1}{2}\\cdot\\frac{2x}{x^2+y^2+z^2} = \\frac{x}{x^2+y^2+z^2}$$\n\n（注意 $\\dfrac{1}{2}$ 与求导产生的 $2x$ 中的 $2$ 恰好约掉。）\n\n同理：\n\n$$\\frac{\\partial u}{\\partial y} = \\frac{y}{x^2+y^2+z^2}, \\qquad \\frac{\\partial u}{\\partial z} = \\frac{z}{x^2+y^2+z^2}$$",
+     "partial": 2
+    },
+    {
+     "text": "套全微分公式。",
+     "partial": 2
+    },
+    {
+     "text": "$$\\mathrm{d}u = \\frac{\\partial u}{\\partial x}\\mathrm{d}x + \\frac{\\partial u}{\\partial y}\\mathrm{d}y + \\frac{\\partial u}{\\partial z}\\mathrm{d}z$$",
+     "partial": 2
+    },
+    {
+     "text": "$$= \\frac{x}{x^2+y^2+z^2}\\mathrm{d}x + \\frac{y}{x^2+y^2+z^2}\\mathrm{d}y + \\frac{z}{x^2+y^2+z^2}\\mathrm{d}z$$",
+     "partial": 2
+    },
+    {
+     "text": "提取公分母：；$$\\boxed{\\mathrm{d}u = \\frac{1}{x^2+y^2+z^2}\\left(x\\,\\mathrm{d}x + y\\,\\mathrm{d}y + z\\,\\mathrm{d}z\\right)}$$；验算。\n\n直接用原式求 $\\dfrac{\\partial u}{\\partial x}$，看看是否一致：\n\n$$\\frac{\\partial u}{\\partial x} = \\frac{1}{\\sqrt{x^2+y^2+z^2}}\\cdot\\frac{1}{2\\sqrt{x^2+y^2+z^2}}\\cdot 2x = \\frac{x}{x^2+y^2+z^2} \\quad ✅$$\n\n与第二步结果一致。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：**全微分公式**与**复合函数求偏导**（对数 + 根号）。\n**考点出处**：全微分（多元函数微分学）\n**第一步：先化简函数，避免直接对\"根号套根号\"求导。**\n\n利用对数性质 $\\ln\\sqrt{a} = \\ln a^{1/2} = \\dfrac{1}{2}\\ln a$：\n\n$$u = \\ln\\sqrt{x^2+y^2+z^2} = \\frac{1}{2}\\ln(x^2+y^2+z^2)$$\n\n**⚠️ 这一步化简极其关键**，它把\"对数里套根号\"变成了\"对数里套平方和\"，求导难度大幅下降。\n\n**第二步：求三个偏导数。**\n\n对 $x$ 求偏导（$y, z$ 视为常数），用链式法则 $\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\ln g(x) = \\dfrac{g'(x)}{g(x)}$：\n\n$$\\frac{\\partial u}{\\partial x} = \\frac{1}{2}\\cdot\\frac{2x}{x^2+y^2+z^2} = \\frac{x}{x^2+y^2+z^2}$$\n\n（注意 $\\dfrac{1}{2}$ 与求导产生的 $2x$ 中的 $2$ 恰好约掉。）\n\n同理：\n\n$$\\frac{\\partial u}{\\partial y} = \\frac{y}{x^2+y^2+z^2}, \\qquad \\frac{\\partial u}{\\partial z} = \\frac{z}{x^2+y^2+z^2}$$\n\n**第三步：套全微分公式。**\n\n$$\\mathrm{d}u = \\frac{\\partial u}{\\partial x}\\mathrm{d}x + \\frac{\\partial u}{\\partial y}\\mathrm{d}y + \\frac{\\partial u}{\\partial z}\\mathrm{d}z$$\n\n$$= \\frac{x}{x^2+y^2+z^2}\\mathrm{d}x + \\frac{y}{x^2+y^2+z^2}\\mathrm{d}y + \\frac{z}{x^2+y^2+z^2}\\mathrm{d}z$$\n\n提取公分母：\n\n$$\\boxed{\\mathrm{d}u = \\frac{1}{x^2+y^2+z^2}\\left(x\\,\\mathrm{d}x + y\\,\\mathrm{d}y + z\\,\\mathrm{d}z\\right)}$$\n\n**第四步：验算。**\n\n直接用原式求 $\\dfrac{\\partial u}{\\partial x}$，看看是否一致：\n\n$$\\frac{\\partial u}{\\partial x} = \\frac{1}{\\sqrt{x^2+y^2+z^2}}\\cdot\\frac{1}{2\\sqrt{x^2+y^2+z^2}}\\cdot 2x = \\frac{x}{x^2+y^2+z^2} \\quad ✅$$\n\n与第二步结果一致。",
+   "misconception": "- **先化简再求导**。若直接对 $\\ln\\sqrt{x^2+y^2+z^2}$ 求导，需要一层套一层地用链式法则，极易漏掉因子。**用 $\\ln\\sqrt{a} = \\frac{1}{2}\\ln a$ 一步化简，是全题的关键。**\n- **分母是 $x^2+y^2+z^2$，不带根号**。这是最需要警惕的地方：直觉上\"原函数里有根号，导数应该也有根号\"，但**实际上求导后根号被约掉了**（见验算过程）。**答案中出现 $\\sqrt{x^2+y^2+z^2}$ 就是错的。**\n- **$\\dfrac{1}{2}$ 与 $2x$ 的约分别漏**：$\\dfrac{1}{2}\\cdot\\dfrac{2x}{(\\ )} = \\dfrac{x}{(\\ )}$，如果漏了 $\\dfrac{1}{2}$，会得到 $\\dfrac{2x}{x^2+y^2+z^2}$，多出一个 $2$。\n- **全微分的结果必须写成 $\\mathrm{d}x, \\mathrm{d}y, \\mathrm{d}z$ 的线性组合**，三个偏导一个都不能少（本题三个都不为 $0$），最后可以通分提取公因子，写得更整洁。\n- 若题目改为求在**某点**的全微分（如 $\\mathrm{d}u\\big|_{(1,1,1)}$），则要先把点代入偏导再写微分。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 678
+  },
+  {
+   "id": "zk-202310-14",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 14 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 14,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设方程 $\\mathrm{e}^{-xy} - 3z + \\mathrm{e}^{z} = 0$ 确定函数 $z = z(x,y)$，求 $\\dfrac{\\partial z}{\\partial x}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**方法一：公式法（推荐，不易出错）**\n\n**第一步：令 $F(x,y,z) = \\mathrm{e}^{-xy} - 3z + \\mathrm{e}^{z}$。**\n\n（把方程所有项移到一边，左边整体记为 $F$。）\n\n**第二步：求 $F_x$（对 $x$ 求偏导，$y, z$ 当常数）。**\n\n$F$ 中与 $x$ 有关的只有第一项 $\\mathrm{e}^{-xy}$，用链式法则（指数上是 $-xy$，对 $x$ 求导得 $-y$）：\n\n$$F_x = \\mathrm{e}^{-xy}\\cdot(-y) = -y\\mathrm{e}^{-xy}$$\n\n（$-3z$ 与 $\\mathrm{e}^z$ 里都没有 $x$，对 $x$ 求导为 $0$。）\n\n**第三步：求 $F_z$（对 $z$ 求偏导，$x, y$ 当常数）。**\n\n$$F_z = \\frac{\\partial}{\\partial z}\\left(\\mathrm{e}^{-xy} - 3z + \\mathrm{e}^z\\right) = 0 - 3 + \\mathrm{e}^z = \\mathrm{e}^z - 3$$\n\n**第四步：套隐函数求导公式。**\n\n$$\\frac{\\partial z}{\\partial x} = -\\frac{F_x}{F_z} = -\\frac{-y\\mathrm{e}^{-xy}}{\\mathrm{e}^{z} - 3} = \\frac{y\\mathrm{e}^{-xy}}{\\mathrm{e}^{z} - 3}$$\n\n**方法二：两边直接对 $x$ 求导（验算用）**\n\n把 $z$ 看作 $x, y$ 的函数，方程两边同时对 $x$ 求偏导：\n\n$$\\frac{\\partial}{\\partial x}\\left(\\mathrm{e}^{-xy}\\right) - \\frac{\\partial}{\\partial x}(3z) + \\frac{\\partial}{\\partial x}\\left(\\mathrm{e}^{z}\\right) = 0$$\n\n$$\\mathrm{e}^{-xy}\\cdot(-y) - 3\\frac{\\partial z}{\\partial x} + \\mathrm{e}^{z}\\frac{\\partial z}{\\partial x} = 0$$\n\n把含 $\\dfrac{\\partial z}{\\partial x}$ 的项合并：\n\n$$\\left(\\mathrm{e}^{z} - 3\\right)\\frac{\\partial z}{\\partial x} = y\\mathrm{e}^{-xy}$$\n\n所以\n\n$$\\frac{\\partial z}{\\partial x} = \\frac{y\\mathrm{e}^{-xy}}{\\mathrm{e}^{z} - 3} \\quad ✅$$\n\n两种方法结果一致。",
+   "points": [
+    {
+     "text": "方法一：公式法（推荐，不易出错）",
+     "partial": 2
+    },
+    {
+     "text": "令 $F(x,y,z) = \\mathrm{e}^{-xy} - 3z + \\mathrm{e}^{z}$。\n\n（把方程所有项移到一边，左边整体记为 $F$。）",
+     "partial": 2
+    },
+    {
+     "text": "求 $F_x$（对 $x$ 求偏导，$y, z$ 当常数）。\n\n$F$ 中与 $x$ 有关的只有第一项 $\\mathrm{e}^{-xy}$，用链式法则（指数上是 $-xy$，对 $x$ 求导得 $-y$）：\n\n$$F_x = \\mathrm{e}^{-xy}\\cdot(-y) = -y\\mathrm{e}^{-xy}$$\n\n（$-3z$ 与 $\\mathrm{e}^z$ 里都没有 $x$，对 $x$ 求导为 $0$。）",
+     "partial": 2
+    },
+    {
+     "text": "求 $F_z$（对 $z$ 求偏导，$x, y$ 当常数）。\n\n$$F_z = \\frac{\\partial}{\\partial z}\\left(\\mathrm{e}^{-xy} - 3z + \\mathrm{e}^z\\right) = 0 - 3 + \\mathrm{e}^z = \\mathrm{e}^z - 3$$",
+     "partial": 2
+    },
+    {
+     "text": "套隐函数求导公式。",
+     "partial": 2
+    },
+    {
+     "text": "$$\\frac{\\partial z}{\\partial x} = -\\frac{F_x}{F_z} = -\\frac{-y\\mathrm{e}^{-xy}}{\\mathrm{e}^{z} - 3} = \\frac{y\\mathrm{e}^{-xy}}{\\mathrm{e}^{z} - 3}$$；方法二：两边直接对 $x$ 求导（验算用）；把 $z$ 看作 $x, y$ 的函数，方程两边同时对 $x$ 求偏导：；$$\\frac{\\partial}{\\partial x}\\left(\\mathrm{e}^{-xy}\\right) - \\frac{\\partial}{\\partial x}(3z) + \\frac{\\partial}{\\partial x}\\left(\\mathrm{e}^{z}\\right) = 0$$；$$\\mathrm{e}^{-xy}\\cdot(-y) - 3\\frac{\\partial z}{\\partial x} + \\mathrm{e}^{z}\\frac{\\partial z}{\\partial x} = 0$$；把含 $\\dfrac{\\partial z}{\\partial x}$ 的项合并：；$$\\left(\\mathrm{e}^{z} - 3\\right)\\frac{\\partial z}{\\partial x} = y\\mathrm{e}^{-xy}$$；所以；$$\\frac{\\partial z}{\\partial x} = \\frac{y\\mathrm{e}^{-xy}}{\\mathrm{e}^{z} - 3} \\quad ✅$$；两种方法结果一致。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：**隐函数求偏导**（公式法或直接求导法）。\n**考点出处**：隐函数求偏导数（多元函数微分学）\n**方法一：公式法（推荐，不易出错）**\n\n**第一步：令 $F(x,y,z) = \\mathrm{e}^{-xy} - 3z + \\mathrm{e}^{z}$。**\n\n（把方程所有项移到一边，左边整体记为 $F$。）\n\n**第二步：求 $F_x$（对 $x$ 求偏导，$y, z$ 当常数）。**\n\n$F$ 中与 $x$ 有关的只有第一项 $\\mathrm{e}^{-xy}$，用链式法则（指数上是 $-xy$，对 $x$ 求导得 $-y$）：\n\n$$F_x = \\mathrm{e}^{-xy}\\cdot(-y) = -y\\mathrm{e}^{-xy}$$\n\n（$-3z$ 与 $\\mathrm{e}^z$ 里都没有 $x$，对 $x$ 求导为 $0$。）\n\n**第三步：求 $F_z$（对 $z$ 求偏导，$x, y$ 当常数）。**\n\n$$F_z = \\frac{\\partial}{\\partial z}\\left(\\mathrm{e}^{-xy} - 3z + \\mathrm{e}^z\\right) = 0 - 3 + \\mathrm{e}^z = \\mathrm{e}^z - 3$$\n\n**第四步：套隐函数求导公式。**\n\n$$\\frac{\\partial z}{\\partial x} = -\\frac{F_x}{F_z} = -\\frac{-y\\mathrm{e}^{-xy}}{\\mathrm{e}^{z} - 3} = \\frac{y\\mathrm{e}^{-xy}}{\\mathrm{e}^{z} - 3}$$\n\n**方法二：两边直接对 $x$ 求导（验算用）**\n\n把 $z$ 看作 $x, y$ 的函数，方程两边同时对 $x$ 求偏导：\n\n$$\\frac{\\partial}{\\partial x}\\left(\\mathrm{e}^{-xy}\\right) - \\frac{\\partial}{\\partial x}(3z) + \\frac{\\partial}{\\partial x}\\left(\\mathrm{e}^{z}\\right) = 0$$\n\n$$\\mathrm{e}^{-xy}\\cdot(-y) - 3\\frac{\\partial z}{\\partial x} + \\mathrm{e}^{z}\\frac{\\partial z}{\\partial x} = 0$$\n\n把含 $\\dfrac{\\partial z}{\\partial x}$ 的项合并：\n\n$$\\left(\\mathrm{e}^{z} - 3\\right)\\frac{\\partial z}{\\partial x} = y\\mathrm{e}^{-xy}$$\n\n所以\n\n$$\\frac{\\partial z}{\\partial x} = \\frac{y\\mathrm{e}^{-xy}}{\\mathrm{e}^{z} - 3} \\quad ✅$$\n\n两种方法结果一致。",
+   "misconception": "- **公式法中的负号是最大的坑**：$\\dfrac{\\partial z}{\\partial x} = -\\dfrac{F_x}{F_z}$，**前面有一个负号**。本题 $F_x = -y\\mathrm{e}^{-xy}$ 本身带负号，\"负负得正\"，最终结果为正。**如果漏掉公式里的负号，会得到 $-\\dfrac{y\\mathrm{e}^{-xy}}{\\mathrm{e}^z-3}$，符号全反。**\n- **$F_x$ 中的链式法则别漏因子**：$\\dfrac{\\partial}{\\partial x}\\mathrm{e}^{-xy} = \\mathrm{e}^{-xy}\\cdot\\dfrac{\\partial(-xy)}{\\partial x} = \\mathrm{e}^{-xy}\\cdot(-y)$。**那个 $-y$ 是本题的关键，漏了就会得到错误答案。** 特别注意是对 $x$ 求导，$-xy$ 对 $x$ 的导数是 $-y$（不是 $-x$）。\n- **$F_z$ 中 $-3z$ 求导得 $-3$**，$3$ 是系数要保留；$\\mathrm{e}^z$ 求导得 $\\mathrm{e}^z$ 本身。所以 $F_z = \\mathrm{e}^z - 3$。\n- **分母是 $\\mathrm{e}^z - 3$，顺序别写反**。写成 $3 - \\mathrm{e}^z$ 会导致符号错误。\n- **结果中可以保留 $z$**（不必也不能解出 $z$ 的显式表达式）——题目本来就是隐函数，答案含 $z$ 是正常的。\n- 记忆口诀：**\"隐函数求偏导，交叉求导带负号；分子是对另一变量的偏导，分母是对所求变量的偏导。\"**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 679
+  },
+  {
+   "id": "zk-202310-15",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 15 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 15,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $f(x,y) = \\mathrm{e}^{x}\\cos y$，求梯度 $\\mathrm{grad}\\,f\\!\\left(0, \\dfrac{\\pi}{4}\\right)$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：求两个偏导数。**\n\n$$\\frac{\\partial f}{\\partial x} = \\frac{\\partial}{\\partial x}\\left(\\mathrm{e}^{x}\\cos y\\right) = \\mathrm{e}^{x}\\cos y$$\n\n（对 $x$ 求偏导时 $\\cos y$ 是常数，$\\mathrm{e}^x$ 求导还是 $\\mathrm{e}^x$。）\n\n$$\\frac{\\partial f}{\\partial y} = \\frac{\\partial}{\\partial y}\\left(\\mathrm{e}^{x}\\cos y\\right) = \\mathrm{e}^{x}\\cdot(-\\sin y) = -\\mathrm{e}^{x}\\sin y$$\n\n（对 $y$ 求偏导时 $\\mathrm{e}^x$ 是常数，$\\cos y$ 求导得 $-\\sin y$。）\n\n**⚠️ 这里的负号是本题第一个关键点。**\n\n**第二步：写出梯度的一般表达式。**\n\n$$\\mathrm{grad}\\,f(x,y) = \\left\\{\\frac{\\partial f}{\\partial x},\\ \\frac{\\partial f}{\\partial y}\\right\\} = \\left\\{\\mathrm{e}^{x}\\cos y,\\ -\\mathrm{e}^{x}\\sin y\\right\\}$$\n\n用 $\\boldsymbol{i}, \\boldsymbol{j}$ 记号写就是\n\n$$\\mathrm{grad}\\,f(x,y) = \\mathrm{e}^{x}\\cos y\\,\\boldsymbol{i} - \\mathrm{e}^{x}\\sin y\\,\\boldsymbol{j}$$\n\n**第三步：代入点 $\\left(0, \\dfrac{\\pi}{4}\\right)$。**\n\n先算 $\\mathrm{e}^{x}\\big|_{x=0} = \\mathrm{e}^{0} = 1$，再算三角函数值：\n\n$$\\cos\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}, \\qquad \\sin\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$$\n\n代入：\n\n$$\\frac{\\partial f}{\\partial x}\\bigg|_{(0,\\frac{\\pi}{4})} = 1\\times\\frac{\\sqrt{2}}{2} = \\frac{\\sqrt{2}}{2}$$\n\n$$\\frac{\\partial f}{\\partial y}\\bigg|_{(0,\\frac{\\pi}{4})} = -1\\times\\frac{\\sqrt{2}}{2} = -\\frac{\\sqrt{2}}{2}$$\n\n所以\n\n$$\\mathrm{grad}\\,f\\!\\left(0,\\frac{\\pi}{4}\\right) = \\left\\{\\frac{\\sqrt{2}}{2},\\ -\\frac{\\sqrt{2}}{2}\\right\\} = \\frac{\\sqrt{2}}{2}\\boldsymbol{i} - \\frac{\\sqrt{2}}{2}\\boldsymbol{j}$$",
+   "points": [
+    {
+     "text": "求两个偏导数。\n\n$$\\frac{\\partial f}{\\partial x} = \\frac{\\partial}{\\partial x}\\left(\\mathrm{e}^{x}\\cos y\\right) = \\mathrm{e}^{x}\\cos y$$\n\n（对 $x$ 求偏导时 $\\cos y$ 是常数，$\\mathrm{e}^x$ 求导还是 $\\mathrm{e}^x$。）\n\n$$\\frac{\\partial f}{\\partial y} = \\frac{\\partial}{\\partial y}\\left(\\mathrm{e}^{x}\\cos y\\right) = \\mathrm{e}^{x}\\cdot(-\\sin y) = -\\mathrm{e}^{x}\\sin y$$\n\n（对 $y$ 求偏导时 $\\mathrm{e}^x$ 是常数，$\\cos y$ 求导得 $-\\sin y$。）\n\n⚠️ 这里的负号是本题第一个关键点。",
+     "partial": 2
+    },
+    {
+     "text": "写出梯度的一般表达式。\n\n$$\\mathrm{grad}\\,f(x,y) = \\left\\{\\frac{\\partial f}{\\partial x},\\ \\frac{\\partial f}{\\partial y}\\right\\} = \\left\\{\\mathrm{e}^{x}\\cos y,\\ -\\mathrm{e}^{x}\\sin y\\right\\}$$\n\n用 $\\boldsymbol{i}, \\boldsymbol{j}$ 记号写就是\n\n$$\\mathrm{grad}\\,f(x,y) = \\mathrm{e}^{x}\\cos y\\,\\boldsymbol{i} - \\mathrm{e}^{x}\\sin y\\,\\boldsymbol{j}$$",
+     "partial": 2
+    },
+    {
+     "text": "代入点 $\\left(0, \\dfrac{\\pi}{4}\\right)$。",
+     "partial": 2
+    },
+    {
+     "text": "先算 $\\mathrm{e}^{x}\\big|_{x=0} = \\mathrm{e}^{0} = 1$，再算三角函数值：",
+     "partial": 2
+    },
+    {
+     "text": "$$\\cos\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}, \\qquad \\sin\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$$",
+     "partial": 2
+    },
+    {
+     "text": "代入：；$$\\frac{\\partial f}{\\partial x}\\bigg|_{(0,\\frac{\\pi}{4})} = 1\\times\\frac{\\sqrt{2}}{2} = \\frac{\\sqrt{2}}{2}$$；$$\\frac{\\partial f}{\\partial y}\\bigg|_{(0,\\frac{\\pi}{4})} = -1\\times\\frac{\\sqrt{2}}{2} = -\\frac{\\sqrt{2}}{2}$$；所以；$$\\mathrm{grad}\\,f\\!\\left(0,\\frac{\\pi}{4}\\right) = \\left\\{\\frac{\\sqrt{2}}{2},\\ -\\frac{\\sqrt{2}}{2}\\right\\} = \\frac{\\sqrt{2}}{2}\\boldsymbol{i} - \\frac{\\sqrt{2}}{2}\\boldsymbol{j}$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：**梯度的定义**与偏导数计算。\n**考点出处**：梯度（多元函数微分学）\n**第一步：求两个偏导数。**\n\n$$\\frac{\\partial f}{\\partial x} = \\frac{\\partial}{\\partial x}\\left(\\mathrm{e}^{x}\\cos y\\right) = \\mathrm{e}^{x}\\cos y$$\n\n（对 $x$ 求偏导时 $\\cos y$ 是常数，$\\mathrm{e}^x$ 求导还是 $\\mathrm{e}^x$。）\n\n$$\\frac{\\partial f}{\\partial y} = \\frac{\\partial}{\\partial y}\\left(\\mathrm{e}^{x}\\cos y\\right) = \\mathrm{e}^{x}\\cdot(-\\sin y) = -\\mathrm{e}^{x}\\sin y$$\n\n（对 $y$ 求偏导时 $\\mathrm{e}^x$ 是常数，$\\cos y$ 求导得 $-\\sin y$。）\n\n**⚠️ 这里的负号是本题第一个关键点。**\n\n**第二步：写出梯度的一般表达式。**\n\n$$\\mathrm{grad}\\,f(x,y) = \\left\\{\\frac{\\partial f}{\\partial x},\\ \\frac{\\partial f}{\\partial y}\\right\\} = \\left\\{\\mathrm{e}^{x}\\cos y,\\ -\\mathrm{e}^{x}\\sin y\\right\\}$$\n\n用 $\\boldsymbol{i}, \\boldsymbol{j}$ 记号写就是\n\n$$\\mathrm{grad}\\,f(x,y) = \\mathrm{e}^{x}\\cos y\\,\\boldsymbol{i} - \\mathrm{e}^{x}\\sin y\\,\\boldsymbol{j}$$\n\n**第三步：代入点 $\\left(0, \\dfrac{\\pi}{4}\\right)$。**\n\n先算 $\\mathrm{e}^{x}\\big|_{x=0} = \\mathrm{e}^{0} = 1$，再算三角函数值：\n\n$$\\cos\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}, \\qquad \\sin\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$$\n\n代入：\n\n$$\\frac{\\partial f}{\\partial x}\\bigg|_{(0,\\frac{\\pi}{4})} = 1\\times\\frac{\\sqrt{2}}{2} = \\frac{\\sqrt{2}}{2}$$\n\n$$\\frac{\\partial f}{\\partial y}\\bigg|_{(0,\\frac{\\pi}{4})} = -1\\times\\frac{\\sqrt{2}}{2} = -\\frac{\\sqrt{2}}{2}$$\n\n所以\n\n$$\\mathrm{grad}\\,f\\!\\left(0,\\frac{\\pi}{4}\\right) = \\left\\{\\frac{\\sqrt{2}}{2},\\ -\\frac{\\sqrt{2}}{2}\\right\\} = \\frac{\\sqrt{2}}{2}\\boldsymbol{i} - \\frac{\\sqrt{2}}{2}\\boldsymbol{j}$$",
+   "misconception": "- **$\\dfrac{\\partial f}{\\partial y}$ 的负号是本题最大的失分点**：$\\dfrac{\\mathrm{d}}{\\mathrm{d}y}\\cos y = -\\sin y$，**负号必须写**。漏掉负号会得到 $\\dfrac{\\sqrt{2}}{2}\\boldsymbol{i} + \\dfrac{\\sqrt{2}}{2}\\boldsymbol{j}$，前功尽弃。\n- **梯度是向量，不是数**。答案必须写成坐标形式 $\\{f_x, f_y\\}$ 或 $\\dfrac{\\sqrt{2}}{2}\\boldsymbol{i} - \\dfrac{\\sqrt{2}}{2}\\boldsymbol{j}$。**只写 $\\dfrac{\\sqrt{2}}{2}$ 是没有分数的。** 若题目求的是\"方向导数\"，那才是标量。\n- **注意\"先求偏导、再代点\"的顺序**。不能先把 $(0,\\frac{\\pi}{4})$ 代入原函数再求导（那样求出来的是 $0$）。**必须对一般点求偏导，得到含 $x, y$ 的表达式，最后才代入具体坐标。**\n- **$\\sin\\frac{\\pi}{4} = \\cos\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$，都是正值**。本题的负号**只来自余弦求导**，不要把 $\\sin\\frac{\\pi}{4}$ 本身当成负数。\n- 梯度的几何意义（了解即可）：$\\mathrm{grad}\\,f$ 指向函数值**增长最快**的方向，其模长 $|\\mathrm{grad}\\,f|$ 就是**最大方向导数**。本题中 $|\\mathrm{grad}\\,f| = \\sqrt{\\frac{1}{2}+\\frac{1}{2}} = 1$。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 680
+  },
+  {
+   "id": "zk-202404-14",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 14 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 14,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求函数 $u = 2xy - z^2$ 在点 $(2, -1, 1)$ 处的梯度。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：求三个偏导数。**\n\n对 $u = 2xy - z^2$ 分别求偏导（求谁就把谁当变量，其余全当常数）：\n\n$$\\frac{\\partial u}{\\partial x} = 2y,\\qquad \\frac{\\partial u}{\\partial y} = 2x,\\qquad \\frac{\\partial u}{\\partial z} = -2z$$\n\n**第二步：代入点 $(2, -1, 1)$。**\n\n$$\\frac{\\partial u}{\\partial x}\\bigg|_{(2,-1,1)} = 2\\times(-1) = -2$$\n\n$$\\frac{\\partial u}{\\partial y}\\bigg|_{(2,-1,1)} = 2\\times 2 = 4$$\n\n$$\\frac{\\partial u}{\\partial z}\\bigg|_{(2,-1,1)} = -2\\times 1 = -2$$\n\n**第三步：写成梯度向量。**\n\n$$\\mathrm{grad}\\,u(2,-1,1) = \\{-2,\\ 4,\\ -2\\}$$",
+   "points": [
+    {
+     "text": "求三个偏导数。\n\n对 $u = 2xy - z^2$ 分别求偏导（求谁就把谁当变量，其余全当常数）：\n\n$$\\frac{\\partial u}{\\partial x} = 2y,\\qquad \\frac{\\partial u}{\\partial y} = 2x,\\qquad \\frac{\\partial u}{\\partial z} = -2z$$",
+     "partial": 2
+    },
+    {
+     "text": "代入点 $(2, -1, 1)$。",
+     "partial": 2
+    },
+    {
+     "text": "$$\\frac{\\partial u}{\\partial x}\\bigg|_{(2,-1,1)} = 2\\times(-1) = -2$$",
+     "partial": 2
+    },
+    {
+     "text": "$$\\frac{\\partial u}{\\partial y}\\bigg|_{(2,-1,1)} = 2\\times 2 = 4$$",
+     "partial": 2
+    },
+    {
+     "text": "$$\\frac{\\partial u}{\\partial z}\\bigg|_{(2,-1,1)} = -2\\times 1 = -2$$",
+     "partial": 2
+    },
+    {
+     "text": "写成梯度向量。\n\n$$\\mathrm{grad}\\,u(2,-1,1) = \\{-2,\\ 4,\\ -2\\}$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：梯度的定义：$\\mathrm{grad}\\,u = \\left\\{\\dfrac{\\partial u}{\\partial x},\\ \\dfrac{\\partial u}{\\partial y},\\ \\dfrac{\\partial u}{\\partial z}\\right\\}$。\n**考点出处**：梯度（多元函数微分学）\n**第一步：求三个偏导数。**\n\n对 $u = 2xy - z^2$ 分别求偏导（求谁就把谁当变量，其余全当常数）：\n\n$$\\frac{\\partial u}{\\partial x} = 2y,\\qquad \\frac{\\partial u}{\\partial y} = 2x,\\qquad \\frac{\\partial u}{\\partial z} = -2z$$\n\n**第二步：代入点 $(2, -1, 1)$。**\n\n$$\\frac{\\partial u}{\\partial x}\\bigg|_{(2,-1,1)} = 2\\times(-1) = -2$$\n\n$$\\frac{\\partial u}{\\partial y}\\bigg|_{(2,-1,1)} = 2\\times 2 = 4$$\n\n$$\\frac{\\partial u}{\\partial z}\\bigg|_{(2,-1,1)} = -2\\times 1 = -2$$\n\n**第三步：写成梯度向量。**\n\n$$\\mathrm{grad}\\,u(2,-1,1) = \\{-2,\\ 4,\\ -2\\}$$",
+   "misconception": "- **梯度的本质是\"偏导数排成的向量\"**，它是**向量**（带花括号），不是数值。答案写成 $-2$ 就错了。\n- 逐项检查：\n  - $\\dfrac{\\partial u}{\\partial x} = 2y$：把 $y$、$z$ 当常数，$2xy$ 对 $x$ 求导得 $2y$，$-z^2$ 是常数 → 导数为 0。**代入 $y=-1$ 得 $-2$**。\n  - $\\dfrac{\\partial u}{\\partial y} = 2x$：代入 $x=2$ 得 $4$。\n  - $\\dfrac{\\partial u}{\\partial z} = -2z$：代入 $z=1$ 得 $-2$。**注意负号别丢**。\n- 常见错误：把 $\\dfrac{\\partial u}{\\partial y}$ 写成 $2xy$ 的完整形式就忘了 $z$ 项——其实 $-z^2$ 对 $y$ 求导是 $0$，这一项直接消失。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 681
+  },
+  {
+   "id": "zk-202404-15",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 15 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 15,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求函数 $f(x,y) = 4(x-y) - x^2 - y^2$ 的极值。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：展开函数，方便求导。**\n\n$$f(x,y) = 4x - 4y - x^2 - y^2$$\n\n**第二步：求一阶偏导并令其为零，解出驻点。**\n\n$$\\begin{cases} f_x = 4 - 2x = 0 \\\\ f_y = -4 - 2y = 0 \\end{cases}$$\n\n由第一式得 $x = 2$，由第二式得 $y = -2$。**驻点为 $(2, -2)$。**\n\n**第三步：求二阶偏导数，得到 $A$、$B$、$C$。**\n\n$$A = f_{xx} = -2,\\qquad B = f_{xy} = 0,\\qquad C = f_{yy} = -2$$\n\n**第四步：计算判别式 $\\Delta = B^2 - AC$。**\n\n$$\\Delta = B^2 - AC = 0^2 - (-2)\\times(-2) = 0 - 4 = -4 < 0$$\n\n**第五步：判断极值类型。**\n\n- $\\Delta < 0$ ⟹ **有极值**\n- $A < 0$ ⟹ **极大值**\n- $A > 0$ ⟹ **极小值**\n\n这里 $\\Delta = -4 < 0$ 且 $A = -2 < 0$，所以**有极大值**。\n\n**第六步：求极值。**\n\n$$f(2, -2) = 4\\big(2 - (-2)\\big) - 2^2 - (-2)^2 = 4\\times 4 - 4 - 4 = 16 - 8 = 8$$\n\n**结论：函数有极大值 $f(2,-2) = 8$。**",
+   "points": [
+    {
+     "text": "展开函数，方便求导。\n\n$$f(x,y) = 4x - 4y - x^2 - y^2$$",
+     "partial": 2
+    },
+    {
+     "text": "求一阶偏导并令其为零，解出驻点。\n\n$$\\begin{cases} f_x = 4 - 2x = 0 \\\\ f_y = -4 - 2y = 0 \\end{cases}$$\n\n由第一式得 $x = 2$，由第二式得 $y = -2$。驻点为 $(2, -2)$。",
+     "partial": 2
+    },
+    {
+     "text": "求二阶偏导数，得到 $A$、$B$、$C$。\n\n$$A = f_{xx} = -2,\\qquad B = f_{xy} = 0,\\qquad C = f_{yy} = -2$$",
+     "partial": 2
+    },
+    {
+     "text": "计算判别式 $\\Delta = B^2 - AC$。\n\n$$\\Delta = B^2 - AC = 0^2 - (-2)\\times(-2) = 0 - 4 = -4 < 0$$",
+     "partial": 2
+    },
+    {
+     "text": "判断极值类型。\n\n- $\\Delta < 0$ ⟹ 有极值\n- $A < 0$ ⟹ 极大值\n- $A > 0$ ⟹ 极小值\n\n这里 $\\Delta = -4 < 0$ 且 $A = -2 < 0$，所以有极大值。",
+     "partial": 2
+    },
+    {
+     "text": "求极值。\n\n$$f(2, -2) = 4\\big(2 - (-2)\\big) - 2^2 - (-2)^2 = 4\\times 4 - 4 - 4 = 16 - 8 = 8$$\n\n结论：函数有极大值 $f(2,-2) = 8$。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：二元函数极值的**充分条件判别法**（$A$、$B$、$C$ 判别法，也称海塞矩阵判别法）。\n**考点出处**：二元函数的极值（多元函数微分学）\n**第一步：展开函数，方便求导。**\n\n$$f(x,y) = 4x - 4y - x^2 - y^2$$\n\n**第二步：求一阶偏导并令其为零，解出驻点。**\n\n$$\\begin{cases} f_x = 4 - 2x = 0 \\\\ f_y = -4 - 2y = 0 \\end{cases}$$\n\n由第一式得 $x = 2$，由第二式得 $y = -2$。**驻点为 $(2, -2)$。**\n\n**第三步：求二阶偏导数，得到 $A$、$B$、$C$。**\n\n$$A = f_{xx} = -2,\\qquad B = f_{xy} = 0,\\qquad C = f_{yy} = -2$$\n\n**第四步：计算判别式 $\\Delta = B^2 - AC$。**\n\n$$\\Delta = B^2 - AC = 0^2 - (-2)\\times(-2) = 0 - 4 = -4 < 0$$\n\n**第五步：判断极值类型。**\n\n- $\\Delta < 0$ ⟹ **有极值**\n- $A < 0$ ⟹ **极大值**\n- $A > 0$ ⟹ **极小值**\n\n这里 $\\Delta = -4 < 0$ 且 $A = -2 < 0$，所以**有极大值**。\n\n**第六步：求极值。**\n\n$$f(2, -2) = 4\\big(2 - (-2)\\big) - 2^2 - (-2)^2 = 4\\times 4 - 4 - 4 = 16 - 8 = 8$$\n\n**结论：函数有极大值 $f(2,-2) = 8$。**",
+   "misconception": "- **判别式三种情况要记牢**：\n\n· $\\Delta = B^2 - AC$ / 结论\n· $\\Delta < 0$ / 有极值（$A<0$ 极大，$A>0$ 极小）\n· $\\Delta > 0$ / 无极值\n· $\\Delta = 0$ / 需另行判断\n\n- **$f_y = -4 - 2y$ 中的负号最容易丢**：因为原式是 $4(x-y) - \\cdots$，对 $y$ 求导时 $-4y$ 给出 $-4$，再加上 $-y^2$ 的导数 $-2y$。\n- 求解驻点时注意：$f_y = -4 - 2y = 0 \\Rightarrow 2y = -4 \\Rightarrow y = -2$。**不要写成 $y = 2$。**\n- **最后一定要算出极值 $f(2,-2)=8$**。题目问的是\"求极值\"，如果只回答\"在 $(2,-2)$ 处取极大值\"而不给出数值，会丢分。\n- 这是典型的**多元函数极值全流程题**：求偏导 → 解驻点 → 求二阶导 → 判别 → 求值。五步一步都不能少。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 682
+  },
+  {
+   "id": "zk-202410-13",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 13 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 13,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设 $z = z(x,y)$ 由方程 $x^2 + y^2 + z^2 - 4z = 0$ 所确定，求 $\\dfrac{\\partial z}{\\partial x}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：构造 $F(x,y,z) = 0$，把所有项移到一边。**\n\n$$F(x, y, z) = x^2 + y^2 + z^2 - 4z$$\n\n**第二步：分别求 $F_x$ 和 $F_z$。**\n\n求 $F_x$ 时把 $y, z$ 当常数：\n\n$$F_x = 2x$$\n\n求 $F_z$ 时把 $x, y$ 当常数：\n\n$$F_z = 2z - 4$$\n\n**第三步：套隐函数求偏导公式。**\n\n$$\\frac{\\partial z}{\\partial x} = -\\frac{F_x}{F_z} = -\\frac{2x}{2z - 4}$$\n\n**第四步：约分整理。**\n\n$$-\\frac{2x}{2z-4} = -\\frac{2x}{2(z-2)} = -\\frac{x}{z-2} = \\frac{x}{2-z}$$\n\n$$\\boxed{\\frac{\\partial z}{\\partial x} = \\frac{x}{2-z}}$$",
+   "points": [
+    {
+     "text": "构造 $F(x,y,z) = 0$，把所有项移到一边。\n\n$$F(x, y, z) = x^2 + y^2 + z^2 - 4z$$",
+     "partial": 2
+    },
+    {
+     "text": "分别求 $F_x$ 和 $F_z$。\n\n求 $F_x$ 时把 $y, z$ 当常数：\n\n$$F_x = 2x$$\n\n求 $F_z$ 时把 $x, y$ 当常数：\n\n$$F_z = 2z - 4$$",
+     "partial": 2
+    },
+    {
+     "text": "套隐函数求偏导公式。\n\n$$\\frac{\\partial z}{\\partial x} = -\\frac{F_x}{F_z} = -\\frac{2x}{2z - 4}$$",
+     "partial": 2
+    },
+    {
+     "text": "约分整理。",
+     "partial": 2
+    },
+    {
+     "text": "$$-\\frac{2x}{2z-4} = -\\frac{2x}{2(z-2)} = -\\frac{x}{z-2} = \\frac{x}{2-z}$$",
+     "partial": 2
+    },
+    {
+     "text": "$$\\boxed{\\frac{\\partial z}{\\partial x} = \\frac{x}{2-z}}$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：隐函数求偏导数（多元函数微分学）。\n**考点出处**：隐函数求偏导数（多元函数微分学）\n**第一步：构造 $F(x,y,z) = 0$，把所有项移到一边。**\n\n$$F(x, y, z) = x^2 + y^2 + z^2 - 4z$$\n\n**第二步：分别求 $F_x$ 和 $F_z$。**\n\n求 $F_x$ 时把 $y, z$ 当常数：\n\n$$F_x = 2x$$\n\n求 $F_z$ 时把 $x, y$ 当常数：\n\n$$F_z = 2z - 4$$\n\n**第三步：套隐函数求偏导公式。**\n\n$$\\frac{\\partial z}{\\partial x} = -\\frac{F_x}{F_z} = -\\frac{2x}{2z - 4}$$\n\n**第四步：约分整理。**\n\n$$-\\frac{2x}{2z-4} = -\\frac{2x}{2(z-2)} = -\\frac{x}{z-2} = \\frac{x}{2-z}$$\n\n$$\\boxed{\\frac{\\partial z}{\\partial x} = \\frac{x}{2-z}}$$",
+   "misconception": "- **公式里的负号必须带**：$\\dfrac{\\partial z}{\\partial x} = -\\dfrac{F_x}{F_z}$。**漏掉负号是本题最常见的失分点**，会得到 $-\\dfrac{x}{2-z}$。\n- **分子分母不要写反**：分子是**对所求变量的偏导**（$F_x$），分母是**对方程所确定变量的偏导**（$F_z$）。写反会得到 $\\dfrac{2-z}{x}$。\n- **最终符号要收拾干净**：$-\\dfrac{x}{z-2}$ 与 $\\dfrac{x}{2-z}$ 是同一个式子；但写成 $\\dfrac{x}{z-2}$ 就错了（差一个负号）。\n- **结果里保留 $z$ 是完全正常的**：本题是隐函数，$z$ 无法（也不必）解成 $x,y$ 的显式表达式。\n- **口诀**：**\"隐函数求偏导，交叉求导带负号；分子是对另一变量的偏导，分母是对所求变量的偏导。\"**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 683
+  },
+  {
+   "id": "zk-202410-15",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 15 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 15,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $u(x,y,z) = 2\\sqrt{xyz}$，求梯度 $\\mathrm{grad}\\,u(1,1,1)$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：求三个偏导数。**\n\n把 $u = 2(xyz)^{1/2}$ 看作幂函数求导。对 $x$ 求导时 $y, z$ 是常数因子：\n\n$$\\frac{\\partial u}{\\partial x} = 2\\cdot\\frac{1}{2}(xyz)^{-1/2}\\cdot yz = \\frac{yz}{\\sqrt{xyz}}$$\n\n同理\n\n$$\\frac{\\partial u}{\\partial y} = \\frac{xz}{\\sqrt{xyz}}, \\qquad \\frac{\\partial u}{\\partial z} = \\frac{xy}{\\sqrt{xyz}}$$\n\n**第二步：写出梯度的一般表达式。**\n\n$$\\mathrm{grad}\\,u = \\left\\{\\frac{yz}{\\sqrt{xyz}},\\ \\frac{xz}{\\sqrt{xyz}},\\ \\frac{xy}{\\sqrt{xyz}}\\right\\}$$\n\n用 $\\boldsymbol{i},\\boldsymbol{j},\\boldsymbol{k}$ 记号写就是\n\n$$\\mathrm{grad}\\,u = \\frac{yz}{\\sqrt{xyz}}\\boldsymbol{i} + \\frac{xz}{\\sqrt{xyz}}\\boldsymbol{j} + \\frac{xy}{\\sqrt{xyz}}\\boldsymbol{k}$$\n\n**第三步：代入 $(1,1,1)$。**\n\n$\\sqrt{1\\cdot1\\cdot1} = 1$，三个分子分别都是 $1\\times1 = 1$，所以\n\n$$\\mathrm{grad}\\,u(1,1,1) = \\left\\{1,\\ 1,\\ 1\\right\\} = \\boldsymbol{i} + \\boldsymbol{j} + \\boldsymbol{k}$$",
+   "points": [
+    {
+     "text": "求三个偏导数。\n\n把 $u = 2(xyz)^{1/2}$ 看作幂函数求导。对 $x$ 求导时 $y, z$ 是常数因子：\n\n$$\\frac{\\partial u}{\\partial x} = 2\\cdot\\frac{1}{2}(xyz)^{-1/2}\\cdot yz = \\frac{yz}{\\sqrt{xyz}}$$\n\n同理\n\n$$\\frac{\\partial u}{\\partial y} = \\frac{xz}{\\sqrt{xyz}}, \\qquad \\frac{\\partial u}{\\partial z} = \\frac{xy}{\\sqrt{xyz}}$$",
+     "partial": 2
+    },
+    {
+     "text": "写出梯度的一般表达式。",
+     "partial": 2
+    },
+    {
+     "text": "$$\\mathrm{grad}\\,u = \\left\\{\\frac{yz}{\\sqrt{xyz}},\\ \\frac{xz}{\\sqrt{xyz}},\\ \\frac{xy}{\\sqrt{xyz}}\\right\\}$$",
+     "partial": 2
+    },
+    {
+     "text": "用 $\\boldsymbol{i},\\boldsymbol{j},\\boldsymbol{k}$ 记号写就是",
+     "partial": 2
+    },
+    {
+     "text": "$$\\mathrm{grad}\\,u = \\frac{yz}{\\sqrt{xyz}}\\boldsymbol{i} + \\frac{xz}{\\sqrt{xyz}}\\boldsymbol{j} + \\frac{xy}{\\sqrt{xyz}}\\boldsymbol{k}$$",
+     "partial": 2
+    },
+    {
+     "text": "代入 $(1,1,1)$。\n\n$\\sqrt{1\\cdot1\\cdot1} = 1$，三个分子分别都是 $1\\times1 = 1$，所以\n\n$$\\mathrm{grad}\\,u(1,1,1) = \\left\\{1,\\ 1,\\ 1\\right\\} = \\boldsymbol{i} + \\boldsymbol{j} + \\boldsymbol{k}$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：梯度的定义与偏导数计算（多元函数微分学）。\n**考点出处**：梯度（多元函数微分学）\n**第一步：求三个偏导数。**\n\n把 $u = 2(xyz)^{1/2}$ 看作幂函数求导。对 $x$ 求导时 $y, z$ 是常数因子：\n\n$$\\frac{\\partial u}{\\partial x} = 2\\cdot\\frac{1}{2}(xyz)^{-1/2}\\cdot yz = \\frac{yz}{\\sqrt{xyz}}$$\n\n同理\n\n$$\\frac{\\partial u}{\\partial y} = \\frac{xz}{\\sqrt{xyz}}, \\qquad \\frac{\\partial u}{\\partial z} = \\frac{xy}{\\sqrt{xyz}}$$\n\n**第二步：写出梯度的一般表达式。**\n\n$$\\mathrm{grad}\\,u = \\left\\{\\frac{yz}{\\sqrt{xyz}},\\ \\frac{xz}{\\sqrt{xyz}},\\ \\frac{xy}{\\sqrt{xyz}}\\right\\}$$\n\n用 $\\boldsymbol{i},\\boldsymbol{j},\\boldsymbol{k}$ 记号写就是\n\n$$\\mathrm{grad}\\,u = \\frac{yz}{\\sqrt{xyz}}\\boldsymbol{i} + \\frac{xz}{\\sqrt{xyz}}\\boldsymbol{j} + \\frac{xy}{\\sqrt{xyz}}\\boldsymbol{k}$$\n\n**第三步：代入 $(1,1,1)$。**\n\n$\\sqrt{1\\cdot1\\cdot1} = 1$，三个分子分别都是 $1\\times1 = 1$，所以\n\n$$\\mathrm{grad}\\,u(1,1,1) = \\left\\{1,\\ 1,\\ 1\\right\\} = \\boldsymbol{i} + \\boldsymbol{j} + \\boldsymbol{k}$$",
+   "misconception": "- **梯度是向量，不是数**。答案必须写成 $\\{1,1,1\\}$ 或 $\\boldsymbol{i}+\\boldsymbol{j}+\\boldsymbol{k}$。**只写 $1$ 是没有分数的。**\n- **三元函数的梯度有三个分量**，别只写两个（那是二元函数的格式）。\n- **外层常数 2 与内层求导产生的 $\\frac12$ 恰好约掉**：$2\\times\\frac12 = 1$。这是个巧合，**别以为\"系数会自动消失\"**——换个数就要老实算。\n- **对 $x$ 求偏导时 $yz$ 要留下来**：把 $\\sqrt{xyz}$ 看成 $(yz)^{1/2}x^{1/2}$，求导得 $(yz)^{1/2}\\cdot\\frac12x^{-1/2}$，整理成 $\\frac{yz}{2\\sqrt{xyz}}$，再乘外层 2 得 $\\frac{yz}{\\sqrt{xyz}}$。\n- **代点前先化简**：在 $(1,1,1)$ 处三个分量数值相同纯属特例，**换个点（如 $(4,1,1)$）就要分别计算**。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 684
+  },
+  {
+   "id": "zk-202504-15",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2025 年 4 月 自考 00023 高等数学（工本）第 15 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 15,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $z = z(x, y)$ 由方程 $z^4 - 2x^2y^2z^2 = 1$ 所确定，求 $\\dfrac{\\partial z}{\\partial y}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：把所有项移到一边，构造 $F(x, y, z) = 0$。**\n\n$$F(x, y, z) = z^4 - 2x^2y^2z^2 - 1$$\n\n**第二步：求 $F_y$（把 $x, z$ 当常数）。**\n\n对 $y$ 求偏导时，$z^4$ 和常数 $-1$ 都归零；$-2x^2y^2z^2$ 中 $-2x^2z^2$ 是常数因子，$y^2$ 求导得 $2y$：\n\n$$F_y = -2x^2z^2 \\times 2y = -4x^2yz^2$$\n\n**第三步：求 $F_z$（把 $x, y$ 当常数）。**\n\n$$F_z = 4z^3 - 2x^2y^2 \\times 2z = 4z^3 - 4x^2y^2z$$\n\n**第四步：套隐函数求偏导公式。**\n\n$$\\frac{\\partial z}{\\partial y} = -\\frac{F_y}{F_z} = -\\frac{-4x^2yz^2}{4z^3 - 4x^2y^2z} = \\frac{4x^2yz^2}{4z^3 - 4x^2y^2z}$$\n\n**第五步：约分整理。**\n\n分母提出公因子 $4z$：\n\n$$4z^3 - 4x^2y^2z = 4z\\left(z^2 - x^2y^2\\right)$$\n\n于是\n\n$$\\frac{\\partial z}{\\partial y} = \\frac{4x^2yz^2}{4z\\left(z^2 - x^2y^2\\right)} = \\frac{x^2yz^2}{z\\left(z^2 - x^2y^2\\right)}$$\n\n$$\\boxed{\\frac{\\partial z}{\\partial y} = \\frac{x^2yz}{z^2 - x^2y^2}}$$",
+   "points": [
+    {
+     "text": "把所有项移到一边，构造 $F(x, y, z) = 0$。\n\n$$F(x, y, z) = z^4 - 2x^2y^2z^2 - 1$$",
+     "partial": 2
+    },
+    {
+     "text": "求 $F_y$（把 $x, z$ 当常数）。\n\n对 $y$ 求偏导时，$z^4$ 和常数 $-1$ 都归零；$-2x^2y^2z^2$ 中 $-2x^2z^2$ 是常数因子，$y^2$ 求导得 $2y$：\n\n$$F_y = -2x^2z^2 \\times 2y = -4x^2yz^2$$",
+     "partial": 2
+    },
+    {
+     "text": "求 $F_z$（把 $x, y$ 当常数）。\n\n$$F_z = 4z^3 - 2x^2y^2 \\times 2z = 4z^3 - 4x^2y^2z$$",
+     "partial": 2
+    },
+    {
+     "text": "套隐函数求偏导公式。\n\n$$\\frac{\\partial z}{\\partial y} = -\\frac{F_y}{F_z} = -\\frac{-4x^2yz^2}{4z^3 - 4x^2y^2z} = \\frac{4x^2yz^2}{4z^3 - 4x^2y^2z}$$",
+     "partial": 2
+    },
+    {
+     "text": "约分整理。",
+     "partial": 2
+    },
+    {
+     "text": "分母提出公因子 $4z$：；$$4z^3 - 4x^2y^2z = 4z\\left(z^2 - x^2y^2\\right)$$；于是；$$\\frac{\\partial z}{\\partial y} = \\frac{4x^2yz^2}{4z\\left(z^2 - x^2y^2\\right)} = \\frac{x^2yz^2}{z\\left(z^2 - x^2y^2\\right)}$$；$$\\boxed{\\frac{\\partial z}{\\partial y} = \\frac{x^2yz}{z^2 - x^2y^2}}$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：隐函数求偏导数（$\\dfrac{\\partial z}{\\partial y} = -\\dfrac{F_y}{F_z}$），多元函数微分学。\n**考点出处**：梯度（隐函数求偏导）\n**第一步：把所有项移到一边，构造 $F(x, y, z) = 0$。**\n\n$$F(x, y, z) = z^4 - 2x^2y^2z^2 - 1$$\n\n**第二步：求 $F_y$（把 $x, z$ 当常数）。**\n\n对 $y$ 求偏导时，$z^4$ 和常数 $-1$ 都归零；$-2x^2y^2z^2$ 中 $-2x^2z^2$ 是常数因子，$y^2$ 求导得 $2y$：\n\n$$F_y = -2x^2z^2 \\times 2y = -4x^2yz^2$$\n\n**第三步：求 $F_z$（把 $x, y$ 当常数）。**\n\n$$F_z = 4z^3 - 2x^2y^2 \\times 2z = 4z^3 - 4x^2y^2z$$\n\n**第四步：套隐函数求偏导公式。**\n\n$$\\frac{\\partial z}{\\partial y} = -\\frac{F_y}{F_z} = -\\frac{-4x^2yz^2}{4z^3 - 4x^2y^2z} = \\frac{4x^2yz^2}{4z^3 - 4x^2y^2z}$$\n\n**第五步：约分整理。**\n\n分母提出公因子 $4z$：\n\n$$4z^3 - 4x^2y^2z = 4z\\left(z^2 - x^2y^2\\right)$$\n\n于是\n\n$$\\frac{\\partial z}{\\partial y} = \\frac{4x^2yz^2}{4z\\left(z^2 - x^2y^2\\right)} = \\frac{x^2yz^2}{z\\left(z^2 - x^2y^2\\right)}$$\n\n$$\\boxed{\\frac{\\partial z}{\\partial y} = \\frac{x^2yz}{z^2 - x^2y^2}}$$",
+   "misconception": "- **公式里的负号必须带**：$\\dfrac{\\partial z}{\\partial y} = -\\dfrac{F_y}{F_z}$。**本题 $F_y$ 本身就已经是负的（$-4x^2yz^2$），负负得正，最终结果没有负号。** 很多同学在这里搞混：**要么把公式的负号漏掉（得到 $-\\dfrac{x^2yz}{z^2-x^2y^2}$），要么忘了 $F_y$ 自带负号（得到 $-\\dfrac{x^2yz}{z^2-x^2y^2}$）——两种错误结果一样，都错在一个负号上。**\n- **分子分母不要写反**：分子是**对所求变量的偏导** $F_y$，分母是**对方程所确定变量的偏导** $F_z$。写反会得到 $\\dfrac{z^2-x^2y^2}{x^2yz}$。\n- **$F_z$ 有两项，都要算到**：$z^4$ 求导得 $4z^3$；$-2x^2y^2z^2$ 对 $z$ 求导得 $-2x^2y^2 \\times 2z = -4x^2y^2z$。**只写 $4z^3$ 会漏掉第二项，答案就完全变样。**\n- **对 $y$ 求偏导时，$z^2$ 是常数因子**：因为这里 $z$ 是被 $x,y$ 确定的因变量，但在求 $F$ 的偏导这一步，$F$ 是**三元函数**，$x, y, z$ 三个字母彼此独立，**求 $F_y$ 时 $z$ 就是常数。** 这正是\"隐函数求偏导\"最容易想不通的一点，务必分清\"$z$ 是 $x,y$ 的函数\"和\"$F$ 是三元函数\"这两个层次。\n- **约分要小心**：$\\dfrac{4x^2yz^2}{4z(z^2-x^2y^2)}$ 中分子分母同除 $4z$，**必须在 $z \\ne 0$ 的前提下**。本题由原方程 $z^4 - 2x^2y^2z^2 = 1$ 可知 $z = 0$ 时左边为 $0 \\ne 1$，所以 $z \\ne 0$ 恒成立，**约分是合法的**（考试时写不写这一步都不扣分，但心里要有数）。\n- **结果里保留 $z$ 是完全正常的**：隐函数求偏导的结果**允许含 $z$**，不必（也常常不能）解成 $x, y$ 的显式。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 685
+  },
+  {
+   "id": "zk-202510-13",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 13 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 13,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求曲面 $4x^2 + 2y^2 + z^2 = 10$ 在点 $P(1,1,2)$ 处的切平面方程.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：先验证点 $P$ 在曲面上。**\n\n$$4\\times 1^2 + 2\\times 1^2 + 2^2 = 4 + 2 + 4 = 10 ✓$$\n\n点 $P$ 确实在曲面上。\n\n**第二步：把曲面写成 $F(x,y,z) = 0$ 的形式。**\n\n$$F(x,y,z) = 4x^2 + 2y^2 + z^2 - 10$$\n\n**第三步：求三个一阶偏导，得到法向量的一般表达式。**\n\n$$F_x = 8x, \\qquad F_y = 4y, \\qquad F_z = 2z$$\n\n$$\\boldsymbol{n} = \\{F_x,\\ F_y,\\ F_z\\} = \\{8x,\\ 4y,\\ 2z\\}$$\n\n**第四步：把点 $P(1,1,2)$ 代入，得到该点的法向量。**\n\n$$\\boldsymbol{n}\\Big|_P = \\{8\\times 1,\\ 4\\times 1,\\ 2\\times 2\\} = \\{8,\\ 4,\\ 4\\}$$\n\n（公因子 $4$ 可以约去，取 $\\boldsymbol{n} = \\{2,1,1\\}$ 更简洁，**方向不变、平面不变**。）\n\n**第五步：用点法式写切平面。**\n\n$$\\boldsymbol{n}\\cdot\\{(x-1),\\ (y-1),\\ (z-2)\\} = 0$$\n\n$$8(x-1) + 4(y-1) + 4(z-2) = 0$$\n\n两边除以 $4$：\n\n$$2(x-1) + (y-1) + (z-2) = 0$$\n\n展开整理：\n\n$$2x - 2 + y - 1 + z - 2 = 0 \\Longrightarrow \\boxed{2x + y + z - 5 = 0}$$\n\n**第六步：验算。**\n\n$P$ 在切平面上：$2\\times 1 + 1 + 2 - 5 = 0$ ✓（切平面必定经过切点）。",
+   "points": [
+    {
+     "text": "先验证点 $P$ 在曲面上。\n\n$$4\\times 1^2 + 2\\times 1^2 + 2^2 = 4 + 2 + 4 = 10 ✓$$\n\n点 $P$ 确实在曲面上。",
+     "partial": 2
+    },
+    {
+     "text": "把曲面写成 $F(x,y,z) = 0$ 的形式。\n\n$$F(x,y,z) = 4x^2 + 2y^2 + z^2 - 10$$",
+     "partial": 2
+    },
+    {
+     "text": "求三个一阶偏导，得到法向量的一般表达式。\n\n$$F_x = 8x, \\qquad F_y = 4y, \\qquad F_z = 2z$$\n\n$$\\boldsymbol{n} = \\{F_x,\\ F_y,\\ F_z\\} = \\{8x,\\ 4y,\\ 2z\\}$$",
+     "partial": 2
+    },
+    {
+     "text": "把点 $P(1,1,2)$ 代入，得到该点的法向量。\n\n$$\\boldsymbol{n}\\Big|_P = \\{8\\times 1,\\ 4\\times 1,\\ 2\\times 2\\} = \\{8,\\ 4,\\ 4\\}$$\n\n（公因子 $4$ 可以约去，取 $\\boldsymbol{n} = \\{2,1,1\\}$ 更简洁，方向不变、平面不变。）",
+     "partial": 2
+    },
+    {
+     "text": "用点法式写切平面。\n\n$$\\boldsymbol{n}\\cdot\\{(x-1),\\ (y-1),\\ (z-2)\\} = 0$$\n\n$$8(x-1) + 4(y-1) + 4(z-2) = 0$$\n\n两边除以 $4$：\n\n$$2(x-1) + (y-1) + (z-2) = 0$$\n\n展开整理：\n\n$$2x - 2 + y - 1 + z - 2 = 0 \\Longrightarrow \\boxed{2x + y + z - 5 = 0}$$",
+     "partial": 2
+    },
+    {
+     "text": "验算。\n\n$P$ 在切平面上：$2\\times 1 + 1 + 2 - 5 = 0$ ✓（切平面必定经过切点）。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：曲面的切平面方程（隐函数形式 $F(x,y,z) = 0$ 的法向量），多元函数微分学的几何应用。\n**考点出处**：多元函数微分学（隐函数求偏导）\n**第一步：先验证点 $P$ 在曲面上。**\n\n$$4\\times 1^2 + 2\\times 1^2 + 2^2 = 4 + 2 + 4 = 10 ✓$$\n\n点 $P$ 确实在曲面上。\n\n**第二步：把曲面写成 $F(x,y,z) = 0$ 的形式。**\n\n$$F(x,y,z) = 4x^2 + 2y^2 + z^2 - 10$$\n\n**第三步：求三个一阶偏导，得到法向量的一般表达式。**\n\n$$F_x = 8x, \\qquad F_y = 4y, \\qquad F_z = 2z$$\n\n$$\\boldsymbol{n} = \\{F_x,\\ F_y,\\ F_z\\} = \\{8x,\\ 4y,\\ 2z\\}$$\n\n**第四步：把点 $P(1,1,2)$ 代入，得到该点的法向量。**\n\n$$\\boldsymbol{n}\\Big|_P = \\{8\\times 1,\\ 4\\times 1,\\ 2\\times 2\\} = \\{8,\\ 4,\\ 4\\}$$\n\n（公因子 $4$ 可以约去，取 $\\boldsymbol{n} = \\{2,1,1\\}$ 更简洁，**方向不变、平面不变**。）\n\n**第五步：用点法式写切平面。**\n\n$$\\boldsymbol{n}\\cdot\\{(x-1),\\ (y-1),\\ (z-2)\\} = 0$$\n\n$$8(x-1) + 4(y-1) + 4(z-2) = 0$$\n\n两边除以 $4$：\n\n$$2(x-1) + (y-1) + (z-2) = 0$$\n\n展开整理：\n\n$$2x - 2 + y - 1 + z - 2 = 0 \\Longrightarrow \\boxed{2x + y + z - 5 = 0}$$\n\n**第六步：验算。**\n\n$P$ 在切平面上：$2\\times 1 + 1 + 2 - 5 = 0$ ✓（切平面必定经过切点）。",
+   "misconception": "- **求导时系数别丢**：$F_x = 8x$（**不是 $4x$**），因为 $(4x^2)' = 8x$。同理 $F_y = 4y$。这是本题最常见的错误，会直接把法向量写成 $\\{4,2,2\\}$——虽然方向碰巧相同（因为本题恰好成比例），但**换个曲面就会全错**。\n- **先把偏导求出来，再代点**：不要把 $x$ 直接代进 $\\{8x, 4y, 2z\\}$ 之前就写进切平面方程（会得到 $8x^2 + \\cdots$ 这种错误形式）。**顺序是：求偏导 → 代点 → 点法式。**\n- **点法式里的点是切点 $P(1,1,2)$**，不是原点、也不是法向量的分量。写成 $2x + y + z = 0$（漏了常数项）是最典型的错。\n- **公因子可以约**：$\\{8,4,4\\}$ 与 $\\{2,1,1\\}$ 给出**同一个切平面**。但**不能各分量乱约**（比如只把 $8$ 和 $4$ 除以 $4$、留下 $2z$ 不动）。\n- **注意本题属于\"隐函数形式的曲面\"**：若曲面给成显式 $z = f(x,y)$，法向量应取 $\\{f_x, f_y, -1\\}$；**两种形式的法向量写法不能混**。本卷没有考显式情形，但复习时要一起记。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 686
+  },
+  {
+   "id": "zk-202510-15",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 15 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 15,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $z = z(x,y)$ 由方程 $xy + yz - xz - 4 = 0$ 所确定，求 $\\dfrac{\\partial z}{\\partial x}$.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：构造 $F(x,y,z) = 0$。**\n\n$$F(x,y,z) = xy + yz - xz - 4$$\n\n**第二步：分别求 $F_x$ 和 $F_z$。**\n\n求 $F_x$ 时把 $y, z$ 当常数：\n\n- $(xy)'_x = y$\n- $(yz)'_x = 0$（不含 $x$）\n- $(-xz)'_x = -z$\n\n$$F_x = y - z$$\n\n求 $F_z$ 时把 $x, y$ 当常数：\n\n- $(xy)'_z = 0$\n- $(yz)'_z = y$\n- $(-xz)'_z = -x$\n\n$$F_z = y - x$$\n\n**注意 $(-xz)'_z = -x$**，这里出现的是 $-x$，**不是 $-1$**——这是本题最关键的细节。\n\n**第三步：套隐函数求偏导公式。**\n\n$$\\frac{\\partial z}{\\partial x} = -\\frac{F_x}{F_z} = -\\frac{y - z}{y - x}$$\n\n**第四步：整理符号。**\n\n分母 $y - x = -(x - y)$，所以\n\n$$-\\frac{y-z}{y-x} = -\\frac{y-z}{-(x-y)} = \\frac{y-z}{x-y}$$\n\n$$\\boxed{\\frac{\\partial z}{\\partial x} = \\frac{y - z}{x - y}}$$\n\n**第五步：独立验算（全微分法）。**\n\n对方程两边直接求微分：\n\n$$(y\\,\\mathrm{d}x + x\\,\\mathrm{d}y) + (z\\,\\mathrm{d}y + y\\,\\mathrm{d}z) - (z\\,\\mathrm{d}x + x\\,\\mathrm{d}z) = 0$$\n\n整理出 $\\mathrm{d}z$ 的系数：\n\n$$(y - z)\\mathrm{d}x + (x + z)\\mathrm{d}y + (y - x)\\mathrm{d}z = 0$$\n\n$$\\mathrm{d}z = -\\frac{y-z}{y-x}\\mathrm{d}x - \\frac{x+z}{y-x}\\mathrm{d}y$$\n\n$\\mathrm{d}x$ 前的系数正是 $\\dfrac{y-z}{x-y}$ ✓，与上面一致。同时还能顺手得到 $\\dfrac{\\partial z}{\\partial y} = \\dfrac{x+z}{x-y}$。",
+   "points": [
+    {
+     "text": "构造 $F(x,y,z) = 0$。\n\n$$F(x,y,z) = xy + yz - xz - 4$$",
+     "partial": 2
+    },
+    {
+     "text": "分别求 $F_x$ 和 $F_z$。\n\n求 $F_x$ 时把 $y, z$ 当常数：\n\n- $(xy)'_x = y$\n- $(yz)'_x = 0$（不含 $x$）\n- $(-xz)'_x = -z$\n\n$$F_x = y - z$$\n\n求 $F_z$ 时把 $x, y$ 当常数：\n\n- $(xy)'_z = 0$\n- $(yz)'_z = y$\n- $(-xz)'_z = -x$\n\n$$F_z = y - x$$\n\n注意 $(-xz)'_z = -x$，这里出现的是 $-x$，不是 $-1$——这是本题最关键的细节。",
+     "partial": 2
+    },
+    {
+     "text": "套隐函数求偏导公式。\n\n$$\\frac{\\partial z}{\\partial x} = -\\frac{F_x}{F_z} = -\\frac{y - z}{y - x}$$",
+     "partial": 2
+    },
+    {
+     "text": "整理符号。\n\n分母 $y - x = -(x - y)$，所以\n\n$$-\\frac{y-z}{y-x} = -\\frac{y-z}{-(x-y)} = \\frac{y-z}{x-y}$$\n\n$$\\boxed{\\frac{\\partial z}{\\partial x} = \\frac{y - z}{x - y}}$$",
+     "partial": 2
+    },
+    {
+     "text": "独立验算（全微分法）。",
+     "partial": 2
+    },
+    {
+     "text": "对方程两边直接求微分：；$$(y\\,\\mathrm{d}x + x\\,\\mathrm{d}y) + (z\\,\\mathrm{d}y + y\\,\\mathrm{d}z) - (z\\,\\mathrm{d}x + x\\,\\mathrm{d}z) = 0$$；整理出 $\\mathrm{d}z$ 的系数：；$$(y - z)\\mathrm{d}x + (x + z)\\mathrm{d}y + (y - x)\\mathrm{d}z = 0$$；$$\\mathrm{d}z = -\\frac{y-z}{y-x}\\mathrm{d}x - \\frac{x+z}{y-x}\\mathrm{d}y$$；$\\mathrm{d}x$ 前的系数正是 $\\dfrac{y-z}{x-y}$ ✓，与上面一致。；同时还能顺手得到 $\\dfrac{\\partial z}{\\partial y} = \\dfrac{x+z}{x-y}$。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：隐函数求偏导数（多元函数微分学）。\n**考点出处**：多元函数微分学（梯度）\n**第一步：构造 $F(x,y,z) = 0$。**\n\n$$F(x,y,z) = xy + yz - xz - 4$$\n\n**第二步：分别求 $F_x$ 和 $F_z$。**\n\n求 $F_x$ 时把 $y, z$ 当常数：\n\n- $(xy)'_x = y$\n- $(yz)'_x = 0$（不含 $x$）\n- $(-xz)'_x = -z$\n\n$$F_x = y - z$$\n\n求 $F_z$ 时把 $x, y$ 当常数：\n\n- $(xy)'_z = 0$\n- $(yz)'_z = y$\n- $(-xz)'_z = -x$\n\n$$F_z = y - x$$\n\n**注意 $(-xz)'_z = -x$**，这里出现的是 $-x$，**不是 $-1$**——这是本题最关键的细节。\n\n**第三步：套隐函数求偏导公式。**\n\n$$\\frac{\\partial z}{\\partial x} = -\\frac{F_x}{F_z} = -\\frac{y - z}{y - x}$$\n\n**第四步：整理符号。**\n\n分母 $y - x = -(x - y)$，所以\n\n$$-\\frac{y-z}{y-x} = -\\frac{y-z}{-(x-y)} = \\frac{y-z}{x-y}$$\n\n$$\\boxed{\\frac{\\partial z}{\\partial x} = \\frac{y - z}{x - y}}$$\n\n**第五步：独立验算（全微分法）。**\n\n对方程两边直接求微分：\n\n$$(y\\,\\mathrm{d}x + x\\,\\mathrm{d}y) + (z\\,\\mathrm{d}y + y\\,\\mathrm{d}z) - (z\\,\\mathrm{d}x + x\\,\\mathrm{d}z) = 0$$\n\n整理出 $\\mathrm{d}z$ 的系数：\n\n$$(y - z)\\mathrm{d}x + (x + z)\\mathrm{d}y + (y - x)\\mathrm{d}z = 0$$\n\n$$\\mathrm{d}z = -\\frac{y-z}{y-x}\\mathrm{d}x - \\frac{x+z}{y-x}\\mathrm{d}y$$\n\n$\\mathrm{d}x$ 前的系数正是 $\\dfrac{y-z}{x-y}$ ✓，与上面一致。同时还能顺手得到 $\\dfrac{\\partial z}{\\partial y} = \\dfrac{x+z}{x-y}$。",
+   "misconception": "- **负号必须带**：公式是 $\\dfrac{\\partial z}{\\partial x} = -\\dfrac{F_x}{F_z}$。**漏掉这个负号**会得到 $\\dfrac{z-y}{x-y}$（或等价地 $\\dfrac{y-z}{y-x}$），是本题最集中的失分点。\n- **分子分母不能写反**：分子是**对所求变量的偏导** $F_x$，分母是**对\"被确定变量\"的偏导** $F_z$。写反会得到 $\\dfrac{x-y}{y-z}$ 这类结果。\n- **$F_z$ 中 $(-xz)'_z = -x$**：很多同学在这里写成 $-1$（把 $x$ 忘了），得到 $F_z = y - 1$，整个结果就废了。**求偏导时\"另一个变量是常数，但要跟着走\"。**\n- **最后两步的符号要收拾干净**：$-\\dfrac{y-z}{y-x}$ 化简为 $\\dfrac{y-z}{x-y}$ 时，**分母变号、整体扔掉负号**，这一步是\"两个负号相消\"。若只把分母变号而不扔负号，会得到 $-\\dfrac{y-z}{x-y} = \\dfrac{z-y}{x-y}$，差一个负号。\n- **结果里保留 $z$ 是正常的**：这是隐函数，$z$ 解不出显式表达式（也不必要）。**不要试图把 $z$ 用 $x,y$ 表示。**\n- **口诀**：**\"隐函数求偏导，交叉求导带负号；分子对所求变量，分母对依赖变量。\"**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 687
+  },
+  {
+   "id": "zk-202604-14",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 14 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 14,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求函数 $u = xyz^2$ 在点 $P(1,1,1)$ 处沿方向 $\\boldsymbol{l} = \\{-3, 4, 0\\}$ 的方向导数。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：求梯度 $\\mathrm{grad}\\,u$。**\n\n$$u = xyz^2$$\n\n$$\\frac{\\partial u}{\\partial x} = yz^2,\\qquad \\frac{\\partial u}{\\partial y} = xz^2,\\qquad \\frac{\\partial u}{\\partial z} = 2xyz$$\n\n**第二步：在点 $P(1,1,1)$ 处求梯度的值。**\n\n$$\\left.\\frac{\\partial u}{\\partial x}\\right|_P = 1\\cdot1^2 = 1,\\qquad \\left.\\frac{\\partial u}{\\partial y}\\right|_P = 1\\cdot1^2 = 1,\\qquad \\left.\\frac{\\partial u}{\\partial z}\\right|_P = 2\\cdot1\\cdot1\\cdot1 = 2$$\n\n$$\\mathrm{grad}\\,u\\big|_P = \\{1, 1, 2\\}$$\n\n**第三步：把方向 $\\boldsymbol{l}$ 单位化。**\n\n$$|\\boldsymbol{l}| = \\sqrt{(-3)^2 + 4^2 + 0^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$$\n\n$$\\boldsymbol{e}_l = \\frac{\\boldsymbol{l}}{|\\boldsymbol{l}|} = \\left\\{-\\frac{3}{5},\\ \\frac{4}{5},\\ 0\\right\\}$$\n\n**第四步：方向导数 = 梯度与单位方向向量的点积。**\n\n$$\\left.\\frac{\\partial u}{\\partial \\boldsymbol{l}}\\right|_P = \\mathrm{grad}\\,u\\big|_P\\cdot\\boldsymbol{e}_l = 1\\times\\left(-\\frac35\\right) + 1\\times\\frac45 + 2\\times0 = -\\frac35 + \\frac45 = \\frac15$$",
+   "points": [
+    {
+     "text": "求梯度 $\\mathrm{grad}\\,u$。\n\n$$u = xyz^2$$\n\n$$\\frac{\\partial u}{\\partial x} = yz^2,\\qquad \\frac{\\partial u}{\\partial y} = xz^2,\\qquad \\frac{\\partial u}{\\partial z} = 2xyz$$",
+     "partial": 2
+    },
+    {
+     "text": "在点 $P(1,1,1)$ 处求梯度的值。",
+     "partial": 2
+    },
+    {
+     "text": "$$\\left.\\frac{\\partial u}{\\partial x}\\right|_P = 1\\cdot1^2 = 1,\\qquad \\left.\\frac{\\partial u}{\\partial y}\\right|_P = 1\\cdot1^2 = 1,\\qquad \\left.\\frac{\\partial u}{\\partial z}\\right|_P = 2\\cdot1\\cdot1\\cdot1 = 2$$",
+     "partial": 2
+    },
+    {
+     "text": "$$\\mathrm{grad}\\,u\\big|_P = \\{1, 1, 2\\}$$",
+     "partial": 2
+    },
+    {
+     "text": "把方向 $\\boldsymbol{l}$ 单位化。\n\n$$|\\boldsymbol{l}| = \\sqrt{(-3)^2 + 4^2 + 0^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$$\n\n$$\\boldsymbol{e}_l = \\frac{\\boldsymbol{l}}{|\\boldsymbol{l}|} = \\left\\{-\\frac{3}{5},\\ \\frac{4}{5},\\ 0\\right\\}$$",
+     "partial": 2
+    },
+    {
+     "text": "方向导数 = 梯度与单位方向向量的点积。\n\n$$\\left.\\frac{\\partial u}{\\partial \\boldsymbol{l}}\\right|_P = \\mathrm{grad}\\,u\\big|_P\\cdot\\boldsymbol{e}_l = 1\\times\\left(-\\frac35\\right) + 1\\times\\frac45 + 2\\times0 = -\\frac35 + \\frac45 = \\frac15$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：方向导数（多元函数微分学）。\n**考点出处**：方向导数（多元函数微分学）\n**第一步：求梯度 $\\mathrm{grad}\\,u$。**\n\n$$u = xyz^2$$\n\n$$\\frac{\\partial u}{\\partial x} = yz^2,\\qquad \\frac{\\partial u}{\\partial y} = xz^2,\\qquad \\frac{\\partial u}{\\partial z} = 2xyz$$\n\n**第二步：在点 $P(1,1,1)$ 处求梯度的值。**\n\n$$\\left.\\frac{\\partial u}{\\partial x}\\right|_P = 1\\cdot1^2 = 1,\\qquad \\left.\\frac{\\partial u}{\\partial y}\\right|_P = 1\\cdot1^2 = 1,\\qquad \\left.\\frac{\\partial u}{\\partial z}\\right|_P = 2\\cdot1\\cdot1\\cdot1 = 2$$\n\n$$\\mathrm{grad}\\,u\\big|_P = \\{1, 1, 2\\}$$\n\n**第三步：把方向 $\\boldsymbol{l}$ 单位化。**\n\n$$|\\boldsymbol{l}| = \\sqrt{(-3)^2 + 4^2 + 0^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$$\n\n$$\\boldsymbol{e}_l = \\frac{\\boldsymbol{l}}{|\\boldsymbol{l}|} = \\left\\{-\\frac{3}{5},\\ \\frac{4}{5},\\ 0\\right\\}$$\n\n**第四步：方向导数 = 梯度与单位方向向量的点积。**\n\n$$\\left.\\frac{\\partial u}{\\partial \\boldsymbol{l}}\\right|_P = \\mathrm{grad}\\,u\\big|_P\\cdot\\boldsymbol{e}_l = 1\\times\\left(-\\frac35\\right) + 1\\times\\frac45 + 2\\times0 = -\\frac35 + \\frac45 = \\frac15$$",
+   "misconception": "- **方向必须单位化，这是本题最大的失分点**：$\\boldsymbol{l} = \\{-3,4,0\\}$ 的模是 $5$，**不能直接拿 $\\{-3,4,0\\}$ 去点乘梯度**，否则算出的值会放大 $5$ 倍（得不伦不类的数）。**\"方向导数\"的定义里必须是单位向量。**\n- **$\\cos\\alpha = -\\frac35$ 的负号别丢**：$l_1 = -3$，单位化后是 $-\\frac35$。丢了这个负号会算出 $\\frac35+\\frac45 = \\frac75$。\n- **$\\dfrac{\\partial u}{\\partial z} = 2xyz$，代点得 $2$**：$z^2$ 求导得 $2z$，所以结果里带 $2$。**只写 $xyz$ 或忘记系数 $2$ 都会错。**\n- **$\\dfrac{\\partial u}{\\partial x} = yz^2$ 别写成 $yz$**：$z$ 是平方。\n- **$l_3 = 0$ 对应 $\\cos\\gamma = 0$**：第三项直接是 $0$，可以省一步计算。\n- **答案的正负要合理**：本题 $-\\frac35+\\frac45>0$，说明沿该方向函数值在上升；若算出负数，回头检查点积的符号。\n- **方向导数与梯度的区别**：梯度是**向量**（本题 $\\{1,1,2\\}$），方向导数是**数量**（本题 $\\frac15$），**题目问哪个就答哪个**。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 688
+  },
+  {
+   "id": "zk-202604-15",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 15 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 15,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $z = z(x,y)$ 由方程 $z^2 - \\mathrm{e}^{xy} = 2$ 所确定，求 $\\dfrac{\\partial z}{\\partial y}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：令 $F(x,y,z) = z^2 - \\mathrm{e}^{xy} - 2$。**\n\n（把方程右端的 $2$ 移到左边，凑成 $F = 0$。**也可以不写这个 $-2$，取 $F = z^2-\\mathrm{e}^{xy}$**，因为常数项对 $F_y$、$F_z$ 求导都归零，最终结果相同。）\n\n**第二步：求两个偏导数。**\n\n对 $y$ 求偏导（$x$、$z$ 当常数）：\n\n$$F_y = -\\mathrm{e}^{xy}\\cdot x = -x\\mathrm{e}^{xy}$$\n\n对 $z$ 求偏导（$x$、$y$ 当常数）：\n\n$$F_z = 2z$$\n\n**第三步：套隐函数求偏导公式。**\n\n$$\\frac{\\partial z}{\\partial y} = -\\frac{F_y}{F_z} = -\\frac{-x\\mathrm{e}^{xy}}{2z} = \\frac{x\\mathrm{e}^{xy}}{2z}$$\n\n**第四步（验算）：显式解出 $z$ 再求导。**\n\n由 $z^2 = \\mathrm{e}^{xy} + 2$ 得 $z = \\sqrt{\\mathrm{e}^{xy} + 2}$（取正支），于是\n\n$$\\frac{\\partial z}{\\partial y} = \\frac{1}{2\\sqrt{\\mathrm{e}^{xy} + 2}}\\cdot x\\mathrm{e}^{xy} = \\frac{x\\mathrm{e}^{xy}}{2\\sqrt{\\mathrm{e}^{xy} + 2}} = \\frac{x\\mathrm{e}^{xy}}{2z}$$\n\n（末步用了 $\\sqrt{\\mathrm{e}^{xy} + 2} = z$。）与公式法结果完全一致 ✓",
+   "points": [
+    {
+     "text": "令 $F(x,y,z) = z^2 - \\mathrm{e}^{xy} - 2$。\n\n（把方程右端的 $2$ 移到左边，凑成 $F = 0$。也可以不写这个 $-2$，取 $F = z^2-\\mathrm{e}^{xy}$，因为常数项对 $F_y$、$F_z$ 求导都归零，最终结果相同。）",
+     "partial": 2
+    },
+    {
+     "text": "求两个偏导数。\n\n对 $y$ 求偏导（$x$、$z$ 当常数）：\n\n$$F_y = -\\mathrm{e}^{xy}\\cdot x = -x\\mathrm{e}^{xy}$$\n\n对 $z$ 求偏导（$x$、$y$ 当常数）：\n\n$$F_z = 2z$$",
+     "partial": 2
+    },
+    {
+     "text": "套隐函数求偏导公式。",
+     "partial": 2
+    },
+    {
+     "text": "$$\\frac{\\partial z}{\\partial y} = -\\frac{F_y}{F_z} = -\\frac{-x\\mathrm{e}^{xy}}{2z} = \\frac{x\\mathrm{e}^{xy}}{2z}$$",
+     "partial": 2
+    },
+    {
+     "text": "第四步（验算）：显式解出 $z$ 再求导。",
+     "partial": 2
+    },
+    {
+     "text": "由 $z^2 = \\mathrm{e}^{xy} + 2$ 得 $z = \\sqrt{\\mathrm{e}^{xy} + 2}$（取正支），于是；$$\\frac{\\partial z}{\\partial y} = \\frac{1}{2\\sqrt{\\mathrm{e}^{xy} + 2}}\\cdot x\\mathrm{e}^{xy} = \\frac{x\\mathrm{e}^{xy}}{2\\sqrt{\\mathrm{e}^{xy} + 2}} = \\frac{x\\mathrm{e}^{xy}}{2z}$$；（末步用了 $\\sqrt{\\mathrm{e}^{xy} + 2} = z$。；）与公式法结果完全一致 ✓",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：隐函数求偏导数（多元函数微分学）。\n**考点出处**：隐函数求偏导数（多元函数微分学）\n**第一步：令 $F(x,y,z) = z^2 - \\mathrm{e}^{xy} - 2$。**\n\n（把方程右端的 $2$ 移到左边，凑成 $F = 0$。**也可以不写这个 $-2$，取 $F = z^2-\\mathrm{e}^{xy}$**，因为常数项对 $F_y$、$F_z$ 求导都归零，最终结果相同。）\n\n**第二步：求两个偏导数。**\n\n对 $y$ 求偏导（$x$、$z$ 当常数）：\n\n$$F_y = -\\mathrm{e}^{xy}\\cdot x = -x\\mathrm{e}^{xy}$$\n\n对 $z$ 求偏导（$x$、$y$ 当常数）：\n\n$$F_z = 2z$$\n\n**第三步：套隐函数求偏导公式。**\n\n$$\\frac{\\partial z}{\\partial y} = -\\frac{F_y}{F_z} = -\\frac{-x\\mathrm{e}^{xy}}{2z} = \\frac{x\\mathrm{e}^{xy}}{2z}$$\n\n**第四步（验算）：显式解出 $z$ 再求导。**\n\n由 $z^2 = \\mathrm{e}^{xy} + 2$ 得 $z = \\sqrt{\\mathrm{e}^{xy} + 2}$（取正支），于是\n\n$$\\frac{\\partial z}{\\partial y} = \\frac{1}{2\\sqrt{\\mathrm{e}^{xy} + 2}}\\cdot x\\mathrm{e}^{xy} = \\frac{x\\mathrm{e}^{xy}}{2\\sqrt{\\mathrm{e}^{xy} + 2}} = \\frac{x\\mathrm{e}^{xy}}{2z}$$\n\n（末步用了 $\\sqrt{\\mathrm{e}^{xy} + 2} = z$。）与公式法结果完全一致 ✓",
+   "misconception": "- **公式里那个负号是必考的**：$\\dfrac{\\partial z}{\\partial y} = -\\dfrac{F_y}{F_z}$。**丢了负号会得到 $-\\dfrac{x\\mathrm{e}^{xy}}{2z}$。**\n- **$F_y = -x\\mathrm{e}^{xy}$ 中的因子 $x$ 别丢**：$\\mathrm{e}^{xy}$ 对 $y$ 求导是 $\\mathrm{e}^{xy}\\cdot x$（**链式法则，指数上的 $x$ 是系数**）。**只写 $\\mathrm{e}^{xy}$ 或只写 $x$ 都错。**\n- **分子分母不能写反**：是 $-\\frac{F_y}{F_z}$，不是 $-\\frac{F_z}{F_y}$。\n- **答案中允许保留 $z$**：隐函数求导的结果天然含 $z$，**不必强行换成 $x,y$**（本题也换得出，$2z = 2\\sqrt{\\mathrm e^{xy}+2}$，但保留 $z$ 更简洁、更标准）。\n- **对谁求导就看谁在分子**：题目要 $\\frac{\\partial z}{\\partial y}$，先对 $y$ 求 $F_y$，再除以 $F_z$。**若误求成 $F_x = -y\\mathrm{e}^{xy}$ 就会得到 $\\frac{y\\mathrm{e}^{xy}}{2z}$（把 $x$、$y$ 混淆）。**\n- **常数项不影响结果**：若取 $F = z^2-\\mathrm{e}^{xy}$（省去 $-2$）或 $F = \\mathrm{e}^{xy}-z^2+2$，由于 $F_y$、$F_z$ 中常数求导归零，仍有 $-\\frac{F_y}{F_z} = \\frac{x\\mathrm{e}^{xy}}{2z}$ ✓ **说明答案与 $F$ 的写法无关，可以放心。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 689
+  },
+  {
+   "id": "c9-c3",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9.8",
+   "knowledgePoints": [
+    "9.8"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.8 多元函数的极值及其求法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求函数 $z=x^3-y^3+3x^2+3y^2-9x$ 的极值。",
+   "options": null,
+   "answer": [
+    "极小值 f(1,0)=-5，极大值 f(-3,2)=31"
+   ],
+   "accept": null,
+   "answerText": "解方程组 $\\begin{cases}z_x=3x^2+6x-9=0\\\\z_y=-3y^2+6y=0\\end{cases}$，得驻点 $(1,0),(1,2),(-3,0),(-3,2)$。\n$A=z_{xx}=6x+6$，$B=z_{xy}=0$，$C=z_{yy}=-6y+6$。\n逐点判别（$AC-B^2$）：\n$(1,0)$：$A=12,C=6$，$AC-B^2=72>0$ 且 $A>0$ → 极小值 $z=-5$；\n$(1,2)$：$C=-6$，$AC=-72<0$ → 非极值；\n$(-3,0)$：$A=-12$，$AC=-72<0$ → 非极值；\n$(-3,2)$：$A=-12,C=-6$，$AC-B^2=72>0$ 且 $A<0$ → 极大值 $z=31$。\n故极小值 $f(1,0)=-5$，极大值 $f(-3,2)=31$。",
+   "points": [
+    {
+     "text": "解驻点方程组 $z_x=0,z_y=0$，得四个驻点。",
+     "partial": 2
+    },
+    {
+     "text": "写出 $A=z_{xx}=6x+6$、$B=z_{xy}=0$、$C=z_{yy}=-6y+6$。",
+     "partial": 2
+    },
+    {
+     "text": "逐点计算 $AC-B^2$ 并结合 $A$ 的符号判别：$(1,0)$ 极小 $-5$，$(-3,2)$ 极大 $31$，其余两点不是极值点。",
+     "partial": 2
+    },
+    {
+     "text": "结论按「点 + 值 + 类型」三要素完整表述。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：二元极值的必要条件与 AC−B² 充分条件判别法（§9.8）。\n**考点出处**：同济《高等数学》第七版 §9.8 多元函数的极值及其求法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "二元极值",
+    "困难",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "驻点x",
+     "code": "solve(3*x**2 + 6*x - 9, x)",
+     "expected": "[-3, 1]"
+    },
+    {
+     "desc": "极值",
+     "code": "z=x**3-y**3+3*x**2+3*y**2-9*x; [z.subs({x:1,y:0}), z.subs({x:-3,y:2})]",
+     "expected": "[-5, 31]"
+    }
+   ],
+   "idx": 690
+  },
+  {
+   "id": "ky2-1996-x-54434b",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9.8",
+   "knowledgePoints": [
+    "9.8"
+   ],
+   "source": {
+    "text": "1996 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1996,
+    "region": "全国",
+    "paper": "1996 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $y = y(x)$ 由方程 $2y^{3} - 2y^{2} + 2xy - x^{2} = 1$ 所确定，试求 $y = y(x)$ 的驻点，并判别它是否为极值点.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "唯一驻点是 $x = 1$ ，也是函数的极小值点",
+   "points": [
+    {
+     "text": "唯一驻点是 $x = 1$ ，也是函数的极小值点",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n唯一驻点是 $x = 1$ ，也是函数的极小值点",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 691
+  },
+  {
+   "id": "ky2-2004-21-acfeb2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9.4",
+   "knowledgePoints": [
+    "9.4"
+   ],
+   "source": {
+    "text": "2004 年考研数学二第 21 题",
+    "kind": "exam-original",
+    "year": 2004,
+    "region": "全国",
+    "paper": "2004 年考研数学二",
+    "number": "21",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n设 $z = f(x^{2} - y^{2},\\mathrm{e}^{xy})$ ，其中 $f$ 具有连续二阶偏导数，求 $\\frac{\\partial z}{\\partial x},\\frac{\\partial z}{\\partial y},\\frac{\\partial^2z}{\\partial x\\partial y}.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "令 $u = x^{2} - y^{2}, \\nu = \\mathrm{e}^{xy}$ , 则 $z = f(x^{2} - y^{2}, \\mathrm{e}^{xy}) = f(u, \\nu)$ , 所以\n$$\n\\begin{array}{l} \\frac {\\partial z}{\\partial x} = \\frac {\\partial f}{\\partial u} \\frac {\\partial u}{\\partial x} + \\frac {\\partial f}{\\partial v} \\frac {\\partial v}{\\partial x} = 2 x f _ {1} ^ {\\prime} + y \\mathrm {e} ^ {x y} f _ {2} ^ {\\prime}, \\\\ \\frac {\\partial z}{\\partial y} = \\frac {\\partial f}{\\partial u} \\frac {\\partial u}{\\partial y} + \\frac {\\partial f}{\\partial v} \\frac {\\partial v}{\\partial y} = - 2 y f _ {1} ^ {\\prime} + x \\mathrm {e} ^ {x y} f _ {2} ^ {\\prime}. \\\\ \\end{array}\n$$\n从而二阶偏导数\n$$\n\\begin{array}{l} \\frac {\\partial^ {2} z}{\\partial x \\partial y} = \\frac {\\partial}{\\partial x} \\left(\\frac {\\partial z}{\\partial y}\\right) = \\frac {\\partial}{\\partial x} \\left(- 2 y f _ {1} ^ {\\prime} + x e ^ {x y} f _ {2} ^ {\\prime}\\right) \\\\ = - 2 y \\left(f _ {1 1} ^ {\\prime \\prime} \\frac {\\partial u}{\\partial x} + f _ {1 2} ^ {\\prime \\prime} \\frac {\\partial v}{\\partial x}\\right) + e ^ {x y} f _ {2} ^ {\\prime} + x y e ^ {x y} f _ {2} ^ {\\prime} + x e ^ {x y} \\left(f _ {2 1} ^ {\\prime \\prime} \\frac {\\partial u}{\\partial x} + f _ {2 2} ^ {\\prime \\prime} \\frac {\\partial v}{\\partial x}\\right) \\\\ = - 2 y \\left(2 x f _ {1 1} ^ {\\prime \\prime} + y \\mathrm {e} ^ {x y} f _ {1 2} ^ {\\prime \\prime}\\right) + \\mathrm {e} ^ {x y} f _ {2} ^ {\\prime} + x y \\mathrm {e} ^ {x y} f _ {2} ^ {\\prime} + x \\mathrm {e} ^ {x y} \\left(2 x f _ {2 1} ^ {\\prime \\prime} + y \\mathrm {e} ^ {x y} f _ {2 2} ^ {\\prime \\prime}\\right) \\\\ = - 4 x y f _ {1 1} ^ {\\prime \\prime} + 2 \\left(x ^ {2} - y ^ {2}\\right) \\mathrm {e} ^ {x y} f _ {1 2} ^ {\\prime \\prime} + + x y \\mathrm {e} ^ {2 x y} f _ {2 2} ^ {\\prime \\prime} + \\mathrm {e} ^ {x y} (1 + x y) f _ {2} ^ {\\prime}. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "令 $u = x^{2} - y^{2}, \\nu = \\mathrm{e}^{xy}$ , 则 $z = f(x^{2} - y^{2}, \\mathrm{e}^{xy}) = f(u, \\nu)$ , 所以\n$$\n\\begin{array}{l} \\frac {\\partial z}{\\partial x} = \\frac {\\partial f}{\\partial u} \\frac {\\partial u}{\\partial x} + \\frac {\\partial f}{\\partial v} \\frac {\\partial v}{\\partial x} = 2 x f _ {1} ^ {\\prime} + y \\mathrm {e} ^ {x y} f _ {2} ^ {\\prime}, \\\\ \\frac {\\partial z}{\\partial y} = \\frac {\\partial f}{\\partial u} \\frac {\\partial u}{\\partial y} + \\frac {\\partial f}{\\partial v} \\frac {\\partial v}{\\partial y} = - 2 y f _ {1} ^ {\\prime} + x \\mathrm {e} ^ {x y} f _ {2} ^ {\\prime}. \\\\ \\end{array}\n$$\n从而二阶偏导数\n$$\n\\begin{array}{l} \\frac {\\partial^ {2} z}{\\partial x \\partial y} = \\frac {\\partial}{\\partial x} \\left(\\frac {\\partial z}{\\partial y}\\right) = \\frac {\\partial}{\\partial x} \\left(- 2 y f _ {1} ^ {\\prime} + x e ^ {x y} f _ {2} ^ {\\prime}\\right) \\\\ = - 2 y \\left(f _ {1 1} ^ {\\prime \\prime} \\frac {\\partial u}{\\partial x} + f _ {1 2} ^ {\\prime \\prime} \\frac {\\partial v}{\\partial x}\\right) + e ^ {x y} f _ {2} ^ {\\prime} + x y e ^ {x y} f _ {2} ^ {\\prime} + x e ^ {x y} \\left(f _ {2 1} ^ {\\prime \\prime} \\frac {\\partial u}{\\partial x} + f _ {2 2} ^ {\\prime \\prime} \\frac {\\partial v}{\\partial x}\\right) \\\\ = - 2 y \\left(2 x f _ {1 1} ^ {\\prime \\prime} + y \\mathrm {e} ^ {x y} f _ {1 2} ^ {\\prime \\prime}\\right) + \\mathrm {e} ^ {x y} f _ {2} ^ {\\prime} + x y \\mathrm {e} ^ {x y} f _ {2} ^ {\\prime} + x \\mathrm {e} ^ {x y} \\left(2 x f _ {2 1} ^ {\\prime \\prime} + y \\mathrm {e} ^ {x y} f _ {2 2} ^ {\\prime \\prime}\\right) \\\\ = - 4 x y f _ {1 1} ^ {\\prime \\prime} + 2 \\left(x ^ {2} - y ^ {2}\\right) \\mathrm {e} ^ {x y} f _ {1 2} ^ {\\prime \\prime} + + x y \\mathrm {e} ^ {2 x y} f _ {2 2} ^ {\\prime \\prime} + \\mathrm {e} ^ {x y} (1 + x y) f _ {2} ^ {\\prime}. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n令 $u = x^{2} - y^{2}, \\nu = \\mathrm{e}^{xy}$ , 则 $z = f(x^{2} - y^{2}, \\mathrm{e}^{xy}) = f(u, \\nu)$ , 所以\n$$\n\\begin{array}{l} \\frac {\\partial z}{\\partial x} = \\frac {\\partial f}{\\partial u} \\frac {\\partial u}{\\partial x} + \\frac {\\partial f}{\\partial v} \\frac {\\partial v}{\\partial x} = 2 x f _ {1} ^ {\\prime} + y \\mathrm {e} ^ {x y} f _ {2} ^ {\\prime}, \\\\ \\frac {\\partial z}{\\partial y} = \\frac {\\partial f}{\\partial u} \\frac {\\partial u}{\\partial y} + \\frac {\\partial f}{\\partial v} \\frac {\\partial v}{\\partial y} = - 2 y f _ {1} ^ {\\prime} + x \\mathrm {e} ^ {x y} f _ {2} ^ {\\prime}. \\\\ \\end{array}\n$$\n从而二阶偏导数\n$$\n\\begin{array}{l} \\frac {\\partial^ {2} z}{\\partial x \\partial y} = \\frac {\\partial}{\\partial x} \\left(\\frac {\\partial z}{\\partial y}\\right) = \\frac {\\partial}{\\partial x} \\left(- 2 y f _ {1} ^ {\\prime} + x e ^ {x y} f _ {2} ^ {\\prime}\\right) \\\\ = - 2 y \\left(f _ {1 1} ^ {\\prime \\prime} \\frac {\\partial u}{\\partial x} + f _ {1 2} ^ {\\prime \\prime} \\frac {\\partial v}{\\partial x}\\right) + e ^ {x y} f _ {2} ^ {\\prime} + x y e ^ {x y} f _ {2} ^ {\\prime} + x e ^ {x y} \\left(f _ {2 1} ^ {\\prime \\prime} \\frac {\\partial u}{\\partial x} + f _ {2 2} ^ {\\prime \\prime} \\frac {\\partial v}{\\partial x}\\right) \\\\ = - 2 y \\left(2 x f _ {1 1} ^ {\\prime \\prime} + y \\mathrm {e} ^ {x y} f _ {1 2} ^ {\\prime \\prime}\\right) + \\mathrm {e} ^ {x y} f _ {2} ^ {\\prime} + x y \\mathrm {e} ^ {x y} f _ {2} ^ {\\prime} + x \\mathrm {e} ^ {x y} \\left(2 x f _ {2 1} ^ {\\prime \\prime} + y \\mathrm {e} ^ {x y} f _ {2 2} ^ {\\prime \\prime}\\right) \\\\ = - 4 x y f _ {1 1} ^ {\\prime \\prime} + 2 \\left(x ^ {2} - y ^ {2}\\right) \\mathrm {e} ^ {x y} f _ {1 2} ^ {\\prime \\prime} + + x y \\mathrm {e} ^ {2 x y} f _ {2 2} ^ {\\prime \\prime} + \\mathrm {e} ^ {x y} (1 + x y) f _ {2} ^ {\\prime}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 692
+  },
+  {
+   "id": "ky2-2007-22-a1a85e",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2007 年考研数学二第 22 题",
+    "kind": "exam-original",
+    "year": 2007,
+    "region": "全国",
+    "paper": "2007 年考研数学二",
+    "number": "22",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分11分)\n设二元函数 $f(x,y) = \\left\\{ \\begin{array}{ll}x^{2}, & |x| + |y|\\leqslant 1,\\\\ \\frac{1}{\\sqrt{x^2 + y^2}}, & 1 < |x| + |y|\\leqslant 2, \\end{array} \\right.$ 计算二重积分 $\\iint_{D}f(x,y)\\mathrm{d}\\sigma$ 其中 $D = \\{(x,y)||x| + |y|\\leqslant 2\\}$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "记 $D_{1} = \\left\\{(x,y) \\mid |x| + |y| \\leqslant 1\\right\\}$ , $D_{2} = \\left\\{(x,y) \\mid 1 < |x| + |y| \\leqslant 2\\right\\}$ . 则\n$$\n\\begin{array}{l} \\iint_ {D} f (x, y) \\mathrm {d} \\sigma = \\iint_ {D _ {1}} f (x, y) \\mathrm {d} \\sigma + \\iint_ {D _ {2}} f (x, y) \\mathrm {d} \\sigma \\\\ = \\iint_ {D _ {1}} x ^ {2} \\mathrm {d} \\sigma + \\iint_ {D _ {2}} \\frac {1}{\\sqrt {x ^ {2} + y ^ {2}}} \\mathrm {d} \\sigma . \\\\ \\end{array}\n$$\n再记 $\\sigma_{1} = \\left\\{(x,y)\\big|0\\leqslant x + y\\leqslant 1,x\\geqslant 0,y\\geqslant 0\\right\\},\\sigma_{2} = \\left\\{(x,y)\\big|1\\leqslant x + y\\leqslant 2,x\\geqslant 0,y\\geqslant 0\\right\\}$ 由于 $D_{1}$ 与 $D_{2}$ 都与 $x$ 轴对称，也都与 $y$ 轴对称，函数 $x^{2}$ 与 $\\frac{1}{\\sqrt{x^2 + y^2}}$ 都是 $x$ 的偶函数，也都是 $y$ 的偶函数，所以由区域对称性和被积函数的奇偶性有\n$$\n\\begin{array}{l} \\iint_ {D _ {1}} x ^ {2} \\mathrm {d} \\sigma = 4 \\iint_ {\\sigma_ {1}} x ^ {2} \\mathrm {d} \\sigma = 4 \\int_ {0} ^ {1} \\mathrm {d} x \\int_ {0} ^ {1 - x} x ^ {2} \\mathrm {d} y \\\\ = 4 \\int_ {0} ^ {1} x ^ {2} (1 - x) \\mathrm {d} x = 4 \\int_ {0} ^ {1} \\left(x ^ {2} - x ^ {3}\\right) \\mathrm {d} x = \\frac {1}{3}, \\\\ \\iint_ {D _ {2}} \\frac {1}{\\sqrt {x ^ {2} + y ^ {2}}} \\mathrm {d} \\sigma = 4 \\iint_ {\\sigma_ {2}} \\frac {1}{\\sqrt {x ^ {2} + y ^ {2}}} \\mathrm {d} \\sigma . \\\\ \\end{array}\n$$\n对第二个积分采用极坐标，令 $x = r\\cos \\theta, y = r\\sin \\theta, 0 < \\theta < \\frac{\\pi}{2}$ 则 $x + y = 1$ 化为 $r = \\frac{1}{\\cos\\theta + \\sin\\theta}, x + y = 2$ 化为 $r = \\frac{2}{\\cos\\theta + \\sin\\theta}, \\sqrt{x^2 + y^2} = r$ ，于是\n$$\n\\begin{array}{l} \\iint_ {D _ {2}} \\frac {1}{\\sqrt {x ^ {2} + y ^ {2}}} d \\sigma = 4 \\int_ {0} ^ {\\frac {\\pi}{2}} d \\theta \\int_ {\\frac {1}{\\cos \\theta + \\sin \\theta}} ^ {\\frac {2}{\\cos \\theta + \\sin \\theta}} d r = 4 \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {1}{\\cos \\theta + \\sin \\theta} d \\theta \\\\ = 4 \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {1}{\\sqrt {2} \\cos (\\theta - \\frac {\\pi}{4})} d \\theta = 2 \\sqrt {2} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sec (\\theta - \\frac {\\pi}{4}) d \\theta \\\\ = 2 \\sqrt {2} \\ln \\left[ \\sec \\left(\\theta - \\frac {\\pi}{4}\\right) + \\tan \\left(\\theta - \\frac {\\pi}{4}\\right) \\right] \\Bigg | _ {0} ^ {\\frac {\\pi}{2}} \\\\ = 2 \\sqrt {2} \\ln \\left(\\ln \\left| \\frac {2}{\\sqrt {2}} + 1 \\right| - \\ln \\left| \\frac {2}{\\sqrt {2}} - 1 \\right|\\right) \\\\ = 2 \\sqrt {2} \\ln \\frac {2 + \\sqrt {2}}{2 - \\sqrt {2}} = 2 \\sqrt {2} \\ln (3 + 2 \\sqrt {2}). \\\\ \\end{array}\n$$\n所以\n$$\n\\iint_ {D} f (x, y) \\mathrm {d} \\sigma = \\iint_ {D _ {1}} f (x, y) \\mathrm {d} \\sigma + \\iint_ {D _ {2}} f (x, y) \\mathrm {d} \\sigma = \\frac {1}{3} + 2 \\sqrt {2} \\ln (3 + 2 \\sqrt {2}).\n$$",
+   "points": [
+    {
+     "text": "记 $D_{1} = \\left\\{(x,y) \\mid |x| + |y| \\leqslant 1\\right\\}$ , $D_{2} = \\left\\{(x,y) \\mid 1 < |x| + |y| \\leqslant 2\\right\\}$ . 则\n$$\n\\begin{array}{l} \\iint_ {D} f (x, y) \\mathrm {d} \\sigma = \\iint_ {D _ {1}} f (x, y) \\mathrm {d} \\sigma + \\iint_ {D _ {2}} f (x, y) \\mathrm {d} \\sigma \\\\ = \\iint_ {D _ {1}} x ^ {2} \\mathrm {d} \\sigma + \\iint_ {D _ {2}} \\frac {1}{\\sqrt {x ^ {2} + y ^ {2}}} \\mathrm {d} \\sigma . \\\\ \\end{array}\n$$\n再记 $\\sigma_{1} = \\left\\{(x,y)\\big|0\\leqslant x + y\\leqslant 1,x\\geqslant 0,y\\geqslant 0\\right\\},\\sigma_{2} = \\left\\{(x,y)\\big|1\\leqslant x + y\\leqslant 2,x\\geqslant 0,y\\geqslant 0\\right\\}$ 由于 $D_{1}$ 与 $D_{2}$ 都与 $x$ 轴对称，也都与 $y$ 轴对称，函数 $x^{2}$ 与 $\\frac{1}{\\sqrt{x^2 + y^2}}$ 都是 $x$ 的偶函数，也都是 $y$ 的偶函数，所以由区域对称性和被积函数的奇偶性有\n$$\n\\begin{array}{l} \\iint_ {D _ {1}} x ^ {2} \\mathrm {d} \\sigma = 4 \\iint_ {\\sigma_ {1}} x ^ {2} \\mathrm {d} \\sigma = 4 \\int_ {0} ^ {1} \\mathrm {d} x \\int_ {0} ^ {1 - x} x ^ {2} \\mathrm {d} y \\\\ = 4 \\int_ {0} ^ {1} x ^ {2} (1 - x) \\mathrm {d} x = 4 \\int_ {0} ^ {1} \\left(x ^ {2} - x ^ {3}\\right) \\mathrm {d} x = \\frac {1}{3}, \\\\ \\iint_ {D _ {2}} \\frac {1}{\\sqrt {x ^ {2} + y ^ {2}}} \\mathrm {d} \\sigma = 4 \\iint_ {\\sigma_ {2}} \\frac {1}{\\sqrt {x ^ {2} + y ^ {2}}} \\mathrm {d} \\sigma . \\\\ \\end{array}\n$$\n对第二个积分采用极坐标，令 $x = r\\cos \\theta, y = r\\sin \\theta, 0 < \\theta < \\frac{\\pi}{2}$ 则 $x + y = 1$ 化为 $r = \\frac{1}{\\cos\\theta + \\sin\\theta}, x + y = 2$ 化为 $r = \\frac{2}{\\cos\\theta + \\sin\\theta}, \\sqrt{x^2 + y^2} = r$ ，于是\n$$\n\\begin{array}{l} \\iint_ {D _ {2}} \\frac {1}{\\sqrt {x ^ {2} + y ^ {2}}} d \\sigma = 4 \\int_ {0} ^ {\\frac {\\pi}{2}} d \\theta \\int_ {\\frac {1}{\\cos \\theta + \\sin \\theta}} ^ {\\frac {2}{\\cos \\theta + \\sin \\theta}} d r = 4 \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {1}{\\cos \\theta + \\sin \\theta} d \\theta \\\\ = 4 \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {1}{\\sqrt {2} \\cos (\\theta - \\frac {\\pi}{4})} d \\theta = 2 \\sqrt {2} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sec (\\theta - \\frac {\\pi}{4}) d \\theta \\\\ = 2 \\sqrt {2} \\ln \\left[ \\sec \\left(\\theta - \\frac {\\pi}{4}\\right) + \\tan \\left(\\theta - \\frac {\\pi}{4}\\right) \\right] \\Bigg | _ {0} ^ {\\frac {\\pi}{2}} \\\\ = 2 \\sqrt {2} \\ln \\left(\\ln \\left| \\frac {2}{\\sqrt {2}} + 1 \\right| - \\ln \\left| \\frac {2}{\\sqrt {2}} - 1 \\right|\\right) \\\\ = 2 \\sqrt {2} \\ln \\frac {2 + \\sqrt {2}}{2 - \\sqrt {2}} = 2 \\sqrt {2} \\ln (3 + 2 \\sqrt {2}). \\\\ \\end{array}\n$$\n所以\n$$\n\\iint_ {D} f (x, y) \\mathrm {d} \\sigma = \\iint_ {D _ {1}} f (x, y) \\mathrm {d} \\sigma + \\iint_ {D _ {2}} f (x, y) \\mathrm {d} \\sigma = \\frac {1}{3} + 2 \\sqrt {2} \\ln (3 + 2 \\sqrt {2}).\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n记 $D_{1} = \\left\\{(x,y) \\mid |x| + |y| \\leqslant 1\\right\\}$ , $D_{2} = \\left\\{(x,y) \\mid 1 < |x| + |y| \\leqslant 2\\right\\}$ . 则\n$$\n\\begin{array}{l} \\iint_ {D} f (x, y) \\mathrm {d} \\sigma = \\iint_ {D _ {1}} f (x, y) \\mathrm {d} \\sigma + \\iint_ {D _ {2}} f (x, y) \\mathrm {d} \\sigma \\\\ = \\iint_ {D _ {1}} x ^ {2} \\mathrm {d} \\sigma + \\iint_ {D _ {2}} \\frac {1}{\\sqrt {x ^ {2} + y ^ {2}}} \\mathrm {d} \\sigma . \\\\ \\end{array}\n$$\n再记 $\\sigma_{1} = \\left\\{(x,y)\\big|0\\leqslant x + y\\leqslant 1,x\\geqslant 0,y\\geqslant 0\\right\\},\\sigma_{2} = \\left\\{(x,y)\\big|1\\leqslant x + y\\leqslant 2,x\\geqslant 0,y\\geqslant 0\\right\\}$ 由于 $D_{1}$ 与 $D_{2}$ 都与 $x$ 轴对称，也都与 $y$ 轴对称，函数 $x^{2}$ 与 $\\frac{1}{\\sqrt{x^2 + y^2}}$ 都是 $x$ 的偶函数，也都是 $y$ 的偶函数，所以由区域对称性和被积函数的奇偶性有\n$$\n\\begin{array}{l} \\iint_ {D _ {1}} x ^ {2} \\mathrm {d} \\sigma = 4 \\iint_ {\\sigma_ {1}} x ^ {2} \\mathrm {d} \\sigma = 4 \\int_ {0} ^ {1} \\mathrm {d} x \\int_ {0} ^ {1 - x} x ^ {2} \\mathrm {d} y \\\\ = 4 \\int_ {0} ^ {1} x ^ {2} (1 - x) \\mathrm {d} x = 4 \\int_ {0} ^ {1} \\left(x ^ {2} - x ^ {3}\\right) \\mathrm {d} x = \\frac {1}{3}, \\\\ \\iint_ {D _ {2}} \\frac {1}{\\sqrt {x ^ {2} + y ^ {2}}} \\mathrm {d} \\sigma = 4 \\iint_ {\\sigma_ {2}} \\frac {1}{\\sqrt {x ^ {2} + y ^ {2}}} \\mathrm {d} \\sigma . \\\\ \\end{array}\n$$\n对第二个积分采用极坐标，令 $x = r\\cos \\theta, y = r\\sin \\theta, 0 < \\theta < \\frac{\\pi}{2}$ 则 $x + y = 1$ 化为 $r = \\frac{1}{\\cos\\theta + \\sin\\theta}, x + y = 2$ 化为 $r = \\frac{2}{\\cos\\theta + \\sin\\theta}, \\sqrt{x^2 + y^2} = r$ ，于是\n$$\n\\begin{array}{l} \\iint_ {D _ {2}} \\frac {1}{\\sqrt {x ^ {2} + y ^ {2}}} d \\sigma = 4 \\int_ {0} ^ {\\frac {\\pi}{2}} d \\theta \\int_ {\\frac {1}{\\cos \\theta + \\sin \\theta}} ^ {\\frac {2}{\\cos \\theta + \\sin \\theta}} d r = 4 \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {1}{\\cos \\theta + \\sin \\theta} d \\theta \\\\ = 4 \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {1}{\\sqrt {2} \\cos (\\theta - \\frac {\\pi}{4})} d \\theta = 2 \\sqrt {2} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sec (\\theta - \\frac {\\pi}{4}) d \\theta \\\\ = 2 \\sqrt {2} \\ln \\left[ \\sec \\left(\\theta - \\frac {\\pi}{4}\\right) + \\tan \\left(\\theta - \\frac {\\pi}{4}\\right) \\right] \\Bigg | _ {0} ^ {\\frac {\\pi}{2}} \\\\ = 2 \\sqrt {2} \\ln \\left(\\ln \\left| \\frac {2}{\\sqrt {2}} + 1 \\right| - \\ln \\left| \\frac {2}{\\sqrt {2}} - 1 \\right|\\right) \\\\ = 2 \\sqrt {2} \\ln \\frac {2 + \\sqrt {2}}{2 - \\sqrt {2}} = 2 \\sqrt {2} \\ln (3 + 2 \\sqrt {2}). \\\\ \\end{array}\n$$\n所以\n$$\n\\iint_ {D} f (x, y) \\mathrm {d} \\sigma = \\iint_ {D _ {1}} f (x, y) \\mathrm {d} \\sigma + \\iint_ {D _ {2}} f (x, y) \\mathrm {d} \\sigma = \\frac {1}{3} + 2 \\sqrt {2} \\ln (3 + 2 \\sqrt {2}).\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 693
+  },
+  {
+   "id": "ky2-2009-17-fa5908",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2009 年考研数学二第 17 题",
+    "kind": "exam-original",
+    "year": 2009,
+    "region": "全国",
+    "paper": "2009 年考研数学二",
+    "number": "17",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n设 $z = f(x + y, x - y, xy)$ , 其中 $f$ 具有 2 阶连续偏导数, 求 $\\mathrm{d}z$ 与 $\\frac{\\partial^2 z}{\\partial x \\partial y}$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "因为 $\\frac{\\partial z}{\\partial x} = f_1' + f_2' + yf_3'$ , $\\frac{\\partial z}{\\partial y} = f_1' - f_2' + xf_3'$ , 所以\n$$\n\\begin{array}{l} \\mathrm {d} z = \\frac {\\partial z}{\\partial x} \\mathrm {d} x + \\frac {\\partial z}{\\partial y} \\mathrm {d} y = \\left(f _ {1} ^ {\\prime} + f _ {2} ^ {\\prime} + y f _ {3} ^ {\\prime}\\right) \\mathrm {d} x + \\left(f _ {1} ^ {\\prime} - f _ {2} ^ {\\prime} + x f _ {3} ^ {\\prime}\\right) \\mathrm {d} y, \\\\ \\frac {\\partial^ {2} z}{\\partial x \\partial y} = f _ {1 1} ^ {\\prime \\prime} - f _ {1 2} ^ {\\prime \\prime} + f _ {1 3} ^ {\\prime \\prime} \\cdot x + f _ {2 1} ^ {\\prime \\prime} - f _ {2 2} ^ {\\prime \\prime} + f _ {2 3} ^ {\\prime \\prime} \\cdot x + f _ {3} ^ {\\prime} + y \\left[ f _ {3 1} ^ {\\prime \\prime} - f _ {3 2} ^ {\\prime \\prime} \\cdot + f _ {3 3} ^ {\\prime \\prime} \\cdot x \\right] \\\\ = f _ {3} ^ {\\prime} + f _ {1 1} ^ {\\prime \\prime} - f _ {2 2} ^ {\\prime \\prime} + x y f _ {3 3} ^ {\\prime \\prime} + (x + y) f _ {1 3} ^ {\\prime \\prime} + (x - y) f _ {2 3} ^ {\\prime \\prime}, \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "因为 $\\frac{\\partial z}{\\partial x} = f_1' + f_2' + yf_3'$ , $\\frac{\\partial z}{\\partial y} = f_1' - f_2' + xf_3'$ , 所以\n$$\n\\begin{array}{l} \\mathrm {d} z = \\frac {\\partial z}{\\partial x} \\mathrm {d} x + \\frac {\\partial z}{\\partial y} \\mathrm {d} y = \\left(f _ {1} ^ {\\prime} + f _ {2} ^ {\\prime} + y f _ {3} ^ {\\prime}\\right) \\mathrm {d} x + \\left(f _ {1} ^ {\\prime} - f _ {2} ^ {\\prime} + x f _ {3} ^ {\\prime}\\right) \\mathrm {d} y, \\\\ \\frac {\\partial^ {2} z}{\\partial x \\partial y} = f _ {1 1} ^ {\\prime \\prime} - f _ {1 2} ^ {\\prime \\prime} + f _ {1 3} ^ {\\prime \\prime} \\cdot x + f _ {2 1} ^ {\\prime \\prime} - f _ {2 2} ^ {\\prime \\prime} + f _ {2 3} ^ {\\prime \\prime} \\cdot x + f _ {3} ^ {\\prime} + y \\left[ f _ {3 1} ^ {\\prime \\prime} - f _ {3 2} ^ {\\prime \\prime} \\cdot + f _ {3 3} ^ {\\prime \\prime} \\cdot x \\right] \\\\ = f _ {3} ^ {\\prime} + f _ {1 1} ^ {\\prime \\prime} - f _ {2 2} ^ {\\prime \\prime} + x y f _ {3 3} ^ {\\prime \\prime} + (x + y) f _ {1 3} ^ {\\prime \\prime} + (x - y) f _ {2 3} ^ {\\prime \\prime}, \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n因为 $\\frac{\\partial z}{\\partial x} = f_1' + f_2' + yf_3'$ , $\\frac{\\partial z}{\\partial y} = f_1' - f_2' + xf_3'$ , 所以\n$$\n\\begin{array}{l} \\mathrm {d} z = \\frac {\\partial z}{\\partial x} \\mathrm {d} x + \\frac {\\partial z}{\\partial y} \\mathrm {d} y = \\left(f _ {1} ^ {\\prime} + f _ {2} ^ {\\prime} + y f _ {3} ^ {\\prime}\\right) \\mathrm {d} x + \\left(f _ {1} ^ {\\prime} - f _ {2} ^ {\\prime} + x f _ {3} ^ {\\prime}\\right) \\mathrm {d} y, \\\\ \\frac {\\partial^ {2} z}{\\partial x \\partial y} = f _ {1 1} ^ {\\prime \\prime} - f _ {1 2} ^ {\\prime \\prime} + f _ {1 3} ^ {\\prime \\prime} \\cdot x + f _ {2 1} ^ {\\prime \\prime} - f _ {2 2} ^ {\\prime \\prime} + f _ {2 3} ^ {\\prime \\prime} \\cdot x + f _ {3} ^ {\\prime} + y \\left[ f _ {3 1} ^ {\\prime \\prime} - f _ {3 2} ^ {\\prime \\prime} \\cdot + f _ {3 3} ^ {\\prime \\prime} \\cdot x \\right] \\\\ = f _ {3} ^ {\\prime} + f _ {1 1} ^ {\\prime \\prime} - f _ {2 2} ^ {\\prime \\prime} + x y f _ {3 3} ^ {\\prime \\prime} + (x + y) f _ {1 3} ^ {\\prime \\prime} + (x - y) f _ {2 3} ^ {\\prime \\prime}, \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 694
+  },
+  {
+   "id": "ky2-2010-19-f58a5f",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2010 年考研数学二第 19 题",
+    "kind": "exam-original",
+    "year": 2010,
+    "region": "全国",
+    "paper": "2010 年考研数学二",
+    "number": "19",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 11 分)\n设函数 $u = f(x,y)$ 具有二阶连续偏导数, 且满足等式 $4\\frac{\\partial^2 u}{\\partial x^2} + 12\\frac{\\partial^2 u}{\\partial x \\partial y} + 5\\frac{\\partial^2 u}{\\partial y^2} = 0$\n确定 $a, b$ 的值，使等式在变换 $\\xi = x + ay, \\eta = x + by$ 下化简为 $\\frac{\\partial^2 u}{\\partial \\xi \\partial \\eta} = 0$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由复合函数链式法则得\n$$\n\\begin{array}{l} \\frac {\\partial u}{\\partial x} = \\frac {\\partial u}{\\partial \\xi} \\cdot \\frac {\\partial \\xi}{\\partial x} + \\frac {\\partial u}{\\partial y} \\cdot \\frac {\\partial \\eta}{\\partial x} = \\frac {\\partial u}{\\partial \\xi} + \\frac {\\partial u}{\\partial \\eta}, \\\\ \\frac {\\partial u}{\\partial y} = \\frac {\\partial u}{\\partial \\xi} \\cdot \\frac {\\partial \\xi}{\\partial y} + \\frac {\\partial u}{\\partial \\eta} \\frac {\\partial \\eta}{\\partial y} = a \\frac {\\partial u}{\\partial \\xi} + b \\frac {\\partial u}{\\partial \\eta}, \\\\ \\end{array}\n$$\n$$\n\\begin{array}{l} \\frac {\\partial^ {2} u}{\\partial x ^ {2}} = \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} \\cdot \\frac {\\partial \\xi}{\\partial x} + \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} \\cdot \\frac {\\partial \\eta}{\\partial x} + \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} \\cdot \\frac {\\partial \\eta}{\\partial x} + \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} \\cdot \\frac {\\partial \\eta}{\\partial x} = \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + 2 \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}, \\\\ \\frac {\\partial^ {2} u}{\\partial x \\partial y} = \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} \\cdot \\frac {\\partial \\xi}{\\partial y} + \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} \\cdot \\frac {\\partial \\eta}{\\partial y} + \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} \\cdot \\frac {\\partial \\eta}{\\partial y} + \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} \\cdot \\frac {\\partial \\eta}{\\partial y} = a \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + b \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + (a + b) \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}, \\\\ \\frac {\\partial^ {2} u}{\\partial y ^ {2}} = a \\left(a \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + b \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}\\right) + b \\left(a \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + a \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}\\right) = a ^ {2} \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + b ^ {2} \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + 2 a b \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}. \\\\ \\end{array}\n$$\n因此 $4 \\frac{\\partial^2 u}{\\partial x^2} + 12 \\frac{\\partial^2 u}{\\partial x \\partial y} + 5 \\frac{\\partial^2 u}{\\partial y^2} = 0$ 变换为\n$$\n(5 a ^ {2} + 1 2 a + 4) \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + (5 b ^ {2} + 1 2 b + 4) \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + [ 1 2 (a + b) + 1 0 a b + 8 ] \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} = 0.\n$$\n所以由题设有\n$$\n\\left\\{ \\begin{array}{l} 5 a ^ {2} + 1 2 a + 4 = 0, \\\\ 5 b ^ {2} + 1 2 b + 4 = 0, \\\\ 1 2 (a + b) + 1 0 a b + 8 \\neq 0. \\end{array} \\right.\n$$\n由前两式可解得 $a = -\\frac{2}{5}$ 或 $-2, b = -\\frac{2}{5}$ 或 $-2$ . 又因为当 $(a, b)$ 为 $(-2, -2), \\left(-\\frac{2}{5}, -\\frac{2}{5}\\right)$ 时不满足第三式，所以当 $(a, b)$ 为 $\\left(-\\frac{2}{5}, -2\\right), \\left(-2, -\\frac{2}{5}\\right)$ 时满足题意.",
+   "points": [
+    {
+     "text": "由复合函数链式法则得\n$$\n\\begin{array}{l} \\frac {\\partial u}{\\partial x} = \\frac {\\partial u}{\\partial \\xi} \\cdot \\frac {\\partial \\xi}{\\partial x} + \\frac {\\partial u}{\\partial y} \\cdot \\frac {\\partial \\eta}{\\partial x} = \\frac {\\partial u}{\\partial \\xi} + \\frac {\\partial u}{\\partial \\eta}, \\\\ \\frac {\\partial u}{\\partial y} = \\frac {\\partial u}{\\partial \\xi} \\cdot \\frac {\\partial \\xi}{\\partial y} + \\frac {\\partial u}{\\partial \\eta} \\frac {\\partial \\eta}{\\partial y} = a \\frac {\\partial u}{\\partial \\xi} + b \\frac {\\partial u}{\\partial \\eta}, \\\\ \\end{array}\n$$\n$$\n\\begin{array}{l} \\frac {\\partial^ {2} u}{\\partial x ^ {2}} = \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} \\cdot \\frac {\\partial \\xi}{\\partial x} + \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} \\cdot \\frac {\\partial \\eta}{\\partial x} + \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} \\cdot \\frac {\\partial \\eta}{\\partial x} + \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} \\cdot \\frac {\\partial \\eta}{\\partial x} = \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + 2 \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}, \\\\ \\frac {\\partial^ {2} u}{\\partial x \\partial y} = \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} \\cdot \\frac {\\partial \\xi}{\\partial y} + \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} \\cdot \\frac {\\partial \\eta}{\\partial y} + \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} \\cdot \\frac {\\partial \\eta}{\\partial y} + \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} \\cdot \\frac {\\partial \\eta}{\\partial y} = a \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + b \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + (a + b) \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}, \\\\ \\frac {\\partial^ {2} u}{\\partial y ^ {2}} = a \\left(a \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + b \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}\\right) + b \\left(a \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + a \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}\\right) = a ^ {2} \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + b ^ {2} \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + 2 a b \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}. \\\\ \\end{array}\n$$\n因此 $4 \\frac{\\partial^2 u}{\\partial x^2} + 12 \\frac{\\partial^2 u}{\\partial x \\partial y} + 5 \\frac{\\partial^2 u}{\\partial y^2} = 0$ 变换为\n$$\n(5 a ^ {2} + 1 2 a + 4) \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + (5 b ^ {2} + 1 2 b + 4) \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + [ 1 2 (a + b) + 1 0 a b + 8 ] \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} = 0.\n$$\n所以由题设有\n$$\n\\left\\{ \\begin{array}{l} 5 a ^ {2} + 1 2 a + 4 = 0, \\\\ 5 b ^ {2} + 1 2 b + 4 = 0, \\\\ 1 2 (a + b) + 1 0 a b + 8 \\neq 0. \\end{array} \\right.\n$$\n由前两式可解得 $a = -\\frac{2}{5}$ 或 $-2, b = -\\frac{2}{5}$ 或 $-2$ . 又因为当 $(a, b)$ 为 $(-2, -2), \\left(-\\frac{2}{5}, -\\frac{2}{5}\\right)$ 时不满足第三式，所以当 $(a, b)$ 为 $\\left(-\\frac{2}{5}, -2\\right), \\left(-2, -\\frac{2}{5}\\right)$ 时满足题意.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由复合函数链式法则得\n$$\n\\begin{array}{l} \\frac {\\partial u}{\\partial x} = \\frac {\\partial u}{\\partial \\xi} \\cdot \\frac {\\partial \\xi}{\\partial x} + \\frac {\\partial u}{\\partial y} \\cdot \\frac {\\partial \\eta}{\\partial x} = \\frac {\\partial u}{\\partial \\xi} + \\frac {\\partial u}{\\partial \\eta}, \\\\ \\frac {\\partial u}{\\partial y} = \\frac {\\partial u}{\\partial \\xi} \\cdot \\frac {\\partial \\xi}{\\partial y} + \\frac {\\partial u}{\\partial \\eta} \\frac {\\partial \\eta}{\\partial y} = a \\frac {\\partial u}{\\partial \\xi} + b \\frac {\\partial u}{\\partial \\eta}, \\\\ \\end{array}\n$$\n$$\n\\begin{array}{l} \\frac {\\partial^ {2} u}{\\partial x ^ {2}} = \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} \\cdot \\frac {\\partial \\xi}{\\partial x} + \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} \\cdot \\frac {\\partial \\eta}{\\partial x} + \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} \\cdot \\frac {\\partial \\eta}{\\partial x} + \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} \\cdot \\frac {\\partial \\eta}{\\partial x} = \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + 2 \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}, \\\\ \\frac {\\partial^ {2} u}{\\partial x \\partial y} = \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} \\cdot \\frac {\\partial \\xi}{\\partial y} + \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} \\cdot \\frac {\\partial \\eta}{\\partial y} + \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} \\cdot \\frac {\\partial \\eta}{\\partial y} + \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} \\cdot \\frac {\\partial \\eta}{\\partial y} = a \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + b \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + (a + b) \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}, \\\\ \\frac {\\partial^ {2} u}{\\partial y ^ {2}} = a \\left(a \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + b \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}\\right) + b \\left(a \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + a \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}\\right) = a ^ {2} \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + b ^ {2} \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + 2 a b \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta}. \\\\ \\end{array}\n$$\n因此 $4 \\frac{\\partial^2 u}{\\partial x^2} + 12 \\frac{\\partial^2 u}{\\partial x \\partial y} + 5 \\frac{\\partial^2 u}{\\partial y^2} = 0$ 变换为\n$$\n(5 a ^ {2} + 1 2 a + 4) \\frac {\\partial^ {2} u}{\\partial \\xi^ {2}} + (5 b ^ {2} + 1 2 b + 4) \\frac {\\partial^ {2} u}{\\partial \\eta^ {2}} + [ 1 2 (a + b) + 1 0 a b + 8 ] \\frac {\\partial^ {2} u}{\\partial \\xi \\partial \\eta} = 0.\n$$\n所以由题设有\n$$\n\\left\\{ \\begin{array}{l} 5 a ^ {2} + 1 2 a + 4 = 0, \\\\ 5 b ^ {2} + 1 2 b + 4 = 0, \\\\ 1 2 (a + b) + 1 0 a b + 8 \\neq 0. \\end{array} \\right.\n$$\n由前两式可解得 $a = -\\frac{2}{5}$ 或 $-2, b = -\\frac{2}{5}$ 或 $-2$ . 又因为当 $(a, b)$ 为 $(-2, -2), \\left(-\\frac{2}{5}, -\\frac{2}{5}\\right)$ 时不满足第三式，所以当 $(a, b)$ 为 $\\left(-\\frac{2}{5}, -2\\right), \\left(-2, -\\frac{2}{5}\\right)$ 时满足题意.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 695
+  },
+  {
+   "id": "ky2-2019-20-07a557",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2019 年考研数学二第 20 题",
+    "kind": "exam-original",
+    "year": 2019,
+    "region": "全国",
+    "paper": "2019 年考研数学二",
+    "number": "20",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 11 分)\n已知函数 $u(x,y)$ 满足关系式 $2\\frac{\\partial^2u}{\\partial x^2} - 2\\frac{\\partial^2u}{\\partial y^2} + 3\\frac{\\partial u}{\\partial x} + 3\\frac{\\partial u}{\\partial y} = 0$ 。求 $a, b$ 的值，使得在变换 $u(x,y) = v(x,y)\\mathrm{e}^{ax + by}$ 之下，上述等式可化为函数 $\\nu(x,y)$ 的不含一阶偏导数的等式。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由变换 $u(x, y) = \\nu(x, y)\\mathrm{e}^{ax + by}$ 可得\n$$\n\\frac {\\partial u}{\\partial x} = \\frac {\\partial v}{\\partial x} \\mathrm {e} ^ {a x + b y} + a v (x, y) \\mathrm {e} ^ {a x + b y}, \\quad \\frac {\\partial u}{\\partial y} = \\frac {\\partial v}{\\partial y} \\mathrm {e} ^ {a x + b y} + b v (x, y) \\mathrm {e} ^ {a x + b y},\n$$\n$$\n\\frac {\\partial^ {2} u}{\\partial x ^ {2}} = \\frac {\\partial^ {2} v}{\\partial x ^ {2}} \\mathrm {e} ^ {a x + b y} + 2 a \\frac {\\partial v}{\\partial x} \\mathrm {e} ^ {a x + b y} + a ^ {2} v (x, y) \\mathrm {e} ^ {a x + b y},\n$$\n$$\n\\frac {\\partial^ {2} u}{\\partial y ^ {2}} = \\frac {\\partial^ {2} v}{\\partial y ^ {2}} \\mathrm {e} ^ {a x + b y} + 2 b \\frac {\\partial v}{\\partial y} \\mathrm {e} ^ {a x + b y} + b ^ {2} v (x, y) \\mathrm {e} ^ {a x + b y}.\n$$\n代入等式，整理得\n$$\n2 \\frac {\\partial^ {2} v}{\\partial x ^ {2}} - 2 \\frac {\\partial^ {2} v}{\\partial y ^ {2}} + (4 a + 3) \\frac {\\partial v}{\\partial x} + (3 - 4 b) \\frac {\\partial v}{\\partial y} + (2 a ^ {2} - 2 b ^ {2} + 3 a + 3 b) v (x, y) = 0.\n$$\n依题意，当 $a = 0$ ， $b = \\frac{3}{4}$ 时，可化为 $\\nu (x,y)$ 的不含一阶偏导数的等式",
+   "points": [
+    {
+     "text": "由变换 $u(x, y) = \\nu(x, y)\\mathrm{e}^{ax + by}$ 可得\n$$\n\\frac {\\partial u}{\\partial x} = \\frac {\\partial v}{\\partial x} \\mathrm {e} ^ {a x + b y} + a v (x, y) \\mathrm {e} ^ {a x + b y}, \\quad \\frac {\\partial u}{\\partial y} = \\frac {\\partial v}{\\partial y} \\mathrm {e} ^ {a x + b y} + b v (x, y) \\mathrm {e} ^ {a x + b y},\n$$\n$$\n\\frac {\\partial^ {2} u}{\\partial x ^ {2}} = \\frac {\\partial^ {2} v}{\\partial x ^ {2}} \\mathrm {e} ^ {a x + b y} + 2 a \\frac {\\partial v}{\\partial x} \\mathrm {e} ^ {a x + b y} + a ^ {2} v (x, y) \\mathrm {e} ^ {a x + b y},\n$$\n$$\n\\frac {\\partial^ {2} u}{\\partial y ^ {2}} = \\frac {\\partial^ {2} v}{\\partial y ^ {2}} \\mathrm {e} ^ {a x + b y} + 2 b \\frac {\\partial v}{\\partial y} \\mathrm {e} ^ {a x + b y} + b ^ {2} v (x, y) \\mathrm {e} ^ {a x + b y}.\n$$\n代入等式，整理得\n$$\n2 \\frac {\\partial^ {2} v}{\\partial x ^ {2}} - 2 \\frac {\\partial^ {2} v}{\\partial y ^ {2}} + (4 a + 3) \\frac {\\partial v}{\\partial x} + (3 - 4 b) \\frac {\\partial v}{\\partial y} + (2 a ^ {2} - 2 b ^ {2} + 3 a + 3 b) v (x, y) = 0.\n$$\n依题意，当 $a = 0$ ， $b = \\frac{3}{4}$ 时，可化为 $\\nu (x,y)$ 的不含一阶偏导数的等式",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由变换 $u(x, y) = \\nu(x, y)\\mathrm{e}^{ax + by}$ 可得\n$$\n\\frac {\\partial u}{\\partial x} = \\frac {\\partial v}{\\partial x} \\mathrm {e} ^ {a x + b y} + a v (x, y) \\mathrm {e} ^ {a x + b y}, \\quad \\frac {\\partial u}{\\partial y} = \\frac {\\partial v}{\\partial y} \\mathrm {e} ^ {a x + b y} + b v (x, y) \\mathrm {e} ^ {a x + b y},\n$$\n$$\n\\frac {\\partial^ {2} u}{\\partial x ^ {2}} = \\frac {\\partial^ {2} v}{\\partial x ^ {2}} \\mathrm {e} ^ {a x + b y} + 2 a \\frac {\\partial v}{\\partial x} \\mathrm {e} ^ {a x + b y} + a ^ {2} v (x, y) \\mathrm {e} ^ {a x + b y},\n$$\n$$\n\\frac {\\partial^ {2} u}{\\partial y ^ {2}} = \\frac {\\partial^ {2} v}{\\partial y ^ {2}} \\mathrm {e} ^ {a x + b y} + 2 b \\frac {\\partial v}{\\partial y} \\mathrm {e} ^ {a x + b y} + b ^ {2} v (x, y) \\mathrm {e} ^ {a x + b y}.\n$$\n代入等式，整理得\n$$\n2 \\frac {\\partial^ {2} v}{\\partial x ^ {2}} - 2 \\frac {\\partial^ {2} v}{\\partial y ^ {2}} + (4 a + 3) \\frac {\\partial v}{\\partial x} + (3 - 4 b) \\frac {\\partial v}{\\partial y} + (2 a ^ {2} - 2 b ^ {2} + 3 a + 3 b) v (x, y) = 0.\n$$\n依题意，当 $a = 0$ ， $b = \\frac{3}{4}$ 时，可化为 $\\nu (x,y)$ 的不含一阶偏导数的等式",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 696
+  },
+  {
+   "id": "ky-2011-19-d4e7c7",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2011 年考研数学（一）第 19 题",
+    "kind": "exam-original",
+    "year": 2011,
+    "region": "全国",
+    "paper": "2011 年考研数学（一）",
+    "number": "19",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2011年解析/2011年解析.md"
+   },
+   "stem": "已知函数 $f(x,y)$ 具有二阶连续偏导数，且 $f(1,y) = 0$ ， $f(x,1) = 0$ ， $\\iint_{D} f(x,y) \\, \\mathrm{d}x \\, \\mathrm{d}y = a$ ，其中 $D = \\{(x,y) \\mid 0 \\leqslant x \\leqslant 1, 0 \\leqslant y \\leqslant 1\\}$ ，计算二重积分 $I = \\iint_{D} xy f_{xy}''(x,y) \\, \\mathrm{d}x \\, \\mathrm{d}y$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$I = \\int_{0}^{1}x\\mathrm{d}x\\int_{0}^{1}yf_{xy}^{\\prime \\prime}(x,y)\\mathrm{d}y = \\int_{0}^{1}x\\mathrm{d}x\\int_{0}^{1}y\\mathrm{d}f_{x}^{\\prime}(x,y),$\n由 $\\int_0^1 y\\mathrm{d}f_x'(x,y) = yf_x'(x,y)\\Big|_0^1 -\\int_0^1 f_x'(x,y)\\mathrm{d}y = f_x'(x,1) - \\int_0^1 f_x'(x,y)\\mathrm{d}y,$\n\n得 $I = \\int_{0}^{1}x f^{\\prime}_{x}(x,1)\\mathrm{d}x - \\int_{0}^{1}x\\mathrm{d}x\\int_{0}^{1}f^{\\prime}_{x}(x,y)\\mathrm{d}y = \\int_{0}^{1}x\\mathrm{d}f(x,1) - \\int_{0}^{1}x\\mathrm{d}x\\int_{0}^{1}f^{\\prime}_{x}(x,y)\\mathrm{d}y,$\n\n由 $f(x,1) = 0$ 得\n\n$$\nI = - \\int_ {0} ^ {1} x \\mathrm {d} x \\int_ {0} ^ {1} f _ {x} ^ {\\prime} (x, y) \\mathrm {d} y = - \\int_ {0} ^ {1} \\mathrm {d} y \\int_ {0} ^ {1} x f _ {x} ^ {\\prime} (x, y) \\mathrm {d} x,\n$$\n\n$$\n\\int_ {0} ^ {1} x f _ {x} ^ {\\prime} (x, y) \\mathrm {d} x = \\int_ {0} ^ {1} x \\mathrm {d} f (x, y) = x f (x, y) | _ {0} ^ {1} - \\int_ {0} ^ {1} f (x, y) \\mathrm {d} x = f (1, y) - \\int_ {0} ^ {1} f (x, y) \\mathrm {d} x,\n$$\n\n由 $f(1,y) = 0$ 得 $\\int_0^1 xf'_x(x,y)\\mathrm{d}x = -\\int_0^1 f(x,y)\\mathrm{d}x,$\n\n故 $I = \\int_{0}^{1}\\mathrm{d}y\\int_{0}^{1}f(x,y)\\mathrm{d}x = \\iint_{D}f(x,y)\\mathrm{d}x\\mathrm{d}y = a.$\n\n方法点评：本题主要考查二重积分转化为累次积分及改变累次积分的积分次序，抽象函数的定积分的分部积分法.",
+   "points": [
+    {
+     "text": "$I = \\int_{0}^{1}x\\mathrm{d}x\\int_{0}^{1}yf_{xy}^{\\prime \\prime}(x,y)\\mathrm{d}y = \\int_{0}^{1}x\\mathrm{d}x\\int_{0}^{1}y\\mathrm{d}f_{x}^{\\prime}(x,y),$\n由 $\\int_0^1 y\\mathrm{d}f_x'(x,y) = yf_x'(x,y)\\Big|_0^1 -\\int_0^1 f_x'(x,y)\\mathrm{d}y = f_x'(x,1) - \\int_0^1 f_x'(x,y)\\mathrm{d}y,$",
+     "partial": 2
+    },
+    {
+     "text": "得 $I = \\int_{0}^{1}x f^{\\prime}_{x}(x,1)\\mathrm{d}x - \\int_{0}^{1}x\\mathrm{d}x\\int_{0}^{1}f^{\\prime}_{x}(x,y)\\mathrm{d}y = \\int_{0}^{1}x\\mathrm{d}f(x,1) - \\int_{0}^{1}x\\mathrm{d}x\\int_{0}^{1}f^{\\prime}_{x}(x,y)\\mathrm{d}y,$",
+     "partial": 2
+    },
+    {
+     "text": "由 $f(x,1) = 0$ 得",
+     "partial": 2
+    },
+    {
+     "text": "$$\nI = - \\int_ {0} ^ {1} x \\mathrm {d} x \\int_ {0} ^ {1} f _ {x} ^ {\\prime} (x, y) \\mathrm {d} y = - \\int_ {0} ^ {1} \\mathrm {d} y \\int_ {0} ^ {1} x f _ {x} ^ {\\prime} (x, y) \\mathrm {d} x,\n$$",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\int_ {0} ^ {1} x f _ {x} ^ {\\prime} (x, y) \\mathrm {d} x = \\int_ {0} ^ {1} x \\mathrm {d} f (x, y) = x f (x, y) | _ {0} ^ {1} - \\int_ {0} ^ {1} f (x, y) \\mathrm {d} x = f (1, y) - \\int_ {0} ^ {1} f (x, y) \\mathrm {d} x,\n$$",
+     "partial": 2
+    },
+    {
+     "text": "由 $f(1,y) = 0$ 得 $\\int_0^1 xf'_x(x,y)\\mathrm{d}x = -\\int_0^1 f(x,y)\\mathrm{d}x,$；故 $I = \\int_{0}^{1}\\mathrm{d}y\\int_{0}^{1}f(x,y)\\mathrm{d}x = \\iint_{D}f(x,y)\\mathrm{d}x\\mathrm{d}y = a.$；方法点评：本题主要考查二重积分转化为累次积分及改变累次积分的积分次序，抽象函数的定积分的分部积分法.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$I = \\int_{0}^{1}x\\mathrm{d}x\\int_{0}^{1}yf_{xy}^{\\prime \\prime}(x,y)\\mathrm{d}y = \\int_{0}^{1}x\\mathrm{d}x\\int_{0}^{1}y\\mathrm{d}f_{x}^{\\prime}(x,y),$\n由 $\\int_0^1 y\\mathrm{d}f_x'(x,y) = yf_x'(x,y)\\Big|_0^1 -\\int_0^1 f_x'(x,y)\\mathrm{d}y = f_x'(x,1) - \\int_0^1 f_x'(x,y)\\mathrm{d}y,$\n\n得 $I = \\int_{0}^{1}x f^{\\prime}_{x}(x,1)\\mathrm{d}x - \\int_{0}^{1}x\\mathrm{d}x\\int_{0}^{1}f^{\\prime}_{x}(x,y)\\mathrm{d}y = \\int_{0}^{1}x\\mathrm{d}f(x,1) - \\int_{0}^{1}x\\mathrm{d}x\\int_{0}^{1}f^{\\prime}_{x}(x,y)\\mathrm{d}y,$\n\n由 $f(x,1) = 0$ 得\n\n$$\nI = - \\int_ {0} ^ {1} x \\mathrm {d} x \\int_ {0} ^ {1} f _ {x} ^ {\\prime} (x, y) \\mathrm {d} y = - \\int_ {0} ^ {1} \\mathrm {d} y \\int_ {0} ^ {1} x f _ {x} ^ {\\prime} (x, y) \\mathrm {d} x,\n$$\n\n$$\n\\int_ {0} ^ {1} x f _ {x} ^ {\\prime} (x, y) \\mathrm {d} x = \\int_ {0} ^ {1} x \\mathrm {d} f (x, y) = x f (x, y) | _ {0} ^ {1} - \\int_ {0} ^ {1} f (x, y) \\mathrm {d} x = f (1, y) - \\int_ {0} ^ {1} f (x, y) \\mathrm {d} x,\n$$\n\n由 $f(1,y) = 0$ 得 $\\int_0^1 xf'_x(x,y)\\mathrm{d}x = -\\int_0^1 f(x,y)\\mathrm{d}x,$\n\n故 $I = \\int_{0}^{1}\\mathrm{d}y\\int_{0}^{1}f(x,y)\\mathrm{d}x = \\iint_{D}f(x,y)\\mathrm{d}x\\mathrm{d}y = a.$\n\n方法点评：本题主要考查二重积分转化为累次积分及改变累次积分的积分次序，抽象函数的定积分的分部积分法.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 697
+  }
+ ]
+}

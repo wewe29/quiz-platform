@@ -1,0 +1,2459 @@
+{
+ "chapter": 6,
+ "questions": [
+  {
+   "id": "c6-s1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.2 平面图形的面积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "曲线 $y=x^2$、直线 $x=1$ 与 $x$ 轴围成的平面图形面积为",
+   "options": [
+    "$\\dfrac{1}{3}$",
+    "$\\dfrac{1}{2}$",
+    "$\\dfrac{2}{3}$",
+    "$1$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$S=\\int_0^1x^2\\,dx=\\left[\\dfrac{x^3}{3}\\right]_0^1=\\dfrac13$，A 正确。\nB 错：误用 $\\int_0^1 x\\,dx$。\nC 错：把立方积分为 $\\dfrac{x^4}{4}$ 后又错算。\nD 错：当作矩形面积 $1\\times1$。",
+   "misconception": "⚠️易错点：幂函数积分公式 $\\int x^n dx=\\dfrac{x^{n+1}}{n+1}+C$ 的指数要加一。",
+   "extension": null,
+   "tags": [
+    "面积"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(x**2, (x, 0, 1))",
+     "expected": "1/3"
+    }
+   ],
+   "idx": 428
+  },
+  {
+   "id": "ky2-1988-4-9071d5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "1988 年考研数学三第 4 题",
+    "kind": "exam-original",
+    "year": 1988,
+    "region": "全国",
+    "paper": "1988 年考研数学三",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $y = \\sin^{3 / 2} x$ （ $0 \\leqslant x \\leqslant \\pi$ ）与 $x$ 轴围成的图形绕 $x$ 轴旋转所形成的旋转体体积为……（）",
+   "options": [
+    "$\\frac{4}{3}$",
+    "$\\frac{4}{3}\\pi$",
+    "$\\frac{2}{3}\\pi^2$",
+    "$\\frac{2}{3}\\pi$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：B\n应选 (B).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 429
+  },
+  {
+   "id": "ky2-1989-3-a2295d",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "1989 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1989,
+    "region": "全国",
+    "paper": "1989 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $y = \\cos x\\left(-\\frac{\\pi}{2} \\leqslant x \\leqslant \\frac{\\pi}{2}\\right)$ 与 $x$ 轴所围成的图形, 绕 $x$ 轴旋转一周所成的旋转体的体积为……( )",
+   "options": [
+    "$\\frac{\\pi}{2}$",
+    "$\\pi$",
+    "$\\frac{\\pi^2}{2}$",
+    "$\\pi^2$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：C\n应选 (C).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 430
+  },
+  {
+   "id": "ky2-1995-2-aeae76",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "1995 年考研数学三第 2 题",
+    "kind": "exam-original",
+    "year": 1995,
+    "region": "全国",
+    "paper": "1995 年考研数学三",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $y = x(x - 1)(2 - x)$ 与 $x$ 轴所围图形的面积可表示为……（）",
+   "options": [
+    "$-\\int_0^2 x(x - 1)(2 - x)\\mathrm{d}x.$",
+    "$\\int_0^1 x(x - 1)(2 - x)\\mathrm{d}x - \\int_1^2 x(x - 1)(2 - x)\\mathrm{d}x.$",
+    "$-\\int_0^1 x(x - 1)(2 - x)\\mathrm{d}x + \\int_1^2 x(x - 1)(2 - x)\\mathrm{d}x.$",
+    "$\\int_0^2 x(x - 1)(2 - x)\\mathrm{d}x.$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：C\n应选 (C).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 431
+  },
+  {
+   "id": "ky2-1996-5-4ef6e0",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "1996 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1996,
+    "region": "全国",
+    "paper": "1996 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x), g(x)$ 在区间 $[a, b]$ 上连续, $g(x) < f(x) < m$ ( $m$ 为常数), 由曲线 $y = g(x)$ , $y = f(x)$ , $x = a$ 及 $x = b$ 所围平面图形绕直线 $y = m$ 旋转而成的旋转体体积为……( )",
+   "options": [
+    "$\\int_{a}^{b}\\pi [2m - f(x) + g(x)][f(x) - g(x)]\\mathrm{d}x.$",
+    "$\\int_{a}^{b}\\pi [2m - f(x) - g(x)][f(x) - g(x)]\\mathrm{d}x.$",
+    "$\\int_{a}^{b}\\pi [m - f(x) + g(x)][f(x) - g(x)]\\mathrm{d}x.$",
+    "$\\int_{a}^{b}\\pi [m - f(x) - g(x)][f(x) - g(x)]\\mathrm{d}x.$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：B\n应选 (B).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 432
+  },
+  {
+   "id": "c6-s2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.3 体积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "曲线 $y=\\sqrt{x}$、直线 $x=1$ 与 $x$ 轴围成的图形绕 $x$ 轴旋转一周所得旋转体体积为",
+   "options": [
+    "$\\dfrac{\\pi}{4}$",
+    "$\\dfrac{\\pi}{2}$",
+    "$\\pi$",
+    "$2\\pi$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：圆盘法（§6.3）：$V=\\pi\\int_0^1\\left(\\sqrt{x}\\right)^2dx=\\pi\\int_0^1x\\,dx=\\dfrac{\\pi}{2}$，B 正确。\nA 错：把 $\\int_0^1x\\,dx=\\dfrac12$ 又乘错系数。\nC 错：忘记平方或 $\\pi$ 因子。\nD 错：体积公式多乘了 $2$。",
+   "misconception": "⚠️易错点：圆盘法 $V=\\pi\\int f^2(x)dx$——被积函数是「半径的平方」，$\\pi$ 与平方都易丢。",
+   "extension": null,
+   "tags": [
+    "旋转体体积",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(pi*x, (x, 0, 1))",
+     "expected": "pi/2"
+    }
+   ],
+   "idx": 433
+  },
+  {
+   "id": "c6-s3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "knowledgePoints": [
+    "6.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.4 平面曲线的弧长",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "曲线 $y=\\dfrac{2}{3}x^{3/2}$ 上相应于 $x$ 从 $0$ 到 $3$ 的一段弧的长度为",
+   "options": [
+    "$\\dfrac{7}{3}$",
+    "$\\dfrac{8}{3}$",
+    "$\\dfrac{14}{3}$",
+    "$\\dfrac{16}{3}$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：弧长公式（§6.4）$s=\\int_a^b\\sqrt{1+y'^2}\\,dx$。$y'=\\sqrt{x}$，故 $\\sqrt{1+y'^2}=\\sqrt{1+x}$，\n$$s=\\int_0^3\\sqrt{1+x}\\,dx=\\left[\\frac{2}{3}(1+x)^{3/2}\\right]_0^3=\\frac{2}{3}(8-1)=\\frac{14}{3},$$\nC 正确。\nA、B、D 错：幂次或上下限代入出错（$4^{3/2}=8$ 是关键数值）。",
+   "misconception": "⚠️易错点：$\\int\\sqrt{1+x}\\,dx=\\dfrac23(1+x)^{3/2}$ 别写成 $\\dfrac23(1+x)^{1/2}$；$4^{3/2}=8$ 而不是 $6$。",
+   "extension": null,
+   "tags": [
+    "弧长",
+    "困难"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "simplify(integrate(sqrt(1+x), (x, 0, 3)) - Rational(14, 3))",
+     "expected": "0"
+    }
+   ],
+   "idx": 434
+  },
+  {
+   "id": "c6-m1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.1",
+   "knowledgePoints": [
+    "6.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.1 定积分的元素法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "关于定积分应用中的元素法（微元法），下列说法正确的有",
+   "options": [
+    "其思想是在微小区间上「以常代变、以直代曲」，写出量 $U$ 的元素 $dU$",
+    "求两曲线间的面积时，竖条元素可取 $dA=\\left[y_\\text{上}(x)-y_\\text{下}(x)\\right]dx$",
+    "元素法只能用来求面积和体积",
+    "选 $x$ 还是选 $y$ 作积分变量，结果相同但计算繁简可能差别很大"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：元素法三步（取微元、写元素、积分求和）见 §6.1，A 正确；上曲线减下曲线的竖条面积元素是 §6.2 的基本写法，B 正确；元素法适用于面积、体积、弧长、功、水压力、引力等（§6.2–§6.5），C 错误；同一量按不同积分变量计算结果一致（定积分值唯一），但繁简不同，D 正确。",
+   "misconception": "⚠️易错点：元素 $dU$ 必须是所求量在小区间上的**线性主部**（误差为高阶无穷小），不能凭感觉乱写；积分变量的选择不影响结果但显著影响计算量。",
+   "extension": null,
+   "tags": [
+    "元素法",
+    "简答"
+   ],
+   "verify": [],
+   "idx": 435
+  },
+  {
+   "id": "c6-m2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.2 平面图形的面积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "由抛物线 $y=x^2$ 与直线 $y=2x$ 围成的图形，下列结论正确的有",
+   "options": [
+    "两曲线的交点为 $(0,0)$ 与 $(2,4)$",
+    "围成图形的面积 $S=\\displaystyle\\int_0^2(2x-x^2)\\,dx=\\dfrac{4}{3}$",
+    "该图形绕 $x$ 轴旋转的体积 $V=\\displaystyle\\int_0^2\\pi(2x-x^2)^2\\,dx$",
+    "该图形绕 $y$ 轴旋转的体积 $V=\\dfrac{8\\pi}{3}$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：联立 $x^2=2x$ 得交点 $(0,0),(2,4)$，A 正确；区间 $(0,2)$ 上 $2x>x^2$，$S=\\left[x^2-\\dfrac{x^3}{3}\\right]_0^2=\\dfrac43$，B 正确；绕 $y$ 轴用圆盘法（以 $y$ 为变量，$x_\\text{右}=\\sqrt y$，$x_\\text{左}=\\dfrac y2$）：$V=\\pi\\int_0^4\\left(y-\\dfrac{y^2}{4}\\right)dy=\\pi\\left(8-\\dfrac{16}{3}\\right)=\\dfrac{8\\pi}{3}$，D 正确。\nC 错：绕 $x$ 轴旋转的圆盘法要用「外半径平方减内半径平方」：$V=\\pi\\int_0^2\\left[(2x)^2-(x^2)^2\\right]dx=\\dfrac{64\\pi}{15}$，直接对 $2x-x^2$ 平方是常见错解。",
+   "misconception": "⚠️易错点：两条曲线围成的区域绕轴旋转时，圆盘法是「外半径²−内半径²」之差，不是把两函数之差平方。",
+   "extension": null,
+   "tags": [
+    "面积",
+    "旋转体",
+    "困难"
+   ],
+   "verify": [
+    {
+     "desc": "交点",
+     "code": "solve(x**2 - 2*x, x)",
+     "expected": "[0, 2]"
+    },
+    {
+     "desc": "面积",
+     "code": "integrate(2*x - x**2, (x, 0, 2))",
+     "expected": "4/3"
+    },
+    {
+     "desc": "绕y轴体积",
+     "code": "yy=symbols('yy'); integrate(pi*(yy - yy**2/4), (yy, 0, 4))",
+     "expected": "8*pi/3"
+    },
+    {
+     "desc": "绕x轴体积",
+     "code": "integrate(pi*((2*x)**2 - (x**2)**2), (x, 0, 2))",
+     "expected": "64*pi/15"
+    }
+   ],
+   "idx": 436
+  },
+  {
+   "id": "c6-j1",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.2 平面图形的面积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求平面图形面积时，若曲线段位于 $x$ 轴下方，应以 $|y|$（即 $-y$）作为被积函数。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：面积是非负量，元素法中竖条高度取 $y_\\text{上}-y_\\text{下}$；曲线在 $x$ 轴下方时上边界是 $x$ 轴（$y=0$），下边界是曲线，元素为 $(0-y)dx=-y\\,dx=|y|dx$。命题正确（§6.2）。",
+   "misconception": "⚠️易错点：直接 $\\int_a^b f(x)dx$ 得到的是「带符号面积」，$f<0$ 的段会扣掉面积——求几何面积必须取绝对值或分区间处理。",
+   "extension": null,
+   "tags": [
+    "面积",
+    "易错点"
+   ],
+   "verify": [],
+   "idx": 437
+  },
+  {
+   "id": "c6-j2",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.3 体积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "曲线 $y=f(x)$、$x$ 轴及直线 $x=a$、$x=b$ 围成的图形绕 $x$ 轴旋转的体积恒为 $\\pi\\int_a^b f(x)\\,dx$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：圆盘法公式是 $V=\\pi\\int_a^b f^2(x)\\,dx$——旋转半径是 $|f(x)|$，体积元素 $dV=\\pi f^2(x)dx$，对 $f(x)$（而非其平方）积分没有几何意义。命题错误（§6.3）。",
+   "misconception": "⚠️易错点：把「面积公式」与「体积公式」混淆：面积 $\\int f\\,dx$，体积 $\\pi\\int f^2\\,dx$，弧长 $\\int\\sqrt{1+f'^2}\\,dx$——三个公式的被积函数完全不同。",
+   "extension": null,
+   "tags": [
+    "旋转体体积",
+    "易错点"
+   ],
+   "verify": [],
+   "idx": 438
+  },
+  {
+   "id": "c6-j3",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "knowledgePoints": [
+    "6.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.4 平面曲线的弧长",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "弧长公式 $s=\\int_a^b\\sqrt{1+y'^2}\\,dx$ 中的 $\\sqrt{1+y'^2}$ 来源于弧微分 $ds=\\sqrt{1+y'^2}\\,dx$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：弧微分由勾股定理在微元上「以直代曲」得到：$ds^2=dx^2+dy^2$，$dy=y'dx$，故 $ds=\\sqrt{1+y'^2}\\,dx$（§6.4 前置知识，源自 §5.3 弧微分）。命题正确。",
+   "misconception": "⚠️易错点：弧微分是弧长公式的基础；对参数方程 $\\begin{cases}x=x(t)\\\\y=y(t)\\end{cases}$，$ds=\\sqrt{x'^2+y'^2}\\,dt$，两种形式要都会用。",
+   "extension": null,
+   "tags": [
+    "弧长",
+    "弧微分"
+   ],
+   "verify": [],
+   "idx": 439
+  },
+  {
+   "id": "c6-b1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.2 平面图形的面积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "曲线 $y=e^x$、$x$ 轴、$y$ 轴及直线 $x=1$ 围成的图形面积为 ____。",
+   "options": null,
+   "answer": [
+    "e-1"
+   ],
+   "accept": [
+    "e-1",
+    "e−1",
+    "e-1",
+    "exp(1)-1"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$S=\\int_0^1e^x\\,dx=\\left[e^x\\right]_0^1=e-1$。",
+   "misconception": "⚠️易错点：代下限 $e^0=1$ 别丢。",
+   "extension": null,
+   "tags": [
+    "面积"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(exp(x), (x, 0, 1))",
+     "expected": "-1 + E"
+    }
+   ],
+   "idx": 440
+  },
+  {
+   "id": "c6-b2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.3 体积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "曲线 $y=x^2$、$x$ 轴与直线 $x=1$ 围成的图形绕 $x$ 轴旋转一周的旋转体体积为 ____。",
+   "options": null,
+   "answer": [
+    "pi/5"
+   ],
+   "accept": [
+    "pi/5",
+    "π/5",
+    "0.6283185307179586"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$V=\\pi\\int_0^1(x^2)^2dx=\\pi\\int_0^1x^4dx=\\dfrac{\\pi}{5}$。",
+   "misconception": "⚠️易错点：被积函数是 $x^4$（先平方），不是 $x^2$。",
+   "extension": null,
+   "tags": [
+    "旋转体体积"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(pi*x**4, (x, 0, 1))",
+     "expected": "pi/5"
+    }
+   ],
+   "idx": 441
+  },
+  {
+   "id": "ky2-1992-5-781072",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "1992 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1992,
+    "region": "全国",
+    "paper": "1992 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "由曲线 $y = x \\mathrm{e}^{x}$ 与直线 $y = \\mathrm{e}x$ 所围成的图形的面积 $S =$ ________.",
+   "options": null,
+   "answer": [
+    "$\\frac{\\mathrm{e}}{2} - 1$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{\\mathrm{e}}{2} - 1$\n应填 $\\frac{\\mathrm{e}}{2} - 1$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 442
+  },
+  {
+   "id": "ky2-1996-5-f56a48",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "1996 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1996,
+    "region": "全国",
+    "paper": "1996 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "由曲线 $y = x + \\frac{1}{x}$ , $x = 2$ 及 $y = 2$ 所围图形的面积 $S =$ ________.",
+   "options": null,
+   "answer": [
+    "$\\ln 2 - \\frac{1}{2}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\ln 2 - \\frac{1}{2}$\n应填 $\\ln 2 - \\frac{1}{2}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 443
+  },
+  {
+   "id": "ky2-2003-4-71b408",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "2003 年考研数学二第 4 题",
+    "kind": "exam-original",
+    "year": 2003,
+    "region": "全国",
+    "paper": "2003 年考研数学二",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设曲线的极坐标方程为 $\\rho = \\mathrm{e}^{a\\theta}$ ( $a > 0$ ), 则该曲线上相应于 $\\theta$ 从 0 变到 $2\\pi$ 的一段弧与极轴所围成的图形的面积为",
+   "options": null,
+   "answer": [
+    "$\\frac{1}{4a} (e^{4\\pi a} - 1)$ . 由极坐标下平面图形的面积公式得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{1}{4a} (e^{4\\pi a} - 1)$ . 由极坐标下平面图形的面积公式得\n应填 $\\frac{1}{4a} (e^{4\\pi a} - 1)$ . 由极坐标下平面图形的面积公式得\n$$\nS = \\frac {1}{2} \\int_ {0} ^ {2 \\pi} \\rho^ {2} (\\theta) d \\theta = \\frac {1}{2} \\int_ {0} ^ {2 \\pi} e ^ {2 a \\theta} d \\theta = \\left[ \\frac {1}{4 a} e ^ {2 a \\theta} \\right] _ {0} ^ {2 \\pi} = \\frac {1}{4 a} (e ^ {4 \\pi a} - 1).\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 444
+  },
+  {
+   "id": "ky2-2010-12-f61583",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "knowledgePoints": [
+    "6.4"
+   ],
+   "source": {
+    "text": "2010 年考研数学二第 12 题",
+    "kind": "exam-original",
+    "year": 2010,
+    "region": "全国",
+    "paper": "2010 年考研数学二",
+    "number": "12",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "当 $0 \\leqslant \\theta \\leqslant \\pi$ 时, 对数螺线 $r = \\mathrm{e}^{\\theta}$ 的弧长为",
+   "options": null,
+   "answer": [
+    "$\\sqrt{2} (\\mathrm{e}^{\\pi} - 1)$ . 由极坐标弧长公式可得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\sqrt{2} (\\mathrm{e}^{\\pi} - 1)$ . 由极坐标弧长公式可得\n应填 $\\sqrt{2} (\\mathrm{e}^{\\pi} - 1)$ . 由极坐标弧长公式可得\n$$\ns = \\int_ {0} ^ {\\pi} \\sqrt {\\left(\\mathrm {e} ^ {\\theta}\\right) ^ {2} + \\left(\\mathrm {e} ^ {\\theta}\\right) ^ {2}} \\mathrm {d} \\theta = \\int_ {0} ^ {\\pi} \\sqrt {2} \\mathrm {e} ^ {\\theta} \\mathrm {d} \\theta = \\sqrt {2} \\left(\\mathrm {e} ^ {\\pi} - 1\\right).\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 445
+  },
+  {
+   "id": "ky2-2013-11-4a0eb2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "2013 年考研数学二第 11 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学二",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设封闭曲线 $L$ 的极坐标方程为 $r = \\cos 3\\theta \\left(-\\frac{\\pi}{6} \\leqslant \\theta \\leqslant \\frac{\\pi}{6}\\right)$ , 则 $L$ 所围成的平面图形的面积为",
+   "options": null,
+   "answer": [
+    "$\\frac{\\pi}{12}$ . 由极坐标的面积公式可得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{\\pi}{12}$ . 由极坐标的面积公式可得\n应填 $\\frac{\\pi}{12}$ . 由极坐标的面积公式可得\n$$\nS = \\frac {1}{2} \\int_ {- \\frac {\\pi}{6}} ^ {\\frac {\\pi}{6}} \\cos^ {2} 3 \\theta d \\theta = \\int_ {0} ^ {\\frac {\\pi}{6}} \\frac {1 + \\cos 6 \\theta}{2} d \\theta = \\frac {\\pi}{1 2}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 446
+  },
+  {
+   "id": "ky-2007-14-274352",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "2007 年考研数学（一）第 14 题",
+    "kind": "exam-original",
+    "year": 2007,
+    "region": "全国",
+    "paper": "2007 年考研数学（一）",
+    "number": "14",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2007年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2007年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2007年解析/2007年解析.md"
+   },
+   "stem": "设曲面 $\\Sigma: |x| + |y| + |z| = 1$ ，则 $\\iint_{\\Sigma} (x + |y|) \\, \\mathrm{d}S = \\_$",
+   "options": null,
+   "answer": [
+    "$\\frac{4\\sqrt{3}}{3}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{4\\sqrt{3}}{3}$\n【解】 由对称性及奇偶性得\n\n$$\n\\begin{array}{l} \\oiint_ {\\Sigma} (x + | y |) \\mathrm {d} S = \\oiint_ {\\Sigma} | y | \\mathrm {d} S = \\frac {1}{3} \\oiint_ {\\Sigma} (| x | + | y | + | z |) \\mathrm {d} S \\\\ = \\frac {1}{3} \\oiint_ {\\Sigma} d S = \\frac {1}{3} \\times 8 \\times \\frac {1}{2} \\times \\sqrt {2} \\times \\sqrt {2} \\times \\frac {\\sqrt {3}}{2} = \\frac {4 \\sqrt {3}}{3}. \\\\ \\end{array}\n$$\n\n方法点评：本题考查对面积的曲面积分的奇偶性与对称性\n\n对面积的曲面积分的对称性质如下：\n\n(1) 若 $\\Sigma$ 关于 $xOy$ 平面对称, 且位于 $xOy$ 平面上方的部分为 $\\Sigma_{1}$ ,\n\n当 $f(x,y, - z) = -f(x,y,z)$ 时， $\\iint_{S} f(x,y,z) \\mathrm{d}S = 0$\n\n当 $f(x,y, - z) = f(x,y,z)$ 时 $\\iint_{\\Sigma}f(x,y,z)\\mathrm{d}S = 2\\iint_{\\Sigma}f(x,y,z)\\mathrm{d}S.$\n\n(2) 若 $\\Sigma$ 关于 $yOz$ 平面对称, 且位于 $yOz$ 平面前侧的部分为 $\\Sigma_{1}$ ,\n\n当 $f(-x,y,z) = -f(x,y,z)$ 时， $\\iint_{S} f(x,y,z) \\, \\mathrm{d}S = 0$\n\n当 $f(-x,y,z) = f(x,y,z)$ 时 $\\iint_{\\Sigma}f(x,y,z)\\mathrm{d}S = 2\\iint_{\\Sigma_i}f(x,y,z)\\mathrm{d}S.$\n\n（3）若 $\\Sigma$ 关于 $xOz$ 平面对称，且位于 $xOz$ 平面右侧的部分为 $\\Sigma_{1}$\n\n当 $f(x, -y, z) = -f(x, y, z)$ 时 $\\iint_{\\Sigma} f(x, y, z) \\mathrm{d}S = 0$\n\n当 $f(x, -y, z) = f(x, y, z)$ 时 $\\iint_{\\Sigma} f(x, y, z) \\mathrm{d}S = 2 \\iint_{\\Sigma_1} f(x, y, z) \\mathrm{d}S.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 447
+  },
+  {
+   "id": "ky-2011-9-363262",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "knowledgePoints": [
+    "6.4"
+   ],
+   "source": {
+    "text": "2011 年考研数学（一）第 9 题",
+    "kind": "exam-original",
+    "year": 2011,
+    "region": "全国",
+    "paper": "2011 年考研数学（一）",
+    "number": "9",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2011年解析/2011年解析.md"
+   },
+   "stem": "曲线 $y = \\int_{0}^{x} \\tan t \\, \\mathrm{d}t \\left( 0 \\leqslant x \\leqslant \\frac{\\pi}{4} \\right)$ 的弧长 $s =$ ______.",
+   "options": null,
+   "answer": [
+    "$\\ln (1 + \\sqrt{2})$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\ln (1 + \\sqrt{2})$\n【解】由 $\\mathrm{ds} = \\sqrt{1 + \\left(\\frac{\\mathrm{dy}}{\\mathrm{dx}}\\right)^2}\\mathrm{dx} = \\sqrt{1 + \\tan^2x}\\mathrm{dx} = \\sec x\\mathrm{dx},$\n\n得 $s = \\int_{0}^{\\frac{\\pi}{4}}\\sqrt{1 + \\left(\\frac{\\mathrm{dy}}{\\mathrm{dx}}\\right)^{2}}\\mathrm{d}x = \\int_{0}^{\\frac{\\pi}{4}}\\sec x\\mathrm{d}x = \\ln (\\sec x + \\tan x)\\Bigg|_{0}^{\\frac{\\pi}{4}} = \\ln (1 + \\sqrt{2}).$\n\n方法点评：本题考查变积分限函数求导、弧微分的公式、定积分的计算.\n\n需要熟练掌握曲线的弧长计算公式：\n\n(1) 若 $L: y = f(x) (a \\leqslant x \\leqslant b)$ , 则 $\\mathrm{d}s = \\sqrt{1 + f'^2(x)} \\, \\mathrm{d}x$ , $s = \\int_{a}^{b} \\sqrt{1 + f'^2(x)} \\, \\mathrm{d}x$ ;\n(2) 若 $L: \\left\\{ \\begin{array}{l} x = \\varphi(t), \\\\ y = \\psi(t) \\end{array} \\right.$ ( $\\alpha \\leqslant t \\leqslant \\beta$ ), 则 $\\mathrm{ds} = \\sqrt{\\varphi'^2(t) + \\psi'^2(t)} \\, \\mathrm{d}t$ , $s = \\int_{\\alpha}^{\\beta} \\sqrt{\\varphi'^2(t) + \\psi'^2(t)} \\, \\mathrm{d}t$ ;\n（3）若 $L: r = r(\\theta) (\\alpha \\leqslant \\theta \\leqslant \\beta)$ ，则 $\\mathrm{d}s = \\sqrt{r'^2(\\theta) + r^2(\\theta)}\\mathrm{d}\\theta, s = \\int_{\\alpha}^{\\beta} \\sqrt{r'^2(\\theta) + r^2(\\theta)}\\mathrm{d}\\theta.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 448
+  },
+  {
+   "id": "c6-t1",
+   "type": "term",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.1",
+   "knowledgePoints": [
+    "6.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.1 定积分的元素法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "名词解释：元素法（微元法）。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "若所求量 $U$ 对区间 $[a,b]$ 具有可加性，且在典型小区间 $[x,x+dx]$ 上能写出 $U$ 的部分量近似为 $f(x)\\,dx$（误差为 $o(dx)$），则称 $f(x)\\,dx$ 为量 $U$ 的元素（微元），记 $dU=f(x)\\,dx$，并以 $U=\\int_a^b f(x)\\,dx$ 求出 $U$。这一「取微元—写元素—积分」的方法称为元素法。",
+   "points": [
+    {
+     "text": "三步：① 选积分变量与区间；② 在 $[x,x+dx]$ 上以常代变、以直代曲，写出部分量的线性主部 $dU=f(x)dx$；③ 积分 $U=\\int_a^bf(x)dx$。",
+     "partial": 2
+    },
+    {
+     "text": "依据与适用：元素法的合理性在于部分量与元素之差是 $o(dx)$，从而可积；适用于面积、体积、弧长、变力做功、水压力等具有可加性的量。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：元素法的叙述与理论依据见 §6.1（并回溯 §5.3 弧微分）。\n**考点出处**：同济《高等数学》第七版 §6.1 定积分的元素法。",
+   "misconception": "⚠️易错点：元素必须是「线性主部」，例如体积元素是 $\\pi f^2(x)dx$ 而非 $\\pi f(x)dx$；写元素时物理量纲要一致。",
+   "extension": null,
+   "tags": [
+    "元素法",
+    "概念",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 449
+  },
+  {
+   "id": "c6-t2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.3 体积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "简答：写出曲线 $y=f(x)\\ (\\ge0)$ 在 $[a,b]$ 上绕 $x$ 轴旋转的体积公式（圆盘法），并说明绕 $y$ 轴时柱壳法（剥壳法）的公式与适用情形。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "绕 $x$ 轴（圆盘法）：$V=\\pi\\int_a^b f^2(x)\\,dx$，即把旋转体切成垂直于 $x$ 轴的薄圆盘，元素 $dV=\\pi f^2(x)dx$。绕 $y$ 轴（柱壳法）：$V=2\\pi\\int_a^b x\\,f(x)\\,dx$（$0\\le a<b$），元素为薄圆筒 $dV=2\\pi x\\cdot f(x)\\cdot dx$；也可用圆盘法改以 $y$ 为积分变量 $V=\\pi\\int x_\\text{右}^2(y)dy-\\pi\\int x_\\text{左}^2(y)dy$。柱壳法适合「以 $x$ 表达简单、反解 $x(y)$ 困难」的曲线。",
+   "points": [
+    {
+     "text": "圆盘法：$V=\\pi\\int_a^bf^2(x)dx$，元素为薄圆盘 $dV=\\pi f^2(x)dx$，要求 $f\\ge0$。",
+     "partial": 2
+    },
+    {
+     "text": "柱壳法：$V=2\\pi\\int_a^bxf(x)dx$，元素为半径 $x$、高 $f(x)$、厚 $dx$ 的薄圆筒；绕 $y$ 轴也可用圆盘法的替代形式 $V=\\pi\\int\\left[x_\\text{右}^2(y)-x_\\text{左}^2(y)\\right]dy$（需反解 $x=x(y)$）。",
+     "partial": 2
+    },
+    {
+     "text": "选用原则：绕 $x$ 轴用圆盘；绕 $y$ 轴时若 $f(x)$ 反解困难或两支曲线交错，优先柱壳法。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：旋转体体积的圆盘法与柱壳法（教材以圆盘法为主，柱壳法为常用补充）见 §6.3。\n**考点出处**：同济《高等数学》第七版 §6.3 体积。",
+   "misconception": "⚠️易错点：柱壳法中的 $x$ 是薄筒到轴的距离，绕 $y$ 轴时取 $|x|$；圆盘法绕 $x$ 轴时被积函数是平方，别与面积公式混用。",
+   "extension": null,
+   "tags": [
+    "旋转体体积",
+    "简答",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 450
+  },
+  {
+   "id": "c6-c1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.2 平面图形的面积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求由曲线 $y=\\sqrt{x}$ 与 $y=x^2$ 围成的平面图形的面积。",
+   "options": null,
+   "answer": [
+    "1/3"
+   ],
+   "accept": null,
+   "answerText": "联立 $\\sqrt{x}=x^2$ 得交点 $(0,0)$ 与 $(1,1)$；在 $(0,1)$ 上 $\\sqrt{x}\\ge x^2$，故\n$$S=\\int_0^1\\left(\\sqrt{x}-x^2\\right)dx=\\left[\\frac{2}{3}x^{3/2}-\\frac{x^3}{3}\\right]_0^1=\\frac{2}{3}-\\frac{1}{3}=\\frac{1}{3}.$$\n",
+   "points": [
+    {
+     "text": "联立方程求交点 $(0,0)$、$(1,1)$，确定积分区间 $[0,1]$。",
+     "partial": 2
+    },
+    {
+     "text": "比较大小：$(0,1)$ 内 $\\sqrt{x}>x^2$，被积函数取 $\\sqrt{x}-x^2$。",
+     "partial": 2
+    },
+    {
+     "text": "积分得 $\\dfrac23-\\dfrac13=\\dfrac13$。",
+     "partial": 2
+    },
+    {
+     "text": "说明：若两曲线上下位置在区间内交换，需分段积分。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：两曲线围成面积的元素法（§6.2）。\n**考点出处**：同济《高等数学》第七版 §6.2 平面图形的面积。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "面积",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(sqrt(x) - x**2, (x, 0, 1))",
+     "expected": "1/3"
+    }
+   ],
+   "idx": 451
+  },
+  {
+   "id": "c6-c2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.3 体积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求曲线 $y=\\sqrt{x}$ 上相应于 $x$ 从 $0$ 到 $4$ 的一段绕 $x$ 轴旋转一周所得旋转体的体积。",
+   "options": null,
+   "answer": [
+    "8*pi"
+   ],
+   "accept": null,
+   "answerText": "$V=\\pi\\int_0^4\\left(\\sqrt{x}\\right)^2dx=\\pi\\int_0^4x\\,dx=\\pi\\left[\\dfrac{x^2}{2}\\right]_0^4=8\\pi.$",
+   "points": [
+    {
+     "text": "识别圆盘法：半径 $r=\\sqrt{x}$，体积元素 $dV=\\pi x\\,dx$。",
+     "partial": 2
+    },
+    {
+     "text": "积分 $\\pi\\int_0^4x\\,dx=\\pi\\left[\\dfrac{x^2}{2}\\right]_0^4=8\\pi$。",
+     "partial": 2
+    },
+    {
+     "text": "校验：被积函数是 $\\left(\\sqrt{x}\\right)^2=x$（先平方再积分），结果 $8\\pi$，数量级合理。",
+     "partial": 2
+    },
+    {
+     "text": "说明：圆盘法要求曲线段在 $[0,4]$ 上非负，$\\sqrt{x}$ 满足。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：圆盘法求旋转体体积（§6.3）。\n**考点出处**：同济《高等数学》第七版 §6.3 体积。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "旋转体体积",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(pi*x, (x, 0, 4))",
+     "expected": "8*pi"
+    }
+   ],
+   "idx": 452
+  },
+  {
+   "id": "c6-c3",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §6.3 体积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求摆线 $x=a(t-\\sin t)$，$y=a(1-\\cos t)$（$a>0$）一拱（$0\\le t\\le2\\pi$）与 $x$ 轴围成的图形绕 $x$ 轴旋转一周所得旋转体的体积。",
+   "options": null,
+   "answer": [
+    "5*pi^2*a^3"
+   ],
+   "accept": null,
+   "answerText": "圆盘法结合参数方程：$dx=a(1-\\cos t)\\,dt$，\n$$V=\\pi\\int_0^{2\\pi}y^2\\,dx=\\pi a^3\\int_0^{2\\pi}(1-\\cos t)^3\\,dt.$$\n展开 $(1-\\cos t)^3=1-3\\cos t+3\\cos^2t-\\cos^3t$，在 $[0,2\\pi]$ 上 $\\int\\cos t\\,dt=\\int\\cos^3t\\,dt=0$，$\\int\\cos^2t\\,dt=\\pi$，故积分 $=2\\pi+3\\pi=5\\pi$。\n所以 $V=5\\pi^2a^3$。",
+   "points": [
+    {
+     "text": "写出参数形式下的体积：$V=\\pi\\int_0^{2\\pi}y^2(t)\\,x'(t)\\,dt=\\pi a^3\\int_0^{2\\pi}(1-\\cos t)^3dt$。",
+     "partial": 2
+    },
+    {
+     "text": "展开被积函数，利用 $\\int_0^{2\\pi}\\cos t\\,dt=\\int_0^{2\\pi}\\cos^3t\\,dt=0$、$\\int_0^{2\\pi}\\cos^2t\\,dt=\\pi$。",
+     "partial": 2
+    },
+    {
+     "text": "算出 $\\int_0^{2\\pi}(1-\\cos t)^3dt=5\\pi$，故 $V=5\\pi^2a^3$。",
+     "partial": 2
+    },
+    {
+     "text": "说明降幂技巧 $\\cos^2t=\\dfrac{1+\\cos2t}{2}$ 与周期奇零性是积分清零的关键。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：参数方程下的旋转体体积与三角积分技巧（§6.3，结合 §5.3 定积分换元）。\n**考点出处**：同济《高等数学》第七版 §6.3 体积。",
+   "misconception": "⚠️易错点：$y^2dx$ 要换成 $a^2(1-\\cos t)^2\\cdot a(1-\\cos t)dt$，$a$ 的三次方来自「两平方 + 一微分」；$\\int_0^{2\\pi}\\cos^2t\\,dt=\\pi$ 而非 $2\\pi$。",
+   "extension": "引申：摆线一拱的弧长为 $8a$（§6.4 经典例题），与本题体积 $5\\pi^2a^3$ 同为摆线的两大经典结果。",
+   "tags": [
+    "摆线",
+    "旋转体",
+    "困难"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "aa=symbols('aa', positive=True); tt=symbols('tt', positive=True); V=pi*integrate((aa*(1-cos(tt)))**2*(aa*(1-cos(tt))), (tt, 0, 2*pi)); simplify(V - 5*pi**2*aa**3)",
+     "expected": "0"
+    }
+   ],
+   "idx": 453
+  },
+  {
+   "id": "ky2-1987-x-5f7bec",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "1987 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1987,
+    "region": "全国",
+    "paper": "1987 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $D$ 是曲线 $y = \\sin x + 1$ 与三条直线 $x = 0, x = \\pi, y = 0$ 围成的曲边梯形. 求 $D$ 绕 $x$ 轴旋转一周所生成的旋转体的体积 $V$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$V = \\pi \\int_{0}^{\\pi} (\\sin x + 1)^{2} \\mathrm{d}x = \\frac{\\pi}{4} + \\frac{3\\pi^{2}}{2}$ .",
+   "points": [
+    {
+     "text": "$V = \\pi \\int_{0}^{\\pi} (\\sin x + 1)^{2} \\mathrm{d}x = \\frac{\\pi}{4} + \\frac{3\\pi^{2}}{2}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$V = \\pi \\int_{0}^{\\pi} (\\sin x + 1)^{2} \\mathrm{d}x = \\frac{\\pi}{4} + \\frac{3\\pi^{2}}{2}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 454
+  },
+  {
+   "id": "ky2-1988-x-bb810e",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "1988 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1988,
+    "region": "全国",
+    "paper": "1988 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "将长为 $a$ 的铁丝切成两段, 一段围成正方形, 另一段围成圆形. 问这两段铁丝各长为多少时, 正方形与圆形的面积之和为最小?",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "当圆的周长为 $x = \\frac{\\pi a}{4 + \\pi}$ , 正方形的周长为 $a - x = \\frac{4a}{4 + \\pi}$ 时, 面积之和最小..",
+   "points": [
+    {
+     "text": "当圆的周长为 $x = \\frac{\\pi a}{4 + \\pi}$ , 正方形的周长为 $a - x = \\frac{4a}{4 + \\pi}$ 时, 面积之和最小..",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n当圆的周长为 $x = \\frac{\\pi a}{4 + \\pi}$ , 正方形的周长为 $a - x = \\frac{4a}{4 + \\pi}$ 时, 面积之和最小..",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 455
+  },
+  {
+   "id": "ky2-1989-x-8ee7f2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "1989 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1989,
+    "region": "全国",
+    "paper": "1989 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设抛物线 $y = ax^{2} + bx + c$ 过原点，当 $0 \\leqslant x \\leqslant 1$ 时 $y \\geqslant 0$ ，又已知该抛物线与 $x$ 轴及直线 $x = 1$ 所围图形的面积为 $\\frac{1}{3}$ ，试确定 $a, b, c$ 使此图形绕 $x$ 旋转一周而成的旋转体的体积 $V$ 最小.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$a = -\\frac{5}{4}, b = \\frac{3}{2}, c = 0.$",
+   "points": [
+    {
+     "text": "$a = -\\frac{5}{4}, b = \\frac{3}{2}, c = 0.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$a = -\\frac{5}{4}, b = \\frac{3}{2}, c = 0.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 456
+  },
+  {
+   "id": "ky2-1991-x-72a72e",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "1991 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1991,
+    "region": "全国",
+    "paper": "1991 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $y = (x - 1)(x - 2)$ 和 $x$ 轴围成一平面图形，求此平面图形绕 $y$ 轴旋转一周所成的旋转体的体积.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$V = \\int_{1}^{2} 2\\pi x |y| \\, \\mathrm{d}x = \\frac{\\pi}{2}$ .",
+   "points": [
+    {
+     "text": "$V = \\int_{1}^{2} 2\\pi x |y| \\, \\mathrm{d}x = \\frac{\\pi}{2}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$V = \\int_{1}^{2} 2\\pi x |y| \\, \\mathrm{d}x = \\frac{\\pi}{2}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 457
+  },
+  {
+   "id": "ky2-1992-x-5fa317",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "knowledgePoints": [
+    "6.4"
+   ],
+   "source": {
+    "text": "1992 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1992,
+    "region": "全国",
+    "paper": "1992 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算曲线 $y = \\ln (1 - x^{2})$ 上相对于 $0 \\leqslant x \\leqslant \\frac{1}{2}$ 的一段弧的长度.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\ln 3 - \\frac{1}{2}$",
+   "points": [
+    {
+     "text": "$\\ln 3 - \\frac{1}{2}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\ln 3 - \\frac{1}{2}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 458
+  },
+  {
+   "id": "ky2-1993-x-b66cf3",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "1993 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1993,
+    "region": "全国",
+    "paper": "1993 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设平面图形 $A$ 由 $x^{2} + y^{2} \\leqslant 2x$ 与 $y \\geqslant x$ 所确定，求图形 $A$ 绕 $x = 2$ 旋转一周所得旋转体的体积.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$V = \\int_{0}^{1}2\\pi \\left[\\sqrt{1 - y^2} -(1 - y)^2\\right]\\mathrm{d}y = \\frac{\\pi}{2} -\\frac{2}{3}\\pi .$",
+   "points": [
+    {
+     "text": "$V = \\int_{0}^{1}2\\pi \\left[\\sqrt{1 - y^2} -(1 - y)^2\\right]\\mathrm{d}y = \\frac{\\pi}{2} -\\frac{2}{3}\\pi .$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$V = \\int_{0}^{1}2\\pi \\left[\\sqrt{1 - y^2} -(1 - y)^2\\right]\\mathrm{d}y = \\frac{\\pi}{2} -\\frac{2}{3}\\pi .$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 459
+  },
+  {
+   "id": "ky2-1994-x-bf3dc6",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "1994 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1994,
+    "region": "全国",
+    "paper": "1994 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求曲线 $y = 3 - |x^2 - 1|$ 与 $x$ 轴围成的封闭图形绕直线 $y = 3$ 旋转所得的旋转体体积.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$V = \\frac{448}{15} \\pi$ .",
+   "points": [
+    {
+     "text": "$V = \\frac{448}{15} \\pi$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$V = \\frac{448}{15} \\pi$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 460
+  },
+  {
+   "id": "ky2-1995-5-af43c1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "knowledgePoints": [
+    "6.4"
+   ],
+   "source": {
+    "text": "1995 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1995,
+    "region": "全国",
+    "paper": "1995 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求摆线 $\\left\\{ \\begin{array}{l} x = 1 - \\cos t \\\\ y = t - \\sin t \\end{array} \\right.$ 一拱（ $0 \\leqslant t \\leqslant 2\\pi$ ）的弧长。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "弧长 $s = 8$",
+   "points": [
+    {
+     "text": "弧长 $s = 8$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n弧长 $s = 8$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 461
+  },
+  {
+   "id": "ky2-1997-x-ead5ac",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "knowledgePoints": [
+    "6.4"
+   ],
+   "source": {
+    "text": "1997 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 1997,
+    "region": "全国",
+    "paper": "1997 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设曲线 $L$ 的极坐标方程为 $r = r(\\theta)$ , $M(r, \\theta)$ 为 $L$ 上的任一点, $M_0(2,0)$ 为 $L$ 上一定点, 若极径 $OM_0$ , $OM$ 与曲线 $L$ 所围成的曲边扇形面积值等于 $L$ 上 $M_0$ , $M$ 两点间弧长值的一半, 求曲线 $L$ 的方程.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "直线方程为 $x \\mp \\sqrt{3} y = 2$ .",
+   "points": [
+    {
+     "text": "直线方程为 $x \\mp \\sqrt{3} y = 2$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n直线方程为 $x \\mp \\sqrt{3} y = 2$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 462
+  },
+  {
+   "id": "ky2-1997-x-5d01a9",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "1997 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 1997,
+    "region": "全国",
+    "paper": "1997 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(x)$ 在闭区间 $[0,1]$ 上连续，在开区间 $(0,1)$ 内大于零，并满足 $xf'(x) = f(x) + \\frac{3a}{2} x^2$ （ $a$ 为常数），又曲线 $y = f(x)$ 与 $x = 1, y = 0$ 所围成的图形 $S$ 的面积值为 2，求函数 $y = f(x)$ ，并问 $a$ 为何值时，图形 $S$ 绕 $x$ 轴旋转一周所得的旋转体的体积最小.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$f(x) = \\frac{3}{2} ax^2 + (4 - a)x$ . 故 $a = -5$ 时, 旋转体体积 $V(a)$ 最小.",
+   "points": [
+    {
+     "text": "$f(x) = \\frac{3}{2} ax^2 + (4 - a)x$ . 故 $a = -5$ 时, 旋转体体积 $V(a)$ 最小.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$f(x) = \\frac{3}{2} ax^2 + (4 - a)x$ . 故 $a = -5$ 时, 旋转体体积 $V(a)$ 最小.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 463
+  },
+  {
+   "id": "ky2-1998-x-b684c7",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "1998 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 1998,
+    "region": "全国",
+    "paper": "1998 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设有曲线 $y = \\sqrt{x - 1}$ ，过原点作其切线，求由此曲线、切线及 $x$ 轴围成的平面图形绕 $x$ 轴旋转一周所得到的旋转体的表面积.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\frac{\\pi}{6} (11\\sqrt{5} - 1)$ .",
+   "points": [
+    {
+     "text": "$\\frac{\\pi}{6} (11\\sqrt{5} - 1)$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\frac{\\pi}{6} (11\\sqrt{5} - 1)$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 464
+  },
+  {
+   "id": "ky2-2000-x-93fac8",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "2000 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2000,
+    "region": "全国",
+    "paper": "2000 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $xOy$ 平面上有正方形 $D = \\{(x,y)\\big|0\\leqslant x\\leqslant 1,0\\leqslant y\\leqslant 1\\}$ 及直线 $l:x + y = t$ $(t\\geqslant 0)$ .若 $S(t)$ 表示正方形 $D$ 位于直线 $l$ 左下方部分的面积，试求 $\\int_0^x S(t)\\mathrm{d}t$ $(x\\geqslant 0)$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "先写出面积 $S(t)$ 的分段表达式. 当 $0 < t < 1$ 时, 图形为三角形, 利用三角形的面积公式: $S(t) = \\frac{1}{2} t^{2}$ ; 当 $1 < t < 2$ 时, 图形面积可由正方形面积减去小三角形面积:\n$$\nS (t) = 1 - \\frac {1}{2} (2 - t) ^ {2} = 1 - \\frac {1}{2} \\left(t ^ {2} - 4 t + 4\\right) = - \\frac {1}{2} t ^ {2} + 2 t - 1;\n$$\n当 $t > 2$ 时, 图形面积就是正方形的面积: $S(t) = 1$ , 则有\n$$\nS (t) = \\left\\{ \\begin{array}{l} \\frac {1}{2} t ^ {2}, 0 \\leqslant t \\leqslant 1, \\\\ 1 - \\frac {1}{2} (2 - t) ^ {2}, 1 <   t \\leqslant 2, \\\\ 1, 2 <   t. \\end{array} \\right.\n$$\n所以，当 $0 \\leqslant x \\leqslant 1$ 时，\n$$\n\\int_ {0} ^ {x} S (t) \\mathrm {d} t = \\int_ {0} ^ {x} \\frac {1}{2} t ^ {2} \\mathrm {d} t = \\left(\\frac {1}{2} \\cdot \\frac {t ^ {3}}{3}\\right) \\Bigg | _ {0} ^ {x} = \\frac {x ^ {3}}{6};\n$$\n当 $1 < x \\leqslant 2$ 时，\n$$\n\\begin{array}{l} \\int_ {0} ^ {x} S (t) \\mathrm {d} t = \\int_ {0} ^ {1} S (t) \\mathrm {d} t + \\int_ {1} ^ {x} S (t) \\mathrm {d} t = \\int_ {0} ^ {1} \\frac {1}{2} t ^ {2} \\mathrm {d} t + \\int_ {1} ^ {x} [ 1 - \\frac {1}{2} (t - 2) ^ {2} ] \\mathrm {d} t \\\\ = \\frac {1}{6} + (x - 1) - \\frac {1}{6} (x - 2) ^ {3} - \\frac {1}{6} = - \\frac {x ^ {3}}{6} + x ^ {2} - x + \\frac {1}{3}. \\\\ \\end{array}\n$$\n当 $x > 2$ 时，\n$$\n\\int_ {0} ^ {x} S (t) \\mathrm {d} t = \\int_ {0} ^ {2} S (t) \\mathrm {d} t + \\int_ {2} ^ {x} S (t) \\mathrm {d} t = 1 + \\int_ {2} ^ {x} 1 \\mathrm {d} t = x - 1.\n$$\n因此\n$$\n\\int_ {0} ^ {x} S (t) \\mathrm {d} t = \\left\\{ \\begin{array}{l l} \\frac {1}{6} x ^ {3} & 0 \\leqslant x \\leqslant 1 \\\\ - \\frac {1}{6} x ^ {3} + x ^ {2} - x + \\frac {1}{3} & 1 <   x \\leqslant 2 \\\\ x - 1 & x > 2 \\end{array} \\right.\n$$",
+   "points": [
+    {
+     "text": "先写出面积 $S(t)$ 的分段表达式. 当 $0 < t < 1$ 时, 图形为三角形, 利用三角形的面积公式: $S(t) = \\frac{1}{2} t^{2}$ ; 当 $1 < t < 2$ 时, 图形面积可由正方形面积减去小三角形面积:\n$$\nS (t) = 1 - \\frac {1}{2} (2 - t) ^ {2} = 1 - \\frac {1}{2} \\left(t ^ {2} - 4 t + 4\\right) = - \\frac {1}{2} t ^ {2} + 2 t - 1;\n$$\n当 $t > 2$ 时, 图形面积就是正方形的面积: $S(t) = 1$ , 则有\n$$\nS (t) = \\left\\{ \\begin{array}{l} \\frac {1}{2} t ^ {2}, 0 \\leqslant t \\leqslant 1, \\\\ 1 - \\frac {1}{2} (2 - t) ^ {2}, 1 <   t \\leqslant 2, \\\\ 1, 2 <   t. \\end{array} \\right.\n$$\n所以，当 $0 \\leqslant x \\leqslant 1$ 时，\n$$\n\\int_ {0} ^ {x} S (t) \\mathrm {d} t = \\int_ {0} ^ {x} \\frac {1}{2} t ^ {2} \\mathrm {d} t = \\left(\\frac {1}{2} \\cdot \\frac {t ^ {3}}{3}\\right) \\Bigg | _ {0} ^ {x} = \\frac {x ^ {3}}{6};\n$$\n当 $1 < x \\leqslant 2$ 时，\n$$\n\\begin{array}{l} \\int_ {0} ^ {x} S (t) \\mathrm {d} t = \\int_ {0} ^ {1} S (t) \\mathrm {d} t + \\int_ {1} ^ {x} S (t) \\mathrm {d} t = \\int_ {0} ^ {1} \\frac {1}{2} t ^ {2} \\mathrm {d} t + \\int_ {1} ^ {x} [ 1 - \\frac {1}{2} (t - 2) ^ {2} ] \\mathrm {d} t \\\\ = \\frac {1}{6} + (x - 1) - \\frac {1}{6} (x - 2) ^ {3} - \\frac {1}{6} = - \\frac {x ^ {3}}{6} + x ^ {2} - x + \\frac {1}{3}. \\\\ \\end{array}\n$$\n当 $x > 2$ 时，\n$$\n\\int_ {0} ^ {x} S (t) \\mathrm {d} t = \\int_ {0} ^ {2} S (t) \\mathrm {d} t + \\int_ {2} ^ {x} S (t) \\mathrm {d} t = 1 + \\int_ {2} ^ {x} 1 \\mathrm {d} t = x - 1.\n$$\n因此\n$$\n\\int_ {0} ^ {x} S (t) \\mathrm {d} t = \\left\\{ \\begin{array}{l l} \\frac {1}{6} x ^ {3} & 0 \\leqslant x \\leqslant 1 \\\\ - \\frac {1}{6} x ^ {3} + x ^ {2} - x + \\frac {1}{3} & 1 <   x \\leqslant 2 \\\\ x - 1 & x > 2 \\end{array} \\right.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n先写出面积 $S(t)$ 的分段表达式. 当 $0 < t < 1$ 时, 图形为三角形, 利用三角形的面积公式: $S(t) = \\frac{1}{2} t^{2}$ ; 当 $1 < t < 2$ 时, 图形面积可由正方形面积减去小三角形面积:\n$$\nS (t) = 1 - \\frac {1}{2} (2 - t) ^ {2} = 1 - \\frac {1}{2} \\left(t ^ {2} - 4 t + 4\\right) = - \\frac {1}{2} t ^ {2} + 2 t - 1;\n$$\n当 $t > 2$ 时, 图形面积就是正方形的面积: $S(t) = 1$ , 则有\n$$\nS (t) = \\left\\{ \\begin{array}{l} \\frac {1}{2} t ^ {2}, 0 \\leqslant t \\leqslant 1, \\\\ 1 - \\frac {1}{2} (2 - t) ^ {2}, 1 <   t \\leqslant 2, \\\\ 1, 2 <   t. \\end{array} \\right.\n$$\n所以，当 $0 \\leqslant x \\leqslant 1$ 时，\n$$\n\\int_ {0} ^ {x} S (t) \\mathrm {d} t = \\int_ {0} ^ {x} \\frac {1}{2} t ^ {2} \\mathrm {d} t = \\left(\\frac {1}{2} \\cdot \\frac {t ^ {3}}{3}\\right) \\Bigg | _ {0} ^ {x} = \\frac {x ^ {3}}{6};\n$$\n当 $1 < x \\leqslant 2$ 时，\n$$\n\\begin{array}{l} \\int_ {0} ^ {x} S (t) \\mathrm {d} t = \\int_ {0} ^ {1} S (t) \\mathrm {d} t + \\int_ {1} ^ {x} S (t) \\mathrm {d} t = \\int_ {0} ^ {1} \\frac {1}{2} t ^ {2} \\mathrm {d} t + \\int_ {1} ^ {x} [ 1 - \\frac {1}{2} (t - 2) ^ {2} ] \\mathrm {d} t \\\\ = \\frac {1}{6} + (x - 1) - \\frac {1}{6} (x - 2) ^ {3} - \\frac {1}{6} = - \\frac {x ^ {3}}{6} + x ^ {2} - x + \\frac {1}{3}. \\\\ \\end{array}\n$$\n当 $x > 2$ 时，\n$$\n\\int_ {0} ^ {x} S (t) \\mathrm {d} t = \\int_ {0} ^ {2} S (t) \\mathrm {d} t + \\int_ {2} ^ {x} S (t) \\mathrm {d} t = 1 + \\int_ {2} ^ {x} 1 \\mathrm {d} t = x - 1.\n$$\n因此\n$$\n\\int_ {0} ^ {x} S (t) \\mathrm {d} t = \\left\\{ \\begin{array}{l l} \\frac {1}{6} x ^ {3} & 0 \\leqslant x \\leqslant 1 \\\\ - \\frac {1}{6} x ^ {3} + x ^ {2} - x + \\frac {1}{3} & 1 <   x \\leqslant 2 \\\\ x - 1 & x > 2 \\end{array} \\right.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 465
+  },
+  {
+   "id": "ky2-2000-x-0b6252",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "2000 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2000,
+    "region": "全国",
+    "paper": "2000 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设曲线 $y = a x^{2}$ （ $a > 0, x \\geqslant 0$ ）与 $y = 1 - x^{2}$ 交于点 $A$ ，过坐标原点 $O$ 和点 $A$ 的直线与曲线 $y = a x^{2}$ 围成一平面图形。问 $a$ 为何值时，该图形绕 $x$ 轴旋转一周所得的旋转体体积最大？最大体积是多少？",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "当 $x \\geqslant 0$ 时，直线与曲线的交点为 $(x, y) = \\left(\\frac{1}{\\sqrt{1 + a}}, \\frac{a}{1 + a}\\right)$ . 故直线 $OA$ 的方程为 $y = \\frac{ax}{\\sqrt{1 + a}}$ . 从而旋转体体积\n$$\n\\begin{array}{l} V = \\int_ {0} ^ {\\frac {1}{\\sqrt {a + 1}}} \\pi \\left(\\frac {a x}{\\sqrt {1 + a}}\\right) ^ {2} d x - \\int_ {0} ^ {\\frac {1}{\\sqrt {a + 1}}} \\pi \\left(a x ^ {2}\\right) ^ {2} d x = \\int_ {0} ^ {\\frac {1}{\\sqrt {a + 1}}} \\pi \\left(\\frac {a ^ {2} x ^ {2}}{1 + a} - a ^ {2} x ^ {4}\\right) d x \\\\ = \\pi \\left(\\frac {a ^ {2} x ^ {3}}{3 (1 + a)} - \\frac {a ^ {2} x ^ {5}}{5}\\right) \\bigg | _ {0} ^ {\\frac {1}{\\sqrt {a + 1}}} = \\frac {2 \\pi a ^ {2}}{1 5 (1 + a) ^ {5 / 2}}. \\\\ \\end{array}\n$$\n函数对 $a$ 求导得\n$$\n\\frac {\\mathrm {d} V}{\\mathrm {d} a} = \\frac {2 \\pi}{1 5} \\cdot \\frac {2 a \\cdot (1 + a) ^ {5 / 2} - a ^ {2} \\cdot \\frac {5}{2} (1 + a) ^ {3 / 2}}{(1 + a) ^ {5}} = \\frac {\\pi}{1 5} \\cdot \\frac {[ 4 a - a ^ {2} ]}{(1 + a) ^ {7 / 2}}, (a > 0).\n$$\n令 $\\frac{\\mathrm{d}V}{\\mathrm{d}a} = 0$ ，得唯一驻点 $a = 4$ ，所以 $a = 4$ 也是 $\\mathrm{V}$ 的最大值点，最大体积为 $V|_{a=4} = \\frac{32\\sqrt{5}}{1875}\\pi.$",
+   "points": [
+    {
+     "text": "当 $x \\geqslant 0$ 时，直线与曲线的交点为 $(x, y) = \\left(\\frac{1}{\\sqrt{1 + a}}, \\frac{a}{1 + a}\\right)$ . 故直线 $OA$ 的方程为 $y = \\frac{ax}{\\sqrt{1 + a}}$ . 从而旋转体体积\n$$\n\\begin{array}{l} V = \\int_ {0} ^ {\\frac {1}{\\sqrt {a + 1}}} \\pi \\left(\\frac {a x}{\\sqrt {1 + a}}\\right) ^ {2} d x - \\int_ {0} ^ {\\frac {1}{\\sqrt {a + 1}}} \\pi \\left(a x ^ {2}\\right) ^ {2} d x = \\int_ {0} ^ {\\frac {1}{\\sqrt {a + 1}}} \\pi \\left(\\frac {a ^ {2} x ^ {2}}{1 + a} - a ^ {2} x ^ {4}\\right) d x \\\\ = \\pi \\left(\\frac {a ^ {2} x ^ {3}}{3 (1 + a)} - \\frac {a ^ {2} x ^ {5}}{5}\\right) \\bigg | _ {0} ^ {\\frac {1}{\\sqrt {a + 1}}} = \\frac {2 \\pi a ^ {2}}{1 5 (1 + a) ^ {5 / 2}}. \\\\ \\end{array}\n$$\n函数对 $a$ 求导得\n$$\n\\frac {\\mathrm {d} V}{\\mathrm {d} a} = \\frac {2 \\pi}{1 5} \\cdot \\frac {2 a \\cdot (1 + a) ^ {5 / 2} - a ^ {2} \\cdot \\frac {5}{2} (1 + a) ^ {3 / 2}}{(1 + a) ^ {5}} = \\frac {\\pi}{1 5} \\cdot \\frac {[ 4 a - a ^ {2} ]}{(1 + a) ^ {7 / 2}}, (a > 0).\n$$\n令 $\\frac{\\mathrm{d}V}{\\mathrm{d}a} = 0$ ，得唯一驻点 $a = 4$ ，所以 $a = 4$ 也是 $\\mathrm{V}$ 的最大值点，最大体积为 $V|_{a=4} = \\frac{32\\sqrt{5}}{1875}\\pi.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n当 $x \\geqslant 0$ 时，直线与曲线的交点为 $(x, y) = \\left(\\frac{1}{\\sqrt{1 + a}}, \\frac{a}{1 + a}\\right)$ . 故直线 $OA$ 的方程为 $y = \\frac{ax}{\\sqrt{1 + a}}$ . 从而旋转体体积\n$$\n\\begin{array}{l} V = \\int_ {0} ^ {\\frac {1}{\\sqrt {a + 1}}} \\pi \\left(\\frac {a x}{\\sqrt {1 + a}}\\right) ^ {2} d x - \\int_ {0} ^ {\\frac {1}{\\sqrt {a + 1}}} \\pi \\left(a x ^ {2}\\right) ^ {2} d x = \\int_ {0} ^ {\\frac {1}{\\sqrt {a + 1}}} \\pi \\left(\\frac {a ^ {2} x ^ {2}}{1 + a} - a ^ {2} x ^ {4}\\right) d x \\\\ = \\pi \\left(\\frac {a ^ {2} x ^ {3}}{3 (1 + a)} - \\frac {a ^ {2} x ^ {5}}{5}\\right) \\bigg | _ {0} ^ {\\frac {1}{\\sqrt {a + 1}}} = \\frac {2 \\pi a ^ {2}}{1 5 (1 + a) ^ {5 / 2}}. \\\\ \\end{array}\n$$\n函数对 $a$ 求导得\n$$\n\\frac {\\mathrm {d} V}{\\mathrm {d} a} = \\frac {2 \\pi}{1 5} \\cdot \\frac {2 a \\cdot (1 + a) ^ {5 / 2} - a ^ {2} \\cdot \\frac {5}{2} (1 + a) ^ {3 / 2}}{(1 + a) ^ {5}} = \\frac {\\pi}{1 5} \\cdot \\frac {[ 4 a - a ^ {2} ]}{(1 + a) ^ {7 / 2}}, (a > 0).\n$$\n令 $\\frac{\\mathrm{d}V}{\\mathrm{d}a} = 0$ ，得唯一驻点 $a = 4$ ，所以 $a = 4$ 也是 $\\mathrm{V}$ 的最大值点，最大体积为 $V|_{a=4} = \\frac{32\\sqrt{5}}{1875}\\pi.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 466
+  },
+  {
+   "id": "ky2-2001-x-484430",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "knowledgePoints": [
+    "6.4"
+   ],
+   "source": {
+    "text": "2001 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2001,
+    "region": "全国",
+    "paper": "2001 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $\\rho = \\rho (x)$ 是抛物线 $y = \\sqrt{x}$ 上任一点 $M(x,y)$ （ $x\\geqslant 1$ )处的曲率半径， $s = s(x)$ 是该抛物线上介于点 $A(1,1)$ 与 $M$ 之间的弧长，计算 $3\\rho \\frac{\\mathrm{d}^2\\rho}{\\mathrm{d}s^2} -\\left(\\frac{\\mathrm{d}\\rho}{\\mathrm{d}s}\\right)^2$ 的值（在直角坐标系下曲率公式为 $K = \\frac{|y''|}{(1 + y'^2)^{3 / 2}}$ ）.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由 $y = \\sqrt{x}$ , 有 $y' = \\frac{1}{2\\sqrt{x}}, y'' = -\\frac{1}{4\\sqrt{x^3}}$ , 抛物线在点 $M(x, y)$ 处的曲率半径\n$$\n\\rho = \\rho (x) = \\frac {1}{K} = \\frac {(1 + y ^ {\\prime 2}) ^ {3 / 2}}{\\left| y ^ {\\prime \\prime} \\right|} = \\frac {1}{2} (4 x + 1) ^ {\\frac {3}{2}}.\n$$\n抛物线上的弧长\n$$\ns = s (x) = \\int_ {1} ^ {x} \\sqrt {1 + y ^ {\\prime 2}} d x = \\int_ {1} ^ {x} \\sqrt {1 + \\frac {1}{4 x}} d x.\n$$\n从而\n$$\n\\frac {\\mathrm {d} \\rho}{\\mathrm {d} s} = \\frac {\\frac {\\mathrm {d} \\rho}{\\mathrm {d} x}}{\\frac {\\mathrm {d} s}{\\mathrm {d} x}} = \\frac {\\frac {1}{2} \\cdot \\frac {3}{2} (4 x + 1) ^ {\\frac {1}{2}} \\cdot 4}{\\sqrt {1 + \\frac {1}{4 x}}} = 6 \\sqrt {x},\n$$\n$$\n\\frac {\\mathrm {d} ^ {2} \\rho}{\\mathrm {d} s ^ {2}} = \\frac {\\mathrm {d}}{\\mathrm {d} x} \\left(\\frac {\\mathrm {d} \\rho}{\\mathrm {d} s}\\right) \\cdot \\frac {1}{\\frac {\\mathrm {d} s}{\\mathrm {d} x}} = \\frac {6}{2 \\sqrt {x}} \\cdot \\frac {1}{\\sqrt {1 + \\frac {1}{4 x}}} = \\frac {6}{\\sqrt {1 + 4 x}}.\n$$\n于是\n$$\n3 \\rho \\frac {\\mathrm {d} ^ {2} \\rho}{\\mathrm {d} s ^ {2}} - \\left(\\frac {\\mathrm {d} \\rho}{\\mathrm {d} s}\\right) ^ {2} = 3 \\cdot \\frac {1}{2} (1 + 4 x) ^ {\\frac {3}{2}} \\cdot \\frac {6}{\\sqrt {1 + 4 x}} - (6 \\sqrt {x}) ^ {2} = 9.\n$$",
+   "points": [
+    {
+     "text": "由 $y = \\sqrt{x}$ , 有 $y' = \\frac{1}{2\\sqrt{x}}, y'' = -\\frac{1}{4\\sqrt{x^3}}$ , 抛物线在点 $M(x, y)$ 处的曲率半径\n$$\n\\rho = \\rho (x) = \\frac {1}{K} = \\frac {(1 + y ^ {\\prime 2}) ^ {3 / 2}}{\\left| y ^ {\\prime \\prime} \\right|} = \\frac {1}{2} (4 x + 1) ^ {\\frac {3}{2}}.\n$$\n抛物线上的弧长\n$$\ns = s (x) = \\int_ {1} ^ {x} \\sqrt {1 + y ^ {\\prime 2}} d x = \\int_ {1} ^ {x} \\sqrt {1 + \\frac {1}{4 x}} d x.\n$$\n从而\n$$\n\\frac {\\mathrm {d} \\rho}{\\mathrm {d} s} = \\frac {\\frac {\\mathrm {d} \\rho}{\\mathrm {d} x}}{\\frac {\\mathrm {d} s}{\\mathrm {d} x}} = \\frac {\\frac {1}{2} \\cdot \\frac {3}{2} (4 x + 1) ^ {\\frac {1}{2}} \\cdot 4}{\\sqrt {1 + \\frac {1}{4 x}}} = 6 \\sqrt {x},\n$$\n$$\n\\frac {\\mathrm {d} ^ {2} \\rho}{\\mathrm {d} s ^ {2}} = \\frac {\\mathrm {d}}{\\mathrm {d} x} \\left(\\frac {\\mathrm {d} \\rho}{\\mathrm {d} s}\\right) \\cdot \\frac {1}{\\frac {\\mathrm {d} s}{\\mathrm {d} x}} = \\frac {6}{2 \\sqrt {x}} \\cdot \\frac {1}{\\sqrt {1 + \\frac {1}{4 x}}} = \\frac {6}{\\sqrt {1 + 4 x}}.\n$$\n于是\n$$\n3 \\rho \\frac {\\mathrm {d} ^ {2} \\rho}{\\mathrm {d} s ^ {2}} - \\left(\\frac {\\mathrm {d} \\rho}{\\mathrm {d} s}\\right) ^ {2} = 3 \\cdot \\frac {1}{2} (1 + 4 x) ^ {\\frac {3}{2}} \\cdot \\frac {6}{\\sqrt {1 + 4 x}} - (6 \\sqrt {x}) ^ {2} = 9.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由 $y = \\sqrt{x}$ , 有 $y' = \\frac{1}{2\\sqrt{x}}, y'' = -\\frac{1}{4\\sqrt{x^3}}$ , 抛物线在点 $M(x, y)$ 处的曲率半径\n$$\n\\rho = \\rho (x) = \\frac {1}{K} = \\frac {(1 + y ^ {\\prime 2}) ^ {3 / 2}}{\\left| y ^ {\\prime \\prime} \\right|} = \\frac {1}{2} (4 x + 1) ^ {\\frac {3}{2}}.\n$$\n抛物线上的弧长\n$$\ns = s (x) = \\int_ {1} ^ {x} \\sqrt {1 + y ^ {\\prime 2}} d x = \\int_ {1} ^ {x} \\sqrt {1 + \\frac {1}{4 x}} d x.\n$$\n从而\n$$\n\\frac {\\mathrm {d} \\rho}{\\mathrm {d} s} = \\frac {\\frac {\\mathrm {d} \\rho}{\\mathrm {d} x}}{\\frac {\\mathrm {d} s}{\\mathrm {d} x}} = \\frac {\\frac {1}{2} \\cdot \\frac {3}{2} (4 x + 1) ^ {\\frac {1}{2}} \\cdot 4}{\\sqrt {1 + \\frac {1}{4 x}}} = 6 \\sqrt {x},\n$$\n$$\n\\frac {\\mathrm {d} ^ {2} \\rho}{\\mathrm {d} s ^ {2}} = \\frac {\\mathrm {d}}{\\mathrm {d} x} \\left(\\frac {\\mathrm {d} \\rho}{\\mathrm {d} s}\\right) \\cdot \\frac {1}{\\frac {\\mathrm {d} s}{\\mathrm {d} x}} = \\frac {6}{2 \\sqrt {x}} \\cdot \\frac {1}{\\sqrt {1 + \\frac {1}{4 x}}} = \\frac {6}{\\sqrt {1 + 4 x}}.\n$$\n于是\n$$\n3 \\rho \\frac {\\mathrm {d} ^ {2} \\rho}{\\mathrm {d} s ^ {2}} - \\left(\\frac {\\mathrm {d} \\rho}{\\mathrm {d} s}\\right) ^ {2} = 3 \\cdot \\frac {1}{2} (1 + 4 x) ^ {\\frac {3}{2}} \\cdot \\frac {6}{\\sqrt {1 + 4 x}} - (6 \\sqrt {x}) ^ {2} = 9.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 467
+  },
+  {
+   "id": "ky2-2001-x-6f33a2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "2001 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2001,
+    "region": "全国",
+    "paper": "2001 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "一个半球体状的雪堆，其体积融化的速率与半球面面积 $S$ 成正比，比例常数 $K > 0$ 。假设在融化过程中雪堆始终保持半球体状，已知半径为 $r_0$ 的雪堆在开始融化的 3 小时内，融化了其体积的 $\\frac{7}{8}$ ，问雪堆全部融化需要多少小时？",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "设半球形雪堆在时刻 $t$ 时的半径为 $r$ , 则半球的体积 $V = \\frac{2}{3} \\pi r^3$ , 侧面积 $S = 2 \\pi r^2$ . 由题设体积融化的速率与半球面面积 $S$ 成正比, 则有\n$$\n\\frac {\\mathrm {d} V}{\\mathrm {d} t} = - k S \\Rightarrow \\frac {\\mathrm {d} V}{\\mathrm {d} r} \\cdot \\frac {\\mathrm {d} r}{\\mathrm {d} t} = - k S \\Rightarrow \\frac {\\mathrm {d} r}{\\mathrm {d} t} = - k.\n$$\n积分得 $r = -k t + c$ , 把 $\\left|r\\right|_{t=0} = r_{0}$ 代入得 $c = r_{0}$ , 所以 $r = -k t + r_{0}$ . 又半径为 $r_{0}$ 的雪堆在开始融化的 3 小时内, 融化了其体积的 $\\frac{7}{8}$ , 即 $\\left.V\\right|_{t=3} = \\frac{1}{8} V\\left|_{t=0}\\right.$ . 以 $V$ 的公式代入上式, 得到\n$$\n\\frac {2}{3} \\pi (- 3 k + r _ {0}) ^ {3} = \\frac {1}{8} \\cdot \\frac {2}{3} \\pi r _ {0} ^ {3} \\Rightarrow k = \\frac {1}{6} r _ {0},\n$$\n于是 $r = -kt + r_0 = r_0\\left(1 - \\frac{t}{6}\\right)$ . 当 $t = 6$ 时 $r = 0$ , 雪堆全部融化需 6 小时.",
+   "points": [
+    {
+     "text": "设半球形雪堆在时刻 $t$ 时的半径为 $r$ , 则半球的体积 $V = \\frac{2}{3} \\pi r^3$ , 侧面积 $S = 2 \\pi r^2$ . 由题设体积融化的速率与半球面面积 $S$ 成正比, 则有\n$$\n\\frac {\\mathrm {d} V}{\\mathrm {d} t} = - k S \\Rightarrow \\frac {\\mathrm {d} V}{\\mathrm {d} r} \\cdot \\frac {\\mathrm {d} r}{\\mathrm {d} t} = - k S \\Rightarrow \\frac {\\mathrm {d} r}{\\mathrm {d} t} = - k.\n$$\n积分得 $r = -k t + c$ , 把 $\\left|r\\right|_{t=0} = r_{0}$ 代入得 $c = r_{0}$ , 所以 $r = -k t + r_{0}$ . 又半径为 $r_{0}$ 的雪堆在开始融化的 3 小时内, 融化了其体积的 $\\frac{7}{8}$ , 即 $\\left.V\\right|_{t=3} = \\frac{1}{8} V\\left|_{t=0}\\right.$ . 以 $V$ 的公式代入上式, 得到\n$$\n\\frac {2}{3} \\pi (- 3 k + r _ {0}) ^ {3} = \\frac {1}{8} \\cdot \\frac {2}{3} \\pi r _ {0} ^ {3} \\Rightarrow k = \\frac {1}{6} r _ {0},\n$$\n于是 $r = -kt + r_0 = r_0\\left(1 - \\frac{t}{6}\\right)$ . 当 $t = 6$ 时 $r = 0$ , 雪堆全部融化需 6 小时.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n设半球形雪堆在时刻 $t$ 时的半径为 $r$ , 则半球的体积 $V = \\frac{2}{3} \\pi r^3$ , 侧面积 $S = 2 \\pi r^2$ . 由题设体积融化的速率与半球面面积 $S$ 成正比, 则有\n$$\n\\frac {\\mathrm {d} V}{\\mathrm {d} t} = - k S \\Rightarrow \\frac {\\mathrm {d} V}{\\mathrm {d} r} \\cdot \\frac {\\mathrm {d} r}{\\mathrm {d} t} = - k S \\Rightarrow \\frac {\\mathrm {d} r}{\\mathrm {d} t} = - k.\n$$\n积分得 $r = -k t + c$ , 把 $\\left|r\\right|_{t=0} = r_{0}$ 代入得 $c = r_{0}$ , 所以 $r = -k t + r_{0}$ . 又半径为 $r_{0}$ 的雪堆在开始融化的 3 小时内, 融化了其体积的 $\\frac{7}{8}$ , 即 $\\left.V\\right|_{t=3} = \\frac{1}{8} V\\left|_{t=0}\\right.$ . 以 $V$ 的公式代入上式, 得到\n$$\n\\frac {2}{3} \\pi (- 3 k + r _ {0}) ^ {3} = \\frac {1}{8} \\cdot \\frac {2}{3} \\pi r _ {0} ^ {3} \\Rightarrow k = \\frac {1}{6} r _ {0},\n$$\n于是 $r = -kt + r_0 = r_0\\left(1 - \\frac{t}{6}\\right)$ . 当 $t = 6$ 时 $r = 0$ , 雪堆全部融化需 6 小时.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 468
+  },
+  {
+   "id": "ky2-2003-x-5ae04c",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.4",
+   "knowledgePoints": [
+    "6.4"
+   ],
+   "source": {
+    "text": "2003 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2003,
+    "region": "全国",
+    "paper": "2003 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设位于第一象限的曲线 $y = f(x)$ 过点 $\\left(\\frac{\\sqrt{2}}{2}, \\frac{1}{2}\\right)$ ，其上任一点 $P(x, y)$ 处的法线与 $y$ 轴的交点为 $Q$ ，且线段 $PQ$ 被 $x$ 轴平分.\n(I) 求曲线 $y = f(x)$ 的方程；\n(II) 已知曲线 $y = \\sin x$ 在 $[0, \\pi]$ 上的弧长为 $l$ ，试用 $l$ 表示曲线 $y = f(x)$ 的弧长 $s$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) 曲线 $y = f(x)$ 在点 $P(x, y)$ 处的法线方程为\n$$\nY - y = - \\frac {1}{y ^ {\\prime}} (X - x).\n$$\n令 $X = 0$ ，则它与 $y$ 轴的交点为 $Q\\left(0, y + \\frac{x}{y'}\\right)$ 。由题设，线段 $PQ$ 被 $x$ 轴平分，从而\n$$\n\\frac {1}{2} \\left(y + y + \\frac {x}{y ^ {\\prime}}\\right) = 0 \\Rightarrow 2 y d y + x d x = 0.\n$$\n积分得 $\\frac{x^2}{2} + y^2 = C$ （ $C$ 为任意常数），代入初始条件 $y\\big|_{x = \\frac{\\sqrt{2}}{2}} = \\frac{1}{2}$ 得 $C = \\frac{1}{2}$ ，故曲线 $y = f(x)$ 的方程为 $\\frac{x^2}{2} + y^2 = \\frac{1}{2}$ ，即 $x^2 + 2y^2 = 1$ 。\n(II) 曲线 $y = \\sin x$ 在 $[0, \\pi]$ 上的弧长为\n$$\nl = \\int_ {0} ^ {\\pi} \\sqrt {1 + y ^ {\\prime 2}} d x = \\int_ {0} ^ {\\pi} \\sqrt {1 + \\cos^ {2} x} d x\n$$\n$$\n= \\int_ {- \\frac {\\pi}{2}} ^ {\\frac {\\pi}{2}} \\sqrt {1 + \\cos^ {2} t} d t = 2 \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {1 + \\cos^ {2} t} d t.\n$$\n另一方面，曲线 $y = f(x)$ 的参数方程为\n$$\n\\left\\{ \\begin{array}{l} x = \\cos t, \\\\ y = \\frac {\\sqrt {2}}{2} \\sin t, \\end{array} \\right. \\quad \\left(0 \\leqslant t \\leqslant \\frac {\\pi}{2}\\right).\n$$\n于是该曲线的弧长为（其中换元 $u = \\frac{\\pi}{2} - t$ ）\n$$\n\\begin{array}{l} s = \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {(x _ {t} ^ {\\prime}) ^ {2} + (y _ {t} ^ {\\prime}) ^ {2}} d t = \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {\\sin^ {2} t + \\frac {1}{2} \\cos^ {2} t} d t = \\frac {1}{\\sqrt {2}} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {1 + \\sin^ {2} t} d t \\\\ = \\frac {1}{\\sqrt {2}} \\int_ {\\frac {\\pi}{2}} ^ {0} \\sqrt {1 + \\cos^ {2} u} (- \\mathrm {d} u) = \\frac {1}{\\sqrt {2}} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {1 + \\cos^ {2} u} \\mathrm {d} u \\\\ \\end{array}\n$$\n所以 $s = \\frac{\\sqrt{2}}{4} l$",
+   "points": [
+    {
+     "text": "(I) 曲线 $y = f(x)$ 在点 $P(x, y)$ 处的法线方程为\n$$\nY - y = - \\frac {1}{y ^ {\\prime}} (X - x).\n$$\n令 $X = 0$ ，则它与 $y$ 轴的交点为 $Q\\left(0, y + \\frac{x}{y'}\\right)$ 。",
+     "partial": 2
+    },
+    {
+     "text": "由题设，线段 $PQ$ 被 $x$ 轴平分，从而\n$$\n\\frac {1}{2} \\left(y + y + \\frac {x}{y ^ {\\prime}}\\right) = 0 \\Rightarrow 2 y d y + x d x = 0.\n$$\n积分得 $\\frac{x^2}{2} + y^2 = C$ （ $C$ 为任意常数），代入初始条件 $y\\big|_{x = \\frac{\\sqrt{2}}{2}} = \\frac{1}{2}$ 得 $C = \\frac{1}{2}$ ，故曲线 $y = f(x)$ 的方程为 $\\frac{x^2}{2} + y^2 = \\frac{1}{2}$ ，即 $x^2 + 2y^2 = 1$ 。",
+     "partial": 2
+    },
+    {
+     "text": "(II) 曲线 $y = \\sin x$ 在 $[0, \\pi]$ 上的弧长为\n$$\nl = \\int_ {0} ^ {\\pi} \\sqrt {1 + y ^ {\\prime 2}} d x = \\int_ {0} ^ {\\pi} \\sqrt {1 + \\cos^ {2} x} d x\n$$\n$$\n= \\int_ {- \\frac {\\pi}{2}} ^ {\\frac {\\pi}{2}} \\sqrt {1 + \\cos^ {2} t} d t = 2 \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {1 + \\cos^ {2} t} d t.\n$$\n另一方面，曲线 $y = f(x)$ 的参数方程为\n$$\n\\left\\{ \\begin{array}{l} x = \\cos t, \\\\ y = \\frac {\\sqrt {2}}{2} \\sin t, \\end{array} \\right. \\quad \\left(0 \\leqslant t \\leqslant \\frac {\\pi}{2}\\right).\n$$\n于是该曲线的弧长为（其中换元 $u = \\frac{\\pi}{2} - t$ ）\n$$\n\\begin{array}{l} s = \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {(x _ {t} ^ {\\prime}) ^ {2} + (y _ {t} ^ {\\prime}) ^ {2}} d t = \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {\\sin^ {2} t + \\frac {1}{2} \\cos^ {2} t} d t = \\frac {1}{\\sqrt {2}} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {1 + \\sin^ {2} t} d t \\\\ = \\frac {1}{\\sqrt {2}} \\int_ {\\frac {\\pi}{2}} ^ {0} \\sqrt {1 + \\cos^ {2} u} (- \\mathrm {d} u) = \\frac {1}{\\sqrt {2}} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {1 + \\cos^ {2} u} \\mathrm {d} u \\\\ \\end{array}\n$$\n所以 $s = \\frac{\\sqrt{2}}{4} l$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) 曲线 $y = f(x)$ 在点 $P(x, y)$ 处的法线方程为\n$$\nY - y = - \\frac {1}{y ^ {\\prime}} (X - x).\n$$\n令 $X = 0$ ，则它与 $y$ 轴的交点为 $Q\\left(0, y + \\frac{x}{y'}\\right)$ 。由题设，线段 $PQ$ 被 $x$ 轴平分，从而\n$$\n\\frac {1}{2} \\left(y + y + \\frac {x}{y ^ {\\prime}}\\right) = 0 \\Rightarrow 2 y d y + x d x = 0.\n$$\n积分得 $\\frac{x^2}{2} + y^2 = C$ （ $C$ 为任意常数），代入初始条件 $y\\big|_{x = \\frac{\\sqrt{2}}{2}} = \\frac{1}{2}$ 得 $C = \\frac{1}{2}$ ，故曲线 $y = f(x)$ 的方程为 $\\frac{x^2}{2} + y^2 = \\frac{1}{2}$ ，即 $x^2 + 2y^2 = 1$ 。\n(II) 曲线 $y = \\sin x$ 在 $[0, \\pi]$ 上的弧长为\n$$\nl = \\int_ {0} ^ {\\pi} \\sqrt {1 + y ^ {\\prime 2}} d x = \\int_ {0} ^ {\\pi} \\sqrt {1 + \\cos^ {2} x} d x\n$$\n$$\n= \\int_ {- \\frac {\\pi}{2}} ^ {\\frac {\\pi}{2}} \\sqrt {1 + \\cos^ {2} t} d t = 2 \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {1 + \\cos^ {2} t} d t.\n$$\n另一方面，曲线 $y = f(x)$ 的参数方程为\n$$\n\\left\\{ \\begin{array}{l} x = \\cos t, \\\\ y = \\frac {\\sqrt {2}}{2} \\sin t, \\end{array} \\right. \\quad \\left(0 \\leqslant t \\leqslant \\frac {\\pi}{2}\\right).\n$$\n于是该曲线的弧长为（其中换元 $u = \\frac{\\pi}{2} - t$ ）\n$$\n\\begin{array}{l} s = \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {(x _ {t} ^ {\\prime}) ^ {2} + (y _ {t} ^ {\\prime}) ^ {2}} d t = \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {\\sin^ {2} t + \\frac {1}{2} \\cos^ {2} t} d t = \\frac {1}{\\sqrt {2}} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {1 + \\sin^ {2} t} d t \\\\ = \\frac {1}{\\sqrt {2}} \\int_ {\\frac {\\pi}{2}} ^ {0} \\sqrt {1 + \\cos^ {2} u} (- \\mathrm {d} u) = \\frac {1}{\\sqrt {2}} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sqrt {1 + \\cos^ {2} u} \\mathrm {d} u \\\\ \\end{array}\n$$\n所以 $s = \\frac{\\sqrt{2}}{4} l$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 469
+  },
+  {
+   "id": "ky2-2007-18-6b98bf",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "2007 年考研数学二第 18 题",
+    "kind": "exam-original",
+    "year": 2007,
+    "region": "全国",
+    "paper": "2007 年考研数学二",
+    "number": "18",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分11分)\n设 $D$ 是位于曲线 $y = \\sqrt{x} a^{-\\frac{x}{2a}} (a > 1, 0 \\leqslant x < +\\infty)$ 下方、 $x$ 轴上方的无界区域.\n(I) 求区域 $D$ 绕 $x$ 轴旋转一周所成旋转体的体积 $V(a)$ ;\n(II) 当 $a$ 为何值时， $V(a)$ 最小？并求出最小值.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) 由旋转体的体积公式,\n$$\n\\begin{array}{l} V (a) = \\pi \\int_ {0} ^ {\\infty} x a ^ {- \\frac {x}{a}} d x = - \\frac {a}{\\ln a} \\pi \\int_ {0} ^ {\\infty} x d \\left(a ^ {- \\frac {x}{a}}\\right) \\\\ = - \\frac {a}{\\ln a} \\pi \\Big [ x a ^ {- \\frac {x}{a}} \\Big ] _ {0} ^ {+ \\infty} + \\frac {a}{\\ln a} \\pi \\int_ {0} ^ {\\infty} a ^ {- \\frac {x}{a}} \\mathrm {d} x = \\pi \\Big (\\frac {a}{\\ln a} \\Big) ^ {2}. \\\\ \\end{array}\n$$\n(II) 对 $V(a)$ 求导得到\n$$\n\\begin{array}{l} V ^ {\\prime} (a) = \\left[ \\pi \\left(\\frac {a}{\\ln a}\\right) ^ {2} \\right] ^ {\\prime} = \\pi \\cdot \\frac {2 a \\ln^ {2} a - a ^ {2} \\cdot 2 \\ln a \\cdot \\frac {1}{a}}{\\ln^ {4} a} \\\\ = \\pi \\cdot \\frac {2 a \\ln a - 2 a}{\\ln^ {3} a} = 2 \\pi \\left(\\frac {a (\\ln a - 1)}{\\ln^ {3} a}\\right). \\\\ \\end{array}\n$$\n令 $V^{\\prime}(a) = 0$ ，得 $\\ln a = 1$ ，从而 $a = e$ 。当 $1 < a < e$ 时， $V^{\\prime}(a) < 0$ ， $V(a)$ 单调减少；当 $a > e$ 时， $V^{\\prime}(a) > 0$ ， $V(a)$ 单调增加。所以 $a = e$ 时 $V$ 最小，最小体积为 $V_{\\min}(a) = \\pi e^{2}$ 。",
+   "points": [
+    {
+     "text": "(I) 由旋转体的体积公式,\n$$\n\\begin{array}{l} V (a) = \\pi \\int_ {0} ^ {\\infty} x a ^ {- \\frac {x}{a}} d x = - \\frac {a}{\\ln a} \\pi \\int_ {0} ^ {\\infty} x d \\left(a ^ {- \\frac {x}{a}}\\right) \\\\ = - \\frac {a}{\\ln a} \\pi \\Big [ x a ^ {- \\frac {x}{a}} \\Big ] _ {0} ^ {+ \\infty} + \\frac {a}{\\ln a} \\pi \\int_ {0} ^ {\\infty} a ^ {- \\frac {x}{a}} \\mathrm {d} x = \\pi \\Big (\\frac {a}{\\ln a} \\Big) ^ {2}. \\\\ \\end{array}\n$$\n(II) 对 $V(a)$ 求导得到\n$$\n\\begin{array}{l} V ^ {\\prime} (a) = \\left[ \\pi \\left(\\frac {a}{\\ln a}\\right) ^ {2} \\right] ^ {\\prime} = \\pi \\cdot \\frac {2 a \\ln^ {2} a - a ^ {2} \\cdot 2 \\ln a \\cdot \\frac {1}{a}}{\\ln^ {4} a} \\\\ = \\pi \\cdot \\frac {2 a \\ln a - 2 a}{\\ln^ {3} a} = 2 \\pi \\left(\\frac {a (\\ln a - 1)}{\\ln^ {3} a}\\right). \\\\ \\end{array}\n$$\n令 $V^{\\prime}(a) = 0$ ，得 $\\ln a = 1$ ，从而 $a = e$ 。",
+     "partial": 2
+    },
+    {
+     "text": "当 $1 < a < e$ 时， $V^{\\prime}(a) < 0$ ， $V(a)$ 单调减少；",
+     "partial": 2
+    },
+    {
+     "text": "当 $a > e$ 时， $V^{\\prime}(a) > 0$ ， $V(a)$ 单调增加。",
+     "partial": 2
+    },
+    {
+     "text": "所以 $a = e$ 时 $V$ 最小，最小体积为 $V_{\\min}(a) = \\pi e^{2}$ 。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) 由旋转体的体积公式,\n$$\n\\begin{array}{l} V (a) = \\pi \\int_ {0} ^ {\\infty} x a ^ {- \\frac {x}{a}} d x = - \\frac {a}{\\ln a} \\pi \\int_ {0} ^ {\\infty} x d \\left(a ^ {- \\frac {x}{a}}\\right) \\\\ = - \\frac {a}{\\ln a} \\pi \\Big [ x a ^ {- \\frac {x}{a}} \\Big ] _ {0} ^ {+ \\infty} + \\frac {a}{\\ln a} \\pi \\int_ {0} ^ {\\infty} a ^ {- \\frac {x}{a}} \\mathrm {d} x = \\pi \\Big (\\frac {a}{\\ln a} \\Big) ^ {2}. \\\\ \\end{array}\n$$\n(II) 对 $V(a)$ 求导得到\n$$\n\\begin{array}{l} V ^ {\\prime} (a) = \\left[ \\pi \\left(\\frac {a}{\\ln a}\\right) ^ {2} \\right] ^ {\\prime} = \\pi \\cdot \\frac {2 a \\ln^ {2} a - a ^ {2} \\cdot 2 \\ln a \\cdot \\frac {1}{a}}{\\ln^ {4} a} \\\\ = \\pi \\cdot \\frac {2 a \\ln a - 2 a}{\\ln^ {3} a} = 2 \\pi \\left(\\frac {a (\\ln a - 1)}{\\ln^ {3} a}\\right). \\\\ \\end{array}\n$$\n令 $V^{\\prime}(a) = 0$ ，得 $\\ln a = 1$ ，从而 $a = e$ 。当 $1 < a < e$ 时， $V^{\\prime}(a) < 0$ ， $V(a)$ 单调减少；当 $a > e$ 时， $V^{\\prime}(a) > 0$ ， $V(a)$ 单调增加。所以 $a = e$ 时 $V$ 最小，最小体积为 $V_{\\min}(a) = \\pi e^{2}$ 。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 470
+  },
+  {
+   "id": "ky2-2008-19-1e1a23",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "2008 年考研数学二第 19 题",
+    "kind": "exam-original",
+    "year": 2008,
+    "region": "全国",
+    "paper": "2008 年考研数学二",
+    "number": "19",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 11 分)\n设 $f(x)$ 是区间 $[0, +\\infty)$ 上具有连续导数的单调增加函数，且 $f(0) = 1$ 。对于任意的 $t \\in [0, +\\infty)$ ，直线 $x = 0$ ， $x = t$ ，曲线 $y = f(x)$ 以及 $x$ 轴所围成曲边梯形绕 $x$ 轴旋转一周生成一旋转体。若该旋转体的侧面面积在数值上等于其体积的2倍，求函数 $f(x)$ 的表达式。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "因为旋转体的体积 $V = \\pi \\int_{0}^{t} f^{2}(x) \\, \\mathrm{d}x$ , 侧面积 $S = 2\\pi \\int_{0}^{t} f(x) \\sqrt{1 + f'^{2}(x)} \\, \\mathrm{d}x$ , 所以由题设有\n$$\n\\int_ {0} ^ {t} f ^ {2} (x) \\mathrm {d} x = \\int_ {0} ^ {t} f (x) \\sqrt {1 + f ^ {\\prime 2} (x)} \\mathrm {d} x.\n$$\n上式两端对 $t$ 求导得 $f^2 (t) = f(t)\\sqrt{1 + f'^2(t)}$ ，即 $y^\\prime = \\sqrt{y^2 - 1}$ ．由分离变量法解得 $\\ln (y + \\sqrt{y^2 - 1}) = t + C_1$ ，即 $y + \\sqrt{y^{2} - 1} = Ce^{t}$ 将 $y(0) = 1$ 代入知 $C = 1$ 故 $y + \\sqrt{y^2 - 1} = \\mathrm{e}^t$ ，即 $y = \\frac{1}{2} (\\mathrm{e}^t +\\mathrm{e}^{-t})$ 于是所求函数为 $y = f(x) = \\frac{1}{2} (\\mathrm{e}^t +\\mathrm{e}^{-t})$",
+   "points": [
+    {
+     "text": "因为旋转体的体积 $V = \\pi \\int_{0}^{t} f^{2}(x) \\, \\mathrm{d}x$ , 侧面积 $S = 2\\pi \\int_{0}^{t} f(x) \\sqrt{1 + f'^{2}(x)} \\, \\mathrm{d}x$ , 所以由题设有\n$$\n\\int_ {0} ^ {t} f ^ {2} (x) \\mathrm {d} x = \\int_ {0} ^ {t} f (x) \\sqrt {1 + f ^ {\\prime 2} (x)} \\mathrm {d} x.\n$$\n上式两端对 $t$ 求导得 $f^2 (t) = f(t)\\sqrt{1 + f'^2(t)}$ ，即 $y^\\prime = \\sqrt{y^2 - 1}$ ．由分离变量法解得 $\\ln (y + \\sqrt{y^2 - 1}) = t + C_1$ ，即 $y + \\sqrt{y^{2} - 1} = Ce^{t}$ 将 $y(0) = 1$ 代入知 $C = 1$ 故 $y + \\sqrt{y^2 - 1} = \\mathrm{e}^t$ ，即 $y = \\frac{1}{2} (\\mathrm{e}^t +\\mathrm{e}^{-t})$ 于是所求函数为 $y = f(x) = \\frac{1}{2} (\\mathrm{e}^t +\\mathrm{e}^{-t})$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n因为旋转体的体积 $V = \\pi \\int_{0}^{t} f^{2}(x) \\, \\mathrm{d}x$ , 侧面积 $S = 2\\pi \\int_{0}^{t} f(x) \\sqrt{1 + f'^{2}(x)} \\, \\mathrm{d}x$ , 所以由题设有\n$$\n\\int_ {0} ^ {t} f ^ {2} (x) \\mathrm {d} x = \\int_ {0} ^ {t} f (x) \\sqrt {1 + f ^ {\\prime 2} (x)} \\mathrm {d} x.\n$$\n上式两端对 $t$ 求导得 $f^2 (t) = f(t)\\sqrt{1 + f'^2(t)}$ ，即 $y^\\prime = \\sqrt{y^2 - 1}$ ．由分离变量法解得 $\\ln (y + \\sqrt{y^2 - 1}) = t + C_1$ ，即 $y + \\sqrt{y^{2} - 1} = Ce^{t}$ 将 $y(0) = 1$ 代入知 $C = 1$ 故 $y + \\sqrt{y^2 - 1} = \\mathrm{e}^t$ ，即 $y = \\frac{1}{2} (\\mathrm{e}^t +\\mathrm{e}^{-t})$ 于是所求函数为 $y = f(x) = \\frac{1}{2} (\\mathrm{e}^t +\\mathrm{e}^{-t})$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 471
+  },
+  {
+   "id": "ky2-2013-16-2c38cd",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "2013 年考研数学二第 16 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学二",
+    "number": "16",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n设 $D$ 是由曲线 $y = x^{\\frac{1}{3}}$ , 直线 $x = a (a > 0)$ 及 $x$ 轴所围成的平面图形, $V_x, V_y$ 分别是 $D$ 绕 $x$ 轴, $y$ 轴旋转一周所得旋转体的体积, 若 $V_y = 10V_x$ , 求 $a$ 的值.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "依题意可得\n$$\nV _ {x} = \\pi \\int_ {0} ^ {a} \\left(x ^ {\\frac {1}{3}}\\right) ^ {2} d x = \\frac {3}{5} \\pi a ^ {\\frac {5}{3}}, \\quad V _ {y} = 2 \\pi \\int_ {0} ^ {a} x \\cdot x ^ {\\frac {1}{3}} d x = \\frac {6 \\pi}{7} a ^ {\\frac {7}{3}}.\n$$\n由 $V_{y} = 10V_{x}$ 可得 $\\frac{6\\pi}{7} a^{\\frac{7}{3}} = 10\\cdot \\frac{3}{5}\\pi a^{\\frac{5}{3}}$ ，解得 $a = 7\\sqrt{7}$",
+   "points": [
+    {
+     "text": "依题意可得\n$$\nV _ {x} = \\pi \\int_ {0} ^ {a} \\left(x ^ {\\frac {1}{3}}\\right) ^ {2} d x = \\frac {3}{5} \\pi a ^ {\\frac {5}{3}}, \\quad V _ {y} = 2 \\pi \\int_ {0} ^ {a} x \\cdot x ^ {\\frac {1}{3}} d x = \\frac {6 \\pi}{7} a ^ {\\frac {7}{3}}.\n$$\n由 $V_{y} = 10V_{x}$ 可得 $\\frac{6\\pi}{7} a^{\\frac{7}{3}} = 10\\cdot \\frac{3}{5}\\pi a^{\\frac{5}{3}}$ ，解得 $a = 7\\sqrt{7}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n依题意可得\n$$\nV _ {x} = \\pi \\int_ {0} ^ {a} \\left(x ^ {\\frac {1}{3}}\\right) ^ {2} d x = \\frac {3}{5} \\pi a ^ {\\frac {5}{3}}, \\quad V _ {y} = 2 \\pi \\int_ {0} ^ {a} x \\cdot x ^ {\\frac {1}{3}} d x = \\frac {6 \\pi}{7} a ^ {\\frac {7}{3}}.\n$$\n由 $V_{y} = 10V_{x}$ 可得 $\\frac{6\\pi}{7} a^{\\frac{7}{3}} = 10\\cdot \\frac{3}{5}\\pi a^{\\frac{5}{3}}$ ，解得 $a = 7\\sqrt{7}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 472
+  },
+  {
+   "id": "ky2-2014-21-6695a2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "2014 年考研数学二第 21 题",
+    "kind": "exam-original",
+    "year": 2014,
+    "region": "全国",
+    "paper": "2014 年考研数学二",
+    "number": "21",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 11 分)\n已知函数 $f(x, y)$ 满足 $\\frac{\\partial f}{\\partial y} = 2(y + 1)$ ，且 $f(y, y) = (y + 1)^2 - (2 - y)\\ln y$ ，求曲线 $f(x, y) = 0$ 所围成的图形绕直线 $y = -1$ 旋转所成的旋转体的体积.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由于函数 $f(x, y)$ 满足 $\\frac{\\partial f}{\\partial y} = 2(y + 1)$ ，所以\n$$\nf (x, y) = y ^ {2} + 2 y + C (x),\n$$\n其中 $C(x)$ 为待定的连续函数. 又因为\n$$\nf (y, y) = (y + 1) ^ {2} - (2 - y) \\ln y,\n$$\n从而可知 $C(y) = 1 - (2 - y)\\ln y$ ，即\n$$\nf (x, y) = y ^ {2} + 2 y + 1 - (2 - x) \\ln x.\n$$\n令 $f(x, y) = 0$ ，可得 $(y + 1)^2 = (2 - x)\\ln x$ 。且当 $y = -1$ 时， $x_1 = 1, x_2 = 2$ 。曲线 $f(x, y) = 0$ 所成的图形绕直线 $y = -1$ 旋转所成的旋转体的体积为\n$$\nV = \\pi \\int_ {1} ^ {2} (y + 1) ^ {2} d x = \\pi \\int_ {1} ^ {2} (2 - x) \\ln x d x = \\left(2 \\ln 2 - \\frac {5}{4}\\right) \\pi .\n$$",
+   "points": [
+    {
+     "text": "由于函数 $f(x, y)$ 满足 $\\frac{\\partial f}{\\partial y} = 2(y + 1)$ ，所以\n$$\nf (x, y) = y ^ {2} + 2 y + C (x),\n$$\n其中 $C(x)$ 为待定的连续函数. 又因为\n$$\nf (y, y) = (y + 1) ^ {2} - (2 - y) \\ln y,\n$$\n从而可知 $C(y) = 1 - (2 - y)\\ln y$ ，即\n$$\nf (x, y) = y ^ {2} + 2 y + 1 - (2 - x) \\ln x.\n$$\n令 $f(x, y) = 0$ ，可得 $(y + 1)^2 = (2 - x)\\ln x$ 。",
+     "partial": 2
+    },
+    {
+     "text": "且当 $y = -1$ 时， $x_1 = 1, x_2 = 2$ 。",
+     "partial": 2
+    },
+    {
+     "text": "曲线 $f(x, y) = 0$ 所成的图形绕直线 $y = -1$ 旋转所成的旋转体的体积为\n$$\nV = \\pi \\int_ {1} ^ {2} (y + 1) ^ {2} d x = \\pi \\int_ {1} ^ {2} (2 - x) \\ln x d x = \\left(2 \\ln 2 - \\frac {5}{4}\\right) \\pi .\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由于函数 $f(x, y)$ 满足 $\\frac{\\partial f}{\\partial y} = 2(y + 1)$ ，所以\n$$\nf (x, y) = y ^ {2} + 2 y + C (x),\n$$\n其中 $C(x)$ 为待定的连续函数. 又因为\n$$\nf (y, y) = (y + 1) ^ {2} - (2 - y) \\ln y,\n$$\n从而可知 $C(y) = 1 - (2 - y)\\ln y$ ，即\n$$\nf (x, y) = y ^ {2} + 2 y + 1 - (2 - x) \\ln x.\n$$\n令 $f(x, y) = 0$ ，可得 $(y + 1)^2 = (2 - x)\\ln x$ 。且当 $y = -1$ 时， $x_1 = 1, x_2 = 2$ 。曲线 $f(x, y) = 0$ 所成的图形绕直线 $y = -1$ 旋转所成的旋转体的体积为\n$$\nV = \\pi \\int_ {1} ^ {2} (y + 1) ^ {2} d x = \\pi \\int_ {1} ^ {2} (2 - x) \\ln x d x = \\left(2 \\ln 2 - \\frac {5}{4}\\right) \\pi .\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 473
+  },
+  {
+   "id": "ky2-2015-16-2a3300",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "2015 年考研数学二第 16 题",
+    "kind": "exam-original",
+    "year": 2015,
+    "region": "全国",
+    "paper": "2015 年考研数学二",
+    "number": "16",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n设 $A > 0$ ， $D$ 是由曲线段 $y = A\\sin x$ （ $0 \\leqslant x \\leqslant \\frac{\\pi}{2}$ ）及直线 $y = 0$ ， $x = \\frac{\\pi}{2}$ 所围成的平面区域， $V_{1}, V_{2}$ 分别表示 $D$ 绕 $x$ 轴与绕 $y$ 轴旋转成旋转体的体积，若 $V_{1} = V_{2}$ 求 $A$ 的值.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由旋转体的体积公式, 得\n$$\nV _ {1} = \\int_ {0} ^ {\\frac {\\pi}{2}} \\pi f ^ {2} (x) d x = \\int_ {0} ^ {\\frac {\\pi}{2}} \\pi (A \\sin x) ^ {2} d x = \\pi A ^ {2} \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {1 - \\cos 2 x}{2} d x = \\frac {\\pi^ {2} A ^ {2}}{4},\n$$\n$$\nV _ {2} = \\int_ {0} ^ {\\frac {\\pi}{2}} 2 \\pi x f (x) d x = - 2 \\pi A \\int_ {0} ^ {\\frac {\\pi}{2}} x d (\\cos x) = 2 \\pi A.\n$$\n由题设 $V_{1} = V_{2}$ , 因此可求得 $A = \\frac{8}{\\pi}$ .",
+   "points": [
+    {
+     "text": "由旋转体的体积公式, 得\n$$\nV _ {1} = \\int_ {0} ^ {\\frac {\\pi}{2}} \\pi f ^ {2} (x) d x = \\int_ {0} ^ {\\frac {\\pi}{2}} \\pi (A \\sin x) ^ {2} d x = \\pi A ^ {2} \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {1 - \\cos 2 x}{2} d x = \\frac {\\pi^ {2} A ^ {2}}{4},\n$$\n$$\nV _ {2} = \\int_ {0} ^ {\\frac {\\pi}{2}} 2 \\pi x f (x) d x = - 2 \\pi A \\int_ {0} ^ {\\frac {\\pi}{2}} x d (\\cos x) = 2 \\pi A.\n$$\n由题设 $V_{1} = V_{2}$ , 因此可求得 $A = \\frac{8}{\\pi}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由旋转体的体积公式, 得\n$$\nV _ {1} = \\int_ {0} ^ {\\frac {\\pi}{2}} \\pi f ^ {2} (x) d x = \\int_ {0} ^ {\\frac {\\pi}{2}} \\pi (A \\sin x) ^ {2} d x = \\pi A ^ {2} \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {1 - \\cos 2 x}{2} d x = \\frac {\\pi^ {2} A ^ {2}}{4},\n$$\n$$\nV _ {2} = \\int_ {0} ^ {\\frac {\\pi}{2}} 2 \\pi x f (x) d x = - 2 \\pi A \\int_ {0} ^ {\\frac {\\pi}{2}} x d (\\cos x) = 2 \\pi A.\n$$\n由题设 $V_{1} = V_{2}$ , 因此可求得 $A = \\frac{8}{\\pi}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 474
+  },
+  {
+   "id": "ky2-2016-20-52c980",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "knowledgePoints": [
+    "6.3"
+   ],
+   "source": {
+    "text": "2016 年考研数学二第 20 题",
+    "kind": "exam-original",
+    "year": 2016,
+    "region": "全国",
+    "paper": "2016 年考研数学二",
+    "number": "20",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 11 分)\n设 $D$ 是由曲线 $y = \\sqrt{1 - x^2}$ （ $0 \\leqslant x \\leqslant 1$ ）与 $\\left\\{ \\begin{array}{l}x = \\cos^3 t \\\\ y = \\sin^3 t \\end{array} \\right.$ （ $0 \\leqslant t \\leqslant \\frac{\\pi}{2}$ ）围成的平面区域，求 $D$ 绕 $x$ 轴旋转一周所得旋转体的体积和表面积.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "旋转体的体积\n$$\n\\begin{array}{l} V = V _ {1} - V _ {2} = \\pi \\int_ {0} ^ {1} (1 - x ^ {2}) d x - \\int_ {\\frac {\\pi}{2}} ^ {0} \\sin^ {6} t \\cdot 3 \\cos^ {2} t (- \\sin t) d t \\\\ = \\frac {2 \\pi}{3} - \\frac {1 6 \\pi}{1 0 5} = \\frac {1 8 \\pi}{3 5}. \\\\ \\end{array}\n$$\n旋转体的表面积\n$$\n\\begin{array}{l} S = S _ {1} + S _ {2} = 2 \\pi + 2 \\pi \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin^ {3} t \\sqrt {(3 \\cos^ {2} t \\sin t) ^ {2} + (3 \\sin^ {2} t \\cos t) ^ {2}} d t \\\\ = 2 \\pi + \\frac {6 \\pi}{5} = \\frac {1 6 \\pi}{5}. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "旋转体的体积\n$$\n\\begin{array}{l} V = V _ {1} - V _ {2} = \\pi \\int_ {0} ^ {1} (1 - x ^ {2}) d x - \\int_ {\\frac {\\pi}{2}} ^ {0} \\sin^ {6} t \\cdot 3 \\cos^ {2} t (- \\sin t) d t \\\\ = \\frac {2 \\pi}{3} - \\frac {1 6 \\pi}{1 0 5} = \\frac {1 8 \\pi}{3 5}. \\\\ \\end{array}\n$$\n旋转体的表面积\n$$\n\\begin{array}{l} S = S _ {1} + S _ {2} = 2 \\pi + 2 \\pi \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin^ {3} t \\sqrt {(3 \\cos^ {2} t \\sin t) ^ {2} + (3 \\sin^ {2} t \\cos t) ^ {2}} d t \\\\ = 2 \\pi + \\frac {6 \\pi}{5} = \\frac {1 6 \\pi}{5}. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n旋转体的体积\n$$\n\\begin{array}{l} V = V _ {1} - V _ {2} = \\pi \\int_ {0} ^ {1} (1 - x ^ {2}) d x - \\int_ {\\frac {\\pi}{2}} ^ {0} \\sin^ {6} t \\cdot 3 \\cos^ {2} t (- \\sin t) d t \\\\ = \\frac {2 \\pi}{3} - \\frac {1 6 \\pi}{1 0 5} = \\frac {1 8 \\pi}{3 5}. \\\\ \\end{array}\n$$\n旋转体的表面积\n$$\n\\begin{array}{l} S = S _ {1} + S _ {2} = 2 \\pi + 2 \\pi \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin^ {3} t \\sqrt {(3 \\cos^ {2} t \\sin t) ^ {2} + (3 \\sin^ {2} t \\cos t) ^ {2}} d t \\\\ = 2 \\pi + \\frac {6 \\pi}{5} = \\frac {1 6 \\pi}{5}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 475
+  },
+  {
+   "id": "ky2-2018-20-0425aa",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "2018 年考研数学二第 20 题",
+    "kind": "exam-original",
+    "year": 2018,
+    "region": "全国",
+    "paper": "2018 年考研数学二",
+    "number": "20",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 11 分)\n已知曲线 $L: y = \\frac{4}{9} x^{2} (x \\geqslant 0)$ , 点 $O(0,0)$ , 点 $A(0,1)$ . 设 $P$ 是 $L$ 上的动点, $S$ 是直线 $OA$ 与直线 $AP$ 及曲线 $L$ 所围图形的面积. 若 $P$ 运动到 $(3,4)$ 时沿 $x$ 轴正向的速度是 4 , 求此时 $S$ 关于时间 $t$ 的变化率.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "依题意, 所围图形的面积\n$$\nS = \\frac {1}{2} (1 + y) x - \\int_ {0} ^ {x} y (x) d x = \\frac {1}{2} \\left(1 + \\frac {4}{9} x ^ {2}\\right) x - \\int_ {0} ^ {x} \\frac {4}{9} x ^ {2} d x = \\frac {x}{2} + \\frac {2 x ^ {3}}{2 7}.\n$$\n所以 $P$ 运动到 $(3,4)$ 时 $S$ 关于时间 $t$ 的变化率\n$$\n\\left. \\frac {\\mathrm {d} S}{\\mathrm {d} t} \\right| _ {x = 3} = \\left. \\frac {\\mathrm {d} S}{\\mathrm {d} x} \\frac {\\mathrm {d} x}{\\mathrm {d} t} \\right| _ {x = 3} = 4 \\left(\\frac {1}{2} + \\frac {2}{9} x ^ {2}\\right) \\Bigg | _ {x = 3} = 1 0.\n$$",
+   "points": [
+    {
+     "text": "依题意, 所围图形的面积\n$$\nS = \\frac {1}{2} (1 + y) x - \\int_ {0} ^ {x} y (x) d x = \\frac {1}{2} \\left(1 + \\frac {4}{9} x ^ {2}\\right) x - \\int_ {0} ^ {x} \\frac {4}{9} x ^ {2} d x = \\frac {x}{2} + \\frac {2 x ^ {3}}{2 7}.\n$$\n所以 $P$ 运动到 $(3,4)$ 时 $S$ 关于时间 $t$ 的变化率\n$$\n\\left. \\frac {\\mathrm {d} S}{\\mathrm {d} t} \\right| _ {x = 3} = \\left. \\frac {\\mathrm {d} S}{\\mathrm {d} x} \\frac {\\mathrm {d} x}{\\mathrm {d} t} \\right| _ {x = 3} = 4 \\left(\\frac {1}{2} + \\frac {2}{9} x ^ {2}\\right) \\Bigg | _ {x = 3} = 1 0.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n依题意, 所围图形的面积\n$$\nS = \\frac {1}{2} (1 + y) x - \\int_ {0} ^ {x} y (x) d x = \\frac {1}{2} \\left(1 + \\frac {4}{9} x ^ {2}\\right) x - \\int_ {0} ^ {x} \\frac {4}{9} x ^ {2} d x = \\frac {x}{2} + \\frac {2 x ^ {3}}{2 7}.\n$$\n所以 $P$ 运动到 $(3,4)$ 时 $S$ 关于时间 $t$ 的变化率\n$$\n\\left. \\frac {\\mathrm {d} S}{\\mathrm {d} t} \\right| _ {x = 3} = \\left. \\frac {\\mathrm {d} S}{\\mathrm {d} x} \\frac {\\mathrm {d} x}{\\mathrm {d} t} \\right| _ {x = 3} = 4 \\left(\\frac {1}{2} + \\frac {2}{9} x ^ {2}\\right) \\Bigg | _ {x = 3} = 1 0.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 476
+  },
+  {
+   "id": "ky2-2019-19-26f555",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "knowledgePoints": [
+    "6.2"
+   ],
+   "source": {
+    "text": "2019 年考研数学二第 19 题",
+    "kind": "exam-original",
+    "year": 2019,
+    "region": "全国",
+    "paper": "2019 年考研数学二",
+    "number": "19",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n设 $n$ 是正整数，记 $S_{n}$ 为曲线 $y = \\mathrm{e}^{-x}\\sin x$ （ $0 \\leqslant x \\leqslant n\\pi$ ）与 $x$ 轴所围成图形的面积，求 $S_{n}$ ，并求 $\\lim_{n \\to \\infty} S_{n}$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由不定积分 $\\int \\mathrm{e}^{-x}\\sin x\\mathrm{d}x = -\\frac{1}{2}\\mathrm{e}^{-x}(\\sin x + \\cos x) + C$ 可得\n$$\n\\begin{array}{l} S _ {n} = \\int_ {0} ^ {n \\pi} \\left| \\mathrm {e} ^ {- x} \\sin x \\right| \\mathrm {d} x = \\sum_ {k = 0} ^ {n - 1} \\int_ {k \\pi} ^ {(k + 1) \\pi} \\mathrm {e} ^ {- x} | \\sin x | \\mathrm {d} x = \\sum_ {k = 0} ^ {n - 1} \\int_ {0} ^ {\\pi} \\mathrm {e} ^ {- (t + k \\pi)} | \\sin (t + k \\pi) | \\mathrm {d} t \\\\ = \\int_ {0} ^ {\\pi} \\mathrm {e} ^ {- t} \\sin t \\mathrm {d} t \\sum_ {k = 0} ^ {n - 1} \\mathrm {e} ^ {- k \\pi} = \\frac {\\mathrm {e} ^ {- \\pi} + 1}{2} \\cdot \\frac {1 - \\mathrm {e} ^ {- n \\pi}}{1 - \\mathrm {e} ^ {- \\pi}} = \\frac {\\mathrm {e} ^ {\\pi} + 1}{2 (\\mathrm {e} ^ {\\pi} - 1)} (1 - \\mathrm {e} ^ {- n \\pi}). \\\\ \\end{array}\n$$\n所以 $\\lim_{n\\to \\infty}S_n = \\frac{\\mathrm{e}^\\pi + 1}{2(\\mathrm{e}^\\pi - 1)}.$",
+   "points": [
+    {
+     "text": "由不定积分 $\\int \\mathrm{e}^{-x}\\sin x\\mathrm{d}x = -\\frac{1}{2}\\mathrm{e}^{-x}(\\sin x + \\cos x) + C$ 可得\n$$\n\\begin{array}{l} S _ {n} = \\int_ {0} ^ {n \\pi} \\left| \\mathrm {e} ^ {- x} \\sin x \\right| \\mathrm {d} x = \\sum_ {k = 0} ^ {n - 1} \\int_ {k \\pi} ^ {(k + 1) \\pi} \\mathrm {e} ^ {- x} | \\sin x | \\mathrm {d} x = \\sum_ {k = 0} ^ {n - 1} \\int_ {0} ^ {\\pi} \\mathrm {e} ^ {- (t + k \\pi)} | \\sin (t + k \\pi) | \\mathrm {d} t \\\\ = \\int_ {0} ^ {\\pi} \\mathrm {e} ^ {- t} \\sin t \\mathrm {d} t \\sum_ {k = 0} ^ {n - 1} \\mathrm {e} ^ {- k \\pi} = \\frac {\\mathrm {e} ^ {- \\pi} + 1}{2} \\cdot \\frac {1 - \\mathrm {e} ^ {- n \\pi}}{1 - \\mathrm {e} ^ {- \\pi}} = \\frac {\\mathrm {e} ^ {\\pi} + 1}{2 (\\mathrm {e} ^ {\\pi} - 1)} (1 - \\mathrm {e} ^ {- n \\pi}). \\\\ \\end{array}\n$$\n所以 $\\lim_{n\\to \\infty}S_n = \\frac{\\mathrm{e}^\\pi + 1}{2(\\mathrm{e}^\\pi - 1)}.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由不定积分 $\\int \\mathrm{e}^{-x}\\sin x\\mathrm{d}x = -\\frac{1}{2}\\mathrm{e}^{-x}(\\sin x + \\cos x) + C$ 可得\n$$\n\\begin{array}{l} S _ {n} = \\int_ {0} ^ {n \\pi} \\left| \\mathrm {e} ^ {- x} \\sin x \\right| \\mathrm {d} x = \\sum_ {k = 0} ^ {n - 1} \\int_ {k \\pi} ^ {(k + 1) \\pi} \\mathrm {e} ^ {- x} | \\sin x | \\mathrm {d} x = \\sum_ {k = 0} ^ {n - 1} \\int_ {0} ^ {\\pi} \\mathrm {e} ^ {- (t + k \\pi)} | \\sin (t + k \\pi) | \\mathrm {d} t \\\\ = \\int_ {0} ^ {\\pi} \\mathrm {e} ^ {- t} \\sin t \\mathrm {d} t \\sum_ {k = 0} ^ {n - 1} \\mathrm {e} ^ {- k \\pi} = \\frac {\\mathrm {e} ^ {- \\pi} + 1}{2} \\cdot \\frac {1 - \\mathrm {e} ^ {- n \\pi}}{1 - \\mathrm {e} ^ {- \\pi}} = \\frac {\\mathrm {e} ^ {\\pi} + 1}{2 (\\mathrm {e} ^ {\\pi} - 1)} (1 - \\mathrm {e} ^ {- n \\pi}). \\\\ \\end{array}\n$$\n所以 $\\lim_{n\\to \\infty}S_n = \\frac{\\mathrm{e}^\\pi + 1}{2(\\mathrm{e}^\\pi - 1)}.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 477
+  }
+ ]
+}

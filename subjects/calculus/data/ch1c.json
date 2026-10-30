@@ -1,0 +1,1941 @@
+{
+ "chapter": 1,
+ "questions": [
+  {
+   "id": "ky2-1993-x-1b1a41",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.8",
+   "knowledgePoints": [
+    "1.8"
+   ],
+   "source": {
+    "text": "1993 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1993,
+    "region": "全国",
+    "paper": "1993 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f^{\\prime}(x)$ 在 $[0, a]$ 上连续，且 $f(0) = 0$ ，证明：\n$$\n\\left| \\int_ {0} ^ {a} f (x) \\mathrm {d} x \\right| \\leqslant \\frac {M a ^ {2}}{2},\n$$\n其中 $M = \\max_{0\\leqslant x\\leqslant a}\\left|f^{\\prime}(x)\\right|$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "证法一：任取 $x \\in (0, a]$ ，由微分中值定理有\n$$\nf (x) = f (x) - f (0) = f ^ {\\prime} (\\xi) x, \\quad \\xi \\in (0, x).\n$$\n再由定积分的绝对值不等式有\n$$\n\\left| \\int_ {0} ^ {a} f (x) \\mathrm {d} x \\right| = \\left| \\int_ {0} ^ {a} f ^ {\\prime} (\\xi) x \\mathrm {d} x \\right| \\leqslant \\int_ {0} ^ {a} \\left| f ^ {\\prime} (\\xi) \\right| x \\mathrm {d} x \\leqslant M \\int_ {0} ^ {a} x \\mathrm {d} x = \\frac {M a ^ {2}}{2}.\n$$\n证法二：由微积分基本公式及定积分的绝对值不等式有\n$$\n| f (x) | = | f (x) - f (0) | = \\left| \\int_ {0} ^ {x} f ^ {\\prime} (t) \\mathrm {d} t \\right| \\leqslant \\int_ {0} ^ {x} \\left| f ^ {\\prime} (t) \\right| \\mathrm {d} t \\leqslant \\int_ {0} ^ {x} M \\mathrm {d} t = M x.\n$$\n从而由积分的保号性有\n$$\n\\left| \\int_ {0} ^ {a} f (x) \\mathrm {d} x \\right| \\leqslant \\int_ {0} ^ {a} | f (x) | \\mathrm {d} x \\leqslant \\int_ {0} ^ {a} M x \\mathrm {d} x = \\frac {M a ^ {2}}{2}.\n$$",
+   "points": [
+    {
+     "text": "证法一：任取 $x \\in (0, a]$ ，由微分中值定理有\n$$\nf (x) = f (x) - f (0) = f ^ {\\prime} (\\xi) x, \\quad \\xi \\in (0, x).\n$$\n再由定积分的绝对值不等式有\n$$\n\\left| \\int_ {0} ^ {a} f (x) \\mathrm {d} x \\right| = \\left| \\int_ {0} ^ {a} f ^ {\\prime} (\\xi) x \\mathrm {d} x \\right| \\leqslant \\int_ {0} ^ {a} \\left| f ^ {\\prime} (\\xi) \\right| x \\mathrm {d} x \\leqslant M \\int_ {0} ^ {a} x \\mathrm {d} x = \\frac {M a ^ {2}}{2}.\n$$\n证法二：由微积分基本公式及定积分的绝对值不等式有\n$$\n| f (x) | = | f (x) - f (0) | = \\left| \\int_ {0} ^ {x} f ^ {\\prime} (t) \\mathrm {d} t \\right| \\leqslant \\int_ {0} ^ {x} \\left| f ^ {\\prime} (t) \\right| \\mathrm {d} t \\leqslant \\int_ {0} ^ {x} M \\mathrm {d} t = M x.\n$$\n从而由积分的保号性有\n$$\n\\left| \\int_ {0} ^ {a} f (x) \\mathrm {d} x \\right| \\leqslant \\int_ {0} ^ {a} | f (x) | \\mathrm {d} x \\leqslant \\int_ {0} ^ {a} M x \\mathrm {d} x = \\frac {M a ^ {2}}{2}.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n证法一：任取 $x \\in (0, a]$ ，由微分中值定理有\n$$\nf (x) = f (x) - f (0) = f ^ {\\prime} (\\xi) x, \\quad \\xi \\in (0, x).\n$$\n再由定积分的绝对值不等式有\n$$\n\\left| \\int_ {0} ^ {a} f (x) \\mathrm {d} x \\right| = \\left| \\int_ {0} ^ {a} f ^ {\\prime} (\\xi) x \\mathrm {d} x \\right| \\leqslant \\int_ {0} ^ {a} \\left| f ^ {\\prime} (\\xi) \\right| x \\mathrm {d} x \\leqslant M \\int_ {0} ^ {a} x \\mathrm {d} x = \\frac {M a ^ {2}}{2}.\n$$\n证法二：由微积分基本公式及定积分的绝对值不等式有\n$$\n| f (x) | = | f (x) - f (0) | = \\left| \\int_ {0} ^ {x} f ^ {\\prime} (t) \\mathrm {d} t \\right| \\leqslant \\int_ {0} ^ {x} \\left| f ^ {\\prime} (t) \\right| \\mathrm {d} t \\leqslant \\int_ {0} ^ {x} M \\mathrm {d} t = M x.\n$$\n从而由积分的保号性有\n$$\n\\left| \\int_ {0} ^ {a} f (x) \\mathrm {d} x \\right| \\leqslant \\int_ {0} ^ {a} | f (x) | \\mathrm {d} x \\leqslant \\int_ {0} ^ {a} M x \\mathrm {d} x = \\frac {M a ^ {2}}{2}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 115
+  },
+  {
+   "id": "ky2-1994-3-17e37c",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "1994 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1994,
+    "region": "全国",
+    "paper": "1994 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算 $\\lim_{n\\to \\infty}\\tan^n\\left(\\frac{\\pi}{4} +\\frac{2}{n}\\right)$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\mathbf{e}^4$",
+   "points": [
+    {
+     "text": "$\\mathbf{e}^4$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\mathbf{e}^4$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 116
+  },
+  {
+   "id": "ky2-1994-x-30ea14",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.8",
+   "knowledgePoints": [
+    "1.8"
+   ],
+   "source": {
+    "text": "1994 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1994,
+    "region": "全国",
+    "paper": "1994 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x)$ 在 $[0,1]$ 上连续且递减，证明：当 $0 < \\lambda < 1$ 时， $\\int_0^\\lambda f(x)\\mathrm{d}x \\geqslant \\lambda \\int_0^1 f(x)\\mathrm{d}x.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由积分中值定理以及函数的单调性可得\n$$\n\\begin{array}{l} \\int_ {0} ^ {\\lambda} f (x) \\mathrm {d} x - \\lambda \\int_ {0} ^ {1} f (x) \\mathrm {d} x = (1 - \\lambda) \\int_ {0} ^ {\\lambda} f (x) \\mathrm {d} x - \\lambda \\int_ {\\lambda} ^ {1} f (x) \\mathrm {d} x \\\\ = (1 - \\lambda) \\cdot \\lambda f (\\xi_ {1}) - \\lambda \\cdot (1 - \\lambda) f (\\xi_ {2}) \\\\ = \\lambda (1 - \\lambda) [ f (\\xi_ {1}) - f (\\xi_ {2}) ] \\geqslant 0. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "由积分中值定理以及函数的单调性可得\n$$\n\\begin{array}{l} \\int_ {0} ^ {\\lambda} f (x) \\mathrm {d} x - \\lambda \\int_ {0} ^ {1} f (x) \\mathrm {d} x = (1 - \\lambda) \\int_ {0} ^ {\\lambda} f (x) \\mathrm {d} x - \\lambda \\int_ {\\lambda} ^ {1} f (x) \\mathrm {d} x \\\\ = (1 - \\lambda) \\cdot \\lambda f (\\xi_ {1}) - \\lambda \\cdot (1 - \\lambda) f (\\xi_ {2}) \\\\ = \\lambda (1 - \\lambda) [ f (\\xi_ {1}) - f (\\xi_ {2}) ] \\geqslant 0. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由积分中值定理以及函数的单调性可得\n$$\n\\begin{array}{l} \\int_ {0} ^ {\\lambda} f (x) \\mathrm {d} x - \\lambda \\int_ {0} ^ {1} f (x) \\mathrm {d} x = (1 - \\lambda) \\int_ {0} ^ {\\lambda} f (x) \\mathrm {d} x - \\lambda \\int_ {\\lambda} ^ {1} f (x) \\mathrm {d} x \\\\ = (1 - \\lambda) \\cdot \\lambda f (\\xi_ {1}) - \\lambda \\cdot (1 - \\lambda) f (\\xi_ {2}) \\\\ = \\lambda (1 - \\lambda) [ f (\\xi_ {1}) - f (\\xi_ {2}) ] \\geqslant 0. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 117
+  },
+  {
+   "id": "ky2-1995-1-f3cfc0",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "1995 年考研数学三第 1 题",
+    "kind": "exam-original",
+    "year": 1995,
+    "region": "全国",
+    "paper": "1995 年考研数学三",
+    "number": "1",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求 $\\lim_{x \\to 0^{+}} \\frac{1 - \\sqrt{\\cos x}}{x(1 - \\cos \\sqrt{x})}$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\frac{1}{2}$",
+   "points": [
+    {
+     "text": "$\\frac{1}{2}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\frac{1}{2}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 118
+  },
+  {
+   "id": "ky2-1995-4-6c9c21",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.8",
+   "knowledgePoints": [
+    "1.8"
+   ],
+   "source": {
+    "text": "1995 年考研数学三第 4 题",
+    "kind": "exam-original",
+    "year": 1995,
+    "region": "全国",
+    "paper": "1995 年考研数学三",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x) = \\begin{cases} x \\arctan \\frac{1}{x^2}, & x \\neq 0, \\\\ 0, & x = 0, \\end{cases}$ 试讨论 $f'(x)$ 在 $x = 0$ 处的连续性.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$f^{\\prime}(x)$ 在 $x = 0$ 处是连续的",
+   "points": [
+    {
+     "text": "$f^{\\prime}(x)$ 在 $x = 0$ 处是连续的",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$f^{\\prime}(x)$ 在 $x = 0$ 处是连续的",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 119
+  },
+  {
+   "id": "ky2-1995-x-39231e",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "1995 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1995,
+    "region": "全国",
+    "paper": "1995 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $\\lim_{x\\to 0}\\frac{f(x)}{x} = 1$ ，且 $f^{\\prime \\prime}(x) > 0$ ，证明 $f(x)\\geqslant x$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "因为 $f(x)$ 连续且具有一阶导数, 所以由 $\\lim_{x \\to 0} \\frac{f(x)}{x} = 1$ 知 $f(0) = 0$ . 从而有\n$$\nf ^ {\\prime} (0) = \\lim  _ {x \\rightarrow 0} \\frac {f (x) - f (0)}{x - 0} = 1.\n$$\n令 $F(x) = f(x) - x$ ，则 $F(0) = 0, F'(0) = 0.$ 又由 $F''(x) = f''(x) > 0$ 知 $F(0)$ 是 $F(x)$ 的极小值和 $F'(x)$ 单调. 故 $F(x)$ 只有一个驻点，从而 $F(0)$ 是 $F(x)$ 的最小值．因此 $F(x) \\geqslant F(0) = 0$ ，即 $f(x) \\geqslant x$",
+   "points": [
+    {
+     "text": "因为 $f(x)$ 连续且具有一阶导数, 所以由 $\\lim_{x \\to 0} \\frac{f(x)}{x} = 1$ 知 $f(0) = 0$ . 从而有\n$$\nf ^ {\\prime} (0) = \\lim  _ {x \\rightarrow 0} \\frac {f (x) - f (0)}{x - 0} = 1.\n$$\n令 $F(x) = f(x) - x$ ，则 $F(0) = 0, F'(0) = 0.$ 又由 $F''(x) = f''(x) > 0$ 知 $F(0)$ 是 $F(x)$ 的极小值和 $F'(x)$ 单调. 故 $F(x)$ 只有一个驻点，从而 $F(0)$ 是 $F(x)$ 的最小值．因此 $F(x) \\geqslant F(0) = 0$ ，即 $f(x) \\geqslant x$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n因为 $f(x)$ 连续且具有一阶导数, 所以由 $\\lim_{x \\to 0} \\frac{f(x)}{x} = 1$ 知 $f(0) = 0$ . 从而有\n$$\nf ^ {\\prime} (0) = \\lim  _ {x \\rightarrow 0} \\frac {f (x) - f (0)}{x - 0} = 1.\n$$\n令 $F(x) = f(x) - x$ ，则 $F(0) = 0, F'(0) = 0.$ 又由 $F''(x) = f''(x) > 0$ 知 $F(0)$ 是 $F(x)$ 的极小值和 $F'(x)$ 单调. 故 $F(x)$ 只有一个驻点，从而 $F(0)$ 是 $F(x)$ 的最小值．因此 $F(x) \\geqslant F(0) = 0$ ，即 $f(x) \\geqslant x$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 120
+  },
+  {
+   "id": "ky2-1996-x-9945a1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.8",
+   "knowledgePoints": [
+    "1.8"
+   ],
+   "source": {
+    "text": "1996 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1996,
+    "region": "全国",
+    "paper": "1996 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(x) = \\left\\{ \\begin{array}{ll}1 - 2x^2, & x < - 1,\\\\ x^3, & -1\\leqslant x\\leqslant 2,\\\\ 12x - 16, & x > 2. \\end{array} \\right.$\n(I) 写出 $f(x)$ 的反函数 $g(x)$ 的表达式；\n(II) $g(x)$ 是否有间断点、不可导点, 若有, 指出这些点.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) $g(x) = \\begin{cases} -\\sqrt{\\frac{1 - x}{2}}, & x < -1, \\\\ \\sqrt[3]{x}, & -1 \\leqslant x \\leqslant 8, \\\\ \\frac{x + 16}{12}, & x > 8. \\end{cases}$\n(II) $g(x)$ 在 $(- \\infty, + \\infty)$ 处处连续，没有间断点． $g(x)$ 的不可导点是 $x = 0$ 和 $x = -1$ .",
+   "points": [
+    {
+     "text": "(I) $g(x) = \\begin{cases} -\\sqrt{\\frac{1 - x}{2}}, & x < -1, \\\\ \\sqrt[3]{x}, & -1 \\leqslant x \\leqslant 8, \\\\ \\frac{x + 16}{12}, & x > 8. \\end{cases}$\n(II) $g(x)$ 在 $(- \\infty, + \\infty)$ 处处连续，没有间断点． $g(x)$ 的不可导点是 $x = 0$ 和 $x = -1$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) $g(x) = \\begin{cases} -\\sqrt{\\frac{1 - x}{2}}, & x < -1, \\\\ \\sqrt[3]{x}, & -1 \\leqslant x \\leqslant 8, \\\\ \\frac{x + 16}{12}, & x > 8. \\end{cases}$\n(II) $g(x)$ 在 $(- \\infty, + \\infty)$ 处处连续，没有间断点． $g(x)$ 的不可导点是 $x = 0$ 和 $x = -1$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 121
+  },
+  {
+   "id": "ky2-1996-x-aefbb2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.8",
+   "knowledgePoints": [
+    "1.8"
+   ],
+   "source": {
+    "text": "1996 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1996,
+    "region": "全国",
+    "paper": "1996 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x)$ 为连续函数，\n(I) 求初值问题 $\\left\\{ \\begin{array}{l} y' + ay = f(x), \\\\ y|_{x=0} = 0 \\end{array} \\right.$ 的解 $y(x)$ ，其中 $a$ 是正常数.\n(II) 若 $\\left| f(x) \\right| \\leqslant k$ ( $k$ 为常数), 证明: 当 $x \\geqslant 0$ 时, 有 $\\left| y(x) \\right| \\leqslant \\frac{k}{a} (1 - \\mathrm{e}^{-ax})$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) 解为 $y(x) = \\mathrm{e}^{-ax}\\int_{0}^{x}f(t)\\mathrm{e}^{at}\\mathrm{d}t.$\n(II) $|y(x)| \\leqslant \\mathrm{e}^{-ax}\\int_{0}^{x}|f(t)|\\mathrm{e}^{at}\\mathrm{d}t \\leqslant k\\mathrm{e}^{-ax}\\int_{0}^{x}\\mathrm{e}^{at}\\mathrm{d}t = \\frac{k}{a}\\mathrm{e}^{-ax}(\\mathrm{e}^{ax} - 1) = \\frac{k}{a}(1 - \\mathrm{e}^{-ax})$",
+   "points": [
+    {
+     "text": "(I) 解为 $y(x) = \\mathrm{e}^{-ax}\\int_{0}^{x}f(t)\\mathrm{e}^{at}\\mathrm{d}t.$\n(II) $|y(x)| \\leqslant \\mathrm{e}^{-ax}\\int_{0}^{x}|f(t)|\\mathrm{e}^{at}\\mathrm{d}t \\leqslant k\\mathrm{e}^{-ax}\\int_{0}^{x}\\mathrm{e}^{at}\\mathrm{d}t = \\frac{k}{a}\\mathrm{e}^{-ax}(\\mathrm{e}^{ax} - 1) = \\frac{k}{a}(1 - \\mathrm{e}^{-ax})$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) 解为 $y(x) = \\mathrm{e}^{-ax}\\int_{0}^{x}f(t)\\mathrm{e}^{at}\\mathrm{d}t.$\n(II) $|y(x)| \\leqslant \\mathrm{e}^{-ax}\\int_{0}^{x}|f(t)|\\mathrm{e}^{at}\\mathrm{d}t \\leqslant k\\mathrm{e}^{-ax}\\int_{0}^{x}\\mathrm{e}^{at}\\mathrm{d}t = \\frac{k}{a}\\mathrm{e}^{-ax}(\\mathrm{e}^{ax} - 1) = \\frac{k}{a}(1 - \\mathrm{e}^{-ax})$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 122
+  },
+  {
+   "id": "ky2-1997-1-4e7e18",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "1997 年考研数学二第 1 题",
+    "kind": "exam-original",
+    "year": 1997,
+    "region": "全国",
+    "paper": "1997 年考研数学二",
+    "number": "1",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求极限 $\\lim_{x \\to -\\infty} \\frac{\\sqrt{4x^2 + x - 1} + x + 1}{\\sqrt{x^2 + \\sin x}}$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "极限等于 1.",
+   "points": [
+    {
+     "text": "极限等于 1.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n极限等于 1.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 123
+  },
+  {
+   "id": "ky2-1997-x-217e08",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "1997 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 1997,
+    "region": "全国",
+    "paper": "1997 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "已知函数 $f(x)$ 连续，且 $\\lim_{x\\to 0}\\frac{f(x)}{x} = 2$ ，设 $\\varphi (x) = \\int_0^1 f(xt)\\mathrm{d}t$ ，求 $\\varphi^{\\prime}(x)$ 并讨论 $\\varphi '(x)$ 在 $x = 0$ 处的连续性.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由题设 $\\lim_{x\\to 0}\\frac{f(x)}{x} = 2$ 知 $f(0) = 0, f'(0) = 2$ ，且有 $\\varphi (0) = 0$ 当 $x\\neq 0$ 时有\n$$\n\\varphi (x) = \\int_ {0} ^ {1} f (x t) d t = \\frac {\\int_ {0} ^ {x} f (u) d u}{x} \\Rightarrow \\varphi^ {\\prime} (x) = \\frac {x f (x) - \\int_ {0} ^ {x} f (u) d u}{x ^ {2}},\n$$\n当 $x = 0$ 时有\n$$\n\\varphi^ {\\prime} (0) = \\lim  _ {x \\rightarrow 0} \\frac {\\varphi (x) - \\varphi (0)}{x} = \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} f (u) \\mathrm {d} u}{x ^ {2}} = \\lim  _ {x \\rightarrow 0} \\frac {f (x)}{2 x} = 1.\n$$\n从而\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0} \\varphi^ {\\prime} (x) = \\lim  _ {x \\rightarrow 0} \\frac {x f (x) - \\int_ {0} ^ {x} f (u) \\mathrm {d} u}{x ^ {2}} = \\lim  _ {x \\rightarrow 0} \\frac {f (x)}{x} - \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} f (u) \\mathrm {d} u}{x ^ {2}} \\\\ = 2 - 1 = 1 = \\varphi^ {\\prime} (0), \\\\ \\end{array}\n$$\n即 $\\varphi^{\\prime}(x)$ 在 $x = 0$ 处连续",
+   "points": [
+    {
+     "text": "由题设 $\\lim_{x\\to 0}\\frac{f(x)}{x} = 2$ 知 $f(0) = 0, f'(0) = 2$ ，且有 $\\varphi (0) = 0$ 当 $x\\neq 0$ 时有\n$$\n\\varphi (x) = \\int_ {0} ^ {1} f (x t) d t = \\frac {\\int_ {0} ^ {x} f (u) d u}{x} \\Rightarrow \\varphi^ {\\prime} (x) = \\frac {x f (x) - \\int_ {0} ^ {x} f (u) d u}{x ^ {2}},\n$$\n当 $x = 0$ 时有\n$$\n\\varphi^ {\\prime} (0) = \\lim  _ {x \\rightarrow 0} \\frac {\\varphi (x) - \\varphi (0)}{x} = \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} f (u) \\mathrm {d} u}{x ^ {2}} = \\lim  _ {x \\rightarrow 0} \\frac {f (x)}{2 x} = 1.\n$$\n从而\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0} \\varphi^ {\\prime} (x) = \\lim  _ {x \\rightarrow 0} \\frac {x f (x) - \\int_ {0} ^ {x} f (u) \\mathrm {d} u}{x ^ {2}} = \\lim  _ {x \\rightarrow 0} \\frac {f (x)}{x} - \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} f (u) \\mathrm {d} u}{x ^ {2}} \\\\ = 2 - 1 = 1 = \\varphi^ {\\prime} (0), \\\\ \\end{array}\n$$\n即 $\\varphi^{\\prime}(x)$ 在 $x = 0$ 处连续",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由题设 $\\lim_{x\\to 0}\\frac{f(x)}{x} = 2$ 知 $f(0) = 0, f'(0) = 2$ ，且有 $\\varphi (0) = 0$ 当 $x\\neq 0$ 时有\n$$\n\\varphi (x) = \\int_ {0} ^ {1} f (x t) d t = \\frac {\\int_ {0} ^ {x} f (u) d u}{x} \\Rightarrow \\varphi^ {\\prime} (x) = \\frac {x f (x) - \\int_ {0} ^ {x} f (u) d u}{x ^ {2}},\n$$\n当 $x = 0$ 时有\n$$\n\\varphi^ {\\prime} (0) = \\lim  _ {x \\rightarrow 0} \\frac {\\varphi (x) - \\varphi (0)}{x} = \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} f (u) \\mathrm {d} u}{x ^ {2}} = \\lim  _ {x \\rightarrow 0} \\frac {f (x)}{2 x} = 1.\n$$\n从而\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0} \\varphi^ {\\prime} (x) = \\lim  _ {x \\rightarrow 0} \\frac {x f (x) - \\int_ {0} ^ {x} f (u) \\mathrm {d} u}{x ^ {2}} = \\lim  _ {x \\rightarrow 0} \\frac {f (x)}{x} - \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} f (u) \\mathrm {d} u}{x ^ {2}} \\\\ = 2 - 1 = 1 = \\varphi^ {\\prime} (0), \\\\ \\end{array}\n$$\n即 $\\varphi^{\\prime}(x)$ 在 $x = 0$ 处连续",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 124
+  },
+  {
+   "id": "ky2-1998-x-ee2cf9",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.8",
+   "knowledgePoints": [
+    "1.8"
+   ],
+   "source": {
+    "text": "1998 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 1998,
+    "region": "全国",
+    "paper": "1998 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求函数 $f(x) = (1 + x)^{\\frac{x}{\\tan(x - \\pi / 4)}}$ ．在区间 $(0,2\\pi)$ 内的间断点，并判断其类型.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$f(x)$ 在区间 $(0, 2\\pi)$ 内有第二类间断点 $\\frac{\\pi}{4}$ 和 $\\frac{5\\pi}{4}$ , 第一类 (可去) 间断点 $\\frac{3\\pi}{4}$ 和 $\\frac{7\\pi}{4}$ .",
+   "points": [
+    {
+     "text": "$f(x)$ 在区间 $(0, 2\\pi)$ 内有第二类间断点 $\\frac{\\pi}{4}$ 和 $\\frac{5\\pi}{4}$ , 第一类 (可去) 间断点 $\\frac{3\\pi}{4}$ 和 $\\frac{7\\pi}{4}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$f(x)$ 在区间 $(0, 2\\pi)$ 内有第二类间断点 $\\frac{\\pi}{4}$ 和 $\\frac{5\\pi}{4}$ , 第一类 (可去) 间断点 $\\frac{3\\pi}{4}$ 和 $\\frac{7\\pi}{4}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 125
+  },
+  {
+   "id": "ky2-1998-x-f0e45e",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "1998 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 1998,
+    "region": "全国",
+    "paper": "1998 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "确定常数 $a, b, c$ 的值，使 $\\lim_{x \\to 0} \\frac{ax - \\sin x}{\\int_{b}^{x} \\frac{\\ln(1 + t^3)}{t} \\mathrm{d}t} = c (c \\neq 0)$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$a = 1, b = 0, c = \\frac{1}{2}$ .",
+   "points": [
+    {
+     "text": "$a = 1, b = 0, c = \\frac{1}{2}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$a = 1, b = 0, c = \\frac{1}{2}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 126
+  },
+  {
+   "id": "ky2-1999-x-c5bfea",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "1999 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 1999,
+    "region": "全国",
+    "paper": "1999 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求 $\\lim_{x\\to 0}\\frac{\\sqrt{1 + \\tan{x}} - \\sqrt{1 + \\sin{x}}}{x\\ln(1 + x) - x^2}.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "先作恒等变形, 再利用等价无穷小量代换和洛必达法则:\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0} \\frac {\\sqrt {1 + \\tan x} - \\sqrt {1 + \\sin x}}{x \\ln (1 + x) - x ^ {2}} = \\lim  _ {x \\rightarrow 0} \\frac {(\\sqrt {1 + \\tan x} - \\sqrt {1 + \\sin x}) (\\sqrt {1 + \\tan x} + \\sqrt {1 + \\sin x})}{(x \\ln (1 + x) - x ^ {2}) (\\sqrt {1 + \\tan x} + \\sqrt {1 + \\sin x})} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {\\tan x - \\sin x}{x (\\ln (1 + x) - x) \\cdot 2} = \\lim  _ {x \\rightarrow 0} \\frac {\\tan x (1 - \\cos x)}{2 x (\\ln (1 + x) - x)} \\\\ = \\frac {1}{2} \\lim  _ {x \\rightarrow 0} \\frac {1 - \\cos x}{\\ln (1 + x) - x} = \\frac {1}{2} \\lim  _ {x \\rightarrow 0} \\frac {x ^ {2} / 2}{\\ln (1 + x) - x} \\\\ = \\frac {1}{2} \\lim  _ {x \\rightarrow 0} \\frac {x}{- x / (1 + x)} = \\frac {1}{2} \\lim  _ {x \\rightarrow 0} \\frac {- 1}{1 + x} = - \\frac {1}{2}. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "先作恒等变形, 再利用等价无穷小量代换和洛必达法则:\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0} \\frac {\\sqrt {1 + \\tan x} - \\sqrt {1 + \\sin x}}{x \\ln (1 + x) - x ^ {2}} = \\lim  _ {x \\rightarrow 0} \\frac {(\\sqrt {1 + \\tan x} - \\sqrt {1 + \\sin x}) (\\sqrt {1 + \\tan x} + \\sqrt {1 + \\sin x})}{(x \\ln (1 + x) - x ^ {2}) (\\sqrt {1 + \\tan x} + \\sqrt {1 + \\sin x})} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {\\tan x - \\sin x}{x (\\ln (1 + x) - x) \\cdot 2} = \\lim  _ {x \\rightarrow 0} \\frac {\\tan x (1 - \\cos x)}{2 x (\\ln (1 + x) - x)} \\\\ = \\frac {1}{2} \\lim  _ {x \\rightarrow 0} \\frac {1 - \\cos x}{\\ln (1 + x) - x} = \\frac {1}{2} \\lim  _ {x \\rightarrow 0} \\frac {x ^ {2} / 2}{\\ln (1 + x) - x} \\\\ = \\frac {1}{2} \\lim  _ {x \\rightarrow 0} \\frac {x}{- x / (1 + x)} = \\frac {1}{2} \\lim  _ {x \\rightarrow 0} \\frac {- 1}{1 + x} = - \\frac {1}{2}. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n先作恒等变形, 再利用等价无穷小量代换和洛必达法则:\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0} \\frac {\\sqrt {1 + \\tan x} - \\sqrt {1 + \\sin x}}{x \\ln (1 + x) - x ^ {2}} = \\lim  _ {x \\rightarrow 0} \\frac {(\\sqrt {1 + \\tan x} - \\sqrt {1 + \\sin x}) (\\sqrt {1 + \\tan x} + \\sqrt {1 + \\sin x})}{(x \\ln (1 + x) - x ^ {2}) (\\sqrt {1 + \\tan x} + \\sqrt {1 + \\sin x})} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {\\tan x - \\sin x}{x (\\ln (1 + x) - x) \\cdot 2} = \\lim  _ {x \\rightarrow 0} \\frac {\\tan x (1 - \\cos x)}{2 x (\\ln (1 + x) - x)} \\\\ = \\frac {1}{2} \\lim  _ {x \\rightarrow 0} \\frac {1 - \\cos x}{\\ln (1 + x) - x} = \\frac {1}{2} \\lim  _ {x \\rightarrow 0} \\frac {x ^ {2} / 2}{\\ln (1 + x) - x} \\\\ = \\frac {1}{2} \\lim  _ {x \\rightarrow 0} \\frac {x}{- x / (1 + x)} = \\frac {1}{2} \\lim  _ {x \\rightarrow 0} \\frac {- 1}{1 + x} = - \\frac {1}{2}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 127
+  },
+  {
+   "id": "ky2-2000-x-6ffea4",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2000 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2000,
+    "region": "全国",
+    "paper": "2000 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $S(x) = \\int_0^x |\\cos t|\\mathrm{d}t,$\n(I) 当 $n$ 为正整数，且 $n\\pi \\leqslant x \\leqslant (n + 1)\\pi$ 时，证明 $2n \\leqslant S(x) < 2(n + 1)$\n(II) 求 $\\lim_{x\\to +\\infty}\\frac{S(x)}{x}.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) 因为 $|\\cos x| \\geqslant 0$ , 且 $n\\pi \\leqslant x < (n + 1)\\pi$ , 所以\n$$\n\\int_ {0} ^ {n \\pi} | \\cos x | d x \\leqslant \\int_ {0} ^ {x} | \\cos x | d x <   \\int_ {0} ^ {(n + 1) \\pi} | \\cos x | d x.\n$$\n又因为 $|\\cos x|$ 具有周期 $\\pi$ , 在长度为 $\\pi$ 的积分区间上的积分均相等, 所以\n$$\n\\int_ {0} ^ {n \\pi} | \\cos x | \\mathrm {d} x = n \\int_ {0} ^ {\\pi} | \\cos x | \\mathrm {d} x = 2 n, \\quad \\int_ {0} ^ {(n + 1) \\pi} | \\cos x | \\mathrm {d} x = 2 (n + 1).\n$$\n所以当 $n\\pi \\leqslant x < (n + 1)\\pi$ 时 $2n \\leqslant \\int_{0}^{x} |\\cos x| \\, \\mathrm{d}x < 2(n + 1)$ ，即 $2n \\leqslant S(x) < 2(n + 1)$ .\n(II) 由 (1) 有, 当 $n\\pi \\leqslant x \\leqslant (n + 1)\\pi$ 时, $\\frac{2n}{(n + 1)\\pi} < \\frac{S(x)}{x} < \\frac{2(n + 1)}{n\\pi}$ . 而\n$$\n\\lim  _ {n \\rightarrow \\infty} \\frac {2 n}{(n + 1) \\pi} = \\lim  _ {n \\rightarrow \\infty} \\frac {2}{(1 + \\frac {1}{n}) \\pi} = \\frac {2}{\\pi}, \\quad \\lim  _ {n \\rightarrow \\infty} \\frac {2 (n + 1)}{n \\pi} = \\lim  _ {n \\rightarrow \\infty} \\frac {2 (1 + \\frac {1}{n})}{\\pi} = \\frac {2}{\\pi},\n$$\n由极限存在准则1，得到 $\\lim_{x\\to \\infty}\\frac{S(x)}{x} = \\frac{2}{\\pi}.$",
+   "points": [
+    {
+     "text": "(I) 因为 $|\\cos x| \\geqslant 0$ , 且 $n\\pi \\leqslant x < (n + 1)\\pi$ , 所以\n$$\n\\int_ {0} ^ {n \\pi} | \\cos x | d x \\leqslant \\int_ {0} ^ {x} | \\cos x | d x <   \\int_ {0} ^ {(n + 1) \\pi} | \\cos x | d x.\n$$\n又因为 $|\\cos x|$ 具有周期 $\\pi$ , 在长度为 $\\pi$ 的积分区间上的积分均相等, 所以\n$$\n\\int_ {0} ^ {n \\pi} | \\cos x | \\mathrm {d} x = n \\int_ {0} ^ {\\pi} | \\cos x | \\mathrm {d} x = 2 n, \\quad \\int_ {0} ^ {(n + 1) \\pi} | \\cos x | \\mathrm {d} x = 2 (n + 1).\n$$\n所以当 $n\\pi \\leqslant x < (n + 1)\\pi$ 时 $2n \\leqslant \\int_{0}^{x} |\\cos x| \\, \\mathrm{d}x < 2(n + 1)$ ，即 $2n \\leqslant S(x) < 2(n + 1)$ .\n(II) 由 (1) 有, 当 $n\\pi \\leqslant x \\leqslant (n + 1)\\pi$ 时, $\\frac{2n}{(n + 1)\\pi} < \\frac{S(x)}{x} < \\frac{2(n + 1)}{n\\pi}$ . 而\n$$\n\\lim  _ {n \\rightarrow \\infty} \\frac {2 n}{(n + 1) \\pi} = \\lim  _ {n \\rightarrow \\infty} \\frac {2}{(1 + \\frac {1}{n}) \\pi} = \\frac {2}{\\pi}, \\quad \\lim  _ {n \\rightarrow \\infty} \\frac {2 (n + 1)}{n \\pi} = \\lim  _ {n \\rightarrow \\infty} \\frac {2 (1 + \\frac {1}{n})}{\\pi} = \\frac {2}{\\pi},\n$$\n由极限存在准则1，得到 $\\lim_{x\\to \\infty}\\frac{S(x)}{x} = \\frac{2}{\\pi}.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) 因为 $|\\cos x| \\geqslant 0$ , 且 $n\\pi \\leqslant x < (n + 1)\\pi$ , 所以\n$$\n\\int_ {0} ^ {n \\pi} | \\cos x | d x \\leqslant \\int_ {0} ^ {x} | \\cos x | d x <   \\int_ {0} ^ {(n + 1) \\pi} | \\cos x | d x.\n$$\n又因为 $|\\cos x|$ 具有周期 $\\pi$ , 在长度为 $\\pi$ 的积分区间上的积分均相等, 所以\n$$\n\\int_ {0} ^ {n \\pi} | \\cos x | \\mathrm {d} x = n \\int_ {0} ^ {\\pi} | \\cos x | \\mathrm {d} x = 2 n, \\quad \\int_ {0} ^ {(n + 1) \\pi} | \\cos x | \\mathrm {d} x = 2 (n + 1).\n$$\n所以当 $n\\pi \\leqslant x < (n + 1)\\pi$ 时 $2n \\leqslant \\int_{0}^{x} |\\cos x| \\, \\mathrm{d}x < 2(n + 1)$ ，即 $2n \\leqslant S(x) < 2(n + 1)$ .\n(II) 由 (1) 有, 当 $n\\pi \\leqslant x \\leqslant (n + 1)\\pi$ 时, $\\frac{2n}{(n + 1)\\pi} < \\frac{S(x)}{x} < \\frac{2(n + 1)}{n\\pi}$ . 而\n$$\n\\lim  _ {n \\rightarrow \\infty} \\frac {2 n}{(n + 1) \\pi} = \\lim  _ {n \\rightarrow \\infty} \\frac {2}{(1 + \\frac {1}{n}) \\pi} = \\frac {2}{\\pi}, \\quad \\lim  _ {n \\rightarrow \\infty} \\frac {2 (n + 1)}{n \\pi} = \\lim  _ {n \\rightarrow \\infty} \\frac {2 (1 + \\frac {1}{n})}{\\pi} = \\frac {2}{\\pi},\n$$\n由极限存在准则1，得到 $\\lim_{x\\to \\infty}\\frac{S(x)}{x} = \\frac{2}{\\pi}.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 128
+  },
+  {
+   "id": "ky2-2000-x-92f1de",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2000 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2000,
+    "region": "全国",
+    "paper": "2000 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "已知 $f(x)$ 是周期为 5 的连续函数, 它在 $x = 0$ 的某个邻域内满足关系式\n$$\nf (1 + \\sin x) - 3 f (1 - \\sin x) = 8 x + \\alpha (x),\n$$\n其中 $\\alpha(x)$ 是当 $x \\to 0$ 时比 $x$ 高阶的无穷小，且 $f(x)$ 在 $x = 1$ 处可导，求曲线 $y = f(x)$ 在点 $(6, f(6))$ 处的切线方程.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "将 $f(1 + \\sin x) - 3f(1 - \\sin x) = 8x + \\alpha(x)$ 两边令 $x \\to 0$ 取极限, 由 $f$ 的连续性得\n$$\nf (1) - 3 f (1) = \\lim  _ {x \\rightarrow 0} (8 x + a (x)) = 0 \\quad \\Rightarrow \\quad f (6) = f (1) = 0.\n$$\n又由原设 $f(x)$ 在 $x = 1$ 处可导，两边同除 $\\sin x$\n$$\n\\lim  _ {x \\rightarrow 0} \\frac {f (1 + \\sin x) - f (1)}{\\sin x} + 3 \\lim  _ {x \\rightarrow 0} \\frac {f (1 - \\sin x) - f (1)}{- \\sin x} = \\lim  _ {x \\rightarrow 0} \\frac {8 x}{\\sin x} + \\lim  _ {x \\rightarrow 0} \\frac {\\alpha (x)}{\\sin x}.\n$$\n根据导数的定义，得\n$$\nf ^ {\\prime} (1) + 3 f ^ {\\prime} (1) = \\lim  _ {x \\rightarrow 0} \\frac {8 x}{x} \\cdot \\frac {x}{\\sin x} + \\lim  _ {x \\rightarrow 0} \\frac {\\alpha (x)}{x} \\cdot \\frac {x}{\\sin x} = 8 \\quad \\Rightarrow \\quad f ^ {\\prime} (1) = 2.\n$$\n所以 $f^{\\prime}(6) = f^{\\prime}(1) = 2$ ，从而切线方程为\n$$\n(y - f (6)) = f ^ {\\prime} (6) (x - 6) \\Rightarrow 2 x - y - 1 2 = 0.\n$$",
+   "points": [
+    {
+     "text": "将 $f(1 + \\sin x) - 3f(1 - \\sin x) = 8x + \\alpha(x)$ 两边令 $x \\to 0$ 取极限, 由 $f$ 的连续性得\n$$\nf (1) - 3 f (1) = \\lim  _ {x \\rightarrow 0} (8 x + a (x)) = 0 \\quad \\Rightarrow \\quad f (6) = f (1) = 0.\n$$\n又由原设 $f(x)$ 在 $x = 1$ 处可导，两边同除 $\\sin x$\n$$\n\\lim  _ {x \\rightarrow 0} \\frac {f (1 + \\sin x) - f (1)}{\\sin x} + 3 \\lim  _ {x \\rightarrow 0} \\frac {f (1 - \\sin x) - f (1)}{- \\sin x} = \\lim  _ {x \\rightarrow 0} \\frac {8 x}{\\sin x} + \\lim  _ {x \\rightarrow 0} \\frac {\\alpha (x)}{\\sin x}.\n$$\n根据导数的定义，得\n$$\nf ^ {\\prime} (1) + 3 f ^ {\\prime} (1) = \\lim  _ {x \\rightarrow 0} \\frac {8 x}{x} \\cdot \\frac {x}{\\sin x} + \\lim  _ {x \\rightarrow 0} \\frac {\\alpha (x)}{x} \\cdot \\frac {x}{\\sin x} = 8 \\quad \\Rightarrow \\quad f ^ {\\prime} (1) = 2.\n$$\n所以 $f^{\\prime}(6) = f^{\\prime}(1) = 2$ ，从而切线方程为\n$$\n(y - f (6)) = f ^ {\\prime} (6) (x - 6) \\Rightarrow 2 x - y - 1 2 = 0.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n将 $f(1 + \\sin x) - 3f(1 - \\sin x) = 8x + \\alpha(x)$ 两边令 $x \\to 0$ 取极限, 由 $f$ 的连续性得\n$$\nf (1) - 3 f (1) = \\lim  _ {x \\rightarrow 0} (8 x + a (x)) = 0 \\quad \\Rightarrow \\quad f (6) = f (1) = 0.\n$$\n又由原设 $f(x)$ 在 $x = 1$ 处可导，两边同除 $\\sin x$\n$$\n\\lim  _ {x \\rightarrow 0} \\frac {f (1 + \\sin x) - f (1)}{\\sin x} + 3 \\lim  _ {x \\rightarrow 0} \\frac {f (1 - \\sin x) - f (1)}{- \\sin x} = \\lim  _ {x \\rightarrow 0} \\frac {8 x}{\\sin x} + \\lim  _ {x \\rightarrow 0} \\frac {\\alpha (x)}{\\sin x}.\n$$\n根据导数的定义，得\n$$\nf ^ {\\prime} (1) + 3 f ^ {\\prime} (1) = \\lim  _ {x \\rightarrow 0} \\frac {8 x}{x} \\cdot \\frac {x}{\\sin x} + \\lim  _ {x \\rightarrow 0} \\frac {\\alpha (x)}{x} \\cdot \\frac {x}{\\sin x} = 8 \\quad \\Rightarrow \\quad f ^ {\\prime} (1) = 2.\n$$\n所以 $f^{\\prime}(6) = f^{\\prime}(1) = 2$ ，从而切线方程为\n$$\n(y - f (6)) = f ^ {\\prime} (6) (x - 6) \\Rightarrow 2 x - y - 1 2 = 0.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 129
+  },
+  {
+   "id": "ky2-2001-x-ec8aae",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2001 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2001,
+    "region": "全国",
+    "paper": "2001 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求极限 $\\lim_{t\\to x}\\left(\\frac{\\sin t}{\\sin x}\\right)^{\\frac{x}{\\sin t - \\sin x}}$ ，记此极限为 $f(x)$ ，求函数 $f(x)$ 的间断点并指出其类型.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由于 $f(x) = \\exp \\left(\\lim_{t\\to x}\\frac{x}{\\sin t - \\sin x}\\ln \\left(\\frac{\\sin t}{\\sin x}\\right)\\right)$ ，而\n$$\n\\begin{array}{l} \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin t - \\sin x} \\ln \\left(\\frac {\\sin t}{\\sin x}\\right) = \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin t - \\sin x} \\ln \\left(1 + \\frac {\\sin t}{\\sin x} - 1\\right) \\\\ = \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin t - \\sin x} \\ln \\left(1 + \\frac {\\sin t - \\sin x}{\\sin x}\\right) \\\\ = \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin t - \\sin x} \\left(\\frac {\\sin t - \\sin x}{\\sin x}\\right) = \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin x} = \\frac {x}{\\sin x}, \\\\ \\end{array}\n$$\n所以 $f(x) = \\exp \\left(\\frac{x}{\\sin x}\\right)$ . 它的间断点为 $x \\neq k\\pi, k = 0, \\pm 1, \\pm 2, \\dots$ 当 $x \\to 0$ 时， $\\lim_{x \\to 0} f(x) = e$ ，所以 $x = 0$ 为 $f(x)$ 的第一类（或可去）间断点；对于非零整数 $k$ ，当 $k$ 为奇数时 $\\lim_{x \\to k\\pi^{-}} f(x) = +\\infty$ ，当 $k$ 为偶数时 $\\lim_{x \\to k\\pi^{+}} f(x) = +\\infty$ 。故 $x = k\\pi, k = \\pm 1, \\pm 2, \\dots$ 为 $f(x)$ 的第二类（或无穷）间断点.",
+   "points": [
+    {
+     "text": "由于 $f(x) = \\exp \\left(\\lim_{t\\to x}\\frac{x}{\\sin t - \\sin x}\\ln \\left(\\frac{\\sin t}{\\sin x}\\right)\\right)$ ，而\n$$\n\\begin{array}{l} \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin t - \\sin x} \\ln \\left(\\frac {\\sin t}{\\sin x}\\right) = \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin t - \\sin x} \\ln \\left(1 + \\frac {\\sin t}{\\sin x} - 1\\right) \\\\ = \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin t - \\sin x} \\ln \\left(1 + \\frac {\\sin t - \\sin x}{\\sin x}\\right) \\\\ = \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin t - \\sin x} \\left(\\frac {\\sin t - \\sin x}{\\sin x}\\right) = \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin x} = \\frac {x}{\\sin x}, \\\\ \\end{array}\n$$\n所以 $f(x) = \\exp \\left(\\frac{x}{\\sin x}\\right)$ . 它的间断点为 $x \\neq k\\pi, k = 0, \\pm 1, \\pm 2, \\dots$ 当 $x \\to 0$ 时， $\\lim_{x \\to 0} f(x) = e$ ，所以 $x = 0$ 为 $f(x)$ 的第一类（或可去）间断点；",
+     "partial": 2
+    },
+    {
+     "text": "对于非零整数 $k$ ，当 $k$ 为奇数时 $\\lim_{x \\to k\\pi^{-}} f(x) = +\\infty$ ，当 $k$ 为偶数时 $\\lim_{x \\to k\\pi^{+}} f(x) = +\\infty$ 。",
+     "partial": 2
+    },
+    {
+     "text": "故 $x = k\\pi, k = \\pm 1, \\pm 2, \\dots$ 为 $f(x)$ 的第二类（或无穷）间断点.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由于 $f(x) = \\exp \\left(\\lim_{t\\to x}\\frac{x}{\\sin t - \\sin x}\\ln \\left(\\frac{\\sin t}{\\sin x}\\right)\\right)$ ，而\n$$\n\\begin{array}{l} \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin t - \\sin x} \\ln \\left(\\frac {\\sin t}{\\sin x}\\right) = \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin t - \\sin x} \\ln \\left(1 + \\frac {\\sin t}{\\sin x} - 1\\right) \\\\ = \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin t - \\sin x} \\ln \\left(1 + \\frac {\\sin t - \\sin x}{\\sin x}\\right) \\\\ = \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin t - \\sin x} \\left(\\frac {\\sin t - \\sin x}{\\sin x}\\right) = \\lim  _ {t \\rightarrow x} \\frac {x}{\\sin x} = \\frac {x}{\\sin x}, \\\\ \\end{array}\n$$\n所以 $f(x) = \\exp \\left(\\frac{x}{\\sin x}\\right)$ . 它的间断点为 $x \\neq k\\pi, k = 0, \\pm 1, \\pm 2, \\dots$ 当 $x \\to 0$ 时， $\\lim_{x \\to 0} f(x) = e$ ，所以 $x = 0$ 为 $f(x)$ 的第一类（或可去）间断点；对于非零整数 $k$ ，当 $k$ 为奇数时 $\\lim_{x \\to k\\pi^{-}} f(x) = +\\infty$ ，当 $k$ 为偶数时 $\\lim_{x \\to k\\pi^{+}} f(x) = +\\infty$ 。故 $x = k\\pi, k = \\pm 1, \\pm 2, \\dots$ 为 $f(x)$ 的第二类（或无穷）间断点.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 130
+  },
+  {
+   "id": "ky2-2002-x-686e03",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2002 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2002,
+    "region": "全国",
+    "paper": "2002 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "已知函数 $f(x)$ 在 $(0, +\\infty)$ 内可导 $f(x) > 0$ ， $\\lim_{x \\to +\\infty} f(x) = 1$ ，且满足\n$$\n\\lim _ {h \\rightarrow 0} \\left(\\frac {f (x + h x)}{f (x)}\\right) ^ {\\frac {1}{h}} = \\mathrm {e} ^ {\\frac {1}{x}},\n$$\n求 $f(x)$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "当 $x \\neq 0$ 时,\n$$\n\\begin{array}{l} \\lim  _ {h \\rightarrow 0} \\frac {1}{h} \\ln \\left(\\frac {f (x + h x)}{f (x)}\\right) = \\lim  _ {h \\rightarrow 0} \\frac {1}{h} (\\ln f (x + h x) - \\ln f (x)) \\\\ = x \\lim  _ {h \\rightarrow 0} \\frac {\\ln f (x + h x) - \\ln f (x)}{h x} = x [ \\ln f (x) ] ^ {\\prime} = \\frac {x f ^ {\\prime} (x)}{f (x)}, \\\\ \\end{array}\n$$\n从而得到\n$$\n\\mathrm {e} ^ {\\frac {1}{x}} = \\lim  _ {h \\rightarrow 0} \\left(\\frac {f (x + h x)}{f (x)}\\right) ^ {\\frac {1}{h}} = \\exp \\left(\\lim  _ {h \\rightarrow 0} \\frac {1}{h} \\ln \\left(\\frac {f (x + h x)}{f (x)}\\right)\\right) = \\exp \\left(\\frac {x f ^ {\\prime} (x)}{f (x)}\\right).\n$$\n于是推得\n$$\n\\frac {x f ^ {\\prime} (x)}{f (x)} = x [ \\ln f (x) ] ^ {\\prime} = \\frac {1}{x} \\Rightarrow [ \\ln f (x) ] ^ {\\prime} = \\frac {1}{x ^ {2}}.\n$$\n解此微分方程，得到 $\\ln f(x) = -\\frac{1}{x} + C_1$ 。整理得 $f(x) = C \\mathrm{e}^{-\\frac{1}{x}}$ 。再利用条件 $\\lim_{x \\to +\\infty} f(x) = C = 1$ ，求得 $f(x) = \\mathrm{e}^{-\\frac{1}{x}}$ 。",
+   "points": [
+    {
+     "text": "当 $x \\neq 0$ 时,\n$$\n\\begin{array}{l} \\lim  _ {h \\rightarrow 0} \\frac {1}{h} \\ln \\left(\\frac {f (x + h x)}{f (x)}\\right) = \\lim  _ {h \\rightarrow 0} \\frac {1}{h} (\\ln f (x + h x) - \\ln f (x)) \\\\ = x \\lim  _ {h \\rightarrow 0} \\frac {\\ln f (x + h x) - \\ln f (x)}{h x} = x [ \\ln f (x) ] ^ {\\prime} = \\frac {x f ^ {\\prime} (x)}{f (x)}, \\\\ \\end{array}\n$$\n从而得到\n$$\n\\mathrm {e} ^ {\\frac {1}{x}} = \\lim  _ {h \\rightarrow 0} \\left(\\frac {f (x + h x)}{f (x)}\\right) ^ {\\frac {1}{h}} = \\exp \\left(\\lim  _ {h \\rightarrow 0} \\frac {1}{h} \\ln \\left(\\frac {f (x + h x)}{f (x)}\\right)\\right) = \\exp \\left(\\frac {x f ^ {\\prime} (x)}{f (x)}\\right).\n$$\n于是推得\n$$\n\\frac {x f ^ {\\prime} (x)}{f (x)} = x [ \\ln f (x) ] ^ {\\prime} = \\frac {1}{x} \\Rightarrow [ \\ln f (x) ] ^ {\\prime} = \\frac {1}{x ^ {2}}.\n$$\n解此微分方程，得到 $\\ln f(x) = -\\frac{1}{x} + C_1$ 。",
+     "partial": 2
+    },
+    {
+     "text": "整理得 $f(x) = C \\mathrm{e}^{-\\frac{1}{x}}$ 。",
+     "partial": 2
+    },
+    {
+     "text": "再利用条件 $\\lim_{x \\to +\\infty} f(x) = C = 1$ ，求得 $f(x) = \\mathrm{e}^{-\\frac{1}{x}}$ 。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n当 $x \\neq 0$ 时,\n$$\n\\begin{array}{l} \\lim  _ {h \\rightarrow 0} \\frac {1}{h} \\ln \\left(\\frac {f (x + h x)}{f (x)}\\right) = \\lim  _ {h \\rightarrow 0} \\frac {1}{h} (\\ln f (x + h x) - \\ln f (x)) \\\\ = x \\lim  _ {h \\rightarrow 0} \\frac {\\ln f (x + h x) - \\ln f (x)}{h x} = x [ \\ln f (x) ] ^ {\\prime} = \\frac {x f ^ {\\prime} (x)}{f (x)}, \\\\ \\end{array}\n$$\n从而得到\n$$\n\\mathrm {e} ^ {\\frac {1}{x}} = \\lim  _ {h \\rightarrow 0} \\left(\\frac {f (x + h x)}{f (x)}\\right) ^ {\\frac {1}{h}} = \\exp \\left(\\lim  _ {h \\rightarrow 0} \\frac {1}{h} \\ln \\left(\\frac {f (x + h x)}{f (x)}\\right)\\right) = \\exp \\left(\\frac {x f ^ {\\prime} (x)}{f (x)}\\right).\n$$\n于是推得\n$$\n\\frac {x f ^ {\\prime} (x)}{f (x)} = x [ \\ln f (x) ] ^ {\\prime} = \\frac {1}{x} \\Rightarrow [ \\ln f (x) ] ^ {\\prime} = \\frac {1}{x ^ {2}}.\n$$\n解此微分方程，得到 $\\ln f(x) = -\\frac{1}{x} + C_1$ 。整理得 $f(x) = C \\mathrm{e}^{-\\frac{1}{x}}$ 。再利用条件 $\\lim_{x \\to +\\infty} f(x) = C = 1$ ，求得 $f(x) = \\mathrm{e}^{-\\frac{1}{x}}$ 。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 131
+  },
+  {
+   "id": "ky2-2002-x-51a817",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2002 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2002,
+    "region": "全国",
+    "paper": "2002 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $0 < x_{1} < 3$ ， $x_{n + 1} = \\sqrt{x_n(3 - x_n)} (n = 1,2,\\dots)$ ，证明数列 $\\{x_{n}\\}$ 的极限存在，并求此极限.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "先说明有界性: 由 $0 < x_{1} < 3$ 知 $x_{1}$ 及 $3 - x_{1}$ 均为正数, 故\n$$\n0 <   x _ {2} = \\sqrt {x _ {1} (3 - x _ {1})} \\leqslant \\frac {1}{2} \\left(x _ {1} + 3 - x _ {1}\\right) = \\frac {3}{2}.\n$$\n假设 $0 < x_{k} \\leqslant \\frac{3}{2}$ （ $k \\geqslant 2$ ），则有\n$$\nx _ {k + 1} = \\sqrt {x _ {k} (3 - x _ {k})} \\leqslant \\frac {1}{2} (x _ {k} + 3 - x _ {k}) = \\frac {3}{2}.\n$$\n由数学归纳法知，对任意正整数 $n \\geqslant 2$ 有 $0 < x_{n} \\leqslant \\frac{3}{2}$ ，即数列有界．再说明单调性：因为\n$$\nx _ {n + 1} - x _ {n} = \\sqrt {x _ {n} (3 - x _ {n})} - x _ {n} \\leqslant \\frac {x _ {n} (3 - x _ {n}) - x _ {n} ^ {2}}{\\sqrt {x _ {n} (3 - x _ {n})} + x _ {n}} = \\frac {x _ {n} (3 - 2 x _ {n})}{\\sqrt {x _ {n} (3 - x _ {n})} + x _ {n}} \\geqslant 0,\n$$\n所以 $\\{x_{n}\\}$ 单调增加. 数列 $\\{x_{n}\\}$ 单调增加且有上界, 所以 $\\lim_{n\\to \\infty}x_n$ 存在, 记为 $a$ . 由 $x_{n + 1} = \\sqrt{x_n(3 - x_n)}$ 两边取极限得 $a = \\sqrt{a(3 - a)}$ , 即 $2a^{2} - 3a = 0$ . 解得 $a = \\frac{3}{2}$ 或 $a = 0$ , 但因 $x_{1} > 0$ 且单调增加, 故 $a \\neq 0$ , 所以 $\\lim_{n\\to \\infty}x_n = \\frac{3}{2}$ .",
+   "points": [
+    {
+     "text": "先说明有界性: 由 $0 < x_{1} < 3$ 知 $x_{1}$ 及 $3 - x_{1}$ 均为正数, 故\n$$\n0 <   x _ {2} = \\sqrt {x _ {1} (3 - x _ {1})} \\leqslant \\frac {1}{2} \\left(x _ {1} + 3 - x _ {1}\\right) = \\frac {3}{2}.\n$$\n假设 $0 < x_{k} \\leqslant \\frac{3}{2}$ （ $k \\geqslant 2$ ），则有\n$$\nx _ {k + 1} = \\sqrt {x _ {k} (3 - x _ {k})} \\leqslant \\frac {1}{2} (x _ {k} + 3 - x _ {k}) = \\frac {3}{2}.\n$$\n由数学归纳法知，对任意正整数 $n \\geqslant 2$ 有 $0 < x_{n} \\leqslant \\frac{3}{2}$ ，即数列有界．再说明单调性：因为\n$$\nx _ {n + 1} - x _ {n} = \\sqrt {x _ {n} (3 - x _ {n})} - x _ {n} \\leqslant \\frac {x _ {n} (3 - x _ {n}) - x _ {n} ^ {2}}{\\sqrt {x _ {n} (3 - x _ {n})} + x _ {n}} = \\frac {x _ {n} (3 - 2 x _ {n})}{\\sqrt {x _ {n} (3 - x _ {n})} + x _ {n}} \\geqslant 0,\n$$\n所以 $\\{x_{n}\\}$ 单调增加. 数列 $\\{x_{n}\\}$ 单调增加且有上界, 所以 $\\lim_{n\\to \\infty}x_n$ 存在, 记为 $a$ . 由 $x_{n + 1} = \\sqrt{x_n(3 - x_n)}$ 两边取极限得 $a = \\sqrt{a(3 - a)}$ , 即 $2a^{2} - 3a = 0$ . 解得 $a = \\frac{3}{2}$ 或 $a = 0$ , 但因 $x_{1} > 0$ 且单调增加, 故 $a \\neq 0$ , 所以 $\\lim_{n\\to \\infty}x_n = \\frac{3}{2}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n先说明有界性: 由 $0 < x_{1} < 3$ 知 $x_{1}$ 及 $3 - x_{1}$ 均为正数, 故\n$$\n0 <   x _ {2} = \\sqrt {x _ {1} (3 - x _ {1})} \\leqslant \\frac {1}{2} \\left(x _ {1} + 3 - x _ {1}\\right) = \\frac {3}{2}.\n$$\n假设 $0 < x_{k} \\leqslant \\frac{3}{2}$ （ $k \\geqslant 2$ ），则有\n$$\nx _ {k + 1} = \\sqrt {x _ {k} (3 - x _ {k})} \\leqslant \\frac {1}{2} (x _ {k} + 3 - x _ {k}) = \\frac {3}{2}.\n$$\n由数学归纳法知，对任意正整数 $n \\geqslant 2$ 有 $0 < x_{n} \\leqslant \\frac{3}{2}$ ，即数列有界．再说明单调性：因为\n$$\nx _ {n + 1} - x _ {n} = \\sqrt {x _ {n} (3 - x _ {n})} - x _ {n} \\leqslant \\frac {x _ {n} (3 - x _ {n}) - x _ {n} ^ {2}}{\\sqrt {x _ {n} (3 - x _ {n})} + x _ {n}} = \\frac {x _ {n} (3 - 2 x _ {n})}{\\sqrt {x _ {n} (3 - x _ {n})} + x _ {n}} \\geqslant 0,\n$$\n所以 $\\{x_{n}\\}$ 单调增加. 数列 $\\{x_{n}\\}$ 单调增加且有上界, 所以 $\\lim_{n\\to \\infty}x_n$ 存在, 记为 $a$ . 由 $x_{n + 1} = \\sqrt{x_n(3 - x_n)}$ 两边取极限得 $a = \\sqrt{a(3 - a)}$ , 即 $2a^{2} - 3a = 0$ . 解得 $a = \\frac{3}{2}$ 或 $a = 0$ , 但因 $x_{1} > 0$ 且单调增加, 故 $a \\neq 0$ , 所以 $\\lim_{n\\to \\infty}x_n = \\frac{3}{2}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 132
+  },
+  {
+   "id": "ky2-2002-x-b68067",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2002 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2002,
+    "region": "全国",
+    "paper": "2002 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(x)$ 在 $x = 0$ 的某邻域内具有二阶连续导数, 且 $f(0) \\neq 0$ , $f'(0) \\neq 0$ , $f''(0) \\neq 0$ . 证明: 存在惟一的一组实数 $\\lambda_1, \\lambda_2, \\lambda_3$ , 使得当 $h \\to 0$ 时,\n$$\n\\lambda_ {1} f (h) + \\lambda_ {2} f (2 h) + \\lambda_ {3} f (3 h) - f (0)\n$$\n是比 $h^2$ 高阶的无穷小.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "要证存在唯一的一组 $\\lambda_{1}, \\lambda_{2}, \\lambda_{3}$ , 使得\n$$\nL = \\lim  _ {h \\rightarrow 0} \\frac {\\lambda_ {1} f (h) + \\lambda_ {2} f (2 h) + \\lambda_ {3} f (3 h) - f (0)}{h ^ {2}} = 0.\n$$\n由极限的四则运算法则知，分子极限应为0，即\n$$\n\\lim  _ {h \\rightarrow 0} \\left[ \\lambda_ {1} f (h) + \\lambda_ {2} f (2 h) + \\lambda_ {3} f (3 h) \\right] = f (0)\n$$\n由 $f(0) \\neq 0$ , 求得 $\\lambda_{1} + \\lambda_{2} + \\lambda_{3} = 1$ . 再由洛必达法则得\n$$\n\\begin{array}{l} L = \\lim  _ {h \\rightarrow 0} \\frac {\\lambda_ {1} f (h) + \\lambda_ {2} f (2 h) + \\lambda_ {3} f (3 h) - f (0)}{h ^ {2}} \\\\ = \\lim  _ {h \\rightarrow 0} \\frac {\\lambda_ {1} f ^ {\\prime} (h) + 2 \\lambda_ {2} f ^ {\\prime} (2 h) + 3 \\lambda_ {3} f ^ {\\prime} (3 h)}{2 h}. \\\\ \\end{array}\n$$\n由极限的四则运算法则知分子的极限应是 0 , 即\n$$\n\\lim  _ {h \\rightarrow 0} \\left(\\lambda_ {1} f ^ {\\prime} (h) + 2 \\lambda_ {2} f ^ {\\prime} (2 h) + 3 \\lambda_ {3} f ^ {\\prime} (3 h)\\right) = 0.\n$$\n由 $f^{\\prime}(0) \\neq 0$ , 求得 $\\lambda_{1} + 2 \\lambda_{2} + 3 \\lambda_{3} = 0$ . 继续用洛必达法则, 由 $f^{\\prime \\prime}(x)$ 在 $x = 0$ 连续可得\n$$\nL = \\lim  _ {h \\rightarrow 0} \\frac {\\lambda_ {1} f ^ {\\prime \\prime} (h) + 4 \\lambda_ {2} f ^ {\\prime \\prime} (2 h) + 9 \\lambda_ {3} f ^ {\\prime \\prime} (3 h)}{2} = \\frac {1}{2} (\\lambda_ {1} + 4 \\lambda_ {2} + 9 \\lambda_ {3}) f ^ {\\prime \\prime} (0) = 0.\n$$\n由 $f^{\\prime \\prime}(0)\\neq 0$ ，求得 $\\lambda_1 + 4\\lambda_2 + 9\\lambda_3 = 0$ 所以 $\\lambda_{1},\\lambda_{2},\\lambda_{3}$ 应满足\n$$\n\\left\\{ \\begin{array}{l} \\lambda_ {1} + \\lambda_ {2} + \\lambda_ {3} = 1, \\\\ \\lambda_ {1} + 2 \\lambda_ {2} + 3 \\lambda_ {3} = 0, \\\\ \\lambda_ {1} + 4 \\lambda_ {2} + 9 \\lambda_ {3} = 0. \\end{array} \\right.\n$$\n由于系数行列式 $\\left| \\begin{array}{lll}1 & 1 & 1\\\\ 1 & 2 & 3\\\\ 1 & 4 & 9 \\end{array} \\right| = 2\\neq 0$ ，由克莱姆法则知，存在唯一的一组解满足题设要求，证毕.\n注记：也可由泰勒公式求得 $\\lambda_1, \\lambda_2, \\lambda_3$ 应满足的方程组.",
+   "points": [
+    {
+     "text": "要证存在唯一的一组 $\\lambda_{1}, \\lambda_{2}, \\lambda_{3}$ , 使得\n$$\nL = \\lim  _ {h \\rightarrow 0} \\frac {\\lambda_ {1} f (h) + \\lambda_ {2} f (2 h) + \\lambda_ {3} f (3 h) - f (0)}{h ^ {2}} = 0.\n$$\n由极限的四则运算法则知，分子极限应为0，即\n$$\n\\lim  _ {h \\rightarrow 0} \\left[ \\lambda_ {1} f (h) + \\lambda_ {2} f (2 h) + \\lambda_ {3} f (3 h) \\right] = f (0)\n$$\n由 $f(0) \\neq 0$ , 求得 $\\lambda_{1} + \\lambda_{2} + \\lambda_{3} = 1$ . 再由洛必达法则得\n$$\n\\begin{array}{l} L = \\lim  _ {h \\rightarrow 0} \\frac {\\lambda_ {1} f (h) + \\lambda_ {2} f (2 h) + \\lambda_ {3} f (3 h) - f (0)}{h ^ {2}} \\\\ = \\lim  _ {h \\rightarrow 0} \\frac {\\lambda_ {1} f ^ {\\prime} (h) + 2 \\lambda_ {2} f ^ {\\prime} (2 h) + 3 \\lambda_ {3} f ^ {\\prime} (3 h)}{2 h}. \\\\ \\end{array}\n$$\n由极限的四则运算法则知分子的极限应是 0 , 即\n$$\n\\lim  _ {h \\rightarrow 0} \\left(\\lambda_ {1} f ^ {\\prime} (h) + 2 \\lambda_ {2} f ^ {\\prime} (2 h) + 3 \\lambda_ {3} f ^ {\\prime} (3 h)\\right) = 0.\n$$\n由 $f^{\\prime}(0) \\neq 0$ , 求得 $\\lambda_{1} + 2 \\lambda_{2} + 3 \\lambda_{3} = 0$ . 继续用洛必达法则, 由 $f^{\\prime \\prime}(x)$ 在 $x = 0$ 连续可得\n$$\nL = \\lim  _ {h \\rightarrow 0} \\frac {\\lambda_ {1} f ^ {\\prime \\prime} (h) + 4 \\lambda_ {2} f ^ {\\prime \\prime} (2 h) + 9 \\lambda_ {3} f ^ {\\prime \\prime} (3 h)}{2} = \\frac {1}{2} (\\lambda_ {1} + 4 \\lambda_ {2} + 9 \\lambda_ {3}) f ^ {\\prime \\prime} (0) = 0.\n$$\n由 $f^{\\prime \\prime}(0)\\neq 0$ ，求得 $\\lambda_1 + 4\\lambda_2 + 9\\lambda_3 = 0$ 所以 $\\lambda_{1},\\lambda_{2},\\lambda_{3}$ 应满足\n$$\n\\left\\{ \\begin{array}{l} \\lambda_ {1} + \\lambda_ {2} + \\lambda_ {3} = 1, \\\\ \\lambda_ {1} + 2 \\lambda_ {2} + 3 \\lambda_ {3} = 0, \\\\ \\lambda_ {1} + 4 \\lambda_ {2} + 9 \\lambda_ {3} = 0. \\end{array} \\right.\n$$\n由于系数行列式 $\\left| \\begin{array}{lll}1 & 1 & 1\\\\ 1 & 2 & 3\\\\ 1 & 4 & 9 \\end{array} \\right| = 2\\neq 0$ ，由克莱姆法则知，存在唯一的一组解满足题设要求，证毕.\n注记：也可由泰勒公式求得 $\\lambda_1, \\lambda_2, \\lambda_3$ 应满足的方程组.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n要证存在唯一的一组 $\\lambda_{1}, \\lambda_{2}, \\lambda_{3}$ , 使得\n$$\nL = \\lim  _ {h \\rightarrow 0} \\frac {\\lambda_ {1} f (h) + \\lambda_ {2} f (2 h) + \\lambda_ {3} f (3 h) - f (0)}{h ^ {2}} = 0.\n$$\n由极限的四则运算法则知，分子极限应为0，即\n$$\n\\lim  _ {h \\rightarrow 0} \\left[ \\lambda_ {1} f (h) + \\lambda_ {2} f (2 h) + \\lambda_ {3} f (3 h) \\right] = f (0)\n$$\n由 $f(0) \\neq 0$ , 求得 $\\lambda_{1} + \\lambda_{2} + \\lambda_{3} = 1$ . 再由洛必达法则得\n$$\n\\begin{array}{l} L = \\lim  _ {h \\rightarrow 0} \\frac {\\lambda_ {1} f (h) + \\lambda_ {2} f (2 h) + \\lambda_ {3} f (3 h) - f (0)}{h ^ {2}} \\\\ = \\lim  _ {h \\rightarrow 0} \\frac {\\lambda_ {1} f ^ {\\prime} (h) + 2 \\lambda_ {2} f ^ {\\prime} (2 h) + 3 \\lambda_ {3} f ^ {\\prime} (3 h)}{2 h}. \\\\ \\end{array}\n$$\n由极限的四则运算法则知分子的极限应是 0 , 即\n$$\n\\lim  _ {h \\rightarrow 0} \\left(\\lambda_ {1} f ^ {\\prime} (h) + 2 \\lambda_ {2} f ^ {\\prime} (2 h) + 3 \\lambda_ {3} f ^ {\\prime} (3 h)\\right) = 0.\n$$\n由 $f^{\\prime}(0) \\neq 0$ , 求得 $\\lambda_{1} + 2 \\lambda_{2} + 3 \\lambda_{3} = 0$ . 继续用洛必达法则, 由 $f^{\\prime \\prime}(x)$ 在 $x = 0$ 连续可得\n$$\nL = \\lim  _ {h \\rightarrow 0} \\frac {\\lambda_ {1} f ^ {\\prime \\prime} (h) + 4 \\lambda_ {2} f ^ {\\prime \\prime} (2 h) + 9 \\lambda_ {3} f ^ {\\prime \\prime} (3 h)}{2} = \\frac {1}{2} (\\lambda_ {1} + 4 \\lambda_ {2} + 9 \\lambda_ {3}) f ^ {\\prime \\prime} (0) = 0.\n$$\n由 $f^{\\prime \\prime}(0)\\neq 0$ ，求得 $\\lambda_1 + 4\\lambda_2 + 9\\lambda_3 = 0$ 所以 $\\lambda_{1},\\lambda_{2},\\lambda_{3}$ 应满足\n$$\n\\left\\{ \\begin{array}{l} \\lambda_ {1} + \\lambda_ {2} + \\lambda_ {3} = 1, \\\\ \\lambda_ {1} + 2 \\lambda_ {2} + 3 \\lambda_ {3} = 0, \\\\ \\lambda_ {1} + 4 \\lambda_ {2} + 9 \\lambda_ {3} = 0. \\end{array} \\right.\n$$\n由于系数行列式 $\\left| \\begin{array}{lll}1 & 1 & 1\\\\ 1 & 2 & 3\\\\ 1 & 4 & 9 \\end{array} \\right| = 2\\neq 0$ ，由克莱姆法则知，存在唯一的一组解满足题设要求，证毕.\n注记：也可由泰勒公式求得 $\\lambda_1, \\lambda_2, \\lambda_3$ 应满足的方程组.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 133
+  },
+  {
+   "id": "ky2-2003-x-6a25e4",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2003 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2003,
+    "region": "全国",
+    "paper": "2003 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(x)$ 在闭区间 $[a,b]$ 上连续，在开区间 $(a,b)$ 内可导，且 $f^{\\prime}(x) > 0$ 若极限 $\\lim_{x\\to a^{+}}\\frac{f(2x - a)}{x - a}$ 存在，证明：\n(I) 在 $(a, b)$ 内 $f(x) > 0$\n(II) 在 $(a, b)$ 内存在点 $\\xi$ , 使 $\\frac{b^{2} - a^{2}}{\\int_{a}^{b} f(x) \\mathrm{d} x} = \\frac{2 \\xi}{f(\\xi)}$ ;\n(III) 在 $(a, b)$ 内存在与 (2) 中 $\\xi$ 相异的点 $\\eta$ , 使 $f'(\\eta)(b^2 - a^2) = \\frac{2\\xi}{\\xi - a} \\int_{a}^{b} f(x) \\mathrm{d}x$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) 因为 $\\lim_{x \\to a^{+}} \\frac{f(2x - a)}{x - a}$ 存在, 且 $\\lim_{x \\to a^{+}} (x - a) = 0$ , 故 $\\lim_{x \\to a^{+}} f(2x - a) = 0$ . 又 $f(x)$ 在 $[a, b]$ 上连续, 从而 $\\lim_{x \\to a^{+}} f(2x - a) = f(a)$ , 则 $f(a) = 0$ . 由于 $f'(x) > 0$ , 则 $f(x)$ 在 $(a, b)$ 内严格单调增加, 所以 $f(x)$ 在 $x = a$ 处取最小值, 即 $f(x) > f(a) = 0$ , $x \\in (a, b)$ .\n(II) 取 $F(x) = x^{2}$ , $g(x) = \\int_{a}^{x} f(t) \\mathrm{d}t (a \\leqslant x \\leqslant b)$ , 则 $g'(x) = f(x) > 0$ , 则 $F(x)$ , $g(x)$ 满足柯西中值定理的条件, 于是在 $(a, b)$ 内存在点 $\\xi$ , 使\n$$\n\\frac {F (b) - F (a)}{g (b) - g (a)} = \\frac {b ^ {2} - a ^ {2}}{\\int_ {a} ^ {b} f (t) \\mathrm {d} t - \\int_ {a} ^ {a} f (t) \\mathrm {d} t} = \\frac {2 \\xi}{f (\\xi)} \\Rightarrow \\frac {b ^ {2} - a ^ {2}}{\\int_ {a} ^ {b} f (x) \\mathrm {d} x} = \\frac {2 \\xi}{f (\\xi)}.\n$$\n(III) 在区间 $[a, \\xi]$ 上应用拉格朗日中值定理，得在 $(a, \\xi)$ 内存在一点 $\\eta$ ，使\n$$\nf (\\xi) - f (a) = f ^ {\\prime} (\\eta) (\\xi - a).\n$$\n因 $f(a) = 0$ ，上式即 $f(\\xi) = f'(\\eta)(\\xi - a)$ ，代入 (II) 的结论得\n$$\n\\frac {b ^ {2} - a ^ {2}}{\\int_ {a} ^ {b} f (x) \\mathrm {d} x} = \\frac {2 \\xi}{f ^ {\\prime} (\\eta) (\\xi - a)} \\Rightarrow f ^ {\\prime} (\\eta) (b ^ {2} - a ^ {2}) = \\frac {2 \\xi}{\\xi - a} \\int_ {a} ^ {b} f (x) \\mathrm {d} x.\n$$",
+   "points": [
+    {
+     "text": "(I) 因为 $\\lim_{x \\to a^{+}} \\frac{f(2x - a)}{x - a}$ 存在, 且 $\\lim_{x \\to a^{+}} (x - a) = 0$ , 故 $\\lim_{x \\to a^{+}} f(2x - a) = 0$ . 又 $f(x)$ 在 $[a, b]$ 上连续, 从而 $\\lim_{x \\to a^{+}} f(2x - a) = f(a)$ , 则 $f(a) = 0$ . 由于 $f'(x) > 0$ , 则 $f(x)$ 在 $(a, b)$ 内严格单调增加, 所以 $f(x)$ 在 $x = a$ 处取最小值, 即 $f(x) > f(a) = 0$ , $x \\in (a, b)$ .\n(II) 取 $F(x) = x^{2}$ , $g(x) = \\int_{a}^{x} f(t) \\mathrm{d}t (a \\leqslant x \\leqslant b)$ , 则 $g'(x) = f(x) > 0$ , 则 $F(x)$ , $g(x)$ 满足柯西中值定理的条件, 于是在 $(a, b)$ 内存在点 $\\xi$ , 使\n$$\n\\frac {F (b) - F (a)}{g (b) - g (a)} = \\frac {b ^ {2} - a ^ {2}}{\\int_ {a} ^ {b} f (t) \\mathrm {d} t - \\int_ {a} ^ {a} f (t) \\mathrm {d} t} = \\frac {2 \\xi}{f (\\xi)} \\Rightarrow \\frac {b ^ {2} - a ^ {2}}{\\int_ {a} ^ {b} f (x) \\mathrm {d} x} = \\frac {2 \\xi}{f (\\xi)}.\n$$\n(III) 在区间 $[a, \\xi]$ 上应用拉格朗日中值定理，得在 $(a, \\xi)$ 内存在一点 $\\eta$ ，使\n$$\nf (\\xi) - f (a) = f ^ {\\prime} (\\eta) (\\xi - a).\n$$\n因 $f(a) = 0$ ，上式即 $f(\\xi) = f'(\\eta)(\\xi - a)$ ，代入 (II) 的结论得\n$$\n\\frac {b ^ {2} - a ^ {2}}{\\int_ {a} ^ {b} f (x) \\mathrm {d} x} = \\frac {2 \\xi}{f ^ {\\prime} (\\eta) (\\xi - a)} \\Rightarrow f ^ {\\prime} (\\eta) (b ^ {2} - a ^ {2}) = \\frac {2 \\xi}{\\xi - a} \\int_ {a} ^ {b} f (x) \\mathrm {d} x.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) 因为 $\\lim_{x \\to a^{+}} \\frac{f(2x - a)}{x - a}$ 存在, 且 $\\lim_{x \\to a^{+}} (x - a) = 0$ , 故 $\\lim_{x \\to a^{+}} f(2x - a) = 0$ . 又 $f(x)$ 在 $[a, b]$ 上连续, 从而 $\\lim_{x \\to a^{+}} f(2x - a) = f(a)$ , 则 $f(a) = 0$ . 由于 $f'(x) > 0$ , 则 $f(x)$ 在 $(a, b)$ 内严格单调增加, 所以 $f(x)$ 在 $x = a$ 处取最小值, 即 $f(x) > f(a) = 0$ , $x \\in (a, b)$ .\n(II) 取 $F(x) = x^{2}$ , $g(x) = \\int_{a}^{x} f(t) \\mathrm{d}t (a \\leqslant x \\leqslant b)$ , 则 $g'(x) = f(x) > 0$ , 则 $F(x)$ , $g(x)$ 满足柯西中值定理的条件, 于是在 $(a, b)$ 内存在点 $\\xi$ , 使\n$$\n\\frac {F (b) - F (a)}{g (b) - g (a)} = \\frac {b ^ {2} - a ^ {2}}{\\int_ {a} ^ {b} f (t) \\mathrm {d} t - \\int_ {a} ^ {a} f (t) \\mathrm {d} t} = \\frac {2 \\xi}{f (\\xi)} \\Rightarrow \\frac {b ^ {2} - a ^ {2}}{\\int_ {a} ^ {b} f (x) \\mathrm {d} x} = \\frac {2 \\xi}{f (\\xi)}.\n$$\n(III) 在区间 $[a, \\xi]$ 上应用拉格朗日中值定理，得在 $(a, \\xi)$ 内存在一点 $\\eta$ ，使\n$$\nf (\\xi) - f (a) = f ^ {\\prime} (\\eta) (\\xi - a).\n$$\n因 $f(a) = 0$ ，上式即 $f(\\xi) = f'(\\eta)(\\xi - a)$ ，代入 (II) 的结论得\n$$\n\\frac {b ^ {2} - a ^ {2}}{\\int_ {a} ^ {b} f (x) \\mathrm {d} x} = \\frac {2 \\xi}{f ^ {\\prime} (\\eta) (\\xi - a)} \\Rightarrow f ^ {\\prime} (\\eta) (b ^ {2} - a ^ {2}) = \\frac {2 \\xi}{\\xi - a} \\int_ {a} ^ {b} f (x) \\mathrm {d} x.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 134
+  },
+  {
+   "id": "ky2-2004-15-43d8b6",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2004 年考研数学二第 15 题",
+    "kind": "exam-original",
+    "year": 2004,
+    "region": "全国",
+    "paper": "2004 年考研数学二",
+    "number": "15",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n求极限 $\\lim_{x\\to 0}\\frac{1}{x^3}\\left[\\left(\\frac{2 + \\cos x}{3}\\right)^x -1\\right].$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由等价无穷小量代换可得\n原式 $= \\lim_{x\\to 0}\\frac{\\mathrm{e}^{x\\ln\\left(\\frac{2 + \\cos x}{3}\\right)} - 1}{x^3} = \\lim_{x\\to 0}\\frac{\\ln\\left(\\frac{2 + \\cos x}{3}\\right)}{x^2} = \\lim_{x\\to 0}\\frac{\\ln\\left(1 + \\frac{\\cos x - 1}{3}\\right)}{x^2}$\n$$\n= \\lim  _ {x \\rightarrow 0} \\frac {\\cos x - 1}{3 x ^ {2}} = - \\lim  _ {x \\rightarrow 0} \\frac {1 - \\cos x}{3 x ^ {2}} = - \\lim  _ {x \\rightarrow 0} \\frac {\\frac {x ^ {2}}{2}}{3 x ^ {2}} = - \\frac {1}{6}.\n$$",
+   "points": [
+    {
+     "text": "由等价无穷小量代换可得\n原式 $= \\lim_{x\\to 0}\\frac{\\mathrm{e}^{x\\ln\\left(\\frac{2 + \\cos x}{3}\\right)} - 1}{x^3} = \\lim_{x\\to 0}\\frac{\\ln\\left(\\frac{2 + \\cos x}{3}\\right)}{x^2} = \\lim_{x\\to 0}\\frac{\\ln\\left(1 + \\frac{\\cos x - 1}{3}\\right)}{x^2}$\n$$\n= \\lim  _ {x \\rightarrow 0} \\frac {\\cos x - 1}{3 x ^ {2}} = - \\lim  _ {x \\rightarrow 0} \\frac {1 - \\cos x}{3 x ^ {2}} = - \\lim  _ {x \\rightarrow 0} \\frac {\\frac {x ^ {2}}{2}}{3 x ^ {2}} = - \\frac {1}{6}.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由等价无穷小量代换可得\n原式 $= \\lim_{x\\to 0}\\frac{\\mathrm{e}^{x\\ln\\left(\\frac{2 + \\cos x}{3}\\right)} - 1}{x^3} = \\lim_{x\\to 0}\\frac{\\ln\\left(\\frac{2 + \\cos x}{3}\\right)}{x^2} = \\lim_{x\\to 0}\\frac{\\ln\\left(1 + \\frac{\\cos x - 1}{3}\\right)}{x^2}$\n$$\n= \\lim  _ {x \\rightarrow 0} \\frac {\\cos x - 1}{3 x ^ {2}} = - \\lim  _ {x \\rightarrow 0} \\frac {1 - \\cos x}{3 x ^ {2}} = - \\lim  _ {x \\rightarrow 0} \\frac {\\frac {x ^ {2}}{2}}{3 x ^ {2}} = - \\frac {1}{6}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 135
+  },
+  {
+   "id": "ky2-2005-15-bf73a6",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2005 年考研数学二第 15 题",
+    "kind": "exam-original",
+    "year": 2005,
+    "region": "全国",
+    "paper": "2005 年考研数学二",
+    "number": "15",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 11 分)\n设函数 $f(x)$ 连续，且 $f(0) \\neq 0$ ，求极限 $\\lim_{x \\to 0} \\frac{\\int_{0}^{x} (x - t)f(t) \\, \\mathrm{d}t}{x\\int_{0}^{x} f(x - t) \\, \\mathrm{d}t}$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "作积分变量代换, 令 $x - t = u$ , 则\n$$\n\\int_ {0} ^ {x} f (x - t) \\mathrm {d} t = \\int_ {x} ^ {0} f (u) (- \\mathrm {d} u) = \\int_ {0} ^ {x} f (u) \\mathrm {d} u.\n$$\n于是由洛必达法则和微分中值定理，存在 $\\xi$ 介于0和 $x$ 之间，使得\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} (x - t) f (t) \\mathrm {d} t}{x \\int_ {0} ^ {x} f (x - t) \\mathrm {d} t} = \\lim  _ {x \\rightarrow 0} \\frac {x \\int_ {0} ^ {x} f (t) \\mathrm {d} t - \\int_ {0} ^ {x} t f (t) \\mathrm {d} t}{x \\int_ {0} ^ {x} f (u) \\mathrm {d} u} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} f (t) \\mathrm {d} t + x f (x) - x f (x)}{\\int_ {0} ^ {x} f (u) \\mathrm {d} u + x f (x)} = \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} f (t) \\mathrm {d} t}{\\int_ {0} ^ {x} f (u) \\mathrm {d} u + x f (x)} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {x f (\\xi)}{x f (\\xi) + x f (x)} = \\lim  _ {x \\rightarrow 0} \\frac {f (\\xi)}{f (\\xi) + f (x)} = \\frac {f (0)}{f (0) + f (0)} = \\frac {1}{2}. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "作积分变量代换, 令 $x - t = u$ , 则\n$$\n\\int_ {0} ^ {x} f (x - t) \\mathrm {d} t = \\int_ {x} ^ {0} f (u) (- \\mathrm {d} u) = \\int_ {0} ^ {x} f (u) \\mathrm {d} u.\n$$\n于是由洛必达法则和微分中值定理，存在 $\\xi$ 介于0和 $x$ 之间，使得\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} (x - t) f (t) \\mathrm {d} t}{x \\int_ {0} ^ {x} f (x - t) \\mathrm {d} t} = \\lim  _ {x \\rightarrow 0} \\frac {x \\int_ {0} ^ {x} f (t) \\mathrm {d} t - \\int_ {0} ^ {x} t f (t) \\mathrm {d} t}{x \\int_ {0} ^ {x} f (u) \\mathrm {d} u} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} f (t) \\mathrm {d} t + x f (x) - x f (x)}{\\int_ {0} ^ {x} f (u) \\mathrm {d} u + x f (x)} = \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} f (t) \\mathrm {d} t}{\\int_ {0} ^ {x} f (u) \\mathrm {d} u + x f (x)} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {x f (\\xi)}{x f (\\xi) + x f (x)} = \\lim  _ {x \\rightarrow 0} \\frac {f (\\xi)}{f (\\xi) + f (x)} = \\frac {f (0)}{f (0) + f (0)} = \\frac {1}{2}. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n作积分变量代换, 令 $x - t = u$ , 则\n$$\n\\int_ {0} ^ {x} f (x - t) \\mathrm {d} t = \\int_ {x} ^ {0} f (u) (- \\mathrm {d} u) = \\int_ {0} ^ {x} f (u) \\mathrm {d} u.\n$$\n于是由洛必达法则和微分中值定理，存在 $\\xi$ 介于0和 $x$ 之间，使得\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} (x - t) f (t) \\mathrm {d} t}{x \\int_ {0} ^ {x} f (x - t) \\mathrm {d} t} = \\lim  _ {x \\rightarrow 0} \\frac {x \\int_ {0} ^ {x} f (t) \\mathrm {d} t - \\int_ {0} ^ {x} t f (t) \\mathrm {d} t}{x \\int_ {0} ^ {x} f (u) \\mathrm {d} u} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} f (t) \\mathrm {d} t + x f (x) - x f (x)}{\\int_ {0} ^ {x} f (u) \\mathrm {d} u + x f (x)} = \\lim  _ {x \\rightarrow 0} \\frac {\\int_ {0} ^ {x} f (t) \\mathrm {d} t}{\\int_ {0} ^ {x} f (u) \\mathrm {d} u + x f (x)} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {x f (\\xi)}{x f (\\xi) + x f (x)} = \\lim  _ {x \\rightarrow 0} \\frac {f (\\xi)}{f (\\xi) + f (x)} = \\frac {f (0)}{f (0) + f (0)} = \\frac {1}{2}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 136
+  },
+  {
+   "id": "ky2-2008-20-c8437a",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.8",
+   "knowledgePoints": [
+    "1.8"
+   ],
+   "source": {
+    "text": "2008 年考研数学二第 20 题",
+    "kind": "exam-original",
+    "year": 2008,
+    "region": "全国",
+    "paper": "2008 年考研数学二",
+    "number": "20",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分11分)\n(I) 证明积分中值定理: 若函数 $f(x)$ 在闭区间 $[a, b]$ 上连续, 则至少存在一点 $\\eta \\in [a, b]$ , 使得 $\\int_{a}^{b} f(x) \\mathrm{d} x = f(\\eta)(b - a)$ .\n(II) 若函数 $\\varphi(x)$ 具有二阶导数，且满足 $\\varphi(2) > \\varphi(1)$ ， $\\varphi(2) > \\int_{2}^{3} \\varphi(x) \\, \\mathrm{d}x$ ，则至少存在一点 $\\xi \\in (1, 3)$ ，使得 $\\varphi''(\\xi) < 0$ 。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) 设 $M$ 与 $m$ 是连续函数 $f(x)$ 在 $[a, b]$ 上的最大值与最小值，即\n$$\nm \\leqslant f (x) \\leqslant M, \\quad x \\in [ a, b ].\n$$\n由定积分性质有\n$$\nm (b - a) \\leqslant \\int_ {a} ^ {b} f (x) \\mathrm {d} x \\leqslant M (b - a), \\quad \\Rightarrow \\quad m \\leqslant \\frac {\\int_ {a} ^ {b} f (x) \\mathrm {d} x}{b - a} \\leqslant M.\n$$\n由连续函数介值定理，至少存在一点 $\\eta \\in [a,b]$ ，使得\n$$\nf (\\eta) = \\frac {\\int_ {a} ^ {b} f (x) \\mathrm {d} x}{b - a} \\Rightarrow \\int_ {a} ^ {b} f (x) \\mathrm {d} x = f (\\eta) (b - a).\n$$\n(II) 由 (I) 的结论可知至少存在一点 $\\eta \\in [2,3]$ ，使\n$$\n\\int_ {2} ^ {3} \\varphi (x) d x = \\varphi (\\eta) (3 - 2) = \\varphi (\\eta).\n$$\n又由 $\\varphi (2) > \\int_{2}^{3}\\varphi (x)\\mathrm{d}x = \\varphi (\\eta)$ ，知 $2 <   \\eta \\leqslant 3$ .对 $\\varphi (x)$ 在[1,2]和 $[2,\\eta ]$ 上分别应用拉格朗日中值定理，并注意到 $\\varphi (1) <   \\varphi (2),\\varphi (\\eta) <   \\varphi (2)$ ，得\n$$\n\\begin{array}{l} \\varphi^ {\\prime} (\\xi_ {1}) = \\frac {\\varphi (2) - \\varphi (1)}{2 - 1} > 0, \\quad 1 <   \\xi_ {1} <   2; \\\\ \\varphi^ {\\prime} (\\xi_ {2}) = \\frac {\\varphi (\\eta) - \\varphi (2)}{\\eta - 2} <   0, \\quad 2 <   \\xi_ {1} <   \\eta \\leqslant 3. \\\\ \\end{array}\n$$\n在 $[\\xi_1,\\xi_2]$ 上对 $\\varphi^{\\prime}(x)$ 应用拉格朗日中值定理，有 $\\xi \\in (\\xi_{1},\\xi_{2})\\subset (1,3)$ ，使得\n$$\n\\varphi^ {\\prime \\prime} (\\xi) = \\frac {\\varphi^ {\\prime} \\left(\\xi_ {2}\\right) - \\varphi^ {\\prime} \\left(\\xi_ {1}\\right)}{\\xi_ {2} - \\xi_ {1}} <   0.\n$$\n# 21. (本题满分 11 分)\n求函数 $u = x^{2} + y^{2} + z^{2}$ 在约束条件 $z = x^{2} + y^{2}$ 和 $x + y + z = 4$ 下的最大和最小值.\n# 解. 作拉格朗日函数\n$$\nF (x, y, z, \\lambda , \\mu) = x ^ {2} + y ^ {2} + z ^ {2} + \\lambda (x ^ {2} + y ^ {2} - z) + \\mu (x + y + z - 4),\n$$\n令各个偏导数为零得\n$$\n\\left\\{ \\begin{array}{l} F _ {x} ^ {\\prime} = 2 x + 2 \\lambda x + \\mu = 0, \\\\ F _ {y} ^ {\\prime} = 2 y + 2 \\lambda y + \\mu = 0, \\\\ F _ {z} ^ {\\prime} = 2 z - \\lambda + \\mu = 0, \\\\ F _ {\\lambda} ^ {\\prime} = x ^ {2} + y ^ {2} - z = 0, \\\\ F _ {\\mu} ^ {\\prime} = x + y + z - 4 = 0. \\end{array} \\right.\n$$\n解方程组得 $(x_{1},y_{1},z_{1}) = (1,1,2)$ ， $(x_{2},y_{2},z_{2}) = (-2, - 2,8)$ 故所求的最大值为72，最小值为6.\n# 22. 同试卷一第三[21]题",
+   "points": [
+    {
+     "text": "(I) 设 $M$ 与 $m$ 是连续函数 $f(x)$ 在 $[a, b]$ 上的最大值与最小值，即\n$$\nm \\leqslant f (x) \\leqslant M, \\quad x \\in [ a, b ].\n$$\n由定积分性质有\n$$\nm (b - a) \\leqslant \\int_ {a} ^ {b} f (x) \\mathrm {d} x \\leqslant M (b - a), \\quad \\Rightarrow \\quad m \\leqslant \\frac {\\int_ {a} ^ {b} f (x) \\mathrm {d} x}{b - a} \\leqslant M.\n$$\n由连续函数介值定理，至少存在一点 $\\eta \\in [a,b]$ ，使得\n$$\nf (\\eta) = \\frac {\\int_ {a} ^ {b} f (x) \\mathrm {d} x}{b - a} \\Rightarrow \\int_ {a} ^ {b} f (x) \\mathrm {d} x = f (\\eta) (b - a).\n$$\n(II) 由 (I) 的结论可知至少存在一点 $\\eta \\in [2,3]$ ，使\n$$\n\\int_ {2} ^ {3} \\varphi (x) d x = \\varphi (\\eta) (3 - 2) = \\varphi (\\eta).\n$$\n又由 $\\varphi (2) > \\int_{2}^{3}\\varphi (x)\\mathrm{d}x = \\varphi (\\eta)$ ，知 $2 <   \\eta \\leqslant 3$ .对 $\\varphi (x)$ 在[1,2]和 $[2,\\eta ]$ 上分别应用拉格朗日中值定理，并注意到 $\\varphi (1) <   \\varphi (2),\\varphi (\\eta) <   \\varphi (2)$ ，得\n$$\n\\begin{array}{l} \\varphi^ {\\prime} (\\xi_ {1}) = \\frac {\\varphi (2) - \\varphi (1)}{2 - 1} > 0, \\quad 1 <   \\xi_ {1} <   2; \\\\ \\varphi^ {\\prime} (\\xi_ {2}) = \\frac {\\varphi (\\eta) - \\varphi (2)}{\\eta - 2} <   0, \\quad 2 <   \\xi_ {1} <   \\eta \\leqslant 3. \\\\ \\end{array}\n$$\n在 $[\\xi_1,\\xi_2]$ 上对 $\\varphi^{\\prime}(x)$ 应用拉格朗日中值定理，有 $\\xi \\in (\\xi_{1},\\xi_{2})\\subset (1,3)$ ，使得\n$$\n\\varphi^ {\\prime \\prime} (\\xi) = \\frac {\\varphi^ {\\prime} \\left(\\xi_ {2}\\right) - \\varphi^ {\\prime} \\left(\\xi_ {1}\\right)}{\\xi_ {2} - \\xi_ {1}} <   0.\n$$\n# 21. (本题满分 11 分)\n求函数 $u = x^{2} + y^{2} + z^{2}$ 在约束条件 $z = x^{2} + y^{2}$ 和 $x + y + z = 4$ 下的最大和最小值.\n# 解. 作拉格朗日函数\n$$\nF (x, y, z, \\lambda , \\mu) = x ^ {2} + y ^ {2} + z ^ {2} + \\lambda (x ^ {2} + y ^ {2} - z) + \\mu (x + y + z - 4),\n$$\n令各个偏导数为零得\n$$\n\\left\\{ \\begin{array}{l} F _ {x} ^ {\\prime} = 2 x + 2 \\lambda x + \\mu = 0, \\\\ F _ {y} ^ {\\prime} = 2 y + 2 \\lambda y + \\mu = 0, \\\\ F _ {z} ^ {\\prime} = 2 z - \\lambda + \\mu = 0, \\\\ F _ {\\lambda} ^ {\\prime} = x ^ {2} + y ^ {2} - z = 0, \\\\ F _ {\\mu} ^ {\\prime} = x + y + z - 4 = 0. \\end{array} \\right.\n$$\n解方程组得 $(x_{1},y_{1},z_{1}) = (1,1,2)$ ， $(x_{2},y_{2},z_{2}) = (-2, - 2,8)$ 故所求的最大值为72，最小值为6.\n# 22. 同试卷一第三[21]题",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) 设 $M$ 与 $m$ 是连续函数 $f(x)$ 在 $[a, b]$ 上的最大值与最小值，即\n$$\nm \\leqslant f (x) \\leqslant M, \\quad x \\in [ a, b ].\n$$\n由定积分性质有\n$$\nm (b - a) \\leqslant \\int_ {a} ^ {b} f (x) \\mathrm {d} x \\leqslant M (b - a), \\quad \\Rightarrow \\quad m \\leqslant \\frac {\\int_ {a} ^ {b} f (x) \\mathrm {d} x}{b - a} \\leqslant M.\n$$\n由连续函数介值定理，至少存在一点 $\\eta \\in [a,b]$ ，使得\n$$\nf (\\eta) = \\frac {\\int_ {a} ^ {b} f (x) \\mathrm {d} x}{b - a} \\Rightarrow \\int_ {a} ^ {b} f (x) \\mathrm {d} x = f (\\eta) (b - a).\n$$\n(II) 由 (I) 的结论可知至少存在一点 $\\eta \\in [2,3]$ ，使\n$$\n\\int_ {2} ^ {3} \\varphi (x) d x = \\varphi (\\eta) (3 - 2) = \\varphi (\\eta).\n$$\n又由 $\\varphi (2) > \\int_{2}^{3}\\varphi (x)\\mathrm{d}x = \\varphi (\\eta)$ ，知 $2 <   \\eta \\leqslant 3$ .对 $\\varphi (x)$ 在[1,2]和 $[2,\\eta ]$ 上分别应用拉格朗日中值定理，并注意到 $\\varphi (1) <   \\varphi (2),\\varphi (\\eta) <   \\varphi (2)$ ，得\n$$\n\\begin{array}{l} \\varphi^ {\\prime} (\\xi_ {1}) = \\frac {\\varphi (2) - \\varphi (1)}{2 - 1} > 0, \\quad 1 <   \\xi_ {1} <   2; \\\\ \\varphi^ {\\prime} (\\xi_ {2}) = \\frac {\\varphi (\\eta) - \\varphi (2)}{\\eta - 2} <   0, \\quad 2 <   \\xi_ {1} <   \\eta \\leqslant 3. \\\\ \\end{array}\n$$\n在 $[\\xi_1,\\xi_2]$ 上对 $\\varphi^{\\prime}(x)$ 应用拉格朗日中值定理，有 $\\xi \\in (\\xi_{1},\\xi_{2})\\subset (1,3)$ ，使得\n$$\n\\varphi^ {\\prime \\prime} (\\xi) = \\frac {\\varphi^ {\\prime} \\left(\\xi_ {2}\\right) - \\varphi^ {\\prime} \\left(\\xi_ {1}\\right)}{\\xi_ {2} - \\xi_ {1}} <   0.\n$$\n# 21. (本题满分 11 分)\n求函数 $u = x^{2} + y^{2} + z^{2}$ 在约束条件 $z = x^{2} + y^{2}$ 和 $x + y + z = 4$ 下的最大和最小值.\n# 解. 作拉格朗日函数\n$$\nF (x, y, z, \\lambda , \\mu) = x ^ {2} + y ^ {2} + z ^ {2} + \\lambda (x ^ {2} + y ^ {2} - z) + \\mu (x + y + z - 4),\n$$\n令各个偏导数为零得\n$$\n\\left\\{ \\begin{array}{l} F _ {x} ^ {\\prime} = 2 x + 2 \\lambda x + \\mu = 0, \\\\ F _ {y} ^ {\\prime} = 2 y + 2 \\lambda y + \\mu = 0, \\\\ F _ {z} ^ {\\prime} = 2 z - \\lambda + \\mu = 0, \\\\ F _ {\\lambda} ^ {\\prime} = x ^ {2} + y ^ {2} - z = 0, \\\\ F _ {\\mu} ^ {\\prime} = x + y + z - 4 = 0. \\end{array} \\right.\n$$\n解方程组得 $(x_{1},y_{1},z_{1}) = (1,1,2)$ ， $(x_{2},y_{2},z_{2}) = (-2, - 2,8)$ 故所求的最大值为72，最小值为6.\n# 22. 同试卷一第三[21]题",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 137
+  },
+  {
+   "id": "ky2-2009-15-8eda18",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2009 年考研数学二第 15 题",
+    "kind": "exam-original",
+    "year": 2009,
+    "region": "全国",
+    "paper": "2009 年考研数学二",
+    "number": "15",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分9分)\n求极限 $\\lim_{x\\to 0}\\frac{(1 - \\cos x)[x - \\ln(1 + \\tan x)]}{\\sin^4x}.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由等价无穷小量代换和洛必达法则, 可得\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0} \\frac {(1 - \\cos x) [ x - \\ln (1 + \\tan x) ]}{\\sin^ {4} x} = \\lim  _ {x \\rightarrow 0} \\frac {\\frac {1}{2} x ^ {2} [ x - \\ln (1 + \\tan x) ]}{x ^ {4}} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {x - \\ln (1 + \\tan x)}{2 x ^ {2}} = \\lim  _ {x \\rightarrow 0} \\frac {1 - \\frac {\\sec^ {2} x}{1 + \\tan x}}{4 x} = \\lim  _ {x \\rightarrow 0} \\frac {1 + \\tan x - \\sec^ {2} x}{4 x} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {\\sec^ {2} x - 2 \\sec^ {2} x \\tan x}{4} = \\frac {1}{4}. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "由等价无穷小量代换和洛必达法则, 可得\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0} \\frac {(1 - \\cos x) [ x - \\ln (1 + \\tan x) ]}{\\sin^ {4} x} = \\lim  _ {x \\rightarrow 0} \\frac {\\frac {1}{2} x ^ {2} [ x - \\ln (1 + \\tan x) ]}{x ^ {4}} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {x - \\ln (1 + \\tan x)}{2 x ^ {2}} = \\lim  _ {x \\rightarrow 0} \\frac {1 - \\frac {\\sec^ {2} x}{1 + \\tan x}}{4 x} = \\lim  _ {x \\rightarrow 0} \\frac {1 + \\tan x - \\sec^ {2} x}{4 x} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {\\sec^ {2} x - 2 \\sec^ {2} x \\tan x}{4} = \\frac {1}{4}. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由等价无穷小量代换和洛必达法则, 可得\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0} \\frac {(1 - \\cos x) [ x - \\ln (1 + \\tan x) ]}{\\sin^ {4} x} = \\lim  _ {x \\rightarrow 0} \\frac {\\frac {1}{2} x ^ {2} [ x - \\ln (1 + \\tan x) ]}{x ^ {4}} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {x - \\ln (1 + \\tan x)}{2 x ^ {2}} = \\lim  _ {x \\rightarrow 0} \\frac {1 - \\frac {\\sec^ {2} x}{1 + \\tan x}}{4 x} = \\lim  _ {x \\rightarrow 0} \\frac {1 + \\tan x - \\sec^ {2} x}{4 x} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {\\sec^ {2} x - 2 \\sec^ {2} x \\tan x}{4} = \\frac {1}{4}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 138
+  },
+  {
+   "id": "ky2-2011-15-66ff7f",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2011 年考研数学二第 15 题",
+    "kind": "exam-original",
+    "year": 2011,
+    "region": "全国",
+    "paper": "2011 年考研数学二",
+    "number": "15",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n已知函数 $F(x) = \\frac{\\int_0^x\\ln(1 + t^2)\\mathrm{d}t}{x^a}$ ，设 $\\lim_{x\\to +\\infty}F(x) = \\lim_{x\\to 0^{+}}F(x) = 0$ ，试求 $a$ 的取值范围.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "若 $a \\leqslant 0$ , 则有\n$$\n\\lim  _ {x \\rightarrow + \\infty} \\frac {\\int_ {0} ^ {x} \\ln (1 + t ^ {2}) \\mathrm {d} t}{x ^ {a}} = \\lim  _ {x \\rightarrow + \\infty} x ^ {- a} \\cdot \\int_ {0} ^ {x} \\ln (1 + t ^ {2}) \\mathrm {d} t = + \\infty ,\n$$\n与题设矛盾，故应有 $a > 0$ 。当 $a > 0$ 时，由\n$$\n0 = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\int_ {0} ^ {x} \\ln (1 + t ^ {2}) \\mathrm {d} t}{x ^ {a}} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\ln (1 + x ^ {2})}{a x ^ {a - 1}} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {x ^ {2}}{a x ^ {a - 1}} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {1}{a} \\cdot x ^ {3 - a},\n$$\n可得 $3 - a > 0$ 即 $a < 3$ . 又由\n$$\n0 = \\lim  _ {x \\rightarrow + \\infty} \\frac {\\int_ {0} ^ {x} \\ln (1 + t ^ {2}) \\mathrm {d} t}{x ^ {a}} = \\lim  _ {x \\rightarrow + \\infty} \\frac {\\ln (1 + x ^ {2})}{a x ^ {a - 1}} = \\lim  _ {x \\rightarrow + \\infty} \\frac {\\frac {2 x}{1 + x ^ {2}}}{a (a - 1) x ^ {a - 2}} = \\frac {2}{a (a - 1)} \\lim  _ {x \\rightarrow + \\infty} \\frac {x ^ {3 - a}}{1 + x ^ {2}},\n$$\n可得 $3 - a < 2$ 即 $a > 1$ . 综上所述有 $1 < a < 3$ .",
+   "points": [
+    {
+     "text": "若 $a \\leqslant 0$ , 则有\n$$\n\\lim  _ {x \\rightarrow + \\infty} \\frac {\\int_ {0} ^ {x} \\ln (1 + t ^ {2}) \\mathrm {d} t}{x ^ {a}} = \\lim  _ {x \\rightarrow + \\infty} x ^ {- a} \\cdot \\int_ {0} ^ {x} \\ln (1 + t ^ {2}) \\mathrm {d} t = + \\infty ,\n$$\n与题设矛盾，故应有 $a > 0$ 。",
+     "partial": 2
+    },
+    {
+     "text": "当 $a > 0$ 时，由\n$$\n0 = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\int_ {0} ^ {x} \\ln (1 + t ^ {2}) \\mathrm {d} t}{x ^ {a}} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\ln (1 + x ^ {2})}{a x ^ {a - 1}} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {x ^ {2}}{a x ^ {a - 1}} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {1}{a} \\cdot x ^ {3 - a},\n$$\n可得 $3 - a > 0$ 即 $a < 3$ . 又由\n$$\n0 = \\lim  _ {x \\rightarrow + \\infty} \\frac {\\int_ {0} ^ {x} \\ln (1 + t ^ {2}) \\mathrm {d} t}{x ^ {a}} = \\lim  _ {x \\rightarrow + \\infty} \\frac {\\ln (1 + x ^ {2})}{a x ^ {a - 1}} = \\lim  _ {x \\rightarrow + \\infty} \\frac {\\frac {2 x}{1 + x ^ {2}}}{a (a - 1) x ^ {a - 2}} = \\frac {2}{a (a - 1)} \\lim  _ {x \\rightarrow + \\infty} \\frac {x ^ {3 - a}}{1 + x ^ {2}},\n$$\n可得 $3 - a < 2$ 即 $a > 1$ . 综上所述有 $1 < a < 3$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n若 $a \\leqslant 0$ , 则有\n$$\n\\lim  _ {x \\rightarrow + \\infty} \\frac {\\int_ {0} ^ {x} \\ln (1 + t ^ {2}) \\mathrm {d} t}{x ^ {a}} = \\lim  _ {x \\rightarrow + \\infty} x ^ {- a} \\cdot \\int_ {0} ^ {x} \\ln (1 + t ^ {2}) \\mathrm {d} t = + \\infty ,\n$$\n与题设矛盾，故应有 $a > 0$ 。当 $a > 0$ 时，由\n$$\n0 = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\int_ {0} ^ {x} \\ln (1 + t ^ {2}) \\mathrm {d} t}{x ^ {a}} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\ln (1 + x ^ {2})}{a x ^ {a - 1}} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {x ^ {2}}{a x ^ {a - 1}} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {1}{a} \\cdot x ^ {3 - a},\n$$\n可得 $3 - a > 0$ 即 $a < 3$ . 又由\n$$\n0 = \\lim  _ {x \\rightarrow + \\infty} \\frac {\\int_ {0} ^ {x} \\ln (1 + t ^ {2}) \\mathrm {d} t}{x ^ {a}} = \\lim  _ {x \\rightarrow + \\infty} \\frac {\\ln (1 + x ^ {2})}{a x ^ {a - 1}} = \\lim  _ {x \\rightarrow + \\infty} \\frac {\\frac {2 x}{1 + x ^ {2}}}{a (a - 1) x ^ {a - 2}} = \\frac {2}{a (a - 1)} \\lim  _ {x \\rightarrow + \\infty} \\frac {x ^ {3 - a}}{1 + x ^ {2}},\n$$\n可得 $3 - a < 2$ 即 $a > 1$ . 综上所述有 $1 < a < 3$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 139
+  },
+  {
+   "id": "ky2-2012-15-6d06c0",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2012 年考研数学二第 15 题",
+    "kind": "exam-original",
+    "year": 2012,
+    "region": "全国",
+    "paper": "2012 年考研数学二",
+    "number": "15",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n已知函数 $f(x) = \\frac{1 + x}{\\sin x} - \\frac{1}{x}$ ，记 $a = \\lim_{x \\to 0} f(x)$ .\n(I) 求 $a$ 的值；(II) 若当 $x \\to 0$ 时， $f(x) - a$ 是 $x^k$ 的同阶无穷小，求 $k$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) $\\lim_{x \\to 0} f(x) = \\lim_{x \\to 0} \\left( \\frac{1}{\\sin x} - \\frac{1}{x} + 1 \\right) = \\lim_{x \\to 0} \\frac{x - \\sin x}{x^2} + 1 = 1$ ，即 $a = 1$\n(II) 当 $x \\to 0$ 时, 由 $f(x) - a = f(x) - 1 = \\frac{1}{\\sin x} - \\frac{1}{x} = \\frac{x - \\sin x}{x \\sin x}$ . 又因为当 $x \\to 0$ 时, $x - \\sin x$ 与 $\\frac{1}{6} x^3$ 等价, 故 $f(x) - a \\sim \\frac{1}{6} x$ , 即 $k = 1$ .",
+   "points": [
+    {
+     "text": "(I) $\\lim_{x \\to 0} f(x) = \\lim_{x \\to 0} \\left( \\frac{1}{\\sin x} - \\frac{1}{x} + 1 \\right) = \\lim_{x \\to 0} \\frac{x - \\sin x}{x^2} + 1 = 1$ ，即 $a = 1$\n(II) 当 $x \\to 0$ 时, 由 $f(x) - a = f(x) - 1 = \\frac{1}{\\sin x} - \\frac{1}{x} = \\frac{x - \\sin x}{x \\sin x}$ . 又因为当 $x \\to 0$ 时, $x - \\sin x$ 与 $\\frac{1}{6} x^3$ 等价, 故 $f(x) - a \\sim \\frac{1}{6} x$ , 即 $k = 1$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) $\\lim_{x \\to 0} f(x) = \\lim_{x \\to 0} \\left( \\frac{1}{\\sin x} - \\frac{1}{x} + 1 \\right) = \\lim_{x \\to 0} \\frac{x - \\sin x}{x^2} + 1 = 1$ ，即 $a = 1$\n(II) 当 $x \\to 0$ 时, 由 $f(x) - a = f(x) - 1 = \\frac{1}{\\sin x} - \\frac{1}{x} = \\frac{x - \\sin x}{x \\sin x}$ . 又因为当 $x \\to 0$ 时, $x - \\sin x$ 与 $\\frac{1}{6} x^3$ 等价, 故 $f(x) - a \\sim \\frac{1}{6} x$ , 即 $k = 1$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 140
+  },
+  {
+   "id": "ky2-2012-21-60fed7",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2012 年考研数学二第 21 题",
+    "kind": "exam-original",
+    "year": 2012,
+    "region": "全国",
+    "paper": "2012 年考研数学二",
+    "number": "21",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分11分)\n(I) 证明方程 $x^n + x^{n-1} + \\dots + x = 1$ （ $n$ 为大于 1 的整数）在区间 $\\left(\\frac{1}{2}, 1\\right)$ 内有且仅有一个实根；\n(II) 记 (I) 中的实根为 $x_{n}$ , 证明 $\\lim_{n \\to \\infty} x_{n}$ 存在, 并求此极限.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) 令 $f_{n}(x) = x^{n} + x^{n - 1} + \\dots + x - 1$ , 则 $f_{n}(1) = n - 1 > 0$ , 而 $f_{n}\\left(\\frac{1}{2}\\right) = -\\left(\\frac{1}{2}\\right)^{n} < 0$ , 由零点定理得 $f_{n}(x) = 0$ 在 $\\left(\\frac{1}{2}, 1\\right)$ 肯定有实根. 又因为\n$$\nf _ {n} ^ {\\prime} (x) = n x ^ {n - 1} + (n - 1) x ^ {n - 2} + \\dots + 1 > 1 > 0\n$$\n所以方程只有唯一的实根.\n(II) 设该实根为 $x_{n}$ , 则有 $f_{n}\\left(x_{n}\\right)=0$ . 因为 $f_{n}^{\\prime}(x)>1$ , 由拉格朗日中值定理得\n$$\n\\left| x _ {n} - \\frac {1}{2} \\right| <   \\left| f _ {n} ^ {\\prime} (\\xi) \\left(x _ {n} - \\frac {1}{2}\\right) \\right| = \\left| f _ {n} (x _ {n}) - f _ {n} \\left(\\frac {1}{2}\\right) \\right| = \\left| 0 - \\left(- \\frac {1}{2 ^ {n}}\\right) \\right| = \\frac {1}{2 ^ {n}}\n$$\n则由迫敛准则可知 $\\lim_{n\\to \\infty}\\left(x_n - \\frac{1}{2}\\right) = 0$ ，从而 $\\lim_{n\\to \\infty}x_n = \\frac{1}{2}$",
+   "points": [
+    {
+     "text": "(I) 令 $f_{n}(x) = x^{n} + x^{n - 1} + \\dots + x - 1$ , 则 $f_{n}(1) = n - 1 > 0$ , 而 $f_{n}\\left(\\frac{1}{2}\\right) = -\\left(\\frac{1}{2}\\right)^{n} < 0$ , 由零点定理得 $f_{n}(x) = 0$ 在 $\\left(\\frac{1}{2}, 1\\right)$ 肯定有实根. 又因为\n$$\nf _ {n} ^ {\\prime} (x) = n x ^ {n - 1} + (n - 1) x ^ {n - 2} + \\dots + 1 > 1 > 0\n$$\n所以方程只有唯一的实根.\n(II) 设该实根为 $x_{n}$ , 则有 $f_{n}\\left(x_{n}\\right)=0$ . 因为 $f_{n}^{\\prime}(x)>1$ , 由拉格朗日中值定理得\n$$\n\\left| x _ {n} - \\frac {1}{2} \\right| <   \\left| f _ {n} ^ {\\prime} (\\xi) \\left(x _ {n} - \\frac {1}{2}\\right) \\right| = \\left| f _ {n} (x _ {n}) - f _ {n} \\left(\\frac {1}{2}\\right) \\right| = \\left| 0 - \\left(- \\frac {1}{2 ^ {n}}\\right) \\right| = \\frac {1}{2 ^ {n}}\n$$\n则由迫敛准则可知 $\\lim_{n\\to \\infty}\\left(x_n - \\frac{1}{2}\\right) = 0$ ，从而 $\\lim_{n\\to \\infty}x_n = \\frac{1}{2}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) 令 $f_{n}(x) = x^{n} + x^{n - 1} + \\dots + x - 1$ , 则 $f_{n}(1) = n - 1 > 0$ , 而 $f_{n}\\left(\\frac{1}{2}\\right) = -\\left(\\frac{1}{2}\\right)^{n} < 0$ , 由零点定理得 $f_{n}(x) = 0$ 在 $\\left(\\frac{1}{2}, 1\\right)$ 肯定有实根. 又因为\n$$\nf _ {n} ^ {\\prime} (x) = n x ^ {n - 1} + (n - 1) x ^ {n - 2} + \\dots + 1 > 1 > 0\n$$\n所以方程只有唯一的实根.\n(II) 设该实根为 $x_{n}$ , 则有 $f_{n}\\left(x_{n}\\right)=0$ . 因为 $f_{n}^{\\prime}(x)>1$ , 由拉格朗日中值定理得\n$$\n\\left| x _ {n} - \\frac {1}{2} \\right| <   \\left| f _ {n} ^ {\\prime} (\\xi) \\left(x _ {n} - \\frac {1}{2}\\right) \\right| = \\left| f _ {n} (x _ {n}) - f _ {n} \\left(\\frac {1}{2}\\right) \\right| = \\left| 0 - \\left(- \\frac {1}{2 ^ {n}}\\right) \\right| = \\frac {1}{2 ^ {n}}\n$$\n则由迫敛准则可知 $\\lim_{n\\to \\infty}\\left(x_n - \\frac{1}{2}\\right) = 0$ ，从而 $\\lim_{n\\to \\infty}x_n = \\frac{1}{2}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 141
+  },
+  {
+   "id": "ky2-2013-15-5657c7",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2013 年考研数学二第 15 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学二",
+    "number": "15",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n当 $x \\to 0$ 时， $1 - \\cos x \\cdot \\cos 2x \\cdot \\cos 3x$ 与 $ax^n$ 为等价无穷小，求 $n$ 与 $a$ 的值.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由 $\\cos x$ 的麦克劳林公式有：当 $x \\to 0$ 时，\n$$\n\\cos x = 1 - \\frac {1}{2} x ^ {2} + o (x ^ {2}), \\quad \\cos 2 x = 1 - 2 x ^ {2} + o (x ^ {2}), \\quad \\cos 3 x = 1 - \\frac {9}{2} x ^ {2} + o (x ^ {2}).\n$$\n故由 $1 - \\cos x\\cdot \\cos 2x\\cdot \\cos 3x$ 与 $ax^n$ 为等价无穷小可得\n$$\n\\begin{array}{l} 1 = \\lim  _ {x \\rightarrow 0} \\frac {1 - \\cos x \\cdot \\cos 2 x \\cdot \\cos 3 x}{a x ^ {n}} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {1 - \\left[ 1 - \\frac {1}{2} x ^ {2} + o (x ^ {2}) \\right]\\left[ 1 - 2 x ^ {2} + o (x ^ {2}) \\right]\\left[ 1 - \\frac {9}{2} x ^ {2} + o (x ^ {2}) \\right]}{a x ^ {n}} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {1 - \\left[ 1 - 7 x ^ {2} + o \\left(x ^ {2}\\right)\\right]}{a x ^ {n}} = \\lim  _ {x \\rightarrow 0} \\frac {7 x ^ {2} + o \\left(x ^ {2}\\right)}{a x ^ {n}}. \\\\ \\end{array}\n$$\n所以 $n = 2$ 且 $a = 7$",
+   "points": [
+    {
+     "text": "由 $\\cos x$ 的麦克劳林公式有：当 $x \\to 0$ 时，\n$$\n\\cos x = 1 - \\frac {1}{2} x ^ {2} + o (x ^ {2}), \\quad \\cos 2 x = 1 - 2 x ^ {2} + o (x ^ {2}), \\quad \\cos 3 x = 1 - \\frac {9}{2} x ^ {2} + o (x ^ {2}).\n$$\n故由 $1 - \\cos x\\cdot \\cos 2x\\cdot \\cos 3x$ 与 $ax^n$ 为等价无穷小可得\n$$\n\\begin{array}{l} 1 = \\lim  _ {x \\rightarrow 0} \\frac {1 - \\cos x \\cdot \\cos 2 x \\cdot \\cos 3 x}{a x ^ {n}} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {1 - \\left[ 1 - \\frac {1}{2} x ^ {2} + o (x ^ {2}) \\right]\\left[ 1 - 2 x ^ {2} + o (x ^ {2}) \\right]\\left[ 1 - \\frac {9}{2} x ^ {2} + o (x ^ {2}) \\right]}{a x ^ {n}} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {1 - \\left[ 1 - 7 x ^ {2} + o \\left(x ^ {2}\\right)\\right]}{a x ^ {n}} = \\lim  _ {x \\rightarrow 0} \\frac {7 x ^ {2} + o \\left(x ^ {2}\\right)}{a x ^ {n}}. \\\\ \\end{array}\n$$\n所以 $n = 2$ 且 $a = 7$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由 $\\cos x$ 的麦克劳林公式有：当 $x \\to 0$ 时，\n$$\n\\cos x = 1 - \\frac {1}{2} x ^ {2} + o (x ^ {2}), \\quad \\cos 2 x = 1 - 2 x ^ {2} + o (x ^ {2}), \\quad \\cos 3 x = 1 - \\frac {9}{2} x ^ {2} + o (x ^ {2}).\n$$\n故由 $1 - \\cos x\\cdot \\cos 2x\\cdot \\cos 3x$ 与 $ax^n$ 为等价无穷小可得\n$$\n\\begin{array}{l} 1 = \\lim  _ {x \\rightarrow 0} \\frac {1 - \\cos x \\cdot \\cos 2 x \\cdot \\cos 3 x}{a x ^ {n}} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {1 - \\left[ 1 - \\frac {1}{2} x ^ {2} + o (x ^ {2}) \\right]\\left[ 1 - 2 x ^ {2} + o (x ^ {2}) \\right]\\left[ 1 - \\frac {9}{2} x ^ {2} + o (x ^ {2}) \\right]}{a x ^ {n}} \\\\ = \\lim  _ {x \\rightarrow 0} \\frac {1 - \\left[ 1 - 7 x ^ {2} + o \\left(x ^ {2}\\right)\\right]}{a x ^ {n}} = \\lim  _ {x \\rightarrow 0} \\frac {7 x ^ {2} + o \\left(x ^ {2}\\right)}{a x ^ {n}}. \\\\ \\end{array}\n$$\n所以 $n = 2$ 且 $a = 7$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 142
+  },
+  {
+   "id": "ky2-2013-20-f91d54",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2013 年考研数学二第 20 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学二",
+    "number": "20",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分11分)\n设函数 $f(x) = \\ln x + \\frac{1}{x}$ .\n(I) 求 $f(x)$ 的最小值；\n(II) 设数列 $\\{x_{n}\\}$ 满足 $\\ln x_{n} + \\frac{1}{x_{n+1}} < 1$ ，证明 $\\lim_{n \\to \\infty} x_{n}$ 存在，并求此极限.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) 求导得 $f^{\\prime}(x) = \\frac{1}{x} - \\frac{1}{x^{2}} = \\frac{x - 1}{x^{2}}$ , $f^{\\prime \\prime}(x) = -\\frac{1}{x^{2}} + \\frac{2}{x^{3}} = \\frac{2 - x}{x^{3}}$ . 则 $f(x)$ 有唯一驻点 $x = 1$ , 且 $f^{\\prime \\prime}(1) = 1 > 0$ , 从而 $f(x)$ 有极小值和最小值 $f(1) = 1$ .\n(II) 由 (I) 知 $\\ln x_{n} + \\frac{1}{x_{n}} \\geqslant 1$ ，故由 $\\ln x_{n} + \\frac{1}{x_{n+1}} < 1$ 得 $\\frac{1}{x_{n+1}} < \\frac{1}{x_{n}}$ ，即 $x_{n+1} > x_{n}$ ，故 $\\{x_{n}\\}$ 单调递增。又由 $\\ln x_{n} < \\ln x_{n} + \\frac{1}{x_{n+1}} < 1$ 得 $x_{n} < e$ ，故 $x_{n}$ 有上界。从而由单调有界收敛定理可知 $\\lim_{n \\to \\infty} x_{n}$ 存在。令 $\\lim_{n \\to \\infty} x_{n} = a$ ，则由 $\\ln x_{n} + \\frac{1}{x_{n+1}} < 1$ 得 $\\ln a + \\frac{1}{a} \\leqslant 1$ 。又由 (I) 有 $\\ln a + \\frac{1}{a} \\geqslant 1$ ，故 $a = 1$ 。",
+   "points": [
+    {
+     "text": "(I) 求导得 $f^{\\prime}(x) = \\frac{1}{x} - \\frac{1}{x^{2}} = \\frac{x - 1}{x^{2}}$ , $f^{\\prime \\prime}(x) = -\\frac{1}{x^{2}} + \\frac{2}{x^{3}} = \\frac{2 - x}{x^{3}}$ . 则 $f(x)$ 有唯一驻点 $x = 1$ , 且 $f^{\\prime \\prime}(1) = 1 > 0$ , 从而 $f(x)$ 有极小值和最小值 $f(1) = 1$ .\n(II) 由 (I) 知 $\\ln x_{n} + \\frac{1}{x_{n}} \\geqslant 1$ ，故由 $\\ln x_{n} + \\frac{1}{x_{n+1}} < 1$ 得 $\\frac{1}{x_{n+1}} < \\frac{1}{x_{n}}$ ，即 $x_{n+1} > x_{n}$ ，故 $\\{x_{n}\\}$ 单调递增。",
+     "partial": 2
+    },
+    {
+     "text": "又由 $\\ln x_{n} < \\ln x_{n} + \\frac{1}{x_{n+1}} < 1$ 得 $x_{n} < e$ ，故 $x_{n}$ 有上界。",
+     "partial": 2
+    },
+    {
+     "text": "从而由单调有界收敛定理可知 $\\lim_{n \\to \\infty} x_{n}$ 存在。",
+     "partial": 2
+    },
+    {
+     "text": "令 $\\lim_{n \\to \\infty} x_{n} = a$ ，则由 $\\ln x_{n} + \\frac{1}{x_{n+1}} < 1$ 得 $\\ln a + \\frac{1}{a} \\leqslant 1$ 。",
+     "partial": 2
+    },
+    {
+     "text": "又由 (I) 有 $\\ln a + \\frac{1}{a} \\geqslant 1$ ，故 $a = 1$ 。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) 求导得 $f^{\\prime}(x) = \\frac{1}{x} - \\frac{1}{x^{2}} = \\frac{x - 1}{x^{2}}$ , $f^{\\prime \\prime}(x) = -\\frac{1}{x^{2}} + \\frac{2}{x^{3}} = \\frac{2 - x}{x^{3}}$ . 则 $f(x)$ 有唯一驻点 $x = 1$ , 且 $f^{\\prime \\prime}(1) = 1 > 0$ , 从而 $f(x)$ 有极小值和最小值 $f(1) = 1$ .\n(II) 由 (I) 知 $\\ln x_{n} + \\frac{1}{x_{n}} \\geqslant 1$ ，故由 $\\ln x_{n} + \\frac{1}{x_{n+1}} < 1$ 得 $\\frac{1}{x_{n+1}} < \\frac{1}{x_{n}}$ ，即 $x_{n+1} > x_{n}$ ，故 $\\{x_{n}\\}$ 单调递增。又由 $\\ln x_{n} < \\ln x_{n} + \\frac{1}{x_{n+1}} < 1$ 得 $x_{n} < e$ ，故 $x_{n}$ 有上界。从而由单调有界收敛定理可知 $\\lim_{n \\to \\infty} x_{n}$ 存在。令 $\\lim_{n \\to \\infty} x_{n} = a$ ，则由 $\\ln x_{n} + \\frac{1}{x_{n+1}} < 1$ 得 $\\ln a + \\frac{1}{a} \\leqslant 1$ 。又由 (I) 有 $\\ln a + \\frac{1}{a} \\geqslant 1$ ，故 $a = 1$ 。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 143
+  },
+  {
+   "id": "ky2-2014-20-9d4cca",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2014 年考研数学二第 20 题",
+    "kind": "exam-original",
+    "year": 2014,
+    "region": "全国",
+    "paper": "2014 年考研数学二",
+    "number": "20",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分11分)\n设函数 $f(x) = \\frac{x}{1 + x},x\\in [0,1].$ 定义函数列\n$$\nf _ {1} (x) = f (x), \\quad f _ {2} (x) = f \\left(f _ {1} (x)\\right), \\quad \\dots , \\quad f _ {n} (x) = f \\left(f _ {n - 1} (x)\\right), \\dots\n$$\n设 $S_{n}$ 是曲线 $y = f_n(x)$ , 直线 $x = 1$ , $y = 0$ 所围平面图形的面积. 求极限 $\\lim_{n\\to \\infty}nS_n$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "依次计算得到\n$$\nf _ {1} (x) = \\frac {x}{1 + x}, \\quad f _ {2} (x) = \\frac {f _ {1} (x)}{1 + f _ {1} (x)} = \\frac {\\frac {x}{1 + x}}{1 + \\frac {x}{1 + x}} = \\frac {x}{1 + 2 x}, \\quad f _ {3} (x) = \\frac {x}{1 + 3 x}, \\quad \\dots\n$$\n利用数学归纳法可得 $f_{n}(x) = \\frac{x}{1 + nx}$ . 所以\n$$\nS _ {n} = \\int_ {0} ^ {1} f _ {n} (x) \\mathrm {d} x = \\int_ {0} ^ {1} \\frac {x}{1 + n x} \\mathrm {d} x = \\frac {1}{n} \\int_ {0} ^ {1} \\left(1 - \\frac {1}{1 + n x}\\right) \\mathrm {d} x = \\frac {1}{n} \\left(1 - \\frac {\\ln (1 + n)}{n}\\right).\n$$\n从而所求极限\n$$\n\\lim  _ {n \\to \\infty} n S _ {n} = \\lim  _ {n \\to \\infty} \\left(1 - \\frac {\\ln (1 + n)}{n}\\right) = 1.\n$$",
+   "points": [
+    {
+     "text": "依次计算得到\n$$\nf _ {1} (x) = \\frac {x}{1 + x}, \\quad f _ {2} (x) = \\frac {f _ {1} (x)}{1 + f _ {1} (x)} = \\frac {\\frac {x}{1 + x}}{1 + \\frac {x}{1 + x}} = \\frac {x}{1 + 2 x}, \\quad f _ {3} (x) = \\frac {x}{1 + 3 x}, \\quad \\dots\n$$\n利用数学归纳法可得 $f_{n}(x) = \\frac{x}{1 + nx}$ . 所以\n$$\nS _ {n} = \\int_ {0} ^ {1} f _ {n} (x) \\mathrm {d} x = \\int_ {0} ^ {1} \\frac {x}{1 + n x} \\mathrm {d} x = \\frac {1}{n} \\int_ {0} ^ {1} \\left(1 - \\frac {1}{1 + n x}\\right) \\mathrm {d} x = \\frac {1}{n} \\left(1 - \\frac {\\ln (1 + n)}{n}\\right).\n$$\n从而所求极限\n$$\n\\lim  _ {n \\to \\infty} n S _ {n} = \\lim  _ {n \\to \\infty} \\left(1 - \\frac {\\ln (1 + n)}{n}\\right) = 1.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n依次计算得到\n$$\nf _ {1} (x) = \\frac {x}{1 + x}, \\quad f _ {2} (x) = \\frac {f _ {1} (x)}{1 + f _ {1} (x)} = \\frac {\\frac {x}{1 + x}}{1 + \\frac {x}{1 + x}} = \\frac {x}{1 + 2 x}, \\quad f _ {3} (x) = \\frac {x}{1 + 3 x}, \\quad \\dots\n$$\n利用数学归纳法可得 $f_{n}(x) = \\frac{x}{1 + nx}$ . 所以\n$$\nS _ {n} = \\int_ {0} ^ {1} f _ {n} (x) \\mathrm {d} x = \\int_ {0} ^ {1} \\frac {x}{1 + n x} \\mathrm {d} x = \\frac {1}{n} \\int_ {0} ^ {1} \\left(1 - \\frac {1}{1 + n x}\\right) \\mathrm {d} x = \\frac {1}{n} \\left(1 - \\frac {\\ln (1 + n)}{n}\\right).\n$$\n从而所求极限\n$$\n\\lim  _ {n \\to \\infty} n S _ {n} = \\lim  _ {n \\to \\infty} \\left(1 - \\frac {\\ln (1 + n)}{n}\\right) = 1.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 144
+  },
+  {
+   "id": "ky2-2016-15-cc3b43",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2016 年考研数学二第 15 题",
+    "kind": "exam-original",
+    "year": 2016,
+    "region": "全国",
+    "paper": "2016 年考研数学二",
+    "number": "15",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n求极限 $\\lim_{x\\to 0}(\\cos 2x + 2x\\sin x)^{\\frac{1}{x^4}}$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由泰勒公式可得\n$$\n\\cos 2 x + 2 x \\sin x - 1 = 1 - \\frac {4 x ^ {2}}{2} + \\frac {2 ^ {4} x ^ {4}}{4 !} + 2 x \\left(x - \\frac {x ^ {3}}{3 !}\\right) - 1 + o (x ^ {4}) = \\frac {1}{3} x ^ {4} + o (x ^ {4}),\n$$\n因此所求极限\n$$\n\\lim  _ {x \\rightarrow 0} (\\cos 2 x + 2 x \\sin x) ^ {\\frac {1}{x ^ {4}}} = \\lim  _ {x \\rightarrow 0} \\exp \\left(\\frac {\\cos 2 x + 2 x \\sin x - 1}{x ^ {4}}\\right) = e ^ {\\frac {1}{3}}.\n$$",
+   "points": [
+    {
+     "text": "由泰勒公式可得\n$$\n\\cos 2 x + 2 x \\sin x - 1 = 1 - \\frac {4 x ^ {2}}{2} + \\frac {2 ^ {4} x ^ {4}}{4 !} + 2 x \\left(x - \\frac {x ^ {3}}{3 !}\\right) - 1 + o (x ^ {4}) = \\frac {1}{3} x ^ {4} + o (x ^ {4}),\n$$\n因此所求极限\n$$\n\\lim  _ {x \\rightarrow 0} (\\cos 2 x + 2 x \\sin x) ^ {\\frac {1}{x ^ {4}}} = \\lim  _ {x \\rightarrow 0} \\exp \\left(\\frac {\\cos 2 x + 2 x \\sin x - 1}{x ^ {4}}\\right) = e ^ {\\frac {1}{3}}.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由泰勒公式可得\n$$\n\\cos 2 x + 2 x \\sin x - 1 = 1 - \\frac {4 x ^ {2}}{2} + \\frac {2 ^ {4} x ^ {4}}{4 !} + 2 x \\left(x - \\frac {x ^ {3}}{3 !}\\right) - 1 + o (x ^ {4}) = \\frac {1}{3} x ^ {4} + o (x ^ {4}),\n$$\n因此所求极限\n$$\n\\lim  _ {x \\rightarrow 0} (\\cos 2 x + 2 x \\sin x) ^ {\\frac {1}{x ^ {4}}} = \\lim  _ {x \\rightarrow 0} \\exp \\left(\\frac {\\cos 2 x + 2 x \\sin x - 1}{x ^ {4}}\\right) = e ^ {\\frac {1}{3}}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 145
+  },
+  {
+   "id": "ky2-2017-15-a9ff84",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2017 年考研数学二第 15 题",
+    "kind": "exam-original",
+    "year": 2017,
+    "region": "全国",
+    "paper": "2017 年考研数学二",
+    "number": "15",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n求极限 $\\lim_{x\\to 0^{+}}\\frac{\\int_{0}^{x}\\sqrt{x - t}\\mathrm{e}^{t}\\mathrm{d}t}{\\sqrt{x^3}}.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "先对变上限积分 $\\int_{0}^{x} \\sqrt{x - t} \\mathrm{e}^{t} \\, \\mathrm{d}t$ 作变量代换 $u = x - t$ , 得\n$$\n\\int_ {0} ^ {x} \\sqrt {x - t} e ^ {t} d t = \\int_ {x} ^ {0} \\sqrt {u} e ^ {x - u} (- d u) = e ^ {x} \\int_ {0} ^ {x} \\sqrt {u} e ^ {- u} d u.\n$$\n则由洛必达法则可知\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\int_ {0} ^ {x} \\sqrt {x - t} e ^ {t} d t}{\\sqrt {x ^ {3}}} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {e ^ {x} \\int_ {0} ^ {x} \\sqrt {u} e ^ {- u} d u + \\sqrt {x}}{\\frac {3}{2} \\sqrt {x}} \\\\ = \\frac {2}{3} \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\int_ {0} ^ {x} \\sqrt {u} e ^ {- u} d u}{\\sqrt {x} e ^ {- x}} + \\frac {2}{3} = \\frac {2}{3} \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\sqrt {x} e ^ {- x}}{- \\sqrt {x} e ^ {- x} + \\frac {1}{2 \\sqrt {x}} e ^ {- x}} + \\frac {2}{3} \\\\ = \\frac {2}{3} \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {x e ^ {- x}}{- x e ^ {- x} + \\frac {1}{2} e ^ {- x}} + \\frac {2}{3} = \\frac {2}{3}. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "先对变上限积分 $\\int_{0}^{x} \\sqrt{x - t} \\mathrm{e}^{t} \\, \\mathrm{d}t$ 作变量代换 $u = x - t$ , 得\n$$\n\\int_ {0} ^ {x} \\sqrt {x - t} e ^ {t} d t = \\int_ {x} ^ {0} \\sqrt {u} e ^ {x - u} (- d u) = e ^ {x} \\int_ {0} ^ {x} \\sqrt {u} e ^ {- u} d u.\n$$\n则由洛必达法则可知\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\int_ {0} ^ {x} \\sqrt {x - t} e ^ {t} d t}{\\sqrt {x ^ {3}}} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {e ^ {x} \\int_ {0} ^ {x} \\sqrt {u} e ^ {- u} d u + \\sqrt {x}}{\\frac {3}{2} \\sqrt {x}} \\\\ = \\frac {2}{3} \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\int_ {0} ^ {x} \\sqrt {u} e ^ {- u} d u}{\\sqrt {x} e ^ {- x}} + \\frac {2}{3} = \\frac {2}{3} \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\sqrt {x} e ^ {- x}}{- \\sqrt {x} e ^ {- x} + \\frac {1}{2 \\sqrt {x}} e ^ {- x}} + \\frac {2}{3} \\\\ = \\frac {2}{3} \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {x e ^ {- x}}{- x e ^ {- x} + \\frac {1}{2} e ^ {- x}} + \\frac {2}{3} = \\frac {2}{3}. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n先对变上限积分 $\\int_{0}^{x} \\sqrt{x - t} \\mathrm{e}^{t} \\, \\mathrm{d}t$ 作变量代换 $u = x - t$ , 得\n$$\n\\int_ {0} ^ {x} \\sqrt {x - t} e ^ {t} d t = \\int_ {x} ^ {0} \\sqrt {u} e ^ {x - u} (- d u) = e ^ {x} \\int_ {0} ^ {x} \\sqrt {u} e ^ {- u} d u.\n$$\n则由洛必达法则可知\n$$\n\\begin{array}{l} \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\int_ {0} ^ {x} \\sqrt {x - t} e ^ {t} d t}{\\sqrt {x ^ {3}}} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {e ^ {x} \\int_ {0} ^ {x} \\sqrt {u} e ^ {- u} d u + \\sqrt {x}}{\\frac {3}{2} \\sqrt {x}} \\\\ = \\frac {2}{3} \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\int_ {0} ^ {x} \\sqrt {u} e ^ {- u} d u}{\\sqrt {x} e ^ {- x}} + \\frac {2}{3} = \\frac {2}{3} \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\sqrt {x} e ^ {- x}}{- \\sqrt {x} e ^ {- x} + \\frac {1}{2 \\sqrt {x}} e ^ {- x}} + \\frac {2}{3} \\\\ = \\frac {2}{3} \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {x e ^ {- x}}{- x e ^ {- x} + \\frac {1}{2} e ^ {- x}} + \\frac {2}{3} = \\frac {2}{3}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 146
+  },
+  {
+   "id": "ky2-2018-16-6ef9cb",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.8",
+   "knowledgePoints": [
+    "1.8"
+   ],
+   "source": {
+    "text": "2018 年考研数学二第 16 题",
+    "kind": "exam-original",
+    "year": 2018,
+    "region": "全国",
+    "paper": "2018 年考研数学二",
+    "number": "16",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n已知连续函数 $f(x)$ 满足 $\\int_0^x f(t)\\mathrm{d}t + \\int_0^x tf(x - t)\\mathrm{d}t = ax^2.$\n(I) 求 $f(x)$ ;\n(II) 若 $f(x)$ 在区间 $[0,1]$ 上的平均值为 1，求 $a$ 的值.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) 令 $u = x - t$ 则 $t = x - u, \\mathrm{d}t = -\\mathrm{d}u$ ，从而\n$$\n\\int_ {0} ^ {x} t f (x - t) \\mathrm {d} t = \\int_ {x} ^ {0} (x - u) f (u) (- \\mathrm {d} u) = x \\int_ {0} ^ {x} f (u) \\mathrm {d} u - \\int_ {0} ^ {x} u f (u) \\mathrm {d} u.\n$$\n原方程可化为\n$$\n\\int_ {0} ^ {x} f (t) \\mathrm {d} t + x \\int_ {0} ^ {x} f (u) \\mathrm {d} u - \\int_ {0} ^ {x} u f (u) \\mathrm {d} u = a x ^ {2}.\n$$\n两边对 $x$ 求导，整理得\n$$\nf (x) + \\int_ {0} ^ {x} f (u) d u = 2 a x.\n$$\n所以 $f(0) = 0$ . 设 $F(x) = \\int_{0}^{x} f(u) \\, \\mathrm{d}u$ 则 $F'(x) = f(x)$ ，且有\n$$\nF ^ {\\prime} (x) + F (x) = 2 a x.\n$$\n解这个微分方程，得\n$$\n\\begin{array}{l} F (x) = \\mathrm {e} ^ {- \\int 1 \\mathrm {d} x} \\left[ C + \\int \\mathrm {e} ^ {- \\int 1 \\mathrm {d} x} 2 a x \\mathrm {d} x \\right] = \\mathrm {e} ^ {- x} \\left[ C + \\int 2 a x \\mathrm {e} ^ {x} \\mathrm {d} x \\right] \\\\ = \\mathrm {e} ^ {- x} [ C + 2 a (x - 1) \\mathrm {e} ^ {x} ]. \\\\ \\end{array}\n$$\n将 $F(0) = 0$ 代入得 $C = 2a$ . 所以\n$$\nF (x) = 2 a \\mathrm {e} ^ {- x} + 2 a (x - 1) \\Rightarrow f (x) = - 2 a \\mathrm {e} ^ {- x} + 2 a.\n$$\n(II) 由题设可得\n$$\n1 = \\frac {\\int_ {0} ^ {1} f (x) \\mathrm {d} x}{1} = \\int_ {0} ^ {1} (- 2 a \\mathrm {e} ^ {- x} + 2 a) \\mathrm {d} x = \\left[ 2 a \\mathrm {e} ^ {- x} \\right] _ {0} ^ {1} + 2 a = 2 a \\mathrm {e} ^ {- 1}.\n$$\n解得 $a = \\frac{\\mathrm{e}}{2}$",
+   "points": [
+    {
+     "text": "(I) 令 $u = x - t$ 则 $t = x - u, \\mathrm{d}t = -\\mathrm{d}u$ ，从而\n$$\n\\int_ {0} ^ {x} t f (x - t) \\mathrm {d} t = \\int_ {x} ^ {0} (x - u) f (u) (- \\mathrm {d} u) = x \\int_ {0} ^ {x} f (u) \\mathrm {d} u - \\int_ {0} ^ {x} u f (u) \\mathrm {d} u.\n$$\n原方程可化为\n$$\n\\int_ {0} ^ {x} f (t) \\mathrm {d} t + x \\int_ {0} ^ {x} f (u) \\mathrm {d} u - \\int_ {0} ^ {x} u f (u) \\mathrm {d} u = a x ^ {2}.\n$$\n两边对 $x$ 求导，整理得\n$$\nf (x) + \\int_ {0} ^ {x} f (u) d u = 2 a x.\n$$\n所以 $f(0) = 0$ . 设 $F(x) = \\int_{0}^{x} f(u) \\, \\mathrm{d}u$ 则 $F'(x) = f(x)$ ，且有\n$$\nF ^ {\\prime} (x) + F (x) = 2 a x.\n$$\n解这个微分方程，得\n$$\n\\begin{array}{l} F (x) = \\mathrm {e} ^ {- \\int 1 \\mathrm {d} x} \\left[ C + \\int \\mathrm {e} ^ {- \\int 1 \\mathrm {d} x} 2 a x \\mathrm {d} x \\right] = \\mathrm {e} ^ {- x} \\left[ C + \\int 2 a x \\mathrm {e} ^ {x} \\mathrm {d} x \\right] \\\\ = \\mathrm {e} ^ {- x} [ C + 2 a (x - 1) \\mathrm {e} ^ {x} ]. \\\\ \\end{array}\n$$\n将 $F(0) = 0$ 代入得 $C = 2a$ . 所以\n$$\nF (x) = 2 a \\mathrm {e} ^ {- x} + 2 a (x - 1) \\Rightarrow f (x) = - 2 a \\mathrm {e} ^ {- x} + 2 a.\n$$\n(II) 由题设可得\n$$\n1 = \\frac {\\int_ {0} ^ {1} f (x) \\mathrm {d} x}{1} = \\int_ {0} ^ {1} (- 2 a \\mathrm {e} ^ {- x} + 2 a) \\mathrm {d} x = \\left[ 2 a \\mathrm {e} ^ {- x} \\right] _ {0} ^ {1} + 2 a = 2 a \\mathrm {e} ^ {- 1}.\n$$\n解得 $a = \\frac{\\mathrm{e}}{2}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) 令 $u = x - t$ 则 $t = x - u, \\mathrm{d}t = -\\mathrm{d}u$ ，从而\n$$\n\\int_ {0} ^ {x} t f (x - t) \\mathrm {d} t = \\int_ {x} ^ {0} (x - u) f (u) (- \\mathrm {d} u) = x \\int_ {0} ^ {x} f (u) \\mathrm {d} u - \\int_ {0} ^ {x} u f (u) \\mathrm {d} u.\n$$\n原方程可化为\n$$\n\\int_ {0} ^ {x} f (t) \\mathrm {d} t + x \\int_ {0} ^ {x} f (u) \\mathrm {d} u - \\int_ {0} ^ {x} u f (u) \\mathrm {d} u = a x ^ {2}.\n$$\n两边对 $x$ 求导，整理得\n$$\nf (x) + \\int_ {0} ^ {x} f (u) d u = 2 a x.\n$$\n所以 $f(0) = 0$ . 设 $F(x) = \\int_{0}^{x} f(u) \\, \\mathrm{d}u$ 则 $F'(x) = f(x)$ ，且有\n$$\nF ^ {\\prime} (x) + F (x) = 2 a x.\n$$\n解这个微分方程，得\n$$\n\\begin{array}{l} F (x) = \\mathrm {e} ^ {- \\int 1 \\mathrm {d} x} \\left[ C + \\int \\mathrm {e} ^ {- \\int 1 \\mathrm {d} x} 2 a x \\mathrm {d} x \\right] = \\mathrm {e} ^ {- x} \\left[ C + \\int 2 a x \\mathrm {e} ^ {x} \\mathrm {d} x \\right] \\\\ = \\mathrm {e} ^ {- x} [ C + 2 a (x - 1) \\mathrm {e} ^ {x} ]. \\\\ \\end{array}\n$$\n将 $F(0) = 0$ 代入得 $C = 2a$ . 所以\n$$\nF (x) = 2 a \\mathrm {e} ^ {- x} + 2 a (x - 1) \\Rightarrow f (x) = - 2 a \\mathrm {e} ^ {- x} + 2 a.\n$$\n(II) 由题设可得\n$$\n1 = \\frac {\\int_ {0} ^ {1} f (x) \\mathrm {d} x}{1} = \\int_ {0} ^ {1} (- 2 a \\mathrm {e} ^ {- x} + 2 a) \\mathrm {d} x = \\left[ 2 a \\mathrm {e} ^ {- x} \\right] _ {0} ^ {1} + 2 a = 2 a \\mathrm {e} ^ {- 1}.\n$$\n解得 $a = \\frac{\\mathrm{e}}{2}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 147
+  },
+  {
+   "id": "ky-2006-16-35e3f9",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2006 年考研数学（一）第 16 题",
+    "kind": "exam-original",
+    "year": 2006,
+    "region": "全国",
+    "paper": "2006 年考研数学（一）",
+    "number": "16",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2006年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2006年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2006年解析/2006年解析.md"
+   },
+   "stem": "设数列 $\\{x_{n}\\}$ 满足 $0 < x_{1} < \\pi, x_{n+1} = \\sin x_{n} (n = 1,2,\\dots)$ .\n（I）证明 $\\lim_{n\\to \\infty}x_n$ 存在，并求该极限；\n（Ⅱ）计算 $\\lim_{n\\to \\infty}\\left(\\frac{x_{n + 1}}{x_n}\\right)^{\\frac{1}{x^n}}.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "（I）由 $0 < x_{1} < \\pi$ ，得 $x_{2} = \\sin x_{1} \\in (0, 1] \\subset \\left(0, \\frac{\\pi}{2}\\right)$\n于是 $x_{n}\\in (0,1)(n = 2,3,\\dots)$ ，故数列 $\\{x_{n}\\}$ 有界.\n\n又当 $x \\geqslant 0$ 时， $\\sin x \\leqslant x$ ，所以 $x_{n+1} = \\sin x_n \\leqslant x_n$ ，即数列 $\\{x_n\\}$ 单调递减，由极限存在准则， $\\lim_{n \\to \\infty} x_n$ 存在.\n\n令 $\\lim_{n\\to \\infty}x_n = A$ ，对 $x_{n + 1} = \\sin x_{n}$ 两边求极限得 $A = \\sin A$ ，则 $A = 0$ ，即 $\\lim_{n\\to \\infty}x_n = 0$\n\n（Ⅱ） $\\lim_{n\\to \\infty}\\left(\\frac{x_{n + 1}}{x_n}\\right)^{\\frac{1}{x_n^2}} = \\lim_{n\\to \\infty}\\left(\\frac{\\sin x_n}{x_n}\\right)^{\\frac{1}{x_n^2}} = \\lim_{n\\to \\infty}\\left(1 + \\frac{\\sin x_n - x_n}{x_n}\\right)^{\\frac{1}{x_n^2}}$\n\n$$\n= \\lim  _ {n \\rightarrow \\infty} \\left[\\left(1 + \\frac {\\sin x _ {n} - x _ {n}}{x _ {n}}\\right) ^ {\\frac {x _ {n}}{\\sin x _ {n} - x _ {n}}} \\right] ^ {\\frac {\\sin x _ {n} - x _ {n}}{x _ {n} ^ {3}}} = e ^ {\\lim  _ {n \\rightarrow \\infty} \\frac {\\sin x _ {n} - x _ {n}}{x _ {n} ^ {3}}},\n$$\n\n由 $\\lim_{t\\to 0}\\frac{\\sin t - t}{t^3} = \\lim_{t\\to 0}\\frac{\\cos t - 1}{3t^2} = -\\frac{1}{6}$ 得 $\\lim_{n\\to \\infty}\\frac{\\sin x_n - x_n}{x_n^3} = -\\frac{1}{6}$ 故 $\\lim_{n\\to \\infty}\\left(\\frac{x_{n + 1}}{x_n}\\right)^{\\frac{1}{x_n^2}} = \\mathrm{e}^{-\\frac{1}{6}}.$",
+   "points": [
+    {
+     "text": "由 $0 < x_{1} < \\pi$ ，得 $x_{2} = \\sin x_{1} \\in (0, 1] \\subset \\left(0, \\frac{\\pi}{2}\\right)$\n于是 $x_{n}\\in (0,1)(n = 2,3,\\dots)$ ，故数列 $\\{x_{n}\\}$ 有界.",
+     "partial": 2
+    },
+    {
+     "text": "又当 $x \\geqslant 0$ 时， $\\sin x \\leqslant x$ ，所以 $x_{n+1} = \\sin x_n \\leqslant x_n$ ，即数列 $\\{x_n\\}$ 单调递减，由极限存在准则， $\\lim_{n \\to \\infty} x_n$ 存在.",
+     "partial": 2
+    },
+    {
+     "text": "令 $\\lim_{n\\to \\infty}x_n = A$ ，对 $x_{n + 1} = \\sin x_{n}$ 两边求极限得 $A = \\sin A$ ，则 $A = 0$ ，即 $\\lim_{n\\to \\infty}x_n = 0$",
+     "partial": 2
+    },
+    {
+     "text": "$\\lim_{n\\to \\infty}\\left(\\frac{x_{n + 1}}{x_n}\\right)^{\\frac{1}{x_n^2}} = \\lim_{n\\to \\infty}\\left(\\frac{\\sin x_n}{x_n}\\right)^{\\frac{1}{x_n^2}} = \\lim_{n\\to \\infty}\\left(1 + \\frac{\\sin x_n - x_n}{x_n}\\right)^{\\frac{1}{x_n^2}}$",
+     "partial": 2
+    },
+    {
+     "text": "$$\n= \\lim  _ {n \\rightarrow \\infty} \\left[\\left(1 + \\frac {\\sin x _ {n} - x _ {n}}{x _ {n}}\\right) ^ {\\frac {x _ {n}}{\\sin x _ {n} - x _ {n}}} \\right] ^ {\\frac {\\sin x _ {n} - x _ {n}}{x _ {n} ^ {3}}} = e ^ {\\lim  _ {n \\rightarrow \\infty} \\frac {\\sin x _ {n} - x _ {n}}{x _ {n} ^ {3}}},\n$$",
+     "partial": 2
+    },
+    {
+     "text": "由 $\\lim_{t\\to 0}\\frac{\\sin t - t}{t^3} = \\lim_{t\\to 0}\\frac{\\cos t - 1}{3t^2} = -\\frac{1}{6}$ 得 $\\lim_{n\\to \\infty}\\frac{\\sin x_n - x_n}{x_n^3} = -\\frac{1}{6}$ 故 $\\lim_{n\\to \\infty}\\left(\\frac{x_{n + 1}}{x_n}\\right)^{\\frac{1}{x_n^2}} = \\mathrm{e}^{-\\frac{1}{6}}.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n（I）由 $0 < x_{1} < \\pi$ ，得 $x_{2} = \\sin x_{1} \\in (0, 1] \\subset \\left(0, \\frac{\\pi}{2}\\right)$\n于是 $x_{n}\\in (0,1)(n = 2,3,\\dots)$ ，故数列 $\\{x_{n}\\}$ 有界.\n\n又当 $x \\geqslant 0$ 时， $\\sin x \\leqslant x$ ，所以 $x_{n+1} = \\sin x_n \\leqslant x_n$ ，即数列 $\\{x_n\\}$ 单调递减，由极限存在准则， $\\lim_{n \\to \\infty} x_n$ 存在.\n\n令 $\\lim_{n\\to \\infty}x_n = A$ ，对 $x_{n + 1} = \\sin x_{n}$ 两边求极限得 $A = \\sin A$ ，则 $A = 0$ ，即 $\\lim_{n\\to \\infty}x_n = 0$\n\n（Ⅱ） $\\lim_{n\\to \\infty}\\left(\\frac{x_{n + 1}}{x_n}\\right)^{\\frac{1}{x_n^2}} = \\lim_{n\\to \\infty}\\left(\\frac{\\sin x_n}{x_n}\\right)^{\\frac{1}{x_n^2}} = \\lim_{n\\to \\infty}\\left(1 + \\frac{\\sin x_n - x_n}{x_n}\\right)^{\\frac{1}{x_n^2}}$\n\n$$\n= \\lim  _ {n \\rightarrow \\infty} \\left[\\left(1 + \\frac {\\sin x _ {n} - x _ {n}}{x _ {n}}\\right) ^ {\\frac {x _ {n}}{\\sin x _ {n} - x _ {n}}} \\right] ^ {\\frac {\\sin x _ {n} - x _ {n}}{x _ {n} ^ {3}}} = e ^ {\\lim  _ {n \\rightarrow \\infty} \\frac {\\sin x _ {n} - x _ {n}}{x _ {n} ^ {3}}},\n$$\n\n由 $\\lim_{t\\to 0}\\frac{\\sin t - t}{t^3} = \\lim_{t\\to 0}\\frac{\\cos t - 1}{3t^2} = -\\frac{1}{6}$ 得 $\\lim_{n\\to \\infty}\\frac{\\sin x_n - x_n}{x_n^3} = -\\frac{1}{6}$ 故 $\\lim_{n\\to \\infty}\\left(\\frac{x_{n + 1}}{x_n}\\right)^{\\frac{1}{x_n^2}} = \\mathrm{e}^{-\\frac{1}{6}}.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 148
+  },
+  {
+   "id": "ky-2008-18-a145f5",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.8",
+   "knowledgePoints": [
+    "1.8"
+   ],
+   "source": {
+    "text": "2008 年考研数学（一）第 18 题",
+    "kind": "exam-original",
+    "year": 2008,
+    "region": "全国",
+    "paper": "2008 年考研数学（一）",
+    "number": "18",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2008年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2008年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2008年解析/2008年解析.md"
+   },
+   "stem": "设 $f(x)$ 是连续函数，\n(I) 利用定义证明函数 $F(x) = \\int_{0}^{x} f(t) \\, \\mathrm{d}t$ 可导，且 $F'(x) = f(x)$ ；\n(II) 当 $f(x)$ 是以 2 为周期的周期函数时, 证明 $G(x) = 2 \\int_{0}^{x} f(t) \\mathrm{d}t - x \\int_{0}^{2} f(t) \\mathrm{d}t$ 也是以 2 为周期的周期函数.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "（I） $\\Delta F(x) = F(x + \\Delta x) - F(x) = \\int_{0}^{x + \\Delta x} f(t) \\, \\mathrm{d}t - \\int_{0}^{x} f(t) \\, \\mathrm{d}t = \\int_{x}^{x + \\Delta x} f(t) \\, \\mathrm{d}t,$\n因为 $f(x)$ 连续，所以由积分中值定理\n\n$\\Delta F(x) = \\int_{x}^{x + \\Delta x}f(t)\\mathrm{d}t = f(\\xi)\\Delta x$ ，其中 $\\xi$ 位于 $x$ 与 $x + \\Delta x$ 之间，\n\n从而 $\\frac{\\Delta F(x)}{\\Delta x} = f(\\xi)$ ，于是 $\\lim_{\\Delta x \\to 0} \\frac{\\Delta F(x)}{\\Delta x} = \\lim_{\\Delta x \\to 0} f(\\xi) = f(x)$ ，即 $F'(x) = f(x)$\n\n（Ⅱ）设 $f(x + 2) = f(x)$ ，则\n\n$$\nG (x + 2) = 2 \\int_ {0} ^ {x + 2} f (t) d t - (x + 2) \\int_ {0} ^ {2} f (t) d t\n$$\n\n$$\n\\begin{array}{l} = 2 \\int_ {0} ^ {x} f (t) d t - x \\int_ {0} ^ {2} f (t) d t + 2 \\int_ {x} ^ {x + 2} f (t) d t - 2 \\int_ {0} ^ {2} f (t) d t \\\\ = G (x) + 2 \\int_ {x} ^ {x + 2} f (t) d t - 2 \\int_ {0} ^ {2} f (t) d t, \\\\ \\end{array}\n$$\n\n由周期函数的平移性质得 $\\int_{x}^{x + 2}f(t)\\mathrm{d}t = \\int_{0}^{2}f(t)\\mathrm{d}t$ ，于是 $2\\int_{x}^{x + 2}f(t)\\mathrm{d}t - 2\\int_{0}^{2}f(t)\\mathrm{d}t = 0$ 故 $G(x + 2) = G(x)$ ，即 $G(x)$ 是以2为周期的函数.",
+   "points": [
+    {
+     "text": "$\\Delta F(x) = F(x + \\Delta x) - F(x) = \\int_{0}^{x + \\Delta x} f(t) \\, \\mathrm{d}t - \\int_{0}^{x} f(t) \\, \\mathrm{d}t = \\int_{x}^{x + \\Delta x} f(t) \\, \\mathrm{d}t,$\n因为 $f(x)$ 连续，所以由积分中值定理",
+     "partial": 2
+    },
+    {
+     "text": "$\\Delta F(x) = \\int_{x}^{x + \\Delta x}f(t)\\mathrm{d}t = f(\\xi)\\Delta x$ ，其中 $\\xi$ 位于 $x$ 与 $x + \\Delta x$ 之间，",
+     "partial": 2
+    },
+    {
+     "text": "从而 $\\frac{\\Delta F(x)}{\\Delta x} = f(\\xi)$ ，于是 $\\lim_{\\Delta x \\to 0} \\frac{\\Delta F(x)}{\\Delta x} = \\lim_{\\Delta x \\to 0} f(\\xi) = f(x)$ ，即 $F'(x) = f(x)$",
+     "partial": 2
+    },
+    {
+     "text": "设 $f(x + 2) = f(x)$ ，则",
+     "partial": 2
+    },
+    {
+     "text": "$$\nG (x + 2) = 2 \\int_ {0} ^ {x + 2} f (t) d t - (x + 2) \\int_ {0} ^ {2} f (t) d t\n$$",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\begin{array}{l} = 2 \\int_ {0} ^ {x} f (t) d t - x \\int_ {0} ^ {2} f (t) d t + 2 \\int_ {x} ^ {x + 2} f (t) d t - 2 \\int_ {0} ^ {2} f (t) d t \\\\ = G (x) + 2 \\int_ {x} ^ {x + 2} f (t) d t - 2 \\int_ {0} ^ {2} f (t) d t, \\\\ \\end{array}\n$$；由周期函数的平移性质得 $\\int_{x}^{x + 2}f(t)\\mathrm{d}t = \\int_{0}^{2}f(t)\\mathrm{d}t$ ，于是 $2\\int_{x}^{x + 2}f(t)\\mathrm{d}t - 2\\int_{0}^{2}f(t)\\mathrm{d}t = 0$ 故 $G(x + 2) = G(x)$ ，即 $G(x)$ 是以2为周期的函数.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n（I） $\\Delta F(x) = F(x + \\Delta x) - F(x) = \\int_{0}^{x + \\Delta x} f(t) \\, \\mathrm{d}t - \\int_{0}^{x} f(t) \\, \\mathrm{d}t = \\int_{x}^{x + \\Delta x} f(t) \\, \\mathrm{d}t,$\n因为 $f(x)$ 连续，所以由积分中值定理\n\n$\\Delta F(x) = \\int_{x}^{x + \\Delta x}f(t)\\mathrm{d}t = f(\\xi)\\Delta x$ ，其中 $\\xi$ 位于 $x$ 与 $x + \\Delta x$ 之间，\n\n从而 $\\frac{\\Delta F(x)}{\\Delta x} = f(\\xi)$ ，于是 $\\lim_{\\Delta x \\to 0} \\frac{\\Delta F(x)}{\\Delta x} = \\lim_{\\Delta x \\to 0} f(\\xi) = f(x)$ ，即 $F'(x) = f(x)$\n\n（Ⅱ）设 $f(x + 2) = f(x)$ ，则\n\n$$\nG (x + 2) = 2 \\int_ {0} ^ {x + 2} f (t) d t - (x + 2) \\int_ {0} ^ {2} f (t) d t\n$$\n\n$$\n\\begin{array}{l} = 2 \\int_ {0} ^ {x} f (t) d t - x \\int_ {0} ^ {2} f (t) d t + 2 \\int_ {x} ^ {x + 2} f (t) d t - 2 \\int_ {0} ^ {2} f (t) d t \\\\ = G (x) + 2 \\int_ {x} ^ {x + 2} f (t) d t - 2 \\int_ {0} ^ {2} f (t) d t, \\\\ \\end{array}\n$$\n\n由周期函数的平移性质得 $\\int_{x}^{x + 2}f(t)\\mathrm{d}t = \\int_{0}^{2}f(t)\\mathrm{d}t$ ，于是 $2\\int_{x}^{x + 2}f(t)\\mathrm{d}t - 2\\int_{0}^{2}f(t)\\mathrm{d}t = 0$ 故 $G(x + 2) = G(x)$ ，即 $G(x)$ 是以2为周期的函数.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 149
+  },
+  {
+   "id": "ky-2010-17-03bc42",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2010 年考研数学（一）第 17 题",
+    "kind": "exam-original",
+    "year": 2010,
+    "region": "全国",
+    "paper": "2010 年考研数学（一）",
+    "number": "17",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2010年解析/2010年解析.md"
+   },
+   "stem": "(I) 比较 $\\int_{0}^{1} |\\ln t| [\\ln (1 + t)]^{n} \\mathrm{d}t$ 与 $\\int_{0}^{1} t^{n} |\\ln t| \\mathrm{d}t (n = 1,2,\\dots)$ 的大小，说明理由；\n（Ⅱ）记 $u_{n} = \\int_{0}^{1}|\\ln t|[\\ln (1 + t)]^{n}\\mathrm{d}t(n = 1,2,\\dots)$ ，求极限 $\\lim_{n\\to \\infty}u_n$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "（I）因为当 $0 \\leqslant t \\leqslant 1$ 时， $\\ln (1 + t) \\leqslant t$\n所以 $\\left|\\ln t\\right|\\left[\\ln (1 + t)\\right]^n\\leqslant t^n\\left|\\ln t\\right|$ ，于是 $\\int_0^1 |\\ln t|[\\ln (1 + t)]^n\\mathrm{d}t\\leqslant \\int_0^1 t^n |\\ln t|\\mathrm{d}t.$\n\n（Ⅱ）因为 $0 \\leqslant \\int_{0}^{1} |\\ln t| [\\ln (1 + t)]^{n} \\mathrm{d}t \\leqslant \\int_{0}^{1} t^{n} |\\ln t| \\mathrm{d}t$\n\n而 $\\int_0^1 t^n |\\ln t|\\mathrm{d}t = -\\frac{1}{n + 1}\\int_0^1\\ln t\\mathrm{d}(t^{n + 1}) = -\\frac{1}{n + 1}\\left[t^{n + 1}\\ln t\\Big|_0^1 -\\int_0^1 t^n\\mathrm{d}t\\right]$\n\n$$\n= - \\frac {1}{n + 1} t ^ {n + 1} \\ln t \\left| _ {0} ^ {1} + \\frac {1}{(n + 1) ^ {2}}, \\right.\n$$\n\n因为 $\\lim_{t\\to 0^{+}}t^{n + 1}\\ln t = \\lim_{t\\to 0^{+}}\\frac{\\ln t}{\\frac{1}{t^{n + 1}}} = \\lim_{t\\to 0^{+}}\\frac{\\frac{1}{t}}{-\\frac{n + 1}{t^{n + 2}}} = -\\frac{1}{n + 1}\\lim_{t\\to 0^{+}}t^{n + 1} = 0,$\n\n所以 $\\int_0^1 t^n |\\ln t|\\mathrm{d}t = \\frac{1}{(n + 1)^2}$ ，从而 $0\\leqslant \\int_0^1 |\\ln t|[\\ln (1 + t)]^n\\mathrm{d}t\\leqslant \\frac{1}{(n + 1)^2},$\n\n由迫敛定理得 $\\lim_{n\\to \\infty}\\int_{0}^{1}|\\ln t|[\\ln (1 + t)]^{n}\\mathrm{d}t = 0.$",
+   "points": [
+    {
+     "text": "因为当 $0 \\leqslant t \\leqslant 1$ 时， $\\ln (1 + t) \\leqslant t$\n所以 $\\left|\\ln t\\right|\\left[\\ln (1 + t)\\right]^n\\leqslant t^n\\left|\\ln t\\right|$ ，于是 $\\int_0^1 |\\ln t|[\\ln (1 + t)]^n\\mathrm{d}t\\leqslant \\int_0^1 t^n |\\ln t|\\mathrm{d}t.$",
+     "partial": 2
+    },
+    {
+     "text": "因为 $0 \\leqslant \\int_{0}^{1} |\\ln t| [\\ln (1 + t)]^{n} \\mathrm{d}t \\leqslant \\int_{0}^{1} t^{n} |\\ln t| \\mathrm{d}t$",
+     "partial": 2
+    },
+    {
+     "text": "而 $\\int_0^1 t^n |\\ln t|\\mathrm{d}t = -\\frac{1}{n + 1}\\int_0^1\\ln t\\mathrm{d}(t^{n + 1}) = -\\frac{1}{n + 1}\\left[t^{n + 1}\\ln t\\Big|_0^1 -\\int_0^1 t^n\\mathrm{d}t\\right]$",
+     "partial": 2
+    },
+    {
+     "text": "$$\n= - \\frac {1}{n + 1} t ^ {n + 1} \\ln t \\left| _ {0} ^ {1} + \\frac {1}{(n + 1) ^ {2}}, \\right.\n$$",
+     "partial": 2
+    },
+    {
+     "text": "因为 $\\lim_{t\\to 0^{+}}t^{n + 1}\\ln t = \\lim_{t\\to 0^{+}}\\frac{\\ln t}{\\frac{1}{t^{n + 1}}} = \\lim_{t\\to 0^{+}}\\frac{\\frac{1}{t}}{-\\frac{n + 1}{t^{n + 2}}} = -\\frac{1}{n + 1}\\lim_{t\\to 0^{+}}t^{n + 1} = 0,$",
+     "partial": 2
+    },
+    {
+     "text": "所以 $\\int_0^1 t^n |\\ln t|\\mathrm{d}t = \\frac{1}{(n + 1)^2}$ ，从而 $0\\leqslant \\int_0^1 |\\ln t|[\\ln (1 + t)]^n\\mathrm{d}t\\leqslant \\frac{1}{(n + 1)^2},$；由迫敛定理得 $\\lim_{n\\to \\infty}\\int_{0}^{1}|\\ln t|[\\ln (1 + t)]^{n}\\mathrm{d}t = 0.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n（I）因为当 $0 \\leqslant t \\leqslant 1$ 时， $\\ln (1 + t) \\leqslant t$\n所以 $\\left|\\ln t\\right|\\left[\\ln (1 + t)\\right]^n\\leqslant t^n\\left|\\ln t\\right|$ ，于是 $\\int_0^1 |\\ln t|[\\ln (1 + t)]^n\\mathrm{d}t\\leqslant \\int_0^1 t^n |\\ln t|\\mathrm{d}t.$\n\n（Ⅱ）因为 $0 \\leqslant \\int_{0}^{1} |\\ln t| [\\ln (1 + t)]^{n} \\mathrm{d}t \\leqslant \\int_{0}^{1} t^{n} |\\ln t| \\mathrm{d}t$\n\n而 $\\int_0^1 t^n |\\ln t|\\mathrm{d}t = -\\frac{1}{n + 1}\\int_0^1\\ln t\\mathrm{d}(t^{n + 1}) = -\\frac{1}{n + 1}\\left[t^{n + 1}\\ln t\\Big|_0^1 -\\int_0^1 t^n\\mathrm{d}t\\right]$\n\n$$\n= - \\frac {1}{n + 1} t ^ {n + 1} \\ln t \\left| _ {0} ^ {1} + \\frac {1}{(n + 1) ^ {2}}, \\right.\n$$\n\n因为 $\\lim_{t\\to 0^{+}}t^{n + 1}\\ln t = \\lim_{t\\to 0^{+}}\\frac{\\ln t}{\\frac{1}{t^{n + 1}}} = \\lim_{t\\to 0^{+}}\\frac{\\frac{1}{t}}{-\\frac{n + 1}{t^{n + 2}}} = -\\frac{1}{n + 1}\\lim_{t\\to 0^{+}}t^{n + 1} = 0,$\n\n所以 $\\int_0^1 t^n |\\ln t|\\mathrm{d}t = \\frac{1}{(n + 1)^2}$ ，从而 $0\\leqslant \\int_0^1 |\\ln t|[\\ln (1 + t)]^n\\mathrm{d}t\\leqslant \\frac{1}{(n + 1)^2},$\n\n由迫敛定理得 $\\lim_{n\\to \\infty}\\int_{0}^{1}|\\ln t|[\\ln (1 + t)]^{n}\\mathrm{d}t = 0.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 150
+  },
+  {
+   "id": "ky-2016-19-2683e0",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.3",
+   "knowledgePoints": [
+    "1.3"
+   ],
+   "source": {
+    "text": "2016 年考研数学（一）第 19 题",
+    "kind": "exam-original",
+    "year": 2016,
+    "region": "全国",
+    "paper": "2016 年考研数学（一）",
+    "number": "19",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2016年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2016年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2016年解析/2016年解析.md"
+   },
+   "stem": "已知函数 $f(x)$ 可导，且 $f(0) = 1, 0 < f'(x) < \\frac{1}{2}$ . 设数列 $\\{x_{n}\\}$ 满足 $x_{n+1} = f(x_{n}) (n = 1, 2, \\dots)$ . 证明：\n(I) 级数 $\\sum_{n=1}^{\\infty}\\left(x_{n+1}-x_{n}\\right)$ 绝对收敛;\n(II) $\\lim_{n\\to \\infty}x_n$ 存在，且 $0 < \\lim_{n\\to \\infty}x_n < 2.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) $|x_{n+1} - x_n| = |f(x_n) - f(x_{n-1})| = |f'(\\xi)(x_n - x_{n-1})|$ ，其中 $\\xi$ 介于 $x_{n-1}$ 与 $x_n$ 之间.\n\n因为 $0 < f'(x) < \\frac{1}{2}$ ，所以 $\\left|x_{n+1} - x_n\\right| \\leqslant \\frac{1}{2}\\left|x_n - x_{n-1}\\right|$ ，\n\n由递推关系得 $|x_{n + 1} - x_n| \\leqslant \\frac{1}{2^{n - 1}} |x_2 - x_1|$ .\n\n因为级数 $\\sum_{n=1}^{\\infty} \\frac{1}{2^{n-1}} |x_2 - x_1|$ 收敛，所以 $\\sum_{n=1}^{\\infty} |x_{n+1} - x_n|$ 收敛，\n\n故级数 $\\sum_{n = 1}^{\\infty}(x_{n + 1} - x_n)$ 绝对收敛.\n\n（Ⅱ）级数 $\\sum_{n = 1}^{\\infty}(x_{n + 1} - x_n)$ 的部分和为\n\n$$\nS _ {n} = \\left(x _ {2} - x _ {1}\\right) + \\left(x _ {3} - x _ {2}\\right) + \\dots + \\left(x _ {n + 1} - x _ {n}\\right) = x _ {n + 1} - x _ {1},\n$$\n\n因为级数 $\\sum_{n=1}^{\\infty}(x_{n+1}-x_n)$ 收敛，即 $\\lim_{n\\to\\infty}S_n$ 存在，所以 $\\lim_{n\\to\\infty}x_n$ 存在.\n\n令 $\\lim_{n\\to \\infty}x_n = a,x_{n + 1} = f(x_n)$ 及函数 $f(x)$ 的连续性得 $a = f(a)$\n\n令 $\\varphi (x) = x - f(x)$ ，即 $x = a$ 为 $\\varphi (x)$ 的零点\n\n因为 $\\varphi (0) = -f(0) = -1$\n\n$\\varphi (2) = 2 - f(2) = 1 - [f(2) - f(0)] = 1 - 2f'(\\eta) > 0$ ，其中 $\\eta \\in (0,2)$\n\n所以 $\\varphi (x)$ 在(0，2）内有零点\n\n又因为 $\\varphi'(x) = 1 - f'(x) > 0$ ，所以 $\\varphi(x)$ 只有唯一的一个零点，且位于 $(0,2)$ 内，于是 $0 < a < 2$ ，即 $0 < \\lim_{n\\to \\infty}x_n < 2$",
+   "points": [
+    {
+     "text": "(I) $|x_{n+1} - x_n| = |f(x_n) - f(x_{n-1})| = |f'(\\xi)(x_n - x_{n-1})|$ ，其中 $\\xi$ 介于 $x_{n-1}$ 与 $x_n$ 之间.\n\n因为 $0 < f'(x) < \\frac{1}{2}$ ，所以 $\\left|x_{n+1} - x_n\\right| \\leqslant \\frac{1}{2}\\left|x_n - x_{n-1}\\right|$ ，\n\n由递推关系得 $|x_{n + 1} - x_n| \\leqslant \\frac{1}{2^{n - 1}} |x_2 - x_1|$ .\n\n因为级数 $\\sum_{n=1}^{\\infty} \\frac{1}{2^{n-1}} |x_2 - x_1|$ 收敛，所以 $\\sum_{n=1}^{\\infty} |x_{n+1} - x_n|$ 收敛，\n\n故级数 $\\sum_{n = 1}^{\\infty}(x_{n + 1} - x_n)$ 绝对收敛.",
+     "partial": 2
+    },
+    {
+     "text": "级数 $\\sum_{n = 1}^{\\infty}(x_{n + 1} - x_n)$ 的部分和为",
+     "partial": 2
+    },
+    {
+     "text": "$$\nS _ {n} = \\left(x _ {2} - x _ {1}\\right) + \\left(x _ {3} - x _ {2}\\right) + \\dots + \\left(x _ {n + 1} - x _ {n}\\right) = x _ {n + 1} - x _ {1},\n$$",
+     "partial": 2
+    },
+    {
+     "text": "因为级数 $\\sum_{n=1}^{\\infty}(x_{n+1}-x_n)$ 收敛，即 $\\lim_{n\\to\\infty}S_n$ 存在，所以 $\\lim_{n\\to\\infty}x_n$ 存在.",
+     "partial": 2
+    },
+    {
+     "text": "令 $\\lim_{n\\to \\infty}x_n = a,x_{n + 1} = f(x_n)$ 及函数 $f(x)$ 的连续性得 $a = f(a)$",
+     "partial": 2
+    },
+    {
+     "text": "令 $\\varphi (x) = x - f(x)$ ，即 $x = a$ 为 $\\varphi (x)$ 的零点；因为 $\\varphi (0) = -f(0) = -1$；$\\varphi (2) = 2 - f(2) = 1 - [f(2) - f(0)] = 1 - 2f'(\\eta) > 0$ ，其中 $\\eta \\in (0,2)$；所以 $\\varphi (x)$ 在(0，2）内有零点；又因为 $\\varphi'(x) = 1 - f'(x) > 0$ ，所以 $\\varphi(x)$ 只有唯一的一个零点，且位于 $(0,2)$ 内，于是 $0 < a < 2$ ，即 $0 < \\lim_{n\\to \\infty}x_n < 2$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) $|x_{n+1} - x_n| = |f(x_n) - f(x_{n-1})| = |f'(\\xi)(x_n - x_{n-1})|$ ，其中 $\\xi$ 介于 $x_{n-1}$ 与 $x_n$ 之间.\n\n因为 $0 < f'(x) < \\frac{1}{2}$ ，所以 $\\left|x_{n+1} - x_n\\right| \\leqslant \\frac{1}{2}\\left|x_n - x_{n-1}\\right|$ ，\n\n由递推关系得 $|x_{n + 1} - x_n| \\leqslant \\frac{1}{2^{n - 1}} |x_2 - x_1|$ .\n\n因为级数 $\\sum_{n=1}^{\\infty} \\frac{1}{2^{n-1}} |x_2 - x_1|$ 收敛，所以 $\\sum_{n=1}^{\\infty} |x_{n+1} - x_n|$ 收敛，\n\n故级数 $\\sum_{n = 1}^{\\infty}(x_{n + 1} - x_n)$ 绝对收敛.\n\n（Ⅱ）级数 $\\sum_{n = 1}^{\\infty}(x_{n + 1} - x_n)$ 的部分和为\n\n$$\nS _ {n} = \\left(x _ {2} - x _ {1}\\right) + \\left(x _ {3} - x _ {2}\\right) + \\dots + \\left(x _ {n + 1} - x _ {n}\\right) = x _ {n + 1} - x _ {1},\n$$\n\n因为级数 $\\sum_{n=1}^{\\infty}(x_{n+1}-x_n)$ 收敛，即 $\\lim_{n\\to\\infty}S_n$ 存在，所以 $\\lim_{n\\to\\infty}x_n$ 存在.\n\n令 $\\lim_{n\\to \\infty}x_n = a,x_{n + 1} = f(x_n)$ 及函数 $f(x)$ 的连续性得 $a = f(a)$\n\n令 $\\varphi (x) = x - f(x)$ ，即 $x = a$ 为 $\\varphi (x)$ 的零点\n\n因为 $\\varphi (0) = -f(0) = -1$\n\n$\\varphi (2) = 2 - f(2) = 1 - [f(2) - f(0)] = 1 - 2f'(\\eta) > 0$ ，其中 $\\eta \\in (0,2)$\n\n所以 $\\varphi (x)$ 在(0，2）内有零点\n\n又因为 $\\varphi'(x) = 1 - f'(x) > 0$ ，所以 $\\varphi(x)$ 只有唯一的一个零点，且位于 $(0,2)$ 内，于是 $0 < a < 2$ ，即 $0 < \\lim_{n\\to \\infty}x_n < 2$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 151
+  },
+  {
+   "id": "ky-2018-19-0a0c01",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.2",
+   "knowledgePoints": [
+    "1.2"
+   ],
+   "source": {
+    "text": "2018 年考研数学（一）第 19 题",
+    "kind": "exam-original",
+    "year": 2018,
+    "region": "全国",
+    "paper": "2018 年考研数学（一）",
+    "number": "19",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2018年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2018年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2018年解析/2018年解析.md"
+   },
+   "stem": "设数列 $\\{x_{n}\\}$ 满足： $x_{1} > 0, x_{n} \\mathrm{e}^{x_{n + 1}} = \\mathrm{e}^{x_{n}} - 1 (n = 1,2,\\dots)$ . 证明数列 $\\{x_{n}\\}$ 收敛，并求 $\\lim_{n\\to \\infty}x_n$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "因为 $x_{1} \\neq 0$ ，所以 $\\mathrm{e}^{x_2} = \\frac{\\mathrm{e}^{x_1} - 1}{x_1}$\n由微分中值定理，存在 $\\xi \\in (0,x_1)$ ，使得 $\\frac{\\mathrm{e}^{x_1} - 1}{x_1} = \\mathrm{e}^{\\xi}$ 即 $\\mathrm{e}^{x_2} = \\mathrm{e}^{\\xi}$ ，因此 $0 < x_{2} < x_{1}$\n\n假设 $0 < x_{n + 1} < x_n$ ，则 $\\mathrm{e}^{x_{n + 2}} = \\frac{\\mathrm{e}^{x_{n + 1}} - 1}{x_{n + 1}} = \\mathrm{e}^{\\eta}(0 < \\eta < x_{n + 1})$ ，得 $0 < x_{n + 2} < x_{n + 1}$ 。故 $\\{x_n\\}$ 是单调减少的数列，且有下界，从而 $\\{x_n\\}$ 收敛。\n\n设 $\\lim_{n\\to \\infty}x_n = a$ ，在等式 $x_{n}\\mathrm{e}^{x_{n + 1}} = \\mathrm{e}^{x_{n}} - 1$ 两边取极限，得 $a\\mathrm{e}^a = \\mathrm{e}^a -1$ ，显然 $a = 0$ 为其解又令 $f(x) = x\\mathrm{e}^{x} - \\mathrm{e}^{x} + 1$ ，则 $f^{\\prime}(x) = x\\mathrm{e}^{x}$\n\n当 $x > 0$ 时， $f^{\\prime}(x) = x\\mathrm{e}^{x} > 0$ ，函数 $f(x)$ 在 $[0, + \\infty)$ 上单调增加，\n\n所以 $a = 0$ 是方程 $a\\mathrm{e}^a = \\mathrm{e}^a -1$ 在 $[0, + \\infty)$ 上的唯一解，故 $\\lim_{n\\to \\infty}x_n = 0$",
+   "points": [
+    {
+     "text": "因为 $x_{1} \\neq 0$ ，所以 $\\mathrm{e}^{x_2} = \\frac{\\mathrm{e}^{x_1} - 1}{x_1}$\n由微分中值定理，存在 $\\xi \\in (0,x_1)$ ，使得 $\\frac{\\mathrm{e}^{x_1} - 1}{x_1} = \\mathrm{e}^{\\xi}$ 即 $\\mathrm{e}^{x_2} = \\mathrm{e}^{\\xi}$ ，因此 $0 < x_{2} < x_{1}$",
+     "partial": 2
+    },
+    {
+     "text": "假设 $0 < x_{n + 1} < x_n$ ，则 $\\mathrm{e}^{x_{n + 2}} = \\frac{\\mathrm{e}^{x_{n + 1}} - 1}{x_{n + 1}} = \\mathrm{e}^{\\eta}(0 < \\eta < x_{n + 1})$ ，得 $0 < x_{n + 2} < x_{n + 1}$ 。故 $\\{x_n\\}$ 是单调减少的数列，且有下界，从而 $\\{x_n\\}$ 收敛。",
+     "partial": 2
+    },
+    {
+     "text": "设 $\\lim_{n\\to \\infty}x_n = a$ ，在等式 $x_{n}\\mathrm{e}^{x_{n + 1}} = \\mathrm{e}^{x_{n}} - 1$ 两边取极限，得 $a\\mathrm{e}^a = \\mathrm{e}^a -1$ ，显然 $a = 0$ 为其解又令 $f(x) = x\\mathrm{e}^{x} - \\mathrm{e}^{x} + 1$ ，则 $f^{\\prime}(x) = x\\mathrm{e}^{x}$",
+     "partial": 2
+    },
+    {
+     "text": "当 $x > 0$ 时， $f^{\\prime}(x) = x\\mathrm{e}^{x} > 0$ ，函数 $f(x)$ 在 $[0, + \\infty)$ 上单调增加，",
+     "partial": 2
+    },
+    {
+     "text": "所以 $a = 0$ 是方程 $a\\mathrm{e}^a = \\mathrm{e}^a -1$ 在 $[0, + \\infty)$ 上的唯一解，故 $\\lim_{n\\to \\infty}x_n = 0$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n因为 $x_{1} \\neq 0$ ，所以 $\\mathrm{e}^{x_2} = \\frac{\\mathrm{e}^{x_1} - 1}{x_1}$\n由微分中值定理，存在 $\\xi \\in (0,x_1)$ ，使得 $\\frac{\\mathrm{e}^{x_1} - 1}{x_1} = \\mathrm{e}^{\\xi}$ 即 $\\mathrm{e}^{x_2} = \\mathrm{e}^{\\xi}$ ，因此 $0 < x_{2} < x_{1}$\n\n假设 $0 < x_{n + 1} < x_n$ ，则 $\\mathrm{e}^{x_{n + 2}} = \\frac{\\mathrm{e}^{x_{n + 1}} - 1}{x_{n + 1}} = \\mathrm{e}^{\\eta}(0 < \\eta < x_{n + 1})$ ，得 $0 < x_{n + 2} < x_{n + 1}$ 。故 $\\{x_n\\}$ 是单调减少的数列，且有下界，从而 $\\{x_n\\}$ 收敛。\n\n设 $\\lim_{n\\to \\infty}x_n = a$ ，在等式 $x_{n}\\mathrm{e}^{x_{n + 1}} = \\mathrm{e}^{x_{n}} - 1$ 两边取极限，得 $a\\mathrm{e}^a = \\mathrm{e}^a -1$ ，显然 $a = 0$ 为其解又令 $f(x) = x\\mathrm{e}^{x} - \\mathrm{e}^{x} + 1$ ，则 $f^{\\prime}(x) = x\\mathrm{e}^{x}$\n\n当 $x > 0$ 时， $f^{\\prime}(x) = x\\mathrm{e}^{x} > 0$ ，函数 $f(x)$ 在 $[0, + \\infty)$ 上单调增加，\n\n所以 $a = 0$ 是方程 $a\\mathrm{e}^a = \\mathrm{e}^a -1$ 在 $[0, + \\infty)$ 上的唯一解，故 $\\lim_{n\\to \\infty}x_n = 0$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 152
+  },
+  {
+   "id": "ky-2020-18-b9d2bc",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.8",
+   "knowledgePoints": [
+    "1.8"
+   ],
+   "source": {
+    "text": "2020 年考研数学（一）第 18 题",
+    "kind": "exam-original",
+    "year": 2020,
+    "region": "全国",
+    "paper": "2020 年考研数学（一）",
+    "number": "18",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2020年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2020年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2020年解析/2020年解析.md"
+   },
+   "stem": "设 $\\Sigma$ 为曲面 $z = \\sqrt{x^2 + y^2}$ （ $1 \\leqslant x^2 + y^2 \\leqslant 4$ ）的下侧， $f(x)$ 是连续函数，计算\n$$\nI = \\iint_ {\\Sigma} [ x f (x y) + 2 x - y ] d y d z + [ y f (x y) + 2 y + x ] d z d x + [ z f (x y) + z ] d x d y.\n$$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "因为 $\\Sigma$ 的法向量为 $(x, y, -z)$ ，所以\n$$\n\\begin{array}{l} I = \\iint_ {\\Sigma} \\frac {1}{\\sqrt {2 (x ^ {2} + y ^ {2})}} \\left[ \\left(x ^ {2} + y ^ {2} - z ^ {2}\\right) f (x y) + 2 x ^ {2} + 2 y ^ {2} - z ^ {2} \\right] d S \\\\ = \\frac {\\sqrt {2}}{2} \\iint_ {\\Sigma} \\sqrt {x ^ {2} + y ^ {2}} d S. \\\\ \\end{array}\n$$\n\n记 $D = \\{(x,y)\\mid 1\\leqslant x^2 +y^2\\leqslant 4\\}$ ，又\n\n$$\n\\sqrt {\\left(\\frac {\\partial z}{\\partial x}\\right) ^ {2} + \\left(\\frac {\\partial z}{\\partial y}\\right) ^ {2} + 1} = \\sqrt {\\left(\\frac {x}{\\sqrt {x ^ {2} + y ^ {2}}}\\right) ^ {2} + \\left(\\frac {y}{\\sqrt {x ^ {2} + y ^ {2}}}\\right) ^ {2} + 1} = \\sqrt {2}.\n$$\n\n故\n\n$$\n\\begin{array}{l} I = \\iint_ {D} \\sqrt {x ^ {2} + y ^ {2}} d x d y \\\\ = \\int_ {0} ^ {2 \\pi} \\mathrm {d} \\theta \\int_ {1} ^ {2} r ^ {2} \\mathrm {d} r \\\\ = \\frac {1 4}{3} \\pi . \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "因为 $\\Sigma$ 的法向量为 $(x, y, -z)$ ，所以\n$$\n\\begin{array}{l} I = \\iint_ {\\Sigma} \\frac {1}{\\sqrt {2 (x ^ {2} + y ^ {2})}} \\left[ \\left(x ^ {2} + y ^ {2} - z ^ {2}\\right) f (x y) + 2 x ^ {2} + 2 y ^ {2} - z ^ {2} \\right] d S \\\\ = \\frac {\\sqrt {2}}{2} \\iint_ {\\Sigma} \\sqrt {x ^ {2} + y ^ {2}} d S. \\\\ \\end{array}\n$$",
+     "partial": 2
+    },
+    {
+     "text": "记 $D = \\{(x,y)\\mid 1\\leqslant x^2 +y^2\\leqslant 4\\}$ ，又",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\sqrt {\\left(\\frac {\\partial z}{\\partial x}\\right) ^ {2} + \\left(\\frac {\\partial z}{\\partial y}\\right) ^ {2} + 1} = \\sqrt {\\left(\\frac {x}{\\sqrt {x ^ {2} + y ^ {2}}}\\right) ^ {2} + \\left(\\frac {y}{\\sqrt {x ^ {2} + y ^ {2}}}\\right) ^ {2} + 1} = \\sqrt {2}.\n$$",
+     "partial": 2
+    },
+    {
+     "text": "故",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\begin{array}{l} I = \\iint_ {D} \\sqrt {x ^ {2} + y ^ {2}} d x d y \\\\ = \\int_ {0} ^ {2 \\pi} \\mathrm {d} \\theta \\int_ {1} ^ {2} r ^ {2} \\mathrm {d} r \\\\ = \\frac {1 4}{3} \\pi . \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n因为 $\\Sigma$ 的法向量为 $(x, y, -z)$ ，所以\n$$\n\\begin{array}{l} I = \\iint_ {\\Sigma} \\frac {1}{\\sqrt {2 (x ^ {2} + y ^ {2})}} \\left[ \\left(x ^ {2} + y ^ {2} - z ^ {2}\\right) f (x y) + 2 x ^ {2} + 2 y ^ {2} - z ^ {2} \\right] d S \\\\ = \\frac {\\sqrt {2}}{2} \\iint_ {\\Sigma} \\sqrt {x ^ {2} + y ^ {2}} d S. \\\\ \\end{array}\n$$\n\n记 $D = \\{(x,y)\\mid 1\\leqslant x^2 +y^2\\leqslant 4\\}$ ，又\n\n$$\n\\sqrt {\\left(\\frac {\\partial z}{\\partial x}\\right) ^ {2} + \\left(\\frac {\\partial z}{\\partial y}\\right) ^ {2} + 1} = \\sqrt {\\left(\\frac {x}{\\sqrt {x ^ {2} + y ^ {2}}}\\right) ^ {2} + \\left(\\frac {y}{\\sqrt {x ^ {2} + y ^ {2}}}\\right) ^ {2} + 1} = \\sqrt {2}.\n$$\n\n故\n\n$$\n\\begin{array}{l} I = \\iint_ {D} \\sqrt {x ^ {2} + y ^ {2}} d x d y \\\\ = \\int_ {0} ^ {2 \\pi} \\mathrm {d} \\theta \\int_ {1} ^ {2} r ^ {2} \\mathrm {d} r \\\\ = \\frac {1 4}{3} \\pi . \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 153
+  }
+ ]
+}

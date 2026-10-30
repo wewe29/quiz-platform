@@ -2,6 +2,15 @@
  "schema": "quiz-platform-registry-v1",
  "subjects": [
   {
+   "id": "calculus",
+   "name": "高等数学",
+   "textbook": "同济大学《高等数学》第七版（含考研真题 1987–2026）",
+   "url": "subjects/calculus/",
+   "total": 856,
+   "chapters": 12,
+   "realExamTagged": 676
+  },
+  {
    "id": "linalg",
    "name": "线性代数",
    "textbook": "同济大学《工程数学·线性代数》第六版",

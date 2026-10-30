@@ -22,7 +22,7 @@ REQUIRED_Q_FIELDS = ["id", "type", "typeGroup", "difficulty", "chapter",
                      "knowledgePoint", "source", "stem", "answer", "explanation"]
 TYPES = {"single", "multi", "judge", "blank", "term", "short", "calc"}
 DIFFS = {"basic", "medium", "hard"}
-SUBJECTIVE = {"term": 2, "short": 3, "calc": 4}
+SUBJECTIVE = {"term", "short", "calc"}
 
 errors = []
 warnings = []
@@ -104,11 +104,24 @@ def check_subject(subjects_dir, sid):
                 if q["type"] == "multi" and len(q.get("answer") or []) < 2:
                     err("%s/%s: 多选答案数 < 2" % (sid, q["id"]))
             if q.get("type") in SUBJECTIVE:
+                # 跨学科规则：主观题必须有参考答案与 ≥1 个采分点（含分值）；
+                # 采分点「数量」的学科口径由各学科自己的门禁管（线代 2/3/4 点、高数 1–6 点不定），
+                # 平台端只保证满分（Σpartial）可计算。
                 if not q.get("answerText"):
                     err("%s/%s: 主观题缺参考答案" % (sid, q["id"]))
                 pts = q.get("points") or []
-                if len(pts) != SUBJECTIVE[q["type"]]:
-                    err("%s/%s: 采分点数 %d != %d" % (sid, q["id"], len(pts), SUBJECTIVE[q["type"]]))
+                if not pts:
+                    err("%s/%s: 主观题缺采分点" % (sid, q["id"]))
+                else:
+                    total_partial = 0
+                    for p in pts:
+                        if isinstance(p, dict) and p.get("text"):
+                            total_partial += p.get("partial") or 2
+                        else:
+                            err("%s/%s: 采分点不是 {text,partial} 结构" % (sid, q["id"]))
+                            break
+                    if total_partial <= 0:
+                        err("%s/%s: 采分点分值合计 ≤ 0" % (sid, q["id"]))
             by_diff[q.get("difficulty")] = by_diff.get(q.get("difficulty"), 0) + 1
 
     cal = m.get("caliber") or {}
@@ -170,6 +183,49 @@ def check_external_refs(platform):
                     err("%s: 外部自动加载资源 %s" % (os.path.relpath(p, platform), ref[:80]))
 
 
+def check_subject_shell(sid, sdir):
+    """壳防分叉（D15）+ 模块接线（R2）：
+    1) core/*.js、app.js、subject.css 必须与模板字节一致；index.html 必须等于模板按
+       .stamp.json 重放替换的结果——改共享前端必须走模板 + new_subject --restamp；
+    2) index.html 必须引用全部 core 模块与 app.js/subject.js/KaTeX；app.js 必须真实
+       调用 LAStore/LABank（R2：不建没有调用方的模块）。"""
+    tpl = os.path.join(HERE, "template_subject")
+    stamp_p = os.path.join(sdir, ".stamp.json")
+    if not os.path.isfile(stamp_p):
+        err("%s: 缺 .stamp.json（用 tools/platform/new_subject.py 盖章）" % sid)
+        return
+    with open(stamp_p, encoding="utf-8") as f:
+        stamp = json.load(f)
+
+    for rel in ("assets/js/app.js", "assets/js/core/store.js",
+                "assets/js/core/bank.js", "assets/css/subject.css"):
+        t, s = os.path.join(tpl, rel), os.path.join(sdir, rel)
+        if not os.path.isfile(s):
+            err("%s: 缺 %s" % (sid, rel))
+            continue
+        if open(t, "rb").read() != open(s, "rb").read():
+            err("%s: %s 与模板不一致（改模板后需 new_subject.py --restamp）" % (sid, rel))
+
+    tpl_html = open(os.path.join(tpl, "index.html"), encoding="utf-8").read()
+    expect_html = tpl_html.replace("__SUBJECT_NAME__", stamp.get("name", "")) \
+                          .replace("__SUBJECT_DESC__", stamp.get("desc", ""))
+    idx = os.path.join(sdir, "index.html")
+    if os.path.isfile(idx):
+        got = open(idx, encoding="utf-8").read()
+        if got != expect_html:
+            err("%s: index.html 与模板盖章结果不一致（D15）" % sid)
+        for need in ("core/store.js", "core/bank.js", "assets/js/app.js",
+                     "assets/js/subject.js", "katex.min.js", "auto-render.min.js"):
+            if need not in got:
+                err("%s: index.html 未引用 %s" % (sid, need))
+    app_js = os.path.join(sdir, "assets", "js", "app.js")
+    if os.path.isfile(app_js):
+        txt = open(app_js, encoding="utf-8").read()
+        for sym in ("LAStore", "LABank"):
+            if sym not in txt:
+                err("%s: app.js 未调用 %s（R2 未接线）" % (sid, sym))
+
+
 def main():
     subjects_dir = os.path.join(PLATFORM, "subjects")
     reg_path = os.path.join(subjects_dir, "registry.json")
@@ -202,6 +258,7 @@ def main():
     for sid in sorted(listed):
         print("  [check] 学科 %s" % sid)
         check_subject(subjects_dir, sid)
+        check_subject_shell(sid, os.path.join(subjects_dir, sid))
 
     check_external_refs(PLATFORM)
 

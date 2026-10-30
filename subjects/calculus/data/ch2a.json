@@ -1,0 +1,2212 @@
+{
+ "chapter": 2,
+ "questions": [
+  {
+   "id": "c2-s1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.1",
+   "knowledgePoints": [
+    "2.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §2.1 导数概念",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $f(x)$ 在 $x_0$ 处可导，则 $\\lim\\limits_{h\\to 0}\\dfrac{f(x_0+h)-f(x_0-h)}{2h}=$",
+   "options": [
+    "$2f'(x_0)$",
+    "$f'(x_0)$",
+    "$\\dfrac{1}{2}f'(x_0)$",
+    "$0$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：拆成两个标准定义式的平均：\n$$\\frac{f(x_0+h)-f(x_0-h)}{2h}=\\frac12\\left[\\frac{f(x_0+h)-f(x_0)}{h}+\\frac{f(x_0-h)-f(x_0)}{-h}\\right]\\to\\frac12\\left[f'(x_0)+f'(x_0)\\right]=f'(x_0),$$\n故 B 正确。\nA 错：把分母 $2h$ 与两个增量 $2h$ 重复约分。\nC 错：恰好弄反了 $\\dfrac12$ 系数的去向。\nD 错：分子并不是高阶小量，两个增量都携带一阶信息。",
+   "misconception": "⚠️易错点：该对称差商「存在且等于 $f'(x_0)$」依赖可导这一前提；反过来对称差商存在却推不出可导（见本章判断题）。",
+   "extension": null,
+   "tags": [
+    "导数定义"
+   ],
+   "verify": [],
+   "idx": 154
+  },
+  {
+   "id": "ky2-1987-3-b949cd",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "1987 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1987,
+    "region": "全国",
+    "paper": "1987 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x)$ 在 $x = a$ 处可导，则 $\\lim_{x\\to 0}\\frac{f(a + x) - f(a - x)}{x}$ 等于……（）",
+   "options": [
+    "$f^{\\prime}(a)$",
+    "$2f^{\\prime}(a)$",
+    "0",
+    "$f^{\\prime}(2a)$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：B\n应选 (B).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 155
+  },
+  {
+   "id": "ky2-1988-1-1dcb14",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "1988 年考研数学三第 1 题",
+    "kind": "exam-original",
+    "year": 1988,
+    "region": "全国",
+    "paper": "1988 年考研数学三",
+    "number": "1",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$f(x) = \\frac{1}{3} x^{3} + \\frac{1}{2} x^{2} + 6x + 1$ 的图形在点 (0,1) 处切线与 $x$ 轴交点的坐标是 $\\cdots$ （）",
+   "options": [
+    "$\\left(-\\frac{1}{6},0\\right)$",
+    "$(-1,0)$",
+    "$\\left(\\frac{1}{6},0\\right)$",
+    "$(1,0)$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A\n应选 (A).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 156
+  },
+  {
+   "id": "ky2-1992-2-f89bc5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.1",
+   "knowledgePoints": [
+    "2.1"
+   ],
+   "source": {
+    "text": "1992 年考研数学三第 2 题",
+    "kind": "exam-original",
+    "year": 1992,
+    "region": "全国",
+    "paper": "1992 年考研数学三",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x) = \\begin{cases} x^2, & x \\leqslant 0 \\\\ x^2 + x, & x > 0 \\end{cases}$ ，则",
+   "options": [
+    "$f(-x) = \\left\\{ \\begin{array}{ll} - x^2, & x\\leqslant 0,\\\\ -(x^2 +x), & x > 0. \\end{array} \\right.$",
+    "$f(-x) = \\left\\{ \\begin{array}{ll} - (x^2 +x), & x < 0,\\\\ -x^2, & x\\geqslant 0. \\end{array} \\right.$",
+    "$f(-x) = \\left\\{ \\begin{array}{ll}x^{2}, & x\\leqslant 0,\\\\ x^{2} - x, & x > 0. \\end{array} \\right.$",
+    "$f(-x) = \\left\\{ \\begin{array}{ll} x^2 - x, & x < 0, \\\\ x^2, & x \\geqslant 0. \\end{array} \\right.$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：D\n应选 (D).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 157
+  },
+  {
+   "id": "ky2-1993-2-8b70dc",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "1993 年考研数学三第 2 题",
+    "kind": "exam-original",
+    "year": 1993,
+    "region": "全国",
+    "paper": "1993 年考研数学三",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x) = \\begin{cases} \\frac{|x^2 - 1|}{x - 1}, & x \\neq 1, \\\\ 2, & x = 1, \\end{cases}$ 则在点 $x = 1$ 处函数 $f(x) \\cdots \\cdots \\cdots \\cdots \\cdots \\cdots \\cdots \\cdots \\cdots \\cdots \\cdots \\cdots \\cdots \\cdots$ （）",
+   "options": [
+    "不连续",
+    "连续, 但不可导",
+    "可导，但导数不连续",
+    "可导，且导数连续"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A\n应选 (A).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 158
+  },
+  {
+   "id": "ky2-1994-2-9225a5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "1994 年考研数学三第 2 题",
+    "kind": "exam-original",
+    "year": 1994,
+    "region": "全国",
+    "paper": "1994 年考研数学三",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x) = \\begin{cases} \\frac{2}{3} x^3, & x \\leqslant 1, \\\\ x^2, & x > 1, \\end{cases}$ 则 $f(x)$ 在 $x = 1$ 处………( )",
+   "options": [
+    "左、右导数都存在",
+    "左导数存在, 但右导数不存在",
+    "左导数不存在, 但右导数存在",
+    "左、右导数都不存在"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：B\n应选 (B).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 159
+  },
+  {
+   "id": "ky2-1995-5-4f6d9f",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "1995 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1995,
+    "region": "全国",
+    "paper": "1995 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x)$ 可导， $F(x) = f(x)(1 + |\\sin x|)$ ，若 $F(x)$ 在 $x = 0$ 处可导，则必有 $\\cdots$ （）",
+   "options": [
+    "$f(0) = 0$",
+    "$f^{\\prime}(0) = 0$",
+    "$f(0) + f'(0) = 0$",
+    "$f(0) - f'(0) = 0$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A\n应选 (A). 设 $F(x)$ 在 $x = 0$ 处可导, 则 $f(x) \\cdot |\\sin x|$ 在 $x = 0$ 处可导, 由可导的充要条件知\n$$\n\\lim  _ {x \\rightarrow 0 ^ {-}} \\frac {f (x) \\cdot | \\sin x |}{x} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {f (x) \\cdot | \\sin x |}{x}.\n$$\n根据重要极限 $\\lim_{x\\to 0}\\frac{\\sin x}{x} = 1$ ，可得\n$$\n\\lim  _ {x \\rightarrow 0 ^ {-}} \\frac {| \\sin x |}{x} = - \\lim  _ {x \\rightarrow 0 ^ {-}} \\frac {\\sin x}{x} = - 1, \\quad \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {| \\sin x |}{x} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {\\sin x}{x} = 1.\n$$\n因此我们有 $f(0) = -f(0)$ ，故 $f(0) = 0$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 160
+  },
+  {
+   "id": "ky2-1996-2-c6116f",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "1996 年考研数学三第 2 题",
+    "kind": "exam-original",
+    "year": 1996,
+    "region": "全国",
+    "paper": "1996 年考研数学三",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(x)$ 在区间 $(- \\delta, \\delta)$ 内有定义，若当 $x \\in (-\\delta, \\delta)$ 时，恒有 $\\left|f(x)\\right| \\leqslant x^{2}$ ，则 $x = 0$ 必是 $f(x)$ 的……( )",
+   "options": [
+    "间断点",
+    "连续而不可导的点",
+    "可导的点, 且 $f^{\\prime}(0) = 0$",
+    "可导的点, 且 $f^{\\prime}(0) \\neq 0$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：C\n应选 (C).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 161
+  },
+  {
+   "id": "ky2-1997-5-749ad1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.1",
+   "knowledgePoints": [
+    "2.1"
+   ],
+   "source": {
+    "text": "1997 年考研数学二第 5 题",
+    "kind": "exam-original",
+    "year": 1997,
+    "region": "全国",
+    "paper": "1997 年考研数学二",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $g(x) = \\begin{cases} 2 - x, & x \\leqslant 0 \\\\ x + 2, & x > 0 \\end{cases}$ , $f(x) = \\begin{cases} x^2, & x < 0 \\\\ -x, & x \\geqslant 0 \\end{cases}$ , 则 $g[f(x)]$ 为……( )",
+   "options": [
+    "$\\left\\{ \\begin{array}{ll}2 + x^2, & x < 0,\\\\ 2 - x, & x\\geqslant 0. \\end{array} \\right.$",
+    "$\\left\\{ \\begin{array}{ll}2 - x^2, & x < 0,\\\\ 2 + x, & x\\geqslant 0. \\end{array} \\right.$",
+    "$\\left\\{ \\begin{array}{ll}2 - x^2, & x < 0,\\\\ 2 - x, & x\\geqslant 0. \\end{array} \\right.$",
+    "$\\left\\{ \\begin{array}{ll}2 + x^2, & x < 0,\\\\ 2 + x, & x\\geqslant 0. \\end{array} \\right.$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：D\n应选 (D).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 162
+  },
+  {
+   "id": "ky2-2001-1-dc40b9",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.1",
+   "knowledgePoints": [
+    "2.1"
+   ],
+   "source": {
+    "text": "2001 年考研数学二第 1 题",
+    "kind": "exam-original",
+    "year": 2001,
+    "region": "全国",
+    "paper": "2001 年考研数学二",
+    "number": "1",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x) = \\begin{cases} 1, & |x| \\leqslant 1, \\\\ 0, & |x| > 1, \\end{cases}$ 则 $f\\left\\{f[f(x)]\\right\\}$ 等于……（）",
+   "options": [
+    "0",
+    "1",
+    "$\\left\\{ \\begin{array}{ll}1, & |x|\\leqslant 1,\\\\ 0, & |x| > 1. \\end{array} \\right.$",
+    "$f(x) = \\left\\{ \\begin{array}{ll}0, & |x|\\leqslant 1,\\\\ 1, & |x| > 1. \\end{array} \\right.$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：B\n应选 (B). 因为 $f(x) = \\begin{cases} 1, & |x| \\leqslant 1 \\\\ 0, & |x| > 1 \\end{cases}$ ，所以在整个定义域内 $f(x) = 0$ 或 $f(x) = 1$ ，所以 $|f(x)| \\leqslant 1$ ，于是 $f[f(x)] = 1$ ，从而 $f\\{f[f(x)]\\} = f(1) = 1$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 163
+  },
+  {
+   "id": "ky2-2002-1-ed23ca",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2002 年考研数学二第 1 题",
+    "kind": "exam-original",
+    "year": 2002,
+    "region": "全国",
+    "paper": "2002 年考研数学二",
+    "number": "1",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(u)$ 可导, $y = f(x^{2})$ 当自变量 $x$ 在 $x = -1$ 处取得增量 $\\Delta x = -0.1$ 时, 相应的函数增量 $\\Delta y$ 的线性主部为 0.1 , 则 $f^{\\prime}(1) = \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots$ ( )",
+   "options": [
+    "$-1$",
+    "0.1",
+    "1",
+    "0.5"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：D\n应选 (D). 在可导条件下, $\\Delta y$ 的线性主部即为微分 $\\mathrm{d}y$ . 由于 $\\mathrm{d}y = f'(x^2) 2x \\Delta x$ , 以 $x = -1, \\Delta x = -0.1$ 代入得 $0.1 = f'(1) \\times 0.2$ , 于是 $f'(1) = 0.5$ , 从而选 (D).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 164
+  },
+  {
+   "id": "ky2-2005-9-4fa41d",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "knowledgePoints": [
+    "2.4"
+   ],
+   "source": {
+    "text": "2005 年考研数学二第 9 题",
+    "kind": "exam-original",
+    "year": 2005,
+    "region": "全国",
+    "paper": "2005 年考研数学二",
+    "number": "9",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $y = y(x)$ 由参数方程 $\\left\\{ \\begin{array}{l} x = t^2 + 2t, \\\\ y = \\ln(1 + t) \\end{array} \\right.$ 确定，则曲线 $y = y(x)$ 在 $x = 3$ 处的法线与 $x$ 轴交点的横坐标是……（）",
+   "options": [
+    "$\\frac{1}{8} \\ln 2 + 3$",
+    "$-\\frac{1}{8}\\ln 2 + 3.$",
+    "$-8\\ln 2 + 3$",
+    "$8\\ln 2 + 3$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A\n应选 (A). 当 $x = 3$ 时, 有 $t^{2} + 2t = 3$ , 得 $t = -3$ (舍去) 或 $t = 1$ . 曲线 $y = y(x)$ 的导数为\n$$\n\\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\frac {\\frac {\\mathrm {d} y}{\\mathrm {d} t}}{\\frac {\\mathrm {d} x}{\\mathrm {d} t}} = \\frac {\\frac {1}{1 + t}}{2 t + 2} = \\frac {1}{2 (t + 1) ^ {2}},\n$$\n所以曲线 $y = y(x)$ 在 $x = 3$ （即 $t = 1$ ）处的切线斜率为 $\\frac{1}{8}$ . 于是在该处的法线的斜率为 -8, 所以过点 (3, ln2) 的法线方程为\n$$\ny - \\ln 2 = - 8 (x - 3).\n$$\n令 $y = 0$ ，得其与 $x$ 轴交点的横坐标为 $\\frac{1}{8}\\ln 2 + 3.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 165
+  },
+  {
+   "id": "ky2-2006-9-acc5d9",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2006 年考研数学二第 9 题",
+    "kind": "exam-original",
+    "year": 2006,
+    "region": "全国",
+    "paper": "2006 年考研数学二",
+    "number": "9",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $g(x)$ 可微， $h(x) = e^{1 + g(x)}$ ， $h'(1) = 1$ ， $g'(1) = 2$ ，则 $g(1)$ 等于……（）",
+   "options": [
+    "$\\ln 3 - 1$",
+    "$-\\ln 3 - 1$",
+    "$-\\ln 2 - 1$",
+    "$\\ln 2 - 1$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：C\n应选 (C). 由复合函数求导法则有 $h'(x) = g'(x)\\mathrm{e}^{1 + g(x)}$ . 将 $x = 1$ 代入上式得 $1 = 2\\mathrm{e}^{1 + g(1)}$ . 解得 $g(1) = \\ln \\frac{1}{2} - 1 = -\\ln 2 - 1$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 166
+  },
+  {
+   "id": "c2-s2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "knowledgePoints": [
+    "2.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §2.4 隐函数及由参数方程所确定的函数的导数 相关变化率",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设曲线的参数方程为 $x=a(t-\\sin t)$，$y=a(1-\\cos t)$（$a>0$），则 $t=\\pi$ 对应点处 $\\dfrac{dy}{dx}=$",
+   "options": [
+    "$a$",
+    "$2a$",
+    "$-a$",
+    "$0$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：参数方程求导公式 $\\dfrac{dy}{dx}=\\dfrac{y'(t)}{x'(t)}$（§2.4）。$y'(t)=a\\sin t$，$x'(t)=a(1-\\cos t)$，故 $\\dfrac{dy}{dx}=\\dfrac{\\sin t}{1-\\cos t}$；代入 $t=\\pi$：分子 $\\sin\\pi=0$，分母 $1-\\cos\\pi=2\\ne 0$，得 $0$，D 正确。\nA、B、C 错：均未正确代入 $t=\\pi$，或误把 $\\dfrac{y'(t)}{x'(t)}$ 当成 $\\dfrac{y}{x}$。",
+   "misconception": "⚠️易错点：公式是「$y$ 对 $t$ 的导数」除以「$x$ 对 $t$ 的导数」，不是 $y'(x)$ 也不是 $\\dfrac{y''}{x''}$。",
+   "extension": null,
+   "tags": [
+    "参数方程求导"
+   ],
+   "verify": [
+    {
+     "desc": "t=pi",
+     "code": "t=symbols('t'); s=sin(t)/(1-cos(t)); s.subs(t,pi)",
+     "expected": "0"
+    }
+   ],
+   "idx": 167
+  },
+  {
+   "id": "ky2-2014-4-ba5026",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "knowledgePoints": [
+    "2.4"
+   ],
+   "source": {
+    "text": "2014 年考研数学二第 4 题",
+    "kind": "exam-original",
+    "year": 2014,
+    "region": "全国",
+    "paper": "2014 年考研数学二",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $\\left\\{ \\begin{array}{l} x = t^2 + 7, \\\\ y = t^2 + 4t + 1 \\end{array} \\right.$ 上对应于 $t = 1$ 的点处的曲率半径是……（）",
+   "options": [
+    "$\\frac{\\sqrt{10}}{50}$",
+    "$\\frac{\\sqrt{10}}{100}$",
+    "$10\\sqrt{10}$",
+    "$5\\sqrt{10}$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：C\n应选 (C). 由曲线的参数方程, 可得\n$$\n\\frac {\\mathrm {d} x}{\\mathrm {d} t} = 2 t, \\frac {\\mathrm {d} y}{\\mathrm {d} t} = 2 t + 4, \\Rightarrow \\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\frac {2 t + 4}{2 t} = 1 + \\frac {2}{t}, \\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} x ^ {2}} = \\frac {- \\frac {2}{t ^ {2}}}{2 t} = - \\frac {1}{t ^ {3}}.\n$$\n对应于 $t = 1$ 的点处 $y^\\prime = 3,y^{\\prime \\prime} = -1$ ，所以\n$$\nK = \\frac {\\left| y ^ {\\prime \\prime} \\right|}{\\sqrt {(1 + (y ^ {\\prime}) ^ {2}) ^ {3}}} = \\frac {1}{1 0 \\sqrt {1 0}} \\Rightarrow R = \\frac {1}{K} = 1 0 \\sqrt {1 0}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 168
+  },
+  {
+   "id": "ky2-2016-5-fac119",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2016 年考研数学二第 5 题",
+    "kind": "exam-original",
+    "year": 2016,
+    "region": "全国",
+    "paper": "2016 年考研数学二",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f_{i}(x)$ （ $i = 1,2$ ）具有二阶连续导数，且 $f_{i}(x_{0}) < 0$ （ $i = 1,2$ ），若两条曲线 $y = f_{i}(x)$ （ $i = 1,2$ ）在点 $(x_{0},y_{0})$ 处具有公切线 $y = g(x)$ ，且在该点处曲线 $y = f_{1}(x)$ 的曲率大于曲线 $y = f_{2}(x)$ 的曲率，则在 $x_{0}$ 的某个邻域内，有……（）",
+   "options": [
+    "$f_{1}(x)\\leqslant f_{2}(x)\\leqslant g(x).$",
+    "$f_{2}(x)\\leqslant f_{1}(x)\\leqslant g(x).$",
+    "$f_{1}(x)\\leqslant g(x)\\leqslant f_{2}(x).$",
+    "$f_{2}(x)\\leqslant g(x)\\leqslant f_{1}(x).$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A\n应选 (A). 由切线, 凹凸性和曲率的几何意义, 画图观察可得.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 169
+  },
+  {
+   "id": "ky2-2017-2-60d32f",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2017 年考研数学二第 2 题",
+    "kind": "exam-original",
+    "year": 2017,
+    "region": "全国",
+    "paper": "2017 年考研数学二",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设二阶可导函数 $f(x)$ 满足 $f(1) = f(-1) = 1$ ， $f(0) = -1$ ，且 $f''(x) > 0$ ，则·（）",
+   "options": [
+    "$\\int_{-1}^{1}f(x)\\mathrm{d}x > 0.$",
+    "$\\int_{-1}^{1}f(x)\\mathrm{d}x < 0.$",
+    "$\\int_{-1}^{0}f(x)\\mathrm{d}x > \\int_{0}^{1}f(x)\\mathrm{d}x.$",
+    "$\\int_{-1}^{0}f(x)\\mathrm{d}x < \\int_{0}^{1}f(x)\\mathrm{d}x.$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：B\n应选 (B). 由 $f''(x) < 0$ 知 $f(x)$ 的图像在其任意两点连线的曲线下方, 故有\n$$\n\\begin{array}{l} f (x) \\leqslant f (0) + [ f (1) - f (0) ] x = 2 x - 1, \\quad x \\in (0, 1); \\\\ f (x) \\leqslant f (0) + [ f (0) - f (- 1) ] x = - 2 x - 1, \\quad x \\in (- 1, 0). \\\\ \\end{array}\n$$\n因此由定积分的保号性得到\n$$\n\\int_ {0} ^ {1} f (x) \\mathrm {d} x <   \\int_ {0} ^ {1} (2 x - 1) \\mathrm {d} x = 0, \\quad \\int_ {- 1} ^ {0} f (x) \\mathrm {d} x <   \\int_ {- 1} ^ {0} (- 2 x - 1) \\mathrm {d} x = 0.\n$$\n从而有\n$$\n\\int_ {- 1} ^ {1} f (x) \\mathrm {d} x = \\int_ {- 1} ^ {0} f (x) \\mathrm {d} x + \\int_ {0} ^ {1} f (x) \\mathrm {d} x <   0.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 170
+  },
+  {
+   "id": "ky2-2018-4-b1dca5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2018 年考研数学二第 4 题",
+    "kind": "exam-original",
+    "year": 2018,
+    "region": "全国",
+    "paper": "2018 年考研数学二",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(x)$ 在 $[0,1]$ 上二阶可导，且 $\\int_0^1 f(x)\\mathrm{d}x = 0$ ，则",
+   "options": [
+    "当 $f^{\\prime}(x) < 0$ 时， $f\\left(\\frac{1}{2}\\right) < 0$",
+    "当 $f''(x) < 0$ 时, $f\\left(\\frac{1}{2}\\right) < 0$",
+    "当 $f^{\\prime}(x) > 0$ 时， $f\\left(\\frac{1}{2}\\right) < 0$",
+    "当 $f''(x) > 0$ 时， $f\\left(\\frac{1}{2}\\right) < 0$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：D\n应选 (D). 对于选项 (A), 取 $f(x) = -x + \\frac{1}{2}$ 可以排除. 对于选项 (B), 取 $f(x) = -\\left(x - \\frac{1}{2}\\right)^{2} + 1$ 可以排除. 对于选项 (C), 取 $f(x) = -x - \\frac{1}{2}$ 可以排除. 对于选项 (D), 由泰勒公式可得\n$$\nf (x) = f \\left(\\frac {1}{2}\\right) + f ^ {\\prime} \\left(\\frac {1}{2}\\right) \\left(x - \\frac {1}{2}\\right) + \\frac {f ^ {\\prime \\prime} (\\xi)}{2} \\left(x - \\frac {1}{2}\\right) ^ {2};\n$$\n两边在 $[0,1]$ 上积分可知它是正确的.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 171
+  },
+  {
+   "id": "c2-s3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 2,
+   "knowledgePoint": "2.3",
+   "knowledgePoints": [
+    "2.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §2.3 高阶导数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $f(x)=x^2e^{2x}$，则 $f^{(n)}(0)=$",
+   "options": [
+    "$n(n-1)2^{n-2}$",
+    "$n(n-1)2^{n-1}$",
+    "$n^2\\,2^{n-2}$",
+    "$2^n$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：莱布尼茨公式 $(uv)^{(n)}=\\sum\\limits_{k=0}^{n}\\mathrm{C}_n^k u^{(k)}v^{(n-k)}$（§2.3），取 $u=x^2$（$u^{(0)}=x^2,u'=2x,u''=2$，$k\\ge3$ 为零），$v=e^{2x}$（$v^{(m)}=2^me^{2x}$）：\n$$f^{(n)}(x)=e^{2x}\\left[2^nx^2+n\\cdot 2^{n-1}\\cdot 2x+\\mathrm{C}_n^2\\cdot 2^{n-2}\\cdot 2\\right]=e^{2x}\\left[2^nx^2+n2^nx+n(n-1)2^{n-2}\\right].$$\n代 $x=0$ 得 $f^{(n)}(0)=n(n-1)2^{n-2}$，A 正确。\nB 错：把 $\\mathrm{C}_n^2$ 项系数算成 $\\mathrm{C}_n^2\\cdot 2= n(n-1)2^{n-2}$ 中的 $2^{n-2}$ 误为 $2^{n-1}$。\nC 错：把 $\\mathrm{C}_n^2=n(n-1)/2$ 化简错了。\nD 错：漏掉了莱布尼茨公式中 $k=2$ 的交叉项，只留了 $v^{(n)}\\cdot u^{(0)}$。",
+   "misconception": "⚠️易错点：三段项 $k=0,1,2$ 一项都不能少；只有「$x$ 的幂次 $<$ 求导阶数」的项代 $x=0$ 后为零。",
+   "extension": "引申：$e^{kx}$ 与多项式乘积的高阶导数都可用莱布尼茨公式系统处理；若把 $f(x)$ 展成幂级数 $\\sum a_nx^n$，则 $f^{(n)}(0)=n!\\,a_n$，两种方法可互相验算。",
+   "tags": [
+    "莱布尼茨公式",
+    "高阶导数"
+   ],
+   "verify": [
+    {
+     "desc": "n=4",
+     "code": "k=4; simplify(diff(x**2*exp(2*x), x, k) - exp(2*x)*(2**k*x**2 + k*2**k*x + k*(k-1)*2**(k-2)))",
+     "expected": "0"
+    },
+    {
+     "desc": "f4(0)",
+     "code": "diff(x**2*exp(2*x), x, 4).subs(x, 0)",
+     "expected": "48"
+    }
+   ],
+   "idx": 172
+  },
+  {
+   "id": "c2-m1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.5",
+   "knowledgePoints": [
+    "2.5"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §2.5 函数的微分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "对于一元函数 $y=f(x)$ 在一点处「连续、可导、可微」的关系，下列说法正确的有",
+   "options": [
+    "可导必连续",
+    "连续必可导",
+    "可微必可导",
+    "可导必可微"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：一元函数中「可导」与「可微」等价（$dy=f'(x_0)\\,dx$，§2.5），可导（可微）必连续（§2.1 定理），故 A、C、D 正确。\nB 错：连续是可导的必要而非充分条件，反例 $f(x)=|x|$ 在 $x=0$ 处连续但左右导数不等、不可导。",
+   "misconception": "⚠️易错点：一元函数「可导 $\\iff$ 可微」，但多元函数中「偏导存在」与「可微」不等价（第 9 章）——两个概念体系别混。",
+   "extension": null,
+   "tags": [
+    "可导与连续",
+    "可微"
+   ],
+   "verify": [],
+   "idx": 173
+  },
+  {
+   "id": "c2-m2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 2,
+   "knowledgePoint": "2.1",
+   "knowledgePoints": [
+    "2.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §2.1 导数概念",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "下列函数在 $x=0$ 处可导的有",
+   "options": [
+    "$f(x)=x|x|$",
+    "$f(x)=|x|^3$",
+    "$f(x)=\\sqrt[3]{x}$",
+    "$f(x)=\\begin{cases}x^2\\sin\\dfrac1x, & x\\ne 0\\\\ 0, & x=0\\end{cases}$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A：$x|x|\\ge$ 左右导数 $\\lim\\limits_{h\\to 0^\\pm}\\dfrac{h|h|}{h}=\\lim|h|=0$，且两方向一致，可导且 $f'(0)=0$。B：$\\dfrac{|h|^3-0}{h}=h^2\\cdot\\dfrac{|h|}{h}\\to 0$，可导。D：$\\dfrac{f(h)-f(0)}{h}=h\\sin\\dfrac1h\\to 0$（有界 $\\times$ 无穷小），可导。故 A、B、D 正确。\nC 错：$\\dfrac{h^{1/3}}{h}=h^{-2/3}\\to\\infty$，导数为「无穷大」，不可导（曲线在原点有竖直切线）。",
+   "misconception": "⚠️易错点：$|x|^3$ 与 $|x|$ 本质不同——$|x|^k$ 在 $0$ 处可导当且仅当 $k>1$；「导数存在」要求左右导数存在且相等，而非极限「存在（含 $\\infty$）」。",
+   "extension": "引申：$f(x)=x^2\\sin\\frac1x$ 在 $x=0$ 可导，但导函数 $f'(x)=2x\\sin\\frac1x-\\cos\\frac1x$（$x\\ne0$）在 $x\\to0$ 时无极限——说明「导函数存在」推不出「导函数连续」，这类函数是导数极限定理的反例素材。",
+   "tags": [
+    "可导性判定",
+    "分段函数"
+   ],
+   "verify": [],
+   "idx": 174
+  },
+  {
+   "id": "c2-j1",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §2.2 函数的求导法则",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "初等函数在其定义区间内处处可导。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：初等函数在其定义区间内**连续**（§1.9），但不处处可导。反例：$f(x)=|x|=\\sqrt{x^2}$ 是初等函数，定义域为 $\\mathbb{R}$，但在 $x=0$ 处不可导。命题错误（§2.1）。",
+   "misconception": "⚠️易错点：「连续」与「可导」的初等函数性质要分开记：初等函数连续性是全局的，可导性要看具体点（根号、绝对值、尖点处常失效）。",
+   "extension": null,
+   "tags": [
+    "初等函数",
+    "可导性"
+   ],
+   "verify": [],
+   "idx": 175
+  },
+  {
+   "id": "c2-j2",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.5",
+   "knowledgePoints": [
+    "2.5"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §2.5 函数的微分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $y=f(x)$ 可微，则 $\\Delta y-\\mathrm{d}y$ 是比 $\\Delta x$ 高阶的无穷小（当 $\\Delta x\\to 0$）。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：微分的定义即 $\\Delta y=f'(x_0)\\Delta x+o(\\Delta x)$（§2.5），其中线性主部 $f'(x_0)\\Delta x=\\mathrm{d}y$，余项 $\\Delta y-\\mathrm{d}y=o(\\Delta x)$ 正是比 $\\Delta x$ 高阶的无穷小。命题正确。",
+   "misconception": "⚠️易错点：微分是「函数增量的线性主部」，$\\mathrm{d}y\\ne\\Delta y$；两者之差才是高阶小量。",
+   "extension": null,
+   "tags": [
+    "微分定义",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 176
+  },
+  {
+   "id": "c2-j3",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.1",
+   "knowledgePoints": [
+    "2.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §2.1 导数概念",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "若 $\\lim\\limits_{h\\to 0}\\dfrac{f(x_0+h)-f(x_0-h)}{2h}$ 存在，则 $f(x)$ 在 $x_0$ 处必可导。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：对称差商存在只是可导的必要条件。反例：$f(x)=|x|$ 在 $x_0=0$ 处，对称差商 $\\dfrac{|h|-|{-h}|}{2h}=0\\to 0$ 存在，但 $f$ 在 $0$ 处不可导。命题错误（§2.1）。",
+   "misconception": "⚠️易错点：对称差商「抹平」了左右两侧的信息——左右增量各自与中心值的偏差才是导数定义的对象；$f(x_0)$ 甚至可以不在定义中（比如把 $f$ 改成在 $x_0$ 处无定义，对称差商照样有意义）。",
+   "extension": null,
+   "tags": [
+    "导数定义",
+    "概念辨析"
+   ],
+   "verify": [],
+   "idx": 177
+  },
+  {
+   "id": "c2-b1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §2.2 函数的求导法则",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $y=\\sin^2 x$，则 $\\dfrac{dy}{dx}=$ ____。",
+   "options": null,
+   "answer": [
+    "sin2x"
+   ],
+   "accept": [
+    "sin2x",
+    "sin(2x)",
+    "2sinxcosx",
+    "2sin(x)cos(x)"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：链式法则（§2.2）：$y'=2\\sin x\\cos x=\\sin 2x$。两种写法等价。",
+   "misconception": "⚠️易错点：外层是平方函数，导数为 $2\\sin x$，内层 $\\sin x$ 的导数 $\\cos x$ 勿漏。",
+   "extension": null,
+   "tags": [
+    "链式法则"
+   ],
+   "verify": [],
+   "idx": 178
+  },
+  {
+   "id": "c2-b2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "knowledgePoints": [
+    "2.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §2.4 隐函数及由参数方程所确定的函数的导数 相关变化率",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $\\begin{cases}x=\\ln(1+t^2),\\\\ y=t-\\arctan t,\\end{cases}$ 则 $\\dfrac{dy}{dx}=$ ____（用 $t$ 表示）。",
+   "options": null,
+   "answer": [
+    "t/2"
+   ],
+   "accept": [
+    "t/2",
+    "0.5t",
+    "t*0.5",
+    "1/2*t"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\dfrac{dy}{dt}=1-\\dfrac{1}{1+t^2}=\\dfrac{t^2}{1+t^2}$，$\\dfrac{dx}{dt}=\\dfrac{2t}{1+t^2}$，故 $\\dfrac{dy}{dx}=\\dfrac{t^2/2t}{2t}$ 即 $\\dfrac{t}{2}$（§2.4）。",
+   "misconception": "⚠️易错点：$\\arctan t$ 的导数是 $\\dfrac{1}{1+t^2}$（易与 $\\arctan$ 本身混淆），且约分时别把 $t^2$ 与 $2t$ 约错。",
+   "extension": null,
+   "tags": [
+    "参数方程求导"
+   ],
+   "verify": [
+    {
+     "desc": "ratio",
+     "code": "tt=symbols('tt'); dy=1-1/(1+tt**2); dx=2*tt/(1+tt**2); simplify(dy/dx - tt/2)",
+     "expected": "0"
+    }
+   ],
+   "idx": 179
+  },
+  {
+   "id": "ky2-1989-3-a05ebc",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "1989 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1989,
+    "region": "全国",
+    "paper": "1989 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $y = \\int_{0}^{x} (t - 1)(t - 2) \\, \\mathrm{d}t$ 在点 $(0,0)$ 处的切线方程是",
+   "options": null,
+   "answer": [
+    "$y = 2x$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$y = 2x$\n应填 $y = 2x$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 180
+  },
+  {
+   "id": "ky2-1992-1-eb5235",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "1992 年考研数学三第 1 题",
+    "kind": "exam-original",
+    "year": 1992,
+    "region": "全国",
+    "paper": "1992 年考研数学三",
+    "number": "1",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $\\left\\{ \\begin{array}{l} x = f(t) - \\pi, \\\\ y = f(\\mathrm{e}^{3t} - 1), \\end{array} \\right.$ 其中 $f$ 可导，且 $f'(0) \\neq 0$ ，则 $\\left.\\frac{\\mathrm{d}y}{\\mathrm{d}x}\\right|_{t=0} =$ ________.",
+   "options": null,
+   "answer": [
+    "3"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：3\n应填3.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 181
+  },
+  {
+   "id": "ky2-1994-2-8fbe0a",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "knowledgePoints": [
+    "2.4"
+   ],
+   "source": {
+    "text": "1994 年考研数学三第 2 题",
+    "kind": "exam-original",
+    "year": 1994,
+    "region": "全国",
+    "paper": "1994 年考研数学三",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $y = y(x)$ 由参数方程 $\\left\\{ \\begin{array}{l} x = t - \\ln (1 + t), \\\\ y = t^3 + t^2 \\end{array} \\right.$ 所确定，则 $\\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2} =$",
+   "options": null,
+   "answer": [
+    "$\\frac{1}{t} (6t + 5)(t + 1)$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{1}{t} (6t + 5)(t + 1)$\n应填 $\\frac{1}{t} (6t + 5)(t + 1)$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 182
+  },
+  {
+   "id": "ky2-1995-3-123783",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "1995 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1995,
+    "region": "全国",
+    "paper": "1995 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $\\left\\{ \\begin{array}{l} x = 1 + t^{2} \\\\ y = t^{3} \\end{array} \\right.$ 在 $t = -2$ 处的切线方程为",
+   "options": null,
+   "answer": [
+    "$3x - y - 7 = 0$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$3x - y - 7 = 0$\n应填 $3x - y - 7 = 0$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 183
+  },
+  {
+   "id": "ky2-1997-2-300543",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.3",
+   "knowledgePoints": [
+    "2.3"
+   ],
+   "source": {
+    "text": "1997 年考研数学二第 2 题",
+    "kind": "exam-original",
+    "year": 1997,
+    "region": "全国",
+    "paper": "1997 年考研数学二",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $y = \\ln \\sqrt{\\frac{1 - x}{1 + x^2}}$ ，则 $y''|_{x=0} =$ ________.",
+   "options": null,
+   "answer": [
+    "$-\\frac{3}{2}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$-\\frac{3}{2}$\n应填 $-\\frac{3}{2}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 184
+  },
+  {
+   "id": "ky2-1999-1-93bf20",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "1999 年考研数学二第 1 题",
+    "kind": "exam-original",
+    "year": 1999,
+    "region": "全国",
+    "paper": "1999 年考研数学二",
+    "number": "1",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $\\left\\{ \\begin{array}{l} x = \\mathrm{e}^{t} \\sin 2t \\\\ y = \\mathrm{e}^{t} \\cos t \\end{array} \\right.$ 在点 (0,1) 处的法线方程为",
+   "options": null,
+   "answer": [
+    "$y + 2x - 1 = 0$ . 曲线的切线斜率为"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$y + 2x - 1 = 0$ . 曲线的切线斜率为\n应填 $y + 2x - 1 = 0$ . 曲线的切线斜率为\n$$\n\\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\frac {\\frac {\\mathrm {d} y}{\\mathrm {d} t}}{\\frac {\\mathrm {d} x}{\\mathrm {d} t}} = \\frac {\\mathrm {e} ^ {t} \\cos t - \\mathrm {e} ^ {t} \\sin t}{\\mathrm {e} ^ {t} \\sin 2 t + 2 \\mathrm {e} ^ {t} \\cos 2 t} = \\frac {\\cos t - \\sin t}{\\sin 2 t + 2 \\cos 2 t}.\n$$\n点 (0,1) 对应 $t = 0$ , 把 $t = 0$ 代入得 $\\frac{\\mathrm{d}y}{\\mathrm{d}x} = \\frac{1}{2}$ , 所以该点处法线斜率为 -2, 故所求法线方程为 $y + 2x - 1 = 0$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 185
+  },
+  {
+   "id": "ky2-2000-2-88d85a",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2000 年考研数学二第 2 题",
+    "kind": "exam-original",
+    "year": 2000,
+    "region": "全国",
+    "paper": "2000 年考研数学二",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $y = y(x)$ 由方程 $2^{xy} = x + y$ 所确定，则 $\\left.\\mathrm{d}y\\right|_{x=0} =$ ________.",
+   "options": null,
+   "answer": [
+    "$(\\ln 2 - 1) \\mathrm{d} x$ . 对方程 $2^{x y} = x + y$ 两边求微分得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$(\\ln 2 - 1) \\mathrm{d} x$ . 对方程 $2^{x y} = x + y$ 两边求微分得\n应填 $(\\ln 2 - 1) \\mathrm{d} x$ . 对方程 $2^{x y} = x + y$ 两边求微分得\n$$\n2 ^ {x y} \\ln 2 \\cdot (x d y + y d x) = d x + d y.\n$$\n由所给方程知，当 $x = 0$ 时 $y = 1$ 将 $x = 0, y = 1$ 代入上式，有 $\\ln 2 \\cdot \\mathrm{d}x = \\mathrm{d}x + \\mathrm{d}y$ 所以， $\\left.\\mathrm{d}y\\right|_{x=0} = (\\ln 2 - 1) \\mathrm{d}x$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 186
+  },
+  {
+   "id": "ky2-2003-2-054938",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2003 年考研数学二第 2 题",
+    "kind": "exam-original",
+    "year": 2003,
+    "region": "全国",
+    "paper": "2003 年考研数学二",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $y = f(x)$ 由方程 $xy + 2\\ln x = y^4$ 所确定, 则曲线 $y = f(x)$ 在点 (1,1) 处的切线方程是",
+   "options": null,
+   "answer": [
+    "$x - y = 0$ . 对所给方程两边对 $x$ 求导数得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$x - y = 0$ . 对所给方程两边对 $x$ 求导数得\n应填 $x - y = 0$ . 对所给方程两边对 $x$ 求导数得\n$$\ny + x y ^ {\\prime} + \\frac {2}{x} = 4 y ^ {3} y ^ {\\prime}.\n$$\n将 $x = 1, y = 1$ 代入上式，得 $y'(1) = 1$ 。故曲线在点 $(1,1)$ 处的切线方程为\n$$\ny - 1 = 1 \\cdot (x - 1) \\quad \\Rightarrow \\quad x - y = 0.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 187
+  },
+  {
+   "id": "ky2-2009-9-628e0e",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2009 年考研数学二第 9 题",
+    "kind": "exam-original",
+    "year": 2009,
+    "region": "全国",
+    "paper": "2009 年考研数学二",
+    "number": "9",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $\\left\\{ \\begin{array}{l} x = \\int_{0}^{1 - t} \\mathrm{e}^{-u^2} \\, \\mathrm{d}u \\\\ y = t^2 \\ln (2 - t^2) \\end{array} \\right.$ 在 $(0, 0)$ 处的切线方程为",
+   "options": null,
+   "answer": [
+    "$y = 2x$ . 因为"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$y = 2x$ . 因为\n应填 $y = 2x$ . 因为\n$$\n\\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\left. \\frac {\\mathrm {d} y / \\mathrm {d} t}{\\mathrm {d} x / \\mathrm {d} t} \\right| _ {t = 1} = \\left. \\frac {2 t \\ln (2 - t ^ {2}) - t ^ {2} \\cdot \\frac {2 t}{2 - t ^ {2}}}{\\mathrm {e} ^ {- (1 - t) ^ {2}} \\cdot (- 1)} \\right| _ {t = 1} = \\frac {- 2}{- 1} = 2,\n$$\n所以切线方程为 $y = 2x$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 188
+  },
+  {
+   "id": "ky2-2009-12-0e1c8a",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "knowledgePoints": [
+    "2.4"
+   ],
+   "source": {
+    "text": "2009 年考研数学二第 12 题",
+    "kind": "exam-original",
+    "year": 2009,
+    "region": "全国",
+    "paper": "2009 年考研数学二",
+    "number": "12",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $y = y(x)$ 是由方程 $xy + e^{y} = x + 1$ 确定的隐函数，则 $\\left.\\frac{\\partial^2y}{\\partial x^2}\\right|_{x=0} =$ ________.",
+   "options": null,
+   "answer": [
+    "-3. 对方程 $xy + \\mathrm{e}^{y} = x + 1$ 两边关于 $x$ 求导有"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：-3. 对方程 $xy + \\mathrm{e}^{y} = x + 1$ 两边关于 $x$ 求导有\n应填 -3. 对方程 $xy + \\mathrm{e}^{y} = x + 1$ 两边关于 $x$ 求导有\n$$\ny + x y ^ {\\prime} + y ^ {\\prime} \\mathrm {e} ^ {y} = 1 \\quad \\Rightarrow \\quad y ^ {\\prime} = \\frac {1 - y}{x + \\mathrm {e} ^ {y}}.\n$$\n对 $y + xy' + y'\\mathrm{e}^{y} = 1$ 再次求导可得\n$$\n2 y ^ {\\prime} + x y ^ {\\prime \\prime} + y ^ {\\prime \\prime} e ^ {y} + (y ^ {\\prime}) ^ {2} e ^ {y} = 0, \\Rightarrow y ^ {\\prime \\prime} = - \\frac {2 y ^ {\\prime} + (y ^ {\\prime}) ^ {2} e ^ {y}}{x + e ^ {y}}.\n$$\n当 $x = 0$ 时， $y = 0$ ， $y'(0) = 1$ ，代入上式得 $y''(0) = -3$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 189
+  },
+  {
+   "id": "ky2-2013-12-7cdaf3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "knowledgePoints": [
+    "2.4"
+   ],
+   "source": {
+    "text": "2013 年考研数学二第 12 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学二",
+    "number": "12",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $\\left\\{ \\begin{array}{l} x = \\arctan t, \\\\ y = \\ln \\sqrt{1 + t^2} \\end{array} \\right.$ 上对应于 $t = 1$ 的点处的法线方程为",
+   "options": null,
+   "answer": [
+    "$y + x - \\frac{\\pi}{4} - \\ln \\sqrt{2} = 0$ . 由参数方程的导数公式得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$y + x - \\frac{\\pi}{4} - \\ln \\sqrt{2} = 0$ . 由参数方程的导数公式得\n应填 $y + x - \\frac{\\pi}{4} - \\ln \\sqrt{2} = 0$ . 由参数方程的导数公式得\n$$\n\\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\frac {\\frac {\\mathrm {d} y}{\\mathrm {d} t}}{\\frac {\\mathrm {d} x}{\\mathrm {d} t}} = \\frac {\\frac {1}{\\sqrt {1 + t ^ {2}}} \\cdot \\frac {t}{\\sqrt {1 + t ^ {2}}}}{\\frac {1}{1 + t ^ {2}}} = t \\quad \\Rightarrow \\quad \\left. \\frac {\\mathrm {d} y}{\\mathrm {d} x} \\right| _ {t = 1} = 1.\n$$\n当 $t = 1$ 时， $x = \\frac{\\pi}{4}, y = \\ln \\sqrt{2}$ ，故法线方程为 $y + x - \\frac{\\pi}{4} - \\ln \\sqrt{2} = 0$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 190
+  },
+  {
+   "id": "ky2-2014-12-dc2270",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2014 年考研数学二第 12 题",
+    "kind": "exam-original",
+    "year": 2014,
+    "region": "全国",
+    "paper": "2014 年考研数学二",
+    "number": "12",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $L$ 的极坐标方程为 $r = \\theta$ , 则 $L$ 在点 $(r, \\theta) = \\left(\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$ 处的切线方程为",
+   "options": null,
+   "answer": [
+    "$y = -\\frac{2}{\\pi} x + \\frac{\\pi}{2}$ . 先把曲线方程化为参数方程"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$y = -\\frac{2}{\\pi} x + \\frac{\\pi}{2}$ . 先把曲线方程化为参数方程\n应填 $y = -\\frac{2}{\\pi} x + \\frac{\\pi}{2}$ . 先把曲线方程化为参数方程\n$$\n\\left\\{ \\begin{array}{l} x = r (\\theta) \\cos \\theta = \\theta \\cos \\theta , \\\\ y = r (\\theta) \\sin \\theta = \\theta \\sin \\theta . \\end{array} \\right.\n$$\n于是在 $\\theta = \\frac{\\pi}{2}$ 处， $x = 0, y = \\frac{\\pi}{2}$ ，从而\n$$\n\\left. \\frac {\\mathrm {d} y}{\\mathrm {d} x} \\right| _ {\\frac {\\pi}{2}} = \\left. \\frac {\\sin \\theta + \\theta \\cos \\theta}{\\cos \\theta - \\theta \\sin \\theta} \\right| _ {\\frac {\\pi}{2}} = - \\frac {2}{\\pi}.\n$$\n则 $L$ 在点 $(r,\\theta) = \\left(\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$ 处的切线方程为 $y - \\frac{\\pi}{2} = -\\frac{2}{\\pi} (x - 0)$ ，即 $y = -\\frac{2}{\\pi} x + \\frac{\\pi}{2}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 191
+  },
+  {
+   "id": "ky2-2015-9-9df37b",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "knowledgePoints": [
+    "2.4"
+   ],
+   "source": {
+    "text": "2015 年考研数学二第 9 题",
+    "kind": "exam-original",
+    "year": 2015,
+    "region": "全国",
+    "paper": "2015 年考研数学二",
+    "number": "9",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $\\left\\{ \\begin{array}{l} x = \\arctan t, \\\\ y = 3t + t^3, \\end{array} \\right.$ 则 $\\left.\\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{t=1} =$",
+   "options": null,
+   "answer": [
+    "48. 由参数方程的求导公式得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：48. 由参数方程的求导公式得\n应填 48. 由参数方程的求导公式得\n$$\n\\begin{array}{l} \\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\frac {\\frac {\\mathrm {d} y}{\\mathrm {d} t}}{\\frac {\\mathrm {d} x}{\\mathrm {d} t}} = \\frac {3 + 3 t ^ {2}}{\\frac {1}{1 + t ^ {2}}} = 3 (1 + t ^ {2}) ^ {2}, \\\\ \\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} x ^ {2}} = \\frac {\\mathrm {d}}{\\mathrm {d} x} \\left[ 3 (1 + t ^ {2}) ^ {2} \\right] = \\frac {\\frac {\\mathrm {d} [ 3 (1 + t ^ {2}) ^ {2} ]}{\\mathrm {d} t}}{\\frac {\\mathrm {d} x}{\\mathrm {d} t}} = \\frac {1 2 t (1 + t ^ {2})}{\\frac {1}{1 + t ^ {2}}} = 1 2 t (1 + t ^ {2}) ^ {2}. \\\\ \\end{array}\n$$\n因此 $\\left.\\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{t = 1} = 48.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 192
+  },
+  {
+   "id": "ky2-2015-10-f18725",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2015 年考研数学二第 10 题",
+    "kind": "exam-original",
+    "year": 2015,
+    "region": "全国",
+    "paper": "2015 年考研数学二",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "函数 $f(x) = x^{2} \\cdot 2^{x}$ 在 $x = 0$ 处的 $n$ 阶导数 $f^{(n)}(0) =$ ________.",
+   "options": null,
+   "answer": [
+    "$n(n - 1)(\\ln 2)^{n - 2}$ . 由莱布尼茨公式得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$n(n - 1)(\\ln 2)^{n - 2}$ . 由莱布尼茨公式得\n应填 $n(n - 1)(\\ln 2)^{n - 2}$ . 由莱布尼茨公式得\n$$\nf ^ {(n)} (x) = x ^ {2} \\cdot 2 ^ {x} (\\ln 2) ^ {n} + C _ {n} ^ {1} \\cdot (2 x) \\cdot 2 ^ {x} (\\ln 2) ^ {n - 1} + C _ {n} ^ {2} \\cdot 2 \\cdot 2 ^ {x} (\\ln 2) ^ {n - 2}.\n$$\n因此在 $x = 0$ 处的 $n$ 阶导数为\n$$\nf ^ {(n)} (0) = \\frac {n (n - 1)}{2} 2 (\\ln 2) ^ {n - 2} = n (n - 1) (\\ln 2) ^ {n - 2}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 193
+  },
+  {
+   "id": "ky2-2017-10-815a6e",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "knowledgePoints": [
+    "2.4"
+   ],
+   "source": {
+    "text": "2017 年考研数学二第 10 题",
+    "kind": "exam-original",
+    "year": 2017,
+    "region": "全国",
+    "paper": "2017 年考研数学二",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $y = y(x)$ 由参数方程 $\\left\\{ \\begin{array}{l} x = t + \\mathrm{e}^t \\\\ y = \\sin t \\end{array} \\right.$ 确定，则 $\\left.\\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{t=0} =$",
+   "options": null,
+   "answer": [
+    "$-\\frac{1}{8}$ . 因为"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$-\\frac{1}{8}$ . 因为\n应填 $-\\frac{1}{8}$ . 因为\n$$\n\\begin{array}{l} \\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\frac {y ^ {\\prime} (t)}{x ^ {\\prime} (t)} = \\frac {\\cos t}{1 + \\mathrm {e} ^ {t}}, \\\\ \\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} x ^ {2}} = \\frac {\\left(\\frac {\\cos t}{1 + \\mathrm {e} ^ {t}}\\right) ^ {\\prime}}{1 + \\mathrm {e} ^ {t}} = \\frac {\\frac {- \\sin t (1 + \\mathrm {e} ^ {t}) - \\mathrm {e} ^ {t} \\cos t}{(1 + \\mathrm {e} ^ {t}) ^ {2}}}{1 + \\mathrm {e} ^ {t}} = \\frac {- \\sin t - \\mathrm {e} ^ {t} \\sin t - \\mathrm {e} ^ {t} \\cos t}{(1 + \\mathrm {e} ^ {t}) ^ {3}}, \\\\ \\end{array}\n$$\n所以 $\\left.\\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{t = 0} = -\\frac{1}{8}.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 194
+  },
+  {
+   "id": "ky2-2018-10-d5a0a3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2018 年考研数学二第 10 题",
+    "kind": "exam-original",
+    "year": 2018,
+    "region": "全国",
+    "paper": "2018 年考研数学二",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $y = x^{2} + 2\\ln x$ 在其拐点处的切线方程是",
+   "options": null,
+   "answer": [
+    "$y = 4x - 3$ . 对函数求导得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$y = 4x - 3$ . 对函数求导得\n应填 $y = 4x - 3$ . 对函数求导得\n$$\ny ^ {\\prime} = 2 x + \\frac {2}{x}, \\quad y ^ {\\prime \\prime} = 2 + \\frac {- 2}{x ^ {2}}.\n$$\n令 $y'' = 0$ ，得 $x = 1$ 。故拐点为 $(1,1)$ 。在此处的斜率 $k = y'(1) = 4$ ，从而切线方程为 $y = 4x - 3$ 。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 195
+  },
+  {
+   "id": "ky2-2019-10-65d03b",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2019 年考研数学二第 10 题",
+    "kind": "exam-original",
+    "year": 2019,
+    "region": "全国",
+    "paper": "2019 年考研数学二",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $\\left\\{ \\begin{array}{l} x = t - \\sin t \\\\ y = 1 - \\cos t \\end{array} \\right.$ 在 $t = \\frac{3\\pi}{2}$ 对应点处的切线在 $y$ 轴的截距为",
+   "options": null,
+   "answer": [
+    "$2 + \\frac{3\\pi}{2}$ . 在 $t = \\frac{3\\pi}{2}$ 对应点处的斜率为"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$2 + \\frac{3\\pi}{2}$ . 在 $t = \\frac{3\\pi}{2}$ 对应点处的斜率为\n应填 $2 + \\frac{3\\pi}{2}$ . 在 $t = \\frac{3\\pi}{2}$ 对应点处的斜率为\n$$\n\\left. \\frac {\\mathrm {d} y}{\\mathrm {d} x} \\right| _ {t = \\frac {3 \\pi}{2}} = \\left. \\frac {\\sin t}{1 - \\cos t} \\right| _ {t = \\frac {3 \\pi}{2}} = - 1.\n$$\n所以在该点的切线方程为\n$$\ny - 1 = - \\left(x - \\frac {3 \\pi}{2} - 1\\right) \\Rightarrow y = - x + \\frac {3 \\pi}{2} + 2.\n$$\n它在 $y$ 轴的截距为 $2 + \\frac{3\\pi}{2}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 196
+  },
+  {
+   "id": "ky2-2019-11-fe743e",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2019 年考研数学二第 11 题",
+    "kind": "exam-original",
+    "year": 2019,
+    "region": "全国",
+    "paper": "2019 年考研数学二",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(u)$ 可导， $z = yf\\left(\\frac{y^2}{x}\\right)$ ，则 $2x\\frac{\\partial z}{\\partial x} + y\\frac{\\partial z}{\\partial y} =$ ________.",
+   "options": null,
+   "answer": [
+    "$y f\\left(\\frac{y^2}{x}\\right)$ . 直接计算得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$y f\\left(\\frac{y^2}{x}\\right)$ . 直接计算得\n应填 $y f\\left(\\frac{y^2}{x}\\right)$ . 直接计算得\n$$\n\\frac {\\partial z}{\\partial x} = - \\frac {y ^ {3}}{x ^ {2}} f ^ {\\prime} \\left(\\frac {y ^ {2}}{x}\\right), \\frac {\\partial z}{\\partial y} = f \\left(\\frac {y ^ {2}}{x}\\right) + \\frac {2 y ^ {2}}{x} f ^ {\\prime} \\left(\\frac {y ^ {2}}{x}\\right). \\quad \\Rightarrow \\quad 2 x \\frac {\\partial z}{\\partial x} + y \\frac {\\partial z}{\\partial y} = y f \\left(\\frac {y ^ {2}}{x}\\right).\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 197
+  },
+  {
+   "id": "ky-2004-1-32b066",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2004 年考研数学（一）第 1 题",
+    "kind": "exam-original",
+    "year": 2004,
+    "region": "全国",
+    "paper": "2004 年考研数学（一）",
+    "number": "1",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2004年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2004年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2004年解析/2004年解析.md"
+   },
+   "stem": "曲线 $y = \\ln x$ 上与直线 $x + y = 1$ 垂直的切线方程为",
+   "options": null,
+   "answer": [
+    "$y = x - 1$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$y = x - 1$\n【解】设曲线 $y = \\ln x$ 上切点坐标为 $(a, \\ln a)$\n\n因为 $x + y = 1$ 的斜率为 $-1$ ，所以切线的斜率为1.\n\n令 $\\frac{1}{a} = 1$ 得 $a = 1$ ，切点为(1，0)，切线为 $y - 0 = x - 1$ ，即 $y = x - 1$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 198
+  },
+  {
+   "id": "ky-2008-10-68b4b0",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2008 年考研数学（一）第 10 题",
+    "kind": "exam-original",
+    "year": 2008,
+    "region": "全国",
+    "paper": "2008 年考研数学（一）",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2008年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2008年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2008年解析/2008年解析.md"
+   },
+   "stem": "曲线 $\\sin (xy) + \\ln (y - x) = x$ 在点(0,1)处的切线方程是",
+   "options": null,
+   "answer": [
+    "$y = x + 1$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$y = x + 1$\n【解】方法一 $\\sin (xy) + \\ln (y - x) = x$ 两边对 $x$ 求导数，得\n\n$$\n\\cos (x y) \\cdot \\left(y + x \\frac {\\mathrm {d} y}{\\mathrm {d} x}\\right) + \\frac {\\frac {\\mathrm {d} y}{\\mathrm {d} x} - 1}{y - x} = 1,\n$$\n\n将 $x = 0, y = 1$ 代入得 $\\left.\\frac{\\mathrm{dy}}{\\mathrm{dx}}\\right|_{x = 0} = 1.$\n\n故曲线 $\\sin (xy) + \\ln (y - x) = x$ 在点(0,1)处的切线方程为 $y - 1 = x - 0$ ，即 $y = x + 1$\n\n方法二 令 $F(x,y) = \\sin (xy) + \\ln (y - x) - x$\n\n$$\n\\frac {\\mathrm {d} y}{\\mathrm {d} x} = - \\frac {F _ {x} ^ {\\prime}}{F _ {y} ^ {\\prime}} = - \\frac {y \\cos x y - \\frac {1}{y - x} - 1}{x \\cos x y + \\frac {1}{y - x}},\n$$\n\n切线的斜率为 $k = \\frac{\\mathrm{dy}}{\\mathrm{dx}}\\bigg|_{(0,1)} = 1$\n\n故切线方程为 $y - 1 = x$ ，即 $y = x + 1$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 199
+  },
+  {
+   "id": "ky-2013-11-663d39",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2013 年考研数学（一）第 11 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学（一）",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2013年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2013年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2013年解析/2013年解析.md"
+   },
+   "stem": "设 $\\left\\{ \\begin{array}{l} x = \\sin t, \\\\ y = t \\sin t + \\cos t \\end{array} \\right.$ ( $t$ 为参数), 则 $\\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\bigg|_{t=\\frac{\\pi}{4}}=$",
+   "options": null,
+   "answer": [
+    "$\\sqrt{2}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\sqrt{2}$\n【解】 $\\frac{\\mathrm{dy}}{\\mathrm{dx}} = \\frac{\\mathrm{dy} / \\mathrm{dt}}{\\mathrm{dx} / \\mathrm{dt}} = \\frac{\\sin t + t\\cos t - \\sin t}{\\cos t} = t$\n\n$$\n\\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} x ^ {2}} = \\frac {\\mathrm {d} \\left(\\frac {\\mathrm {d} y}{\\mathrm {d} x}\\right)}{\\mathrm {d} x} = \\frac {\\frac {\\mathrm {d}}{\\mathrm {d} t} \\left(\\frac {\\mathrm {d} y}{\\mathrm {d} x}\\right)}{\\frac {\\mathrm {d} x}{\\mathrm {d} t}} = \\frac {1}{\\cos t},\n$$\n\n于是 $\\left.\\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{x = \\frac{\\pi}{4}} = \\sqrt{2}.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 200
+  },
+  {
+   "id": "ky-2014-10-e5bdae",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "knowledgePoints": [
+    "2.2"
+   ],
+   "source": {
+    "text": "2014 年考研数学（一）第 10 题",
+    "kind": "exam-original",
+    "year": 2014,
+    "region": "全国",
+    "paper": "2014 年考研数学（一）",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2014年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2014年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2014年解析/2014年解析.md"
+   },
+   "stem": "设 $f(x)$ 是周期为 4 的可导奇函数, 且 $f'(x) = 2(x - 1), x \\in [0, 2]$ , 则 $f(7) =$ ________.",
+   "options": null,
+   "answer": [
+    "1"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：1\n【解】由 $f^{\\prime}(x) = 2(x - 1), x \\in [0,2]$ 得 $f(x) = (x - 1)^{2} + C, x \\in [0,2]$ ，\n\n因为 $f(0) = 0$ ，所以 $C = -1$ ，故 $f(x) = x^{2} - 2x,x\\in [0,2]$\n\n$$\nf (7) = f (- 1) = - f (1) = 1.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 201
+  }
+ ]
+}

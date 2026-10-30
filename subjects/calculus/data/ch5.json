@@ -1,0 +1,3400 @@
+{
+ "chapter": 5,
+ "questions": [
+  {
+   "id": "c5-s1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.1 定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "由定积分的几何意义，$\\int_0^{2\\pi}\\sin x\\,dx=$",
+   "options": [
+    "$0$",
+    "$1$",
+    "$2\\pi$",
+    "$4\\pi$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\sin x$ 在 $[0,\\pi]$ 上的图象与 $[\\pi,2\\pi]$ 上的图象关于点 $(\\pi,0)$ 中心对称，$x$ 轴上方面积与下方面积相等、符号相反，代数和为零（§5.1 几何意义）。故 A 正确。\nB 错：是 $\\int_0^{\\pi}\\sin x\\,dx=2$ 的一半再误取。\nC、D 错：把「面积」当成了「积分值」——面积是 $\\int_0^{2\\pi}|\\sin x|dx=4$，且 $2\\pi$、$4\\pi$ 也不是面积。",
+   "misconception": "⚠️易错点：定积分的值是「带符号面积的代数和」，几何意义是面积的前提是被积函数非负；对称区间上奇函数积分为零是本题的另一种解释。",
+   "extension": null,
+   "tags": [
+    "几何意义"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(sin(x), (x, 0, 2*pi))",
+     "expected": "0"
+    }
+   ],
+   "idx": 358
+  },
+  {
+   "id": "ky2-1993-3-f2899b",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1993 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1993,
+    "region": "全国",
+    "paper": "1993 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "已知 $f(x) = \\begin{cases} x^2, & 0 \\leqslant x < 1, \\\\ 1, & 1 \\leqslant x \\leqslant 2, \\end{cases}$ 设 $F(x) = \\int_{1}^{x} f(t) \\, \\mathrm{d}t$ （ $0 \\leqslant x \\leqslant 2$ ），则 $F(x)$ 为·（）",
+   "options": [
+    "$\\left\\{ \\begin{array}{ll} \\frac{1}{3} x^3, & 0 \\leqslant x < 1; \\\\ x, & 1 \\leqslant x \\leqslant 2. \\end{array} \\right.$",
+    "$\\left\\{ \\begin{array}{ll} \\frac{1}{3} x^3 - \\frac{1}{3}, & 0 \\leqslant x < 1; \\\\ x, & 1 \\leqslant x \\leqslant 2. \\end{array} \\right.$",
+    "$\\left\\{ \\begin{array}{ll} \\frac{1}{3} x^3, & 0 \\leqslant x < 1; \\\\ x - 1, & 1 \\leqslant x \\leqslant 2. \\end{array} \\right.$",
+    "$\\left\\{ \\begin{array}{ll} \\frac{1}{3} x^3 - \\frac{1}{3}, & 0 \\leqslant x < 1; \\\\ x - 1, & 1 \\leqslant x \\leqslant 2. \\end{array} \\right.$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：D\n应选 (D).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 359
+  },
+  {
+   "id": "c5-s2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "knowledgePoints": [
+    "5.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.2 微积分基本公式",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $F(x)=\\displaystyle\\int_0^{x^2}\\sin t^2\\,dt$，则 $F'(x)=$",
+   "options": [
+    "$\\sin x^4$",
+    "$x^2\\sin x^4$",
+    "$2x\\sin x^4$",
+    "$2x\\cos x^4$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：变上限积分求导的链式版本（§5.2）：$\\dfrac{d}{dx}\\int_0^{\\varphi(x)}f(t)dt=f(\\varphi(x))\\varphi'(x)$。这里 $\\varphi(x)=x^2$，故 $F'(x)=\\sin(x^2)^2\\cdot 2x=2x\\sin x^4$，C 正确。\nA 错：漏乘上限函数的导数 $2x$。\nB 错：把 $\\varphi'(x)$ 误写成 $x^2$。\nD 错：对被积函数 $\\sin t^2$ 也求了导（积分变量 $t$ 不是求导对象）。",
+   "misconception": "⚠️易错点：被积函数里的 $t$ 在求导时是「死变量」，只对上限 $x$ 复合求导；上限是 $x^2$ 时要多乘一个 $2x$。",
+   "extension": null,
+   "tags": [
+    "变上限积分",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "求导",
+     "code": "xx=symbols('xx'); simplify(diff(Integral(sin(t**2), (t, 0, xx**2)), xx) - 2*xx*sin(xx**4))",
+     "expected": "0"
+    }
+   ],
+   "idx": 360
+  },
+  {
+   "id": "ky2-2013-4-2a41b2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "2013 年考研数学二第 4 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学二",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(x) = \\begin{cases} \\frac{1}{(x - 1)^{\\alpha - 1}}, & 1 < x < \\mathrm{e}, \\\\ \\frac{1}{x\\ln^{\\alpha + 1}x}, & x \\geqslant \\mathrm{e}, \\end{cases}$ 若反常积分 $\\int_{1}^{+\\infty} f(x) \\, \\mathrm{d}x$ 收敛，则 $\\cdots$ （）",
+   "options": [
+    "$\\alpha < -2$",
+    "$\\alpha > 2$",
+    "$-2 < \\alpha < 0$",
+    "$0 < \\alpha < 2$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：D\n应选 (D). 因为积分 $\\int_{1}^{e} \\frac{1}{(x - 1)^{\\alpha - 1}} \\mathrm{d}x$ 收敛当且仅当 $\\alpha - 1 < 1$ , 即 $\\alpha < 2$ . 积分 $\\int_{e}^{+\\infty} \\frac{1}{x \\ln^{\\alpha + 1} x} \\mathrm{d}x = \\int_{e}^{+\\infty} \\frac{\\mathrm{d}(\\ln x)}{\\ln^{\\alpha + 1} x}$ 收敛当且仅当 $\\alpha + 1 > 1$ , 即 $\\alpha > 0$ , 所以反常积分 $\\int_{1}^{+\\infty} f(x) \\mathrm{d}x = \\int_{1}^{e} f(x) \\mathrm{d}x + \\int_{e}^{+\\infty} f(x) \\mathrm{d}x = \\int_{1}^{e} \\frac{1}{(x - 1)^{\\alpha - 1}} \\mathrm{d}x + \\int_{e}^{+\\infty} \\frac{1}{x \\ln^{\\alpha + 1} x} \\mathrm{d}x$\n收敛当且仅当 $0 < \\alpha < 2$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 361
+  },
+  {
+   "id": "ky2-2015-1-a4c2dc",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "2015 年考研数学二第 1 题",
+    "kind": "exam-original",
+    "year": 2015,
+    "region": "全国",
+    "paper": "2015 年考研数学二",
+    "number": "1",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "下列反常积分收敛的是……（）",
+   "options": [
+    "$\\int_{2}^{+\\infty}\\frac{1}{\\sqrt{x}}\\mathrm{d}x.$",
+    "$\\int_{2}^{+\\infty}\\frac{\\ln x}{x}\\mathrm{d}x.$",
+    "$\\int_{2}^{+\\infty}\\frac{1}{x\\ln x}\\mathrm{d}x.$",
+    "$\\int_{2}^{+\\infty}\\frac{x}{\\mathrm{e}^x}\\mathrm{d}x.$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：D\n应选 (D). 这是因为\n$$\n\\int_ {2} ^ {+ \\infty} \\frac {x}{\\mathrm {e} ^ {x}} \\mathrm {d} x = \\left[ - (x + 1) \\mathrm {e} ^ {- x} \\right] _ {2} ^ {+ \\infty} = 3 \\mathrm {e} ^ {- 2} - \\lim  _ {x \\rightarrow + \\infty} (x + 1) \\mathrm {e} ^ {- x} = 3 \\mathrm {e} ^ {- 2}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 362
+  },
+  {
+   "id": "ky2-2018-6-52ac23",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2018 年考研数学二第 6 题",
+    "kind": "exam-original",
+    "year": 2018,
+    "region": "全国",
+    "paper": "2018 年考研数学二",
+    "number": "6",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\int_{-1}^{0}\\mathrm{d}x\\int_{-x}^{2 - x^2}(1 - xy)\\mathrm{d}y + \\int_{0}^{1}\\mathrm{d}x\\int_{x}^{2 - x^2}(1 - xy)\\mathrm{d}y = \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots$",
+   "options": [
+    "$\\frac{5}{3}$",
+    "$\\frac{5}{6}$",
+    "$\\frac{7}{3}$",
+    "$\\frac{7}{6}$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：C\n应选 (C). 因为积分区域 $D$ 关于 $y$ 轴对称, 所以\n原式 $= \\iint_{D} (1 - xy) \\, \\mathrm{d}x \\, \\mathrm{d}y = \\iint_{D} \\, \\mathrm{d}x \\, \\mathrm{d}y = 2 \\iint_{D_1} \\, \\mathrm{d}x \\, \\mathrm{d}y$\n$$\n= 2 \\int_ {0} ^ {1} \\mathrm {d} x \\int_ {x} ^ {2 - x ^ {2}} \\mathrm {d} y = 2 \\int_ {0} ^ {1} (2 - x ^ {2} - x) \\mathrm {d} x = 2 \\left(2 - \\frac {1}{3} - \\frac {1}{2}\\right) = \\frac {7}{3}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 363
+  },
+  {
+   "id": "ky2-2019-3-ef9ee7",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "2019 年考研数学二第 3 题",
+    "kind": "exam-original",
+    "year": 2019,
+    "region": "全国",
+    "paper": "2019 年考研数学二",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "下列反常积分发散的是",
+   "options": [
+    "$\\int_0^{+\\infty}x\\mathrm{e}^{-x}\\mathrm{d}x.$",
+    "$\\int_0^{+\\infty}x\\mathrm{e}^{-x^2}\\mathrm{d}x.$",
+    "$\\int_0^{+\\infty}\\frac{\\arctan x}{1 + x^2}\\mathrm{d}x.$",
+    "$\\int_0^{+\\infty}\\frac{x}{1 + x^2}\\mathrm{d}x.$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：D\n应选 (D). 因为\n$$\n\\int_ {0} ^ {+ \\infty} \\frac {x}{1 + x ^ {2}} d x = \\left[ \\frac {1}{2} \\ln (x ^ {2} + 1) \\right] _ {0} ^ {+ \\infty} = + \\infty ,\n$$\n所以反常积分 $\\int_0^{+\\infty}\\frac{x}{1 + x^2}\\mathrm{d}x$ 发散.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 364
+  },
+  {
+   "id": "c5-s3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.4 反常积分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "反常积分 $\\int_0^1\\ln x\\,dx$ 的值是",
+   "options": [
+    "$0$",
+    "$1$",
+    "发散",
+    "$-1$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$x=0$ 是瑕点。$\\int_0^1\\ln x\\,dx=\\lim\\limits_{\\varepsilon\\to0^+}\\left[x\\ln x-x\\right]_\\varepsilon^1=(0-1)-\\lim\\limits_{\\varepsilon\\to0^+}(\\varepsilon\\ln\\varepsilon-\\varepsilon)=-1-0=-1$（$\\varepsilon\\ln\\varepsilon\\to0$，见第 1 章）。积分收敛且值为 $-1$，D 正确。\nA 错：以为瑕点处被积函数趋于 $-\\infty$ 就一定发散。\nB 错：符号与数值均错。\nC 错：瑕积分是否发散要看具体极限，此处收敛。",
+   "misconception": "⚠️易错点：瑕积分先写极限定义再计算；$x\\ln x\\to0$（$x\\to0^+$）这一结果要当作已知结论使用。",
+   "extension": null,
+   "tags": [
+    "反常积分",
+    "困难"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(log(x), (x, 0, 1))",
+     "expected": "-1"
+    }
+   ],
+   "idx": 365
+  },
+  {
+   "id": "c5-m1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "knowledgePoints": [
+    "5.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.3 定积分的换元法和分部积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "下列关于对称区间 $[-a,a]$ 上定积分的等式，成立的有（其中 $f$ 为连续函数）",
+   "options": [
+    "若 $f$ 为奇函数，则 $\\int_{-a}^{a}f(x)\\,dx=0$",
+    "若 $f$ 为偶函数，则 $\\int_{-a}^{a}f(x)\\,dx=2\\int_0^{a}f(x)\\,dx$",
+    "$\\int_{-\\pi/2}^{\\pi/2}x^3\\cos x\\,dx=0$",
+    "$\\int_{-1}^{1}|x|\\,dx=0$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：对称区间上奇偶函数的积分性质（§5.3 换元法推论）：奇函数积分为零、偶函数积分为半区间两倍，A、B 正确；$x^3\\cos x$ 是奇函数（奇 $\\times$ 偶），积分为零，C 正确。\nD 错：$|x|$ 是偶函数且非负，$\\int_{-1}^{1}|x|\\,dx=2\\int_0^1x\\,dx=1$。",
+   "misconception": "⚠️易错点：先用对称性化简再计算可大幅减负；判断奇偶要先化简结构（如 $x^3\\sin x$ 是偶函数）。",
+   "extension": null,
+   "tags": [
+    "对称性",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "D项反例",
+     "code": "integrate(Abs(x), (x, -1, 1))",
+     "expected": "1"
+    }
+   ],
+   "idx": 366
+  },
+  {
+   "id": "c5-m2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.1 定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "关于定积分的存在性（可积性），下列说法正确的有",
+   "options": [
+    "在 $[a,b]$ 上连续的函数必可积",
+    "在 $[a,b]$ 上可积的函数必有界",
+    "在 $[a,b]$ 上有界的函数必可积",
+    "在 $[a,b]$ 上单调的函数必可积"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：可积的充分条件（§5.1）：连续函数可积、单调函数可积、只有有限个第一类间断点的函数可积，A、D 正确；可积函数必有界（无界函数的黎曼和可任意大），B 正确。\nC 错：有界不可积的反例是狄利克雷函数 $D(x)$（有理处取 1、无理处取 0），其黎曼和的极限不存在。",
+   "misconception": "⚠️易错点：「连续 $\\Rightarrow$ 可积 $\\Rightarrow$ 有界」是一条单向链，反向都不成立；可积函数可以有无穷多个间断点（只要「面积」上不集中）。",
+   "extension": "引申：更精细的勒贝格判据——$[a,b]$ 上的有界函数可积 $\\iff$ 其间断点集是零测度集（黎曼可积）；狄利克雷函数处处间断故不可积，而黎曼函数只在可数个点间断故可积。",
+   "tags": [
+    "可积性",
+    "困难"
+   ],
+   "verify": [],
+   "idx": 367
+  },
+  {
+   "id": "c5-j1",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "knowledgePoints": [
+    "5.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.2 微积分基本公式",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "牛顿-莱布尼茨公式 $\\int_a^b f(x)\\,dx=F(b)-F(a)$ 成立的一个常见条件是：$f(x)$ 在 $[a,b]$ 上连续，$F(x)$ 是 $f(x)$ 在 $[a,b]$ 上的一个原函数。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：教材叙述的牛顿-莱布尼茨公式以「$f$ 在 $[a,b]$ 上连续」为条件（§5.2；更一般的条件是 $f$ 可积且 $F$ 为原函数）。命题正确。",
+   "misconception": "⚠️易错点：被积函数在区间内有瑕点（无界）时不能直接套 N-L 公式，如 $\\int_{-1}^{1}\\dfrac{dx}{x^2}$——先检查连续性条件。",
+   "extension": null,
+   "tags": [
+    "牛顿-莱布尼茨公式",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 368
+  },
+  {
+   "id": "c5-j2",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "knowledgePoints": [
+    "5.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.3 定积分的换元法和分部积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int_{-1}^{1}\\dfrac{dx}{x^2}=\\left[-\\dfrac{1}{x}\\right]_{-1}^{1}=-2$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$x=0$ 是被积函数的瑕点（无界），不满足牛顿-莱布尼茨公式的连续性条件，不能直接套用。按瑕积分定义 $\\int_{-1}^{1}\\dfrac{dx}{x^2}=\\int_{-1}^{0}+\\int_{0}^{1}$，而 $\\int_0^1\\dfrac{dx}{x^2}=\\lim\\limits_{\\varepsilon\\to0^+}\\left[-\\dfrac1x\\right]_\\varepsilon^1=+\\infty$，发散。命题错误（§5.4）。",
+   "misconception": "⚠️易错点：定积分计算前先扫一眼区间内有无瑕点；「套公式得出负的面积」这类荒谬结果正是违规使用 N-L 的信号。",
+   "extension": null,
+   "tags": [
+    "瑕积分",
+    "易错点"
+   ],
+   "verify": [],
+   "idx": 369
+  },
+  {
+   "id": "c5-j3",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.4 反常积分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "反常积分 $\\int_0^{+\\infty}e^{-x}\\,dx$ 收敛。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\int_0^{+\\infty}e^{-x}dx=\\lim\\limits_{b\\to+\\infty}\\left[-e^{-x}\\right]_0^b=\\lim\\limits_{b\\to+\\infty}(1-e^{-b})=1$，收敛于 $1$。命题正确（§5.4）。",
+   "misconception": "⚠️易错点：指数衰减是反常积分收敛的典型；对照 $\\int_0^{+\\infty}e^{x}dx$ 发散，记住「$p$ 指数上正负一变，敛散全变」。",
+   "extension": null,
+   "tags": [
+    "反常积分"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(exp(-x), (x, 0, oo))",
+     "expected": "1"
+    }
+   ],
+   "idx": 370
+  },
+  {
+   "id": "c5-b1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "knowledgePoints": [
+    "5.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.2 微积分基本公式",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\dfrac{d}{dx}\\displaystyle\\int_0^x t\\sin t\\,dt=$ ____。",
+   "options": null,
+   "answer": [
+    "x*sin(x)"
+   ],
+   "accept": [
+    "xsinx",
+    "x*sin(x)",
+    "xsin(x)"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：变上限积分求导定理（§5.2）：$\\dfrac{d}{dx}\\int_0^x f(t)dt=f(x)$，被积函数中 $t$ 换成 $x$ 即得 $x\\sin x$。",
+   "misconception": "⚠️易错点：上限恰是 $x$（不是 $x^2$ 等），直接代入即可，无需链式因子。",
+   "extension": null,
+   "tags": [
+    "变上限积分"
+   ],
+   "verify": [
+    {
+     "desc": "求导",
+     "code": "xx=symbols('xx'); simplify(diff(Integral(t*sin(t), (t, 0, xx)), xx) - xx*sin(xx))",
+     "expected": "0"
+    }
+   ],
+   "idx": 371
+  },
+  {
+   "id": "c5-b2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "knowledgePoints": [
+    "5.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.3 定积分的换元法和分部积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\displaystyle\\int_0^{\\pi/2}\\sin^2 x\\,dx=$ ____。",
+   "options": null,
+   "answer": [
+    "pi/4"
+   ],
+   "accept": [
+    "pi/4",
+    "π/4",
+    "0.7853981633974483"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：降幂公式 $\\sin^2x=\\dfrac{1-\\cos2x}{2}$，故 $\\int_0^{\\pi/2}\\sin^2x\\,dx=\\dfrac12\\left[x-\\dfrac{\\sin2x}{2}\\right]_0^{\\pi/2}=\\dfrac{\\pi}{4}$。\n**引申**：华里士（Wallis）公式 $\\int_0^{\\pi/2}\\sin^nx\\,dx=\\dfrac{n-1}{n}\\cdot\\dfrac{n-3}{n-2}\\cdots$，$n=2$ 时直接得 $\\dfrac12\\cdot\\dfrac\\pi2=\\dfrac\\pi4$。",
+   "misconception": "⚠️易错点：忘记 $\\sin2x$ 在 $0$ 与 $\\dfrac\\pi2$ 处都为 $0$，或降幂公式系数 $\\dfrac12$ 丢失。",
+   "extension": "引申：华里士公式（点火公式）对 $\\int_0^{\\pi/2}\\sin^nx\\,dx$ 与 $\\cos^nx\\,dx$ 通用，是期末与考研的高频速算工具。",
+   "tags": [
+    "降幂公式",
+    "华里士公式"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(sin(x)**2, (x, 0, pi/2))",
+     "expected": "pi/4"
+    }
+   ],
+   "idx": 372
+  },
+  {
+   "id": "ky2-1988-5-55cf10",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1988 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1988,
+    "region": "全国",
+    "paper": "1988 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\int_0^4\\mathrm{e}^{\\sqrt{x}}\\mathrm{d}x = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "$2(\\mathrm{e}^{2} + 1)$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$2(\\mathrm{e}^{2} + 1)$\n应填 $2(\\mathrm{e}^{2} + 1)$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 373
+  },
+  {
+   "id": "ky2-1990-3-baa68c",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1990 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1990,
+    "region": "全国",
+    "paper": "1990 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\int_0^1 x\\sqrt{1 - x}\\mathrm{d}x = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "$\\frac{4}{15}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{4}{15}$\n应填 $\\frac{4}{15}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 374
+  },
+  {
+   "id": "ky2-1990-4-7ccae1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1990 年考研数学三第 4 题",
+    "kind": "exam-original",
+    "year": 1990,
+    "region": "全国",
+    "paper": "1990 年考研数学三",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "下列两个积分的大小关系是: $\\int_{-2}^{-1} \\mathrm{e}^{-x^3} \\, \\mathrm{d}x$ ________ $\\int_{-2}^{-1} \\mathrm{e}^{x^3} \\, \\mathrm{d}x$ .",
+   "options": null,
+   "answer": [
+    "$>$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$>$\n应填 $>$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 375
+  },
+  {
+   "id": "ky2-1992-4-e1722e",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "1992 年考研数学三第 4 题",
+    "kind": "exam-original",
+    "year": 1992,
+    "region": "全国",
+    "paper": "1992 年考研数学三",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\int_{1}^{+\\infty}\\frac{\\mathrm{d}x}{x(x^2 + 1)} = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "$\\frac{1}{2} \\ln 2$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{1}{2} \\ln 2$\n应填 $\\frac{1}{2} \\ln 2$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 376
+  },
+  {
+   "id": "ky2-1994-3-7581b9",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1994 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1994,
+    "region": "全国",
+    "paper": "1994 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\frac{\\mathrm{d}}{\\mathrm{d}x}\\left[\\int_0^{\\cos 3x}f(t)\\mathrm{d}t\\right] = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "$-3f(\\cos 3x)\\sin 3x$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$-3f(\\cos 3x)\\sin 3x$\n应填 $-3f(\\cos 3x)\\sin 3x$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 377
+  },
+  {
+   "id": "ky2-1996-2-5efb10",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1996 年考研数学三第 2 题",
+    "kind": "exam-original",
+    "year": 1996,
+    "region": "全国",
+    "paper": "1996 年考研数学三",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\int_{-1}^{1}\\left(x + \\sqrt{1 - x^2}\\right)^2\\mathrm{d}x = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "2"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：2\n应填2.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 378
+  },
+  {
+   "id": "ky2-1997-4-fdb7ab",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "1997 年考研数学二第 4 题",
+    "kind": "exam-original",
+    "year": 1997,
+    "region": "全国",
+    "paper": "1997 年考研数学二",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\int_{0}^{+\\infty}\\frac{\\mathrm{d}x}{x^2 + 4x + 8} = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "$\\frac{\\pi}{8}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{\\pi}{8}$\n应填 $\\frac{\\pi}{8}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 379
+  },
+  {
+   "id": "ky2-2001-3-8369d7",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2001 年考研数学二第 3 题",
+    "kind": "exam-original",
+    "year": 2001,
+    "region": "全国",
+    "paper": "2001 年考研数学二",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(x^{3} + \\sin^{2}x\\right)\\cos^{2}x\\mathrm{d}x = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "$\\frac{\\pi}{8}$ . 由定积分的对称性及倍角公式可得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{\\pi}{8}$ . 由定积分的对称性及倍角公式可得\n应填 $\\frac{\\pi}{8}$ . 由定积分的对称性及倍角公式可得\n$$\n\\begin{array}{l} \\int_ {- \\frac {\\pi}{2}} ^ {\\frac {\\pi}{2}} \\left(x ^ {3} + \\sin^ {2} x\\right) \\cos^ {2} x d x = \\int_ {- \\frac {\\pi}{2}} ^ {\\frac {\\pi}{2}} x ^ {3} \\cos^ {2} x d x + \\int_ {- \\frac {\\pi}{2}} ^ {\\frac {\\pi}{2}} \\sin^ {2} x \\cos^ {2} x d x \\\\ = 2 \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin^ {2} x \\cos^ {2} x d x = \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {1}{2} \\sin^ {2} 2 x d x \\\\ = \\frac {1}{4} \\int_ {0} ^ {\\frac {\\pi}{2}} (1 - \\cos 4 x) d x = \\left[ \\frac {1}{4} \\cdot x - \\frac {1}{1 6} \\sin 4 x \\right] _ {0} ^ {\\frac {\\pi}{2}} = \\frac {\\pi}{8}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 380
+  },
+  {
+   "id": "ky2-2009-10-f889cf",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "2009 年考研数学二第 10 题",
+    "kind": "exam-original",
+    "year": 2009,
+    "region": "全国",
+    "paper": "2009 年考研数学二",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "已知 $\\int_{-\\infty}^{+\\infty}\\mathrm{e}^{k|x|}\\mathrm{d}x = 1$ ，则 $k =$ ________.",
+   "options": null,
+   "answer": [
+    "-2. 显然有 $k < 0$ . 所以"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：-2. 显然有 $k < 0$ . 所以\n应填 -2. 显然有 $k < 0$ . 所以\n$$\n1 = \\int_ {- \\infty} ^ {+ \\infty} \\mathrm {e} ^ {k | x |} \\mathrm {d} x = 2 \\int_ {0} ^ {+ \\infty} \\mathrm {e} ^ {k x} \\mathrm {d} x = \\left[ \\frac {1}{k} \\mathrm {e} ^ {k x} \\right] _ {0} ^ {+ \\infty} = 0 - \\frac {2}{k} = - \\frac {2}{k},\n$$\n从而 $k = -2$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 381
+  },
+  {
+   "id": "ky2-2011-12-fa1d87",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "2011 年考研数学二第 12 题",
+    "kind": "exam-original",
+    "year": 2011,
+    "region": "全国",
+    "paper": "2011 年考研数学二",
+    "number": "12",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(x) = \\left\\{ \\begin{array}{ll} \\lambda \\mathrm{e}^{-\\lambda x}, & x > 0, \\\\ 0, & x \\leqslant 0, \\end{array} \\right. \\lambda > 0$ ，则 $\\int_{-\\infty}^{+\\infty} x f(x) \\mathrm{d}x =$ ________.",
+   "options": null,
+   "answer": [
+    "$\\frac{1}{\\lambda}$ . 由分部积分法可得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{1}{\\lambda}$ . 由分部积分法可得\n应填 $\\frac{1}{\\lambda}$ . 由分部积分法可得\n$$\n\\begin{array}{l} \\int_ {- \\infty} ^ {+ \\infty} x f (x) d x = \\int_ {0} ^ {+ \\infty} x \\lambda e ^ {- \\lambda x} d x = - \\int_ {0} ^ {+ \\infty} x d \\left(e ^ {- \\lambda x}\\right) \\\\ = - \\left[ x e ^ {- \\lambda x} \\right] _ {0} ^ {+ \\infty} + \\int_ {0} ^ {+ \\infty} e ^ {- \\lambda x} d x = 0 + \\left[ - \\frac {1}{\\lambda} e ^ {- \\lambda x} \\right] _ {0} ^ {+ \\infty} = \\frac {1}{\\lambda}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 382
+  },
+  {
+   "id": "ky2-2014-9-9d1c29",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "2014 年考研数学二第 9 题",
+    "kind": "exam-original",
+    "year": 2014,
+    "region": "全国",
+    "paper": "2014 年考研数学二",
+    "number": "9",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\int_{-\\infty}^{1}\\frac{1}{x^2 + 2x + 5}\\mathrm{d}x = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "$\\frac{3\\pi}{8}$ . 这是因为"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{3\\pi}{8}$ . 这是因为\n应填 $\\frac{3\\pi}{8}$ . 这是因为\n$$\n\\begin{array}{l} \\int_ {- \\infty} ^ {1} \\frac {1}{x ^ {2} + 2 x + 5} d x = \\int_ {- \\infty} ^ {1} \\frac {d x}{(x + 1) ^ {2} + 4} \\\\ = \\frac {1}{2} \\left[ \\arctan \\frac {x + 1}{2} \\right] _ {- \\infty} ^ {1} = \\frac {1}{2} \\left(\\frac {\\pi}{4} - \\left(- \\frac {\\pi}{2}\\right)\\right) = \\frac {3 \\pi}{8}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 383
+  },
+  {
+   "id": "ky2-2014-13-60b4f0",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2014 年考研数学二第 13 题",
+    "kind": "exam-original",
+    "year": 2014,
+    "region": "全国",
+    "paper": "2014 年考研数学二",
+    "number": "13",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "一根长为 1 的细棒位于 $x$ 轴的区间 $[0,1]$ 上，若其线密度 $\\rho(x) = -x^2 + 2x + 1$ 则该细棒的质心坐标 $\\overline{x} =$ ________.",
+   "options": null,
+   "answer": [
+    "$\\frac{11}{20}$ . 由质心坐标的公式得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{11}{20}$ . 由质心坐标的公式得\n应填 $\\frac{11}{20}$ . 由质心坐标的公式得\n$$\n\\overline {{x}} = \\frac {\\int_ {0} ^ {1} x \\rho (x) \\mathrm {d} x}{\\int_ {0} ^ {1} \\rho (x) \\mathrm {d} x} = \\frac {\\int_ {0} ^ {1} (- x ^ {3} + 2 x ^ {2} + x) \\mathrm {d} x}{\\int_ {0} ^ {1} (- x ^ {2} + 2 x + 1) \\mathrm {d} x} = \\frac {\\frac {1 1}{1 2}}{\\frac {5}{3}} = \\frac {1 1}{2 0}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 384
+  },
+  {
+   "id": "ky2-2017-11-8be447",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "2017 年考研数学二第 11 题",
+    "kind": "exam-original",
+    "year": 2017,
+    "region": "全国",
+    "paper": "2017 年考研数学二",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\int_{0}^{+\\infty}\\frac{\\ln(1 + x)}{(1 + x)^{2}}\\mathrm{d}x = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "1. 由分部积分法可得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：1. 由分部积分法可得\n应填 1. 由分部积分法可得\n$$\n\\begin{array}{l} \\int_ {0} ^ {+ \\infty} \\frac {\\ln (1 + x)}{(1 + x) ^ {2}} d x = \\int_ {0} ^ {+ \\infty} \\ln (1 + x) d \\left(- \\frac {1}{1 + x}\\right) \\\\ = - \\frac {1}{1 + x} \\ln (1 + x) \\bigg | _ {0} ^ {+ \\infty} + \\int_ {0} ^ {+ \\infty} \\left(\\frac {1}{1 + x}\\right) ^ {2} d x \\\\ = - \\frac {1}{1 + x} \\ln (1 + x) \\bigg | _ {0} ^ {+ \\infty} - \\frac {1}{1 + x} \\bigg | _ {0} ^ {+ \\infty} = 0 + 1 = 1. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 385
+  },
+  {
+   "id": "ky2-2017-13-b9e584",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2017 年考研数学二第 13 题",
+    "kind": "exam-original",
+    "year": 2017,
+    "region": "全国",
+    "paper": "2017 年考研数学二",
+    "number": "13",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\int_0^1\\mathrm{d}y\\int_y^1\\frac{\\tan x}{x}\\mathrm{d}x = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "$-\\ln (\\cos 1)$ . 交换积分次序可得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$-\\ln (\\cos 1)$ . 交换积分次序可得\n应填 $-\\ln (\\cos 1)$ . 交换积分次序可得\n$$\n\\int_ {0} ^ {1} \\mathrm {d} y \\int_ {y} ^ {1} \\frac {\\tan x}{x} \\mathrm {d} x = \\int_ {0} ^ {1} \\mathrm {d} x \\int_ {0} ^ {x} \\frac {\\tan x}{x} \\mathrm {d} y = \\int_ {0} ^ {1} \\tan x \\mathrm {d} x = - [ \\ln | \\cos x | ] _ {0} ^ {1} = - \\ln \\cos 1.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 386
+  },
+  {
+   "id": "ky-2004-3-63352b",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2004 年考研数学（一）第 3 题",
+    "kind": "exam-original",
+    "year": 2004,
+    "region": "全国",
+    "paper": "2004 年考研数学（一）",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2004年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2004年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2004年解析/2004年解析.md"
+   },
+   "stem": "设 $L$ 为正向圆周 $x^{2} + y^{2} = 2$ 在第一象限中的部分, 则曲线积分 $\\int_{L} x \\mathrm{~d}y - 2y \\mathrm{~d}x$ 的值为",
+   "options": null,
+   "answer": [
+    "$\\frac{3\\pi}{2}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{3\\pi}{2}$\n【解】 方法一 令 $A(\\sqrt{2},0),B(0,\\sqrt{2})$ ，则\n\n$$\n\\int_ {L} x \\mathrm {d} y - 2 y \\mathrm {d} x = \\oint_ {L + \\overline {{B O}} + \\overline {{O A}}} x \\mathrm {d} y - 2 y \\mathrm {d} x + \\int_ {\\overline {{O B}}} x \\mathrm {d} y - 2 y \\mathrm {d} x - \\int_ {\\overline {{O A}}} x \\mathrm {d} y - 2 y \\mathrm {d} x,\n$$\n\n$$\n\\oint_ {L + \\overline {{B O}} + \\overline {{O A}}} x \\mathrm {d} y - 2 y \\mathrm {d} x = 3 \\iint_ {D} \\mathrm {d} x \\mathrm {d} y = 3 \\times \\frac {1}{4} \\times 2 \\pi = \\frac {3 \\pi}{2},\n$$\n\n$$\n\\int_ {\\overline {{O B}}} x \\mathrm {d} y - 2 y \\mathrm {d} x = 0, \\quad \\int_ {\\overline {{O A}}} x \\mathrm {d} y - 2 y \\mathrm {d} x = 0,\n$$\n\n于是 $\\int_{L}x\\mathrm{d}y - 2y\\mathrm{d}x = \\frac{3\\pi}{2}$\n\n方法二 令 $\\left\\{ \\begin{array}{l} x = \\sqrt{2} \\cos \\theta, \\\\ y = \\sqrt{2} \\sin \\theta \\end{array} \\right.$ （起点 $\\theta = 0$ ，终点 $\\theta = \\frac{\\pi}{2}$ ），则\n\n$$\n\\begin{array}{l} \\int_ {L} x \\mathrm {d} y - 2 y \\mathrm {d} x = \\int_ {0} ^ {\\frac {\\pi}{2}} (\\sqrt {2} \\cos \\theta \\cdot \\sqrt {2} \\cos \\theta + 2 \\sqrt {2} \\sin \\theta \\cdot \\sqrt {2} \\sin \\theta) \\mathrm {d} \\theta \\\\ = 2 \\int_ {0} ^ {\\frac {\\pi}{2}} (1 + \\sin^ {2} \\theta) d \\theta = \\pi + 2 I _ {2} = \\frac {3 \\pi}{2}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 387
+  },
+  {
+   "id": "ky-2007-11-194e2f",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2007 年考研数学（一）第 11 题",
+    "kind": "exam-original",
+    "year": 2007,
+    "region": "全国",
+    "paper": "2007 年考研数学（一）",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2007年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2007年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2007年解析/2007年解析.md"
+   },
+   "stem": "$\\int_{1}^{2} \\frac{1}{x^3} \\mathrm{e}^{\\frac{1}{x}} \\, \\mathrm{d}x = \\underline{\\quad}$ .",
+   "options": null,
+   "answer": [
+    "$\\frac{\\sqrt{\\mathrm{e}}}{2}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{\\sqrt{\\mathrm{e}}}{2}$\n【解】 $\\int_{1}^{2}\\frac{1}{x^3}\\mathrm{e}^{\\frac{1}{x}}\\mathrm{d}x = -\\int_{1}^{2}\\frac{1}{x}\\mathrm{e}^{\\frac{1}{x}}\\mathrm{d}\\left(\\frac{1}{x}\\right) = \\int_{\\frac{1}{2}}^{1}t\\mathrm{e}^{t}\\mathrm{d}t = (t - 1)\\mathrm{e}^{t}\\Bigg|_{\\frac{1}{2}}^{1} = \\frac{\\sqrt{\\mathrm{e}}}{2}.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 388
+  },
+  {
+   "id": "ky-2009-11-4d88bf",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2009 年考研数学（一）第 11 题",
+    "kind": "exam-original",
+    "year": 2009,
+    "region": "全国",
+    "paper": "2009 年考研数学（一）",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2009年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2009年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2009年解析/2009年解析.md"
+   },
+   "stem": "已知曲线 $L:y = x^{2}\\left(0\\leqslant x\\leqslant \\sqrt{2}\\right)$ ，则 $\\int_{L}x\\mathrm{d}s =$",
+   "options": null,
+   "answer": [
+    "$\\frac{13}{6}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{13}{6}$\n【解】 由 $\\mathrm{ds} = \\sqrt{1 + y^{\\prime 2}}\\mathrm{dx} = \\sqrt{1 + 4x^2}\\mathrm{dx}$ ，得\n\n$$\n\\int_ {L} x \\mathrm {d} s = \\int_ {0} ^ {\\sqrt {2}} x \\sqrt {1 + 4 x ^ {2}} \\mathrm {d} x = \\frac {1}{8} \\int_ {0} ^ {\\sqrt {2}} (1 + 4 x ^ {2}) ^ {\\frac {1}{2}} \\mathrm {d} (1 + 4 x ^ {2}) = \\frac {1}{1 2} (1 + 4 x ^ {2}) ^ {\\frac {3}{2}} \\Bigg | _ {0} ^ {\\sqrt {2}} = \\frac {1 3}{6}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 389
+  },
+  {
+   "id": "ky-2010-9-bb48b9",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2010 年考研数学（一）第 9 题",
+    "kind": "exam-original",
+    "year": 2010,
+    "region": "全国",
+    "paper": "2010 年考研数学（一）",
+    "number": "9",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2010年解析/2010年解析.md"
+   },
+   "stem": "设 $\\left\\{ \\begin{array}{l} x = \\mathrm{e}^{-t}, \\\\ y = \\int_{0}^{t} \\ln (1 + u^{2}) \\, \\mathrm{d}u, \\end{array} \\right.$ 则 $\\left. \\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2} \\right|_{t=0} = \\_$ .",
+   "options": null,
+   "answer": [
+    "0"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：0\n【解】 $\\frac{\\mathrm{dy}}{\\mathrm{dx}} = \\frac{\\mathrm{dy} / \\mathrm{dt}}{\\mathrm{dx} / \\mathrm{dt}} = -\\mathrm{e}^{t}\\ln (1 + t^{2}),$\n\n$$\n\\begin{array}{l} \\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} x ^ {2}} = \\frac {\\mathrm {d} \\left(\\frac {\\mathrm {d} y}{\\mathrm {d} x}\\right) / \\mathrm {d} t}{\\mathrm {d} x / \\mathrm {d} t} = - \\left[ \\mathrm {e} ^ {t} \\ln (1 + t ^ {2}) + \\mathrm {e} ^ {t} \\frac {2 t}{1 + t ^ {2}} \\right] \\cdot (- \\mathrm {e} ^ {t}) \\\\ = \\mathrm {e} ^ {2 t} \\left[ \\ln (1 + t ^ {2}) + \\frac {2 t}{1 + t ^ {2}} \\right], \\\\ \\end{array}\n$$\n\n于是 $\\left.\\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{t = 0} = 0.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 390
+  },
+  {
+   "id": "ky-2012-10-9dcafb",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2012 年考研数学（一）第 10 题",
+    "kind": "exam-original",
+    "year": 2012,
+    "region": "全国",
+    "paper": "2012 年考研数学（一）",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2012年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2012年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2012年解析/2012年解析.md"
+   },
+   "stem": "$\\int_0^2 x\\sqrt{2x - x^2}\\mathrm{d}x = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "$\\frac{\\pi}{2}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{\\pi}{2}$\n【解】 $\\int_0^2 x\\sqrt{2x - x^2}\\mathrm{d}x = \\int_0^2 [(x - 1) + 1]\\sqrt{1 - (x - 1)^2}\\mathrm{d}(x - 1)$\n\n$$\n\\begin{array}{l} = \\int_ {- 1} ^ {1} (x + 1) \\sqrt {1 - x ^ {2}} d x = \\int_ {- 1} ^ {1} \\sqrt {1 - x ^ {2}} d x \\\\ = 2 \\int_ {0} ^ {1} \\sqrt {1 - x ^ {2}} d x = \\frac {\\pi}{2}. \\\\ \\end{array}\n$$\n\n方法点评：本题考查定积分的计算。当积分表达式中出现根号，且根号内为二次多项式，一般采用配方法，再换元。需要注意如下几个结论：\n\n(1) $\\int_{-a}^{a} f(x) \\, \\mathrm{d}x = \\int_{0}^{a} [f(x) + f(-x)] \\, \\mathrm{d}x$ ;\n(2) 含 $\\sqrt{a^2 - x^2}$ 的积分，注意使用三角代换 $x = a\\sin t$\n\n特别地，根据定积分的几何意义有 $\\int_{0}^{a}\\sqrt{a^2 - x^2}\\mathrm{d}x = \\frac{\\pi}{4} a^2.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 391
+  },
+  {
+   "id": "ky-2013-12-14e1ae",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "2013 年考研数学（一）第 12 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学（一）",
+    "number": "12",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2013年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2013年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2013年解析/2013年解析.md"
+   },
+   "stem": "$\\int_{1}^{+\\infty}\\frac{\\ln x}{(1 + x)^{2}}\\mathrm{d}x = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "$\\ln 2$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\ln 2$\n【解】 $\\int_{1}^{+\\infty}\\frac{\\ln x}{(1 + x)^{2}}\\mathrm{d}x = -\\int_{1}^{+\\infty}\\ln x\\mathrm{d}\\left(\\frac{1}{1 + x}\\right) = -\\frac{\\ln x}{1 + x}\\Bigg|_{1}^{+\\infty} + \\int_{1}^{+\\infty}\\frac{1}{x(1 + x)}\\mathrm{d}x$\n\n$$\n= \\int_ {1} ^ {+ \\infty} \\frac {1}{x (1 + x)} d x = \\ln \\left. \\frac {x}{1 + x} \\right| _ {1} ^ {+ \\infty} = \\ln 2.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 392
+  },
+  {
+   "id": "ky-2015-10-15fe15",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2015 年考研数学（一）第 10 题",
+    "kind": "exam-original",
+    "year": 2015,
+    "region": "全国",
+    "paper": "2015 年考研数学（一）",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2015年解析/2015年解析.md"
+   },
+   "stem": "$\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(\\frac{\\sin x}{1 + \\cos x} + |x|\\right)\\mathrm{d}x = \\underline{\\quad}$ .",
+   "options": null,
+   "answer": [
+    "$\\frac{\\pi^2}{4}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{\\pi^2}{4}$\n【解】 $\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(\\frac{\\sin x}{1 + \\cos x} + |x|\\right) \\mathrm{d}x = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} |x| \\mathrm{d}x = 2\\int_{0}^{\\frac{\\pi}{2}} x \\mathrm{d}x = \\frac{\\pi^2}{4}$ .\n\n方法点评：本题考查定积分的奇偶性质，即\n\n$\\int_{-a}^{a}f(x)\\mathrm{d}x = \\int_{0}^{a}\\left[f(x) + f(-x)\\right]\\mathrm{d}x$ ，特别地，\n\n当 $f(-x) = f(x)$ 时， $\\int_{-a}^{a}f(x)\\mathrm{d}x = 2\\int_{0}^{a}f(x)\\mathrm{d}x;$\n\n当 $f(-x) = -f(x)$ 时， $\\int_{-a}^{a}f(x)\\mathrm{d}x = 0.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 393
+  },
+  {
+   "id": "ky-2015-12-0344d2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2015 年考研数学（一）第 12 题",
+    "kind": "exam-original",
+    "year": 2015,
+    "region": "全国",
+    "paper": "2015 年考研数学（一）",
+    "number": "12",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2015年解析/2015年解析.md"
+   },
+   "stem": "设 $\\Omega$ 是由平面 $x + y + z = 1$ 与三个坐标平面所围成的空间区域, 则 $\\iiint_{\\Omega} (x + 2y + 3z) \\, \\mathrm{d}x \\, \\mathrm{d}y \\, \\mathrm{d}z =$",
+   "options": null,
+   "answer": [
+    "$\\frac{1}{4}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{1}{4}$\n【解】 方法一 由对称性得\n\n$$\n\\begin{array}{l} \\iiint_ {\\Omega} (x + 2 y + 3 z) \\mathrm {d} v = 6 \\iiint_ {\\Omega} z \\mathrm {d} v \\\\ = 6 \\int_ {0} ^ {1} \\mathrm {d} x \\int_ {0} ^ {1 - x} \\mathrm {d} y \\int_ {0} ^ {1 - x - y} z \\mathrm {d} z = 3 \\int_ {0} ^ {1} \\mathrm {d} x \\int_ {0} ^ {1 - x} (1 - x - y) ^ {2} \\mathrm {d} y \\\\ = \\int_ {0} ^ {1} (1 - x) ^ {3} d x = - \\frac {(1 - x) ^ {4}}{4} \\Big | _ {0} ^ {1} = \\frac {1}{4}. \\\\ \\end{array}\n$$\n\n方法二 $\\Omega = \\{(x,y,z) \\mid (x,y) \\in D, 0 \\leqslant z \\leqslant 1 - x - y\\}$ ,\n\n其中 $D = \\{(x,y)\\mid 0\\leqslant x\\leqslant 1,0\\leqslant y\\leqslant 1 - x\\}$ ，则\n\n$$\n\\begin{array}{l} \\iiint_ {\\Omega} (x + 2 y + 3 z) \\mathrm {d} v = \\iint_ {D} \\mathrm {d} x \\mathrm {d} y \\int_ {0} ^ {1 - x - y} (x + 2 y + 3 z) \\mathrm {d} z \\\\ = \\iint_ {D} \\left[ (x + 2 y) (1 - x - y) + \\frac {3}{2} (1 - x - y) ^ {2} \\right] d x d y \\\\ = \\int_ {0} ^ {1} \\mathrm {d} x \\int_ {0} ^ {1 - x} \\left[ (x + 2 y) (1 - x - y) + \\frac {3}{2} (1 - x - y) ^ {2} \\right] \\mathrm {d} y = \\frac {1}{4}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 394
+  },
+  {
+   "id": "c5-t1",
+   "type": "term",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.1 定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "名词解释：定积分。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "设 $f(x)$ 在 $[a,b]$ 上有界，在 $[a,b]$ 中任意插入分点并取 $\\xi_i\\in[x_{i-1},x_i]$，作和式 $\\sum_{i=1}^{n}f(\\xi_i)\\Delta x_i$；若当分割细度 $\\lambda=\\max\\Delta x_i\\to0$ 时此和式的极限存在（与分割方式及 $\\xi_i$ 的取法无关），则称 $f(x)$ 在 $[a,b]$ 上可积，该极限值称为 $f(x)$ 在 $[a,b]$ 上的定积分，记作 $\\int_a^b f(x)\\,dx$。",
+   "points": [
+    {
+     "text": "定义核心：分割、取点、求和、取极限——$\\int_a^b f(x)dx=\\lim\\limits_{\\lambda\\to0}\\sum\\limits_{i=1}^n f(\\xi_i)\\Delta x_i$，极限须与分割和取点方式无关。",
+     "partial": 2
+    },
+    {
+     "text": "几何意义与存在性：$f\\ge0$ 时表示曲边梯形面积；连续函数、单调函数、仅有有限个第一类间断点的函数都可积。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：定积分的「和式极限」定义与几何意义见 §5.1。\n**考点出处**：同济《高等数学》第七版 §5.1 定积分的概念与性质。",
+   "misconception": "⚠️易错点：定义中的 $\\lambda\\to0$ 是「最大子区间长度趋于零」，不能换成 $n\\to\\infty$（均匀分割加细才行）；定积分是数，与积分变量用什么字母无关。",
+   "extension": null,
+   "tags": [
+    "定积分定义",
+    "概念",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 395
+  },
+  {
+   "id": "c5-t2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "knowledgePoints": [
+    "5.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.2 微积分基本公式",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "简答：叙述微积分基本定理（含变上限积分的原函数存在定理与牛顿-莱布尼茨公式）的内容，并说明其意义。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "①原函数存在定理：若 $f(x)$ 在 $[a,b]$ 上连续，则 $\\Phi(x)=\\int_a^x f(t)\\,dt$ 在 $[a,b]$ 上可导，且 $\\Phi'(x)=f(x)$——连续函数必有原函数。②牛顿-莱布尼茨公式：若 $F(x)$ 是 $f(x)$ 在 $[a,b]$ 上的一个原函数，则 $\\int_a^b f(x)\\,dx=F(b)-F(a)$。意义：它揭示了微分与积分的互逆关系，把定积分计算归结为求原函数的函数值之差，使定积分从「求和式极限」变为可操作的运算。",
+   "points": [
+    {
+     "text": "原函数存在定理：$f$ 连续时变上限积分 $\\Phi(x)=\\int_a^xf(t)dt$ 可导且 $\\Phi'=f$，即连续函数必有原函数。",
+     "partial": 2
+    },
+    {
+     "text": "牛顿-莱布尼茨公式：$\\int_a^bf(x)dx=F(b)-F(a)$（$F$ 为任一原函数）。",
+     "partial": 2
+    },
+    {
+     "text": "意义与前提：沟通微分学与积分学，把定积分计算化为「找原函数、代端点」；使用前提是 $f$ 在 $[a,b]$ 上连续（教材条件），有瑕点时须改用反常积分。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：两个定理的表述与意义见 §5.2。\n**考点出处**：同济《高等数学》第七版 §5.2 微积分基本公式。",
+   "misconception": "⚠️易错点：$\\Phi(x)=\\int_a^x f(t)dt$ 中 $\\Phi(a)=0$；「$\\Phi$ 是 $f$ 的原函数」与「$\\int_a^bf=F(b)-F(a)$」是两条定理，别混成一条。",
+   "extension": null,
+   "tags": [
+    "微积分基本定理",
+    "简答",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 396
+  },
+  {
+   "id": "c5-c1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "knowledgePoints": [
+    "5.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.3 定积分的换元法和分部积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求 $\\displaystyle\\int_1^{e}\\dfrac{\\ln x}{x}\\,dx$。",
+   "options": null,
+   "answer": [
+    "1/2"
+   ],
+   "accept": null,
+   "answerText": "凑微分 $\\dfrac{dx}{x}=d(\\ln x)$：\n$$\\int_1^{e}\\frac{\\ln x}{x}dx=\\int_1^{e}\\ln x\\,d(\\ln x)=\\left[\\frac{\\ln^2x}{2}\\right]_1^{e}=\\frac{1}{2}.$$\n（$\\ln e=1$，$\\ln 1=0$。）",
+   "points": [
+    {
+     "text": "凑微分 $\\dfrac{dx}{x}=d(\\ln x)$，把 $\\ln x$ 视为新变量。",
+     "partial": 2
+    },
+    {
+     "text": "直接用幂函数积分 $\\int u\\,du=\\dfrac{u^2}{2}$。",
+     "partial": 2
+    },
+    {
+     "text": "代端点：$\\dfrac{1^2}{2}-0=\\dfrac12$。",
+     "partial": 2
+    },
+    {
+     "text": "说明：定积分的凑微分不必回代原变量，直接换上下限。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：定积分换元法「换元同时换限」（§5.3）。\n**考点出处**：同济《高等数学》第七版 §5.3 定积分的换元法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "凑微分",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(log(x)/x, (x, 1, E))",
+     "expected": "1/2"
+    }
+   ],
+   "idx": 397
+  },
+  {
+   "id": "ky-2010-3-01cfa4",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "2010 年考研数学（一）第 3 题",
+    "kind": "exam-original",
+    "year": 2010,
+    "region": "全国",
+    "paper": "2010 年考研数学（一）",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2010年解析/2010年解析.md"
+   },
+   "stem": "设 $m, n$ 均是正整数，则反常积分 $\\int_{0}^{1} \\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}} \\mathrm{d}x$ 的收敛性（ ）",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】 $x = 0$ 及 $x = 1$ 为反常积分 $\\int_0^1\\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}}\\mathrm{d}x$ 的瑕点，\n\n$$\n\\int_ {0} ^ {1} \\frac {\\sqrt [ m ]{\\ln^ {2} (1 - x)}}{\\sqrt [ n ]{x}} d x = \\int_ {0} ^ {\\frac {1}{2}} \\frac {\\sqrt [ m ]{\\ln^ {2} (1 - x)}}{\\sqrt [ n ]{x}} d x + \\int_ {\\frac {1}{2}} ^ {1} \\frac {\\sqrt [ m ]{\\ln^ {2} (1 - x)}}{\\sqrt [ n ]{x}} d x,\n$$\n\n因为 $\\lim_{x\\to 0^{+}}x^{\\frac{1}{n} -\\frac{2}{m}}\\cdot \\frac{\\sqrt[m]{\\ln^{2}(1 - x)}}{\\sqrt[n]{x}} = 1$ 且 $\\alpha = \\frac{1}{n} -\\frac{2}{m} <  1$ ，所以 $\\int_0^{\\frac{1}{2}}\\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}}\\mathrm{d}x$ 收敛；\n\n又因为 $\\lim_{x\\to 1^{-}}(1 - x)^{\\frac{1}{2}}\\cdot \\frac{\\sqrt[m]{\\ln^{2}(1 - x)}}{\\sqrt[n]{x}} = \\lim_{x\\to 1^{-}}\\sqrt{1 - x}\\cdot \\ln^{\\frac{2}{m}}(1 - x)$\n\n$$\n\\underline {{\\underline {{1 - x = t}}}} \\lim  _ {t \\rightarrow 0 ^ {+}} \\frac {\\ln^ {\\frac {2}{m}} t}{t ^ {- \\frac {1}{2}}} = \\left(\\lim  _ {t \\rightarrow 0 ^ {+}} \\frac {\\ln t}{t ^ {- \\frac {m}{4}}}\\right) ^ {\\frac {2}{m}} = \\left(- \\frac {4}{m} \\lim  _ {t \\rightarrow 0 ^ {+}} \\frac {\\frac {1}{t}}{t ^ {- \\frac {m}{4} - 1}}\\right) ^ {\\frac {2}{m}} = 0\n$$\n\n且 $\\alpha = \\frac{1}{2} < 1$ ，所以 $\\int_{\\frac{1}{2}}^{1}\\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}}\\mathrm{d}x$ 收敛，故 $\\int_0^1\\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}}\\mathrm{d}x$ 收敛，应选(D).\n\n方法点评：对积分区间有限但函数有无穷间断点的反常积分的敛散性判断通常有定义法和判别法.\n\n（1）设 $f(x)\\in C(a,b]$ ，且 $f(x)$ 在 $x = a$ 的右邻域内无界.\n\n定义法：对任意的 $\\varepsilon >0$ ，若 $\\lim_{\\varepsilon \\to 0^{+}}\\int_{a + \\varepsilon}^{b}f(x)\\mathrm{d}x$ 存在，则称反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 收敛，否则称为发散.\n\n判别法：设 $\\lim_{x\\to a^{+}}(x - a)^{k}f(x) = A(\\neq \\infty)$ ，则当 $0 < k < 1, 0 \\leqslant A < +\\infty$ 时，反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 收敛；当 $k \\geqslant 1, 0 < A \\leqslant +\\infty$ 时，反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 发散.\n\n（2）设 $f(x)\\in C[a,b)$ ，且 $f(x)$ 在 $x = b$ 的左邻域内无界.\n\n定义法：对任意的 $\\varepsilon >0$ ，若 $\\lim_{\\varepsilon \\to 0^{+}}\\int_{a}^{b - \\varepsilon}f(x)\\mathrm{d}x$ 存在，则称反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 收敛，否则称为发散.\n\n判别法：设 $\\lim_{x\\to b^{-}}(b - x)^{k}f(x) = A(\\neq \\infty)$ ，则当 $0 < k < 1, 0 \\leqslant A < +\\infty$ 时，反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 收敛；当 $k \\geqslant 1, 0 < A \\leqslant +\\infty$ 时，反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 发散.",
+   "points": [
+    {
+     "text": "【解】 $x = 0$ 及 $x = 1$ 为反常积分 $\\int_0^1\\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}}\\mathrm{d}x$ 的瑕点，",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\int_ {0} ^ {1} \\frac {\\sqrt [ m ]{\\ln^ {2} (1 - x)}}{\\sqrt [ n ]{x}} d x = \\int_ {0} ^ {\\frac {1}{2}} \\frac {\\sqrt [ m ]{\\ln^ {2} (1 - x)}}{\\sqrt [ n ]{x}} d x + \\int_ {\\frac {1}{2}} ^ {1} \\frac {\\sqrt [ m ]{\\ln^ {2} (1 - x)}}{\\sqrt [ n ]{x}} d x,\n$$",
+     "partial": 2
+    },
+    {
+     "text": "因为 $\\lim_{x\\to 0^{+}}x^{\\frac{1}{n} -\\frac{2}{m}}\\cdot \\frac{\\sqrt[m]{\\ln^{2}(1 - x)}}{\\sqrt[n]{x}} = 1$ 且 $\\alpha = \\frac{1}{n} -\\frac{2}{m} <  1$ ，所以 $\\int_0^{\\frac{1}{2}}\\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}}\\mathrm{d}x$ 收敛；",
+     "partial": 2
+    },
+    {
+     "text": "又因为 $\\lim_{x\\to 1^{-}}(1 - x)^{\\frac{1}{2}}\\cdot \\frac{\\sqrt[m]{\\ln^{2}(1 - x)}}{\\sqrt[n]{x}} = \\lim_{x\\to 1^{-}}\\sqrt{1 - x}\\cdot \\ln^{\\frac{2}{m}}(1 - x)$",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\underline {{\\underline {{1 - x = t}}}} \\lim  _ {t \\rightarrow 0 ^ {+}} \\frac {\\ln^ {\\frac {2}{m}} t}{t ^ {- \\frac {1}{2}}} = \\left(\\lim  _ {t \\rightarrow 0 ^ {+}} \\frac {\\ln t}{t ^ {- \\frac {m}{4}}}\\right) ^ {\\frac {2}{m}} = \\left(- \\frac {4}{m} \\lim  _ {t \\rightarrow 0 ^ {+}} \\frac {\\frac {1}{t}}{t ^ {- \\frac {m}{4} - 1}}\\right) ^ {\\frac {2}{m}} = 0\n$$",
+     "partial": 2
+    },
+    {
+     "text": "且 $\\alpha = \\frac{1}{2} < 1$ ，所以 $\\int_{\\frac{1}{2}}^{1}\\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}}\\mathrm{d}x$ 收敛，故 $\\int_0^1\\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}}\\mathrm{d}x$ 收敛，应选(D).；方法点评：对积分区间有限但函数有无穷间断点的反常积分的敛散性判断通常有定义法和判别法.；设 $f(x)\\in C(a,b]$ ，且 $f(x)$ 在 $x = a$ 的右邻域内无界.\n\n定义法：对任意的 $\\varepsilon >0$ ，若 $\\lim_{\\varepsilon \\to 0^{+}}\\int_{a + \\varepsilon}^{b}f(x)\\mathrm{d}x$ 存在，则称反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 收敛，否则称为发散.\n\n判别法：设 $\\lim_{x\\to a^{+}}(x - a)^{k}f(x) = A(\\neq \\infty)$ ，则当 $0 < k < 1, 0 \\leqslant A < +\\infty$ 时，反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 收敛；当 $k \\geqslant 1, 0 < A \\leqslant +\\infty$ 时，反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 发散.；设 $f(x)\\in C[a,b)$ ，且 $f(x)$ 在 $x = b$ 的左邻域内无界.\n\n定义法：对任意的 $\\varepsilon >0$ ，若 $\\lim_{\\varepsilon \\to 0^{+}}\\int_{a}^{b - \\varepsilon}f(x)\\mathrm{d}x$ 存在，则称反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 收敛，否则称为发散.\n\n判别法：设 $\\lim_{x\\to b^{-}}(b - x)^{k}f(x) = A(\\neq \\infty)$ ，则当 $0 < k < 1, 0 \\leqslant A < +\\infty$ 时，反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 收敛；当 $k \\geqslant 1, 0 < A \\leqslant +\\infty$ 时，反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 发散.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：D\n【解】 $x = 0$ 及 $x = 1$ 为反常积分 $\\int_0^1\\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}}\\mathrm{d}x$ 的瑕点，\n\n$$\n\\int_ {0} ^ {1} \\frac {\\sqrt [ m ]{\\ln^ {2} (1 - x)}}{\\sqrt [ n ]{x}} d x = \\int_ {0} ^ {\\frac {1}{2}} \\frac {\\sqrt [ m ]{\\ln^ {2} (1 - x)}}{\\sqrt [ n ]{x}} d x + \\int_ {\\frac {1}{2}} ^ {1} \\frac {\\sqrt [ m ]{\\ln^ {2} (1 - x)}}{\\sqrt [ n ]{x}} d x,\n$$\n\n因为 $\\lim_{x\\to 0^{+}}x^{\\frac{1}{n} -\\frac{2}{m}}\\cdot \\frac{\\sqrt[m]{\\ln^{2}(1 - x)}}{\\sqrt[n]{x}} = 1$ 且 $\\alpha = \\frac{1}{n} -\\frac{2}{m} <  1$ ，所以 $\\int_0^{\\frac{1}{2}}\\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}}\\mathrm{d}x$ 收敛；\n\n又因为 $\\lim_{x\\to 1^{-}}(1 - x)^{\\frac{1}{2}}\\cdot \\frac{\\sqrt[m]{\\ln^{2}(1 - x)}}{\\sqrt[n]{x}} = \\lim_{x\\to 1^{-}}\\sqrt{1 - x}\\cdot \\ln^{\\frac{2}{m}}(1 - x)$\n\n$$\n\\underline {{\\underline {{1 - x = t}}}} \\lim  _ {t \\rightarrow 0 ^ {+}} \\frac {\\ln^ {\\frac {2}{m}} t}{t ^ {- \\frac {1}{2}}} = \\left(\\lim  _ {t \\rightarrow 0 ^ {+}} \\frac {\\ln t}{t ^ {- \\frac {m}{4}}}\\right) ^ {\\frac {2}{m}} = \\left(- \\frac {4}{m} \\lim  _ {t \\rightarrow 0 ^ {+}} \\frac {\\frac {1}{t}}{t ^ {- \\frac {m}{4} - 1}}\\right) ^ {\\frac {2}{m}} = 0\n$$\n\n且 $\\alpha = \\frac{1}{2} < 1$ ，所以 $\\int_{\\frac{1}{2}}^{1}\\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}}\\mathrm{d}x$ 收敛，故 $\\int_0^1\\frac{\\sqrt[m]{\\ln^2(1 - x)}}{\\sqrt[n]{x}}\\mathrm{d}x$ 收敛，应选(D).\n\n方法点评：对积分区间有限但函数有无穷间断点的反常积分的敛散性判断通常有定义法和判别法.\n\n（1）设 $f(x)\\in C(a,b]$ ，且 $f(x)$ 在 $x = a$ 的右邻域内无界.\n\n定义法：对任意的 $\\varepsilon >0$ ，若 $\\lim_{\\varepsilon \\to 0^{+}}\\int_{a + \\varepsilon}^{b}f(x)\\mathrm{d}x$ 存在，则称反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 收敛，否则称为发散.\n\n判别法：设 $\\lim_{x\\to a^{+}}(x - a)^{k}f(x) = A(\\neq \\infty)$ ，则当 $0 < k < 1, 0 \\leqslant A < +\\infty$ 时，反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 收敛；当 $k \\geqslant 1, 0 < A \\leqslant +\\infty$ 时，反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 发散.\n\n（2）设 $f(x)\\in C[a,b)$ ，且 $f(x)$ 在 $x = b$ 的左邻域内无界.\n\n定义法：对任意的 $\\varepsilon >0$ ，若 $\\lim_{\\varepsilon \\to 0^{+}}\\int_{a}^{b - \\varepsilon}f(x)\\mathrm{d}x$ 存在，则称反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 收敛，否则称为发散.\n\n判别法：设 $\\lim_{x\\to b^{-}}(b - x)^{k}f(x) = A(\\neq \\infty)$ ，则当 $0 < k < 1, 0 \\leqslant A < +\\infty$ 时，反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 收敛；当 $k \\geqslant 1, 0 < A \\leqslant +\\infty$ 时，反常积分 $\\int_{a}^{b}f(x)\\mathrm{d}x$ 发散.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 398
+  },
+  {
+   "id": "c5-c2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "knowledgePoints": [
+    "5.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.3 定积分的换元法和分部积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求 $\\displaystyle\\int_0^{\\pi/2}x\\sin x\\,dx$。",
+   "options": null,
+   "answer": [
+    "1"
+   ],
+   "accept": null,
+   "answerText": "分部积分：取 $u=x$、$dv=\\sin x\\,dx$（$v=-\\cos x$）：\n$$\\int_0^{\\pi/2}x\\sin x\\,dx=\\left[-x\\cos x\\right]_0^{\\pi/2}+\\int_0^{\\pi/2}\\cos x\\,dx=0+\\left[\\sin x\\right]_0^{\\pi/2}=1.$$\n（注意 $[-x\\cos x]_0^{\\pi/2}=0-0=0$。）",
+   "points": [
+    {
+     "text": "幂函数 $x$ 取 $u$、三角部分凑 $dv=\\sin x\\,dx$，$v=-\\cos x$。",
+     "partial": 2
+    },
+    {
+     "text": "代入 $uv-\\int v\\,du$ 得 $\\left[-x\\cos x\\right]_0^{\\pi/2}+\\int_0^{\\pi/2}\\cos x\\,dx$。",
+     "partial": 2
+    },
+    {
+     "text": "边界项 $\\dfrac\\pi2\\cos\\dfrac\\pi2=0$，积分项 $\\left[\\sin x\\right]_0^{\\pi/2}=1$。",
+     "partial": 2
+    },
+    {
+     "text": "结论：原积分 $=1$。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：定积分的分部积分法（§5.3），边界项与积分项分别代限。\n**考点出处**：同济《高等数学》第七版 §5.3 定积分的分部积分法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "分部积分",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(x*sin(x), (x, 0, pi/2))",
+     "expected": "1"
+    }
+   ],
+   "idx": 399
+  },
+  {
+   "id": "ky-2011-4-1d96a4",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2011 年考研数学（一）第 4 题",
+    "kind": "exam-original",
+    "year": 2011,
+    "region": "全国",
+    "paper": "2011 年考研数学（一）",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2011年解析/2011年解析.md"
+   },
+   "stem": "设 $I = \\int_{0}^{\\frac{\\pi}{4}} \\ln (\\sin x) \\, \\mathrm{d}x, J = \\int_{0}^{\\frac{\\pi}{4}} \\ln (\\cot x) \\, \\mathrm{d}x, K = \\int_{0}^{\\frac{\\pi}{4}} \\ln (\\cos x) \\, \\mathrm{d}x$ ，则 $I, J, K$ 的大小关系为（ ）",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】当 $0 < x < \\frac{\\pi}{4}$ 时，由 $\\sin x < \\cos x < \\cot x$ 得 $\\ln \\sin x < \\ln \\cos x < \\ln \\cot x$ ，从而 $\\int_{0}^{\\frac{\\pi}{4}} \\ln \\sin x \\, \\mathrm{d}x < \\int_{0}^{\\frac{\\pi}{4}} \\ln \\cos x \\, \\mathrm{d}x < \\int_{0}^{\\frac{\\pi}{4}} \\ln \\cot x \\, \\mathrm{d}x$ ，即 $I < K < J$ ，应选(B).\n\n# 方法点评：\n\n（1）积分限相同的几个定积分比较大小，一般比较其被积函数即可；\n(2）本题中 $\\int_0^{\\frac{\\pi}{4}}\\ln \\sin x\\mathrm{d}x$ 与 $\\int_0^{\\frac{\\pi}{4}}\\ln \\cot x\\mathrm{d}x$ 都是反常积分， $x = 0$ 为其瑕点，\n\n$$\n\\int_ {0} ^ {\\frac {\\pi}{4}} \\ln \\sin x \\mathrm {d} x = x \\ln \\sin x \\left| _ {0} ^ {\\frac {\\pi}{4}} - \\int_ {0} ^ {\\frac {\\pi}{4}} \\frac {x \\cos x}{\\sin x} \\mathrm {d} x, \\right.\n$$\n\n因为 $\\lim_{x\\to 0^{+}}x\\ln{\\sin{x}} = \\lim_{x\\to 0^{+}}{\\frac{x}{\\sin{x}}}\\cdot \\sin{x}\\ln{\\sin{x}}\\xrightarrow{t = \\sin{x}}\\lim_{t\\to 0^{+}}{\\frac{\\ln{t}}{\\frac{1}{t}}} = 0,$\n\n又 $\\int_0^{\\frac{\\pi}{4}}\\frac{x\\cos x}{\\sin x}\\mathrm{d}x$ 为正常积分，\n\n所以 $\\int_0^{\\frac{\\pi}{4}}\\ln \\sin x\\mathrm{d}x$ 收敛.\n\n$\\int_0^{\\frac{\\pi}{4}}\\ln \\cot x\\mathrm{d}x = \\int_0^{\\frac{\\pi}{4}}\\ln \\cos x\\mathrm{d}x - \\int_0^{\\frac{\\pi}{4}}\\ln \\sin x\\mathrm{d}x$ ，因为 $\\int_0^{\\frac{\\pi}{4}}\\ln \\cos x\\mathrm{d}x$ 为正常积分，所以 $\\int_0^{\\frac{\\pi}{4}}\\ln \\cot x\\mathrm{d}x$ 收敛，故本题按正常积分比较大小的方法比较.",
+   "points": [
+    {
+     "text": "【解】当 $0 < x < \\frac{\\pi}{4}$ 时，由 $\\sin x < \\cos x < \\cot x$ 得 $\\ln \\sin x < \\ln \\cos x < \\ln \\cot x$ ，从而 $\\int_{0}^{\\frac{\\pi}{4}} \\ln \\sin x \\, \\mathrm{d}x < \\int_{0}^{\\frac{\\pi}{4}} \\ln \\cos x \\, \\mathrm{d}x < \\int_{0}^{\\frac{\\pi}{4}} \\ln \\cot x \\, \\mathrm{d}x$ ，即 $I < K < J$ ，应选(B).\n\n# 方法点评：",
+     "partial": 2
+    },
+    {
+     "text": "积分限相同的几个定积分比较大小，一般比较其被积函数即可；",
+     "partial": 2
+    },
+    {
+     "text": "(2）本题中 $\\int_0^{\\frac{\\pi}{4}}\\ln \\sin x\\mathrm{d}x$ 与 $\\int_0^{\\frac{\\pi}{4}}\\ln \\cot x\\mathrm{d}x$ 都是反常积分， $x = 0$ 为其瑕点，",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\int_ {0} ^ {\\frac {\\pi}{4}} \\ln \\sin x \\mathrm {d} x = x \\ln \\sin x \\left| _ {0} ^ {\\frac {\\pi}{4}} - \\int_ {0} ^ {\\frac {\\pi}{4}} \\frac {x \\cos x}{\\sin x} \\mathrm {d} x, \\right.\n$$",
+     "partial": 2
+    },
+    {
+     "text": "因为 $\\lim_{x\\to 0^{+}}x\\ln{\\sin{x}} = \\lim_{x\\to 0^{+}}{\\frac{x}{\\sin{x}}}\\cdot \\sin{x}\\ln{\\sin{x}}\\xrightarrow{t = \\sin{x}}\\lim_{t\\to 0^{+}}{\\frac{\\ln{t}}{\\frac{1}{t}}} = 0,$",
+     "partial": 2
+    },
+    {
+     "text": "又 $\\int_0^{\\frac{\\pi}{4}}\\frac{x\\cos x}{\\sin x}\\mathrm{d}x$ 为正常积分，；所以 $\\int_0^{\\frac{\\pi}{4}}\\ln \\sin x\\mathrm{d}x$ 收敛.；$\\int_0^{\\frac{\\pi}{4}}\\ln \\cot x\\mathrm{d}x = \\int_0^{\\frac{\\pi}{4}}\\ln \\cos x\\mathrm{d}x - \\int_0^{\\frac{\\pi}{4}}\\ln \\sin x\\mathrm{d}x$ ，因为 $\\int_0^{\\frac{\\pi}{4}}\\ln \\cos x\\mathrm{d}x$ 为正常积分，所以 $\\int_0^{\\frac{\\pi}{4}}\\ln \\cot x\\mathrm{d}x$ 收敛，故本题按正常积分比较大小的方法比较.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：B\n【解】当 $0 < x < \\frac{\\pi}{4}$ 时，由 $\\sin x < \\cos x < \\cot x$ 得 $\\ln \\sin x < \\ln \\cos x < \\ln \\cot x$ ，从而 $\\int_{0}^{\\frac{\\pi}{4}} \\ln \\sin x \\, \\mathrm{d}x < \\int_{0}^{\\frac{\\pi}{4}} \\ln \\cos x \\, \\mathrm{d}x < \\int_{0}^{\\frac{\\pi}{4}} \\ln \\cot x \\, \\mathrm{d}x$ ，即 $I < K < J$ ，应选(B).\n\n# 方法点评：\n\n（1）积分限相同的几个定积分比较大小，一般比较其被积函数即可；\n(2）本题中 $\\int_0^{\\frac{\\pi}{4}}\\ln \\sin x\\mathrm{d}x$ 与 $\\int_0^{\\frac{\\pi}{4}}\\ln \\cot x\\mathrm{d}x$ 都是反常积分， $x = 0$ 为其瑕点，\n\n$$\n\\int_ {0} ^ {\\frac {\\pi}{4}} \\ln \\sin x \\mathrm {d} x = x \\ln \\sin x \\left| _ {0} ^ {\\frac {\\pi}{4}} - \\int_ {0} ^ {\\frac {\\pi}{4}} \\frac {x \\cos x}{\\sin x} \\mathrm {d} x, \\right.\n$$\n\n因为 $\\lim_{x\\to 0^{+}}x\\ln{\\sin{x}} = \\lim_{x\\to 0^{+}}{\\frac{x}{\\sin{x}}}\\cdot \\sin{x}\\ln{\\sin{x}}\\xrightarrow{t = \\sin{x}}\\lim_{t\\to 0^{+}}{\\frac{\\ln{t}}{\\frac{1}{t}}} = 0,$\n\n又 $\\int_0^{\\frac{\\pi}{4}}\\frac{x\\cos x}{\\sin x}\\mathrm{d}x$ 为正常积分，\n\n所以 $\\int_0^{\\frac{\\pi}{4}}\\ln \\sin x\\mathrm{d}x$ 收敛.\n\n$\\int_0^{\\frac{\\pi}{4}}\\ln \\cot x\\mathrm{d}x = \\int_0^{\\frac{\\pi}{4}}\\ln \\cos x\\mathrm{d}x - \\int_0^{\\frac{\\pi}{4}}\\ln \\sin x\\mathrm{d}x$ ，因为 $\\int_0^{\\frac{\\pi}{4}}\\ln \\cos x\\mathrm{d}x$ 为正常积分，所以 $\\int_0^{\\frac{\\pi}{4}}\\ln \\cot x\\mathrm{d}x$ 收敛，故本题按正常积分比较大小的方法比较.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 400
+  },
+  {
+   "id": "ky-2012-4-c096d0",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2012 年考研数学（一）第 4 题",
+    "kind": "exam-original",
+    "year": 2012,
+    "region": "全国",
+    "paper": "2012 年考研数学（一）",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2012年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2012年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2012年解析/2012年解析.md"
+   },
+   "stem": "设 $I_{k} = \\int_{0}^{k\\pi}\\mathrm{e}^{x^{2}}\\sin x\\mathrm{d}x(k = 1,2,3)$ , 则有( )",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】 由 $I_{2} - I_{1} = \\int_{\\pi}^{2\\pi}\\mathrm{e}^{x^{2}}\\sin x\\mathrm{d}x <   0$ ，得 $I_{1} > I_{2}$\n\n由 $I_{3} - I_{2} = \\int_{2\\pi}^{3\\pi}\\mathrm{e}^{x^{2}}\\sin x\\mathrm{d}x > 0$ ，得 $I_{2} <   I_{3}$\n\n$$\nI _ {3} - I _ {1} = \\int_ {\\pi} ^ {3 \\pi} \\mathrm {e} ^ {x ^ {2}} \\sin x \\mathrm {d} x = \\int_ {\\pi} ^ {2 \\pi} \\mathrm {e} ^ {x ^ {2}} \\sin x \\mathrm {d} x + \\int_ {2 \\pi} ^ {3 \\pi} \\mathrm {e} ^ {x ^ {2}} \\sin x \\mathrm {d} x,\n$$\n\n而 $\\int_{2\\pi}^{3\\pi}\\mathrm{e}^{x^2}\\sin x\\mathrm{d}x = \\int_{\\pi}^{2\\pi}\\mathrm{e}^{(t + \\pi)^2}\\sin (t + \\pi)\\mathrm{d}t = -\\int_{\\pi}^{2\\pi}\\mathrm{e}^{(x + \\pi)^2}\\sin x\\mathrm{d}x,$\n\n由 $I_{3} - I_{1} = \\int_{\\pi}^{2\\pi}\\left[\\mathrm{e}^{x^{2}} - \\mathrm{e}^{(x + \\pi)^{2}}\\right]\\sin x\\mathrm{d}x > 0$ ，得 $I_{1} < I_{3}$ ，于是 $I_{2} < I_{1} < I_{3}$ ，应选(D).",
+   "points": [
+    {
+     "text": "【解】 由 $I_{2} - I_{1} = \\int_{\\pi}^{2\\pi}\\mathrm{e}^{x^{2}}\\sin x\\mathrm{d}x <   0$ ，得 $I_{1} > I_{2}$",
+     "partial": 2
+    },
+    {
+     "text": "由 $I_{3} - I_{2} = \\int_{2\\pi}^{3\\pi}\\mathrm{e}^{x^{2}}\\sin x\\mathrm{d}x > 0$ ，得 $I_{2} <   I_{3}$",
+     "partial": 2
+    },
+    {
+     "text": "$$\nI _ {3} - I _ {1} = \\int_ {\\pi} ^ {3 \\pi} \\mathrm {e} ^ {x ^ {2}} \\sin x \\mathrm {d} x = \\int_ {\\pi} ^ {2 \\pi} \\mathrm {e} ^ {x ^ {2}} \\sin x \\mathrm {d} x + \\int_ {2 \\pi} ^ {3 \\pi} \\mathrm {e} ^ {x ^ {2}} \\sin x \\mathrm {d} x,\n$$",
+     "partial": 2
+    },
+    {
+     "text": "而 $\\int_{2\\pi}^{3\\pi}\\mathrm{e}^{x^2}\\sin x\\mathrm{d}x = \\int_{\\pi}^{2\\pi}\\mathrm{e}^{(t + \\pi)^2}\\sin (t + \\pi)\\mathrm{d}t = -\\int_{\\pi}^{2\\pi}\\mathrm{e}^{(x + \\pi)^2}\\sin x\\mathrm{d}x,$",
+     "partial": 2
+    },
+    {
+     "text": "由 $I_{3} - I_{1} = \\int_{\\pi}^{2\\pi}\\left[\\mathrm{e}^{x^{2}} - \\mathrm{e}^{(x + \\pi)^{2}}\\right]\\sin x\\mathrm{d}x > 0$ ，得 $I_{1} < I_{3}$ ，于是 $I_{2} < I_{1} < I_{3}$ ，应选(D).",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：D\n【解】 由 $I_{2} - I_{1} = \\int_{\\pi}^{2\\pi}\\mathrm{e}^{x^{2}}\\sin x\\mathrm{d}x <   0$ ，得 $I_{1} > I_{2}$\n\n由 $I_{3} - I_{2} = \\int_{2\\pi}^{3\\pi}\\mathrm{e}^{x^{2}}\\sin x\\mathrm{d}x > 0$ ，得 $I_{2} <   I_{3}$\n\n$$\nI _ {3} - I _ {1} = \\int_ {\\pi} ^ {3 \\pi} \\mathrm {e} ^ {x ^ {2}} \\sin x \\mathrm {d} x = \\int_ {\\pi} ^ {2 \\pi} \\mathrm {e} ^ {x ^ {2}} \\sin x \\mathrm {d} x + \\int_ {2 \\pi} ^ {3 \\pi} \\mathrm {e} ^ {x ^ {2}} \\sin x \\mathrm {d} x,\n$$\n\n而 $\\int_{2\\pi}^{3\\pi}\\mathrm{e}^{x^2}\\sin x\\mathrm{d}x = \\int_{\\pi}^{2\\pi}\\mathrm{e}^{(t + \\pi)^2}\\sin (t + \\pi)\\mathrm{d}t = -\\int_{\\pi}^{2\\pi}\\mathrm{e}^{(x + \\pi)^2}\\sin x\\mathrm{d}x,$\n\n由 $I_{3} - I_{1} = \\int_{\\pi}^{2\\pi}\\left[\\mathrm{e}^{x^{2}} - \\mathrm{e}^{(x + \\pi)^{2}}\\right]\\sin x\\mathrm{d}x > 0$ ，得 $I_{1} < I_{3}$ ，于是 $I_{2} < I_{1} < I_{3}$ ，应选(D).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 401
+  },
+  {
+   "id": "ky-2016-1-5bd852",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "2016 年考研数学（一）第 1 题",
+    "kind": "exam-original",
+    "year": 2016,
+    "region": "全国",
+    "paper": "2016 年考研数学（一）",
+    "number": "1",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2016年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2016年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2016年解析/2016年解析.md"
+   },
+   "stem": "若反常积分 $\\int_{0}^{+\\infty} \\frac{1}{x^a (1 + x)^b} \\mathrm{d}x$ 收敛, 则( )",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】 $\\int_0^{+\\infty}\\frac{\\mathrm{d}x}{x^a(1 + x)^b} = \\int_0^1\\frac{\\mathrm{d}x}{x^a(1 + x)^b} +\\int_1^{+\\infty}\\frac{\\mathrm{d}x}{x^a(1 + x)^b},$\n\n由 $\\lim_{x\\to 0^{+}}x^{a}\\cdot \\frac{1}{x^{a}(1 + x)^{b}} = 1$ 且 $\\int_0^1\\frac{\\mathrm{d}x}{x^a(1 + x)^b}$ 收敛得 $a <   1$\n\n再由 $\\lim_{x\\to +\\infty}x^{a + b}\\cdot \\frac{1}{x^a(1 + x)^b} = 1$ 且 $\\int_1^{+\\infty}\\frac{\\mathrm{d}x}{x^a(1 + x)^b}$ 收敛得 $a + b > 1$\n\n即 $a < 1$ 且 $a + b > 1$ ，应选(C).",
+   "points": [
+    {
+     "text": "【解】 $\\int_0^{+\\infty}\\frac{\\mathrm{d}x}{x^a(1 + x)^b} = \\int_0^1\\frac{\\mathrm{d}x}{x^a(1 + x)^b} +\\int_1^{+\\infty}\\frac{\\mathrm{d}x}{x^a(1 + x)^b},$",
+     "partial": 2
+    },
+    {
+     "text": "由 $\\lim_{x\\to 0^{+}}x^{a}\\cdot \\frac{1}{x^{a}(1 + x)^{b}} = 1$ 且 $\\int_0^1\\frac{\\mathrm{d}x}{x^a(1 + x)^b}$ 收敛得 $a <   1$",
+     "partial": 2
+    },
+    {
+     "text": "再由 $\\lim_{x\\to +\\infty}x^{a + b}\\cdot \\frac{1}{x^a(1 + x)^b} = 1$ 且 $\\int_1^{+\\infty}\\frac{\\mathrm{d}x}{x^a(1 + x)^b}$ 收敛得 $a + b > 1$",
+     "partial": 2
+    },
+    {
+     "text": "即 $a < 1$ 且 $a + b > 1$ ，应选(C).",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：C\n【解】 $\\int_0^{+\\infty}\\frac{\\mathrm{d}x}{x^a(1 + x)^b} = \\int_0^1\\frac{\\mathrm{d}x}{x^a(1 + x)^b} +\\int_1^{+\\infty}\\frac{\\mathrm{d}x}{x^a(1 + x)^b},$\n\n由 $\\lim_{x\\to 0^{+}}x^{a}\\cdot \\frac{1}{x^{a}(1 + x)^{b}} = 1$ 且 $\\int_0^1\\frac{\\mathrm{d}x}{x^a(1 + x)^b}$ 收敛得 $a <   1$\n\n再由 $\\lim_{x\\to +\\infty}x^{a + b}\\cdot \\frac{1}{x^a(1 + x)^b} = 1$ 且 $\\int_1^{+\\infty}\\frac{\\mathrm{d}x}{x^a(1 + x)^b}$ 收敛得 $a + b > 1$\n\n即 $a < 1$ 且 $a + b > 1$ ，应选(C).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 402
+  },
+  {
+   "id": "ky-2018-4-449598",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2018 年考研数学（一）第 4 题",
+    "kind": "exam-original",
+    "year": 2018,
+    "region": "全国",
+    "paper": "2018 年考研数学（一）",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2018年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2018年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2018年解析/2018年解析.md"
+   },
+   "stem": "设 $M = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\frac{(1 + x)^2}{1 + x^2} \\mathrm{d}x, N = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\frac{1 + x}{\\mathrm{e}^x} \\mathrm{d}x, K = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} (1 + \\sqrt{\\cos x}) \\mathrm{d}x$ , 则( )",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】 $M = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\frac{(1 + x)^{2}}{1 + x^{2}}\\mathrm{d}x = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(1 + \\frac{2x}{1 + x^{2}}\\right)\\mathrm{d}x = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\mathrm{d}x = \\pi ,$\n\n当 $-\\frac{\\pi}{2} \\leqslant x \\leqslant \\frac{\\pi}{2}$ 时, $1 + \\sqrt{\\cos x} > 1 > \\frac{1 + x}{\\mathrm{e}^x}$ ,\n\n$\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}(1 + \\sqrt{\\cos x})\\mathrm{d}x > \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}1\\mathrm{d}x > \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\frac{1 + x}{\\mathrm{e}^x}\\mathrm{d}x$ ，即 $K > M > N.$ 应选(C).",
+   "points": [
+    {
+     "text": "【解】 $M = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\frac{(1 + x)^{2}}{1 + x^{2}}\\mathrm{d}x = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(1 + \\frac{2x}{1 + x^{2}}\\right)\\mathrm{d}x = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\mathrm{d}x = \\pi ,$",
+     "partial": 2
+    },
+    {
+     "text": "当 $-\\frac{\\pi}{2} \\leqslant x \\leqslant \\frac{\\pi}{2}$ 时, $1 + \\sqrt{\\cos x} > 1 > \\frac{1 + x}{\\mathrm{e}^x}$ ,",
+     "partial": 2
+    },
+    {
+     "text": "$\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}(1 + \\sqrt{\\cos x})\\mathrm{d}x > \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}1\\mathrm{d}x > \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\frac{1 + x}{\\mathrm{e}^x}\\mathrm{d}x$ ，即 $K > M > N.$ 应选(C).",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：C\n【解】 $M = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\frac{(1 + x)^{2}}{1 + x^{2}}\\mathrm{d}x = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(1 + \\frac{2x}{1 + x^{2}}\\right)\\mathrm{d}x = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\mathrm{d}x = \\pi ,$\n\n当 $-\\frac{\\pi}{2} \\leqslant x \\leqslant \\frac{\\pi}{2}$ 时, $1 + \\sqrt{\\cos x} > 1 > \\frac{1 + x}{\\mathrm{e}^x}$ ,\n\n$\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}(1 + \\sqrt{\\cos x})\\mathrm{d}x > \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}1\\mathrm{d}x > \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\frac{1 + x}{\\mathrm{e}^x}\\mathrm{d}x$ ，即 $K > M > N.$ 应选(C).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 403
+  },
+  {
+   "id": "c5-c3",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.4 反常积分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求反常积分 $\\displaystyle\\int_0^{+\\infty}e^{-x}\\sin x\\,dx$。",
+   "options": null,
+   "answer": [
+    "1/2"
+   ],
+   "accept": null,
+   "answerText": "先求 $\\int e^{-x}\\sin x\\,dx$：分部两次（都取 $u=\\sin x/\\cos x$ 型三角函数）：\n$$\\int e^{-x}\\sin x\\,dx=-e^{-x}\\sin x+\\int e^{-x}\\cos x\\,dx=-e^{-x}\\sin x-e^{-x}\\cos x-\\int e^{-x}\\sin x\\,dx.$$\n移项解出\n$$\\int e^{-x}\\sin x\\,dx=-\\frac{e^{-x}(\\sin x+\\cos x)}{2}+C.$$\n代限：$\\lim\\limits_{b\\to+\\infty}\\left[-\\dfrac{e^{-x}(\\sin x+\\cos x)}{2}\\right]_0^{b}=0-\\left(-\\dfrac{1}{2}\\right)=\\dfrac{1}{2}$（$e^{-b}$ 有界振荡因子趋于零）。故积分收敛于 $\\dfrac12$。",
+   "points": [
+    {
+     "text": "两次分部积分（三角函数均取 $u$，指数部分凑 $dv$），出现循环结构。",
+     "partial": 2
+    },
+    {
+     "text": "移项解出 $\\int e^{-x}\\sin x\\,dx=-\\dfrac{e^{-x}(\\sin x+\\cos x)}{2}+C$。",
+     "partial": 2
+    },
+    {
+     "text": "写成反常积分极限：$\\lim\\limits_{b\\to+\\infty}F(b)-F(0)$。",
+     "partial": 2
+    },
+    {
+     "text": "由 $|e^{-b}(\\sin b+\\cos b)|\\le2e^{-b}\\to0$ 得极限为 $\\dfrac12$，说明收敛。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：反常积分与分部积分综合（§5.3、§5.4）。\n**考点出处**：同济《高等数学》第七版 §5.3、§5.4。",
+   "misconception": null,
+   "extension": "引申：拉普拉斯变换表 $\\int_0^{+\\infty}e^{-sx}\\sin x\\,dx=\\dfrac{1}{s^2+1}$（$s>0$）是本题的一般化，在信号与系统中是基本结论。",
+   "tags": [
+    "反常积分",
+    "分部积分",
+    "困难"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "integrate(exp(-x)*sin(x), (x, 0, oo))",
+     "expected": "1/2"
+    }
+   ],
+   "idx": 404
+  },
+  {
+   "id": "ky2-1987-x-4b9484",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1987 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1987,
+    "region": "全国",
+    "paper": "1987 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算定积分 $\\int_0^1 x\\arcsin x\\mathrm{d}x$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由分部积分法和换元积分法, 求得\n$$\n\\int_ {0} ^ {1} x \\arcsin x d x = \\frac {\\pi}{4} - \\frac {1}{2} \\int_ {0} ^ {1} \\frac {x ^ {2}}{\\sqrt {1 - x ^ {2}}} d x = \\frac {\\pi}{4} - \\frac {1}{2} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin^ {2} x d x = \\frac {\\pi}{8}.\n$$",
+   "points": [
+    {
+     "text": "由分部积分法和换元积分法, 求得\n$$\n\\int_ {0} ^ {1} x \\arcsin x d x = \\frac {\\pi}{4} - \\frac {1}{2} \\int_ {0} ^ {1} \\frac {x ^ {2}}{\\sqrt {1 - x ^ {2}}} d x = \\frac {\\pi}{4} - \\frac {1}{2} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin^ {2} x d x = \\frac {\\pi}{8}.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由分部积分法和换元积分法, 求得\n$$\n\\int_ {0} ^ {1} x \\arcsin x d x = \\frac {\\pi}{4} - \\frac {1}{2} \\int_ {0} ^ {1} \\frac {x ^ {2}}{\\sqrt {1 - x ^ {2}}} d x = \\frac {\\pi}{4} - \\frac {1}{2} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin^ {2} x d x = \\frac {\\pi}{8}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 405
+  },
+  {
+   "id": "ky2-1987-x-d519ea",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1987 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1987,
+    "region": "全国",
+    "paper": "1987 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算不定积分 $\\int \\frac{\\mathrm{d}x}{a^2\\sin^2x + b^2\\cos^2x}$ （其中 $a, b$ 为不全为零的非负数）.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "令 $u = \\tan x$ ，则原式 $= \\int \\frac{\\mathrm{d}u}{a^2u^2 + b^2}$ . 下面分情形讨论：\n(I) 当 $ab \\neq 0$ 时, 原式 $= \\frac{1}{ab} \\arctan \\left(\\frac{a}{b} x\\right) + C$ .\n(II) 当 $a = 0, b \\neq 0$ 时，原式 $= \\frac{1}{b^2} \\tan x + C$ .\n(III) 当 $a \\neq 0, b = 0$ 时，原式 $= -\\frac{1}{a^2} \\cot x + C.$",
+   "points": [
+    {
+     "text": "令 $u = \\tan x$ ，则原式 $= \\int \\frac{\\mathrm{d}u}{a^2u^2 + b^2}$ . 下面分情形讨论：\n(I) 当 $ab \\neq 0$ 时, 原式 $= \\frac{1}{ab} \\arctan \\left(\\frac{a}{b} x\\right) + C$ .\n(II) 当 $a = 0, b \\neq 0$ 时，原式 $= \\frac{1}{b^2} \\tan x + C$ .\n(III) 当 $a \\neq 0, b = 0$ 时，原式 $= -\\frac{1}{a^2} \\cot x + C.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n令 $u = \\tan x$ ，则原式 $= \\int \\frac{\\mathrm{d}u}{a^2u^2 + b^2}$ . 下面分情形讨论：\n(I) 当 $ab \\neq 0$ 时, 原式 $= \\frac{1}{ab} \\arctan \\left(\\frac{a}{b} x\\right) + C$ .\n(II) 当 $a = 0, b \\neq 0$ 时，原式 $= \\frac{1}{b^2} \\tan x + C$ .\n(III) 当 $a \\neq 0, b = 0$ 时，原式 $= -\\frac{1}{a^2} \\cot x + C.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 406
+  },
+  {
+   "id": "ky2-1988-x-abec7c",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1988 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1988,
+    "region": "全国",
+    "paper": "1988 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $x \\geqslant -1$ ，求 $\\int_{-1}^{x} (1 - |t|) \\, \\mathrm{d}t$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "当 $-1 \\leqslant x < 0$ 时, 积分等于 $\\frac{1}{2}(1 + x)^2$ . 当 $x \\geqslant 0$ 时, 积分等于 $1 - \\frac{1}{2}(1 - x)^2$ .",
+   "points": [
+    {
+     "text": "当 $-1 \\leqslant x < 0$ 时, 积分等于 $\\frac{1}{2}(1 + x)^2$ . 当 $x \\geqslant 0$ 时, 积分等于 $1 - \\frac{1}{2}(1 - x)^2$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n当 $-1 \\leqslant x < 0$ 时, 积分等于 $\\frac{1}{2}(1 + x)^2$ . 当 $x \\geqslant 0$ 时, 积分等于 $1 - \\frac{1}{2}(1 - x)^2$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 407
+  },
+  {
+   "id": "ky2-1989-5-1c3a91",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1989 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1989,
+    "region": "全国",
+    "paper": "1989 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "已知 $f(2) = \\frac{1}{2}, f'(2) = 0$ 及 $\\int_{0}^{2} f(x) \\, \\mathrm{d}x = 1$ ，求 $\\int_{0}^{1} x^2 f''(2x) \\, \\mathrm{d}x$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "作换元 $t = 2 x$ , 再由分部积分法, 得到\n$$\n\\begin{array}{l} \\int_ {0} ^ {1} x ^ {2} f ^ {\\prime \\prime} (2 x) d x = \\frac {1}{8} \\int_ {0} ^ {2} t ^ {2} f ^ {\\prime \\prime} (t) d t = \\frac {1}{8} \\left(\\left[ t ^ {2} f ^ {\\prime} (t) \\right] _ {0} ^ {2} - 2 \\int_ {0} ^ {2} t f ^ {\\prime} (t) d t\\right) \\\\ = \\frac {1}{8} \\left(\\left[ t ^ {2} f ^ {\\prime} (t) \\right] _ {0} ^ {2} - \\left[ 2 t f (t) \\right] _ {0} ^ {2} + 2 \\int_ {0} ^ {2} f (t) d t\\right) = \\frac {1}{8} (0 - 2 + 2) = 0. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "作换元 $t = 2 x$ , 再由分部积分法, 得到\n$$\n\\begin{array}{l} \\int_ {0} ^ {1} x ^ {2} f ^ {\\prime \\prime} (2 x) d x = \\frac {1}{8} \\int_ {0} ^ {2} t ^ {2} f ^ {\\prime \\prime} (t) d t = \\frac {1}{8} \\left(\\left[ t ^ {2} f ^ {\\prime} (t) \\right] _ {0} ^ {2} - 2 \\int_ {0} ^ {2} t f ^ {\\prime} (t) d t\\right) \\\\ = \\frac {1}{8} \\left(\\left[ t ^ {2} f ^ {\\prime} (t) \\right] _ {0} ^ {2} - \\left[ 2 t f (t) \\right] _ {0} ^ {2} + 2 \\int_ {0} ^ {2} f (t) d t\\right) = \\frac {1}{8} (0 - 2 + 2) = 0. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n作换元 $t = 2 x$ , 再由分部积分法, 得到\n$$\n\\begin{array}{l} \\int_ {0} ^ {1} x ^ {2} f ^ {\\prime \\prime} (2 x) d x = \\frac {1}{8} \\int_ {0} ^ {2} t ^ {2} f ^ {\\prime \\prime} (t) d t = \\frac {1}{8} \\left(\\left[ t ^ {2} f ^ {\\prime} (t) \\right] _ {0} ^ {2} - 2 \\int_ {0} ^ {2} t f ^ {\\prime} (t) d t\\right) \\\\ = \\frac {1}{8} \\left(\\left[ t ^ {2} f ^ {\\prime} (t) \\right] _ {0} ^ {2} - \\left[ 2 t f (t) \\right] _ {0} ^ {2} + 2 \\int_ {0} ^ {2} f (t) d t\\right) = \\frac {1}{8} (0 - 2 + 2) = 0. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 408
+  },
+  {
+   "id": "ky2-1990-x-38e439",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1990 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1990,
+    "region": "全国",
+    "paper": "1990 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x) = \\int_{1}^{x} \\frac{\\ln t}{1 + t} \\, \\mathrm{d}t$ ，其中 $x > 0$ ，求 $f(x) + f\\left(\\frac{1}{x}\\right)$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$f(x) + f\\left(\\frac{1}{x}\\right) = \\int_{1}^{x} \\frac{\\ln t}{1 + t} \\, \\mathrm{d}t + \\int_{1}^{x} \\frac{\\ln t}{t(1 + t)} \\, \\mathrm{d}t = \\int_{1}^{x} \\frac{\\ln t}{t} \\, \\mathrm{d}t = \\frac{1}{2} \\ln^2 x.$",
+   "points": [
+    {
+     "text": "$f(x) + f\\left(\\frac{1}{x}\\right) = \\int_{1}^{x} \\frac{\\ln t}{1 + t} \\, \\mathrm{d}t + \\int_{1}^{x} \\frac{\\ln t}{t(1 + t)} \\, \\mathrm{d}t = \\int_{1}^{x} \\frac{\\ln t}{t} \\, \\mathrm{d}t = \\frac{1}{2} \\ln^2 x.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$f(x) + f\\left(\\frac{1}{x}\\right) = \\int_{1}^{x} \\frac{\\ln t}{1 + t} \\, \\mathrm{d}t + \\int_{1}^{x} \\frac{\\ln t}{t(1 + t)} \\, \\mathrm{d}t = \\int_{1}^{x} \\frac{\\ln t}{t} \\, \\mathrm{d}t = \\frac{1}{2} \\ln^2 x.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 409
+  },
+  {
+   "id": "ky2-1991-2-de8229",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1991 年考研数学三第 2 题",
+    "kind": "exam-original",
+    "year": 1991,
+    "region": "全国",
+    "paper": "1991 年考研数学三",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算 $\\int_{1}^{4} \\frac{\\mathrm{d}x}{x(1 + \\sqrt{x})}$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$2 \\ln \\frac{4}{3}$ .",
+   "points": [
+    {
+     "text": "$2 \\ln \\frac{4}{3}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$2 \\ln \\frac{4}{3}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 410
+  },
+  {
+   "id": "ky2-1991-x-9f5925",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1991 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1991,
+    "region": "全国",
+    "paper": "1991 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(x)$ 在 $(-\\infty, +\\infty)$ 内满足 $f(x) = f(x - \\pi) + \\sin x$ ，且 $f(x) = x, x \\in [0, \\pi)$ ，计算 $\\int_{\\pi}^{3\\pi} f(x) \\mathrm{d}x$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\pi^2 - 2$",
+   "points": [
+    {
+     "text": "$\\pi^2 - 2$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\pi^2 - 2$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 411
+  },
+  {
+   "id": "ky2-1992-4-bc47b1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1992 年考研数学三第 4 题",
+    "kind": "exam-original",
+    "year": 1992,
+    "region": "全国",
+    "paper": "1992 年考研数学三",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求 $\\int_0^\\pi \\sqrt{1 - \\sin x} \\, \\mathrm{d}x$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$4(\\sqrt{2} -1)$",
+   "points": [
+    {
+     "text": "$4(\\sqrt{2} -1)$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$4(\\sqrt{2} -1)$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 412
+  },
+  {
+   "id": "ky2-1993-3-b6f0e6",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1993 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1993,
+    "region": "全国",
+    "paper": "1993 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求 $\\int_{0}^{\\frac{\\pi}{4}} \\frac{x}{1 + \\cos 2x} \\, \\mathrm{d}x$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\frac{\\pi}{8} -\\frac{1}{4}\\ln 2.$",
+   "points": [
+    {
+     "text": "$\\frac{\\pi}{8} -\\frac{1}{4}\\ln 2.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\frac{\\pi}{8} -\\frac{1}{4}\\ln 2.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 413
+  },
+  {
+   "id": "ky2-1993-4-d84e58",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "1993 年考研数学三第 4 题",
+    "kind": "exam-original",
+    "year": 1993,
+    "region": "全国",
+    "paper": "1993 年考研数学三",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求 $\\int_0^{+\\infty} \\frac{x}{(1 + x)^3} \\, \\mathrm{d}x$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\frac{1}{2}$",
+   "points": [
+    {
+     "text": "$\\frac{1}{2}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\frac{1}{2}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 414
+  },
+  {
+   "id": "ky2-1994-2-397dd1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1994 年考研数学三第 2 题",
+    "kind": "exam-original",
+    "year": 1994,
+    "region": "全国",
+    "paper": "1994 年考研数学三",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算 $\\int_0^1 x(1 - x^4)^{\\frac{3}{2}}\\mathrm{d}x$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "令 $x^{2} = \\sin t$ , 可求得积分等于 $\\frac{3}{32}\\pi$ .",
+   "points": [
+    {
+     "text": "令 $x^{2} = \\sin t$ , 可求得积分等于 $\\frac{3}{32}\\pi$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n令 $x^{2} = \\sin t$ , 可求得积分等于 $\\frac{3}{32}\\pi$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 415
+  },
+  {
+   "id": "ky2-1996-1-8693f2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1996 年考研数学三第 1 题",
+    "kind": "exam-original",
+    "year": 1996,
+    "region": "全国",
+    "paper": "1996 年考研数学三",
+    "number": "1",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算 $\\int_0^{\\ln 2} \\sqrt{1 - \\mathrm{e}^{-2x}} \\, \\mathrm{d}x$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\ln (2 + \\sqrt{3}) - \\frac{\\sqrt{3}}{2}$ .",
+   "points": [
+    {
+     "text": "$\\ln (2 + \\sqrt{3}) - \\frac{\\sqrt{3}}{2}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\ln (2 + \\sqrt{3}) - \\frac{\\sqrt{3}}{2}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 416
+  },
+  {
+   "id": "ky2-1996-x-5e6d47",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1996 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1996,
+    "region": "全国",
+    "paper": "1996 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算不定积分 $\\int \\frac{\\arctan x}{x^2(1 + x^2)}\\mathrm{d}x.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$-\\frac{\\arctan x}{x} - \\frac{1}{2} (\\arctan x)^2 + \\frac{1}{2}\\ln \\frac{x^2}{1 + x^2} + C.$",
+   "points": [
+    {
+     "text": "$-\\frac{\\arctan x}{x} - \\frac{1}{2} (\\arctan x)^2 + \\frac{1}{2}\\ln \\frac{x^2}{1 + x^2} + C.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$-\\frac{\\arctan x}{x} - \\frac{1}{2} (\\arctan x)^2 + \\frac{1}{2}\\ln \\frac{x^2}{1 + x^2} + C.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 417
+  },
+  {
+   "id": "ky2-1998-x-21cf52",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "1998 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 1998,
+    "region": "全国",
+    "paper": "1998 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算积分 $\\int_{\\frac{1}{2}}^{\\frac{3}{2}}\\frac{\\mathrm{d}x}{\\sqrt{|x - x^2|}}.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\frac{\\pi}{2} + \\ln (2 + \\sqrt{3})$ .",
+   "points": [
+    {
+     "text": "$\\frac{\\pi}{2} + \\ln (2 + \\sqrt{3})$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\frac{\\pi}{2} + \\ln (2 + \\sqrt{3})$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 418
+  },
+  {
+   "id": "ky2-1999-x-10c640",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "1999 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 1999,
+    "region": "全国",
+    "paper": "1999 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算 $\\int_{1}^{+\\infty}\\frac{\\arctan x}{x^2}\\mathrm{d}x.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "利用分部积分法, 得到\n$$\n\\begin{array}{l} \\int_ {1} ^ {+ \\infty} \\frac {\\arctan x}{x ^ {2}} d x = - \\int_ {1} ^ {+ \\infty} \\arctan x d \\left(\\frac {1}{x}\\right) = \\left[ - \\frac {1}{x} \\arctan x \\right] _ {1} ^ {+ \\infty} + \\int_ {1} ^ {+ \\infty} \\frac {1}{x} \\cdot \\frac {1}{1 + x ^ {2}} d x \\\\ = \\frac {\\pi}{4} + \\int_ {1} ^ {+ \\infty} \\left(\\frac {1}{x} - \\frac {x}{1 + x ^ {2}}\\right) d x = \\frac {\\pi}{4} + \\left[ \\ln x - \\frac {1}{2} \\ln (1 + x ^ {2}) \\right] _ {1} ^ {+ \\infty} \\\\ = \\frac {\\pi}{4} + \\left[ \\ln \\frac {x}{\\sqrt {1 + x ^ {2}}} \\right] _ {1} ^ {+ \\infty} = \\frac {\\pi}{4} + \\frac {1}{2} \\ln 2. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "利用分部积分法, 得到\n$$\n\\begin{array}{l} \\int_ {1} ^ {+ \\infty} \\frac {\\arctan x}{x ^ {2}} d x = - \\int_ {1} ^ {+ \\infty} \\arctan x d \\left(\\frac {1}{x}\\right) = \\left[ - \\frac {1}{x} \\arctan x \\right] _ {1} ^ {+ \\infty} + \\int_ {1} ^ {+ \\infty} \\frac {1}{x} \\cdot \\frac {1}{1 + x ^ {2}} d x \\\\ = \\frac {\\pi}{4} + \\int_ {1} ^ {+ \\infty} \\left(\\frac {1}{x} - \\frac {x}{1 + x ^ {2}}\\right) d x = \\frac {\\pi}{4} + \\left[ \\ln x - \\frac {1}{2} \\ln (1 + x ^ {2}) \\right] _ {1} ^ {+ \\infty} \\\\ = \\frac {\\pi}{4} + \\left[ \\ln \\frac {x}{\\sqrt {1 + x ^ {2}}} \\right] _ {1} ^ {+ \\infty} = \\frac {\\pi}{4} + \\frac {1}{2} \\ln 2. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n利用分部积分法, 得到\n$$\n\\begin{array}{l} \\int_ {1} ^ {+ \\infty} \\frac {\\arctan x}{x ^ {2}} d x = - \\int_ {1} ^ {+ \\infty} \\arctan x d \\left(\\frac {1}{x}\\right) = \\left[ - \\frac {1}{x} \\arctan x \\right] _ {1} ^ {+ \\infty} + \\int_ {1} ^ {+ \\infty} \\frac {1}{x} \\cdot \\frac {1}{1 + x ^ {2}} d x \\\\ = \\frac {\\pi}{4} + \\int_ {1} ^ {+ \\infty} \\left(\\frac {1}{x} - \\frac {x}{1 + x ^ {2}}\\right) d x = \\frac {\\pi}{4} + \\left[ \\ln x - \\frac {1}{2} \\ln (1 + x ^ {2}) \\right] _ {1} ^ {+ \\infty} \\\\ = \\frac {\\pi}{4} + \\left[ \\ln \\frac {x}{\\sqrt {1 + x ^ {2}}} \\right] _ {1} ^ {+ \\infty} = \\frac {\\pi}{4} + \\frac {1}{2} \\ln 2. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 419
+  },
+  {
+   "id": "ky2-2002-x-17331e",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2002 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2002,
+    "region": "全国",
+    "paper": "2002 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x) = \\left\\{ \\begin{array}{ll}2x + \\frac{3}{2} x^2, & -1\\leqslant x < 0;\\\\ \\frac{x\\mathrm{e}^x}{(\\mathrm{e}^x + 1)^2}, & 0\\leqslant x\\leqslant 1. \\end{array} \\right.$ 求函数 $F(x) = \\int_{-1}^{x}f(t)\\mathrm{d}t$ 的表达式",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "当 $-1 \\leqslant x < 0$ 时,\n$$\nF (x) = \\int_ {- 1} ^ {x} f (t) \\mathrm {d} t = \\int_ {- 1} ^ {x} \\left(2 t + \\frac {3}{2} t ^ {2}\\right) \\mathrm {d} t = \\left[ t ^ {2} + \\frac {1}{2} t ^ {3} \\right] _ {- 1} ^ {x} = \\frac {1}{2} x ^ {3} + x ^ {2} - \\frac {1}{2}.\n$$\n当 $0 \\leqslant x < 1$ 时,\n$$\n\\begin{array}{l} F (x) = \\int_ {- 1} ^ {x} f (t) \\mathrm {d} t = \\int_ {- 1} ^ {0} f (t) \\mathrm {d} t + \\int_ {0} ^ {x} f (t) \\mathrm {d} t = \\left[ t ^ {2} + \\frac {1}{2} t ^ {3} \\right] _ {- 1} ^ {0} + \\int_ {0} ^ {x} \\frac {t \\mathrm {e} ^ {t}}{(\\mathrm {e} ^ {t} + 1) ^ {2}} \\mathrm {d} t \\\\ = - \\frac {1}{2} - \\int_ {0} ^ {x} t \\mathrm {d} \\left(\\frac {1}{\\mathrm {e} ^ {t} + 1}\\right) = - \\frac {1}{2} - \\left[ \\frac {t}{\\mathrm {e} ^ {t} + 1} \\right] _ {0} ^ {x} + \\int_ {0} ^ {x} \\frac {\\mathrm {d} t}{\\mathrm {e} ^ {t} + 1} \\\\ = - \\frac {1}{2} - \\frac {x}{\\mathrm {e} ^ {x} + 1} - \\int_ {0} ^ {x} \\frac {\\mathrm {d} (\\mathrm {e} ^ {- t})}{1 + \\mathrm {e} ^ {- t}} = - \\frac {1}{2} - \\frac {x}{\\mathrm {e} ^ {x} + 1} - \\left[ \\ln (1 + \\mathrm {e} ^ {- t}) \\right] _ {0} ^ {x} \\\\ = - \\frac {1}{2} - \\frac {x}{\\mathrm {e} ^ {x} + 1} + \\ln \\frac {\\mathrm {e} ^ {x}}{\\mathrm {e} ^ {x} + 1} + \\ln 2. \\\\ \\end{array}\n$$\n所以\n$$\nF (x) = \\left\\{ \\begin{array}{l l} \\frac {1}{2} x ^ {3} + x ^ {2} - \\frac {1}{2}, & - 1 \\leqslant x <   0; \\\\ \\ln \\frac {\\mathrm {e} ^ {x}}{\\mathrm {e} ^ {x} + 1} - \\frac {x}{\\mathrm {e} ^ {x} + 1} + \\ln 2 - \\frac {1}{2}, & 0 \\leqslant x <   1. \\end{array} \\right.\n$$",
+   "points": [
+    {
+     "text": "当 $-1 \\leqslant x < 0$ 时,\n$$\nF (x) = \\int_ {- 1} ^ {x} f (t) \\mathrm {d} t = \\int_ {- 1} ^ {x} \\left(2 t + \\frac {3}{2} t ^ {2}\\right) \\mathrm {d} t = \\left[ t ^ {2} + \\frac {1}{2} t ^ {3} \\right] _ {- 1} ^ {x} = \\frac {1}{2} x ^ {3} + x ^ {2} - \\frac {1}{2}.\n$$\n当 $0 \\leqslant x < 1$ 时,\n$$\n\\begin{array}{l} F (x) = \\int_ {- 1} ^ {x} f (t) \\mathrm {d} t = \\int_ {- 1} ^ {0} f (t) \\mathrm {d} t + \\int_ {0} ^ {x} f (t) \\mathrm {d} t = \\left[ t ^ {2} + \\frac {1}{2} t ^ {3} \\right] _ {- 1} ^ {0} + \\int_ {0} ^ {x} \\frac {t \\mathrm {e} ^ {t}}{(\\mathrm {e} ^ {t} + 1) ^ {2}} \\mathrm {d} t \\\\ = - \\frac {1}{2} - \\int_ {0} ^ {x} t \\mathrm {d} \\left(\\frac {1}{\\mathrm {e} ^ {t} + 1}\\right) = - \\frac {1}{2} - \\left[ \\frac {t}{\\mathrm {e} ^ {t} + 1} \\right] _ {0} ^ {x} + \\int_ {0} ^ {x} \\frac {\\mathrm {d} t}{\\mathrm {e} ^ {t} + 1} \\\\ = - \\frac {1}{2} - \\frac {x}{\\mathrm {e} ^ {x} + 1} - \\int_ {0} ^ {x} \\frac {\\mathrm {d} (\\mathrm {e} ^ {- t})}{1 + \\mathrm {e} ^ {- t}} = - \\frac {1}{2} - \\frac {x}{\\mathrm {e} ^ {x} + 1} - \\left[ \\ln (1 + \\mathrm {e} ^ {- t}) \\right] _ {0} ^ {x} \\\\ = - \\frac {1}{2} - \\frac {x}{\\mathrm {e} ^ {x} + 1} + \\ln \\frac {\\mathrm {e} ^ {x}}{\\mathrm {e} ^ {x} + 1} + \\ln 2. \\\\ \\end{array}\n$$\n所以\n$$\nF (x) = \\left\\{ \\begin{array}{l l} \\frac {1}{2} x ^ {3} + x ^ {2} - \\frac {1}{2}, & - 1 \\leqslant x <   0; \\\\ \\ln \\frac {\\mathrm {e} ^ {x}}{\\mathrm {e} ^ {x} + 1} - \\frac {x}{\\mathrm {e} ^ {x} + 1} + \\ln 2 - \\frac {1}{2}, & 0 \\leqslant x <   1. \\end{array} \\right.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n当 $-1 \\leqslant x < 0$ 时,\n$$\nF (x) = \\int_ {- 1} ^ {x} f (t) \\mathrm {d} t = \\int_ {- 1} ^ {x} \\left(2 t + \\frac {3}{2} t ^ {2}\\right) \\mathrm {d} t = \\left[ t ^ {2} + \\frac {1}{2} t ^ {3} \\right] _ {- 1} ^ {x} = \\frac {1}{2} x ^ {3} + x ^ {2} - \\frac {1}{2}.\n$$\n当 $0 \\leqslant x < 1$ 时,\n$$\n\\begin{array}{l} F (x) = \\int_ {- 1} ^ {x} f (t) \\mathrm {d} t = \\int_ {- 1} ^ {0} f (t) \\mathrm {d} t + \\int_ {0} ^ {x} f (t) \\mathrm {d} t = \\left[ t ^ {2} + \\frac {1}{2} t ^ {3} \\right] _ {- 1} ^ {0} + \\int_ {0} ^ {x} \\frac {t \\mathrm {e} ^ {t}}{(\\mathrm {e} ^ {t} + 1) ^ {2}} \\mathrm {d} t \\\\ = - \\frac {1}{2} - \\int_ {0} ^ {x} t \\mathrm {d} \\left(\\frac {1}{\\mathrm {e} ^ {t} + 1}\\right) = - \\frac {1}{2} - \\left[ \\frac {t}{\\mathrm {e} ^ {t} + 1} \\right] _ {0} ^ {x} + \\int_ {0} ^ {x} \\frac {\\mathrm {d} t}{\\mathrm {e} ^ {t} + 1} \\\\ = - \\frac {1}{2} - \\frac {x}{\\mathrm {e} ^ {x} + 1} - \\int_ {0} ^ {x} \\frac {\\mathrm {d} (\\mathrm {e} ^ {- t})}{1 + \\mathrm {e} ^ {- t}} = - \\frac {1}{2} - \\frac {x}{\\mathrm {e} ^ {x} + 1} - \\left[ \\ln (1 + \\mathrm {e} ^ {- t}) \\right] _ {0} ^ {x} \\\\ = - \\frac {1}{2} - \\frac {x}{\\mathrm {e} ^ {x} + 1} + \\ln \\frac {\\mathrm {e} ^ {x}}{\\mathrm {e} ^ {x} + 1} + \\ln 2. \\\\ \\end{array}\n$$\n所以\n$$\nF (x) = \\left\\{ \\begin{array}{l l} \\frac {1}{2} x ^ {3} + x ^ {2} - \\frac {1}{2}, & - 1 \\leqslant x <   0; \\\\ \\ln \\frac {\\mathrm {e} ^ {x}}{\\mathrm {e} ^ {x} + 1} - \\frac {x}{\\mathrm {e} ^ {x} + 1} + \\ln 2 - \\frac {1}{2}, & 0 \\leqslant x <   1. \\end{array} \\right.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 420
+  },
+  {
+   "id": "ky2-2003-x-eb4b59",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2003 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2003,
+    "region": "全国",
+    "paper": "2003 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算不定积分 $\\int \\frac{x\\mathrm{e}^{\\arctan x}}{(1 + x^2)^{3 / 2}}\\mathrm{d}x.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "作积分换元 $x = \\tan t\\left(-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}\\right)$ , 得到\n$$\n\\int \\frac {x \\mathrm {e} ^ {\\arctan x}}{(1 + x ^ {2}) ^ {3 / 2}} \\mathrm {d} x = \\int \\frac {\\mathrm {e} ^ {t} \\tan t}{(1 + \\tan^ {2} t) ^ {3 / 2}} \\sec^ {2} t \\mathrm {d} t = \\int \\mathrm {e} ^ {t} \\frac {\\tan t}{\\sec t} \\mathrm {d} t = \\int \\mathrm {e} ^ {t} \\sin t \\mathrm {d} t.\n$$\n又由分部积分法得到\n$$\n\\begin{array}{l} \\int \\mathrm {e} ^ {t} \\sin t \\mathrm {d} t = - \\int \\mathrm {e} ^ {t} \\mathrm {d} (\\cos t) = - \\mathrm {e} ^ {t} \\cos t + \\int \\mathrm {e} ^ {t} \\cos t \\mathrm {d} t \\\\ = - \\mathrm {e} ^ {t} \\cos t + \\int \\mathrm {e} ^ {t} \\mathrm {d} (\\sin t) = - \\mathrm {e} ^ {t} \\cos t + \\mathrm {e} ^ {t} \\sin t - \\int \\mathrm {e} ^ {t} \\sin t \\mathrm {d} t. \\\\ \\end{array}\n$$\n从而有\n$$\n\\int \\mathrm {e} ^ {t} \\sin t \\mathrm {d} t = \\frac {1}{2} \\mathrm {e} ^ {t} (\\sin t - \\cos t) + C.\n$$\n因此\n$$\n\\int {\\frac {x \\mathrm {e} ^ {\\arctan x}}{(1 + x ^ {2}) ^ {3 / 2}}} \\mathrm {d} x = \\frac {1}{2} \\mathrm {e} ^ {\\arctan x} \\left(\\frac {x}{\\sqrt {1 + x ^ {2}}} - \\frac {1}{\\sqrt {1 + x ^ {2}}}\\right) + C = \\frac {(x - 1) \\mathrm {e} ^ {\\arctan x}}{2 \\sqrt {1 + x ^ {2}}} + C.\n$$",
+   "points": [
+    {
+     "text": "作积分换元 $x = \\tan t\\left(-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}\\right)$ , 得到\n$$\n\\int \\frac {x \\mathrm {e} ^ {\\arctan x}}{(1 + x ^ {2}) ^ {3 / 2}} \\mathrm {d} x = \\int \\frac {\\mathrm {e} ^ {t} \\tan t}{(1 + \\tan^ {2} t) ^ {3 / 2}} \\sec^ {2} t \\mathrm {d} t = \\int \\mathrm {e} ^ {t} \\frac {\\tan t}{\\sec t} \\mathrm {d} t = \\int \\mathrm {e} ^ {t} \\sin t \\mathrm {d} t.\n$$\n又由分部积分法得到\n$$\n\\begin{array}{l} \\int \\mathrm {e} ^ {t} \\sin t \\mathrm {d} t = - \\int \\mathrm {e} ^ {t} \\mathrm {d} (\\cos t) = - \\mathrm {e} ^ {t} \\cos t + \\int \\mathrm {e} ^ {t} \\cos t \\mathrm {d} t \\\\ = - \\mathrm {e} ^ {t} \\cos t + \\int \\mathrm {e} ^ {t} \\mathrm {d} (\\sin t) = - \\mathrm {e} ^ {t} \\cos t + \\mathrm {e} ^ {t} \\sin t - \\int \\mathrm {e} ^ {t} \\sin t \\mathrm {d} t. \\\\ \\end{array}\n$$\n从而有\n$$\n\\int \\mathrm {e} ^ {t} \\sin t \\mathrm {d} t = \\frac {1}{2} \\mathrm {e} ^ {t} (\\sin t - \\cos t) + C.\n$$\n因此\n$$\n\\int {\\frac {x \\mathrm {e} ^ {\\arctan x}}{(1 + x ^ {2}) ^ {3 / 2}}} \\mathrm {d} x = \\frac {1}{2} \\mathrm {e} ^ {\\arctan x} \\left(\\frac {x}{\\sqrt {1 + x ^ {2}}} - \\frac {1}{\\sqrt {1 + x ^ {2}}}\\right) + C = \\frac {(x - 1) \\mathrm {e} ^ {\\arctan x}}{2 \\sqrt {1 + x ^ {2}}} + C.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n作积分换元 $x = \\tan t\\left(-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}\\right)$ , 得到\n$$\n\\int \\frac {x \\mathrm {e} ^ {\\arctan x}}{(1 + x ^ {2}) ^ {3 / 2}} \\mathrm {d} x = \\int \\frac {\\mathrm {e} ^ {t} \\tan t}{(1 + \\tan^ {2} t) ^ {3 / 2}} \\sec^ {2} t \\mathrm {d} t = \\int \\mathrm {e} ^ {t} \\frac {\\tan t}{\\sec t} \\mathrm {d} t = \\int \\mathrm {e} ^ {t} \\sin t \\mathrm {d} t.\n$$\n又由分部积分法得到\n$$\n\\begin{array}{l} \\int \\mathrm {e} ^ {t} \\sin t \\mathrm {d} t = - \\int \\mathrm {e} ^ {t} \\mathrm {d} (\\cos t) = - \\mathrm {e} ^ {t} \\cos t + \\int \\mathrm {e} ^ {t} \\cos t \\mathrm {d} t \\\\ = - \\mathrm {e} ^ {t} \\cos t + \\int \\mathrm {e} ^ {t} \\mathrm {d} (\\sin t) = - \\mathrm {e} ^ {t} \\cos t + \\mathrm {e} ^ {t} \\sin t - \\int \\mathrm {e} ^ {t} \\sin t \\mathrm {d} t. \\\\ \\end{array}\n$$\n从而有\n$$\n\\int \\mathrm {e} ^ {t} \\sin t \\mathrm {d} t = \\frac {1}{2} \\mathrm {e} ^ {t} (\\sin t - \\cos t) + C.\n$$\n因此\n$$\n\\int {\\frac {x \\mathrm {e} ^ {\\arctan x}}{(1 + x ^ {2}) ^ {3 / 2}}} \\mathrm {d} x = \\frac {1}{2} \\mathrm {e} ^ {\\arctan x} \\left(\\frac {x}{\\sqrt {1 + x ^ {2}}} - \\frac {1}{\\sqrt {1 + x ^ {2}}}\\right) + C = \\frac {(x - 1) \\mathrm {e} ^ {\\arctan x}}{2 \\sqrt {1 + x ^ {2}}} + C.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 421
+  },
+  {
+   "id": "ky2-2004-17-5494f6",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2004 年考研数学二第 17 题",
+    "kind": "exam-original",
+    "year": 2004,
+    "region": "全国",
+    "paper": "2004 年考研数学二",
+    "number": "17",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分11分)\n设 $f(x) = \\int_{x}^{x + \\frac{\\pi}{2}}|\\sin t|\\mathrm{d}t.$\n(I) 证明 $f(x)$ 是以 $\\pi$ 为周期的周期函数；(II) 求 $f(x)$ 的值域.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) 令 $t = u + \\pi$ . 则有\n$$\n\\begin{array}{l} f (x + \\pi) = \\int_ {x + \\pi} ^ {x + \\frac {3 \\pi}{2}} | \\sin t | d t = \\int_ {x} ^ {x + \\frac {\\pi}{2}} | \\sin (u + \\pi) | d (u + \\pi) \\\\ = \\int_ {x} ^ {x + \\frac {\\pi}{2}} | \\sin u | \\mathrm {d} u = f (x) \\\\ \\end{array}\n$$\n故 $f(x)$ 是以 $\\pi$ 为周期的周期函数\n(II) 因为 $f(x)$ 是以 $\\pi$ 为周期的周期函数，故只需在 $[0, \\pi]$ 上讨论其值域．令\n$$\nf ^ {\\prime} (x) = \\left| \\sin (x + \\frac {\\pi}{2}) \\right| - | \\sin x | = | \\cos x | - | \\sin x | = 0,\n$$\n在区间 $[0, \\pi]$ 内求得驻点 $x_{1} = \\frac{\\pi}{4}, x_{2} = \\frac{3\\pi}{4}$ . 计算\n$$\nf \\left(\\frac {\\pi}{4}\\right) = \\int_ {\\frac {\\pi}{4}} ^ {\\frac {3 \\pi}{4}} | \\sin t | \\mathrm {d} t = \\int_ {\\frac {\\pi}{4}} ^ {\\frac {3 \\pi}{4}} \\sin t \\mathrm {d} t = \\sqrt {2},\n$$\n$$\nf \\left(\\frac {3 \\pi}{4}\\right) = \\int_ {\\frac {3 \\pi}{4}} ^ {\\frac {5 \\pi}{4}} | \\sin t | \\mathrm {d} t = \\int_ {\\frac {3 \\pi}{4}} ^ {\\pi} \\sin t \\mathrm {d} t - \\int_ {\\pi} ^ {\\frac {5 \\pi}{4}} \\sin t \\mathrm {d} t = 2 - \\sqrt {2},\n$$\n$$\nf (0) = \\int_ {0} ^ {\\frac {\\pi}{2}} | \\sin t | \\mathrm {d} t = \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin t \\mathrm {d} t = 1,\n$$\n$$\nf (\\pi) = \\int_ {\\pi} ^ {\\frac {3 \\pi}{2}} | \\sin t | \\mathrm {d} t = \\int_ {\\pi} ^ {\\frac {3 \\pi}{2}} (- \\sin t) \\mathrm {d} t = 1.\n$$\n因此 $f(x)$ 的最小值是 $2 - \\sqrt{2}$ , 最大值是 $\\sqrt{2}$ . 故 $f(x)$ 的值域是 $[2 - \\sqrt{2}, \\sqrt{2}]$ .\n# 18. (本题满分 12 分)\n曲线 $y = \\frac{\\mathrm{e}^{x} + \\mathrm{e}^{-x}}{2}$ 与直线 $x = 0, x = t (t > 0)$ 及 $y = 0$ 围成一曲边梯形。该曲边梯形绕 $x$ 轴旋转一周得一旋转体，其体积为 $V(t)$ ，侧面积为 $S(t)$ ，在 $x = t$ 处的底面积为 $F(t)$ 。\n(I) 求 $\\frac{S(t)}{V(t)}$ 的值；(II) 计算极限 $\\lim_{t \\to +\\infty} \\frac{S(t)}{F(t)}$ .\n解. (I) 旋转体体积\n$$\nV (t) = \\pi \\int_ {0} ^ {t} y ^ {2} \\mathrm {d} x = \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) ^ {2} \\mathrm {d} x,\n$$\n旋转体的侧面积\n$$\n\\begin{array}{l} S (t) = \\int_ {0} ^ {t} 2 \\pi y \\sqrt {1 + y ^ {\\prime 2}} \\mathrm {d} x = 2 \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) \\sqrt {1 + \\left(\\frac {\\mathrm {e} ^ {x} - \\mathrm {e} ^ {- x}}{2}\\right) ^ {2}} \\mathrm {d} x \\\\ = 2 \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) \\sqrt {\\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) ^ {2}} \\mathrm {d} x = 2 \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) ^ {2} \\mathrm {d} x, \\\\ \\end{array}\n$$\n所以 $\\frac{S(t)}{V(t)} = 2$ .\n(II) 在 $x = t$ 处旋转体的底面积为\n$$\nF (t) = \\left. \\pi y ^ {2} \\right| _ {x = t} = \\pi \\left(\\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{2}\\right) ^ {2},\n$$\n所以由洛必达法则有\n$$\n\\begin{array}{l} \\lim  _ {t \\rightarrow + \\infty} \\frac {S (t)}{F (t)} = \\lim  _ {t \\rightarrow + \\infty} \\frac {2 \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) ^ {2} \\mathrm {d} x}{\\pi \\left(\\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{2}\\right) ^ {2}} = \\lim  _ {t \\rightarrow + \\infty} \\frac {2 \\left(\\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{2}\\right) ^ {2}}{2 \\left(\\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{2}\\right)\\left(\\frac {\\mathrm {e} ^ {t} - \\mathrm {e} ^ {- t}}{2}\\right)} \\\\ = \\lim  _ {t \\rightarrow + \\infty} \\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{\\mathrm {e} ^ {t} - \\mathrm {e} ^ {- t}} = \\lim  _ {t \\rightarrow + \\infty} \\frac {1 + \\mathrm {e} ^ {- 2 t}}{1 - \\mathrm {e} ^ {- 2 t}} = 1. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "(I) 令 $t = u + \\pi$ . 则有\n$$\n\\begin{array}{l} f (x + \\pi) = \\int_ {x + \\pi} ^ {x + \\frac {3 \\pi}{2}} | \\sin t | d t = \\int_ {x} ^ {x + \\frac {\\pi}{2}} | \\sin (u + \\pi) | d (u + \\pi) \\\\ = \\int_ {x} ^ {x + \\frac {\\pi}{2}} | \\sin u | \\mathrm {d} u = f (x) \\\\ \\end{array}\n$$\n故 $f(x)$ 是以 $\\pi$ 为周期的周期函数\n(II) 因为 $f(x)$ 是以 $\\pi$ 为周期的周期函数，故只需在 $[0, \\pi]$ 上讨论其值域．令\n$$\nf ^ {\\prime} (x) = \\left| \\sin (x + \\frac {\\pi}{2}) \\right| - | \\sin x | = | \\cos x | - | \\sin x | = 0,\n$$\n在区间 $[0, \\pi]$ 内求得驻点 $x_{1} = \\frac{\\pi}{4}, x_{2} = \\frac{3\\pi}{4}$ . 计算\n$$\nf \\left(\\frac {\\pi}{4}\\right) = \\int_ {\\frac {\\pi}{4}} ^ {\\frac {3 \\pi}{4}} | \\sin t | \\mathrm {d} t = \\int_ {\\frac {\\pi}{4}} ^ {\\frac {3 \\pi}{4}} \\sin t \\mathrm {d} t = \\sqrt {2},\n$$\n$$\nf \\left(\\frac {3 \\pi}{4}\\right) = \\int_ {\\frac {3 \\pi}{4}} ^ {\\frac {5 \\pi}{4}} | \\sin t | \\mathrm {d} t = \\int_ {\\frac {3 \\pi}{4}} ^ {\\pi} \\sin t \\mathrm {d} t - \\int_ {\\pi} ^ {\\frac {5 \\pi}{4}} \\sin t \\mathrm {d} t = 2 - \\sqrt {2},\n$$\n$$\nf (0) = \\int_ {0} ^ {\\frac {\\pi}{2}} | \\sin t | \\mathrm {d} t = \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin t \\mathrm {d} t = 1,\n$$\n$$\nf (\\pi) = \\int_ {\\pi} ^ {\\frac {3 \\pi}{2}} | \\sin t | \\mathrm {d} t = \\int_ {\\pi} ^ {\\frac {3 \\pi}{2}} (- \\sin t) \\mathrm {d} t = 1.\n$$\n因此 $f(x)$ 的最小值是 $2 - \\sqrt{2}$ , 最大值是 $\\sqrt{2}$ . 故 $f(x)$ 的值域是 $[2 - \\sqrt{2}, \\sqrt{2}]$ .\n# 18. (本题满分 12 分)\n曲线 $y = \\frac{\\mathrm{e}^{x} + \\mathrm{e}^{-x}}{2}$ 与直线 $x = 0, x = t (t > 0)$ 及 $y = 0$ 围成一曲边梯形。",
+     "partial": 2
+    },
+    {
+     "text": "该曲边梯形绕 $x$ 轴旋转一周得一旋转体，其体积为 $V(t)$ ，侧面积为 $S(t)$ ，在 $x = t$ 处的底面积为 $F(t)$ 。",
+     "partial": 2
+    },
+    {
+     "text": "(I) 求 $\\frac{S(t)}{V(t)}$ 的值；",
+     "partial": 2
+    },
+    {
+     "text": "(II) 计算极限 $\\lim_{t \\to +\\infty} \\frac{S(t)}{F(t)}$ .\n解. (I) 旋转体体积\n$$\nV (t) = \\pi \\int_ {0} ^ {t} y ^ {2} \\mathrm {d} x = \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) ^ {2} \\mathrm {d} x,\n$$\n旋转体的侧面积\n$$\n\\begin{array}{l} S (t) = \\int_ {0} ^ {t} 2 \\pi y \\sqrt {1 + y ^ {\\prime 2}} \\mathrm {d} x = 2 \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) \\sqrt {1 + \\left(\\frac {\\mathrm {e} ^ {x} - \\mathrm {e} ^ {- x}}{2}\\right) ^ {2}} \\mathrm {d} x \\\\ = 2 \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) \\sqrt {\\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) ^ {2}} \\mathrm {d} x = 2 \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) ^ {2} \\mathrm {d} x, \\\\ \\end{array}\n$$\n所以 $\\frac{S(t)}{V(t)} = 2$ .\n(II) 在 $x = t$ 处旋转体的底面积为\n$$\nF (t) = \\left. \\pi y ^ {2} \\right| _ {x = t} = \\pi \\left(\\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{2}\\right) ^ {2},\n$$\n所以由洛必达法则有\n$$\n\\begin{array}{l} \\lim  _ {t \\rightarrow + \\infty} \\frac {S (t)}{F (t)} = \\lim  _ {t \\rightarrow + \\infty} \\frac {2 \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) ^ {2} \\mathrm {d} x}{\\pi \\left(\\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{2}\\right) ^ {2}} = \\lim  _ {t \\rightarrow + \\infty} \\frac {2 \\left(\\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{2}\\right) ^ {2}}{2 \\left(\\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{2}\\right)\\left(\\frac {\\mathrm {e} ^ {t} - \\mathrm {e} ^ {- t}}{2}\\right)} \\\\ = \\lim  _ {t \\rightarrow + \\infty} \\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{\\mathrm {e} ^ {t} - \\mathrm {e} ^ {- t}} = \\lim  _ {t \\rightarrow + \\infty} \\frac {1 + \\mathrm {e} ^ {- 2 t}}{1 - \\mathrm {e} ^ {- 2 t}} = 1. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) 令 $t = u + \\pi$ . 则有\n$$\n\\begin{array}{l} f (x + \\pi) = \\int_ {x + \\pi} ^ {x + \\frac {3 \\pi}{2}} | \\sin t | d t = \\int_ {x} ^ {x + \\frac {\\pi}{2}} | \\sin (u + \\pi) | d (u + \\pi) \\\\ = \\int_ {x} ^ {x + \\frac {\\pi}{2}} | \\sin u | \\mathrm {d} u = f (x) \\\\ \\end{array}\n$$\n故 $f(x)$ 是以 $\\pi$ 为周期的周期函数\n(II) 因为 $f(x)$ 是以 $\\pi$ 为周期的周期函数，故只需在 $[0, \\pi]$ 上讨论其值域．令\n$$\nf ^ {\\prime} (x) = \\left| \\sin (x + \\frac {\\pi}{2}) \\right| - | \\sin x | = | \\cos x | - | \\sin x | = 0,\n$$\n在区间 $[0, \\pi]$ 内求得驻点 $x_{1} = \\frac{\\pi}{4}, x_{2} = \\frac{3\\pi}{4}$ . 计算\n$$\nf \\left(\\frac {\\pi}{4}\\right) = \\int_ {\\frac {\\pi}{4}} ^ {\\frac {3 \\pi}{4}} | \\sin t | \\mathrm {d} t = \\int_ {\\frac {\\pi}{4}} ^ {\\frac {3 \\pi}{4}} \\sin t \\mathrm {d} t = \\sqrt {2},\n$$\n$$\nf \\left(\\frac {3 \\pi}{4}\\right) = \\int_ {\\frac {3 \\pi}{4}} ^ {\\frac {5 \\pi}{4}} | \\sin t | \\mathrm {d} t = \\int_ {\\frac {3 \\pi}{4}} ^ {\\pi} \\sin t \\mathrm {d} t - \\int_ {\\pi} ^ {\\frac {5 \\pi}{4}} \\sin t \\mathrm {d} t = 2 - \\sqrt {2},\n$$\n$$\nf (0) = \\int_ {0} ^ {\\frac {\\pi}{2}} | \\sin t | \\mathrm {d} t = \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin t \\mathrm {d} t = 1,\n$$\n$$\nf (\\pi) = \\int_ {\\pi} ^ {\\frac {3 \\pi}{2}} | \\sin t | \\mathrm {d} t = \\int_ {\\pi} ^ {\\frac {3 \\pi}{2}} (- \\sin t) \\mathrm {d} t = 1.\n$$\n因此 $f(x)$ 的最小值是 $2 - \\sqrt{2}$ , 最大值是 $\\sqrt{2}$ . 故 $f(x)$ 的值域是 $[2 - \\sqrt{2}, \\sqrt{2}]$ .\n# 18. (本题满分 12 分)\n曲线 $y = \\frac{\\mathrm{e}^{x} + \\mathrm{e}^{-x}}{2}$ 与直线 $x = 0, x = t (t > 0)$ 及 $y = 0$ 围成一曲边梯形。该曲边梯形绕 $x$ 轴旋转一周得一旋转体，其体积为 $V(t)$ ，侧面积为 $S(t)$ ，在 $x = t$ 处的底面积为 $F(t)$ 。\n(I) 求 $\\frac{S(t)}{V(t)}$ 的值；(II) 计算极限 $\\lim_{t \\to +\\infty} \\frac{S(t)}{F(t)}$ .\n解. (I) 旋转体体积\n$$\nV (t) = \\pi \\int_ {0} ^ {t} y ^ {2} \\mathrm {d} x = \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) ^ {2} \\mathrm {d} x,\n$$\n旋转体的侧面积\n$$\n\\begin{array}{l} S (t) = \\int_ {0} ^ {t} 2 \\pi y \\sqrt {1 + y ^ {\\prime 2}} \\mathrm {d} x = 2 \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) \\sqrt {1 + \\left(\\frac {\\mathrm {e} ^ {x} - \\mathrm {e} ^ {- x}}{2}\\right) ^ {2}} \\mathrm {d} x \\\\ = 2 \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) \\sqrt {\\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) ^ {2}} \\mathrm {d} x = 2 \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) ^ {2} \\mathrm {d} x, \\\\ \\end{array}\n$$\n所以 $\\frac{S(t)}{V(t)} = 2$ .\n(II) 在 $x = t$ 处旋转体的底面积为\n$$\nF (t) = \\left. \\pi y ^ {2} \\right| _ {x = t} = \\pi \\left(\\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{2}\\right) ^ {2},\n$$\n所以由洛必达法则有\n$$\n\\begin{array}{l} \\lim  _ {t \\rightarrow + \\infty} \\frac {S (t)}{F (t)} = \\lim  _ {t \\rightarrow + \\infty} \\frac {2 \\pi \\int_ {0} ^ {t} \\left(\\frac {\\mathrm {e} ^ {x} + \\mathrm {e} ^ {- x}}{2}\\right) ^ {2} \\mathrm {d} x}{\\pi \\left(\\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{2}\\right) ^ {2}} = \\lim  _ {t \\rightarrow + \\infty} \\frac {2 \\left(\\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{2}\\right) ^ {2}}{2 \\left(\\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{2}\\right)\\left(\\frac {\\mathrm {e} ^ {t} - \\mathrm {e} ^ {- t}}{2}\\right)} \\\\ = \\lim  _ {t \\rightarrow + \\infty} \\frac {\\mathrm {e} ^ {t} + \\mathrm {e} ^ {- t}}{\\mathrm {e} ^ {t} - \\mathrm {e} ^ {- t}} = \\lim  _ {t \\rightarrow + \\infty} \\frac {1 + \\mathrm {e} ^ {- 2 t}}{1 - \\mathrm {e} ^ {- 2 t}} = 1. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 422
+  },
+  {
+   "id": "ky2-2008-17-53de41",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2008 年考研数学二第 17 题",
+    "kind": "exam-original",
+    "year": 2008,
+    "region": "全国",
+    "paper": "2008 年考研数学二",
+    "number": "17",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分9分)\n计算 $\\int_0^1\\frac{x^2\\arcsin x}{\\sqrt{1 - x^2}}\\mathrm{d}x.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "令 $\\arcsin x = t$ , 则 $x = \\sin t, t \\in [0, \\pi / 2)$ , 从而\n$$\n\\begin{array}{l} \\int_ {0} ^ {1} \\frac {x ^ {2} \\arcsin x}{\\sqrt {1 - x ^ {2}}} d x = \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {t \\sin^ {2} t}{\\cos t} \\cos t d t = \\int_ {0} ^ {\\frac {\\pi}{2}} t \\sin^ {2} t d t = \\int_ {0} ^ {\\frac {\\pi}{2}} \\left(\\frac {t}{2} - \\frac {t \\cos 2 t}{2}\\right) d t \\\\ = \\left[ \\frac {t ^ {2}}{4} \\right] _ {0} ^ {\\frac {\\pi}{2}} - \\frac {1}{4} \\int_ {0} ^ {\\frac {\\pi}{2}} t d (\\sin 2 t) = \\frac {\\pi^ {2}}{1 6} - \\left[ \\frac {t \\sin 2 t}{4} \\right] _ {0} ^ {\\frac {\\pi}{2}} + \\frac {1}{4} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin 2 t d t \\\\ = \\frac {\\pi^ {2}}{1 6} + \\left[ - \\frac {1}{8} \\cos 2 t \\right] _ {0} ^ {\\frac {\\pi}{2}} = \\frac {\\pi^ {2}}{1 6} + \\frac {1}{4}. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "令 $\\arcsin x = t$ , 则 $x = \\sin t, t \\in [0, \\pi / 2)$ , 从而\n$$\n\\begin{array}{l} \\int_ {0} ^ {1} \\frac {x ^ {2} \\arcsin x}{\\sqrt {1 - x ^ {2}}} d x = \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {t \\sin^ {2} t}{\\cos t} \\cos t d t = \\int_ {0} ^ {\\frac {\\pi}{2}} t \\sin^ {2} t d t = \\int_ {0} ^ {\\frac {\\pi}{2}} \\left(\\frac {t}{2} - \\frac {t \\cos 2 t}{2}\\right) d t \\\\ = \\left[ \\frac {t ^ {2}}{4} \\right] _ {0} ^ {\\frac {\\pi}{2}} - \\frac {1}{4} \\int_ {0} ^ {\\frac {\\pi}{2}} t d (\\sin 2 t) = \\frac {\\pi^ {2}}{1 6} - \\left[ \\frac {t \\sin 2 t}{4} \\right] _ {0} ^ {\\frac {\\pi}{2}} + \\frac {1}{4} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin 2 t d t \\\\ = \\frac {\\pi^ {2}}{1 6} + \\left[ - \\frac {1}{8} \\cos 2 t \\right] _ {0} ^ {\\frac {\\pi}{2}} = \\frac {\\pi^ {2}}{1 6} + \\frac {1}{4}. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n令 $\\arcsin x = t$ , 则 $x = \\sin t, t \\in [0, \\pi / 2)$ , 从而\n$$\n\\begin{array}{l} \\int_ {0} ^ {1} \\frac {x ^ {2} \\arcsin x}{\\sqrt {1 - x ^ {2}}} d x = \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {t \\sin^ {2} t}{\\cos t} \\cos t d t = \\int_ {0} ^ {\\frac {\\pi}{2}} t \\sin^ {2} t d t = \\int_ {0} ^ {\\frac {\\pi}{2}} \\left(\\frac {t}{2} - \\frac {t \\cos 2 t}{2}\\right) d t \\\\ = \\left[ \\frac {t ^ {2}}{4} \\right] _ {0} ^ {\\frac {\\pi}{2}} - \\frac {1}{4} \\int_ {0} ^ {\\frac {\\pi}{2}} t d (\\sin 2 t) = \\frac {\\pi^ {2}}{1 6} - \\left[ \\frac {t \\sin 2 t}{4} \\right] _ {0} ^ {\\frac {\\pi}{2}} + \\frac {1}{4} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin 2 t d t \\\\ = \\frac {\\pi^ {2}}{1 6} + \\left[ - \\frac {1}{8} \\cos 2 t \\right] _ {0} ^ {\\frac {\\pi}{2}} = \\frac {\\pi^ {2}}{1 6} + \\frac {1}{4}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 423
+  },
+  {
+   "id": "ky2-2009-16-b92549",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2009 年考研数学二第 16 题",
+    "kind": "exam-original",
+    "year": 2009,
+    "region": "全国",
+    "paper": "2009 年考研数学二",
+    "number": "16",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n计算不定积分 $\\int \\ln \\left(1 + \\sqrt{\\frac{1 + x}{x}}\\right) \\mathrm{d}x (x > 0)$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "令 $\\sqrt{\\frac{1 + x}{x}} = t$ , 则 $x = \\frac{1}{t^2 - 1}, \\mathrm{d}x = \\frac{-2t \\mathrm{~d}t}{(t^2 - 1)^2}$ , 从而\n$$\n\\begin{array}{l} \\int \\ln \\left(1 + \\sqrt {\\frac {1 + x}{x}}\\right) d x = \\int \\ln (1 + t) d \\left(\\frac {1}{t ^ {2} - 1}\\right) = \\frac {\\ln (1 + t)}{t ^ {2} - 1} - \\int \\frac {1}{t ^ {2} - 1} \\frac {1}{t + 1} d t \\\\ = \\frac {\\ln (1 + t)}{t ^ {2} - 1} - \\frac {1}{4} \\int \\left(\\frac {1}{t - 1} - \\frac {1}{t + 1} - \\frac {2}{(t + 1) ^ {2}}\\right) d t \\\\ = \\frac {\\ln (1 + t)}{t ^ {2} - 1} - \\frac {1}{4} \\ln (t - 1) + \\frac {1}{4} \\ln (t + 1) - \\frac {1}{2 (t + 1)} + C \\\\ \\end{array}\n$$\n$$\n\\begin{array}{l} = \\frac {\\ln (1 + t)}{t ^ {2} - 1} + \\frac {1}{4} \\ln \\frac {t + 1}{t - 1} - \\frac {1}{2 (t + 1)} + C \\\\ = x \\ln \\left(1 + \\sqrt {\\frac {1 + x}{x}}\\right) + \\frac {1}{2} \\ln (\\sqrt {1 + x} + \\sqrt {x}) - \\frac {1}{2} \\frac {\\sqrt {x}}{\\sqrt {1 + x} + \\sqrt {x}} + C \\\\ = x \\ln \\left(1 + \\sqrt {\\frac {1 + x}{x}}\\right) + \\frac {1}{2} \\ln (\\sqrt {1 + x} + \\sqrt {x}) + \\frac {1}{2} x - \\frac {1}{2} \\sqrt {x + x ^ {2}} + C. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "令 $\\sqrt{\\frac{1 + x}{x}} = t$ , 则 $x = \\frac{1}{t^2 - 1}, \\mathrm{d}x = \\frac{-2t \\mathrm{~d}t}{(t^2 - 1)^2}$ , 从而\n$$\n\\begin{array}{l} \\int \\ln \\left(1 + \\sqrt {\\frac {1 + x}{x}}\\right) d x = \\int \\ln (1 + t) d \\left(\\frac {1}{t ^ {2} - 1}\\right) = \\frac {\\ln (1 + t)}{t ^ {2} - 1} - \\int \\frac {1}{t ^ {2} - 1} \\frac {1}{t + 1} d t \\\\ = \\frac {\\ln (1 + t)}{t ^ {2} - 1} - \\frac {1}{4} \\int \\left(\\frac {1}{t - 1} - \\frac {1}{t + 1} - \\frac {2}{(t + 1) ^ {2}}\\right) d t \\\\ = \\frac {\\ln (1 + t)}{t ^ {2} - 1} - \\frac {1}{4} \\ln (t - 1) + \\frac {1}{4} \\ln (t + 1) - \\frac {1}{2 (t + 1)} + C \\\\ \\end{array}\n$$\n$$\n\\begin{array}{l} = \\frac {\\ln (1 + t)}{t ^ {2} - 1} + \\frac {1}{4} \\ln \\frac {t + 1}{t - 1} - \\frac {1}{2 (t + 1)} + C \\\\ = x \\ln \\left(1 + \\sqrt {\\frac {1 + x}{x}}\\right) + \\frac {1}{2} \\ln (\\sqrt {1 + x} + \\sqrt {x}) - \\frac {1}{2} \\frac {\\sqrt {x}}{\\sqrt {1 + x} + \\sqrt {x}} + C \\\\ = x \\ln \\left(1 + \\sqrt {\\frac {1 + x}{x}}\\right) + \\frac {1}{2} \\ln (\\sqrt {1 + x} + \\sqrt {x}) + \\frac {1}{2} x - \\frac {1}{2} \\sqrt {x + x ^ {2}} + C. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n令 $\\sqrt{\\frac{1 + x}{x}} = t$ , 则 $x = \\frac{1}{t^2 - 1}, \\mathrm{d}x = \\frac{-2t \\mathrm{~d}t}{(t^2 - 1)^2}$ , 从而\n$$\n\\begin{array}{l} \\int \\ln \\left(1 + \\sqrt {\\frac {1 + x}{x}}\\right) d x = \\int \\ln (1 + t) d \\left(\\frac {1}{t ^ {2} - 1}\\right) = \\frac {\\ln (1 + t)}{t ^ {2} - 1} - \\int \\frac {1}{t ^ {2} - 1} \\frac {1}{t + 1} d t \\\\ = \\frac {\\ln (1 + t)}{t ^ {2} - 1} - \\frac {1}{4} \\int \\left(\\frac {1}{t - 1} - \\frac {1}{t + 1} - \\frac {2}{(t + 1) ^ {2}}\\right) d t \\\\ = \\frac {\\ln (1 + t)}{t ^ {2} - 1} - \\frac {1}{4} \\ln (t - 1) + \\frac {1}{4} \\ln (t + 1) - \\frac {1}{2 (t + 1)} + C \\\\ \\end{array}\n$$\n$$\n\\begin{array}{l} = \\frac {\\ln (1 + t)}{t ^ {2} - 1} + \\frac {1}{4} \\ln \\frac {t + 1}{t - 1} - \\frac {1}{2 (t + 1)} + C \\\\ = x \\ln \\left(1 + \\sqrt {\\frac {1 + x}{x}}\\right) + \\frac {1}{2} \\ln (\\sqrt {1 + x} + \\sqrt {x}) - \\frac {1}{2} \\frac {\\sqrt {x}}{\\sqrt {1 + x} + \\sqrt {x}} + C \\\\ = x \\ln \\left(1 + \\sqrt {\\frac {1 + x}{x}}\\right) + \\frac {1}{2} \\ln (\\sqrt {1 + x} + \\sqrt {x}) + \\frac {1}{2} x - \\frac {1}{2} \\sqrt {x + x ^ {2}} + C. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 424
+  },
+  {
+   "id": "ky2-2019-16-4b30c5",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2019 年考研数学二第 16 题",
+    "kind": "exam-original",
+    "year": 2019,
+    "region": "全国",
+    "paper": "2019 年考研数学二",
+    "number": "16",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "（本题满分10分）\n求不定积分 $\\int \\frac{3x + 6}{(x - 1)^2(x^2 + x + 1)}\\mathrm{d}x.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "将有理分式拆分成部分分式得\n$$\n\\begin{array}{l} \\int \\frac {3 x + 6}{(x - 1) ^ {2} (x ^ {2} + x + 1)} d x = \\int \\left(- \\frac {2}{x - 1} + \\frac {3}{(x - 1) ^ {2}} + \\frac {2 x + 1}{x ^ {2} + x + 1}\\right) d x \\\\ = - 2 \\ln | x - 1 | - \\frac {3}{x - 1} + \\int \\frac {\\mathrm {d} (x ^ {2} + x + 1)}{x ^ {2} + x + 1} \\\\ = - 2 \\ln | x - 1 | - \\frac {3}{x - 1} + \\ln (x ^ {2} + x + 1) + C \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "将有理分式拆分成部分分式得\n$$\n\\begin{array}{l} \\int \\frac {3 x + 6}{(x - 1) ^ {2} (x ^ {2} + x + 1)} d x = \\int \\left(- \\frac {2}{x - 1} + \\frac {3}{(x - 1) ^ {2}} + \\frac {2 x + 1}{x ^ {2} + x + 1}\\right) d x \\\\ = - 2 \\ln | x - 1 | - \\frac {3}{x - 1} + \\int \\frac {\\mathrm {d} (x ^ {2} + x + 1)}{x ^ {2} + x + 1} \\\\ = - 2 \\ln | x - 1 | - \\frac {3}{x - 1} + \\ln (x ^ {2} + x + 1) + C \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n将有理分式拆分成部分分式得\n$$\n\\begin{array}{l} \\int \\frac {3 x + 6}{(x - 1) ^ {2} (x ^ {2} + x + 1)} d x = \\int \\left(- \\frac {2}{x - 1} + \\frac {3}{(x - 1) ^ {2}} + \\frac {2 x + 1}{x ^ {2} + x + 1}\\right) d x \\\\ = - 2 \\ln | x - 1 | - \\frac {3}{x - 1} + \\int \\frac {\\mathrm {d} (x ^ {2} + x + 1)}{x ^ {2} + x + 1} \\\\ = - 2 \\ln | x - 1 | - \\frac {3}{x - 1} + \\ln (x ^ {2} + x + 1) + C \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 425
+  },
+  {
+   "id": "ky-2013-15-23eacd",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "2013 年考研数学（一）第 15 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学（一）",
+    "number": "15",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2013年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2013年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2013年解析/2013年解析.md"
+   },
+   "stem": "计算 $\\int_0^1\\frac{f(x)}{\\sqrt{x}}\\mathrm{d}x$ ，其中 $f(x) = \\int_{1}^{x}\\frac{\\ln(t + 1)}{t}\\mathrm{d}t.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\int_0^1\\frac{f(x)}{\\sqrt{x}}\\mathrm{d}x = 2\\int_0^1 f(x)\\mathrm{d}(\\sqrt{x}) = 2\\sqrt{x} f(x)\\Big|_0^1 -2\\int_0^1 f'(x)\\sqrt{x}\\mathrm{d}x$\n$$\n\\begin{array}{l} = - 2 \\int_ {0} ^ {1} f ^ {\\prime} (x) \\sqrt {x} d x = - 2 \\int_ {0} ^ {1} \\frac {\\ln (x + 1)}{\\sqrt {x}} d x = - 4 \\int_ {0} ^ {1} \\ln (x + 1) d (\\sqrt {x}) \\\\ = - 4 \\sqrt {x} \\ln (x + 1) \\left| _ {0} ^ {1} + 4 \\int_ {0} ^ {1} \\frac {\\sqrt {x}}{x + 1} d x = - 4 \\ln 2 + 4 \\int_ {0} ^ {1} \\frac {\\sqrt {x}}{x + 1} d x \\right. \\\\ \\frac {\\sqrt {x} = t}{- 4 \\ln 2 + 8 \\int_ {0} ^ {1} \\frac {t ^ {2}}{1 + t ^ {2}} \\mathrm {d} t} = - 4 \\ln 2 + 8 \\int_ {0} ^ {1} \\left(1 - \\frac {1}{1 + t ^ {2}}\\right) \\mathrm {d} t \\\\ = - 4 \\ln 2 + 8 - 8 \\arctan t \\mid_ {0} ^ {1} = - 4 \\ln 2 + 8 - 2 \\pi . \\\\ \\end{array}\n$$\n\n方法点评：计算定积分时，若出现变积分限函数求定积分时，一般采用分部积分法.如：设 $f(x) = \\int_{1}^{x}\\mathrm{e}^{t^2}\\mathrm{d}t$ ，则\n\n$$\n\\int_ {0} ^ {1} f (x) \\mathrm {d} x = x f (x) \\left| _ {0} ^ {1} - \\int_ {0} ^ {1} x f ^ {\\prime} (x) \\mathrm {d} x = - \\int_ {0} ^ {1} x \\mathrm {e} ^ {x ^ {2}} \\mathrm {d} x = - \\frac {1}{2} \\mathrm {e} ^ {x ^ {2}} \\right| _ {0} ^ {1} = \\frac {1 - \\mathrm {e}}{2}.\n$$",
+   "points": [
+    {
+     "text": "$\\int_0^1\\frac{f(x)}{\\sqrt{x}}\\mathrm{d}x = 2\\int_0^1 f(x)\\mathrm{d}(\\sqrt{x}) = 2\\sqrt{x} f(x)\\Big|_0^1 -2\\int_0^1 f'(x)\\sqrt{x}\\mathrm{d}x$\n$$\n\\begin{array}{l} = - 2 \\int_ {0} ^ {1} f ^ {\\prime} (x) \\sqrt {x} d x = - 2 \\int_ {0} ^ {1} \\frac {\\ln (x + 1)}{\\sqrt {x}} d x = - 4 \\int_ {0} ^ {1} \\ln (x + 1) d (\\sqrt {x}) \\\\ = - 4 \\sqrt {x} \\ln (x + 1) \\left| _ {0} ^ {1} + 4 \\int_ {0} ^ {1} \\frac {\\sqrt {x}}{x + 1} d x = - 4 \\ln 2 + 4 \\int_ {0} ^ {1} \\frac {\\sqrt {x}}{x + 1} d x \\right. \\\\ \\frac {\\sqrt {x} = t}{- 4 \\ln 2 + 8 \\int_ {0} ^ {1} \\frac {t ^ {2}}{1 + t ^ {2}} \\mathrm {d} t} = - 4 \\ln 2 + 8 \\int_ {0} ^ {1} \\left(1 - \\frac {1}{1 + t ^ {2}}\\right) \\mathrm {d} t \\\\ = - 4 \\ln 2 + 8 - 8 \\arctan t \\mid_ {0} ^ {1} = - 4 \\ln 2 + 8 - 2 \\pi . \\\\ \\end{array}\n$$",
+     "partial": 2
+    },
+    {
+     "text": "方法点评：计算定积分时，若出现变积分限函数求定积分时，一般采用分部积分法.如：设 $f(x) = \\int_{1}^{x}\\mathrm{e}^{t^2}\\mathrm{d}t$ ，则",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\int_ {0} ^ {1} f (x) \\mathrm {d} x = x f (x) \\left| _ {0} ^ {1} - \\int_ {0} ^ {1} x f ^ {\\prime} (x) \\mathrm {d} x = - \\int_ {0} ^ {1} x \\mathrm {e} ^ {x ^ {2}} \\mathrm {d} x = - \\frac {1}{2} \\mathrm {e} ^ {x ^ {2}} \\right| _ {0} ^ {1} = \\frac {1 - \\mathrm {e}}{2}.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\int_0^1\\frac{f(x)}{\\sqrt{x}}\\mathrm{d}x = 2\\int_0^1 f(x)\\mathrm{d}(\\sqrt{x}) = 2\\sqrt{x} f(x)\\Big|_0^1 -2\\int_0^1 f'(x)\\sqrt{x}\\mathrm{d}x$\n$$\n\\begin{array}{l} = - 2 \\int_ {0} ^ {1} f ^ {\\prime} (x) \\sqrt {x} d x = - 2 \\int_ {0} ^ {1} \\frac {\\ln (x + 1)}{\\sqrt {x}} d x = - 4 \\int_ {0} ^ {1} \\ln (x + 1) d (\\sqrt {x}) \\\\ = - 4 \\sqrt {x} \\ln (x + 1) \\left| _ {0} ^ {1} + 4 \\int_ {0} ^ {1} \\frac {\\sqrt {x}}{x + 1} d x = - 4 \\ln 2 + 4 \\int_ {0} ^ {1} \\frac {\\sqrt {x}}{x + 1} d x \\right. \\\\ \\frac {\\sqrt {x} = t}{- 4 \\ln 2 + 8 \\int_ {0} ^ {1} \\frac {t ^ {2}}{1 + t ^ {2}} \\mathrm {d} t} = - 4 \\ln 2 + 8 \\int_ {0} ^ {1} \\left(1 - \\frac {1}{1 + t ^ {2}}\\right) \\mathrm {d} t \\\\ = - 4 \\ln 2 + 8 - 8 \\arctan t \\mid_ {0} ^ {1} = - 4 \\ln 2 + 8 - 2 \\pi . \\\\ \\end{array}\n$$\n\n方法点评：计算定积分时，若出现变积分限函数求定积分时，一般采用分部积分法.如：设 $f(x) = \\int_{1}^{x}\\mathrm{e}^{t^2}\\mathrm{d}t$ ，则\n\n$$\n\\int_ {0} ^ {1} f (x) \\mathrm {d} x = x f (x) \\left| _ {0} ^ {1} - \\int_ {0} ^ {1} x f ^ {\\prime} (x) \\mathrm {d} x = - \\int_ {0} ^ {1} x \\mathrm {e} ^ {x ^ {2}} \\mathrm {d} x = - \\frac {1}{2} \\mathrm {e} ^ {x ^ {2}} \\right| _ {0} ^ {1} = \\frac {1 - \\mathrm {e}}{2}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 426
+  },
+  {
+   "id": "ky-2016-16-6f2a88",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "2016 年考研数学（一）第 16 题",
+    "kind": "exam-original",
+    "year": 2016,
+    "region": "全国",
+    "paper": "2016 年考研数学（一）",
+    "number": "16",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2016年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2016年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2016年解析/2016年解析.md"
+   },
+   "stem": "设函数 $y(x)$ 满足方程 $y'' + 2y' + ky = 0$ ，其中 $0 < k < 1$ .\n(I) 证明: 反常积分 $\\int_{0}^{+\\infty} y(x) \\mathrm{d}x$ 收敛;\n(II) 若 $y(0) = 1, y'(0) = 1$ ，求 $\\int_{0}^{+\\infty} y(x) \\mathrm{d}x$ 的值.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "（I）微分方程 $y^{\\prime \\prime} + 2y^{\\prime} + ky = 0$ 的特征方程为 $\\lambda^2 +2\\lambda +k = 0$\n解得 $\\lambda_{1} = -1 + \\sqrt{1 - k}$ ， $\\lambda_{2} = -1 - \\sqrt{1 - k}$\n\n因为 $0 < k < 1$ ，所以 $\\lambda_1 < 0, \\lambda_2 < 0$ ，从而 $\\int_{0}^{+\\infty} \\mathrm{e}^{\\lambda_1 x} \\mathrm{d}x$ 与 $\\int_{0}^{+\\infty} \\mathrm{e}^{\\lambda_2 x} \\mathrm{d}x$ 都收敛.\n\n该方程的通解为 $y = C_{1}\\mathrm{e}^{\\lambda_{1}x} + C_{2}\\mathrm{e}^{\\lambda_{2}x}$\n\n由 $\\int_{0}^{+\\infty}y(x)\\mathrm{d}x = C_{1}\\int_{0}^{+\\infty}\\mathrm{e}^{\\lambda_{1}x}\\mathrm{d}x + C_{2}\\int_{0}^{+\\infty}\\mathrm{e}^{\\lambda_{2}x}\\mathrm{d}x$ ，得 $\\int_0^{+\\infty}y(x)\\mathrm{d}x$ 收敛.\n\n（Ⅱ）方法一 由 $\\lambda_1 < 0, \\lambda_2 < 0$ 得 $\\lim_{x \\to +\\infty} y(x) = \\lim_{x \\to +\\infty} (C_1 e^{\\lambda_1 x} + C_2 e^{\\lambda_2 x}) = 0,$\n\n$$\n\\lim  _ {x \\rightarrow + \\infty} y ^ {\\prime} (x) = \\lim  _ {x \\rightarrow + \\infty} \\left(C _ {1} \\lambda_ {1} e ^ {\\lambda_ {1} x} + C _ {2} \\lambda_ {2} e ^ {\\lambda_ {2} x}\\right) = 0,\n$$\n\n于是 $\\int_0^{+\\infty}y(x)\\mathrm{d}x = -\\frac{1}{k}\\left[\\int_0^{+\\infty}y''(x)\\mathrm{d}x + 2\\int_0^{+\\infty}y'(x)\\mathrm{d}x\\right],$\n\n再由 $\\int_{0}^{+\\infty}y^{\\prime \\prime}(x)\\mathrm{d}x = y^{\\prime}(x)\\Big|_{0}^{+\\infty} = -y^{\\prime}(0) = -1,$\n\n$$\n\\int_ {0} ^ {+ \\infty} y ^ {\\prime} (x) \\mathrm {d} x = y (x) \\Big | _ {0} ^ {+ \\infty} = - y (0) = - 1,\n$$\n\n得 $\\int_{0}^{+\\infty}y(x)\\mathrm{d}x = \\frac{3}{k}$\n\n方法二 将 $y(0) = 1, y'(0) = 1$ 代入 $y = C_1 \\mathrm{e}^{\\lambda_1 x} + C_2 \\mathrm{e}^{\\lambda_2 x}$ 得 $\\left\\{ \\begin{array}{l} C_1 + C_2 = 1, \\\\ \\lambda_1 C_1 + \\lambda_2 C_2 = 1. \\end{array} \\right.$\n\n解得 $C_1 = \\frac{1 - \\lambda_2}{\\lambda_1 - \\lambda_2} = \\frac{2 + \\sqrt{1 - k}}{2\\sqrt{1 - k}}, C_2 = \\frac{\\lambda_1 - 1}{\\lambda_1 - \\lambda_2} = \\frac{-2 + \\sqrt{1 - k}}{2\\sqrt{1 - k}},$\n\n故 $\\int_0^{+\\infty}y(x)\\mathrm{d}x = -\\left(\\frac{C_1}{\\lambda_1} +\\frac{C_1}{\\lambda_1}\\right) = \\frac{3}{k}.$",
+   "points": [
+    {
+     "text": "微分方程 $y^{\\prime \\prime} + 2y^{\\prime} + ky = 0$ 的特征方程为 $\\lambda^2 +2\\lambda +k = 0$\n解得 $\\lambda_{1} = -1 + \\sqrt{1 - k}$ ， $\\lambda_{2} = -1 - \\sqrt{1 - k}$\n\n因为 $0 < k < 1$ ，所以 $\\lambda_1 < 0, \\lambda_2 < 0$ ，从而 $\\int_{0}^{+\\infty} \\mathrm{e}^{\\lambda_1 x} \\mathrm{d}x$ 与 $\\int_{0}^{+\\infty} \\mathrm{e}^{\\lambda_2 x} \\mathrm{d}x$ 都收敛.\n\n该方程的通解为 $y = C_{1}\\mathrm{e}^{\\lambda_{1}x} + C_{2}\\mathrm{e}^{\\lambda_{2}x}$\n\n由 $\\int_{0}^{+\\infty}y(x)\\mathrm{d}x = C_{1}\\int_{0}^{+\\infty}\\mathrm{e}^{\\lambda_{1}x}\\mathrm{d}x + C_{2}\\int_{0}^{+\\infty}\\mathrm{e}^{\\lambda_{2}x}\\mathrm{d}x$ ，得 $\\int_0^{+\\infty}y(x)\\mathrm{d}x$ 收敛.",
+     "partial": 2
+    },
+    {
+     "text": "方法一 由 $\\lambda_1 < 0, \\lambda_2 < 0$ 得 $\\lim_{x \\to +\\infty} y(x) = \\lim_{x \\to +\\infty} (C_1 e^{\\lambda_1 x} + C_2 e^{\\lambda_2 x}) = 0,$",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\lim  _ {x \\rightarrow + \\infty} y ^ {\\prime} (x) = \\lim  _ {x \\rightarrow + \\infty} \\left(C _ {1} \\lambda_ {1} e ^ {\\lambda_ {1} x} + C _ {2} \\lambda_ {2} e ^ {\\lambda_ {2} x}\\right) = 0,\n$$",
+     "partial": 2
+    },
+    {
+     "text": "于是 $\\int_0^{+\\infty}y(x)\\mathrm{d}x = -\\frac{1}{k}\\left[\\int_0^{+\\infty}y''(x)\\mathrm{d}x + 2\\int_0^{+\\infty}y'(x)\\mathrm{d}x\\right],$",
+     "partial": 2
+    },
+    {
+     "text": "再由 $\\int_{0}^{+\\infty}y^{\\prime \\prime}(x)\\mathrm{d}x = y^{\\prime}(x)\\Big|_{0}^{+\\infty} = -y^{\\prime}(0) = -1,$",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\int_ {0} ^ {+ \\infty} y ^ {\\prime} (x) \\mathrm {d} x = y (x) \\Big | _ {0} ^ {+ \\infty} = - y (0) = - 1,\n$$；得 $\\int_{0}^{+\\infty}y(x)\\mathrm{d}x = \\frac{3}{k}$；方法二 将 $y(0) = 1, y'(0) = 1$ 代入 $y = C_1 \\mathrm{e}^{\\lambda_1 x} + C_2 \\mathrm{e}^{\\lambda_2 x}$ 得 $\\left\\{ \\begin{array}{l} C_1 + C_2 = 1, \\\\ \\lambda_1 C_1 + \\lambda_2 C_2 = 1. \\end{array} \\right.$；解得 $C_1 = \\frac{1 - \\lambda_2}{\\lambda_1 - \\lambda_2} = \\frac{2 + \\sqrt{1 - k}}{2\\sqrt{1 - k}}, C_2 = \\frac{\\lambda_1 - 1}{\\lambda_1 - \\lambda_2} = \\frac{-2 + \\sqrt{1 - k}}{2\\sqrt{1 - k}},$；故 $\\int_0^{+\\infty}y(x)\\mathrm{d}x = -\\left(\\frac{C_1}{\\lambda_1} +\\frac{C_1}{\\lambda_1}\\right) = \\frac{3}{k}.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n（I）微分方程 $y^{\\prime \\prime} + 2y^{\\prime} + ky = 0$ 的特征方程为 $\\lambda^2 +2\\lambda +k = 0$\n解得 $\\lambda_{1} = -1 + \\sqrt{1 - k}$ ， $\\lambda_{2} = -1 - \\sqrt{1 - k}$\n\n因为 $0 < k < 1$ ，所以 $\\lambda_1 < 0, \\lambda_2 < 0$ ，从而 $\\int_{0}^{+\\infty} \\mathrm{e}^{\\lambda_1 x} \\mathrm{d}x$ 与 $\\int_{0}^{+\\infty} \\mathrm{e}^{\\lambda_2 x} \\mathrm{d}x$ 都收敛.\n\n该方程的通解为 $y = C_{1}\\mathrm{e}^{\\lambda_{1}x} + C_{2}\\mathrm{e}^{\\lambda_{2}x}$\n\n由 $\\int_{0}^{+\\infty}y(x)\\mathrm{d}x = C_{1}\\int_{0}^{+\\infty}\\mathrm{e}^{\\lambda_{1}x}\\mathrm{d}x + C_{2}\\int_{0}^{+\\infty}\\mathrm{e}^{\\lambda_{2}x}\\mathrm{d}x$ ，得 $\\int_0^{+\\infty}y(x)\\mathrm{d}x$ 收敛.\n\n（Ⅱ）方法一 由 $\\lambda_1 < 0, \\lambda_2 < 0$ 得 $\\lim_{x \\to +\\infty} y(x) = \\lim_{x \\to +\\infty} (C_1 e^{\\lambda_1 x} + C_2 e^{\\lambda_2 x}) = 0,$\n\n$$\n\\lim  _ {x \\rightarrow + \\infty} y ^ {\\prime} (x) = \\lim  _ {x \\rightarrow + \\infty} \\left(C _ {1} \\lambda_ {1} e ^ {\\lambda_ {1} x} + C _ {2} \\lambda_ {2} e ^ {\\lambda_ {2} x}\\right) = 0,\n$$\n\n于是 $\\int_0^{+\\infty}y(x)\\mathrm{d}x = -\\frac{1}{k}\\left[\\int_0^{+\\infty}y''(x)\\mathrm{d}x + 2\\int_0^{+\\infty}y'(x)\\mathrm{d}x\\right],$\n\n再由 $\\int_{0}^{+\\infty}y^{\\prime \\prime}(x)\\mathrm{d}x = y^{\\prime}(x)\\Big|_{0}^{+\\infty} = -y^{\\prime}(0) = -1,$\n\n$$\n\\int_ {0} ^ {+ \\infty} y ^ {\\prime} (x) \\mathrm {d} x = y (x) \\Big | _ {0} ^ {+ \\infty} = - y (0) = - 1,\n$$\n\n得 $\\int_{0}^{+\\infty}y(x)\\mathrm{d}x = \\frac{3}{k}$\n\n方法二 将 $y(0) = 1, y'(0) = 1$ 代入 $y = C_1 \\mathrm{e}^{\\lambda_1 x} + C_2 \\mathrm{e}^{\\lambda_2 x}$ 得 $\\left\\{ \\begin{array}{l} C_1 + C_2 = 1, \\\\ \\lambda_1 C_1 + \\lambda_2 C_2 = 1. \\end{array} \\right.$\n\n解得 $C_1 = \\frac{1 - \\lambda_2}{\\lambda_1 - \\lambda_2} = \\frac{2 + \\sqrt{1 - k}}{2\\sqrt{1 - k}}, C_2 = \\frac{\\lambda_1 - 1}{\\lambda_1 - \\lambda_2} = \\frac{-2 + \\sqrt{1 - k}}{2\\sqrt{1 - k}},$\n\n故 $\\int_0^{+\\infty}y(x)\\mathrm{d}x = -\\left(\\frac{C_1}{\\lambda_1} +\\frac{C_1}{\\lambda_1}\\right) = \\frac{3}{k}.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 427
+  }
+ ]
+}

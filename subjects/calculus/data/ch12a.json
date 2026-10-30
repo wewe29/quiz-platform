@@ -1,0 +1,1532 @@
+{
+ "chapter": 12,
+ "questions": [
+  {
+   "id": "c12-s1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.1 常数项级数的概念和性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "等比级数（几何级数）$\\displaystyle\\sum_{n=1}^{\\infty}\\left(\\frac12\\right)^n$ 的和为",
+   "options": [
+    "$1$",
+    "$2$",
+    "$\\dfrac12$",
+    "发散"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：公比 $q=\\dfrac12$，$|q|<1$ 时级数收敛于 $\\dfrac{a_1}{1-q}$（§12.1）。首项 $a_1=\\dfrac12$（注意从 $n=1$ 开始），和 $=\\dfrac{1/2}{1-1/2}=1$，A 正确。\nB 错：那是 $\\sum\\limits_{n=0}^{\\infty}(\\tfrac12)^n=2$（从 $n=0$ 开始）。\nC 错：只取了首项。\nD 错：$|q|=\\tfrac12<1$，收敛。",
+   "misconception": "⚠️易错点：先看清 $n$ 从几开始——首项与求和起点决定结果；几何级数求和公式 $S=\\dfrac{a_1}{1-q}$（$|q|<1$）。",
+   "extension": null,
+   "tags": [
+    "几何级数",
+    "必背"
+   ],
+   "verify": [
+    {
+     "desc": "sum",
+     "code": "nn=symbols('nn', positive=True, integer=True); Sum((Rational(1,2))**nn, (nn, 1, oo)).doit()",
+     "expected": "1"
+    }
+   ],
+   "idx": 792
+  },
+  {
+   "id": "zk-202210-04",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 4 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 4,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设级数 $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{x^n}{2^n}$ 收敛，则 $x$ 的取值可为下列数值中的",
+   "options": [
+    "$-2$",
+    "$-1$",
+    "$2$",
+    "$\\dfrac{5}{2}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：几何级数（幂级数）的收敛条件与收敛半径（无穷级数）。\n**考点出处**：几何级数（幂级数）的收敛条件（无穷级数）\n**第一步：把它看成几何级数。**\n\n$$\\sum_{n=0}^{\\infty}\\frac{x^n}{2^n} = \\sum_{n=0}^{\\infty}\\left(\\frac{x}{2}\\right)^n$$\n\n这是**公比 $q = \\dfrac{x}{2}$ 的几何级数**。\n\n**第二步：用几何级数的收敛条件。**\n\n几何级数**收敛的充要条件**是公比的绝对值严格小于 $1$：\n\n$$|q| < 1$$\n\n本题 $q = \\dfrac{x}{2}$，代入得\n\n$$\\left|\\frac{x}{2}\\right| < 1 \\quad\\Longrightarrow\\quad |x| < 2$$\n\n即**收敛半径 $R = 2$，收敛区间为 $(-2, 2)$**（开区间）。\n\n**第三步：逐个检验选项，看谁落在 $(-2,2)$ 内。**\n\n· 选项 / 值 / $\\lvert x\\rvert$ 与 2 的关系 / 是否收敛\n· A / $-2$ / 落在端点，等于 2 / 发散（$\\sum(-1)^n$ 通项不趋于 0）\n· B / $-1$ / $1 < 2$，在区间内部 / **收敛**\n· C / $2$ / 落在端点，等于 2 / 发散（$\\sum 1^n$ 通项为 1）\n· D / $\\dfrac52$ / $2.5 > 2$，在区间外 / 发散\n\n故选 **B**。",
+   "misconception": "- **A 选项 $-2$ 是最有迷惑性的**：它是端点，几何级数在端点上**一定发散**（$q = -1$ 时通项 $(-1)^n$ 不趋于 0）。**\"端点要单独讨论\"在这里体现得最直接**——收敛半径是 2，但 $\\lvert x\\rvert = 2$ 的两点都不收敛。\n- **不能用\"$|x| \\le 2$\"来判断**：收敛条件是**严格小于**。写成 $\\le$ 就会误选 A 或 C。\n- **D 选项 $\\frac52$**：$2.5 > 2$，落在收敛区间外，通项 $\\left(\\frac54\\right)^n \\to \\infty$，发散得最明显。\n- **三种验证方式都用得上**：① 比值判据 $|x/2| < 1$；② 直接求部分和 $S_N = \\dfrac{1-(x/2)^{N+1}}{1-x/2}$，看极限是否存在；③ 端点代回看通项。**考试时用①最快。**\n- 若本题改成\"$x$ 可以取哪些值\"的多选，答案会是 $(-2,2)$ 内的全体实数——**别忘了\"区间\"这个答案形态**。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 793
+  },
+  {
+   "id": "zk-202304-04",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2023 年 4 月 自考 00023 高等数学（工本）第 4 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 4,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设级数 $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{1}{x^n}$ 收敛，则 $x$ 的取值可为下列数值中的",
+   "options": [
+    "$-2$",
+    "$-1$",
+    "$\\dfrac{1}{2}$",
+    "$1$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：几何级数的收敛条件（无穷级数）。\n**考点出处**：几何级数的收敛条件（无穷级数）\n**第一步：认出这是几何级数，把公比提出来。**\n\n$$\\sum_{n=0}^{\\infty}\\frac{1}{x^n} = \\sum_{n=0}^{\\infty}\\left(\\frac{1}{x}\\right)^n$$\n\n**公比是 $q = \\dfrac{1}{x}$**（不是 $x$）。\n\n**第二步：写出几何级数的收敛条件。**\n\n几何级数 $\\displaystyle\\sum_{n=0}^{\\infty}q^n$ 收敛的条件是\n\n$$|q| < 1$$\n\n代入 $q = \\dfrac1x$：\n\n$$\\left|\\frac{1}{x}\\right| < 1 \\iff \\frac{1}{|x|} < 1 \\iff |x| > 1$$\n\n**第三步：逐项检验。**\n\n· 选项 / $x$ / $\\lvert x\\rvert$ / 与 $1$ 比较 / 结论\n· A / $-2$ / $2$ / $> 1$ / **收敛** ✓\n· B / $-1$ / $1$ / $= 1$ / 发散\n· C / $\\frac12$ / $\\frac12$ / $< 1$ / 发散\n· D / $1$ / $1$ / $= 1$ / 发散\n\n选 **A**。",
+   "misconception": "- **条件是 $|x| > 1$，不是 $x > 1$**：**负的也能收敛**。把 $|q|<1$ 误记成 $q<1$（去掉绝对值）会排除掉 $-2$，错选 B。这是本题最大的陷阱。\n- **B、D 都落在 $|x|=1$ 的临界线上**：$x=1$ 时通项恒为 $1$，发散；$x=-1$ 时级数是 $1-1+1-1+\\cdots$，部分和在 $0$ 与 $1$ 之间跳动，也发散。**临界情况一定要单独验。**\n- **公比是 $\\frac1x$ 而不是 $x$**：写错公比，收敛条件就会变成 $|x|<1$，四个选项全判反。\n- 本题问的是\"**取值可为**\"（存在性），不是\"取值范围\"：只要有一个满足的选项就选它，不必把范围完整解出来。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 794
+  },
+  {
+   "id": "zk-202310-04",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 4 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 4,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "下列无穷级数中，收敛的无穷级数是",
+   "options": [
+    "$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{2n-2}{3n+1}$",
+    "$\\displaystyle\\sum_{n=1}^{\\infty}(-1)^{n-1}$",
+    "$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{3^{n-1}}{2^{n+1}}$",
+    "$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^2}$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：级数收敛的**必要条件**、**几何（等比）级数**的敛散性、**$p$ 级数**的敛散性。\n**考点出处**：无穷级数敛散性的判断（无穷级数）\n逐个选项检验：\n\n**A 选项：$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{2n-2}{3n+1}$**\n\n看通项的极限：\n\n$$\\lim_{n\\to\\infty}\\frac{2n-2}{3n+1} = \\frac{2}{3} \\ne 0$$\n\n**级数收敛的必要条件是通项趋于 $0$**。这里通项趋于 $\\dfrac{2}{3} \\ne 0$，**不满足必要条件，故发散**。❌\n\n**B 选项：$\\displaystyle\\sum_{n=1}^{\\infty}(-1)^{n-1}$**\n\n通项为 $1, -1, 1, -1, \\cdots$，即 $|u_n| = 1$ 恒成立。\n\n该极限**不存在**（在 $1$ 与 $-1$ 之间来回跳动），自然更不可能趋于 $0$：\n\n$$\\lim_{n\\to\\infty}(-1)^{n-1} \\ne 0$$\n\n**通项不趋于 $0$，故发散**。❌\n\n（这是典型的\"通项在 $1$ 和 $-1$ 之间来回跳\"的级数，部分和 $S_n$ 只在 $0$ 和 $1$ 之间跳，不收敛。）\n\n**C 选项：$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{3^{n-1}}{2^{n+1}}$**\n\n把它整理成**几何级数的标准形** $aq^n$：\n\n$$\\frac{3^{n-1}}{2^{n+1}} = \\frac{3^{n-1}}{2^{n-1}\\cdot 2^{2}} = \\frac{1}{4}\\left(\\frac{3}{2}\\right)^{n-1}$$\n\n这是**首项 $a = \\dfrac{1}{4}$、公比 $q = \\dfrac{3}{2}$** 的几何级数。\n\n几何级数收敛的条件是 $|q| < 1$，而\n\n$$|q| = \\frac{3}{2} > 1$$\n\n**不满足收敛条件，故发散**。❌\n\n**D 选项：$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^2}$**\n\n这是标准的 **$p$ 级数**（$p = 2$）。$p$ 级数的敛散结论：\n\n$p$ 级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^p}$ 的敛散结论：当 $p > 1$ 时**收敛**；当 $p \\le 1$ 时**发散**。\n\n这里 $p = 2 > 1$，**故收敛**。✅\n\n答案是 **D**。",
+   "misconception": "- **最快的突破口是\"收敛的必要条件：$\\lim\\limits_{n\\to\\infty}u_n = 0$\"**。A、B 两选项一眼就能用这条排除，根本不用算。**做题顺序建议：先看通项是否趋向 $0$，能排除的立刻排除。**\n- **C 选项的陷阱在于\"看错公比\"**。有人看到 $\\dfrac{3^{n-1}}{2^{n+1}}$ 就直接读成\"公比 $q = \\dfrac{3}{2}$\"——这一步其实是对的，但**要确认 $|q| > 1$ 时是发散**。也有同学误以为\"分母指数大所以收敛\"，这是把\"通项趋于 $0$\"和\"级数收敛\"混为一谈了：\n  - C 的通项 $\\frac{1}{4}(\\frac{3}{2})^{n-1}$ **趋于无穷大**，当然发散；\n  - 但如果把它**写反**成 $\\left(\\dfrac{2}{3}\\right)^n$ 型，那就收敛了。**指数底数谁大谁小，决定了收敛与否，一定要算清楚。**\n- **$p$ 级数是必背结论**：\n· 级数 / 敛散性\n· $\\displaystyle\\sum\\frac{1}{n}$（调和级数，$p=1$） / **发散**\n· $\\displaystyle\\sum\\frac{1}{n^2}$（$p=2$） / **收敛**\n· $\\displaystyle\\sum\\frac{1}{\\sqrt{n}}$（$p=\\frac{1}{2}$） / **发散**\n  - 记忆要点：**$p > 1$ 才收敛**，边界 $p = 1$（调和级数）是**发散**的，这一点最容易记反。\n- 注意 A、B 这类\"通项不趋于 $0$\"的级数，永远不可能收敛，属于**送分的排除项**。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 795
+  },
+  {
+   "id": "zk-202404-04",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 4 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 4,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设级数 $\\displaystyle\\sum_{n=0}^{\\infty} 2x^n$ 收敛，则 $x$ 的取值可为下列数值中的",
+   "options": [
+    "$1$",
+    "$\\dfrac{1}{2}$",
+    "$\\dfrac{3}{2}$",
+    "$2$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：几何级数（等比级数）$\\displaystyle\\sum_{n=0}^{\\infty} aq^n$ 的收敛条件：$|q| < 1$。\n**考点出处**：几何级数的收敛条件（无穷级数）\n把级数写成标准形式：\n\n$$\\sum_{n=0}^{\\infty} 2x^n = 2\\sum_{n=0}^{\\infty} x^n = 2\\sum_{n=0}^{\\infty} 1\\cdot x^n$$\n\n这是首项 $a = 1$、**公比 $q = x$** 的几何级数。\n\n几何级数的收敛条件是：\n\n$$|q| < 1 \\quad\\Longrightarrow\\quad |x| < 1 \\quad\\Longrightarrow\\quad -1 < x < 1$$\n\n逐个看选项：\n\n- A. $x = 1$：$|1| < 1$ 不成立（此时级数变成 $2+2+2+\\cdots$，发散）\n- B. $x = \\dfrac{1}{2}$：$\\left|\\dfrac{1}{2}\\right| < 1$ ✅ **成立**\n- C. $x = \\dfrac{3}{2}$：$\\left|\\dfrac{3}{2}\\right| > 1$，发散\n- D. $x = 2$：$|2| > 1$，发散\n\n所以只有 B 满足。",
+   "misconception": "- 题目问的是\"**$x$ 的取值可为**下列数值中的\"，只要挑出落在 $(-1,1)$ 里的那个即可，不需要把整个收敛域写出来。\n- 注意 $n$ 从 $0$ 开始，所以级数里第一项是 $2x^0 = 2$，公比仍然是 $x$。如果是从 $n=1$ 开始，公比不变，收敛条件也一样。**公比看的是 $x^n$ 里的 $x$。**\n- 别把它当成幂级数去求收敛半径——这就是最基础的几何级数，直接用 $|q|<1$ 判断更快。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 796
+  },
+  {
+   "id": "zk-202410-04",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 4 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 4,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "幂级数 $\\displaystyle\\sum_{n=0}^{\\infty} a_n x^n$ 在 $x = 2$ 处收敛，则该幂级数在 $x = -1$ 处",
+   "options": [
+    "条件收敛",
+    "绝对收敛",
+    "发散",
+    "敛散性不确定"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：幂级数的收敛半径与阿贝尔定理（无穷级数）。\n**考点出处**：幂级数的收敛性（阿贝尔定理）（无穷级数）\n**第一步：由\"在 $x = 2$ 处收敛\"推出收敛半径的下界。**\n\n幂级数 $\\sum a_nx^n$ 在 $x = 2$ 处收敛，说明**收敛半径 $R \\ge 2$**。\n\n（理由：若 $|x_0| > R$，幂级数在 $x_0$ 处必发散。既然在 $x = 2$ 处收敛，就必有 $2 \\le R$。）\n\n**第二步：比较 $x = -1$ 与收敛半径。**\n\n$$|-1| = 1 < 2 \\le R$$\n\n因为 $1$ **严格小于**收敛半径 $R$，即 $-1$ 落在收敛区间的**内部**，由阿贝尔定理，幂级数在 $x = -1$ 处**绝对收敛**。\n\n选 **B**。",
+   "misconception": "- **A 选项\"条件收敛\"**：条件收敛只可能发生在**端点**（$|x| = R$）上。这里 $|-1| = 1 < 2 \\le R$，点在区间**内部**，而**内部一律绝对收敛**，不可能是条件收敛。\n- **D 选项\"敛散性不确定\"是本题最大的迷惑项**：确实 $R$ 可能等于 2、也可能大于 2，但**这不影响结论**——无论 $R$ 是几，都有 $1 < R$，所以 $-1$ 一定在内部，一定绝对收敛。**\"$R$ 具体是几不确定\"不等于\"敛散性不确定\"。**\n- **记住三条铁律**：**内部绝对收敛、端点单独讨论、外部必定发散。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 797
+  },
+  {
+   "id": "zk-202504-04",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2025 年 4 月 自考 00023 高等数学（工本）第 4 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 4,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设常数 $a \\ne 0$，如果级数 $\\displaystyle\\sum_{n=1}^{\\infty}u_n$ 发散，则级数 $\\displaystyle\\sum_{n=1}^{\\infty}au_n$",
+   "options": [
+    "发散",
+    "收敛",
+    "可能发散，也可能收敛",
+    "收敛性由 $a$ 值确定"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：级数的线性性质——乘非零常数不改变敛散性，无穷级数。\n**考点出处**：幂级数的阿贝尔定理（级数的线性性质（发散性保持））\n**第一步：把两个级数的部分和联系起来。**\n\n记 $\\displaystyle T_N = \\sum_{n=1}^{N}u_n$，$\\displaystyle S_N = \\sum_{n=1}^{N}au_n$。由求和的线性性：\n\n$$S_N = \\sum_{n=1}^{N}au_n = a\\sum_{n=1}^{N}u_n = aT_N$$\n\n**第二步：由\"$a \\ne 0$\"断定两者同步。**\n\n这个等式**可以双向解出**：$T_N = \\dfrac{S_N}{a}$（这里正是用到了 $a \\ne 0$）。\n\n- 若 $\\{S_N\\}$ 收敛，则 $\\{T_N\\}$ 也收敛，与题设\"$\\sum u_n$ 发散\"矛盾；\n- 所以 $\\{S_N\\}$ **不可能**收敛。\n\n**第三步：下结论。**\n\n已知 $\\{T_N\\}$ 发散、$a \\neq 0$，故 $\\{S_N\\} = \\{aT_N\\}$ 也发散。\n\n选 **A**。\n\n**通俗理解**：把每一项都放大（或缩小）同一个倍数，部分和也只是被整体拉伸，**它该跑多远还是跑多远**，不会因为\"缩了\"就停下来。例如 $a = \\frac{1}{1000}$，$\\displaystyle\\sum\\frac{1}{1000n}$ 仍然是发散的调和级数的千分之一，照样发散到 $+\\infty$。",
+   "misconception": "- **B 选项\"收敛\"来自一个很顽固的直觉错误**：以为\"乘一个很小的数就能把发散级数压住\"。**发散不是\"数太大\"，而是\"部分和根本不肯停下来\"**；成比例缩放改不了这件事。\n- **D 选项\"收敛性由 $a$ 值确定\"是本题最具迷惑性的选项**：它只在 $a = 0$ 时才成立（那时 $\\sum au_n = 0 + 0 + \\cdots$ 确实收敛）。**但题设白纸黑字写着 $a \\ne 0$——这正是命题人故意设置的条件，用来锁死 D。**\n- **C 选项\"可能发散也可能收敛\"**：本质是\"不确定\"，与 D 一样，都被 $a \\ne 0$ 排除。\n- **记住这条结论级数的三条线性性质**：\n  1. $\\sum u_n$ 收敛 $\\Longrightarrow$ $\\sum au_n$ 收敛（$a$ 任意）；\n  2. $\\sum u_n$ 发散且 $a \\ne 0$ $\\Longrightarrow$ $\\sum au_n$ 发散（**本题**）；\n  3. $\\sum u_n$ 发散、$\\sum v_n$ 发散 $\\Longrightarrow$ $\\sum(u_n+v_n)$ **敛散性不定**（这条才是不确定的）。\n- **别把第 4 题和第 1 题的条件看漏**：$a \\ne 0$ 这种\"限定性条件\"往往是题目唯一的钥匙。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 798
+  },
+  {
+   "id": "zk-202510-04",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 4 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 4,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设级数 $\\displaystyle\\sum_{n=0}^{\\infty}(n+1)x^n$ 收敛，则 $x$ 的取值可为下列数值中的",
+   "options": [
+    "$-1$",
+    "$\\dfrac{1}{2}$",
+    "$1$",
+    "$\\dfrac{3}{2}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：幂级数的收敛半径与端点敛散性（**端点必须单独讨论**），无穷级数。\n**考点出处**：无穷级数（无穷级数）\n**第一步：求收敛半径。**\n\n幂级数 $\\displaystyle\\sum_{n=0}^{\\infty}(n+1)x^n$ 的系数为 $a_n = n+1$，用比值法：\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty}\\frac{n+2}{n+1} = 1$$\n\n$$R = \\frac{1}{\\rho} = 1$$\n\n**第二步：定出收敛区间。**\n\n当 $|x| < 1$ 时级数**绝对收敛**；当 $|x| > 1$ 时级数**发散**。所以内部是开区间 $(-1,\\ 1)$，只剩两个端点待定。\n\n**第三步：讨论两个端点（这一步不能省）。**\n\n- $x = 1$：通项为 $u_n = (n+1)\\cdot 1^n = n+1 \\to \\infty$，**不趋于 $0$**，故发散。\n- $x = -1$：通项为 $u_n = (n+1)(-1)^n$，其绝对值 $n+1 \\to \\infty$，**通项不趋于 $0$**，故发散。\n\n所以收敛域是开区间 $(-1, 1)$，两个端点都不收敛。\n\n**第四步：对照选项。**\n\n四个数中只有 $\\dfrac{1}{2} \\in (-1, 1)$。选 **B**。\n\n（补充：在收敛区间内部，级数的和为 $\\displaystyle\\sum_{n=0}^{\\infty}(n+1)x^n = \\frac{1}{(1-x)^2}$，取 $x = \\frac12$ 得 $4$，可用于自检。）",
+   "misconception": "- **A、C 选项是\"端点没讨论\"的陷阱**：$-1$ 和 $1$ 恰好是收敛区间的端点，**在端点上级数可能收敛也可能发散，必须代进去看通项**。本题两端通项都不趋于 $0$，所以都发散。若只看\"$|x| \\le 1$\"就选 A、C，就中了计。\n- **D 选项 $1.5 > 1$**：在收敛半径之外，幂级数**必发散**，可直接排除。\n- **通项判别法是端点的最快武器**：只需看 $u_n \\to 0$ 是否成立。本题 $u_n = (n+1)x^n$，$|x| = 1$ 时 $|u_n| = n+1 \\to \\infty$，一眼判出发散。\n- **别看到 $R = 1$ 就把收敛域直接写成闭区间 $[-1,1]$**：$R$ 只决定开区间 $(-1,1)$，端点要另外代入计算。**\"收敛半径\"与\"收敛域\"是两个概念**（本卷第 21 题正是把这一条当作主要得分点）。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 799
+  },
+  {
+   "id": "zk-202604-04",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 4 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 4,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^{p}}$ 收敛，则 $p$ 应满足",
+   "options": [
+    "$0 < p \\le 1$",
+    "$p \\ge 1$",
+    "$0 < p < 1$",
+    "$p > 1$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$p$ 级数的敛散性（无穷级数）。\n**考点出处**：$p$ 级数的敛散性（无穷级数）\n**第一步：认出这是 $p$ 级数。**\n\n$$\\sum_{n=1}^{\\infty}\\frac{1}{n^{p}}$$\n\n**第二步：直接调用 $p$ 级数判据。**\n\n$p$ 级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^p}$ 的敛散性结论是：当 $p > 1$ 时**收敛**；当 $p \\le 1$ 时**发散**。\n\n这是必须背下来的结论。$p=1$ 时它就是调和级数 $\\sum\\frac1n$，发散；$p=2$ 时给出 $\\frac{\\pi^2}{6}$，收敛。\n\n**第三步：题目要求收敛，所以 $p > 1$，选 D。**",
+   "misconception": "- **B 选项 $p \\ge 1$ 是本题的\"边界陷阱\"**：$p = 1$ 时级数是调和级数，**发散**，所以不能取等号。**\"$\\ge$\"与\"$>$\"一字之差，正是本题的全部考点。**\n- **A、C 选项把范围写成了 $p<1$**：那是**发散**的范围，方向整个搞反了。\n- **$p$ 级数判据的方向最容易记反**：口诀是\"**分母次数大于 1 才收敛**\"。$\\sum\\frac{1}{n^{1/2}}$、$\\sum\\frac1n$ 都发散，$\\sum\\frac{1}{n^2}$、$\\sum\\frac{1}{n^{3/2}}$ 才收敛。\n- **别与几何级数混淆**：$\\sum q^n$ 的判据是 $|q|<1$ 收敛，与 $p$ 级数是**两套完全不同的结论**，不能互相套用。\n- **$p=1$ 是分界线，必须单独记住**：这是本课程最常见的送分点，也是失分点。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 800
+  },
+  {
+   "id": "c12-s2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.3",
+   "knowledgePoints": [
+    "12.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{\\sqrt n}$ 的敛散性为",
+   "options": [
+    "绝对收敛",
+    "条件收敛",
+    "发散",
+    "敛散性与 $n$ 的奇偶性有关"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：交错级数，$\\dfrac{1}{\\sqrt n}$ 单调递减趋于 $0$，由莱布尼茨判别法收敛（§12.3）；但取绝对值得 $\\sum\\dfrac{1}{\\sqrt n}$ 为 $p=\\dfrac12<1$ 的 $p$-级数，发散。故条件收敛，B 正确。\nA 错：绝对值级数发散。\nC 错：莱布尼茨条件满足，不发散。\nD 错：敛散性是整体性质，与奇偶分组无关。",
+   "misconception": "⚠️易错点：「条件收敛」= 原级数收敛 + 绝对值级数发散，两步都要写明；交错 $p$-级数 $\\sum\\dfrac{(-1)^{n-1}}{n^p}$ 当 $0<p\\le1$ 时条件收敛、$p>1$ 时绝对收敛。",
+   "extension": null,
+   "tags": [
+    "交错级数",
+    "条件收敛",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 801
+  },
+  {
+   "id": "ky2-2016-3-208208",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.2",
+   "knowledgePoints": [
+    "12.2"
+   ],
+   "source": {
+    "text": "2016 年考研数学二第 3 题",
+    "kind": "exam-original",
+    "year": 2016,
+    "region": "全国",
+    "paper": "2016 年考研数学二",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "反常积分 ① $\\int_{-\\infty}^{0} \\frac{1}{x^2} \\mathrm{e}^{\\frac{1}{x}} \\, \\mathrm{d}x$ , ② $\\int_{0}^{+\\infty} \\frac{1}{x^2} \\mathrm{e}^{\\frac{1}{x}} \\, \\mathrm{d}x$ 的敛散性为……（）",
+   "options": [
+    "① 收敛, ② 收敛",
+    "①收敛, ②发散",
+    "①发散, ②收敛",
+    "①发散, ②发散"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：B\n应选 (B). 这是因为\n$$\n\\int_ {- \\infty} ^ {0} \\frac {1}{x ^ {2}} \\mathrm {e} ^ {\\frac {1}{x}} \\mathrm {d} x = \\left[ - \\mathrm {e} ^ {\\frac {1}{x}} \\right] _ {- \\infty} ^ {0 ^ {-}} = 0 - (- 1) = 1,\n$$\n$$\n\\int_ {0} ^ {+ \\infty} \\frac {1}{x ^ {2}} \\mathrm {e} ^ {\\frac {1}{x}} \\mathrm {d} x = \\left[ - \\mathrm {e} ^ {\\frac {1}{x}} \\right] _ {0 ^ {+}} ^ {+ \\infty} = - 1 - (- \\infty) = + \\infty .\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 802
+  },
+  {
+   "id": "zk-202210-09",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 9 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 9,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{2^n}$ 的和为",
+   "options": [
+    "$\\dfrac{1}{2}$",
+    "$\\dfrac{3}{4}$",
+    "$1$",
+    "$\\dfrac{5}{4}$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：几何级数的求和（无穷级数）。\n**考点出处**：几何级数求和（无穷级数）\n**第一步：认首项与公比。**\n\n从 $n = 1$ 起，首项为 $\\dfrac{1}{2}$，公比 $q = \\dfrac{1}{2}$，满足 $|q| < 1$，**收敛**。\n\n**第二步：套几何级数求和公式。**\n\n$$\\sum_{n=1}^{\\infty}q^n = \\frac{q}{1-q} \\qquad (|q| < 1)$$\n\n$$\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^n = \\frac{\\frac{1}{2}}{1 - \\frac{1}{2}} = \\frac{\\frac{1}{2}}{\\frac{1}{2}} = 1$$\n\n故选 **C**。\n\n（直观看也一样：$\\dfrac12 + \\dfrac14 + \\dfrac18 + \\cdots$ 正好填满 1。）",
+   "misconception": "- **A 选项 $\\dfrac{1}{2}$**：只取了**首项**就停手。\n- **B 选项 $\\dfrac{3}{4}$**：只加了**前两项** $\\dfrac12 + \\dfrac14$。这是\"手动累加几项就以为得到和\"的典型错误。\n- **D 选项 $\\dfrac{5}{4}$**：多加了或公式用错。注意若误用\"从 $n=0$ 起\"的公式得 $\\dfrac{1}{1-\\frac12} = 2$，也不是 $\\dfrac54$，所以这个选项是纯干扰。\n- **起点决定公式，这是本考点唯一的命门**：\n  - 从 $n = 1$ 起：$\\displaystyle\\sum_{n=1}^{\\infty}q^n = \\frac{q}{1-q}$；\n  - 从 $n = 0$ 起：$\\displaystyle\\sum_{n=0}^{\\infty}q^n = \\frac{1}{1-q}$。\n  本题从 $n=1$ 起，答案是 $1$；若从 $n=0$ 起，答案是 $2$。**两者不是一回事。**\n- **记住这个经典结论**：$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{2^n} = 1$。本课程 2024.04、2024.10、2025.04、2025.10 的第 9 题都在这个槽位上打转，是**必拿分的送分题**。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 803
+  },
+  {
+   "id": "zk-202304-09",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2023 年 4 月 自考 00023 高等数学（工本）第 9 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 9,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "级数 $\\displaystyle\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{8^n}{9^n}$ 的和为",
+   "options": [
+    "$-\\dfrac{8}{17}$",
+    "$-1$",
+    "$\\dfrac{8}{17}$",
+    "$1$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：几何级数的求和（无穷级数）。\n**考点出处**：几何级数求和（无穷级数）\n**第一步：把通项写成标准几何级数形式。**\n\n$$(-1)^{n-1}\\frac{8^n}{9^n} = (-1)^{n-1}\\left(\\frac{8}{9}\\right)^n$$\n\n这是形状为 $\\displaystyle\\sum_{n=1}^{\\infty}a_1q^{n-1}$ 的几何级数。\n\n**第二步：读出首项与公比。**\n\n- 公比：$q = -\\dfrac{8}{9}$（**负号属于公比**）；\n- 首项：$n=1$ 时 $(-1)^0\\left(\\frac89\\right)^1 = \\dfrac{8}{9}$。\n\n**第三步：确认收敛并用公式求和。**\n\n$$|q| = \\frac{8}{9} < 1$$\n\n所以**级数收敛**。\n\n几何级数求和公式（起点 $n=1$）：\n\n$$\\sum_{n=1}^{\\infty}a_1q^{n-1} = \\frac{a_1}{1-q}$$\n\n代入：\n\n$$S = \\frac{\\dfrac{8}{9}}{1-\\left(-\\dfrac{8}{9}\\right)} = \\frac{\\dfrac{8}{9}}{1+\\dfrac{8}{9}} = \\frac{\\dfrac{8}{9}}{\\dfrac{17}{9}} = \\frac{8}{17}$$\n\n选 **C**。",
+   "misconception": "- **负号属于公比**：$q = -\\frac89$，所以分母是 $1-(-q) = 1+\\frac89 = \\frac{17}{9}$。**漏掉负号**会算成 $\\frac{8/9}{1-8/9} = 8$（不在选项中，但说明思路已经错了）。\n- **A 选项 $-\\frac{8}{17}$ 对应把 $(-1)^{n-1}$ 看成 $(-1)^n$**：这样首项变成 $-\\frac89$，结果取负。\n- **首项是 $n=1$ 时的值 $\\frac89$，不是 $1$**：若误以为首项是 $1$，会得到 $\\frac{1}{17/9} = \\frac{9}{17}$。\n- **D 选项 $1$** 是把 $\\frac{9}{17}$ 与 $\\frac{8}{17}$ 拼成 $1$ 的干扰项——**注意 $9/17 + 8/17 = 1$ 纯属巧合，不要被\"凑整数\"的直觉骗了。**\n- 公式起点必须核对：**从 $n=1$ 起是 $\\frac{a_1}{1-q}$；从 $n=0$ 起才是 $\\frac{1}{1-q}$。** 本题从 $n=1$ 起。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 804
+  },
+  {
+   "id": "zk-202310-09",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.7",
+   "knowledgePoints": [
+    "12.7"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 9 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 9,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $f(x)$ 是周期为 $2\\pi$ 的周期函数，$f(x)$ 的傅里叶级数为 $\\dfrac{3}{4} + \\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}\\cdot 3}{n^2}\\cos nx$，则 $f(x)$ 的傅里叶系数 $b_1 =$",
+   "options": [
+    "$-3$",
+    "$0$",
+    "$3$",
+    "$\\dfrac{15}{4}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：傅里叶级数的**标准形式**与各项系数的对应关系。\n**考点出处**：傅里叶系数（无穷级数）\n**第一步：写出傅里叶级数的标准形式。**\n\n周期为 $2\\pi$ 的函数 $f(x)$ 的傅里叶级数标准形式为\n\n$$f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty}\\left(a_n\\cos nx + b_n\\sin nx\\right)$$\n\n其中：\n- $\\dfrac{a_0}{2}$ 是常数项（$a_0$ 是\"直流分量\"的两倍，这个记号习惯要注意）；\n- $a_n$ 是**余弦项系数**；\n- $b_n$ 是**正弦项系数**。\n\n**第二步：对照题目给出的级数。**\n\n题目给出：\n\n$$f(x) = \\frac{3}{4} + \\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}\\cdot 3}{n^2}\\cos nx$$\n\n把它与标准形式逐项对照：\n\n- $\\dfrac{a_0}{2} = \\dfrac{3}{4}$　⟹　$a_0 = \\dfrac{3}{2}$；\n- $a_n = \\dfrac{(-1)^{n-1}\\cdot 3}{n^2}$　（这是 $\\cos nx$ 前面的系数）；\n- **级数中根本没有 $\\sin nx$ 这一项！**\n\n**第三步：得出结论。**\n\n既然展开式中**不含任何正弦项**，说明所有正弦项系数全为 $0$，即\n\n$$b_n = 0 \\quad (n = 1, 2, 3, \\cdots)$$\n\n特别地，\n\n$$b_1 = 0$$\n\n答案是 **B**。",
+   "misconception": "- **本题的核心是\"区分 $a_n$ 和 $b_n$\"**：\n  - **$\\cos$ 前面的系数是 $a_n$**（不会出现在选项中干扰你，因为题目问的是 $b_1$）；\n  - **$\\sin$ 前面的系数是 $b_n$**。\n  - 题目给出的级数里**只有 $\\cos$，没有 $\\sin$**，所以 $b_1 = 0$。**答案根本不需要算，看一眼结构就能定。**\n- **C 选项 $3$ 是本题的陷阱**：注意到系数 $\\dfrac{(-1)^{n-1}\\cdot 3}{n^2}$ 里有个 $3$，有人就顺手选 $3$。**但那是 $a_n$ 的因子，不是 $b_n$！** 而且 $a_1 = \\dfrac{(-1)^0\\cdot 3}{1^2} = 3$，正好是 $3$——命题人就是拿 $a_1$ 来冒充 $b_1$ 的。**看错系数归属就会掉进 C。**\n- **D 选项 $\\dfrac{15}{4}$** 也不沾边（$\\frac{3}{4} + 3 = \\frac{15}{4}$，是把常数项和\"$3$\"加起来），属于纯干扰。\n- **理论支撑**（理解了就不会记错）：由傅里叶系数公式\n  $$b_n = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi}f(x)\\sin nx\\,\\mathrm{d}x$$\n  当 $f(x)$ 是**偶函数**时，$f(x)\\sin nx$ 是**奇函数**，在对称区间 $[-\\pi,\\pi]$ 上积分为 $0$，所以 $b_n \\equiv 0$。\n  - **结论：偶函数的傅里叶级数只含余弦项（$b_n = 0$）；奇函数的傅里叶级数只含正弦项（$a_n = 0$）。** 本题给出的级数只有余弦项，说明 $f(x)$ 是偶函数。\n- 记忆口诀：**\"余弦系数是 $a$，正弦系数是 $b$；只有 $\\cos$ 则 $b$ 全零，只有 $\\sin$ 则 $a$ 全零。\"**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 805
+  },
+  {
+   "id": "zk-202404-09",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 9 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 9,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "级数 $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{1}{2^n}$ 的和为",
+   "options": [
+    "$1$",
+    "$\\dfrac{3}{2}$",
+    "$2$",
+    "$\\dfrac{5}{2}$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：几何级数求和公式：$\\displaystyle\\sum_{n=0}^{\\infty} aq^n = \\frac{a}{1-q}$（要求 $|q| < 1$）。\n**考点出处**：几何级数求和（无穷级数）\n**第一步：识别几何级数。**\n\n$$\\sum_{n=0}^{\\infty}\\frac{1}{2^n} = \\sum_{n=0}^{\\infty}\\left(\\frac{1}{2}\\right)^n$$\n\n这是**首项 $a = 1$、公比 $q = \\dfrac{1}{2}$** 的几何级数。\n\n**第二步：验证收敛条件。**\n\n$|q| = \\dfrac{1}{2} < 1$ ✅ 收敛。\n\n**第三步：套公式。**\n\n$$S = \\frac{a}{1-q} = \\frac{1}{1 - \\frac{1}{2}} = \\frac{1}{\\frac{1}{2}} = 2$$\n\n答案是 **C**。",
+   "misconception": "- **注意 $n$ 从 $0$ 开始**。当 $n=0$ 时 $\\dfrac{1}{2^0} = 1$，所以**首项是 1，不是 $\\frac{1}{2}$**。\n  - 如果首项误取为 $\\frac{1}{2}$，就会算成 $\\dfrac{1/2}{1-1/2} = 1$，选到 A——**这正是本题的陷阱。**\n- 验证一下：$1 + \\dfrac{1}{2} + \\dfrac{1}{4} + \\dfrac{1}{8} + \\cdots = 2$。\"一尺之棰，日取其半，万世不竭\"，但总和恰好是 2，符合直觉。\n- 公式记忆：$\\displaystyle\\sum_{n=0}^{\\infty} aq^n = \\dfrac{a}{1-q}$（$a$ 为首项，$q$ 为公比）。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 806
+  },
+  {
+   "id": "zk-202410-09",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 9 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 9,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "级数 $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{3^n + 1}{9^n}$ 的和为",
+   "options": [
+    "$\\dfrac{5}{8}$",
+    "$1$",
+    "$\\dfrac{8}{5}$",
+    "$2$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：几何级数的求和（无穷级数）。\n**考点出处**：几何级数求和（无穷级数）\n**第一步：把通项拆成两个几何级数。**\n\n$$\\frac{3^n + 1}{9^n} = \\frac{3^n}{9^n} + \\frac{1}{9^n} = \\left(\\frac{1}{3}\\right)^n + \\left(\\frac{1}{9}\\right)^n$$\n\n（注意 $\\dfrac{3^n}{9^n} = 3^{n-2n} = 3^{-n} = \\left(\\dfrac13\\right)^n$，**公比是 $\\frac13$，不是 $\\frac19$**。）\n\n**第二步：分别用几何级数公式求和。**\n\n$$\\sum_{n=1}^{\\infty} q^n = \\frac{q}{1-q} \\qquad (|q| < 1)$$\n\n$$\\sum_{n=1}^{\\infty}\\left(\\frac{1}{3}\\right)^n = \\frac{\\frac13}{1-\\frac13} = \\frac{\\frac13}{\\frac23} = \\frac{1}{2}$$\n\n$$\\sum_{n=1}^{\\infty}\\left(\\frac{1}{9}\\right)^n = \\frac{\\frac19}{1-\\frac19} = \\frac{\\frac19}{\\frac89} = \\frac{1}{8}$$\n\n**第三步：相加。**\n\n$$\\sum_{n=1}^{\\infty}\\frac{3^n+1}{9^n} = \\frac{1}{2} + \\frac{1}{8} = \\frac{5}{8}$$\n\n选 **A**。",
+   "misconception": "- **公式的起点是 $n = 1$**：$\\displaystyle\\sum_{n=1}^{\\infty}q^n = \\frac{q}{1-q}$；若从 $n = 0$ 开始才是 $\\frac{1}{1-q}$。**用错起点会得到 $\\frac32 + \\frac98$，落到 C 选项 $\\frac85$ 附近**——这正是 C 选项的设置意图。\n- **C 选项 $\\frac85$ 恰好是 $\\frac58$ 的倒数**，双重陷阱。\n- **B 选项 $1$**：误以为\"两个级数各收敛到 $\\frac12$\"，把 $\\frac12+\\frac12$ 当成结果。\n- **拆分后要分别确认收敛**：两个公比分别是 $\\frac13$、$\\frac19$，都满足 $|q| < 1$，所以拆分合法。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 807
+  },
+  {
+   "id": "zk-202504-09",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2025 年 4 月 自考 00023 高等数学（工本）第 9 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 9,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "级数 $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{1}{2^n}$ 的和是",
+   "options": [
+    "$\\dfrac{1}{2}$",
+    "$1$",
+    "$2$",
+    "$\\dfrac{3}{2}$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：几何级数求和（**注意求和起点**），无穷级数。\n**考点出处**：几何级数求和（几何级数求和）\n**第一步：认清是两个不同起点的几何级数公式。**\n\n$$\\sum_{n=0}^{\\infty}q^n = \\frac{1}{1-q} \\qquad (|q| < 1)$$\n\n$$\\sum_{n=1}^{\\infty}q^n = \\frac{q}{1-q} \\qquad (|q| < 1)$$\n\n**两者的差别就是\"要不要把首项 $1$ 算进去\"。**\n\n**第二步：本题起点是 $n = 0$，公比 $q = \\dfrac{1}{2}$，用第一个公式。**\n\n$$\\sum_{n=0}^{\\infty}\\left(\\frac{1}{2}\\right)^n = \\frac{1}{1 - \\frac{1}{2}} = \\frac{1}{\\frac{1}{2}} = 2$$\n\n选 **C**。\n\n**第三步（验算）：** 把级数逐项写出来看看。\n\n$$1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\cdots$$\n\n部分和依次是 $1,\\ 1.5,\\ 1.75,\\ 1.875,\\ \\cdots$，**明显在往 2 靠拢** ✓。",
+   "misconception": "- **起点是本卷与上一卷唯一的差别，也是本题唯一的坑**：**2024.10 卷第 9 题的级数从 $n = 1$ 起**（$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{3^n+1}{9^n}$），**本卷从 $n = 0$ 起**。**用错公式就是一步错、全题错。**\n- **B 选项 $1$ 正是\"用错起点公式\"的产物**：$\\dfrac{q}{1-q} = \\dfrac{1/2}{1/2} = 1$，这是从 $n = 1$ 起的结果。**如果你算出 1，说明你把首项 $1$ 漏掉了。**\n- **A 选项 $\\dfrac{1}{2}$**：这是级数的**首项**（$n = 1$ 那一项），或者误把答案当成公比。\n- **D 选项 $\\dfrac{3}{2}$**：对应 $2 - \\dfrac{1}{2}$，即\"算对了总和又错误地减掉了一半\"。\n- **最快自查法**：级数第一项就是 $1$（$n = 0$ 时 $\\frac{1}{2^0} = 1$），**既然首项已经是 $1$，和一定大于 $1$**——凭这一句直接排除 A、B，只在 C、D 之间选，再用公式定案。\n- **口诀**：**\"从 0 起是 $\\dfrac{1}{1-q}$，从 1 起是 $\\dfrac{q}{1-q}$；看准下标的第一个数。\"**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 808
+  },
+  {
+   "id": "zk-202510-09",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 9 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 9,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^n$ 的和是",
+   "options": [
+    "$\\dfrac{1}{2}$",
+    "$1$",
+    "$2$",
+    "$\\dfrac{3}{2}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：几何级数的求和（无穷级数）。\n**考点出处**：无穷级数（无穷级数）\n**第一步：认清这是几何级数并读出首项与公比。**\n\n$$\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^n = \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\cdots$$\n\n首项 $a_1 = \\dfrac{1}{2}$，公比 $q = \\dfrac{1}{2}$，满足 $|q| < 1$，收敛。\n\n**第二步：套\"从 $n = 1$ 起\"的求和公式。**\n\n$$\\sum_{n=1}^{\\infty} a_1 q^{\\,n-1} = \\frac{a_1}{1-q}$$\n\n$$\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^n = \\frac{\\frac{1}{2}}{1 - \\frac{1}{2}} = \\frac{\\frac{1}{2}}{\\frac{1}{2}} = 1$$\n\n选 **B**。",
+   "misconception": "- **C 选项 $2$ 是\"公式起点用错\"的经典结果**：从 $n = 0$ 起的几何级数和才是 $\\dfrac{1}{1-q} = 2$。本题从 $n = 1$ 起，**少了 $n = 0$ 那一项（即 $a_0 = (1/2)^0 = 1$）**，所以是 $2 - 1 = 1$。\n- **D 选项 $\\dfrac{3}{2}$ 是\"减去首项 1/2\"而不是\"减去 $a_0 = 1$\"的结果**：$2 - \\dfrac{1}{2} = \\dfrac{3}{2}$。**要减的是 $n=0$ 的项，不是级数的第一项**——这一步最容易混。\n- **A 选项 $\\dfrac{1}{2}$ 是只取首项**，把\"求和\"当成了\"写第一项\"。\n- **两个公式要分清**：$\\displaystyle\\sum_{n=0}^{\\infty}q^n = \\frac{1}{1-q}$，$\\displaystyle\\sum_{n=1}^{\\infty}q^n = \\frac{q}{1-q}$。**先看 $\\sum$ 下面的起点，再选公式。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 809
+  },
+  {
+   "id": "zk-202604-09",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 9 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 9,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n(n+3)}$ 的和是",
+   "options": [
+    "$\\dfrac{11}{18}$",
+    "$\\dfrac{3}{4}$",
+    "$\\dfrac{5}{6}$",
+    "$\\dfrac{11}{12}$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：裂项相消法求数项级数的和（无穷级数）。\n**考点出处**：裂项相消求和（无穷级数）\n**第一步：把通项裂项。**\n\n分母是两个相差 $3$ 的一次因式之积，用待定系数：\n\n$$\\frac{1}{n(n+3)} = \\frac{1}{3}\\left(\\frac{1}{n} - \\frac{1}{n+3}\\right)$$\n\n（检验：$\\frac13\\cdot\\frac{(n+3)-n}{n(n+3)} = \\frac13\\cdot\\frac{3}{n(n+3)} = \\frac{1}{n(n+3)}$ ✓）\n\n**第二步：写出部分和 $S_N$，把 $\\frac13$ 提到外面。**\n\n$$S_N = \\frac{1}{3}\\sum_{n=1}^{N}\\left(\\frac{1}{n} - \\frac{1}{n+3}\\right)$$\n\n**第三步：把和式展开，观察消去规律。**\n\n$$\\sum_{n=1}^{N}\\left(\\frac{1}{n} - \\frac{1}{n+3}\\right) = \\left(\\frac11 - \\frac14\\right) + \\left(\\frac12 - \\frac15\\right) + \\left(\\frac13 - \\frac16\\right) + \\left(\\frac14 - \\frac17\\right) + \\cdots + \\left(\\frac{1}{N} - \\frac{1}{N+3}\\right)$$\n\n**\"错开 3 位\"相消**：正的 $\\frac14$ 被第二组里的 $-\\frac14$ 消掉，$\\frac15$ 被 $-\\frac15$ 消掉……最后**只剩开头 3 个正项和末尾 3 个负项**：\n\n$$\\sum_{n=1}^{N}\\left(\\frac{1}{n} - \\frac{1}{n+3}\\right) = 1 + \\frac12 + \\frac13 - \\frac{1}{N+1} - \\frac{1}{N+2} - \\frac{1}{N+3}$$\n\n**第四步：令 $N\\to\\infty$。**\n\n$$\\sum_{n=1}^{\\infty}\\frac{1}{n(n+3)} = \\frac13\\left(1 + \\frac12 + \\frac13 - 0 - 0 - 0\\right) = \\frac13\\cdot\\frac{11}{6} = \\frac{11}{18}$$\n\n选 **A**。",
+   "misconception": "- **D 选项 $\\frac{11}{12}$ 是\"忘了乘 $\\frac13$\"的结果**：$1+\\frac12+\\frac13 = \\frac{11}{6}$，若不乘裂项系数 $\\frac13$ 就得到 $\\frac{11}{6}$（不在选项里）；把 $\\frac{11}{6}$ 再算错成 $\\frac{11}{12}$ 则落到 D。**裂项系数 $\\frac{1}{d}$（这里是 $\\frac13$）绝对不能丢。**\n- **C 选项 $\\frac56$、B 选项 $\\frac34$**：对应只保留前两项（$1+\\frac12=\\frac32$，乘 $\\frac13$ 得 $\\frac12$）或只保留 $\\frac12+\\frac13$ 之类的\"数错剩余项\"错误。\n- **\"剩几项\"必须数清楚**：错开 $3$ 位相消时，前面剩 **3 项**（$n=1,2,3$），后面剩 **3 项**（分母 $N+1,N+2,N+3$）。**只留 2 项或 4 项都会算错。**\n- **先写部分和再取极限**：不能直接对无穷和\"消项\"，**必须写 $S_N$、消项、再令 $N\\to\\infty$**，这是评分点。\n- **验证答案的合理性**：通项 $\\frac{1}{n(n+3)}\\sim\\frac{1}{n^2}$，级数收敛；首项 $\\frac14 = 0.25$，和必定大于 $0.25$ 且不会太大，$\\frac{11}{18}\\approx0.611$ 合理。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 810
+  },
+  {
+   "id": "c12-s3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.4",
+   "knowledgePoints": [
+    "12.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.4 幂级数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "幂级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{x^n}{n^2}$ 的收敛域是",
+   "options": [
+    "$(-1,1)$",
+    "$[-1,1)$",
+    "$(-1,1]$",
+    "$[-1,1]$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\rho=\\lim\\limits_{n\\to\\infty}\\left|\\dfrac{a_{n+1}}{a_n}\\right|=\\lim\\dfrac{n^2}{(n+1)^2}=1$，收敛半径 $R=1$（§12.4）。端点 $x=\\pm1$ 处级数为 $\\sum\\dfrac{(\\pm1)^n}{n^2}$，其绝对值级数 $\\sum\\dfrac1{n^2}$ 收敛（$p=2>1$），两端点均收敛。故收敛域 $[-1,1]$，D 正确。\nA 错：漏了两个端点。\nB、C 错：只收进一个端点，与 $p=2$ 的绝对收敛不符。",
+   "misconception": "⚠️易错点：收敛半径只给开区间，端点必须逐个代入判敛散；$\\dfrac1{n^2}$ 在 $x=-1$ 时无正负相消问题，绝对收敛直接覆盖两端。",
+   "extension": null,
+   "tags": [
+    "收敛域",
+    "困难",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 811
+  },
+  {
+   "id": "c12-m1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.2",
+   "knowledgePoints": [
+    "12.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.2 常数项级数的审敛法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "关于正项级数 $\\displaystyle\\sum_{n=1}^{\\infty}a_n$（$a_n\\ge0$），下列说法正确的有",
+   "options": [
+    "正项级数收敛 $\\iff$ 其部分和数列有上界",
+    "比值判别法中若 $\\lim\\limits_{n\\to\\infty}\\dfrac{a_{n+1}}{a_n}=\\rho<1$，则级数收敛",
+    "比较判别法的极限形式：若 $\\lim\\limits_{n\\to\\infty}\\dfrac{a_n}{b_n}=l$（$0<l<+\\infty$），则 $\\sum a_n$ 与 $\\sum b_n$ 敛散性相同",
+    "$\\lim\\limits_{n\\to\\infty}a_n=0\\iff$ 级数收敛"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：正项级数部分和单调增，收敛 $\\iff$ 有上界（§12.1 基本定理），A 正确；比值法 $\\rho<1$ 收敛、$\\rho>1$ 发散（§12.2），B 正确；比较法极限形式结论正确，C 正确。\nD 错：通项趋于零是收敛的**必要**条件而非充分条件——调和级数 $\\sum\\dfrac1n$ 通项趋于零却发散。",
+   "misconception": "⚠️易错点：$a_n\\to0$ 与「通项不趋于零则发散」的用法方向相反：前者不能证收敛，后者可以证发散。",
+   "extension": null,
+   "tags": [
+    "正项级数",
+    "审敛法",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 812
+  },
+  {
+   "id": "c12-m2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.4",
+   "knowledgePoints": [
+    "12.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.4 幂级数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "关于幂级数 $\\displaystyle\\sum_{n=0}^{\\infty}a_nx^n$ 在收敛区间 $(-R,R)$ 内的性质，下列说法正确的有",
+   "options": [
+    "和函数 $S(x)$ 在 $(-R,R)$ 内连续",
+    "可逐项求导：$S‘=\\sum\\limits_{n=1}^{\\infty}na_nx^{n-1}$，且收敛半径仍为 $R$",
+    "可逐项积分：$\\int_0^xS(t)\\,dt=\\sum\\limits_{n=0}^{\\infty}\\dfrac{a_n}{n+1}x^{n+1}$，且收敛半径仍为 $R$",
+    "逐项求导后所得级数在端点 $x=\\pm R$ 处的敛散性与原级数相同"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：幂级数和函数的连续性、逐项求导与逐项积分定理（§12.4），且求导/积分不改变收敛半径，A、B、C 正确。\nD 错：端点敛散性在逐项求导后**可能变坏**——如 $\\sum\\dfrac{x^n}{n}$ 在 $x=1$ 收敛，逐项求导得 $\\sum x^{n-1}$ 在 $x=1$ 发散。",
+   "misconception": "⚠️易错点：「收敛半径不变，但端点情况可能改变」是求和函数题的关键提醒；求导次数越多端点越容易发散。",
+   "extension": "引申：利用逐项求导/积分求和函数是标准套路，如 $\\sum\\dfrac{x^n}{n}=\\int_0^x\\sum t^{n-1}dt=-\\ln(1-x)$（$-1\\le x<1$）。",
+   "tags": [
+    "幂级数性质",
+    "困难",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 813
+  },
+  {
+   "id": "c12-j1",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.1 常数项级数的概念和性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "级数 $\\sum a_n$ 收敛的必要条件是 $a_n\\to0$；但 $a_n\\to0$ 不能保证级数收敛。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：级数收敛的必要条件（§12.1）：$a_n\\to0$。反例说明其不充分：调和级数 $\\sum\\dfrac1n$ 通项趋于零但 $\\sum\\dfrac1n=+\\infty$ 发散。命题正确。",
+   "misconception": "⚠️易错点：判发散用「通项不趋于零」，判收敛绝不能用「通项趋于零」。",
+   "extension": null,
+   "tags": [
+    "必要条件",
+    "调和级数",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 814
+  },
+  {
+   "id": "c12-j2",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.3",
+   "knowledgePoints": [
+    "12.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "若级数 $\\sum|a_n|$ 收敛，则 $\\sum a_n$ 必收敛。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：绝对收敛定理（§12.3）：绝对收敛的级数必收敛。由 $-|a_n|\\le a_n\\le|a_n|$ 与比较判别即得。命题正确。",
+   "misconception": "⚠️易错点：逆命题不成立——条件收敛（如 $\\sum\\dfrac{(-1)^{n-1}}{\\sqrt n}$）的绝对值级数发散。",
+   "extension": null,
+   "tags": [
+    "绝对收敛",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 815
+  },
+  {
+   "id": "c12-j3",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.7",
+   "knowledgePoints": [
+    "12.7"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.7 傅里叶级数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "周期为 $2\\pi$ 的函数 $f(x)$ 的傅里叶级数总是收敛于 $f(x)$ 本身。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：狄利克雷收敛定理（§12.7）：只要 $f$ 在 $[-\\pi,\\pi]$ 上分段单调且只有有限个第一类间断点，其傅里叶级数收敛；但在间断点处收敛于 $\\dfrac{f(x^-)+f(x^+)}{2}$（左右极限的平均值），在连续点才收敛于 $f(x)$。命题错误。",
+   "misconception": "⚠️易错点：间断点处「收敛于左右极限的平均值」是傅里叶级数最常考的细节；周期延拓时区间端点也是间断点。",
+   "extension": "引申：$f$ 的傅里叶系数 $a_n=\\dfrac1\\pi\\int_{-\\pi}^{\\pi}f(x)\\cos nx\\,dx$、$b_n=\\dfrac1\\pi\\int_{-\\pi}^{\\pi}f(x)\\sin nx\\,dx$；方波的傅里叶级数在间断点收敛于跳变中点，且部分和在间断点附近有 $9\\%$ 的超调（吉布斯现象）。",
+   "tags": [
+    "傅里叶级数",
+    "狄利克雷定理",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 816
+  },
+  {
+   "id": "c12-b1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.1 常数项级数的概念和性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^n}{2^n}=$ ____。",
+   "options": null,
+   "answer": [
+    "2/3"
+   ],
+   "accept": [
+    "2/3",
+    "0.6666666666666666"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：几何级数，首项 $a_1$? 本题从 $n=0$ 开始，首项为 $1$，公比 $q=-\\dfrac12$，$|q|<1$，和 $=\\dfrac{1}{1-(-1/2)}=\\dfrac23$（§12.1）。",
+   "misconception": "⚠️易错点：$n=0$ 起算首项是 $1$；公比为负时「交错」只是表象，仍按 $|q|<1$ 求和。",
+   "extension": null,
+   "tags": [
+    "几何级数"
+   ],
+   "verify": [
+    {
+     "desc": "sum",
+     "code": "nn=symbols('nn', positive=True, integer=True); simplify(Sum((Rational(-1,2))**nn, (nn, 0, oo)).doit())",
+     "expected": "2/3"
+    }
+   ],
+   "idx": 817
+  },
+  {
+   "id": "c12-b2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.4",
+   "knowledgePoints": [
+    "12.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.4 幂级数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "幂级数 $\\displaystyle\\sum_{n=0}^{\\infty}\\left(\\frac{x}{2}\\right)^n$ 的和函数为 $S(x)=$ ____（注明其成立范围为 $|x|<2$）。",
+   "options": null,
+   "answer": [
+    "2/(2-x)"
+   ],
+   "accept": [
+    "2/(2-x)",
+    "2/(2−x)",
+    "1/(1-x/2)",
+    "2/(−x+2)",
+    "-2/(x-2)"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：几何级数 $\\sum q^n=\\dfrac{1}{1-q}$（$|q|<1$），取 $q=\\dfrac{x}{2}$ 得 $S(x)=\\dfrac{1}{1-x/2}=\\dfrac{2}{2-x}$，$|x|<2$（§12.4）。",
+   "misconception": "⚠️易错点：忘记写成立范围 $|x|<2$；化简 $\\dfrac{1}{1-x/2}=\\dfrac{2}{2-x}$ 时分母乘 $2$。",
+   "extension": null,
+   "tags": [
+    "和函数",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 818
+  },
+  {
+   "id": "ky-2008-11-99256e",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.4",
+   "knowledgePoints": [
+    "12.4"
+   ],
+   "source": {
+    "text": "2008 年考研数学（一）第 11 题",
+    "kind": "exam-original",
+    "year": 2008,
+    "region": "全国",
+    "paper": "2008 年考研数学（一）",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2008年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2008年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2008年解析/2008年解析.md"
+   },
+   "stem": "已知幂级数 $\\sum_{n = 0}^{\\infty}a_n(x + 2)^n$ 在 $x = 0$ 处收敛，在 $x = -4$ 处发散，则幂级数 $\\sum_{n = 0}^{\\infty}a_n(x - 3)^n$ 的收敛域为",
+   "options": null,
+   "answer": [
+    "(1,5]"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：(1,5]\n【解】由 $\\sum_{n=0}^{\\infty} a_n (x + 2)^n$ 在 $x = 0$ 处收敛得 $\\sum_{n=0}^{\\infty} a_n x^n$ 的收敛半径 $R \\geqslant |0 + 2| = 2$ 且 $\\sum_{n=0}^{\\infty} a_n 2^n$ 收敛；\n\n由 $\\sum_{n=0}^{\\infty} a_n (x + 2)^n$ 在 $x = -4$ 处发散得 $\\sum_{n=0}^{\\infty} a_n x^n$ 的收敛半径 $R \\leqslant |-4 + 2| = 2$ 且 $\\sum_{n=0}^{\\infty} a_n (-2)^n$ 发散，\n\n即幂级数 $\\sum_{n=0}^{\\infty} a_n x^n$ 的收敛半径为 $R = 2$ , 收敛域为 $(-2, 2]$ ,\n\n故 $\\sum_{n=0}^{\\infty} a_n (x - 3)^n$ 的收敛域为 $-2 < x - 3 \\leqslant 2$ ，即(1,5].",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 819
+  },
+  {
+   "id": "ky-2017-12-bf8a05",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.5",
+   "knowledgePoints": [
+    "12.5"
+   ],
+   "source": {
+    "text": "2017 年考研数学（一）第 12 题",
+    "kind": "exam-original",
+    "year": 2017,
+    "region": "全国",
+    "paper": "2017 年考研数学（一）",
+    "number": "12",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2017年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2017年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2017年解析/2017年解析.md"
+   },
+   "stem": "幂级数 $\\sum_{n=1}^{\\infty} (-1)^{n-1} n x^{n-1}$ 在区间 $(-1, 1)$ 内的和函数 $S(x) =$",
+   "options": null,
+   "answer": [
+    "$\\frac{1}{(1 + x)^2}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{1}{(1 + x)^2}$\n【解】方法一 $S(x) = \\sum_{n=1}^{\\infty} (-1)^{n-1} n x^{n-1} = -\\left[\\sum_{n=1}^{\\infty} (-1)^{n} x^{n}\\right]' = -\\left(\\frac{-x}{1+x}\\right)' = \\frac{1}{(1+x)^{2}}.$\n\n方法二 令 $S(x) = \\sum_{n=1}^{\\infty} (-1)^{n-1} n x^{n-1}$ ,\n\n则 $\\int_0^x S(x)\\mathrm{d}x = \\sum_{n = 1}^\\infty \\int_0^x (-1)^{n - 1}nx^{n - 1}\\mathrm{d}x = \\sum_{n = 1}^\\infty (-1)^{n - 1}x^n$\n\n$$\n= - \\sum_ {n = 1} ^ {\\infty} (- x) ^ {n} = - \\frac {- x}{1 + x} = \\frac {x}{1 + x},\n$$\n\n故 $S(x) = \\left(\\frac{x}{1 + x}\\right)' = \\frac{1}{(1 + x)^2}.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 820
+  },
+  {
+   "id": "ky-2019-11-376d4d",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.5",
+   "knowledgePoints": [
+    "12.5"
+   ],
+   "source": {
+    "text": "2019 年考研数学（一）第 11 题",
+    "kind": "exam-original",
+    "year": 2019,
+    "region": "全国",
+    "paper": "2019 年考研数学（一）",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2019年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2019年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2019年解析/2019年解析.md"
+   },
+   "stem": "幂级数 $\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{(2n)!} x^n$ 在 $(0, +\\infty)$ 内的和函数 $S(x) = \\_$ .",
+   "options": null,
+   "answer": [
+    "$\\cos \\sqrt{x}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\cos \\sqrt{x}$\n【解】 $S(x) = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{(2n)!} x^n = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{(2n)!} (\\sqrt{x})^{2n} = \\cos \\sqrt{x}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 821
+  },
+  {
+   "id": "c12-t1",
+   "type": "term",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.3",
+   "knowledgePoints": [
+    "12.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "名词解释：绝对收敛与条件收敛。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "对级数 $\\sum a_n$：若 $\\sum|a_n|$ 收敛，则称 $\\sum a_n$ **绝对收敛**；若 $\\sum a_n$ 收敛而 $\\sum|a_n|$ 发散，则称 $\\sum a_n$ **条件收敛**。绝对收敛级数必收敛，且具有可交换性（改变求和次序和不变）；条件收敛级数不具备此性质。",
+   "points": [
+    {
+     "text": "定义：$\\sum|a_n|$ 收敛称绝对收敛；$\\sum a_n$ 收敛但 $\\sum|a_n|$ 发散称条件收敛。",
+     "partial": 2
+    },
+    {
+     "text": "关系与意义：绝对收敛 $\\Rightarrow$ 收敛（反之不然）；条件收敛级数的正项与负项子级数各自发散，改变次序可使和任意改变（黎曼重排现象）。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：绝对收敛、条件收敛的定义与绝对收敛定理见 §12.3。\n**考点出处**：同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛。",
+   "misconception": "⚠️易错点：判别流程先看正负——同号级数直接用正项级数审敛法；变号级数先取绝对值判绝对收敛，失效再用莱布尼茨。",
+   "extension": null,
+   "tags": [
+    "绝对收敛",
+    "条件收敛",
+    "概念",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 822
+  },
+  {
+   "id": "c12-t2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.2",
+   "knowledgePoints": [
+    "12.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.2 常数项级数的审敛法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "简答：叙述正项级数的比较判别法（含极限形式）与比值判别法的内容，并说明各自的适用场景。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "比较判别法：设 $0\\le a_n\\le b_n$，若 $\\sum b_n$ 收敛则 $\\sum a_n$ 收敛；若 $\\sum a_n$ 发散则 $\\sum b_n$ 发散（大敛推小敛、小散推大散）。极限形式：$\\lim\\dfrac{a_n}{b_n}=l$，当 $0<l<+\\infty$ 时两级数同敛散；$l=0$ 时由 $\\sum b_n$ 收敛推 $\\sum a_n$ 收敛。比值判别法：$\\rho=\\lim\\dfrac{a_{n+1}}{a_n}$，$\\rho<1$ 收敛、$\\rho>1$（含 $\\infty$）发散、$\\rho=1$ 失效。适用场景：比较法用于与 $p$-级数、几何级数对照（通项含 $n^p$、多项式比）；比值法用于通项含 $n!$、$c^n$、$n^n$ 等增长极快因子的情形。",
+   "points": [
+    {
+     "text": "比较判别法：大敛推小敛、小散推大散；基准级数是 $p$-级数与几何级数；极限形式 $\\lim\\dfrac{a_n}{b_n}=l\\in(0,+\\infty)$ 时同敛散。",
+     "partial": 2
+    },
+    {
+     "text": "比值判别法：$\\rho=\\lim\\dfrac{a_{n+1}}{a_n}$，$\\rho<1$ 收敛、$\\rho>1$ 发散、$\\rho=1$ 失效。",
+     "partial": 2
+    },
+    {
+     "text": "选用经验：通项含 $n!$、$c^n$、$n^n$ 优先比值法；只含幂函数比用比较法（$\\sum\\dfrac1{n^p}$ 用比值法恒得 $\\rho=1$，须换方法）。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：比较判别法、极限形式与比值判别法见 §12.2。\n**考点出处**：同济《高等数学》第七版 §12.2 常数项级数的审敛法。",
+   "misconception": "⚠️易错点：比较法不等号方向（大敛推小敛）易背反；比值法 $\\rho=1$ 时只能换用其他方法，如 $\\sum\\dfrac1{n^p}$ 用比值法恒得 $\\rho=1$。",
+   "extension": null,
+   "tags": [
+    "审敛法",
+    "简答",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 823
+  }
+ ]
+}

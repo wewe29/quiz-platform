@@ -1,0 +1,1393 @@
+{
+ "chapter": 10,
+ "questions": [
+  {
+   "id": "c10-s1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 10,
+   "knowledgePoint": "10.1",
+   "knowledgePoints": [
+    "10.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.1 二重积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $D=\\{(x,y)\\,|\\,|x|\\le1,\\ |y|\\le1\\}$，则 $\\displaystyle\\iint_D \\mathrm{d}\\sigma=$",
+   "options": [
+    "$1$",
+    "$2$",
+    "$4$",
+    "$8$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：被积函数为 $1$ 的二重积分等于积分区域的面积（§10.1 性质）。$D$ 是边长为 $2$ 的正方形，面积 $4$，故 C 正确。\nA、B、D 错：分别是把边长、半边长、体积概念混入。",
+   "misconception": "⚠️易错点：$\\iint_D d\\sigma=\\text{面积}(D)$、$\\iiint_\\Omega dV=\\text{体积}(\\Omega)$ 是最常用的「秒杀」性质。",
+   "extension": null,
+   "tags": [
+    "二重积分性质"
+   ],
+   "verify": [],
+   "idx": 698
+  },
+  {
+   "id": "zk-202210-05",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 5 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 5,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $D: x^2 + y^2 \\le a^2$，则二重积分 $\\displaystyle\\iint_D (2 + x + y)\\,\\mathrm{d}x\\mathrm{d}y =$",
+   "options": [
+    "$\\pi a^2$",
+    "$2\\pi a^2$",
+    "$3\\pi a^2$",
+    "$4\\pi a^2$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二重积分的对称性（重积分）。\n**考点出处**：二重积分（对称性）（重积分）\n**第一步：判断区域与函数的对称性。**\n\n$D$ 是以原点为心、半径为 $a$ 的**圆盘**，它关于 $x$ 轴、$y$ 轴**都对称**。\n\n- 被积项 $x$ 关于 $x$ 是奇函数，而区域关于 $y$ 轴对称 ⟹ $\\displaystyle\\iint_D x\\,\\mathrm{d}x\\mathrm{d}y = 0$；\n- 被积项 $y$ 关于 $y$ 是奇函数，而区域关于 $x$ 轴对称 ⟹ $\\displaystyle\\iint_D y\\,\\mathrm{d}x\\mathrm{d}y = 0$。\n\n**两项一次归零，这就是本题的\"秒杀\"结构。**\n\n**第二步：只剩下常数项，提取常数乘面积。**\n\n圆盘面积为 $S = \\pi a^2$，所以\n\n$$\\iint_D 2\\,\\mathrm{d}x\\mathrm{d}y = 2S = 2\\pi a^2$$\n\n**第三步：合并。**\n\n$$\\iint_D (2 + x + y)\\,\\mathrm{d}x\\mathrm{d}y = 2\\pi a^2 + 0 + 0 = 2\\pi a^2$$\n\n故选 **B**。",
+   "misconception": "- **判据必须两条同时满足**：① 区域关于某轴对称；② 被积函数关于该变量为奇函数。**少一条都不能归零。**本题圆盘同时满足两个方向，所以 $x$、$y$ 两项都能消掉。\n- **A 选项 $\\pi a^2$**：忘掉常数 $2$，只算了圆盘面积。\n- **C 选项 $3\\pi a^2$**：只归零了一项（比如把 $x$ 消掉、$y$ 没处理），或把常数误当成 $3$。\n- **D 选项 $4\\pi a^2$**：对应 $\\iint_D 4$，把常数放大了一倍。\n- **本题完全不需要真正做二重积分**：常数被积函数 × 已知几何量，是重积分里性价比最高的结构。**看到\"圆盘/球体 + 一次项 + 常数\"，先想对称性。**\n- 若换成 $\\iint_D (2 + x^2 + y^2)$，**就不能归零**（$x^2$、$y^2$ 是偶函数），必须上极坐标——**奇函数才能消，偶函数不能。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 699
+  },
+  {
+   "id": "zk-202304-05",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2023 年 4 月 自考 00023 高等数学（工本）第 5 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 5,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $D: -1 \\le x \\le 1,\\ 0 \\le y \\le 3$，则二重积分 $\\displaystyle\\iint_D (x + y^2)\\,\\mathrm{d}x\\mathrm{d}y =$",
+   "options": [
+    "$0$",
+    "$6$",
+    "$12$",
+    "$18$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二重积分的对称性与矩形区域上的可分离性（重积分）。\n**考点出处**：二重积分（对称性）（重积分）\n**第一步：把被积函数拆成两项，分别处理。**\n\n$$\\iint_D (x + y^2)\\,\\mathrm{d}x\\mathrm{d}y = \\iint_D x\\,\\mathrm{d}x\\mathrm{d}y + \\iint_D y^2\\,\\mathrm{d}x\\mathrm{d}y$$\n\n**第二步：$x$ 这一项用对称性归零。**\n\n区域 $D$ 的 $x$ 范围是 $-1 \\le x \\le 1$，**关于 $y$ 轴（即 $x = 0$）左右对称**；而被积函数 $x$ 关于 $x$ 是**奇函数**（把 $x$ 换成 $-x$ 会变号）。于是\n\n$$\\iint_D x\\,\\mathrm{d}x\\mathrm{d}y = 0$$\n\n**这一步直接省掉了一半计算。**\n\n**第三步：$y^2$ 这一项老老实实算。**\n\n注意 $y^2$ **不含 $x$**，而区域又是矩形，所以可以拆成两个定积分相乘：\n\n$$\\iint_D y^2\\,\\mathrm{d}x\\mathrm{d}y = \\left(\\int_{-1}^{1}\\mathrm{d}x\\right)\\left(\\int_0^3 y^2\\,\\mathrm{d}y\\right) = 2 \\times \\left[\\frac{y^3}{3}\\right]_0^3 = 2 \\times 9 = 18$$\n\n**第四步：合并。**\n\n$$\\iint_D (x+y^2)\\,\\mathrm{d}x\\mathrm{d}y = 0 + 18 = 18$$\n\n选 **D**。",
+   "misconception": "- **只有\"关于该变量奇\"的那一项才能归零**：$y^2$ 关于 $x$ 是偶函数（它压根不含 $x$），**必须老老实实算**。**A 选项 $0$ 就是\"整块都归零\"的结果**——把 $y^2$ 也当成奇函数了，这是本题最典型的错误。\n- **\"与某变量无关就可以分离变量\"只在矩形区域上成立**：$\\iint_D y^2\\,\\mathrm dx\\mathrm dy = \\left(\\int_{-1}^{1}\\mathrm dx\\right)\\left(\\int_0^3 y^2\\mathrm dy\\right)$ 合法；若区域不是矩形（上下限互相牵扯），就不能这样拆。\n- **B 选项 $6$ 与 C 选项 $12$** 都是把 $y^2$ 幂次算错（例如当成常数 $1$，得 $2\\times3=6$）产生的干扰项。**正确值是 $2\\times9=18$，其中 $9 = \\int_0^3 y^2\\,\\mathrm dy$。**\n- **优先顺序**：遇到二重积分，**先看对称性，再看坐标系，最后才硬算**。\n- 结果为正数可以自查：$y^2 \\ge 0$ 在 $D$ 上几乎处处为正，$x$ 项归零，积分必为正 ✓\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 700
+  },
+  {
+   "id": "zk-202310-05",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 5 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 5,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $D: x^2 + y^2 \\le 4$，则二重积分 $\\displaystyle\\iint_D (2 - x - y)\\,\\mathrm{d}x\\mathrm{d}y =$",
+   "options": [
+    "$0$",
+    "$4\\pi$",
+    "$8\\pi$",
+    "$16\\pi$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二重积分的**对称性**（奇函数在对称区域上的积分为 $0$）。\n**考点出处**：二重积分的对称性（重积分）\n**第一步：观察区域 $D$ 的对称性。**\n\n$D: x^2 + y^2 \\le 4$ 是**圆心在原点、半径 $R = 2$ 的圆盘**。\n\n- 它关于 $y$ **轴**对称（$x \\to -x$ 时区域不变）；\n- 它关于 $x$ **轴**对称（$y \\to -y$ 时区域不变）；\n- 它关于原点对称。\n\n**第二步：用对称性\"干掉\"含 $x$、$y$ 的项。**\n\n把积分拆开：\n\n$$\\iint_D (2 - x - y)\\,\\mathrm{d}x\\mathrm{d}y = \\iint_D 2\\,\\mathrm{d}x\\mathrm{d}y - \\iint_D x\\,\\mathrm{d}x\\mathrm{d}y - \\iint_D y\\,\\mathrm{d}x\\mathrm{d}y$$\n\n**关于 $\\displaystyle\\iint_D x\\,\\mathrm{d}x\\mathrm{d}y$：**\n\n被积函数 $f(x,y) = x$ 关于 $x$ 是**奇函数**（$f(-x,y) = -x = -f(x,y)$），而区域 $D$ 关于 $y$ 轴对称。由对称性：\n\n$$\\iint_D x\\,\\mathrm{d}x\\mathrm{d}y = 0$$\n\n**关于 $\\displaystyle\\iint_D y\\,\\mathrm{d}x\\mathrm{d}y$：**\n\n被积函数 $f(x,y) = y$ 关于 $y$ 是**奇函数**，区域 $D$ 关于 $x$ 轴对称。同理：\n\n$$\\iint_D y\\,\\mathrm{d}x\\mathrm{d}y = 0$$\n\n**第三步：只剩常数项。**\n\n$$\\iint_D (2 - x - y)\\,\\mathrm{d}x\\mathrm{d}y = \\iint_D 2\\,\\mathrm{d}x\\mathrm{d}y = 2\\iint_D \\mathrm{d}x\\mathrm{d}y = 2 \\cdot S_D$$\n\n其中 $S_D$ 是圆盘面积：\n\n$$S_D = \\pi R^2 = \\pi \\cdot 2^2 = 4\\pi$$\n\n所以\n\n$$2 \\times 4\\pi = 8\\pi$$\n\n答案是 **C**。\n\n**（验证：用极坐标硬算一遍。）**\n\n$$\\iint_D (2-x-y)\\,\\mathrm{d}x\\mathrm{d}y = \\int_0^{2\\pi}\\!\\!\\int_0^2 (2 - r\\cos\\theta - r\\sin\\theta)\\,r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta$$\n\n其中 $\\displaystyle\\int_0^{2\\pi}\\cos\\theta\\,\\mathrm{d}\\theta = 0$、$\\displaystyle\\int_0^{2\\pi}\\sin\\theta\\,\\mathrm{d}\\theta = 0$，所以后面两项积分都是 $0$，剩下\n\n$$\\int_0^{2\\pi}\\!\\!\\int_0^2 2r\\,\\mathrm{d}r\\,\\mathrm{d}\\theta = 2\\pi \\cdot \\left[r^2\\right]_0^2 = 2\\pi \\cdot 4 = 8\\pi \\quad ✅$$",
+   "misconception": "- **B 选项 $4\\pi$ 是本题最大的陷阱**：$4\\pi$ 是**圆盘的面积**，而题目要积的是常数 $2$，**必须再乘 $2$**，得到 $8\\pi$。凡是\"验算时只算了面积就交卷\"的，都会掉进 B。\n- **遇到对称区域，第一反应应该是\"有没有奇函数项可以消掉\"**，而不是立刻上极坐标。本题用对称性 3 行搞定，硬算要写一堆积分。\n- 对称性的完整表述（务必背熟）：\n  > 若积分区域 $D$ 关于 $y$ 轴对称，且被积函数 $f(x,y)$ 关于 $x$ 为奇函数，即 $f(-x,y) = -f(x,y)$，则 $\\displaystyle\\iint_D f\\,\\mathrm{d}x\\mathrm{d}y = 0$。\n  > （关于 $x$ 轴与 $y$ 的情形同理。）\n- **注意\"偶函数\"情形不能直接得 $0$**：若 $f$ 关于 $x$ 为偶函数，则 $\\displaystyle\\iint_D f\\,\\mathrm{d}x\\mathrm{d}y = 2\\iint_{D_1} f\\,\\mathrm{d}x\\mathrm{d}y$（$D_1$ 为 $D$ 的右半部分，即**一半区域**），不是 $0$。本题的 $-x$、$-y$ 都是奇函数，才能直接消掉。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 701
+  },
+  {
+   "id": "zk-202404-05",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 5 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 5,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $D: x^2 + y^2 \\le R^2$，则二重积分 $\\displaystyle\\iint_D (x^2 + y^2)\\,\\mathrm{d}x\\mathrm{d}y =$",
+   "options": [
+    "$\\dfrac{1}{2}\\pi R^3$",
+    "$\\dfrac{3}{2}\\pi R^3$",
+    "$\\dfrac{1}{2}\\pi R^4$",
+    "$\\pi R^4$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二重积分在**极坐标**下的计算：$\\mathrm{d}x\\mathrm{d}y = r\\,\\mathrm{d}r\\mathrm{d}\\theta$。\n**考点出处**：二重积分（极坐标）（重积分）\n**第一步：判断是否该用极坐标。**\n\n积分区域是圆盘 $x^2+y^2 \\le R^2$，被积函数是 $x^2+y^2$，两者都天然适合极坐标——**看到圆域 + $x^2+y^2$，条件反射想到极坐标。**\n\n**第二步：换成极坐标。**\n\n$$x = r\\cos\\theta,\\quad y = r\\sin\\theta,\\quad x^2+y^2 = r^2,\\quad \\mathrm{d}x\\mathrm{d}y = r\\,\\mathrm{d}r\\mathrm{d}\\theta$$\n\n积分区域变为：$0 \\le \\theta \\le 2\\pi$，$0 \\le r \\le R$。\n\n**第三步：代入计算。**\n\n$$\\iint_D (x^2+y^2)\\,\\mathrm{d}x\\mathrm{d}y = \\int_0^{2\\pi}\\!\\!\\mathrm{d}\\theta \\int_0^{R} r^2 \\cdot r\\,\\mathrm{d}r$$\n\n⚠️ **注意这里有个 $r$**：被积函数 $x^2+y^2 = r^2$，面积元 $\\mathrm{d}x\\mathrm{d}y = r\\,\\mathrm{d}r\\mathrm{d}\\theta$，所以总共是 $r^2 \\cdot r = r^3$。\n\n$$= \\int_0^{2\\pi}\\!\\!\\mathrm{d}\\theta \\cdot \\int_0^{R} r^3\\,\\mathrm{d}r = 2\\pi \\cdot \\left[\\frac{r^4}{4}\\right]_0^{R} = 2\\pi \\cdot \\frac{R^4}{4} = \\frac{1}{2}\\pi R^4$$",
+   "misconception": "- **最容易错的地方是漏掉面积元里那个 $r$**。如果只写 $r^2$ 而忘了乘 $\\mathrm{d}x\\mathrm{d}y = r\\mathrm{d}r\\mathrm{d}\\theta$ 中的 $r$，就会算成 $\\int_0^R r^2\\mathrm{d}r$，得到 $\\frac{2}{3}\\pi R^3$——**这正是 B 选项 $\\frac{3}{2}\\pi R^3$ 的兄弟陷阱（指数不对）**。\n- 记住极坐标三件套：\n  $$x^2+y^2 = r^2,\\qquad \\mathrm{d}x\\mathrm{d}y = r\\,\\mathrm{d}r\\mathrm{d}\\theta$$\n- 量纲自检：被积函数是 2 次的（长度²），区域面积是 2 次的，乘起来结果应该是 4 次的，所以答案里必须是 $R^4$，可以据此排除 A、B。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 702
+  },
+  {
+   "id": "zk-202410-05",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 5 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 5,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $D: 0 \\le x \\le 1,\\ -2 \\le y \\le 2$，则二重积分 $\\displaystyle\\iint_D (3x^2 + 2y)\\,\\mathrm{d}x\\mathrm{d}y =$",
+   "options": [
+    "$4$",
+    "$6$",
+    "$7$",
+    "$11$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二重积分的计算与**对称性**（重积分）。\n**考点出处**：二重积分（对称性）（重积分）\n**第一步：先看能否用对称性\"秒杀\"。**\n\n区域 $D$ 是矩形，关于 $x$ 轴（即 $y = 0$）**上下对称**（$y$ 的范围 $-2 \\le y \\le 2$）。\n\n被积函数中的 $2y$ 关于 $y$ 是**奇函数**（把 $y$ 换成 $-y$ 会变号），而区域关于 $y$ 对称，所以\n\n$$\\iint_D 2y\\,\\mathrm{d}x\\mathrm{d}y = 0$$\n\n**这一步直接省掉了一半计算。**\n\n**第二步：剩下的 $3x^2$ 与 $y$ 无关，可拆成两个定积分相乘。**\n\n$$\\iint_D 3x^2\\,\\mathrm{d}x\\mathrm{d}y = 3\\left(\\int_0^1 x^2\\,\\mathrm{d}x\\right)\\left(\\int_{-2}^{2}\\mathrm{d}y\\right) = 3\\times\\frac{1}{3}\\times 4 = 4$$\n\n**第三步：合并。**\n\n$$\\iint_D (3x^2 + 2y)\\,\\mathrm{d}x\\mathrm{d}y = 4 + 0 = 4$$\n\n选 **A**。",
+   "misconception": "- **只有\"关于某变量奇\"的那一项才能归零**：$3x^2$ 关于 $y$ 是偶函数（压根不含 $y$），**必须老老实实算**，不能一并归零。\n- **C、D 选项都源于\"没让奇函数项归零\"**：一旦把 $\\iint_D 2y$ 算成某个非零数，就会落到这两个选项上。**只要正确使用对称性，$2y$ 一定贡献 $0$，根本不该出现这两个选项。**\n- **\"与某变量无关就可以分离变量\"**：$\\iint_D 3x^2\\,\\mathrm dx\\mathrm dy = 3\\int_0^1x^2\\mathrm dx\\cdot\\int_{-2}^2\\mathrm dy$，**矩形区域上这个拆法是合法的**；若区域不是矩形（上下限互相牵扯），就不能这样拆。\n- **优先顺序**：遇到二重积分，**先看对称性，再看坐标系**，最后才硬算。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 703
+  },
+  {
+   "id": "zk-202504-05",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2025 年 4 月 自考 00023 高等数学（工本）第 5 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 5,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $D$：$-2 \\le x \\le 2$，$0 \\le y \\le 1$，则二重积分 $\\displaystyle\\iint_D (x + y - 2)\\,\\mathrm{d}x\\mathrm{d}y =$",
+   "options": [
+    "$-6$",
+    "$-4$",
+    "$0$",
+    "$4$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二重积分的对称性与\"常数项乘面积\"，重积分。\n**考点出处**：重积分（重积分）\n**第一步：区域是矩形，先读三个几何量。**\n\n$$S = \\iint_D 1\\,\\mathrm{d}x\\mathrm{d}y = 4 \\times 1 = 4$$\n\n**第二步：用对称性把 $x$ 项归零。**\n\n$D$ 关于 $y$ 轴（$x = 0$）左右对称（因为 $-2 \\le x \\le 2$），而 $x$ 关于 $x$ 是奇函数，所以\n\n$$\\iint_D x\\,\\mathrm{d}x\\mathrm{d}y = 0$$\n\n**第三步：单独算 $y$ 项——注意它不能归零。**\n\n$y$ 的范围是 $0 \\le y \\le 1$，**不关于 $y = 0$ 对称**，所以 $\\displaystyle\\iint_D y\\,\\mathrm{d}x\\mathrm{d}y \\ne 0$。矩形区域上可分离变量：\n\n$$\\iint_D y\\,\\mathrm{d}x\\mathrm{d}y = \\left(\\int_{-2}^{2}\\mathrm{d}x\\right)\\left(\\int_0^1 y\\,\\mathrm{d}y\\right) = 4 \\times \\frac{1}{2} = 2$$\n\n**第四步：把常数项 $-2$ 提出来乘面积。**\n\n$$\\iint_D (-2)\\,\\mathrm{d}x\\mathrm{d}y = -2S = -2 \\times 4 = -8$$\n\n**第五步：三项合并。**\n\n$$\\iint_D (x + y - 2)\\,\\mathrm{d}x\\mathrm{d}y = \\underbrace{0}_{x} + \\underbrace{2}_{y} + \\underbrace{(-8)}_{-2} = -6$$\n\n选 **A**。",
+   "misconception": "- **$x$ 能归零、$y$ 不能归零——这一步是本题的分水岭**：$D$ 只关于 $y$ 轴对称（$-2 \\le x \\le 2$），**$y$ 方向是 $0$ 到 $1$，根本不对称**。误把 $y$ 也归零，会得到 $0 + 0 - 8 = -8$（选项里没有，说明走错了，赶紧回头）。\n- **常数项 $-2$ 千万别漏**：它要乘整个面积。**\"$\\iint_D c\\,\\mathrm{d}x\\mathrm{d}y = cS$\"是二重积分里最容易被跳过的送分步骤。**\n- **各干扰项的来历**：\n  - **D 选项 $4$** 恰好是矩形面积 $S = 4$，对应\"把被积函数当成 $1$、只算面积\"；\n  - **B 选项 $-4$** 对应把 $\\displaystyle\\int_0^1 y\\,\\mathrm{d}y$ 错算成 $1$（漏了 $\\dfrac{1}{2}$），于是 $0 + 4 - 8 = -4$；\n  - **C 选项 $0$** 对应\"看到对称区间就整体归零\"。\n- **算完看一眼符号**：被积函数 $x + y - 2$ 在区域内部大部分为负（例如中心点 $\\left(0, \\frac12\\right)$ 处取值 $-\\frac32$），**结果为负是合理的**；若算出正数要警惕。\n- **标准流程**：**先看对称性 → 再用几何量（面积/形心）→ 最后才硬算**。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 704
+  },
+  {
+   "id": "zk-202510-05",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 5 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 5,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $D: |x| \\le 2,\\ |y| \\le 2$，则二重积分 $\\displaystyle\\iint_D |x|\\,\\mathrm{d}x\\mathrm{d}y =$",
+   "options": [
+    "$0$",
+    "$4$",
+    "$8$",
+    "$16$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：含绝对值的二重积分、矩形区域上变量可分离（重积分）。\n**考点出处**：重积分（二重积分（对称性归零））\n**第一步：把区域看成一个正方形。**\n\n$$D: -2 \\le x \\le 2,\\quad -2 \\le y \\le 2$$\n\n这是边长为 $4$ 的正方形，面积 $S = 16$。\n\n**第二步：被积函数 $|x|$ 只含 $x$，与 $y$ 无关，且区域是矩形 ⟹ 可以拆成两个定积分相乘。**\n\n$$\\iint_D |x|\\,\\mathrm{d}x\\mathrm{d}y = \\left(\\int_{-2}^{2}|x|\\,\\mathrm{d}x\\right)\\left(\\int_{-2}^{2}\\mathrm{d}y\\right)$$\n\n**第三步：分别算两个定积分。**\n\n$|x|$ 是偶函数，可用对称性简化：\n\n$$\\int_{-2}^{2}|x|\\,\\mathrm{d}x = 2\\int_0^2 x\\,\\mathrm{d}x = 2\\times\\left[\\frac{x^2}{2}\\right]_0^2 = 2\\times 2 = 4$$\n\n$$\\int_{-2}^{2}\\mathrm{d}y = 4$$\n\n**第四步：相乘。**\n\n$$\\iint_D |x|\\,\\mathrm{d}x\\mathrm{d}y = 4\\times 4 = 16$$\n\n选 **D**。",
+   "misconception": "- **A 选项 $0$ 是本題最危险的陷阱**：$|x|$ 是**偶函数**，不是奇函数，**不能靠对称性归零**。只有**奇函数**（如 $x$、$x^3$、$\\sin x$）在对称区域上的积分才是 $0$。把 $|x|$ 当成奇函数归零，就会选 A。\n- **C 选项 $8$**：对应\"只算了 $\\displaystyle\\int_{-2}^{2}|x|\\mathrm{d}x = 4$，再乘了 $y$ 方向长度的一半（$2$）\"，或者\"$\\int_0^2 x\\mathrm{d}x = 2$ 再乘 4\"之类的半成品。**矩形区域必须乘满 $y$ 方向的长度 $4$。**\n- **B 选项 $4$**：正好是 $\\displaystyle\\int_{-2}^{2}|x|\\mathrm{d}x$ 的值，**忘了乘 $\\displaystyle\\int_{-2}^{2}\\mathrm{d}y$**。这是\"变量可分离却漏乘另一半\"的典型。\n- **别忘了先看绝对值**：遇到 $|x|$、$\\sqrt{x^2}$ 这类被积函数，**第一反应应该是\"分区域去绝对值\"或\"用偶函数对称性\"**，而不是套公式。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 705
+  },
+  {
+   "id": "zk-202604-05",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 5 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 5,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $D: x^2 + y^2 \\le 2$，则二重积分 $\\displaystyle\\iint_D (x^2 + y^2 - x)\\,\\mathrm{d}x\\mathrm{d}y =$",
+   "options": [
+    "$2\\pi$",
+    "$4\\pi$",
+    "$6\\pi$",
+    "$8\\pi$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二重积分的对称性与几何意义（重积分）。\n**考点出处**：二重积分（对称性 + 几何量）（重积分）\n**第一步：看区域，找对称性。**\n\n$D$ 是**圆心在原点**的圆盘，关于 $y$ 轴对称。\n\n**第二步：把被积函数拆成两项，逐项处理。**\n\n$$\\iint_D (x^2 + y^2 - x)\\,\\mathrm{d}x\\mathrm{d}y = \\iint_D (x^2+y^2)\\,\\mathrm{d}x\\mathrm{d}y - \\iint_D x\\,\\mathrm{d}x\\mathrm{d}y$$\n\n**第三项（奇函数项）直接归零**：区域 $D$ 关于 $y$ 轴对称，而被积函数 $f(x,y) = x$ 满足\n\n$$f(-x, y) = -x = -f(x,y)$$\n\n即关于 $x$ 为**奇函数**，故\n\n$$\\iint_D x\\,\\mathrm{d}x\\mathrm{d}y = 0$$\n\n**第三步：第一项用极坐标（或用\"几何量 × 常数\"的思路）。**\n\n$$\\iint_D (x^2+y^2)\\,\\mathrm{d}x\\mathrm{d}y = \\int_0^{2\\pi}\\mathrm{d}\\theta\\int_0^{\\sqrt2} r^2\\cdot r\\,\\mathrm{d}r = \\int_0^{2\\pi}\\mathrm{d}\\theta\\int_0^{\\sqrt2}r^3\\,\\mathrm{d}r$$\n\n$$\\int_0^{\\sqrt2}r^3\\,\\mathrm{d}r = \\left[\\frac{r^4}{4}\\right]_0^{\\sqrt2} = \\frac{(\\sqrt2)^4}{4} = \\frac{4}{4} = 1$$\n\n$$\\iint_D (x^2+y^2)\\,\\mathrm{d}x\\mathrm{d}y = 1\\times 2\\pi = 2\\pi$$\n\n**第四步：合并。**\n\n$$\\iint_D (x^2+y^2-x)\\,\\mathrm{d}x\\mathrm{d}y = 2\\pi - 0 = 2\\pi$$\n\n选 **A**。\n\n**独立验算（形心/几何量的角度）**：圆盘面积为 $\\pi(\\sqrt2)^2 = 2\\pi$；由对称性 $\\iint_D x = 0$；而 $\\iint_D(x^2+y^2)$ 在极坐标下即上面算得的 $2\\pi$。也可用\"$x^2$ 与 $y^2$ 地位对称\"来拆：$\\iint_D x^2 = \\iint_D y^2 = \\frac12\\iint_D(x^2+y^2) = \\pi$，两式相加回到 $2\\pi$ ✓",
+   "misconception": "- **B 选项 $4\\pi$ 是把圆盘当成 $x^2+y^2\\le 4$（半径 2）算的结果**：$\\int_0^2 r^3\\mathrm{d}r = 4$，再乘 $2\\pi$ 得 $8\\pi$——注意半径是 $\\sqrt2$ 而不是 $2$。**题面给的是 $x^2+y^2\\le 2$，半径是 $\\sqrt2$。**\n- **D 选项 $8\\pi$**：对应\"半径取 $2$、半径的四次方算出 $16$、忘除以 $4$\"等多重错误。\n- **$-x$ 这一项必须归零，但理由要说对**：靠的是**区域关于 $y$ 轴对称 + 被积函数关于 $x$ 为奇函数**，不是\"$x$ 太小可忽略\"。\n- **注意区分\"关于谁对称\"**：若区域关于 $y$ 轴对称，则含 $x$ 的奇次项归零；关于 $x$ 轴对称，则含 $y$ 的奇次项归零。**别搞混。**\n- **$\\int_0^{\\sqrt 2}r^3\\mathrm{d}r$ 中的 $r^3$**：一个 $r$ 来自被积函数的 $x^2+y^2=r^2$，另一个 $r$ 来自面积元 $\\mathrm{d}x\\mathrm{d}y = r\\,\\mathrm{d}r\\mathrm{d}\\theta$。**少一个 $r$ 会算出 $\\pi$ 或 $\\frac{2\\pi}{3}$ 之类的数。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 706
+  },
+  {
+   "id": "c10-s2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.2 二重积分的计算法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "交换积分次序：$\\displaystyle\\int_0^1 dx\\int_0^{x^2} f(x,y)\\,dy=$",
+   "options": [
+    "$\\displaystyle\\int_0^1 dy\\int_0^{\\sqrt y} f(x,y)\\,dx$",
+    "$\\displaystyle\\int_0^1 dy\\int_y^1 f(x,y)\\,dx$",
+    "$\\displaystyle\\int_0^1 dy\\int_1^{\\sqrt y} f(x,y)\\,dx$",
+    "$\\displaystyle\\int_0^1 dy\\int_{\\sqrt y}^{1} f(x,y)\\,dx$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：原积分区域为 $0\\le x\\le1$，$0\\le y\\le x^2$，即抛物线 $y=x^2$ 下方、$[0,1]\\times[0,1]$ 内的部分。改为先 $x$ 后 $y$：$y\\in[0,1]$，对固定 $y$，$x$ 从曲线 $x=\\sqrt y$ 到直线 $x=1$，故 $\\displaystyle\\int_0^1dy\\int_{\\sqrt y}^{1}f(x,y)dx$，D 正确。\nA 错：积分限方向颠倒（对固定 $y$，$x$ 的下限是 $\\sqrt y$）。\nB 错：把区域取成了 $y\\ge x^2$ 的部分。\nC 错：下限大于上限，积分号方向错误。",
+   "misconception": "⚠️易错点：交换次序必须先把区域图画出来、用「穿线法」定限；曲线 $y=x^2$（$x\\ge0$）的反函数是 $x=\\sqrt y$。",
+   "extension": null,
+   "tags": [
+    "交换积分次序",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 707
+  },
+  {
+   "id": "ky2-2012-6-c42b7f",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2012 年考研数学二第 6 题",
+    "kind": "exam-original",
+    "year": 2012,
+    "region": "全国",
+    "paper": "2012 年考研数学二",
+    "number": "6",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设区域D由曲线 $y = \\sin x, x = \\pm \\frac{\\pi}{2}, y = 1$ 围成，则 $\\iint_{D} (x^5 y - 1) \\, \\mathrm{d}x \\, \\mathrm{d}y = \\dots (\\quad)$",
+   "options": [
+    "$\\pi$",
+    "2",
+    "$-2$",
+    "$-\\pi$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：D\n应选 (D). 由二重积分的奇偶对称性,\n$$\n\\begin{array}{l} \\iint_ {D} \\left(x ^ {5} y - 1\\right) \\mathrm {d} x \\mathrm {d} y = \\int_ {- \\frac {\\pi}{2}} ^ {\\frac {\\pi}{2}} \\mathrm {d} x \\int_ {\\sin x} ^ {1} \\left(x ^ {5} y - 1\\right) \\mathrm {d} y \\\\ = \\int_ {- \\frac {\\pi}{2}} ^ {\\frac {\\pi}{2}} \\left(\\frac {1}{2} x ^ {5} - \\frac {1}{2} x ^ {5} \\sin x - 1 + \\sin x\\right) d x = \\int_ {- \\frac {\\pi}{2}} ^ {\\frac {\\pi}{2}} (- 1) d x = - \\pi \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 708
+  },
+  {
+   "id": "ky2-2013-6-6544f2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2013 年考研数学二第 6 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学二",
+    "number": "6",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $D_{k}$ 是圆域 $D = \\left\\{(x,y)\\big|x^{2} + y^{2}\\leqslant 1\\right\\}$ 在第 $k$ 象限的部分，记\n$I_{k} = \\iint_{D_{k}}(y - x)\\mathrm{d}x\\mathrm{d}y (k = 1,2,3,4),$ 则",
+   "options": [
+    "$I_{1} > 0$",
+    "$I_{2} > 0$",
+    "$I_{3} > 0$",
+    "$I_4 > 0$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：B\n应选 (B). 因为在 $D_{2}$ 内部 $y - x > 0$ , 故由二重积分的保号性可得 $I_{2} > 0$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 709
+  },
+  {
+   "id": "ky2-2019-5-18ad76",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2019 年考研数学二第 5 题",
+    "kind": "exam-original",
+    "year": 2019,
+    "region": "全国",
+    "paper": "2019 年考研数学二",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "已知平面区域 $D = \\left\\{(x, y) \\mid |x| + |y| \\leqslant \\frac{\\pi}{2}\\right\\}$ , 记 $I_{1} = \\iint_{D} \\sqrt{x^{2} + y^{2}} \\mathrm{d}x \\mathrm{~d}y$ ,\n$I_{2} = \\iint_{D}\\sin \\sqrt{x^{2} + y^{2}}\\mathrm{d}x\\mathrm{d}y,I_{3} = \\iint_{D}\\left(1 - \\cos \\sqrt{x^{2} + y^{2}}\\right)\\mathrm{d}x\\mathrm{d}y,$ 则…",
+   "options": [
+    "$I_{3} < I_{2} < I_{1}$",
+    "$I_{2} < I_{1} < I_{3}$",
+    "$I_{1} < I_{2} < I_{3}$",
+    "$I_{2} < I_{3} < I_{1}$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A\n应选 (A). 在区域 $D$ 内部有 $0 \\leqslant x^{2} + y^{2} \\leqslant \\left(\\frac{\\pi}{2}\\right)^{2}$ , 因此 $\\sin \\sqrt{x^{2} + y^{2}} \\leqslant \\sqrt{x^{2} + y^{2}}$ , 所以 $I_{2} < I_{1}$ . 令 $u = \\sqrt{x^{2} + y^{2}}$ , $f(u) = 1 - \\cos u - \\sin u$ ( $0 \\leqslant u \\leqslant \\frac{\\pi}{2}$ ), 则\n$$\nf ^ {\\prime} (u) = \\sin u - \\cos u, \\quad f ^ {\\prime \\prime} (u) = \\sin u + \\cos u.\n$$\n令 $f^{\\prime}(u) = 0$ ，得唯一驻点 $u = \\frac{\\pi}{4}$ ，且 $f''\\left(\\frac{\\pi}{4}\\right) > 0$ 。因此 $f(u)$ 在 $u = \\frac{\\pi}{4}$ 处取得极小值 $f\\left(\\frac{\\pi}{4}\\right) < 0$ ，在 $u = 0$ 和 $u = \\frac{\\pi}{2}$ 处取得最大值 $f(0) = f\\left(\\frac{\\pi}{2}\\right) = 0$ ，从而当 $u \\in \\left(0, \\frac{\\pi}{2}\\right)$ 时， $1 - \\cos u < \\sin u$ ，也就得到了 $I_3 < I_2$ 。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 710
+  },
+  {
+   "id": "zk-202210-08",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 8 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 8,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $\\Omega: 0 \\le x \\le 1,\\ 0 \\le y \\le 2,\\ -1 \\le z \\le 1$，则三重积分 $\\displaystyle\\iiint_\\Omega (2 - x - z)\\,\\mathrm{d}x\\mathrm{d}y\\mathrm{d}z =$",
+   "options": [
+    "$0$",
+    "$6$",
+    "$7$",
+    "$8$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：三重积分的对称性与\"常数 × 体积\"（重积分）。\n**考点出处**：三重积分（对称性）（重积分）\n**第一步：算长方体的体积。**\n\n$$V = 1 \\times 2 \\times 2 = 4$$\n\n**第二步：判断各项的对称性。**\n\n- $z$ 的范围 $-1 \\le z \\le 1$ **关于 $z = 0$ 对称**，而 $z$ 关于 $z$ 是**奇函数** ⟹ $\\displaystyle\\iiint_\\Omega z\\,\\mathrm{d}V = 0$。\n- $x$ 的范围 $0 \\le x \\le 1$ **不关于 0 对称**，所以 $x$ 这一项**不能归零**，必须老实算。\n\n**第三步：算常数项和 $x$ 项。**\n\n常数项提出来乘体积：\n\n$$\\iiint_\\Omega 2\\,\\mathrm{d}V = 2V = 2\\times4 = 8$$\n\n$x$ 项与 $y$、$z$ 无关，而区域是**长方体（矩形体）**，可以拆成三个定积分相乘：\n\n$$\\iiint_\\Omega x\\,\\mathrm{d}V = \\left(\\int_0^1 x\\,\\mathrm{d}x\\right)\\left(\\int_0^2 \\mathrm{d}y\\right)\\left(\\int_{-1}^1 \\mathrm{d}z\\right) = \\frac{1}{2}\\times 2\\times 2 = 2$$\n\n**第四步：合并。**\n\n$$\\iiint_\\Omega (2 - x - z)\\,\\mathrm{d}V = 8 - 2 - 0 = 6$$\n\n故选 **B**。",
+   "misconception": "- **$x$ 项不能归零，这是本题唯一的分水岭**：$x \\in [0,1]$ **不关于原点对称**，所以 $\\iiint x \\ne 0$。**只有 $z$ 项满足\"区域对称 + 函数为奇\"两条。**\n- **D 选项 $8$**：只算了常数项 $2V$，**漏减了 $x$ 的贡献 $2$**。\n- **A 选项 $0$**：被\"symmetry\"误导，把 $-x-z$ 两项都归零了。\n- **C 选项 $7$**：漏减了某一部分（如把 $x$ 项的贡献算成了 $1$）。\n- **矩形体上\"只含部分变量的被积函数可以拆成定积分相乘\"**，这是本卷最省时的技巧。**但只在长方体上成立**——若区域是球或锥，绝不能这样拆。\n- **结果自查**：被积函数 $2-x-z$ 在 $\\Omega$ 上的取值范围是 $2-1-1 = 0$ 到 $2-0+1 = 3$，体积为 4，积分值应在 $0$ 到 $12$ 之间——$6$ 落在中间，合理。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 711
+  },
+  {
+   "id": "zk-202304-08",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2023 年 4 月 自考 00023 高等数学（工本）第 8 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 8,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $\\Omega: x^2 + y^2 + z^2 \\le a^2$，则三重积分 $\\displaystyle\\iiint_\\Omega (6 - y - z)\\,\\mathrm{d}x\\mathrm{d}y\\mathrm{d}z =$",
+   "options": [
+    "$\\dfrac{4}{3}\\pi a^3$",
+    "$4\\pi a^3$",
+    "$\\dfrac{16}{3}\\pi a^3$",
+    "$8\\pi a^3$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：三重积分的对称性 + \"常数 × 体积\"（重积分）。\n**考点出处**：三重积分（对称性）（重积分）\n**第一步：用对称性把两个变量项归零。**\n\n$\\Omega$ 是球体 $x^2+y^2+z^2 \\le a^2$，**关于三个坐标面都对称**。而 $y$ 关于 $y$ 是奇函数（$z$ 同理），所以\n\n$$\\iiint_\\Omega y\\,\\mathrm{d}V = 0, \\qquad \\iiint_\\Omega z\\,\\mathrm{d}V = 0$$\n\n**第二步：只剩常数项，提取常数乘体积。**\n\n记球体 $\\Omega$ 的体积为\n\n$$V = \\frac{4}{3}\\pi a^3$$\n\n则\n\n$$\\iiint_\\Omega 6\\,\\mathrm{d}V = 6V = 6 \\times \\frac{4}{3}\\pi a^3 = 8\\pi a^3$$\n\n**第三步：合并。**\n\n$$\\iiint_\\Omega (6-y-z)\\,\\mathrm{d}V = 8\\pi a^3 + 0 + 0 = 8\\pi a^3$$\n\n选 **D**。",
+   "misconception": "- **被积函数里的常数是 $6$，不是 $1$**：漏乘就会得到 $\\frac43\\pi a^3$，即 **A 选项**。这是本题最大的失分点。\n- **干扰项是按\"常数取几\"设计的**：$A = 1\\times V$、$B = 3\\times V$、$C = 4\\times V$、$D = 6\\times V$。**看清系数就能秒选**，根本不用做积分。\n- **球体积必须背牢**：$V = \\dfrac{4}{3}\\pi a^3$。本题答案 $8\\pi a^3$ 也可以直接理解为\"$6$ 倍球体积\"。\n- **前提是区域关于该坐标面对称**：本题球体同时关于三个坐标面对称，所以 $y$、$z$ 都能归零。**只要有一个方向不对称，对应那一项就得硬算。**\n- 标准套路：**对称性归零 → 算\"常数 × 体积\"**，几乎不需要做真正的三重积分。这与本卷第 5 题是同一个思想。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 712
+  },
+  {
+   "id": "zk-202310-08",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 8 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 8,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $\\Omega: |x| \\le 1,\\ |y| \\le 1,\\ |z| \\le 1$，则三重积分 $\\displaystyle\\iiint_\\Omega 2\\,\\mathrm{d}x\\mathrm{d}y\\mathrm{d}z =$",
+   "options": [
+    "$2$",
+    "$4$",
+    "$8$",
+    "$16$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：被积函数为常数时，积分 $=$ **常数 × 积分区域的体积**。\n**考点出处**：三重积分（立方体体积）（重积分）\n**第一步：认识区域 $\\Omega$ 的形状。**\n\n条件 $|x| \\le 1$ 等价于 $-1 \\le x \\le 1$，同理 $y$、$z$ 也如此。\n\n所以 $\\Omega$ 是一个**以原点为中心、棱长均为 $2$ 的正方体（立方体）**。\n\n**第二步：算体积。**\n\n$$V_\\Omega = 2^3 = 2\\times 2\\times 2 = 8$$\n\n**第三步：常数 × 体积。**\n\n被积函数是常数 $2$，可以提到积分号外：\n\n$$\\iiint_\\Omega 2\\,\\mathrm{d}x\\mathrm{d}y\\mathrm{d}z = 2\\iiint_\\Omega \\mathrm{d}x\\mathrm{d}y\\mathrm{d}z = 2\\,V_\\Omega = 2\\times 8 = 16$$\n\n答案是 **D**。",
+   "misconception": "- **本题最大的坑是把棱长看成 $1$**：$|x| \\le 1$ 表示 $-1 \\le x \\le 1$，**长度是 $2$ 不是 $1$**。\n  - 若误把体积算成 $1^3 = 1$，则会得到 $2$（选 A）；\n  - 若算出体积 $8$ 却忘了乘 $2$，则会得到 $8$（选 C）。\n  - **正确的答案是 $2 \\times 8 = 16$。**\n- **A、B、C、D 四个选项 $2, 4, 8, 16$ 都是 $2$ 的幂**，命题人显然是按\"不同出错方式\"设计的干扰项：$2 = 1^3\\times 2$（棱长当 $1$）、$4$（无从得知，纯干扰）、$8 = 2^3$（忘乘常数）、$16$（正确）。**算出 8 时一定要回头检查\"被积函数的那个 2 我乘了吗？\"**\n- **推广结论**（非常常用，直接背）：\n  $$\\iiint_\\Omega C\\,\\mathrm{d}V = C\\cdot V_\\Omega$$\n  （$C$ 为常数）\n  同理 $\\displaystyle\\iint_D C\\,\\mathrm{d}\\sigma = C\\cdot S_D$（第 5 题就用到类似思路）。\n- 本题**不需要**用\"先一后二\"或\"先二后一\"去真正积分。看到被积函数是常数，直接\"常数 × 体积\"。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 713
+  },
+  {
+   "id": "zk-202404-08",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 8 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 8,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $\\Omega: x^2 + y^2 + z^2 \\le 10$，则三重积分 $\\displaystyle\\iiint_\\Omega (2x - z)\\,\\mathrm{d}x\\mathrm{d}y\\mathrm{d}z =$",
+   "options": [
+    "$0$",
+    "$\\dfrac{4}{3}\\pi$",
+    "$\\dfrac{8}{3}\\pi$",
+    "$4\\pi$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：**利用对称性简化积分**——这是重积分里最省时间的技巧。\n**考点出处**：三重积分的对称性（重积分）\n**第一步：观察积分区域。**\n\n$\\Omega: x^2+y^2+z^2 \\le 10$ 是一个**球心在原点**的球体（半径 $\\sqrt{10}$）。\n\n关键性质：**这个球体关于三个坐标面（$x=0$、$y=0$、$z=0$）都对称。**\n\n**第二步：分别看两项。**\n\n**（1）第一项 $2x$：**\n\n区域关于平面 $x = 0$ 对称，而 $f(x,y,z) = x$ 关于 $x$ 是**奇函数**：\n\n$$f(-x, y, z) = -x = -f(x,y,z)$$\n\n偶倍奇零——**奇函数在对称区域上的积分为 0**：\n\n$$\\iiint_\\Omega 2x\\,\\mathrm{d}V = 2\\iiint_\\Omega x\\,\\mathrm{d}V = 2 \\times 0 = 0$$\n\n**（2）第二项 $-z$：**\n\n同理，区域关于平面 $z = 0$ 对称，$g(x,y,z) = z$ 关于 $z$ 是奇函数：\n\n$$\\iiint_\\Omega (-z)\\,\\mathrm{d}V = -\\iiint_\\Omega z\\,\\mathrm{d}V = -0 = 0$$\n\n**第三步：合并。**\n\n$$\\iiint_\\Omega (2x - z)\\,\\mathrm{d}V = 0 + 0 = 0$$\n\n答案是 **A**。",
+   "misconception": "- **千万不要老老实实算积分**！这题如果用球坐标硬算，至少要 15 分钟，还容易错。用对称性 **30 秒**就出答案。\n- 对称性口诀：\"**积分区域对称 + 被积函数为奇函数 → 积分等于 0**\"。\n- 判断奇函数的方法是：**把对应的变量换成相反数，看整个表达式是否变号**。\n  - $x \\to -x$：$2(-x) - z = -2x - z$，不是整体变号——所以不能对整体用，**要拆成两项分别判断**。\n- 这题两项都是奇函数，所以结果是 0。如果题目改成 $(2x^2 - z)$，第一项 $2x^2$ 对 $x$ 是偶函数，就不能消掉了。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 714
+  },
+  {
+   "id": "zk-202410-08",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 8 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 8,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $\\Omega: x^2 + y^2 + z^2 \\le R^2$，则三重积分 $\\displaystyle\\iiint_\\Omega (x + y + z + 3)\\,\\mathrm{d}x\\mathrm{d}y\\mathrm{d}z =$",
+   "options": [
+    "$\\dfrac{4}{3}\\pi R^3$",
+    "$\\dfrac{5}{3}\\pi R^3$",
+    "$2\\pi R^3$",
+    "$4\\pi R^3$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：三重积分的对称性（重积分）。\n**考点出处**：三重积分（对称性）（重积分）\n**第一步：用对称性把三个奇函数项归零。**\n\n$\\Omega$ 是球体，关于三个坐标面**都对称**。而 $x$、$y$、$z$ 分别关于自身变量是奇函数，所以\n\n$$\\iiint_\\Omega x\\,\\mathrm{d}V = \\iiint_\\Omega y\\,\\mathrm{d}V = \\iiint_\\Omega z\\,\\mathrm{d}V = 0$$\n\n**第二步：只剩常数项，提取常数乘体积。**\n\n记球体 $\\Omega$ 的体积为 $V = \\dfrac{4}{3}\\pi R^3$，则\n\n$$\\iiint_\\Omega 3\\,\\mathrm{d}V = 3V = 3\\times\\frac{4}{3}\\pi R^3 = 4\\pi R^3$$\n\n选 **D**。",
+   "misconception": "- **A 选项 $\\frac43\\pi R^3$**：这是**忘记乘 3**，把被积函数当成 $1$ 处理了。\n- **C 选项 $2\\pi R^3$**：漏掉 $\\frac43$ 中的某个因子，或把球体积当成了 $\\frac{2}{3}\\pi R^3$ 之类的错误值。\n- **关键认识**：$\\Omega$ **同时关于三个坐标面对称**，所以 $x$、$y$、$z$ 三项**都能归零**。只要有一个方向不对称，对应那一项就得硬算。\n- **标准套路**：**对称性归零 → 算\"常数 × 体积\"**，几乎不需要做真正的三重积分。\n- **球体积必须背牢**：$V = \\frac{4}{3}\\pi R^3$。本题 D 选项 $4\\pi R^3$ 也可以直接理解为\"$3V$\"，与\"$3\\times$ 球体积\"吻合。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 715
+  },
+  {
+   "id": "zk-202504-08",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.3",
+   "knowledgePoints": [
+    "10.3"
+   ],
+   "source": {
+    "text": "2025 年 4 月 自考 00023 高等数学（工本）第 8 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 8,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $\\Omega$：$x^2 + y^2 + z^2 \\le 4$，则三重积分 $\\displaystyle\\iiint_\\Omega (2x + y + 4z + 3)\\,\\mathrm{d}x\\mathrm{d}y\\mathrm{d}z =$",
+   "options": [
+    "$\\dfrac{32}{3}\\pi$",
+    "$16\\pi$",
+    "$32\\pi$",
+    "$96\\pi$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：三重积分的对称性，重积分。\n**考点出处**：三重积分对称性（三重积分对称性）\n**第一步：认清积分区域——球心在原点、半径为 2 的球体。**\n\n由 $x^2 + y^2 + z^2 \\le 4$ 得 $R = 2$。\n\n**第二步：用对称性把三个奇函数项全部归零。**\n\n$\\Omega$ 关于三个坐标面**都对称**，而 $x$、$y$、$z$ 各自关于自身变量是奇函数，所以\n\n$$\\iiint_\\Omega x\\,\\mathrm{d}V = \\iiint_\\Omega y\\,\\mathrm{d}V = \\iiint_\\Omega z\\,\\mathrm{d}V = 0$$\n\n于是 $2x$、$y$、$4z$ 三项**统统归零**。\n\n**第三步：只剩常数项，提取常数乘体积。**\n\n球体积\n\n$$V = \\frac{4}{3}\\pi R^3 = \\frac{4}{3}\\pi \\times 8 = \\frac{32}{3}\\pi$$\n\n$$\\iiint_\\Omega 3\\,\\mathrm{d}V = 3V = 3 \\times \\frac{32}{3}\\pi = 32\\pi$$\n\n选 **C**。",
+   "misconception": "- **A 选项 $\\dfrac{32}{3}\\pi$ 就是球体积 $V$ 本身**：对应\"把被积函数当成 $1$、忘了乘常数 3\"。**这是本题最常见的一步之差。**\n- **D 选项 $96\\pi$ 来自球体积公式记错**：如果误写成 $V = 4\\pi R^3 = 4\\pi \\times 8 = 32\\pi$（**漏掉了 $\\dfrac{4}{3}$ 里的 $\\dfrac{1}{3}$**），再乘 3 就得到 $96\\pi$。**球体积 $V = \\dfrac{4}{3}\\pi R^3$ 必须背牢。**\n- **B 选项 $16\\pi$**：对应把 $x^2+y^2+z^2 \\le 4$ 里的 $4$ 直接当成 $R^3$ 代入，得 $V = \\dfrac{4}{3}\\pi \\times 4 = \\dfrac{16}{3}\\pi$，再乘 3 得 $16\\pi$。**$4$ 是 $R^2$，$R = 2$，不要张冠李戴。**\n- **三个坐标面的对称性缺一不可**：本题 $\\Omega$ 是完整球体，**三个方向都对称**，所以 $2x$、$y$、$4z$ 都能归零。**若区域换成半球或某变量范围不对称，对应那一项就必须硬算。**\n- **系数的\"掩眼法\"**：$2x$ 里的 $2$、$4z$ 里的 $4$ 都只是障眼法——**奇函数项一旦归零，系数是几都无所谓。**\n- **标准套路**：**对称性归零 → 算\"常数 × 体积\"**。这道 3 分题实际上只需要\"球体积公式\"+\"奇函数归零\"两句话。\n- **与 2024.10 卷第 8 题完全同型**（那卷积分区域也是 $x^2+y^2+z^2 \\le R^2$），属于**必得分槽位**。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 716
+  },
+  {
+   "id": "zk-202510-08",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 8 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 8,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $\\Omega: (x-1)^2 + y^2 + z^2 \\le 1$，则三重积分 $\\displaystyle\\iiint_\\Omega (2y - 4z)\\,\\mathrm{d}x\\mathrm{d}y\\mathrm{d}z =$",
+   "options": [
+    "$0$",
+    "$\\dfrac{4}{3}\\pi$",
+    "$\\dfrac{8}{3}\\pi$",
+    "$4\\pi$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：三重积分的对称性（重积分）。\n**考点出处**：重积分（重积分）\n**第一步：认清积分区域。**\n\n$\\Omega$ 是**球心在 $(1,0,0)$、半径为 $1$** 的球体。\n\n**第二步：找对称性。**\n\n球心在 $x$ 轴上，所以球体关于 **$xOy$ 平面（$z = 0$）** 上下对称，也关于 **$xOz$ 平面（$y = 0$）** 前后对称。\n\n**第三步：逐项判断奇偶性。**\n\n- $2y$ 关于 $y$ 是**奇函数**（把 $y$ 换成 $-y$ 变号），而 $\\Omega$ 关于 $y = 0$ 对称，所以\n  $$\\iiint_\\Omega 2y\\,\\mathrm{d}V = 0$$\n- $-4z$ 关于 $z$ 是**奇函数**，而 $\\Omega$ 关于 $z = 0$ 对称，所以\n  $$\\iiint_\\Omega (-4z)\\,\\mathrm{d}V = 0$$\n\n**第四步：合并。**\n\n$$\\iiint_\\Omega (2y - 4z)\\,\\mathrm{d}V = 0 + 0 = 0$$\n\n选 **A**。",
+   "misconception": "- **\"球心不在原点\"不等于\"没有对称性\"**：本题球心在 $x$ 轴上，**关于 $y$ 与 $z$ 的对称性完好无损**（因为球心在 $y$、$z$ 方向的坐标都是 $0$）。真正丧失对称性的是 **$x$**（球心 $x = 1$），而本题被积函数恰好不含 $x$。**这一条是本题的全部机关。**\n- **B、C、D 都是\"硬算／误当常数\"的产物**：$\\dfrac{4}{3}\\pi$ 恰是球体积 $V$，$\\dfrac{8}{3}\\pi = 2V$，$4\\pi = 3V$。它们全部来自**没有让奇函数项归零**，而是把 $2y$、$4z$ 中的变量当成常数去乘体积这一类错法。\n- **对称性只能让\"奇\"的那一项归零**：本卷的第 5 题也是这个道理（那里 $|x|$ 是偶函数，**不能**归零）。**奇偶判断是这两题共同的核心动作。**\n- **标准套路**：遇到对称区域上的三重积分，**先逐项看奇偶**，把能归零的全部归零，剩下的往往是\"常数 $\\times$ 体积\"——本题连这一步都省了，直接就是 $0$。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 717
+  },
+  {
+   "id": "zk-202604-08",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 8 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 8,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设积分区域 $\\Omega: -1 \\le x \\le 1,\\ 0 \\le y \\le 2,\\ 0 \\le z \\le 1$，则三重积分 $\\displaystyle\\iiint_\\Omega (3 + x + 2z)\\,\\mathrm{d}x\\mathrm{d}y\\mathrm{d}z =$",
+   "options": [
+    "$-8$",
+    "$4$",
+    "$8$",
+    "$16$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：三重积分在长方体区域上的计算（重积分）。\n**考点出处**：三重积分（对称性 + 几何量）（重积分）\n**第一步：看清区域是长方体，且三个变量可分离。**\n\n$\\Omega$ 是长方体，体积\n\n$$V = 2\\times 2\\times 1 = 4$$\n\n（$x$ 长度 $2$，$y$ 长度 $2$，$z$ 长度 $1$。）\n\n**第二步：把被积函数拆成三项，逐项处理。**\n\n$$\\iiint_\\Omega (3 + x + 2z)\\,\\mathrm{d}V = \\iiint_\\Omega 3\\,\\mathrm{d}V + \\iiint_\\Omega x\\,\\mathrm{d}V + \\iiint_\\Omega 2z\\,\\mathrm{d}V$$\n\n**第三项（含 $x$ 的项）归零**：$\\Omega$ 关于平面 $x = 0$ 对称（$-1\\le x\\le1$ 关于原点对称），被积函数 $x$ 关于 $x$ 为奇函数，故\n\n$$\\iiint_\\Omega x\\,\\mathrm{d}V = 0$$\n\n**第三步：算常数项。**\n\n$$\\iiint_\\Omega 3\\,\\mathrm{d}V = 3V = 3\\times 4 = 12$$\n\n**第四步：算含 $z$ 的项。**\n\n$z$ 的区间是 $[0,1]$，$x$、$y$ 的区间与 $z$ 无关，可以分离：\n\n$$\\iiint_\\Omega 2z\\,\\mathrm{d}V = 2\\left(\\int_{-1}^{1}\\mathrm{d}x\\right)\\left(\\int_0^2\\mathrm{d}y\\right)\\left(\\int_0^1 z\\,\\mathrm{d}z\\right) = 2\\times 2\\times 2\\times \\frac12 = 4$$\n\n（其中 $\\int_0^1 z\\,\\mathrm{d}z = \\frac12$。）\n\n**第五步：合并。**\n\n$$\\iiint_\\Omega (3+x+2z)\\,\\mathrm{d}V = 12 + 0 + 4 = 16$$\n\n选 **D**。\n\n**独立验算（逐次积分）**：\n\n$$\\int_0^1\\!\\int_0^2\\!\\int_{-1}^{1}(3+x+2z)\\,\\mathrm{d}x\\mathrm{d}y\\mathrm{d}z = \\int_0^1\\!\\int_0^2 \\Big[3x + \\frac{x^2}{2} + 2zx\\Big]_{-1}^{1}\\mathrm{d}y\\mathrm{d}z = \\int_0^1\\!\\int_0^2 (6 + 4z)\\,\\mathrm{d}y\\mathrm{d}z$$\n\n$$= \\int_0^1 2(6+4z)\\,\\mathrm{d}z = \\Big[12z + 4z^2\\Big]_0^1 = 12 + 4 = 16 \\quad\\checkmark$$",
+   "misconception": "- **C 选项 $8$ 是\"忘了 $-1\\le x\\le 1$ 的长度是 2\"的结果**：把 $x$ 的长度当成 $1$，常数项变成 $3\\times2=6$、$z$ 项变成 $2$，合计 $8$。**区间的长度要减出来，不能看数字大小。**\n- **A 选项 $-8$**：把含 $x$ 的奇函数项误算成负值所致（$x$ 项本应为 $0$）。\n- **B 选项 $4$ 恰好只是 $2z$ 那一项的贡献**：算出 $4$ 就选 B，说明**漏掉了常数项 $3$**。\n- **奇函数项归零有前提**：必须**区域关于 $x=0$ 对称**。本题 $-1\\le x\\le 1$ 满足；若区域改成 $0\\le x\\le 2$，$\\iiint x\\,\\mathrm{d}V \\ne 0$，**不能再秒杀**。\n- **常数被积函数 = 常数 × 体积**：$\\iiint_\\Omega 3\\,\\mathrm{d}V = 3V$，**这是最省时的一招**，但要先把 $V$ 算对（$2\\times2\\times1=4$）。\n- **三项分开算时别丢符号**：$3$、$x$、$2z$ 三项的贡献分别是 $12$、$0$、$4$，写清楚再相加，避免漏项。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 718
+  },
+  {
+   "id": "c10-s3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.2 二重积分的计算法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\displaystyle\\iint_{x^2+y^2\\le1} e^{x^2+y^2}\\,\\mathrm{d}\\sigma=$",
+   "options": [
+    "$\\pi(e+1)$",
+    "$2\\pi(e-1)$",
+    "$\\dfrac{e-1}{2}$",
+    "$\\pi(e-1)$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：极坐标变换（§10.2）：$x^2+y^2=r^2$，$d\\sigma=r\\,dr\\,d\\theta$，\n$$\\iint_D e^{x^2+y^2}d\\sigma=\\int_0^{2\\pi}d\\theta\\int_0^1 e^{r^2}r\\,dr=2\\pi\\cdot\\left[\\frac{e^{r^2}}{2}\\right]_0^1=\\pi(e-1),$$\nD 正确。\nA 错：$e^{r^2}$ 的原函数在 $r=1$ 处代值 $e$、$r=0$ 处为 $1$，差是 $e-1$ 不是 $e+1$。\nB 错：$\\int_0^1e^{r^2}r\\,dr=\\dfrac{e-1}{2}$，多乘了 $2$。\nC 错：漏了 $2\\pi$ 因子。",
+   "misconception": "⚠️易错点：极坐标下 $d\\sigma=r\\,dr\\,d\\theta$ 的**雅可比因子 $r$** 是第一易错点；被积函数含 $x^2+y^2$ 或区域为圆域时优先极坐标。",
+   "extension": null,
+   "tags": [
+    "极坐标",
+    "高频考点",
+    "困难"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "rr,th=symbols('rr th', positive=True); I=integrate(exp(rr**2)*rr, (rr, 0, 1), (th, 0, 2*pi)); simplify(I - pi*(exp(1)-1))",
+     "expected": "0"
+    }
+   ],
+   "idx": 719
+  },
+  {
+   "id": "c10-m1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.2 二重积分的计算法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "关于二重积分的极坐标计算 $\\iint_D f(x,y)\\,d\\sigma=\\iint f(r\\cos\\theta,r\\sin\\theta)\\,r\\,dr\\,d\\theta$，下列说法正确的有",
+   "options": [
+    "区域 $D$ 为圆域、环域或扇形域时优先考虑极坐标",
+    "被积函数含 $x^2+y^2$（或 $\\dfrac{y}{x}$）时优先考虑极坐标",
+    "只有直角坐标下次序交换困难时才能用极坐标",
+    "面积元素变换为 $d\\sigma=r\\,dr\\,d\\theta$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：§10.2 给出的两类典型适用情形——圆域/环域/扇形域（边界方程 $r=$ 常数简单）与被积函数含 $x^2+y^2$、$\\dfrac yx$（代入极坐标后变量分离），A、B 正确；$d\\sigma=r\\,dr\\,d\\theta$，D 正确。\nC 错：极坐标与交换次序是两个独立的化简手段，选择坐标系的依据是「区域形状 + 被积函数结构」，并非只有交换次序困难时才用。",
+   "misconception": "⚠️易错点：极坐标积分限：过极点的区域 $r\\in[0,r(\\theta)]$、环域 $r_1(\\theta)\\le r\\le r_2(\\theta)$；被积函数与 $d\\sigma$ 中**都要**把 $r$ 因子带上。",
+   "extension": null,
+   "tags": [
+    "极坐标",
+    "适用条件"
+   ],
+   "verify": [],
+   "idx": 720
+  },
+  {
+   "id": "c10-m2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 10,
+   "knowledgePoint": "10.3",
+   "knowledgePoints": [
+    "10.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.3 三重积分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "关于三重积分的计算，下列说法正确的有",
+   "options": [
+    "柱面坐标下 $dV=r\\,dz\\,dr\\,d\\theta$，适合区域含圆柱面、旋转抛物面的情形",
+    "被积函数只含 $z$ 且截面面积易求时，可用「先二后一」（截面法）：$\\iiint_\\Omega f(z)\\,dV=\\int_{z_1}^{z_2}f(z)\\,S(z)\\,dz$",
+    "球面坐标下 $dV=r^2\\sin\\varphi\\,dr\\,d\\varphi\\,d\\theta$",
+    "若区域 $\\Omega$ 关于 $y$ 轴对称，则 $\\iiint_\\Omega f\\,dV=0$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：柱面坐标与球面坐标的体积元素及「先二后一」法均为 §10.3 的标准内容，A、B、C 正确。\nD 错：利用对称性须同时要求**被积函数具有相应奇偶性**——区域关于 $yOz$ 面对称且 $f$ 关于 $x$ 为奇函数时积分才为零；仅区域对称推不出积分为零。",
+   "misconception": "⚠️易错点：对称性简化口诀「域对称 + 函数奇（偶）」两个条件缺一不可；球面坐标中 $\\varphi$ 是与 $z$ 轴正向的夹角，$\\sin\\varphi$ 因子勿丢。",
+   "extension": null,
+   "tags": [
+    "三重积分",
+    "对称性",
+    "困难"
+   ],
+   "verify": [],
+   "idx": 721
+  },
+  {
+   "id": "c10-j1",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 10,
+   "knowledgePoint": "10.1",
+   "knowledgePoints": [
+    "10.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.1 二重积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "当 $f(x,y)\\ge0$ 时，$\\displaystyle\\iint_D f(x,y)\\,\\mathrm{d}\\sigma$ 在几何上表示以 $D$ 为底、$z=f(x,y)$ 为顶的曲顶柱体的体积。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二重积分的几何意义（§10.1）：被积函数非负时积分为曲顶柱体体积；一般情形是「上正下负」体积的代数和。命题正确。",
+   "misconception": "⚠️易错点：与定积分「带符号面积」类似，$f$ 变号时积分不是体积本身。",
+   "extension": null,
+   "tags": [
+    "几何意义"
+   ],
+   "verify": [],
+   "idx": 722
+  },
+  {
+   "id": "c10-j2",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.2 二重积分的计算法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\displaystyle\\iint_{x^2+y^2\\le R^2}\\sqrt{R^2-x^2-y^2}\\,\\mathrm{d}\\sigma=\\dfrac{2}{3}\\pi R^3$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：被积函数 $z=\\sqrt{R^2-x^2-y^2}$ 是上半球面，积分区域是其在 $xOy$ 面上的投影圆域，故积分等于半径 $R$ 的半球体积 $\\dfrac12\\cdot\\dfrac43\\pi R^3=\\dfrac23\\pi R^3$（§10.1 几何意义）。命题正确。",
+   "misconception": "⚠️易错点：看到 $\\sqrt{R^2-x^2-y^2}$ 应立即联想上半球面，用几何意义秒算，不必硬积。",
+   "extension": null,
+   "tags": [
+    "几何意义",
+    "半球体积"
+   ],
+   "verify": [
+    {
+     "desc": "R=1核验",
+     "code": "rr,th=symbols('rr th', positive=True); I=integrate(sqrt(1-rr**2)*rr, (rr, 0, 1), (th, 0, 2*pi)); simplify(I - Rational(2,3)*pi)",
+     "expected": "0"
+    }
+   ],
+   "idx": 723
+  },
+  {
+   "id": "c10-j3",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.2 二重积分的计算法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "若区域 $D$ 关于 $y$ 轴对称，则 $\\displaystyle\\iint_D f(x,y)\\,\\mathrm{d}\\sigma=0$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：对称性简化需要两个条件同时满足：区域对称 + 被积函数关于对称变量为**奇**函数。本题只给了区域对称，$f$ 任意，例如 $f\\equiv1$ 时积分等于区域面积 $\\ne0$。命题错误（§10.2）。",
+   "misconception": "⚠️易错点：正确表述——$D$ 关于 $y$ 轴对称时，$f$ 关于 $x$ 为奇函数则积分为 $0$，为偶函数则等于半区域积分的两倍。",
+   "extension": null,
+   "tags": [
+    "对称性",
+    "易错点"
+   ],
+   "verify": [],
+   "idx": 724
+  },
+  {
+   "id": "c10-b1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.2 二重积分的计算法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\displaystyle\\iint_{x^2+y^2\\le1} x\\,\\mathrm{d}\\sigma=$ ____。",
+   "options": null,
+   "answer": [
+    "0"
+   ],
+   "accept": [
+    "0"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：区域关于 $y$ 轴对称且 $f(x,y)=x$ 关于 $x$ 为奇函数，积分为 $0$（§10.2 对称性）。",
+   "misconception": "⚠️易错点：本题两点齐全（域对称 + 函数奇）才能秒判零；只背口诀不查条件会误用。",
+   "extension": null,
+   "tags": [
+    "对称性"
+   ],
+   "verify": [],
+   "idx": 725
+  },
+  {
+   "id": "c10-b2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.2 二重积分的计算法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\displaystyle\\iint_{x^2+y^2\\le4} (x^2+y^2)\\,\\mathrm{d}\\sigma=$ ____。",
+   "options": null,
+   "answer": [
+    "8*pi"
+   ],
+   "accept": [
+    "8pi",
+    "8*pi",
+    "8π",
+    "8*pi"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：极坐标：$\\displaystyle\\int_0^{2\\pi}d\\theta\\int_0^2 r^2\\cdot r\\,dr=2\\pi\\cdot\\left[\\frac{r^4}{4}\\right]_0^2=2\\pi\\cdot4=8\\pi$。",
+   "misconception": "⚠️易错点：$d\\sigma$ 的 $r$ 因子与被积函数的 $r^2$ 合并为 $r^3$；上限是 $2$（半径），$2^4/4=4$。",
+   "extension": null,
+   "tags": [
+    "极坐标",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "integral",
+     "code": "rr,th=symbols('rr th', positive=True); I=integrate(rr**2*rr, (rr, 0, 2), (th, 0, 2*pi)); simplify(I - 8*pi)",
+     "expected": "0"
+    }
+   ],
+   "idx": 726
+  }
+ ]
+}

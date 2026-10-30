@@ -398,6 +398,15 @@
     if (q.type === 'multi') return 3;
     if (q.type === 'judge') return 2;
     if (q.type === 'blank') return 2;
+    // 主观题：满分 = 采分点分值之和。采分点数随学科/题目变化
+    // （线代固定 term2/short3/calc4 点×2 分 → 4/6/8；高数 calc 有 1–6 点不等），
+    // 固定满分会让少采分点的题永远到不了满分、错题本被污染。
+    var pts = q.points || [];
+    if (pts.length) {
+      var s = 0;
+      for (var i = 0; i < pts.length; i++) s += (pts[i] && pts[i].partial) || 2;
+      return s;
+    }
     if (q.type === 'term') return 4;
     if (q.type === 'short') return 6;
     if (q.type === 'calc') return 8;

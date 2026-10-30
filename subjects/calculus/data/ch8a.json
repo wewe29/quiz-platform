@@ -1,0 +1,1574 @@
+{
+ "chapter": 8,
+ "questions": [
+  {
+   "id": "c8-s1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.2",
+   "knowledgePoints": [
+    "8.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.2 数量积 向量积 *混合积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $\\vec a=(1,2,3)$，$\\vec b=(2,-1,1)$，则 $\\vec a\\times\\vec b=$",
+   "options": [
+    "$(5,5,-5)$",
+    "$(5,-5,5)$",
+    "$(-5,-5,5)$",
+    "$(1,1,-1)$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：按行列式展开（§8.2）：\n$$\\vec a\\times\\vec b=\\begin{vmatrix}\\vec i&\\vec j&\\vec k\\\\1&2&3\\\\2&-1&1\\end{vmatrix}=(2\\cdot1-3\\cdot(-1),\\ 3\\cdot2-1\\cdot1,\\ 1\\cdot(-1)-2\\cdot2)=(5,5,-5),$$\nA 正确。\nB、C 错：行列式某行（或列）符号处理错误；注意 $\\vec b\\times\\vec a=(-5,-5,5)$。\nD 错：方向虽同但模长不对。",
+   "misconception": "⚠️易错点：三个分量的符号依次来自 $i,j,k$ 的代数余子式，$j$ 分量前有负号；用点积验算：$(5,5,-5)\\cdot(1,2,3)=0$ 且 $\\cdot(2,-1,1)=0$。",
+   "extension": null,
+   "tags": [
+    "向量积",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "cross",
+     "code": "Matrix([1,2,3]).cross(Matrix([2,-1,1]))",
+     "expected": "Matrix([[5], [5], [-5]])"
+    }
+   ],
+   "idx": 561
+  },
+  {
+   "id": "ky2-1989-5-01a5ae",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "1989 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1989,
+    "region": "全国",
+    "paper": "1989 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "微分方程 $y'' - y = \\mathrm{e}^x + 1$ 的一个特解应具有形式（式中 $a, b$ 为常数）……（）",
+   "options": [
+    "$a\\mathrm{e}^x +b$",
+    "$ax\\mathrm{e}^x + b$",
+    "$a\\mathbf{e}^x +bx$",
+    "$ax\\mathrm{e}^{x} + bx$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：B\n应选 (B).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 562
+  },
+  {
+   "id": "ky2-2010-3-4a0f6b",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "2010 年考研数学二第 3 题",
+    "kind": "exam-original",
+    "year": 2010,
+    "region": "全国",
+    "paper": "2010 年考研数学二",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "曲线 $y = x^{2}$ 与曲线 $y = a\\ln x$ （ $a \\neq 0$ ）相切，则 $a = \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots \\dots$ （",
+   "options": [
+    "4e",
+    "3e",
+    "$2\\mathbf{e}$",
+    "e"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：C\n应选 (C). 设 $y = x^{2}$ 与 $y = a\\ln x$ 的公切点为 $(x_0, y_0)$ , 则有\n$$\ny _ {0} = x _ {0} ^ {2}, \\quad y _ {0} = a \\ln x _ {0}, \\quad 2 x _ {0} = \\frac {a}{x _ {0}}.\n$$\n从而解得 $a = 2 \\mathrm{e}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 563
+  },
+  {
+   "id": "zk-202210-01",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 1 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 1,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设两点 $A(4, 0, 5)$ 和 $B(7, 1, 3)$，则向量 $\\overrightarrow{AB}$ 的模为",
+   "options": [
+    "$\\dfrac{1}{14}$",
+    "$\\dfrac{1}{\\sqrt{14}}$",
+    "$\\sqrt{14}$",
+    "$14$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：向量的坐标运算与模长（向量代数）。\n**考点出处**：向量的坐标与模长（向量代数）\n**第一步：由两点坐标写出向量 $\\overrightarrow{AB}$。**\n\n**终点减起点**：\n\n$$\\overrightarrow{AB} = \\{7-4,\\ 1-0,\\ 3-5\\} = \\{3,\\ 1,\\ -2\\}$$\n\n**第二步：按模长公式求 $|\\overrightarrow{AB}|$。**\n\n三维向量的模长是把三个分量平方求和再开方：\n\n$$|\\overrightarrow{AB}| = \\sqrt{3^2 + 1^2 + (-2)^2} = \\sqrt{9 + 1 + 4} = \\sqrt{14}$$\n\n故选 **C**。",
+   "misconception": "- **D 选项 $14$**：这是 $9+1+4$ 的和，**忘记开根号**的典型结果。模长一定是\"平方和的算术平方根\"，最后一步的开方不能省。\n- **B 选项 $\\dfrac{1}{\\sqrt{14}}$、A 选项 $\\dfrac{1}{14}$**：都是把结果**取倒数的变体**（一个开了方、一个没开）。看到分母带 $\\sqrt{\\ }$ 或在 $14$ 附近打转，就该意识到这是命题人拿\"倒数\"设的陷阱。\n- **$\\overrightarrow{AB} = B - A$（终点减起点），不是 $A - B$。**本题若写成 $A-B = \\{-3,-1,2\\}$，模长恰好还是 $\\sqrt{14}$，**结果不受影响**；但在求夹角、判断方向、对坐标的曲线积分里，方向反了是致命错误。**从一开始就写对。**\n- 模长公式对二维、三维完全同构：**平方、求和、开方**，三步而已。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 564
+  },
+  {
+   "id": "zk-202304-01",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "2023 年 4 月 自考 00023 高等数学（工本）第 1 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 1,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设向量 $\\boldsymbol{a} = \\{-1, 1, 1\\}$，且 $\\boldsymbol{b} = \\{2, -1, 2\\}$，则 $\\boldsymbol{a} \\cdot \\boldsymbol{b} =$",
+   "options": [
+    "$-2$",
+    "$-1$",
+    "$1$",
+    "$2$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：向量的数量积（向量代数）。\n**考点出处**：向量的数量积（向量代数）\n数量积的定义是**对应分量乘积之和**：\n\n$$\\boldsymbol{a} \\cdot \\boldsymbol{b} = a_1b_1 + a_2b_2 + a_3b_3 = (-1)\\times 2 + 1\\times(-1) + 1\\times 2$$\n\n逐项算出：\n\n$$= -2 - 1 + 2 = -1$$\n\n选 **B**。",
+   "misconception": "- **符号是本题唯一的坑**：第一项 $(-1)\\times 2 = -2$ 带负号，最后结果是 $-1$ 而不是正数。\n- **C 选项 $1$ 对应\"把 $\\boldsymbol{b}$ 的中间分量 $-1$ 读成 $1$\"**：误读后算得 $-2 + 1 + 2 = 1$，正好落到 C。\n- **A 选项 $-2$ 恰是第一项的值**，**D 选项 $2$ 恰是第三项的值**——这两个选项就是给\"只算了一项就停笔\"的人准备的。\n- 数量积的结果是**一个数**，不是向量。若算出 $\\{3, 4, -1\\}$ 这样的结果，说明你算成了向量积 $\\boldsymbol{a}\\times\\boldsymbol{b}$。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 565
+  },
+  {
+   "id": "zk-202310-01",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 1 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 1,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "在空间直角坐标系中，点 $(1, 1, 0)$ 在",
+   "options": [
+    "$Oxy$ 平面上",
+    "$Oxz$ 平面上",
+    "$Oyz$ 平面上",
+    "$z$ 轴上"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：空间直角坐标系中，点与坐标面、坐标轴的对应关系。\n**考点出处**：空间直角坐标系中点的位置特征（空间解析几何）\n判断一个点\"在哪个坐标面上\"，**只看它哪个坐标为 $0$**：\n\n· 位置 / 坐标特征\n· $Oxy$ 平面 / $z = 0$\n· $Oxz$ 平面 / $y = 0$\n· $Oyz$ 平面 / $x = 0$\n· $x$ 轴 / $y = 0$ 且 $z = 0$\n· $y$ 轴 / $x = 0$ 且 $z = 0$\n· $z$ 轴 / $x = 0$ 且 $y = 0$\n· 原点 / $x = y = z = 0$\n\n点 $(1, 1, 0)$ 中，$z = 0$，而 $x = 1 \\ne 0$、$y = 1 \\ne 0$。\n\n**只有一个坐标为 $0$** ⟹ 该点在对应的坐标平面上。$z = 0$ 对应 $Oxy$ 平面。\n\n所以点 $(1, 1, 0)$ 在 $Oxy$ 平面上，答案是 **A**。",
+   "misconception": "- **别被 $x = 1$、$y = 1$ 干扰**。判断\"在哪个平面上\"必须**恰好有一个坐标为 0**；判断\"在哪个轴上\"必须**恰好有两个坐标为 0**。本题只有一个 $0$，所以只能在平面上，不可能在轴上——**D 直接排除**。\n- 注意本题点 $(1,1,0)$ 的 $x$、$y$ **相等**，容易让人误以为它\"在对称轴上\"，那只是 $Oxy$ 平面**内部**的一条角平分线，不是坐标轴。\n- 记忆口诀：**平面看一个 $0$，轴看两个 $0$，原点看三个 $0$**。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 566
+  },
+  {
+   "id": "zk-202404-01",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 1 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 1,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设向量 $\\boldsymbol{a} = \\{-1, 0, 1\\}$ 且 $\\boldsymbol{b} = \\{1, -1, 1\\}$，则 $2\\boldsymbol{a} + \\boldsymbol{b} =$",
+   "options": [
+    "$\\{1, -1, 3\\}$",
+    "$\\{-1, -1, -3\\}$",
+    "$\\{0, -1, 3\\}$",
+    "$\\{-1, -1, 3\\}$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：向量的数乘与加法（分量对应运算）。\n**考点出处**：向量的数乘与加法（向量代数）\n数乘就是把每个分量都乘以这个数，加法就是把对应分量相加——**都是\"逐个分量各算各的\"**，没有任何交叉。\n\n先算数乘：\n\n$$2\\boldsymbol{a} = 2\\{-1, 0, 1\\} = \\{-2, 0, 2\\}$$\n\n再做加法（按分量对位相加）：\n\n$$2\\boldsymbol{a} + \\boldsymbol{b} = \\{-2, 0, 2\\} + \\{1, -1, 1\\} = \\{-2+1,\\ 0+(-1),\\ 2+1\\} = \\{-1, -1, 3\\}$$",
+   "misconception": "- **B 选项 $\\{-1,-1,-3\\}$ 是本题的\"陷阱\"**：它对应的是 $2\\boldsymbol{a} - \\boldsymbol{b}$，或者第三个分量符号算错。第三个分量是 $2 + 1 = 3$，不是 $-3$。\n- 向量写成 $\\{a_1, a_2, a_3\\}$ 或 $(a_1, a_2, a_3)$ 都表示同一件事，只是记号习惯不同，别被吓到。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 567
+  },
+  {
+   "id": "zk-202410-01",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 1 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 1,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设向量 $\\boldsymbol{a} = -2\\boldsymbol{b}$，且 $\\boldsymbol{b} = \\left\\{1, -1, \\dfrac{1}{2}\\right\\}$，则向量 $\\boldsymbol{a}$ 的模为",
+   "options": [
+    "$1$",
+    "$\\dfrac{3}{2}$",
+    "$2$",
+    "$3$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：向量的数乘与模长（向量代数）。\n**考点出处**：向量的数乘与模长（向量代数）\n**第一步：先算数乘，把 $\\boldsymbol{a}$ 的坐标求出来。**\n\n数乘就是把每个分量都乘以这个数：\n\n$$\\boldsymbol{a} = -2\\boldsymbol{b} = -2\\left\\{1, -1, \\frac{1}{2}\\right\\} = \\left\\{-2,\\ 2,\\ -1\\right\\}$$\n\n**第二步：按模长公式求 $|\\boldsymbol{a}|$。**\n\n$$|\\boldsymbol{a}| = \\sqrt{(-2)^2 + 2^2 + (-1)^2} = \\sqrt{4 + 4 + 1} = \\sqrt{9} = 3$$\n\n故 $\\boldsymbol{a}$ 的模为 $3$，选 **D**。",
+   "misconception": "- **B 选项 $\\dfrac{3}{2}$ 恰好是 $|\\boldsymbol{b}|$**：$|\\boldsymbol{b}| = \\sqrt{1+1+\\frac14} = \\frac32$。这是本题的陷阱——**算了 $\\boldsymbol{b}$ 的模却忘了乘 2**，一步之差就落到 B。\n- **最快的路子是\"先提系数\"**：$|\\boldsymbol{a}| = |-2|\\cdot|\\boldsymbol{b}| = 2\\times\\frac32 = 3$。数乘对模的影响就是\"模乘以系数的绝对值\"，**不必展开坐标也能算**。\n- **C 选项 $2$** 对应的是只取了系数 $|-2|$ 而没乘 $|\\boldsymbol{b}|$ 的结果。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 568
+  },
+  {
+   "id": "zk-202504-01",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "2025 年 4 月 自考 00023 高等数学（工本）第 1 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 1,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "已知两点 $A(0, -1, 2)$ 和 $B(1, 1, -1)$，则与向量 $\\overrightarrow{AB}$ 垂直的向量是",
+   "options": [
+    "$\\{1, -1, 1\\}$",
+    "$\\{1, -1, -1\\}$",
+    "$\\{-1, -1, 1\\}$",
+    "$\\{1, 1, 1\\}$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：向量的坐标表示与点积（垂直判定），向量代数。\n**考点出处**：空间解析几何（向量代数）\n**第一步：先由\"终点减起点\"求出 $\\overrightarrow{AB}$。**\n\n$$\\overrightarrow{AB} = B - A = \\{1 - 0,\\ 1 - (-1),\\ -1 - 2\\} = \\{1,\\ 2,\\ -3\\}$$\n\n**这一步是本题唯一的计算量，也是最容易出符号错的地方。**\n\n**第二步：用点积为零判定垂直，四个选项逐个验。**\n\n两个非零向量垂直 $\\iff$ 点积为 $0$：\n\n$$\\boldsymbol{a}\\cdot\\boldsymbol{b} = a_1b_1 + a_2b_2 + a_3b_3 = 0$$\n\n**A.** $\\{1,-1,1\\}\\cdot\\{1,2,-3\\} = 1 - 2 - 3 = -4 \\ne 0$\n\n**B.** $\\{1,-1,-1\\}\\cdot\\{1,2,-3\\} = 1 - 2 + 3 = 2 \\ne 0$\n\n**C.** $\\{-1,-1,1\\}\\cdot\\{1,2,-3\\} = -1 - 2 - 3 = -6 \\ne 0$\n\n**D.** $\\{1,1,1\\}\\cdot\\{1,2,-3\\} = 1 + 2 - 3 = 0$ ✓\n\n故选 **D**。",
+   "misconception": "- **\"垂直\"与\"平行\"的判据千万别搞反**：**垂直**是点积为 $0$；**平行**是两个向量成比例（叉积为零向量）。本题四个选项里只有一个点积为 $0$，用点积逐个验是最稳的做法。\n- **三个干扰项分别对应三种符号错误，命题人的设计非常精准**：\n  - 选 **A** $\\{1,-1,1\\}$ 的人，把 $\\overrightarrow{AB}$ 的 $y$ 分量写成了 $y_A - y_B = -1 - 1 = -2$，得到 $\\{1,-2,-3\\}$（此时 A 的点积 $1+2-3 = 0$）；\n  - 选 **C** $\\{-1,-1,1\\}$ 的人，把 $z$ 分量的符号写丢，得到 $\\{1,2,3\\}$（此时 C 的点积 $-1-2+3 = 0$）；\n  - 选 **B** $\\{1,-1,-1\\}$ 的人，$y$、$z$ 两个分量同时出错，得到 $\\{1,-2,3\\}$（此时 B 的点积 $1+2-3 = 0$）。\n  **换句话说：只要 $\\overrightarrow{AB}$ 有一个分量符号错，就一定能\"匹配\"到某个干扰项——这道题考的就是终点减起点的符号。**\n- **口诀**：**\"终点减起点，对应分量减对应分量\"**；$A(0,-1,2)$ 的 $y$ 是 $-1$，$1-(-1) = 2$，**负负得正**。\n- **验算习惯**：选定答案后代回点积算一遍，$1+2-3 = 0$ 一目了然。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 569
+  },
+  {
+   "id": "zk-202510-01",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 1 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 1,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设向量 $\\boldsymbol{a} = \\{k, 2, -6\\}$ 与 $\\boldsymbol{b} = \\{2, -1, 3\\}$ 平行，则常数 $k =$",
+   "options": [
+    "$-10$",
+    "$-4$",
+    "$4$",
+    "$10$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：两向量平行的充要条件（对应分量成比例），向量代数。\n**考点出处**：空间解析几何（向量代数）\n**第一步：明确\"平行\"的判定方式。**\n\n两个非零向量平行 $\\iff$ 对应分量成比例 $\\iff$ 叉积为零向量。\n\n本题用\"成比例\"最快。先把 $\\boldsymbol{b}$ 中已知的两个分量之比算出来：\n\n$$\\frac{b_2}{b_1} = \\frac{-1}{2}, \\qquad \\frac{b_3}{b_2} = \\frac{3}{-1} = -3$$\n\n这样算不方便，换个顺序：**用 $\\boldsymbol{b}$ 的两个分量直接定出比例常数**。\n\n$$\\boldsymbol{a} \\parallel \\boldsymbol{b} \\iff \\boldsymbol{a} = \\lambda\\boldsymbol{b}$$\n\n由第二、三分量：\n\n$$2 = \\lambda\\cdot(-1) \\Longrightarrow \\lambda = -2$$\n\n再用第三分量验证：$\\lambda\\cdot 3 = -2\\times 3 = -6$，与 $a_3 = -6$ **完全吻合** ✓。说明比例常数确实是 $\\lambda = -2$。\n\n**第二步：用第一分量定出 $k$。**\n\n$$k = \\lambda\\cdot b_1 = (-2)\\times 2 = -4$$\n\n**第三步：回代验证。**\n\n$$\\boldsymbol{a} = \\{-4,\\ 2,\\ -6\\} = -2\\{2,\\ -1,\\ 3\\} = -2\\boldsymbol{b}$$\n\n确实平行。选 **B**。",
+   "misconception": "- **D 选项 $10$ 是\"把平行当成垂直\"的典型结果**：若误用垂直条件 $\\boldsymbol{a}\\cdot\\boldsymbol{b} = 0$，得 $2k - 2 - 18 = 2k - 20 = 0$，解出 $k = 10$，正好是 D。**平行看比例，垂直看点积，这两个条件千万不能混。**\n- **A 选项 $-10$**：在上面那条错误的点积路线上再把后两项的符号弄反（$2k + 2 + 18 = 0$），就落到 A。A 与 D 是同一个错误的两个变体。\n- **C 选项 $4$**：把 $\\boldsymbol{b}$ 的第二个分量看成了 $+1$（即用 $k/2 = 2/1$），**丢掉了 $-1$ 的负号**。这是扫描件上最容易看漏的地方。\n- **平行比例必须用\"同一对分量\"**：$\\lambda = a_2/b_2 = 2/(-1) = -2$，不要一会儿用 $\\boldsymbol{a}/\\boldsymbol{b}$、一会儿用 $\\boldsymbol{b}/\\boldsymbol{a}$，倒过来会得到 $k = -1$（题目无此选项，也算一种自查）。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 570
+  },
+  {
+   "id": "zk-202604-01",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 1 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 1,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设向量 $\\boldsymbol{a} = \\{1, -1, -1\\}$ 且 $\\boldsymbol{b} = \\{2, 1, 0\\}$，则 $2\\boldsymbol{a}\\cdot\\boldsymbol{b} =$",
+   "options": [
+    "$-2$",
+    "$-1$",
+    "$1$",
+    "$2$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：向量的数乘与数量积（向量代数）。\n**考点出处**：向量的数乘与数量积（向量代数）\n**第一步：先算数乘，把 $2\\boldsymbol{a}$ 的坐标求出来。**\n\n数乘就是每个分量都乘以这个数：\n\n$$2\\boldsymbol{a} = 2\\{1, -1, -1\\} = \\{2, -2, -2\\}$$\n\n**第二步：按\"对应分量相乘再相加\"算数量积。**\n\n$$2\\boldsymbol{a}\\cdot\\boldsymbol{b} = 2\\times 2 + (-2)\\times 1 + (-2)\\times 0 = 4 - 2 + 0 = 2$$\n\n**第三步：换一种算法交叉验证（先点乘再乘 2）。**\n\n点乘与数乘可以交换次序：\n\n$$\\boldsymbol{a}\\cdot\\boldsymbol{b} = 1\\times 2 + (-1)\\times 1 + (-1)\\times 0 = 2 - 1 + 0 = 1$$\n\n$$2\\boldsymbol{a}\\cdot\\boldsymbol{b} = 2\\times(\\boldsymbol{a}\\cdot\\boldsymbol{b}) = 2\\times 1 = 2$$\n\n两种算法结果一致，都是 $2$，对应选项 **D**。\n\n**第四步：三个分量里有一个 $0$，可以口算自查。**\n\n$\\boldsymbol{b}$ 的第三个分量是 $0$，所以第三项必为 $0$，只需算前两项 $4 - 2 = 2$ ✓",
+   "misconception": "- **C 选项 $1$ 正是 $\\boldsymbol{a}\\cdot\\boldsymbol{b}$**：**这是本题最典型的\"漏乘系数\"陷阱**——算完点乘忘了最前面的 $2$，直接选了 $1$。\n- **A 选项 $-2$**：对应把点乘算成 $\\boldsymbol{a}\\cdot\\boldsymbol{b} = -1$ 之后再乘 $2$（把 $1\\times 2$ 的结果误看成 $-1$），或者把 $(-2)\\times1$ 的符号算错。\n- **B 选项 $-1$**：对应只算了 $\\boldsymbol{a}\\cdot\\boldsymbol{b}$ 却把符号搞反（$2-1$ 看成 $-(2-1)$）。\n- **\"$2\\boldsymbol{a}\\cdot\\boldsymbol{b}$\"的读法**是 $(2\\boldsymbol{a})\\cdot\\boldsymbol{b}$。由于数乘与点乘可交换，它与 $2(\\boldsymbol{a}\\cdot\\boldsymbol{b})$ 完全相等，**两种读法都可以，结果相同**。\n- **本题的槽位规律**：第 1 题固定考\"向量代数\"，但变式在换皮——2024 年 10 月考的是\"数乘 + 求模长\"，2025 年 4 月与本卷考的都是\"数乘 + 求数量积\"。**两种都要练**：求模长用 $\\sqrt{a_1^2+a_2^2+a_3^2}$，求数量积用 $a_1b_1+a_2b_2+a_3b_3$，别在最前面这 3 分上丢分。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 571
+  },
+  {
+   "id": "c8-s2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.3",
+   "knowledgePoints": [
+    "8.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.3 平面及其方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "过点 $(1,2,-1)$ 且以 $\\vec n=(2,1,3)$ 为法向量的平面方程是",
+   "options": [
+    "$2x+y+3z+1=0$",
+    "$2x-y+3z-1=0$",
+    "$2x+y+3z-1=0$",
+    "$x+2y+3z-1=0$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：点法式（§8.3）：$2(x-1)+(y-2)+3(z+1)=0$，展开得 $2x+y+3z-1=0$，C 正确。\nA 错：常数项符号错（$-2-2+3=-1$ 应移项为 $-1$）。\nB 错：$y$ 的系数符号错。\nD 错：把点的坐标与法向量分量错位。",
+   "misconception": "⚠️易错点：点法式代入后常数项 $-Ax_0-By_0-Cz_0=-(2+2-3)=-1$；代回点坐标可快速验算：$2+2-3-1=0$。",
+   "extension": null,
+   "tags": [
+    "平面方程",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 572
+  },
+  {
+   "id": "zk-202210-06",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.5",
+   "knowledgePoints": [
+    "8.5"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 6 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 6,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "将 $oxy$ 面上的曲线 $4x^2 - y^2 = 16$ 绕 $y$ 轴旋转一周，所得旋转曲面方程为",
+   "options": [
+    "$4x^2 - (y^2 + z^2) = 16$",
+    "$4x^2 - (y + z)^2 = 16$",
+    "$4(x^2 + z^2) - y^2 = 16$",
+    "$4(x + z)^2 - y^2 = 16$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：坐标面上的曲线绕坐标轴旋转所得旋转曲面的方程（空间解析几何）。\n**考点出处**：旋转曲面方程（空间解析几何）\n**核心规律**：曲线绕 **$y$ 轴**旋转时，曲线上的点转一圈描出一个圆，圆上每一点都满足 $x^2 + z^2 = x_0^2$。\n\n所以做法只有一步：**把\"被旋转掉的那个变量\"平方，替换成另外两个变量的平方和。**\n\n本题曲线在 $oxy$ 平面上：$4x^2 - y^2 = 16$，**绕 $y$ 轴**旋转 ⟹ $y$ 不动，把 $x^2$ 换成 $x^2 + z^2$：\n\n$$4(x^2 + z^2) - y^2 = 16$$\n\n故选 **C**。",
+   "misconception": "- **A 选项 $4x^2 - (y^2+z^2) = 16$**：把 $y^2$ 换成了 $y^2+z^2$，**换错了变量**。这正是\"绕 $x$ 轴\"的写法被误用——**绕谁，谁才不变。**\n- **B、D 选项出现 $(y+z)^2$、$(x+z)^2$**：**平方和写成了一次和**，量纲都不对，一眼可排除。\n- **口诀**：**\"绕谁谁不变，另一个变量的平方换成两个变量的平方和。\"**\n  - 绕 $y$ 轴：保 $y$，$x^2 \\to x^2 + z^2$（本题）；\n  - 绕 $z$ 轴：保 $z$，$y^2 \\to x^2 + y^2$（本课程 2023.04、2024.10 同一槽位考过）；\n  - 绕 $x$ 轴：保 $x$，$y^2 \\to y^2 + z^2$。\n- **别凭感觉加项**：必须先确定\"绕哪根轴\"，再决定\"哪个变量的平方要膨胀成两项\"。\n- 本题原曲线是**双曲线**，旋转后得到的是**旋转双曲面**（单叶或双叶取决于换的是哪一项），不是球面、也不是柱面。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 573
+  },
+  {
+   "id": "zk-202304-06",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.5",
+   "knowledgePoints": [
+    "8.5"
+   ],
+   "source": {
+    "text": "2023 年 4 月 自考 00023 高等数学（工本）第 6 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 6,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "将 $Oxy$ 平面上的曲线 $x^2 - 2y^2 = 1$ 绕 $x$ 轴旋转一周，所得旋转曲面方程为",
+   "options": [
+    "$x^2 + 2y^2 - 2z^2 = 1$",
+    "$x^2 - 2y^2 + z^2 = 1$",
+    "$x^2 - 2y^2 - z^2 = 1$",
+    "$x^2 - 2y^2 - 2z^2 = 1$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：坐标平面上的曲线绕坐标轴旋转所得旋转曲面的方程（空间解析几何）。\n**考点出处**：旋转曲面方程（空间解析几何）\n**核心规律**：曲线绕 **$x$ 轴**旋转时，曲线上横坐标为 $x$、纵坐标为 $y_0$ 的点转一圈，描出一个**半径为 $|y_0|$、位于平面 $x = x_0$ 内的圆**，圆上每一点都满足\n\n$$y^2 + z^2 = y_0^2$$\n\n所以做法只有一步：**把\"被旋转掉的那个变量\"的平方，替换成另外两个变量的平方和**（系数原样保留）。\n\n本题曲线在 $Oxy$ 平面上，方程为 $x^2 - 2y^2 = 1$，**绕 $x$ 轴**旋转：\n\n- $x$ **不动**（旋转轴上的坐标保持）；\n- $y^2$ **换成** $y^2 + z^2$。\n\n代入得\n\n$$x^2 - 2(y^2 + z^2) = 1$$\n\n即\n\n$$x^2 - 2y^2 - 2z^2 = 1$$\n\n选 **D**。",
+   "misconception": "- **系数 $2$ 必须同时作用到 $y^2$ 和 $z^2$ 上**：这是本题唯一的难点。**B 选项 $x^2-2y^2+z^2=1$** 是把新增的 $z^2$ 前面的系数写成了 $+1$；**C 选项 $x^2-2y^2-z^2=1$** 是写成了 $-1$。**两者都丢掉了系数 2。**\n- **A 选项 $x^2+2y^2-2z^2=1$**：把原来的 $-2y^2$ 的符号改成了 $+$，属于凭空改符号。\n- **口诀**：**\"绕谁，谁不变；另一个变量平方 → 两个变量平方和（系数照抄）。\"**\n  - 绕 $x$ 轴：保 $x$，$y^2 \\to y^2+z^2$；\n  - 绕 $z$ 轴：保 $z$，$y^2 \\to x^2+y^2$。\n- **单叶双曲面还是球面？** 原曲线是**双曲线**（带负号），旋转出来是**单叶双曲面**；若原曲线是圆 $y^2+z^2=4$，绕轴旋转才得到球面。看清原方程的符号再判断。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 574
+  },
+  {
+   "id": "zk-202310-06",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 6 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 6,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设向量 $\\boldsymbol{\\alpha} = \\{2, 1, -9\\}$，$\\boldsymbol{\\beta} = \\{1, 0, 1\\}$，则 $\\boldsymbol{\\alpha}\\cdot\\boldsymbol{\\beta} =$",
+   "options": [
+    "$-9$",
+    "$-7$",
+    "$1$",
+    "$2$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：向量的**数量积（点积）**：对应分量相乘再求和。\n**考点出处**：向量的数量积（向量代数）\n数量积公式：\n\n$$\\boldsymbol{\\alpha}\\cdot\\boldsymbol{\\beta} = a_1b_1 + a_2b_2 + a_3b_3$$\n\n代入 $\\boldsymbol{\\alpha} = \\{2, 1, -9\\}$、$\\boldsymbol{\\beta} = \\{1, 0, 1\\}$：\n\n$$\\boldsymbol{\\alpha}\\cdot\\boldsymbol{\\beta} = 2\\times 1 + 1\\times 0 + (-9)\\times 1 = 2 + 0 - 9 = -7$$\n\n答案是 **B**。",
+   "misconception": "- **本题唯一的坑是第三分量 $(-9)\\times 1 = -9$ 的负号**。答案是 $-7$ 而不是 $7$，更不是 $-9$。\n- **A 选项 $-9$ 是\"只算第三项就交卷\"的典型错误**；**D 选项 $2$ 是\"只算第一项\"的错误**。\\(\\boldsymbol{\\beta}\\) 的第二个分量是 $0$，中间那一项是 $0$，别漏掉也别多加。\n- **数量积的结果是一个数（标量），不是向量**。若题目问的是 $\\boldsymbol{\\alpha}\\times\\boldsymbol{\\beta}$（向量积），结果才是向量，且要用行列式\n  $$\\boldsymbol{\\alpha}\\times\\boldsymbol{\\beta} = \\begin{vmatrix} \\boldsymbol{i} & \\boldsymbol{j} & \\boldsymbol{k} \\\\ 2 & 1 & -9 \\\\ 1 & 0 & 1 \\end{vmatrix}$$\n  来算。**读题时务必看清是\"$\\cdot$\"还是\"$\\times$\"。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 575
+  },
+  {
+   "id": "zk-202404-06",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.4",
+   "knowledgePoints": [
+    "8.4"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 6 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 6,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "过点 $M(1, 2, -1)$ 且与直线 $\\dfrac{x-2}{-1} = \\dfrac{y+4}{3} = \\dfrac{z+1}{1}$ 平行的直线是",
+   "options": [
+    "$\\dfrac{x-1}{-1} = \\dfrac{y-2}{3} = \\dfrac{z+1}{1}$",
+    "$\\dfrac{x+1}{1} = \\dfrac{y-3}{2} = \\dfrac{z-1}{-1}$",
+    "$x + 2y - z - 4 = 0$",
+    "$x - 3y - z + 4 = 0$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：空间直线的**对称式（点向式）方程**：$\\dfrac{x-x_0}{m} = \\dfrac{y-y_0}{n} = \\dfrac{z-z_0}{p}$，其中 $(x_0,y_0,z_0)$ 是直线上的点，$\\{m,n,p\\}$ 是方向向量。\n**考点出处**：空间直线方程（平行条件）（空间解析几何）\n**第一步：读出已知直线的方向向量。**\n\n直线 $\\dfrac{x-2}{-1} = \\dfrac{y+4}{3} = \\dfrac{z+1}{1}$ 的方向向量是**三个分母**组成的向量：\n\n$$\\boldsymbol{s} = \\{-1,\\ 3,\\ 1\\}$$\n\n**第二步：平行意味着方向向量相同（或成比例）。**\n\n所求直线与它平行，所以方向向量也取 $\\{-1, 3, 1\\}$。\n\n**第三步：写出过点 $M(1,2,-1)$ 的直线方程。**\n\n对称式方程 = $\\dfrac{x - x_0}{m} = \\dfrac{y-y_0}{n} = \\dfrac{z-z_0}{p}$，把 $M(1,2,-1)$ 和 $\\boldsymbol{s}=\\{-1,3,1\\}$ 代进去：\n\n$$\\frac{x-1}{-1} = \\frac{y-2}{3} = \\frac{z+1}{1}$$\n\n对照选项，正是 **A**。",
+   "misconception": "- **$z$ 方向那项最容易错符号**。点 $M$ 的 $z$ 坐标是 $-1$，所以分子应写 $z - (-1) = z+1$。A 选项写的是 $z+1$，正确。\n- **C、D 是\"平面\"不是\"直线\"**：它们的方程是 $Ax+By+Cz+D=0$ 的形式，表示平面。题目问直线，可以直接排除。\n- B 选项的点是 $(-1, 3, 1)$，不是 $M(1,2,-1)$，方向向量也不对。\n- 记忆口诀：**分母是方向，分子是\"坐标减点坐标\"。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 576
+  },
+  {
+   "id": "zk-202410-06",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.5",
+   "knowledgePoints": [
+    "8.5"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 6 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 6,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "将 $oyz$ 平面上的曲线 $y^2 - z^2 = 4$ 绕 $z$ 轴旋转一周，所得旋转曲面的方程为",
+   "options": [
+    "$-x^2 + y^2 - z^2 = 4$",
+    "$x^2 + y^2 - z^2 = 4$",
+    "$-x^2 - y^2 - z^2 = 4$",
+    "$x^2 + y^2 + z^2 = 4$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：坐标平面上的曲线绕坐标轴旋转所得旋转曲面的方程（空间解析几何）。\n**考点出处**：旋转曲面方程（空间解析几何）\n**核心规律**：曲线绕 **$z$ 轴**旋转时，曲线上纵坐标为 $y_0$ 的点转一圈，描出一个半径为 $|y_0|$ 的圆，圆上每一点都满足 $x^2 + y^2 = y_0^2$。\n\n所以做法只有一步：**把\"被旋转掉的那个变量\"平方，替换成另外两个变量的平方和。**\n\n本题曲线在 $oyz$ 平面上，$y^2 - z^2 = 4$，**绕 $z$ 轴**旋转 ⟹ $z$ 不动，把 $y^2$ 换成 $x^2 + y^2$：\n\n$$(x^2 + y^2) - z^2 = 4$$\n\n即\n\n$$x^2 + y^2 - z^2 = 4$$\n\n选 **B**。",
+   "misconception": "- **A 选项 $-x^2+y^2-z^2=4$**：只凭空添了一个 $-x^2$，没做\"$y^2 \\to x^2+y^2$\"的替换，属于瞎凑。\n- **C 选项 $-x^2-y^2-z^2=4$**：左边全负，不可能等于正的 $4$，一眼可排除。\n- **D 选项 $x^2+y^2+z^2=4$ 是球面**：它对应的是 $oyz$ 平面上**圆** $y^2+z^2=4$ 绕 $z$ 轴旋转。**本题原曲线是双曲线（带负号），旋转出来是单叶双曲面，不是球面。** 这是最容易误选的选项。\n- **口诀**：**\"绕谁，谁不变；另一个变量平方 → 两个变量平方和。\"**\n  - 绕 $z$ 轴：保 $z$，$y^2 \\to x^2+y^2$；\n  - 绕 $x$ 轴：保 $x$，$y^2 \\to y^2+z^2$。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 577
+  },
+  {
+   "id": "zk-202504-06",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.5",
+   "knowledgePoints": [
+    "8.5"
+   ],
+   "source": {
+    "text": "2025 年 4 月 自考 00023 高等数学（工本）第 6 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 6,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "将 $Oyz$ 平面上的曲线 $y^2 + 4z^2 = 16$ 绕 $y$ 轴旋转一周，所得旋转曲面方程是",
+   "options": [
+    "$x^2 + y^2 + 4z^2 = 16$",
+    "$y^2 + 4(x^2 + z^2) = 16$",
+    "$(x + y)^2 + 4z^2 = 16$",
+    "$y^2 + 4(x + z)^2 = 16$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：坐标平面上的曲线绕坐标轴旋转所得旋转曲面的方程，空间解析几何。\n**考点出处**：旋转曲面（旋转曲面）\n**核心规律**：曲线在 $Oyz$ 平面上，绕 **$y$ 轴**旋转时，曲线上纵坐标为 $z_0$ 的点转一圈，描出一个半径为 $|z_0|$ 的圆，圆上每一点都满足\n\n$$x^2 + z^2 = z_0^2$$\n\n所以做法只有一步：**绕谁，谁不变；被\"转掉\"的那个变量平方，替换成另外两个变量的平方和。**\n\n**第一步：确认平面与旋转轴。**\n\n曲线在 $Oyz$ 平面（即 $x = 0$）上，方程 $y^2 + 4z^2 = 16$；绕 **$y$ 轴**旋转。\n\n**第二步：执行替换。**\n\n绕 $y$ 轴 ⟹ $y$ 保持不变，把 $z^2$ 换成 $x^2 + z^2$：\n\n$$y^2 + 4(x^2 + z^2) = 16$$\n\n即\n\n$$y^2 + 4x^2 + 4z^2 = 16$$\n\n选 **B**。",
+   "misconception": "- **A 选项 $x^2 + y^2 + 4z^2 = 16$ 是\"轴认错\"的标准产物**：它是把曲线绕 **$z$ 轴**旋转的结果（保 $z$，$y^2 \\to x^2 + y^2$）。**题目写的是\"绕 $y$ 轴\"，请务必盯住这个字。**\n- **D 选项 $y^2 + 4(x+z)^2 = 16$ 是本题最像样的干扰项**：它把 $z^2$ 换成了 $(x+z)^2$。**旋转曲面的替换一定是\"平方和\" $x^2 + z^2$，不是\"和的平方\" $(x + z)^2$**——前者是圆，后者是抛物线柱面的一部分，几何上讲不通。\n- **C 选项 $(x+y)^2 + 4z^2 = 16$**：把不变的 $y$ 也拖进了括号，纯粹瞎凑，一眼排除。\n- **口诀（务必背牢）**：\n  - 绕 $z$ 轴：**保 $z$**，$y^2 \\to x^2 + y^2$；\n  - 绕 $y$ 轴：**保 $y$**，$z^2 \\to x^2 + z^2$（**本题**）；\n  - 绕 $x$ 轴：**保 $x$**，$y^2 \\to y^2 + z^2$。\n- **先认清\"曲线在哪个坐标面\"**：本题在 $Oyz$ 面，说明它是 $x = 0$ 平面上的曲线，**绕 $y$ 轴转就等于把这个平面\"扫\"成一圈**。\n- **与 2024.10 卷第 6 题一模一样**（那一卷是 $y^2 - z^2 = 4$ 绕 $z$ 轴），**这是三卷都钉死的送分槽位，必须拿满 3 分。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 578
+  },
+  {
+   "id": "zk-202510-06",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.5",
+   "knowledgePoints": [
+    "8.5"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 6 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 6,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "经过点 $P(1,-3,-2)$ 且方向向量为 $\\boldsymbol{v} = \\{2,1,1\\}$ 的直线方程是",
+   "options": [
+    "$2x + y + z + 3 = 0$",
+    "$x - 3y - 2z + 3 = 0$",
+    "$\\dfrac{x-1}{2} = \\dfrac{y+3}{1} = \\dfrac{z+2}{1}$",
+    "$\\dfrac{x-2}{1} = \\dfrac{y-1}{-3} = \\dfrac{z-1}{-2}$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：直线的点向式（对称式）方程（空间解析几何）。\n**考点出处**：空间解析几何（旋转曲面方程）\n**第一步：认出直线的标准形式。**\n\n直线是**一次方程组**或**点向式**；而 $Ax+By+Cz+D=0$ 是**平面**。看到 A、B 是三元一次方程，先警觉。\n\n**第二步：套点向式公式。**\n\n过点 $(x_0,y_0,z_0)$、方向向量为 $\\{m,n,p\\}$ 的直线：\n\n$$\\frac{x-x_0}{m} = \\frac{y-y_0}{n} = \\frac{z-z_0}{p}$$\n\n本题 $(x_0,y_0,z_0) = (1,-3,-2)$，$\\{m,n,p\\} = \\{2,1,1\\}$：\n\n$$\\frac{x-1}{2} = \\frac{y-(-3)}{1} = \\frac{z-(-2)}{1}$$\n\n即\n\n$$\\frac{x-1}{2} = \\frac{y+3}{1} = \\frac{z+2}{1}$$\n\n选 **C**。",
+   "misconception": "- **A、B 是平面，不是直线，直接排除**。特别地，**A 的来历很清楚**：以 $\\{2,1,1\\}$ 为法向量、过点 $P$ 的平面方程是\n  $$2(x-1) + 1\\cdot(y+3) + 1\\cdot(z+2) = 2x + y + z + 3 = 0$$\n  **正好就是 A**。也就是说，A 是\"公式套对了、但方程类型选错了\"（点向式写成了点法式）。B 甚至连点 $P$ 都不经过（代入得 $1+9+4+3 = 17 \\ne 0$）。\n- **D 选项是把\"点\"和\"方向向量\"整个对调了**：分子里的 $2,1,1$ 是**方向向量**，分母里的 $1,-3,-2$ 是**点 $P$ 的坐标**。**分子写点的坐标、分母写方向向量**，顺序是死规定。\n- **负号要小心**：$y_0 = -3$ 时分子写成 $y - (-3) = y+3$，$z_0 = -2$ 时写成 $z - (-2) = z+2$。**负负得正**，这是本题最容易抄错的地方。\n- **方向向量与点必须\"配套\"**：$\\{2,1,1\\}$ 对应点 $(1,-3,-2)$，不能张冠李戴。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 579
+  },
+  {
+   "id": "zk-202604-06",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.3",
+   "knowledgePoints": [
+    "8.3"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 6 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 6,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "经过点 $P(-1, -1, 2)$ 且法向量为 $\\boldsymbol{n} = \\{-1, 1, -1\\}$ 的平面方程是",
+   "options": [
+    "$x + y - 2z - 2 = 0$",
+    "$x - y + z - 2 = 0$",
+    "$\\dfrac{x+1}{-1} = \\dfrac{y+1}{1} = \\dfrac{z-2}{-1}$",
+    "$\\dfrac{x+1}{-1} = \\dfrac{y-1}{-1} = \\dfrac{z+1}{2}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：平面的点法式方程（空间解析几何）。\n**考点出处**：平面的点法式方程（空间解析几何）\n**第一步：直接套点法式。**\n\n$$A(x-x_0) + B(y-y_0) + C(z-z_0) = 0,\\qquad \\boldsymbol{n} = \\{A,B,C\\} = \\{-1,1,-1\\},\\quad (x_0,y_0,z_0) = (-1,-1,2)$$\n\n$$-1\\cdot(x + 1) + 1\\cdot(y + 1) - 1\\cdot(z - 2) = 0$$\n\n**第二步：展开合并。**\n\n$$-x - 1 + y + 1 - z + 2 = 0 \\quad\\Longrightarrow\\quad -x + y - z + 2 = 0$$\n\n两边同乘 $-1$：\n\n$$x - y + z - 2 = 0$$\n\n选 **B**。\n\n**第三步（验算）：把点代回去。**\n\n$$(-1) - (-1) + 2 - 2 = -1 + 1 + 0 = 0 \\quad\\checkmark$$\n\n平面确实经过 $P$。",
+   "misconception": "- **C、D 选项是直线方程，不是平面方程**：它们写成了对称式（分母是方向向量），**连\"平面\"这一关都没过**。看到分母就应立刻排除——**平面的法向量写在分子系数里，直线的方向向量写在分母里，这是两套完全不同的形式。**\n- **A 选项 $x+y-2z-2=0$**：法向量是 $\\{1,1,-2\\}$，与题给的 $\\{-1,1,-1\\}$ **不成比例**，直接出局。**判断平面方程对不对，先看系数是否与法向量成比例。**\n- **代点验算是\"三秒判据\"**：四个选项里，把自己代入点 $P$，满足方程的才可能是答案。A 代入得 $-1-1-4-2=-8\\ne0$，排除。\n- **注意点法式中的减法**：$z - z_0 = z - 2$，**别写成 $z+2$**。\n- **整体乘 $-1$ 不改变平面**：$-x+y-z+2=0$ 与 $x-y+z-2=0$ 是同一个平面，**取哪个作为答案都行，关键是法向量成比例**。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 580
+  },
+  {
+   "id": "c8-s3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8.4",
+   "knowledgePoints": [
+    "8.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.4 空间直线及其方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "直线 $L:\\dfrac{x-1}{1}=\\dfrac{y}{1}=\\dfrac{z+1}{2}$ 与平面 $\\pi:2x-2y+z=0$ 的夹角为",
+   "options": [
+    "$\\arccos\\dfrac{\\sqrt6}{9}$",
+    "$\\arcsin\\dfrac13$",
+    "$\\arccos\\dfrac23$",
+    "$\\arcsin\\dfrac{\\sqrt6}{9}$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：直线方向向量 $\\vec s=(1,1,2)$，平面法向量 $\\vec n=(2,-2,1)$（§8.4）。夹角公式 $\\sin\\varphi=\\dfrac{|\\vec s\\cdot\\vec n|}{|\\vec s|\\,|\\vec n|}=\\dfrac{|2-2+2|}{\\sqrt6\\cdot3}=\\dfrac{2}{3\\sqrt6}=\\dfrac{\\sqrt6}{9}$，故 $\\varphi=\\arcsin\\dfrac{\\sqrt6}{9}$，D 正确。\nA 错：线面夹角用 $\\sin$（与法向量夹角互余），不能用 $\\arccos$ 直接套点积。\nB、C 错：分子分母计算错误。",
+   "misconception": "⚠️易错点：线面夹角 $\\varphi$ 与「直线与法向量夹角」互余，公式里是 $\\sin\\varphi=\\dfrac{|\\vec s\\cdot\\vec n|}{|\\vec s||\\vec n|}$；$\\vec s\\cdot\\vec n=0$ 时直线与平面平行。",
+   "extension": null,
+   "tags": [
+    "线面夹角",
+    "困难"
+   ],
+   "verify": [
+    {
+     "desc": "sinφ",
+     "code": "s=Matrix([1,1,2]); n=Matrix([2,-2,1]); simplify(Abs(s.dot(n))/(sqrt(6)*3) - sqrt(6)/9)",
+     "expected": "0"
+    }
+   ],
+   "idx": 581
+  },
+  {
+   "id": "c8-m1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.2",
+   "knowledgePoints": [
+    "8.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.2 数量积 向量积 *混合积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "对于非零向量 $\\vec a,\\vec b$，下列说法正确的有",
+   "options": [
+    "$\\vec a\\cdot\\vec b=|\\vec a|\\,|\\vec b|\\cos\\theta$（$\\theta$ 为夹角）",
+    "$\\vec a\\times\\vec b$ 的方向按右手法则垂直于 $\\vec a$ 与 $\\vec b$ 所决定的平面",
+    "$|\\vec a\\times\\vec b|=|\\vec a|\\,|\\vec b|\\sin\\theta$，等于以 $\\vec a,\\vec b$ 为邻边的平行四边形面积",
+    "$\\vec a\\cdot\\vec b=0\\iff\\vec a\\parallel\\vec b$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：数量积与向量积的定义及几何意义见 §8.2，A、B、C 正确。\nD 错：$\\vec a\\cdot\\vec b=0\\iff\\vec a\\perp\\vec b$（垂直）；平行的等价条件是 $\\vec a\\times\\vec b=\\vec 0$。",
+   "misconception": "⚠️易错点：「点积零 ⇔ 垂直」「叉积零 ⇔ 平行」两句话别对调；数量积是数量，向量积是向量。",
+   "extension": null,
+   "tags": [
+    "数量积",
+    "向量积",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 582
+  },
+  {
+   "id": "c8-m2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8.3",
+   "knowledgePoints": [
+    "8.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.3 平面及其方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设平面 $\\pi_1:x+y+z=1$ 与 $\\pi_2:x+2y+2z=1$，下列说法正确的有",
+   "options": [
+    "两平面的夹角满足 $\\cos\\theta=\\dfrac{5\\sqrt3}{9}$",
+    "两平面相交于一条直线",
+    "点 $(1,0,0)$ 在平面 $\\pi_1$ 上",
+    "两平面互相垂直"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：法向量 $\\vec n_1=(1,1,1)$，$\\vec n_2=(1,2,2)$。$\\cos\\theta=\\dfrac{\\vec n_1\\cdot\\vec n_2}{|\\vec n_1||\\vec n_2|}=\\dfrac{5}{\\sqrt3\\cdot3}=\\dfrac{5\\sqrt3}{9}$，A 正确；两法向量不平行（分量不成比例），两平面必相交，B 正确；$1+0+0=1$ 成立，C 正确。\nD 错：垂直要求 $\\vec n_1\\cdot\\vec n_2=0$，而此处 $=5$。",
+   "misconception": "⚠️易错点：两平面夹角取 $[0,\\dfrac\\pi2]$，用 $|\\cos\\theta|$（本题点积为正无需取绝对值）；判断平行看法向量是否成比例。",
+   "extension": null,
+   "tags": [
+    "平面夹角",
+    "困难"
+   ],
+   "verify": [
+    {
+     "desc": "cosθ",
+     "code": "n1=Matrix([1,1,1]); n2=Matrix([1,2,2]); simplify(n1.dot(n2)/(sqrt(3)*3) - Rational(5,3)/sqrt(3))",
+     "expected": "0"
+    },
+    {
+     "desc": "点在π1",
+     "code": "1+0+0-1",
+     "expected": "0"
+    }
+   ],
+   "idx": 583
+  },
+  {
+   "id": "c8-j1",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.1 向量及其线性运算",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\vec a\\perp\\vec b$ 的充要条件是 $\\vec a\\cdot\\vec b=0$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\vec a\\cdot\\vec b=|\\vec a||\\vec b|\\cos\\theta=0\\iff\\cos\\theta=0\\iff\\theta=\\dfrac{\\pi}{2}$（$\\vec a,\\vec b$ 均非零）。命题正确（§8.2）。零向量与任何向量都视为垂直（也视为平行），作为约定情形。",
+   "misconception": "⚠️易错点：判垂直用点积，判平行用叉积或坐标成比例；零向量是特殊约定情形。",
+   "extension": null,
+   "tags": [
+    "数量积",
+    "垂直"
+   ],
+   "verify": [],
+   "idx": 584
+  },
+  {
+   "id": "c8-j2",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.2",
+   "knowledgePoints": [
+    "8.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.2 数量积 向量积 *混合积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\vec a\\times\\vec b=\\vec b\\times\\vec a$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：向量积满足反交换律 $\\vec a\\times\\vec b=-\\vec b\\times\\vec a$（右手法则方向相反），一般不等于 $\\vec b\\times\\vec a$。命题错误（§8.2）。",
+   "misconception": "⚠️易错点：向量积不满足交换律与结合律，但满足分配律；只有 $\\vec a\\parallel\\vec b$ 时两者才同为零向量。",
+   "extension": null,
+   "tags": [
+    "向量积",
+    "运算律",
+    "易错点"
+   ],
+   "verify": [],
+   "idx": 585
+  },
+  {
+   "id": "c8-j3",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.5",
+   "knowledgePoints": [
+    "8.5"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.5 曲面及其方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "方程 $x^2+y^2=4$ 在空间直角坐标系中表示球面。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：方程 $x^2+y^2=4$ 中不含 $z$，表示母线平行于 $z$ 轴的**圆柱面**（准线为 $xOy$ 面上的圆，§8.5）。球面方程应为 $x^2+y^2+z^2=4$。命题错误。",
+   "misconception": "⚠️易错点：同一方程在平面与空间中意义不同——「缺哪个变量，母线就平行于哪条轴」；$F(x,y)=0$ 型都是柱面。",
+   "extension": "引申：常见二次曲面口诀——椭球面、抛物面、双曲面（单叶/双叶）、锥面；判定方法是截痕法（用平面去截看交线形状）。",
+   "tags": [
+    "二次曲面",
+    "柱面",
+    "易错点"
+   ],
+   "verify": [],
+   "idx": 586
+  },
+  {
+   "id": "c8-b1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.1 向量及其线性运算",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "向量 $\\vec a=(1,-2,2)$ 的模 $|\\vec a|=$ ____。",
+   "options": null,
+   "answer": [
+    "3"
+   ],
+   "accept": [
+    "3"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$|\\vec a|=\\sqrt{1^2+(-2)^2+2^2}=\\sqrt9=3$（§8.1）。相应单位向量 $\\vec a^{\\,0}=\\pm\\dfrac13(1,-2,2)$。",
+   "misconception": "⚠️易错点：负分量平方后为正；$(3,4,0)$ 型勾股数要熟。",
+   "extension": null,
+   "tags": [
+    "向量模"
+   ],
+   "verify": [
+    {
+     "desc": "norm",
+     "code": "Matrix([1,-2,2]).norm()",
+     "expected": "3"
+    }
+   ],
+   "idx": 587
+  },
+  {
+   "id": "c8-b2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.2",
+   "knowledgePoints": [
+    "8.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.2 数量积 向量积 *混合积",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $\\vec a=(1,1,0)$，$\\vec b=(0,1,1)$，则 $\\vec a\\times\\vec b=$ ____（写成坐标形式）。",
+   "options": null,
+   "answer": [
+    "(1,-1,1)"
+   ],
+   "accept": [
+    "(1,-1,1)",
+    "(1, -1, 1)",
+    "i-j+k",
+    "(1，-1，1)"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\vec a\\times\\vec b=\\begin{vmatrix}\\vec i&\\vec j&\\vec k\\\\1&1&0\\\\0&1&1\\end{vmatrix}=(1\\cdot1-0\\cdot1,\\ 0\\cdot0-1\\cdot1,\\ 1\\cdot1-1\\cdot0)=(1,-1,1)$（§8.2）。",
+   "misconception": "⚠️易错点：中间分量前有负号（代数余子式符号）；验算 $(1,-1,1)\\cdot(1,1,0)=0$、$(1,-1,1)\\cdot(0,1,1)=0$。",
+   "extension": null,
+   "tags": [
+    "向量积"
+   ],
+   "verify": [
+    {
+     "desc": "cross",
+     "code": "Matrix([1,1,0]).cross(Matrix([0,1,1]))",
+     "expected": "Matrix([[1], [-1], [1]])"
+    }
+   ],
+   "idx": 588
+  },
+  {
+   "id": "ky-2005-3-a5291c",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "2005 年考研数学（一）第 3 题",
+    "kind": "exam-original",
+    "year": 2005,
+    "region": "全国",
+    "paper": "2005 年考研数学（一）",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2005年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2005年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2005年解析/2005年解析.md"
+   },
+   "stem": "设函数 $u(x, y, z) = 1 + \\frac{x^2}{6} + \\frac{y^2}{12} + \\frac{z^2}{18}$ , 单位向量 $\\boldsymbol{n} = \\frac{1}{\\sqrt{3}} (1, 1, 1)$ , 则 $\\left.\\frac{\\partial u}{\\partial \\boldsymbol{n}}\\right|_{(1, 2, 3)} =$ ______.",
+   "options": null,
+   "answer": [
+    "$\\frac{\\sqrt{3}}{3}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{\\sqrt{3}}{3}$\n【解】 $\\frac{\\partial u}{\\partial x} = \\frac{x}{3}, \\frac{\\partial u}{\\partial y} = \\frac{y}{6}, \\frac{\\partial u}{\\partial z} = \\frac{z}{9},$\n\n由 $\\frac{\\partial u}{\\partial x}\\bigg|_{(1,2,3)} = \\frac{1}{3},\\quad \\frac{\\partial u}{\\partial y}\\bigg|_{(1,2,3)} = \\frac{1}{3},\\quad \\frac{\\partial u}{\\partial z}\\bigg|_{(1,2,3)} = \\frac{1}{3}$ 得\n\n$$\n\\left. \\frac {\\partial u}{\\partial n} \\right| _ {(1, 2, 3)} = \\frac {1}{3} \\times \\frac {1}{\\sqrt {3}} + \\frac {1}{3} \\times \\frac {1}{\\sqrt {3}} + \\frac {1}{3} \\times \\frac {1}{\\sqrt {3}} = \\frac {\\sqrt {3}}{3}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 589
+  },
+  {
+   "id": "ky-2005-4-5a07c9",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.5",
+   "knowledgePoints": [
+    "8.5"
+   ],
+   "source": {
+    "text": "2005 年考研数学（一）第 4 题",
+    "kind": "exam-original",
+    "year": 2005,
+    "region": "全国",
+    "paper": "2005 年考研数学（一）",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2005年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2005年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2005年解析/2005年解析.md"
+   },
+   "stem": "设 $\\Omega$ 是由锥面 $z = \\sqrt{x^2 + y^2}$ 与半球面 $z = \\sqrt{R^2 - x^2 - y^2}$ 围成的空间区域, $\\Sigma$ 是 $\\Omega$ 的整个边界的外侧, 则 $\\iint_{\\Sigma} x \\mathrm{~d}y \\mathrm{~d}z + y \\mathrm{~d}z \\mathrm{~d}x + z \\mathrm{~d}x \\mathrm{~d}y = \\underline{\\quad}$ .",
+   "options": null,
+   "answer": [
+    "$(2 - \\sqrt{2})\\pi R^3$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$(2 - \\sqrt{2})\\pi R^3$\n【解】 方法一 由 $\\left\\{ \\begin{array}{l} z = \\sqrt{x^2 + y^2}, \\\\ z = \\sqrt{R^2 - x^2 - y^2}, \\end{array} \\right.$ 得 $x^2 + y^2 = \\frac{R^2}{2}$ .\n\n令 $D: x^2 + y^2 \\leqslant \\frac{R^2}{2}$ , 由高斯公式得\n\n$$\n\\iint_ {\\Sigma} x \\mathrm {d} y \\mathrm {d} z + y \\mathrm {d} z \\mathrm {d} x + z \\mathrm {d} x \\mathrm {d} y = 3 \\iiint_ {\\Omega} \\mathrm {d} v = 3 \\iint_ {D} \\mathrm {d} x \\mathrm {d} y \\int_ {\\sqrt {x ^ {2} + y ^ {2}}} ^ {\\sqrt {R ^ {2} - x ^ {2} - y ^ {2}}} \\mathrm {d} z\n$$\n\n$$\n\\begin{array}{l} = 3 \\iint_ {D} \\left(\\sqrt {R ^ {2} - x ^ {2} - y ^ {2}} - \\sqrt {x ^ {2} + y ^ {2}}\\right) d x d y \\\\ = 3 \\int_ {0} ^ {2 \\pi} \\mathrm {d} \\theta \\int_ {0} ^ {\\frac {R}{\\sqrt {2}}} r \\left(\\sqrt {R ^ {2} - r ^ {2}} - r\\right) \\mathrm {d} r = 6 \\pi \\int_ {0} ^ {\\frac {R}{\\sqrt {2}}} r \\sqrt {R ^ {2} - r ^ {2}} \\mathrm {d} r - \\frac {\\pi R ^ {3}}{\\sqrt {2}} \\\\ = - 3 \\pi \\int_ {0} ^ {\\frac {R}{\\sqrt {2}}} \\sqrt {R ^ {2} - r ^ {2}} d \\left(R ^ {2} - r ^ {2}\\right) - \\frac {\\pi R ^ {3}}{\\sqrt {2}} = (2 - \\sqrt {2}) \\pi R ^ {3}. \\\\ \\end{array}\n$$\n\n方法二 由高斯公式得\n\n$$\n\\begin{array}{l} \\iint_ {\\Sigma} x \\mathrm {d} y \\mathrm {d} z + y \\mathrm {d} z \\mathrm {d} x + z \\mathrm {d} x \\mathrm {d} y = 3 \\iiint_ {\\Omega} \\mathrm {d} v = 3 \\int_ {0} ^ {2 \\pi} \\mathrm {d} \\theta \\int_ {0} ^ {\\frac {\\pi}{4}} \\mathrm {d} \\varphi \\int_ {0} ^ {R} r ^ {2} \\sin \\varphi \\mathrm {d} r = 6 \\pi \\int_ {0} ^ {\\frac {\\pi}{4}} \\sin \\varphi \\mathrm {d} \\varphi \\int_ {0} ^ {R} r ^ {2} \\mathrm {d} r \\\\ = 2 \\pi R ^ {3} \\left(1 - \\frac {\\sqrt {2}}{2}\\right) = (2 - \\sqrt {2}) \\pi R ^ {3}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 590
+  },
+  {
+   "id": "ky-2006-3-f0942e",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.5",
+   "knowledgePoints": [
+    "8.5"
+   ],
+   "source": {
+    "text": "2006 年考研数学（一）第 3 题",
+    "kind": "exam-original",
+    "year": 2006,
+    "region": "全国",
+    "paper": "2006 年考研数学（一）",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2006年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2006年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2006年解析/2006年解析.md"
+   },
+   "stem": "设 $\\Sigma$ 是锥面 $z = \\sqrt{x^2 + y^2} (0 \\leqslant z \\leqslant 1)$ 的下侧, 则 $\\iint_{\\Sigma} x \\mathrm{~d}y \\mathrm{~d}z + 2y \\mathrm{~d}z \\mathrm{~d}x + 3(z - 1) \\mathrm{d}x \\mathrm{~d}y = \\underline{\\quad}$ .",
+   "options": null,
+   "answer": [
+    "$2\\pi$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$2\\pi$\n【解】补充 $\\Sigma_0: z = 1(x^2 + y^2 \\leqslant 1)$ 取上侧，则\n\n$$\n\\begin{array}{l} \\iint_ {\\Sigma} x \\mathrm {d} y \\mathrm {d} z + 2 y \\mathrm {d} z \\mathrm {d} x + 3 (z - 1) \\mathrm {d} x \\mathrm {d} y = \\oiint_ {\\Sigma + \\Sigma_ {0}} x \\mathrm {d} y \\mathrm {d} z + 2 y \\mathrm {d} z \\mathrm {d} x + 3 (z - 1) \\mathrm {d} x \\mathrm {d} y - \\\\ \\iint_ {\\Sigma_ {0}} x \\mathrm {d} y \\mathrm {d} z + 2 y \\mathrm {d} z \\mathrm {d} x + 3 (z - 1) \\mathrm {d} x \\mathrm {d} y, \\\\ \\end{array}\n$$\n\n由高斯公式得\n\n$$\n\\oiint_ {\\Sigma + \\Sigma_ {0}} x \\mathrm {d} y \\mathrm {d} z + 2 y \\mathrm {d} z \\mathrm {d} x + 3 (z - 1) \\mathrm {d} x \\mathrm {d} y = 6 \\iiint_ {\\Omega} \\mathrm {d} v = 6 \\int_ {0} ^ {1} \\mathrm {d} z \\iint_ {x ^ {2} + y ^ {2} \\leqslant z ^ {2}} \\mathrm {d} x \\mathrm {d} y = 6 \\pi \\int_ {0} ^ {1} z ^ {2} \\mathrm {d} z = 2 \\pi ,\n$$\n\n而 $\\iint_{\\Sigma_0}x\\mathrm{d}y\\mathrm{d}z + 2y\\mathrm{d}z\\mathrm{d}x + 3(z - 1)\\mathrm{d}x\\mathrm{d}y = 0,$\n\n所以 $\\iint_{\\Sigma} x \\, \\mathrm{d}y \\, \\mathrm{d}z + 2y \\, \\mathrm{d}z \\, \\mathrm{d}x + 3(z - 1) \\, \\mathrm{d}x \\, \\mathrm{d}y = 2\\pi.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 591
+  },
+  {
+   "id": "ky-2006-4-f9e734",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.3",
+   "knowledgePoints": [
+    "8.3"
+   ],
+   "source": {
+    "text": "2006 年考研数学（一）第 4 题",
+    "kind": "exam-original",
+    "year": 2006,
+    "region": "全国",
+    "paper": "2006 年考研数学（一）",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2006年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2006年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2006年解析/2006年解析.md"
+   },
+   "stem": "点 $(2,1,0)$ 到平面 $3x + 4y + 5z = 0$ 的距离 $d = \\_$",
+   "options": null,
+   "answer": [
+    "$\\sqrt{2}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\sqrt{2}$\n【解】点（2，1，0）到平面 $3x + 4y + 5z = 0$ 的距离为 $d = \\frac{|3\\times 2 + 4\\times 1|}{\\sqrt{3^2 + 4^2 + 5^2}} = \\sqrt{2}.$\n\n方法点评：本题考查点到平面的距离.\n\n空间解析几何部分需要掌握如下几个距离公式：\n\n（1）两点之间的距离：设 $A(x_{1},y_{1},z_{1}),B(x_{2},y_{2},z_{2})$ ，则两点之间的距离公式为\n\n$$\nd = \\sqrt {\\left(x _ {2} - x _ {1}\\right) ^ {2} + \\left(y _ {2} - y _ {1}\\right) ^ {2} + \\left(z _ {2} - z _ {1}\\right) ^ {2}};\n$$\n\n（2）点到平面的距离：设平面 $\\pi :Ax + By + Cz + D = 0$ ，点 $M_0(x_0,y_0,z_0)\\notin D$ ，则 $M_0$ 到 $\\pi$ 的距离为\n\n$$\nd = \\frac {\\left| A x _ {0} + B y _ {0} + C z _ {0} + D \\right|}{\\sqrt {A ^ {2} + B ^ {2} + C ^ {2}}};\n$$\n\n（3）点到直线的距离：设 $L:\\frac{x - x_0}{m} = \\frac{y - y_0}{n} = \\frac{z - z_0}{p},M_1(x_1,y_1,z_1)\\notin L,$\n\n令 $M_0(x_0, y_0, z_0), s = \\{m, n, p\\}$ ，则点 $M_1$ 到直线 $L$ 的距离为\n\n$$\nd = \\frac {\\left| \\overrightarrow {M _ {0} M _ {1}} \\times s \\right|}{\\left| s \\right|}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 592
+  },
+  {
+   "id": "ky-2010-13-ddf9f2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "2010 年考研数学（一）第 13 题",
+    "kind": "exam-original",
+    "year": 2010,
+    "region": "全国",
+    "paper": "2010 年考研数学（一）",
+    "number": "13",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2010年解析/2010年解析.md"
+   },
+   "stem": "设 $\\pmb{\\alpha}_{1} = (1,2, - 1,0)^{\\mathrm{T}},\\pmb{\\alpha}_{2} = (1,1,0,2)^{\\mathrm{T}},\\pmb{\\alpha}_{3} = (2,1,1,a)^{\\mathrm{T}}$ 若由 $\\pmb{\\alpha}_{1},\\pmb{\\alpha}_{2},\\pmb{\\alpha}_{3}$ 生成的向量空间的维数为2，则 $a =$",
+   "options": null,
+   "answer": [
+    "6"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：6\n【解】 $(\\pmb{\\alpha}_{1},\\pmb{\\alpha}_{2},\\pmb{\\alpha}_{3}) = \\begin{bmatrix} 1 & 1 & 2\\\\ 2 & 1 & 1\\\\ -1 & 0 & 1\\\\ 0 & 2 & a \\end{bmatrix} \\rightarrow \\begin{bmatrix} 1 & 1 & 2\\\\ 0 & -1 & -3\\\\ 0 & 1 & 3\\\\ 0 & 2 & a \\end{bmatrix} \\rightarrow \\begin{bmatrix} 1 & 1 & 2\\\\ 0 & 1 & 3\\\\ 0 & 0 & 0\\\\ 0 & 0 & a - 6 \\end{bmatrix}$\n\n因为由 $\\alpha_{1},\\alpha_{2},\\alpha_{3}$ 组成的向量组的秩为2，所以 $a = 6$\n\n方法点评：向量组的秩与向量组所构成的矩阵的秩相等，因为向量组 $\\alpha_{1},\\alpha_{2},\\alpha_{3}$ 的秩为2，所以其构成的矩阵的秩为2，经过初等行变换阶梯化后应为2个非零行，故可求出 $a$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 593
+  }
+ ]
+}

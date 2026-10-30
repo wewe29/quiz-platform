@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大学《__SUBJECT_NAME__》题库刷题 · 复习刷题平台</title>
+<meta name="description" content="__SUBJECT_DESC__刷题子站：六题型、三难度、逐题解析与考点出处，全站资源自托管，进度保存在本地。">
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/subject.css">
+<link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
+<script>
+/* 主题预置：子站自身的主题设置（存储在 quiz-linalg-v2）加载后由 app.js 接管 */
+(function(){try{
+  var p=localStorage.getItem('quiz-platform-theme');
+  var d=p? p==='dark' : !!(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.setAttribute('data-theme',d?'dark':'light');
+}catch(e){}})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#quiz">跳到题目区</a>
+
+<header class="hud" id="hud">
+  <div class="hud-inner">
+    <div class="hud-top">
+      <div class="hud-title">
+        <a class="btn btn-ghost btn-sm portal-link" href="../../">← 门户</a>
+        <h1>大学《__SUBJECT_NAME__》题库刷题</h1>
+        <p class="hud-sub" id="hud-sub">题库加载中…</p>
+      </div>
+      <div class="hud-metrics">
+        <div class="metric"><span class="metric-k">进度</span><span class="metric-v" id="m-progress">0 / 0</span></div>
+        <div class="metric"><span class="metric-k">用时</span><span class="metric-v" id="m-time">00:00</span></div>
+        <div class="metric"><span class="metric-k">得分</span><span class="metric-v" id="m-score">0 / 0</span></div>
+        <div class="metric"><span class="metric-k">得分率</span><span class="metric-v" id="m-rate">—</span></div>
+        <div class="metric"><span class="metric-k">客观正确率</span><span class="metric-v" id="m-acc">—</span></div>
+      </div>
+    </div>
+    <div class="progress" role="progressbar" aria-label="答题进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+    <div class="hud-actions">
+      <button type="button" class="btn" id="btn-finish">结束本次并结算</button>
+      <button type="button" class="btn" id="btn-reset">重新开始（清空本次）</button>
+      <button type="button" class="btn btn-ghost" id="btn-stats">统计面板</button>
+      <button type="button" class="btn btn-ghost" id="btn-wrong">错题本</button>
+      <button type="button" class="btn btn-ghost" id="btn-sheet">答题卡</button>
+      <button type="button" class="btn btn-ghost" id="btn-theme">主题：跟随系统</button>
+    </div>
+  </div>
+</header>
+
+<div class="storage-warn" id="storage-warn" hidden>当前浏览器无法使用本地存储，本次作答记录不会被保存。</div>
+
+<div class="layout">
+  <aside class="filters" id="filters" aria-label="筛选与排序">
+    <details class="filter-block" open>
+      <summary>题型</summary>
+      <div class="chips" id="f-types"></div>
+    </details>
+    <details class="filter-block" open>
+      <summary>难度</summary>
+      <div class="chips" id="f-diffs"></div>
+    </details>
+    <details class="filter-block" open>
+      <summary>章节</summary>
+      <div class="chips" id="f-chapters"></div>
+    </details>
+    <details class="filter-block" open>
+      <summary>练习设置</summary>
+      <div class="field">
+        <label for="f-mode">练习模式</label>
+        <select id="f-mode">
+          <option value="single">单题聚焦（一屏一题，推荐）</option>
+          <option value="list">列表分页（每页 20 题）</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-order">排序</label>
+        <select id="f-order">
+          <option value="difficulty_desc">难度降序（困难 → 基础，默认）</option>
+          <option value="difficulty_asc">难度升序（基础 → 困难）</option>
+          <option value="chapter">按章节顺序</option>
+          <option value="type">按题型顺序</option>
+        </select>
+      </div>
+      <label class="switch"><input type="checkbox" id="f-shuffle"><span>随机乱序</span></label>
+      <label class="switch"><input type="checkbox" id="f-wrongonly"><span>只看错题本</span></label>
+      <div class="field">
+        <label for="f-kw">关键词</label>
+        <input type="search" id="f-kw" placeholder="题干/解析中搜索…">
+      </div>
+      <p class="hint kbd-hint">⌨️ 单题模式：← → 切题 · A–D 选选项 · Enter 确认多选</p>
+      <p class="hint" id="f-count">—</p>
+    </details>
+    <details class="filter-block">
+      <summary>题库说明</summary>
+      <div class="about" id="about-block"><p>加载中…</p></div>
+    </details>
+  </aside>
+
+  <main id="quiz" class="quiz" tabindex="-1">
+    <div class="empty" id="boot-hint">题库加载中…</div>
+  </main>
+</div>
+
+<section class="panel" id="panel-stats" hidden aria-label="统计面板">
+  <h2>统计面板</h2>
+  <div class="stat-grid" id="stat-grid"></div>
+  <h3>答案位置统计（题库实测，非声称）</h3>
+  <div id="pos-stat"></div>
+  <h3>分值口径（副口径；主口径为题数）</h3>
+  <div id="score-table"></div>
+</section>
+
+<section class="panel" id="panel-sheet" hidden aria-label="答题卡">
+  <h2>答题卡</h2>
+  <div class="sheet-legend" id="sheet-legend"></div>
+  <div class="sheet-grid" id="sheet-grid"></div>
+</section>
+
+<section class="panel" id="panel-wrong" hidden aria-label="错题本">
+  <h2>错题本 <span class="muted" id="wrong-count"></span></h2>
+  <div class="wrong-actions">
+    <button type="button" class="btn" id="btn-wrong-practice">只练这些题</button>
+    <button type="button" class="btn btn-ghost" id="btn-wrong-clear">清空错题本</button>
+  </div>
+  <div id="wrong-list"></div>
+</section>
+
+<footer class="foot">
+  <div id="foot-dynamic"></div>
+  <p class="muted">本子站属于 <a href="../../">复习刷题平台</a> · 单文件离线版：<a href="https://wewe29.github.io/linear-algebra-quiz/" rel="noopener">linear-algebra-quiz</a></p>
+</footer>
+
+<script src="assets/vendor/katex/katex.min.js"></script>
+<script src="assets/vendor/katex/contrib/auto-render.min.js"></script>
+<script src="assets/js/subject.js"></script>
+<script src="assets/js/core/store.js"></script>
+<script src="assets/js/core/bank.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

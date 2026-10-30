@@ -1,0 +1,1473 @@
+{
+ "chapter": 4,
+ "questions": [
+  {
+   "id": "c4-s1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.1 不定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "下列等式中正确的是",
+   "options": [
+    "$\\int f'(x)\\,dx=f(x)$",
+    "$\\dfrac{d}{dx}\\int f(x)\\,dx=f(x)$",
+    "$\\int \\mathrm{d}f(x)=f(x)$",
+    "$\\mathrm{d}\\int f(x)\\,dx=f(x)$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：不定积分与微分（求导）互为逆运算时的关系（§4.1）：先积分后求导恰好还原——$\\left(\\int f(x)\\,dx\\right)'=f(x)$，故 B 正确。\nA 错：$\\int f'(x)\\,dx=f(x)+C$，丢掉了任意常数 $C$。\nC 错：$\\int \\mathrm{d}f(x)=\\int f'(x)\\,dx=f(x)+C$，同样丢 $C$。\nD 错：先积分后微分得的是微分 $\\mathrm{d}\\left(\\int f\\,dx\\right)=f(x)\\,dx$，右边缺少 $\\,dx$。",
+   "misconception": "⚠️易错点：记准口诀「先积后导，恰好还原；先导后积，差个常数」——是否相差 $C$ 是这类判断题的唯一定盘星。",
+   "extension": null,
+   "tags": [
+    "不定积分性质",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 329
+  },
+  {
+   "id": "ky2-1992-5-3e7b69",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "1992 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1992,
+    "region": "全国",
+    "paper": "1992 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "若 $f(x)$ 的导函数是 $\\sin x$ ，则 $f(x)$ 有一个原函数为……（）",
+   "options": [
+    "$1 + \\sin x$",
+    "$1 - \\sin x$",
+    "$1 + \\cos x$",
+    "$1 - \\cos x$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：B\n应选 (B).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 330
+  },
+  {
+   "id": "c4-s2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "knowledgePoints": [
+    "4.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.2 换元积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int\\dfrac{dx}{1+\\sqrt{x}}=$",
+   "options": [
+    "$2\\sqrt{x}-2\\ln(1+\\sqrt{x})+C$",
+    "$2\\sqrt{x}+2\\ln(1+\\sqrt{x})+C$",
+    "$\\sqrt{x}-\\ln(1+\\sqrt{x})+C$",
+    "$2\\sqrt{x}-\\ln(1+2\\sqrt{x})+C$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：令 $t=\\sqrt{x}$（$x=t^2$，$dx=2t\\,dt$），\n$$\\int\\frac{2t\\,dt}{1+t}=\\int\\left(2-\\frac{2}{1+t}\\right)dt=2t-2\\ln(1+t)+C=2\\sqrt{x}-2\\ln(1+\\sqrt{x})+C,$$\n故 A 正确。\nB 错：拆分 $\\dfrac{2t}{1+t}=2-\\dfrac{2}{1+t}$ 时符号写错。\nC 错：换元后忘记 $dx=2t\\,dt$ 中的因子 $2t$。\nD 错：对数内系数处理错误，$\\int\\dfrac{2}{1+t}dt=2\\ln|1+t|$ 系数在真数之外。",
+   "misconception": "⚠️易错点：第二类换元必须把 $dx$ 一并换成 $t$ 的表达式（含雅可比因子），回代时别漏平方根的限定（$x\\ge0$）。",
+   "extension": null,
+   "tags": [
+    "第二类换元",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "求导还原",
+     "code": "xx=symbols('xx', positive=True); F=2*sqrt(xx)-2*log(1+sqrt(xx)); simplify(diff(F,xx) - 1/(1+sqrt(xx)))",
+     "expected": "0"
+    }
+   ],
+   "idx": 331
+  },
+  {
+   "id": "c4-s3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "knowledgePoints": [
+    "4.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.3 分部积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int x^2 e^x\\,dx=$",
+   "options": [
+    "$e^x(x^2+2x+2)+C$",
+    "$e^x(x^2-2x)+C$",
+    "$e^x(x^2-x+1)+C$",
+    "$e^x(x^2-2x+2)+C$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：分部积分两次（§4.3，幂函数优先进 $u$）：\n$$\\int x^2e^x dx=x^2e^x-\\int 2xe^x dx=x^2e^x-\\left(2xe^x-\\int 2e^x dx\\right)=e^x(x^2-2x+2)+C,$$\n故 D 正确。\nA 错：第二次分部时 $\\int 2xe^xdx=2xe^x-2e^x$ 的符号取反。\nB 错：漏掉了 $\\int 2e^xdx=2e^x$ 这最后一项。\nC 错：系数与项都错，是「感觉化」答案。",
+   "misconception": "⚠️易错点：分部两次后会出现「循环」结构 $\\int xe^xdx$，第二次结果要**整体代入**并整理符号；正负号连错是最常见丢分点。",
+   "extension": "引申：$\\int P_n(x)e^{ax}dx$ 型总可经 $n$ 次分部化为 $e^{ax}\\left(P_n-\\frac{P_n'}{a}+\\frac{P_n''}{a^2}-\\cdots\\right)+C$；同理 $\\int P_n(x)\\sin ax\\,dx$、$\\int P_n(x)\\cos ax\\,dx$。",
+   "tags": [
+    "分部积分",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "求导还原",
+     "code": "simplify(diff(exp(x)*(x**2-2*x+2), x) - x**2*exp(x))",
+     "expected": "0"
+    }
+   ],
+   "idx": 332
+  },
+  {
+   "id": "c4-m1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.1 不定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "关于原函数与不定积分，下列说法正确的有",
+   "options": [
+    "区间上的连续函数必有原函数",
+    "若 $F(x)$ 是 $f(x)$ 的一个原函数，则 $\\int f(x)\\,dx=F(x)+C$",
+    "任何函数都有原函数",
+    "初等函数的原函数一定还是初等函数"
+   ],
+   "answer": [
+    "A",
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：原函数存在定理：连续函数必有原函数（变上限积分 $\\int_a^x f(t)dt$ 就是一个，§4.1/§5.2），A 正确；不定积分定义为全体原函数 $F(x)+C$，B 正确。\nC 错：含第一类间断点的函数在含该点的区间上不存在原函数（导函数无第一类间断点）。\nD 错：初等函数的原函数可能「积不出来」，如 $e^{-x^2}$、$\\dfrac{\\sin x}{x}$ 的原函数不是初等函数。",
+   "misconception": "⚠️易错点：「连续 $\\Rightarrow$ 有原函数」，但「有原函数」不要求连续；「初等函数的原函数存在」与「原函数是初等函数」是两回事。",
+   "extension": "引申：$\\dfrac{\\sin x}{x}$、$e^{-x^2}$、$\\dfrac{1}{\\ln x}$ 的原函数都存在但非初等，它们分别定义了正弦积分 $\\mathrm{Si}(x)$、误差函数 $\\mathrm{erf}(x)$ 与对数积分 $\\mathrm{li}(x)$ 等特殊函数。",
+   "tags": [
+    "原函数",
+    "概念辨析"
+   ],
+   "verify": [],
+   "idx": 333
+  },
+  {
+   "id": "c4-m2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "knowledgePoints": [
+    "4.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.2 换元积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $\\int f(x)\\,dx=F(x)+C$，则下列等式成立的有",
+   "options": [
+    "$\\int f(2x)\\,dx=F(2x)+C$",
+    "$\\int f(\\sin x)\\cos x\\,dx=F(\\sin x)+C$",
+    "$\\int xf(x)\\,dx=xF(x)-\\int F(x)\\,dx$",
+    "$\\int \\dfrac{f(\\ln x)}{x}\\,dx=F(\\ln x)+C$"
+   ],
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：B：凑微分 $\\cos x\\,dx=d(\\sin x)$，再用 $\\int f(u)du=F(u)+C$，正确。C：对 $\\int xf(x)dx$ 用分部积分（$u=x,\\ dv=f(x)dx$）：$xF(x)-\\int F(x)dx$，正确。D：凑微分 $\\dfrac{dx}{x}=d(\\ln x)$，正确。\nA 错：$\\int f(2x)dx=\\dfrac12F(2x)+C$——线性换元要除以内的系数，遗漏 $\\dfrac12$。",
+   "misconception": "⚠️易错点：凑微分口诀「内的导数乘出来」：被积函数必须恰含内函数的导数因子才能直接凑；差一个常数因子也不行。",
+   "extension": null,
+   "tags": [
+    "换元积分",
+    "凑微分",
+    "困难"
+   ],
+   "verify": [
+    {
+     "desc": "C项核验(取f=cosx)",
+     "code": "xx=symbols('xx'); simplify(integrate(xx*cos(xx), xx) - (xx*sin(xx)+cos(xx)))",
+     "expected": "0"
+    }
+   ],
+   "idx": 334
+  },
+  {
+   "id": "c4-j1",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.1 不定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "若 $F'(x)=f(x)$，则 $\\int f(x)\\,dx=F(x)$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：不定积分是**全体**原函数，必须带任意常数：$\\int f(x)\\,dx=F(x)+C$。漏写 $C$ 是不定积分计算题最常见的格式错误。命题错误（§4.1）。",
+   "misconception": "⚠️易错点：$F(x)$ 只是「一个」原函数；$F(x)+C$ 才是「一族」原函数。特别地两个原函数之间只差常数。",
+   "extension": null,
+   "tags": [
+    "不定积分",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 335
+  },
+  {
+   "id": "c4-j2",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "knowledgePoints": [
+    "4.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.2 换元积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int 2x e^{x^2}\\,dx=e^{x^2}+C$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：凑微分 $2x\\,dx=d(x^2)$，故 $\\int 2xe^{x^2}dx=\\int e^{x^2}d(x^2)=e^{x^2}+C$；求导验证 $\\left(e^{x^2}\\right)'=2xe^{x^2}$ 吻合。命题正确（§4.2）。",
+   "misconception": "⚠️易错点：看见 $x$ 与 $x^2$ 共存，先想 $d(x^2)$；$e^{x^2}$ 的原函数是初等的，而 $e^{-x^2}$ 不是——两题对比记忆。",
+   "extension": null,
+   "tags": [
+    "凑微分",
+    "第一类换元"
+   ],
+   "verify": [],
+   "idx": 336
+  },
+  {
+   "id": "c4-j3",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "knowledgePoints": [
+    "4.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.3 分部积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "用分部积分法时，按「反、对、幂、指、三」的顺序，排在前面的函数优先选作 $u$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：分部积分 $\\int u\\,dv=uv-\\int v\\,du$ 的效果取决于 $\\int v\\,du$ 是否更易积。「反三角、对数」求导后变简单，优先作 $u$；「指数、三角」求导后不变复杂，宜作 $dv$。「反对幂指三」口诀与 §4.3 的例题选取一致。命题正确。",
+   "misconception": "⚠️易错点：口诀只是经验法则，最终标准是「$\\int v\\,du$ 比原积分更简单」；如 $\\int xe^x dx$ 中 $x$ 是「幂」，按口诀作 $u$ 正确。",
+   "extension": null,
+   "tags": [
+    "分部积分",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 337
+  },
+  {
+   "id": "c4-b1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "knowledgePoints": [
+    "4.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.2 换元积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int \\tan x\\,dx=$ ____。",
+   "options": null,
+   "answer": [
+    "-ln|cosx|+C"
+   ],
+   "accept": [
+    "-ln|cosx|+C",
+    "ln|secx|+C",
+    "-lncosx+C",
+    "ln|sec(x)|+C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\tan x=\\dfrac{\\sin x}{\\cos x}=-\\dfrac{d(\\cos x)}{\\cos x}$，故 $\\int\\tan x\\,dx=-\\ln|\\cos x|+C=\\ln|\\sec x|+C$（§4.2 例题）。两种形式等价。",
+   "misconception": "⚠️易错点：$\\cos x$ 取绝对值与负号——$\\ln$ 的真数必须为正；「割化弦」后 $\\sec x=1/\\cos x$ 的负号进入对数。",
+   "extension": null,
+   "tags": [
+    "基本积分",
+    "凑微分"
+   ],
+   "verify": [],
+   "idx": 338
+  },
+  {
+   "id": "c4-b2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "knowledgePoints": [
+    "4.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.2 换元积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int \\dfrac{\\ln x}{x}\\,dx=$ ____。",
+   "options": null,
+   "answer": [
+    "(1/2)ln^2x+C"
+   ],
+   "accept": [
+    "(1/2)ln^2x+C",
+    "0.5*ln(x)^2+C",
+    "(ln^2x)/2+C",
+    "1/2*ln(x)**2+C",
+    "(1/2)(lnx)^2+C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：凑微分 $\\dfrac{dx}{x}=d(\\ln x)$，故 $\\int\\dfrac{\\ln x}{x}dx=\\int \\ln x\\,d(\\ln x)=\\dfrac{\\ln^2 x}{2}+C$（把 $\\ln x$ 整体当新变量，幂函数积分）。",
+   "misconception": "⚠️易错点：结果平方的是 $\\ln x$ 整体，写成 $\\dfrac12\\ln(x^2)$ 就错了；也可用分部积分验证。",
+   "extension": null,
+   "tags": [
+    "凑微分"
+   ],
+   "verify": [
+    {
+     "desc": "求导还原",
+     "code": "xx=symbols('xx', positive=True); F=log(xx)**2/2; simplify(diff(F,xx) - log(xx)/xx)",
+     "expected": "0"
+    }
+   ],
+   "idx": 339
+  },
+  {
+   "id": "ky2-1994-4-9dba10",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "1994 年考研数学三第 4 题",
+    "kind": "exam-original",
+    "year": 1994,
+    "region": "全国",
+    "paper": "1994 年考研数学三",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\int x^{3}\\mathrm{e}^{x^{2}}\\mathrm{d}x = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "$\\frac{1}{2} (x^{2} - 1)\\mathrm{e}^{x^{2}} + C$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{1}{2} (x^{2} - 1)\\mathrm{e}^{x^{2}} + C$\n应填 $\\frac{1}{2} (x^{2} - 1)\\mathrm{e}^{x^{2}} + C$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 340
+  },
+  {
+   "id": "ky2-1997-3-70bde9",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "1997 年考研数学二第 3 题",
+    "kind": "exam-original",
+    "year": 1997,
+    "region": "全国",
+    "paper": "1997 年考研数学二",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\int \\frac{\\mathrm{d}x}{\\sqrt{x(4 - x)}} = \\underline{\\quad}$",
+   "options": null,
+   "answer": [
+    "$\\arcsin \\frac{x - 2}{2} + C$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\arcsin \\frac{x - 2}{2} + C$\n应填 $\\arcsin \\frac{x - 2}{2} + C$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 341
+  },
+  {
+   "id": "c4-t1",
+   "type": "term",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.1 不定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "名词解释：原函数。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "设 $f(x)$ 在区间 $I$ 上有定义，若存在 $F(x)$ 使得对 $I$ 上任意 $x$ 都有 $F'(x)=f(x)$（或 $dF(x)=f(x)dx$），则称 $F(x)$ 为 $f(x)$ 在区间 $I$ 上的一个原函数；$f$ 的全体原函数 $F(x)+C$ 称为 $f$ 的不定积分。",
+   "points": [
+    {
+     "text": "定义：在区间 $I$ 上满足 $F'(x)=f(x)$ 的函数 $F(x)$ 称为 $f(x)$ 的一个原函数。",
+     "partial": 2
+    },
+    {
+     "text": "结构：任意两个原函数只相差常数，故全体原函数为 $F(x)+C$，即不定积分 $\\int f(x)dx=F(x)+C$；连续函数必有原函数。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：原函数与不定积分的定义、原函数族结构定理见 §4.1。\n**考点出处**：同济《高等数学》第七版 §4.1 不定积分的概念与性质。",
+   "misconception": "⚠️易错点：原函数是「区间」上的概念——$\\ln|x|$ 分别在 $(-\\infty,0)$ 与 $(0,+\\infty)$ 上是 $\\dfrac1x$ 的原函数，两个区间上常数可以不同。",
+   "extension": null,
+   "tags": [
+    "原函数",
+    "概念",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 342
+  },
+  {
+   "id": "c4-t2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "knowledgePoints": [
+    "4.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.3 分部积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "简答：写出分部积分公式，说明它适用的题型类型与 $u$、$dv$ 的选取原则。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "分部积分公式：$\\int u\\,dv=uv-\\int v\\,du$（由乘积求导法则 $(uv)'=u'v+uv'$ 移项积分而得）。适用类型：两类不同函数的乘积，典型如幂函数 $\\times$ 指数/三角（$\\int xe^xdx$、$\\int x\\cos xdx$）、幂函数 $\\times$ 对数/反三角（$\\int x\\ln xdx$、$\\int x\\arctan xdx$）以及 $\\int e^x\\sin xdx$ 等循环型。选取原则：按「反、对、幂、指、三」次序，排前者取 $u$，余者凑成 $dv$，目标是让 $\\int v\\,du$ 比原积分简单。",
+   "points": [
+    {
+     "text": "公式及来源：$\\int u\\,dv=uv-\\int v\\,du$，由乘积求导法则移项、两边积分得到。",
+     "partial": 2
+    },
+    {
+     "text": "适用题型：两类不同函数之积（幂×指/三、幂×对/反）与循环型（$e^x\\sin x$，分部两次后原式重现需移项解方程）。",
+     "partial": 2
+    },
+    {
+     "text": "选取原则：「反对幂指三」排前者取 $u$（求导后变简单），余下部分凑 $dv$；判定标准是 $\\int v\\,du$ 更易积。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：分部积分公式、例题类型与 $u$ 的选取规则均见 §4.3。\n**考点出处**：同济《高等数学》第七版 §4.3 分部积分法。",
+   "misconception": "⚠️易错点：$dv$ 要连 $dx$ 一起凑；两次分部后第二次必须与第一次「同类型」地选 $u$（否则恒等还原、白忙一场）。",
+   "extension": null,
+   "tags": [
+    "分部积分",
+    "简答",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 343
+  },
+  {
+   "id": "c4-c1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "knowledgePoints": [
+    "4.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.2 换元积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求 $\\int x\\cos x^2\\,dx$。",
+   "options": null,
+   "answer": [
+    "(1/2)sin(x^2)+C"
+   ],
+   "accept": null,
+   "answerText": "凑微分：$x\\,dx=\\dfrac12\\,d(x^2)$，故\n$$\\int x\\cos x^2\\,dx=\\frac12\\int\\cos(x^2)\\,d(x^2)=\\frac12\\sin(x^2)+C.$$\n验证：$\\left(\\dfrac12\\sin x^2\\right)'=\\dfrac12\\cos(x^2)\\cdot 2x=x\\cos x^2$。",
+   "points": [
+    {
+     "text": "凑微分 $x\\,dx=\\dfrac12 d(x^2)$（内的导数乘出来）。",
+     "partial": 2
+    },
+    {
+     "text": "视 $x^2$ 为新变量，用基本公式 $\\int\\cos u\\,du=\\sin u+C$。",
+     "partial": 2
+    },
+    {
+     "text": "得 $\\dfrac12\\sin(x^2)+C$，并对结果求导验证。",
+     "partial": 2
+    },
+    {
+     "text": "注意：$\\int\\cos x^2 dx$（无 $x$ 因子）才是积不出的非初等积分，勿混淆。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：第一类换元（凑微分）法，见 §4.2。\n**考点出处**：同济《高等数学》第七版 §4.2 换元积分法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "凑微分",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "积分",
+     "code": "integrate(x*cos(x**2), x)",
+     "expected": "sin(x**2)/2"
+    }
+   ],
+   "idx": 344
+  },
+  {
+   "id": "c4-c2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "knowledgePoints": [
+    "4.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.3 分部积分法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求 $\\int x\\ln x\\,dx$。",
+   "options": null,
+   "answer": [
+    "(x^2/2)lnx-x^2/4+C"
+   ],
+   "accept": null,
+   "answerText": "按「反对幂指三」取 $u=\\ln x$，$dv=x\\,dx$（$v=\\dfrac{x^2}{2}$）：\n$$\\int x\\ln x\\,dx=\\frac{x^2}{2}\\ln x-\\int\\frac{x^2}{2}\\cdot\\frac1x\\,dx=\\frac{x^2}{2}\\ln x-\\frac12\\int x\\,dx=\\frac{x^2}{2}\\ln x-\\frac{x^2}{4}+C.$$\n验证：求导得 $x\\ln x+\\dfrac{x}{2}-\\dfrac{x}{2}=x\\ln x$。",
+   "points": [
+    {
+     "text": "选 $u=\\ln x$、$dv=x\\,dx$，则 $du=\\dfrac{dx}{x}$、$v=\\dfrac{x^2}{2}$。",
+     "partial": 2
+    },
+    {
+     "text": "代入公式 $uv-\\int v\\,du$ 得 $\\dfrac{x^2}{2}\\ln x-\\dfrac12\\int x\\,dx$。",
+     "partial": 2
+    },
+    {
+     "text": "算出 $\\dfrac{x^2}{2}\\ln x-\\dfrac{x^2}{4}+C$。",
+     "partial": 2
+    },
+    {
+     "text": "求导验证最终结果。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：分部积分法标准例题（§4.3 中 $\\int x\\ln x dx$ 同型）。\n**考点出处**：同济《高等数学》第七版 §4.3 分部积分法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "分部积分",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "积分",
+     "code": "integrate(x*log(x), x)",
+     "expected": "x**2*log(x)/2 - x**2/4"
+    }
+   ],
+   "idx": 345
+  },
+  {
+   "id": "c4-c3",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "knowledgePoints": [
+    "4.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.4 有理函数的积分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求 $\\int \\dfrac{dx}{1+e^x}$。",
+   "options": null,
+   "answer": [
+    "x-ln(1+e^x)+C"
+   ],
+   "accept": null,
+   "answerText": "法一（凑项拆分）：分子分母同乘 $e^{-x}$：\n$$\\int\\frac{dx}{1+e^x}=\\int\\frac{e^{-x}}{1+e^{-x}}\\,dx=-\\int\\frac{d(1+e^{-x})}{1+e^{-x}}=-\\ln(1+e^{-x})+C,$$\n再化简：$-\\ln(1+e^{-x})=x-\\ln(1+e^x)$（提出 $e^{-x}$：$1+e^{-x}=e^{-x}(1+e^x)$）。\n法二（部分分式）：令 $t=e^x$，$\\dfrac{1}{1+t}=1-\\dfrac{t}{1+t}$，积分后回代同样得 $x-\\ln(1+e^x)+C$。\n验证：$\\left[x-\\ln(1+e^x)\\right]'=1-\\dfrac{e^x}{1+e^x}=\\dfrac{1}{1+e^x}$。",
+   "points": [
+    {
+     "text": "思路一：分子分母同乘 $e^{-x}$，凑微分 $-d(1+e^{-x})$。",
+     "partial": 2
+    },
+    {
+     "text": "积分得 $-\\ln(1+e^{-x})+C$，并利用 $1+e^{-x}=e^{-x}(1+e^x)$ 化简为 $x-\\ln(1+e^x)+C$。",
+     "partial": 2
+    },
+    {
+     "text": "思路二：令 $t=e^x$ 化为有理函数积分 $\\int\\dfrac{dt}{t(1+t)}$，用部分分式 $\\dfrac1{t(1+t)}=\\dfrac1t-\\dfrac1{1+t}$。",
+     "partial": 2
+    },
+    {
+     "text": "求导验证：$1-\\dfrac{e^x}{1+e^x}=\\dfrac{1}{1+e^x}$。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：指数函数有理式的积分是 §4.4 有理函数积分与 §4.2 换元法的综合例题。\n**考点出处**：同济《高等数学》第七版 §4.2、§4.4。",
+   "misconception": "⚠️易错点：化简 $-\\ln(1+e^{-x})$ 时提出 $e^{-x}$ 后对数外要**补回 $+x$**（$-\\ln e^{-x}=+x$），这一步最易丢；部分分式 $\\dfrac{1}{t(1+t)}$ 的拆分系数也易错。",
+   "extension": null,
+   "tags": [
+    "有理函数",
+    "综合",
+    "困难"
+   ],
+   "verify": [
+    {
+     "desc": "积分",
+     "code": "integrate(1/(1+exp(x)), x)",
+     "expected": "x - log(exp(x) + 1)"
+    },
+    {
+     "desc": "求导还原",
+     "code": "simplify(diff(x-log(1+exp(x)), x) - 1/(1+exp(x)))",
+     "expected": "0"
+    }
+   ],
+   "idx": 346
+  },
+  {
+   "id": "ky2-1989-2-e66af2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "1989 年考研数学三第 2 题",
+    "kind": "exam-original",
+    "year": 1989,
+    "region": "全国",
+    "paper": "1989 年考研数学三",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求 $\\int \\frac{\\mathrm{d}x}{x\\ln^2x}$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$-\\frac{1}{\\ln x} + C.$",
+   "points": [
+    {
+     "text": "$-\\frac{1}{\\ln x} + C.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$-\\frac{1}{\\ln x} + C.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 347
+  },
+  {
+   "id": "ky2-1990-4-7185cb",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "1990 年考研数学三第 4 题",
+    "kind": "exam-original",
+    "year": 1990,
+    "region": "全国",
+    "paper": "1990 年考研数学三",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算 $\\int \\frac{\\ln x}{(1 - x)^2} \\, \\mathrm{d}x$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "原式 $= \\frac{\\ln x}{1 - x} + \\ln \\frac{|1 - x|}{x} + C$ .",
+   "points": [
+    {
+     "text": "原式 $= \\frac{\\ln x}{1 - x} + \\ln \\frac{|1 - x|}{x} + C$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n原式 $= \\frac{\\ln x}{1 - x} + \\ln \\frac{|1 - x|}{x} + C$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 348
+  },
+  {
+   "id": "ky2-1991-4-240556",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "1991 年考研数学三第 4 题",
+    "kind": "exam-original",
+    "year": 1991,
+    "region": "全国",
+    "paper": "1991 年考研数学三",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求 $\\int x \\sin^2 x \\, \\mathrm{d}x$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\frac{1}{4} x^{2} - \\frac{1}{4} x\\sin 2x - \\frac{1}{8}\\cos 2x + C.$",
+   "points": [
+    {
+     "text": "$\\frac{1}{4} x^{2} - \\frac{1}{4} x\\sin 2x - \\frac{1}{8}\\cos 2x + C.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\frac{1}{4} x^{2} - \\frac{1}{4} x\\sin 2x - \\frac{1}{8}\\cos 2x + C.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 349
+  },
+  {
+   "id": "ky2-1992-3-382eba",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "1992 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1992,
+    "region": "全国",
+    "paper": "1992 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求 $\\int \\frac{x^3}{\\sqrt{1 + x^2}} \\, \\mathrm{d}x$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\frac{1}{3} (1 + x^{2})^{3 / 2} - (1 + x^{2})^{1 / 2} + C.$",
+   "points": [
+    {
+     "text": "$\\frac{1}{3} (1 + x^{2})^{3 / 2} - (1 + x^{2})^{1 / 2} + C.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\frac{1}{3} (1 + x^{2})^{3 / 2} - (1 + x^{2})^{1 / 2} + C.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 350
+  },
+  {
+   "id": "ky2-1995-3-5641db",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "1995 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1995,
+    "region": "全国",
+    "paper": "1995 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x^{2} - 1) = \\ln \\frac{x^{2}}{x^{2} - 2}$ ，且 $f[\\phi (x)] = \\ln x$ ，求 $\\int \\phi (x)\\mathrm{d}x$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$2\\ln |x - 1| + x + C$",
+   "points": [
+    {
+     "text": "$2\\ln |x - 1| + x + C$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$2\\ln |x - 1| + x + C$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 351
+  },
+  {
+   "id": "ky2-1996-2-0acbdc",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "1996 年考研数学三第 2 题",
+    "kind": "exam-original",
+    "year": 1996,
+    "region": "全国",
+    "paper": "1996 年考研数学三",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求 $\\int \\frac{\\mathrm{d}x}{1 + \\sin x}$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\tan x - \\sec x + C$",
+   "points": [
+    {
+     "text": "$\\tan x - \\sec x + C$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\tan x - \\sec x + C$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 352
+  },
+  {
+   "id": "ky2-1997-3-d8f1a4",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "1997 年考研数学二第 3 题",
+    "kind": "exam-original",
+    "year": 1997,
+    "region": "全国",
+    "paper": "1997 年考研数学二",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "计算 $\\int \\mathrm{e}^{2x} (\\tan x + 1)^2 \\, \\mathrm{d}x$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\mathrm{e}^{2x}\\tan x + C$",
+   "points": [
+    {
+     "text": "$\\mathrm{e}^{2x}\\tan x + C$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\mathrm{e}^{2x}\\tan x + C$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 353
+  },
+  {
+   "id": "ky2-2000-x-9c5df4",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "2000 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2000,
+    "region": "全国",
+    "paper": "2000 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(\\ln x) = \\frac{\\ln(1 + x)}{x}$ ，计算 $\\int f(x)\\mathrm{d}x$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "作积分变量替换, 令 $x = \\ln t$ , 则有\n$$\n\\begin{array}{l} \\int f (x) \\mathrm {d} x = \\int f (\\ln t) \\cdot \\frac {1}{t} \\mathrm {d} t = \\int \\frac {\\ln (1 + t)}{t ^ {2}} \\mathrm {d} t = - \\int \\ln (1 + t) d \\left(\\frac {1}{t}\\right) \\\\ = - \\left[ \\frac {\\ln (1 + t)}{t} - \\int \\frac {1}{t (1 + t)} d t \\right] = - \\frac {\\ln (1 + t)}{t} + \\int \\left(\\frac {1}{t} - \\frac {1}{1 + t}\\right) d t \\\\ = - \\frac {\\ln (1 + t)}{t} + \\int \\frac {1}{t} d t - \\int \\frac {1}{1 + t} d (1 + t) = - \\frac {\\ln (1 + t)}{t} + \\ln t - \\ln (1 - t) + C \\\\ = - \\mathrm {e} ^ {- x} \\ln (1 + \\mathrm {e} ^ {x}) + x - \\ln (1 + \\mathrm {e} ^ {x}) + C. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "作积分变量替换, 令 $x = \\ln t$ , 则有\n$$\n\\begin{array}{l} \\int f (x) \\mathrm {d} x = \\int f (\\ln t) \\cdot \\frac {1}{t} \\mathrm {d} t = \\int \\frac {\\ln (1 + t)}{t ^ {2}} \\mathrm {d} t = - \\int \\ln (1 + t) d \\left(\\frac {1}{t}\\right) \\\\ = - \\left[ \\frac {\\ln (1 + t)}{t} - \\int \\frac {1}{t (1 + t)} d t \\right] = - \\frac {\\ln (1 + t)}{t} + \\int \\left(\\frac {1}{t} - \\frac {1}{1 + t}\\right) d t \\\\ = - \\frac {\\ln (1 + t)}{t} + \\int \\frac {1}{t} d t - \\int \\frac {1}{1 + t} d (1 + t) = - \\frac {\\ln (1 + t)}{t} + \\ln t - \\ln (1 - t) + C \\\\ = - \\mathrm {e} ^ {- x} \\ln (1 + \\mathrm {e} ^ {x}) + x - \\ln (1 + \\mathrm {e} ^ {x}) + C. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n作积分变量替换, 令 $x = \\ln t$ , 则有\n$$\n\\begin{array}{l} \\int f (x) \\mathrm {d} x = \\int f (\\ln t) \\cdot \\frac {1}{t} \\mathrm {d} t = \\int \\frac {\\ln (1 + t)}{t ^ {2}} \\mathrm {d} t = - \\int \\ln (1 + t) d \\left(\\frac {1}{t}\\right) \\\\ = - \\left[ \\frac {\\ln (1 + t)}{t} - \\int \\frac {1}{t (1 + t)} d t \\right] = - \\frac {\\ln (1 + t)}{t} + \\int \\left(\\frac {1}{t} - \\frac {1}{1 + t}\\right) d t \\\\ = - \\frac {\\ln (1 + t)}{t} + \\int \\frac {1}{t} d t - \\int \\frac {1}{1 + t} d (1 + t) = - \\frac {\\ln (1 + t)}{t} + \\ln t - \\ln (1 - t) + C \\\\ = - \\mathrm {e} ^ {- x} \\ln (1 + \\mathrm {e} ^ {x}) + x - \\ln (1 + \\mathrm {e} ^ {x}) + C. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 354
+  },
+  {
+   "id": "ky2-2001-x-be6727",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "2001 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2001,
+    "region": "全国",
+    "paper": "2001 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求 $\\int \\frac{\\mathrm{d}x}{(2x^2 + 1)\\sqrt{x^2 + 1}}.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "令 $x = \\tan u$ , 则 $\\mathrm{d}x = \\sec^2 u \\, \\mathrm{d}u$ , 从而\n$$\n\\begin{array}{l} \\int \\frac {\\mathrm {d} x}{(2 x ^ {2} + 1) \\sqrt {x ^ {2} + 1}} = \\int \\frac {\\mathrm {d} u}{(2 \\tan^ {2} u + 1) \\cos u} = \\int \\frac {\\cos u \\mathrm {d} u}{2 \\sin^ {2} u + \\cos^ {2} u} \\\\ = \\int \\frac {\\mathrm {d} (\\sin u)}{\\sin^ {2} u + 1} = \\arctan (\\sin u) + C = \\arctan \\left(\\frac {x}{\\sqrt {1 + x ^ {2}}}\\right) + C. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "令 $x = \\tan u$ , 则 $\\mathrm{d}x = \\sec^2 u \\, \\mathrm{d}u$ , 从而\n$$\n\\begin{array}{l} \\int \\frac {\\mathrm {d} x}{(2 x ^ {2} + 1) \\sqrt {x ^ {2} + 1}} = \\int \\frac {\\mathrm {d} u}{(2 \\tan^ {2} u + 1) \\cos u} = \\int \\frac {\\cos u \\mathrm {d} u}{2 \\sin^ {2} u + \\cos^ {2} u} \\\\ = \\int \\frac {\\mathrm {d} (\\sin u)}{\\sin^ {2} u + 1} = \\arctan (\\sin u) + C = \\arctan \\left(\\frac {x}{\\sqrt {1 + x ^ {2}}}\\right) + C. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n令 $x = \\tan u$ , 则 $\\mathrm{d}x = \\sec^2 u \\, \\mathrm{d}u$ , 从而\n$$\n\\begin{array}{l} \\int \\frac {\\mathrm {d} x}{(2 x ^ {2} + 1) \\sqrt {x ^ {2} + 1}} = \\int \\frac {\\mathrm {d} u}{(2 \\tan^ {2} u + 1) \\cos u} = \\int \\frac {\\cos u \\mathrm {d} u}{2 \\sin^ {2} u + \\cos^ {2} u} \\\\ = \\int \\frac {\\mathrm {d} (\\sin u)}{\\sin^ {2} u + 1} = \\arctan (\\sin u) + C = \\arctan \\left(\\frac {x}{\\sqrt {1 + x ^ {2}}}\\right) + C. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 355
+  },
+  {
+   "id": "ky2-2006-16-fdd8ec",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "2006 年考研数学二第 16 题",
+    "kind": "exam-original",
+    "year": 2006,
+    "region": "全国",
+    "paper": "2006 年考研数学二",
+    "number": "16",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "（本题满分10分）\n求 $\\int \\frac{\\arcsin\\mathrm{e}^x}{\\mathrm{e}^x}\\mathrm{d}x.$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由换元积分法和分部积分法, 可得\n$$\n\\begin{array}{l} \\int \\frac {\\arcsin e ^ {x}}{e ^ {x}} d x = \\int \\frac {\\arcsin e ^ {x}}{e ^ {2 x}} d (e ^ {x}) = \\int \\frac {\\arcsin t}{t ^ {2}} d t = - \\int \\arcsin t d \\left(\\frac {1}{t}\\right) \\\\ = - \\frac {\\arcsin t}{t} + \\int \\frac {\\mathrm {d} t}{t \\sqrt {1 - t ^ {2}}} = - \\frac {\\arcsin t}{t} + \\int \\frac {t \\mathrm {d} t}{t ^ {2} \\sqrt {1 - t ^ {2}}} \\\\ = - \\frac {\\arcsin t}{t} + \\frac {1}{2} \\int \\frac {\\mathrm {d} (1 - t ^ {2})}{(1 - t ^ {2}) \\sqrt {1 - t ^ {2}} - \\sqrt {1 - t ^ {2}}} = - \\frac {\\arcsin t}{t} + \\frac {1}{2} \\int \\frac {\\mathrm {d} (u ^ {2})}{u ^ {3} - u} \\\\ = - \\frac {\\arcsin t}{t} + \\int \\frac {\\mathrm {d} u}{u ^ {2} - 1} = - \\frac {\\arcsin t}{t} + \\frac {1}{2} \\ln \\left| \\frac {u - 1}{u + 1} \\right| + C \\\\ = - \\frac {\\arcsin \\mathrm {e} ^ {x}}{\\mathrm {e} ^ {x}} + \\frac {1}{2} \\ln \\left| \\frac {\\sqrt {1 - \\mathrm {e} ^ {2 x}} - 1}{\\sqrt {1 - \\mathrm {e} ^ {2 x}} + 1} \\right| + C. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "由换元积分法和分部积分法, 可得\n$$\n\\begin{array}{l} \\int \\frac {\\arcsin e ^ {x}}{e ^ {x}} d x = \\int \\frac {\\arcsin e ^ {x}}{e ^ {2 x}} d (e ^ {x}) = \\int \\frac {\\arcsin t}{t ^ {2}} d t = - \\int \\arcsin t d \\left(\\frac {1}{t}\\right) \\\\ = - \\frac {\\arcsin t}{t} + \\int \\frac {\\mathrm {d} t}{t \\sqrt {1 - t ^ {2}}} = - \\frac {\\arcsin t}{t} + \\int \\frac {t \\mathrm {d} t}{t ^ {2} \\sqrt {1 - t ^ {2}}} \\\\ = - \\frac {\\arcsin t}{t} + \\frac {1}{2} \\int \\frac {\\mathrm {d} (1 - t ^ {2})}{(1 - t ^ {2}) \\sqrt {1 - t ^ {2}} - \\sqrt {1 - t ^ {2}}} = - \\frac {\\arcsin t}{t} + \\frac {1}{2} \\int \\frac {\\mathrm {d} (u ^ {2})}{u ^ {3} - u} \\\\ = - \\frac {\\arcsin t}{t} + \\int \\frac {\\mathrm {d} u}{u ^ {2} - 1} = - \\frac {\\arcsin t}{t} + \\frac {1}{2} \\ln \\left| \\frac {u - 1}{u + 1} \\right| + C \\\\ = - \\frac {\\arcsin \\mathrm {e} ^ {x}}{\\mathrm {e} ^ {x}} + \\frac {1}{2} \\ln \\left| \\frac {\\sqrt {1 - \\mathrm {e} ^ {2 x}} - 1}{\\sqrt {1 - \\mathrm {e} ^ {2 x}} + 1} \\right| + C. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由换元积分法和分部积分法, 可得\n$$\n\\begin{array}{l} \\int \\frac {\\arcsin e ^ {x}}{e ^ {x}} d x = \\int \\frac {\\arcsin e ^ {x}}{e ^ {2 x}} d (e ^ {x}) = \\int \\frac {\\arcsin t}{t ^ {2}} d t = - \\int \\arcsin t d \\left(\\frac {1}{t}\\right) \\\\ = - \\frac {\\arcsin t}{t} + \\int \\frac {\\mathrm {d} t}{t \\sqrt {1 - t ^ {2}}} = - \\frac {\\arcsin t}{t} + \\int \\frac {t \\mathrm {d} t}{t ^ {2} \\sqrt {1 - t ^ {2}}} \\\\ = - \\frac {\\arcsin t}{t} + \\frac {1}{2} \\int \\frac {\\mathrm {d} (1 - t ^ {2})}{(1 - t ^ {2}) \\sqrt {1 - t ^ {2}} - \\sqrt {1 - t ^ {2}}} = - \\frac {\\arcsin t}{t} + \\frac {1}{2} \\int \\frac {\\mathrm {d} (u ^ {2})}{u ^ {3} - u} \\\\ = - \\frac {\\arcsin t}{t} + \\int \\frac {\\mathrm {d} u}{u ^ {2} - 1} = - \\frac {\\arcsin t}{t} + \\frac {1}{2} \\ln \\left| \\frac {u - 1}{u + 1} \\right| + C \\\\ = - \\frac {\\arcsin \\mathrm {e} ^ {x}}{\\mathrm {e} ^ {x}} + \\frac {1}{2} \\ln \\left| \\frac {\\sqrt {1 - \\mathrm {e} ^ {2 x}} - 1}{\\sqrt {1 - \\mathrm {e} ^ {2 x}} + 1} \\right| + C. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 356
+  },
+  {
+   "id": "ky2-2016-21-8260a1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "2016 年考研数学二第 21 题",
+    "kind": "exam-original",
+    "year": 2016,
+    "region": "全国",
+    "paper": "2016 年考研数学二",
+    "number": "21",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 11 分)\n已知 $f(x)$ 在 $\\left[0, \\frac{3\\pi}{2}\\right]$ 上连续，在 $\\left(0, \\frac{3\\pi}{2}\\right)$ 内是函数 $\\frac{\\cos x}{2x - 3\\pi}$ 的一个原函数 $f(0) = 0$ .\n(I) 求 $f(x)$ 在区间 $\\left[0, \\frac{3\\pi}{2}\\right]$ 上的平均值;\n(II) 证明 $f(x)$ 在区间 $\\left(0, \\frac{3\\pi}{2}\\right)$ 内存在唯一零点.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) 由题意, $f(x) = \\int_{0}^{x} \\frac{\\cos t}{2t - 3\\pi} \\mathrm{d}t$ . 所以 $f(x)$ 在区间 $\\left[0, \\frac{3\\pi}{2}\\right]$ 上的平均值为\n$$\n\\begin{array}{l} \\bar {f} = \\frac {2}{3 \\pi} \\int_ {0} ^ {\\frac {3 \\pi}{2}} f (x) d x = \\frac {2}{3 \\pi} \\int_ {0} ^ {\\frac {3 \\pi}{2}} d x \\int_ {0} ^ {x} \\frac {\\cos t}{2 t - 3 \\pi} d t \\\\ = \\frac {2}{3 \\pi} \\int_ {0} ^ {\\frac {3 \\pi}{2}} \\mathrm {d} t \\int_ {t} ^ {\\frac {3 \\pi}{2}} \\frac {\\cos t}{2 t - 3 \\pi} \\mathrm {d} x = \\frac {1}{3 \\pi}. \\\\ \\end{array}\n$$\n(II) 由 $f'(x) = \\frac{\\cos x}{2x - 3\\pi}$ ，可得 $f(x)$ 在区间 $\\left(0, \\frac{3\\pi}{2}\\right)$ 内存在唯一驻点 $x = \\frac{\\pi}{2}$ 。而且当 $0 < x < \\frac{\\pi}{2}$ 时 $f'(x) < 0$ ，当 $\\frac{\\pi}{2} < x < \\frac{3\\pi}{2}$ 时 $f'(x) > 0$ 。因为 $f(0) = 0$ ，由单调性，当 $0 < x < \\frac{\\pi}{2}$ 时 $f(x)$ 无零点。因为 $f\\left(\\frac{\\pi}{2}\\right) < 0$ 且 $f\\left(\\frac{3\\pi}{2}\\right) > 0$ ，由零值定理和单调性，当 $\\frac{\\pi}{2} < x < \\frac{3\\pi}{2}$ 时 $f(x)$ 有唯一零点。综上所述， $f(x)$ 在区间 $\\left(0, \\frac{3\\pi}{2}\\right)$ 内存在唯一零点。",
+   "points": [
+    {
+     "text": "(I) 由题意, $f(x) = \\int_{0}^{x} \\frac{\\cos t}{2t - 3\\pi} \\mathrm{d}t$ . 所以 $f(x)$ 在区间 $\\left[0, \\frac{3\\pi}{2}\\right]$ 上的平均值为\n$$\n\\begin{array}{l} \\bar {f} = \\frac {2}{3 \\pi} \\int_ {0} ^ {\\frac {3 \\pi}{2}} f (x) d x = \\frac {2}{3 \\pi} \\int_ {0} ^ {\\frac {3 \\pi}{2}} d x \\int_ {0} ^ {x} \\frac {\\cos t}{2 t - 3 \\pi} d t \\\\ = \\frac {2}{3 \\pi} \\int_ {0} ^ {\\frac {3 \\pi}{2}} \\mathrm {d} t \\int_ {t} ^ {\\frac {3 \\pi}{2}} \\frac {\\cos t}{2 t - 3 \\pi} \\mathrm {d} x = \\frac {1}{3 \\pi}. \\\\ \\end{array}\n$$\n(II) 由 $f'(x) = \\frac{\\cos x}{2x - 3\\pi}$ ，可得 $f(x)$ 在区间 $\\left(0, \\frac{3\\pi}{2}\\right)$ 内存在唯一驻点 $x = \\frac{\\pi}{2}$ 。",
+     "partial": 2
+    },
+    {
+     "text": "而且当 $0 < x < \\frac{\\pi}{2}$ 时 $f'(x) < 0$ ，当 $\\frac{\\pi}{2} < x < \\frac{3\\pi}{2}$ 时 $f'(x) > 0$ 。",
+     "partial": 2
+    },
+    {
+     "text": "因为 $f(0) = 0$ ，由单调性，当 $0 < x < \\frac{\\pi}{2}$ 时 $f(x)$ 无零点。",
+     "partial": 2
+    },
+    {
+     "text": "因为 $f\\left(\\frac{\\pi}{2}\\right) < 0$ 且 $f\\left(\\frac{3\\pi}{2}\\right) > 0$ ，由零值定理和单调性，当 $\\frac{\\pi}{2} < x < \\frac{3\\pi}{2}$ 时 $f(x)$ 有唯一零点。",
+     "partial": 2
+    },
+    {
+     "text": "综上所述， $f(x)$ 在区间 $\\left(0, \\frac{3\\pi}{2}\\right)$ 内存在唯一零点。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) 由题意, $f(x) = \\int_{0}^{x} \\frac{\\cos t}{2t - 3\\pi} \\mathrm{d}t$ . 所以 $f(x)$ 在区间 $\\left[0, \\frac{3\\pi}{2}\\right]$ 上的平均值为\n$$\n\\begin{array}{l} \\bar {f} = \\frac {2}{3 \\pi} \\int_ {0} ^ {\\frac {3 \\pi}{2}} f (x) d x = \\frac {2}{3 \\pi} \\int_ {0} ^ {\\frac {3 \\pi}{2}} d x \\int_ {0} ^ {x} \\frac {\\cos t}{2 t - 3 \\pi} d t \\\\ = \\frac {2}{3 \\pi} \\int_ {0} ^ {\\frac {3 \\pi}{2}} \\mathrm {d} t \\int_ {t} ^ {\\frac {3 \\pi}{2}} \\frac {\\cos t}{2 t - 3 \\pi} \\mathrm {d} x = \\frac {1}{3 \\pi}. \\\\ \\end{array}\n$$\n(II) 由 $f'(x) = \\frac{\\cos x}{2x - 3\\pi}$ ，可得 $f(x)$ 在区间 $\\left(0, \\frac{3\\pi}{2}\\right)$ 内存在唯一驻点 $x = \\frac{\\pi}{2}$ 。而且当 $0 < x < \\frac{\\pi}{2}$ 时 $f'(x) < 0$ ，当 $\\frac{\\pi}{2} < x < \\frac{3\\pi}{2}$ 时 $f'(x) > 0$ 。因为 $f(0) = 0$ ，由单调性，当 $0 < x < \\frac{\\pi}{2}$ 时 $f(x)$ 无零点。因为 $f\\left(\\frac{\\pi}{2}\\right) < 0$ 且 $f\\left(\\frac{3\\pi}{2}\\right) > 0$ ，由零值定理和单调性，当 $\\frac{\\pi}{2} < x < \\frac{3\\pi}{2}$ 时 $f(x)$ 有唯一零点。综上所述， $f(x)$ 在区间 $\\left(0, \\frac{3\\pi}{2}\\right)$ 内存在唯一零点。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 357
+  }
+ ]
+}

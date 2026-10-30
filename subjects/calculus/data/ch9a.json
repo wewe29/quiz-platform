@@ -1,0 +1,1650 @@
+{
+ "chapter": 9,
+ "questions": [
+  {
+   "id": "c9-s1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.2 偏导数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $z=x^2y+\\sin(xy)$，则 $\\dfrac{\\partial z}{\\partial x}=$",
+   "options": [
+    "$2xy+y\\cos(xy)$",
+    "$x^2+y\\cos(xy)$",
+    "$2xy-y\\cos(xy)$",
+    "$x^2y+y\\cos(xy)$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：对 $x$ 求偏导时把 $y$ 视为常数（§9.2）：$\\dfrac{\\partial}{\\partial x}(x^2y)=2xy$；$\\dfrac{\\partial}{\\partial x}\\sin(xy)=\\cos(xy)\\cdot y$。故 $\\dfrac{\\partial z}{\\partial x}=2xy+y\\cos(xy)$，A 正确。\nB 错：第一项对 $x$ 求导出错。\nC 错：链式因子符号弄反。\nD 错：第一项未求导。",
+   "misconception": "⚠️易错点：偏导数「只对 $x$ 求、$y$ 冻结」，但 $\\sin(xy)$ 内的 $y$ 冻结后仍有系数 $y$ 作为链式因子。",
+   "extension": null,
+   "tags": [
+    "偏导数",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 627
+  },
+  {
+   "id": "ky2-1991-3-f81654",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.8",
+   "knowledgePoints": [
+    "9.8"
+   ],
+   "source": {
+    "text": "1991 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1991,
+    "region": "全国",
+    "paper": "1991 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(x)$ 在 $(- \\infty, + \\infty)$ 内有定义, $x_0 \\neq 0$ 是函数 $f(x)$ 的极大值点, 则 $\\cdot$ ( )",
+   "options": [
+    "$x_{0}$ 必是 $f(x)$ 的驻点",
+    "$-x_{0}$ 必是 $-f(-x)$ 的极小值点",
+    "$-x_{0}$ 必是 $-f(x)$ 的极小值点",
+    "对一切 $x$ 都有 $f(x) \\leqslant f(x_0)$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：B\n应选 (B).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 628
+  },
+  {
+   "id": "ky2-2009-3-bf474d",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.3",
+   "knowledgePoints": [
+    "9.3"
+   ],
+   "source": {
+    "text": "2009 年考研数学二第 3 题",
+    "kind": "exam-original",
+    "year": 2009,
+    "region": "全国",
+    "paper": "2009 年考研数学二",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $z = f(x, y)$ 的全微分为 $\\mathrm{d}z = x \\, \\mathrm{d}x + y \\, \\mathrm{d}y$ ，则点 $(0, 0)$ ……( )",
+   "options": [
+    "不是 $f(x, y)$ 的连续点",
+    "不是 $f(x, y)$ 的极值点",
+    "是 $f(x, y)$ 的极大值点",
+    "是 $f(x, y)$ 的极小值点"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：D\n应选 (D). 因 $\\mathrm{d}z = x\\mathrm{d}x + y\\mathrm{d}y$ 可得 $\\frac{\\partial z}{\\partial x} = x, \\frac{\\partial z}{\\partial y} = y$ ，从而\n$$\nA = \\frac {\\partial^ {2} z}{\\partial x ^ {2}} = 1, \\qquad B = \\frac {\\partial^ {2} z}{\\partial x \\partial y} = \\frac {\\partial^ {2} z}{\\partial y \\partial x} = 0, \\qquad C = \\frac {\\partial^ {2} z}{\\partial y ^ {2}} = 1.\n$$\n又在 $(0,0)$ 处， $\\frac{\\partial z}{\\partial x} = 0, \\frac{\\partial z}{\\partial y} = 0$ ， $AC - B^2 = 1 > 0$ ，故 $(0,0)$ 为函数 $z = f(x,y)$ 的一个极小值点.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 629
+  },
+  {
+   "id": "zk-202210-02",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 2 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 2,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $z = \\ln(xy)$，则全微分 $\\mathrm{d}z =$",
+   "options": [
+    "$y\\,\\mathrm{d}x + x\\,\\mathrm{d}y$",
+    "$x\\,\\mathrm{d}x + y\\,\\mathrm{d}y$",
+    "$\\dfrac{1}{y}\\mathrm{d}x + \\dfrac{1}{x}\\mathrm{d}y$",
+    "$\\dfrac{1}{x}\\mathrm{d}x + \\dfrac{1}{y}\\mathrm{d}y$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数的全微分（多元函数微分学）。\n**考点出处**：二元函数的全微分（多元函数微分学）\n**第一步：求两个一阶偏导。**\n\n先把对数拆开，能大幅降低出错率：\n\n$$z = \\ln(xy) = \\ln x + \\ln y$$\n\n于是\n\n$$\\frac{\\partial z}{\\partial x} = \\frac{1}{x}, \\qquad \\frac{\\partial z}{\\partial y} = \\frac{1}{y}$$\n\n（若直接对 $\\ln(xy)$ 求 $x$ 的偏导，用链式法则得 $\\dfrac{1}{xy}\\cdot y = \\dfrac{1}{x}$，结果一样。**拆开更稳。**）\n\n**第二步：套全微分公式。**\n\n$$\\mathrm{d}z = \\frac{\\partial z}{\\partial x}\\mathrm{d}x + \\frac{\\partial z}{\\partial y}\\mathrm{d}y = \\frac{1}{x}\\mathrm{d}x + \\frac{1}{y}\\mathrm{d}y$$\n\n故选 **D**。",
+   "misconception": "- **A 选项 $y\\,\\mathrm{d}x + x\\,\\mathrm{d}y$**：这是把 $z = xy$（而不是 $\\ln(xy)$）求全微分的结果，**漏掉了\"取对数\"这一层**。\n- **C 选项 $\\dfrac{1}{y}\\mathrm{d}x + \\dfrac{1}{x}\\mathrm{d}y$ 是\"配对写反\"**：$\\mathrm{d}x$ 前面的系数必须是**对 $x$ 的偏导** $\\dfrac1x$。这是本题最隐蔽的坑——两个系数本身都对，位置错了。\n- **口诀**：**\"$\\mathrm{d}z$ 里，对 $x$ 的偏导配 $\\mathrm{d}x$，对 $y$ 的偏导配 $\\mathrm{d}y$，谁配谁不能错位。\"**\n- 全微分是**线性主部**：$\\mathrm{d}z = z_x\\mathrm{d}x + z_y\\mathrm{d}y$，两项相加，没有交叉项。\n- 数一下就知道 $\\ln(xy)$ 的偏导一定带分母：对 $x$ 求导时 $y$ 是常数，$y$ 会被约掉，只剩 $\\frac1x$。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 630
+  },
+  {
+   "id": "zk-202304-02",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2023 年 4 月 自考 00023 高等数学（工本）第 2 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 2,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $z = xy$，则全微分 $\\mathrm{d}z =$",
+   "options": [
+    "$\\dfrac{1}{x}\\mathrm{d}x + \\dfrac{1}{y}\\mathrm{d}y$",
+    "$\\mathrm{d}x + \\mathrm{d}y$",
+    "$y\\mathrm{d}x + x\\mathrm{d}y$",
+    "$x\\mathrm{d}x + y\\mathrm{d}y$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数的全微分（多元函数微分学）。\n**考点出处**：二元函数的全微分（多元函数微分学）\n**第一步：写出全微分公式。**\n\n$$\\mathrm{d}z = \\frac{\\partial z}{\\partial x}\\mathrm{d}x + \\frac{\\partial z}{\\partial y}\\mathrm{d}y$$\n\n**第二步：求两个偏导数。**\n\n对 $x$ 求偏导时把 $y$ 当常数：\n\n$$\\frac{\\partial z}{\\partial x} = y$$\n\n对 $y$ 求偏导时把 $x$ 当常数：\n\n$$\\frac{\\partial z}{\\partial y} = x$$\n\n**第三步：代入公式。**\n\n$$\\mathrm{d}z = y\\,\\mathrm{d}x + x\\,\\mathrm{d}y$$\n\n选 **C**。",
+   "misconception": "- **$xy$ 的全微分是\"交叉\"的**：$\\mathrm{d}x$ 前面配 $y$，$\\mathrm{d}y$ 前面配 $x$。**D 选项 $x\\mathrm{d}x+y\\mathrm{d}y$ 就是把两个偏导写反了**，是最典型的错误。\n- **A 选项 $\\frac1x\\mathrm{d}x+\\frac1y\\mathrm{d}y$**：这是把函数误认成 $z=\\ln(xy)$（那时 $\\frac{\\partial z}{\\partial x}=\\frac1x$）。\n- **B 选项 $\\mathrm{d}x+\\mathrm{d}y$**：这是把函数误认成 $z=x+y$（那时两个偏导都是 $1$）。\n- 记住：**全微分 $\\mathrm{d}z$ 与 $z$ 本身量纲一致**，是两个微分 $\\mathrm{d}x$、$\\mathrm{d}y$ 的线性组合，缺一项就是零分。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 631
+  },
+  {
+   "id": "zk-202310-02",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 2 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 2,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "极限 $\\displaystyle\\lim_{\\substack{x \\to 0 \\\\ y \\to 3}} x\\sin\\frac{1}{xy} =$",
+   "options": [
+    "等于 $0$",
+    "等于 $1$",
+    "等于 $3$",
+    "不存在"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数的极限；**无穷小量与有界量的乘积仍是无穷小量**。\n**考点出处**：二元函数的极限（无穷小 × 有界）（多元函数微分学）\n关键在于把式子拆成\"**无穷小 × 有界**\"两部分。\n\n**第一步：确认 $x$ 是无穷小量。**\n\n当 $x \\to 0$ 时，$x \\to 0$，即 $x$ 是无穷小量。✅\n\n**第二步：确认 $\\sin\\dfrac{1}{xy}$ 是有界量。**\n\n正弦函数的取值范围始终是\n\n$$\\left|\\sin\\frac{1}{xy}\\right| \\le 1$$\n\n**无论 $\\dfrac{1}{xy}$ 取什么值（哪怕它趋向无穷大、疯狂振荡），$\\sin$ 的绝对值都不会超过 $1$。**\n\n⚠️ 这里要特别注意：$x \\to 0$、$y \\to 3$ 时 $xy \\to 0$，所以 $\\dfrac{1}{xy} \\to \\infty$，$\\sin\\dfrac{1}{xy}$ **本身的极限确实不存在**（它在 $[-1,1]$ 之间无限次振荡）。**但它有界**，这就够了。\n\n**第三步：用\"无穷小 × 有界 = 无穷小\"。**\n\n$$0 \\le \\left|x\\sin\\frac{1}{xy}\\right| = |x|\\cdot\\left|\\sin\\frac{1}{xy}\\right| \\le |x| \\xrightarrow{x\\to 0} 0$$\n\n由**夹逼定理**，得\n\n$$\\lim_{\\substack{x\\to 0\\\\ y\\to 3}} x\\sin\\frac{1}{xy} = 0$$\n\n答案是 **A**。",
+   "misconception": "- **本题最大的陷阱是 D（不存在）**。很多人看到 $\\sin\\dfrac{1}{xy}$ 振荡、极限不存在，就认为整个极限不存在。**这是错的！**\n  - 类比一元函数：$\\displaystyle\\lim_{x\\to 0} x\\sin\\frac{1}{x} = 0$，虽然 $\\sin\\dfrac{1}{x}$ 振荡，但被 $x$ 这个\"无穷小\"压住了。\n  - **\"振荡\"只说明该因子自身极限不存在，不代表乘积不存在。** 只要有界，无穷小就能把它\"压\"到 $0$。\n- 记住这条结论的适用条件：**必须是\"无穷小 × 有界\"**。如果两个因子都是无穷小，结果也是无穷小；但如果是\"无穷大 × 有界\"，则**未必**（例如 $n \\cdot \\frac{1}{n} = 1$）。本题是\"无穷小 × 有界\"，结论确定。\n- $y \\to 3$ 这个条件在本题中只是**保证 $xy \\to 0$（从而 $\\frac{1}{xy}$ 才有意义地趋向无穷）**，并不影响结论。就算改成 $y \\to 5$，答案依然是 $0$。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 632
+  },
+  {
+   "id": "zk-202404-02",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 2 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 2,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $z = x^2 + y^2$，则全微分 $\\mathrm{d}z\\big|_{(1,1)} =$",
+   "options": [
+    "$4$",
+    "$\\mathrm{d}x + \\mathrm{d}y$",
+    "$2(\\mathrm{d}x + \\mathrm{d}y)$",
+    "$4(\\mathrm{d}x + \\mathrm{d}y)$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：全微分公式 $\\mathrm{d}z = \\dfrac{\\partial z}{\\partial x}\\mathrm{d}x + \\dfrac{\\partial z}{\\partial y}\\mathrm{d}y$。\n**考点出处**：全微分的计算（多元函数微分学）\n**第一步：求两个偏导数。**\n\n$$\\frac{\\partial z}{\\partial x} = 2x, \\qquad \\frac{\\partial z}{\\partial y} = 2y$$\n\n**第二步：代入点 $(1,1)$。**\n\n$$\\frac{\\partial z}{\\partial x}\\bigg|_{(1,1)} = 2, \\qquad \\frac{\\partial z}{\\partial y}\\bigg|_{(1,1)} = 2$$\n\n**第三步：代入全微分公式。**\n\n$$\\mathrm{d}z\\big|_{(1,1)} = 2\\,\\mathrm{d}x + 2\\,\\mathrm{d}y = 2(\\mathrm{d}x + \\mathrm{d}y)$$",
+   "misconception": "- **A 选项 4 是陷阱**：$4$ 是 $z(1,1)$ 的函数值，不是全微分。题目问的是 $\\mathrm{d}z$，答案里必须带 $\\mathrm{d}x$、$\\mathrm{d}y$。\n- 别忘记\"先求偏导，再代点\"，顺序反了容易算错。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 633
+  },
+  {
+   "id": "zk-202410-02",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 2 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 2,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $z = x^2 - 2xy^2$，则 $\\left.\\dfrac{\\partial z}{\\partial x}\\right|_{(1,1)} =$",
+   "options": [
+    "$0$",
+    "$1$",
+    "$2$",
+    "$4$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数偏导数的计算与求值（多元函数微分学）。\n**考点出处**：二元函数偏导数求值（多元函数微分学）\n**第一步：对 $x$ 求偏导，把 $y$ 当常数。**\n\n$$\\frac{\\partial z}{\\partial x} = 2x - 2y^2$$\n\n（$x^2$ 对 $x$ 求导得 $2x$；$-2xy^2$ 中 $y^2$ 是常数因子，对 $x$ 求导得 $-2y^2$。）\n\n**第二步：代入 $(1,1)$。**\n\n$$\\left.\\frac{\\partial z}{\\partial x}\\right|_{(1,1)} = 2\\times 1 - 2\\times 1^2 = 2 - 2 = 0$$\n\n选 **A**。",
+   "misconception": "- **D 选项 $4$**：把 $\\dfrac{\\partial z}{\\partial x}$ 误算成 $2x + 2y^2$（**负号看成正号**），代点得 $2 + 2 = 4$。**\"$-2xy^2$ 的负号\"是本题唯一的坑。**\n- **C 选项 $2$**：只代了第一项 $2x$、漏掉第二项 $-2y^2$ 的结果。\n- **必须先求偏导、再代点**：如果先把 $(1,1)$ 代进原函数（得 $z = 1-2 = -1$）再求导，得到的是 $0$——虽然本题答案碰巧也是 $0$，但**方法是错的**，换个点就会出问题。\n- 求偏导与一元求导的唯一区别：**把另一个变量当常数**，其余规则完全一样。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 634
+  },
+  {
+   "id": "zk-202504-02",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2025 年 4 月 自考 00023 高等数学（工本）第 2 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 2,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $z = x^y$，则全微分 $\\mathrm{d}z =$",
+   "options": [
+    "$x^y\\ln x\\,\\mathrm{d}x + yx^{y-1}\\,\\mathrm{d}y$",
+    "$yx^{y-1}(\\mathrm{d}x + \\mathrm{d}y)$",
+    "$x^y\\ln x(\\mathrm{d}x + \\mathrm{d}y)$",
+    "$yx^{y-1}\\,\\mathrm{d}x + x^y\\ln x\\,\\mathrm{d}y$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数的全微分（两个偏导数各配一个微分），多元函数微分学。\n**考点出处**：偏导数求值（全微分 $\\mathrm{d}z$）\n**第一步：认清函数类型——幂指函数，底数与指数都含变量。**\n\n$z = x^y$ 既不是纯幂函数（指数是变量），也不是纯指数函数（底数是变量），**必须对两个变量分别求偏导**。\n\n**第二步：对 $x$ 求偏导（把 $y$ 当常数）。**\n\n此时 $z = x^y$ 就是**幂函数**，用公式 $(x^n)' = nx^{n-1}$：\n\n$$\\frac{\\partial z}{\\partial x} = yx^{y-1}$$\n\n**第三步：对 $y$ 求偏导（把 $x$ 当常数）。**\n\n此时 $z = x^y$ 就是**指数函数**，用公式 $(a^y)' = a^y\\ln a$：\n\n$$\\frac{\\partial z}{\\partial y} = x^y\\ln x$$\n\n**第四步：按全微分公式组装。**\n\n$$\\mathrm{d}z = \\frac{\\partial z}{\\partial x}\\mathrm{d}x + \\frac{\\partial z}{\\partial y}\\mathrm{d}y = yx^{y-1}\\,\\mathrm{d}x + x^y\\ln x\\,\\mathrm{d}y$$\n\n选 **D**。",
+   "misconception": "- **A 选项是把两个偏导数\"配错了微分\"**：$x^y\\ln x$ 是 $\\dfrac{\\partial z}{\\partial y}$，它必须配 $\\mathrm{d}y$；$yx^{y-1}$ 是 $\\dfrac{\\partial z}{\\partial x}$，必须配 $\\mathrm{d}x$。**A 里两者恰好对调**——这是\"算对了偏导、写错了位置\"的典型失分，全微分里\"谁对谁\"不能乱。\n- **B、C 是把两个偏导当成同一个**：B 认为两个方向都是 $yx^{y-1}$（把 $y$ 也看成指数），C 认为两个方向都是 $x^y\\ln x$（把 $x$ 也看成底数）。**只要记住\"对 $x$ 是幂函数、对 $y$ 是指数函数\"，这两个选项自动排除。**\n- **全微分公式的骨架是\"一阶偏导各乘对应微分再相加\"**：$\\mathrm{d}z = \\dfrac{\\partial z}{\\partial x}\\mathrm{d}x + \\dfrac{\\partial z}{\\partial y}\\mathrm{d}y$。**这是本章最高频的送分公式，必须背到条件反射。**\n- **易混对象**：$z = x^y$ 与 $z = y^x$ 的答案是**不一样**的，前者 $\\dfrac{\\partial z}{\\partial y} = x^y\\ln x$，后者 $\\dfrac{\\partial z}{\\partial x} = y^x\\ln y$。**谁是底数、谁是指数，看题目里的位置，不要靠印象。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 635
+  },
+  {
+   "id": "zk-202510-02",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 2 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 2,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $z = \\dfrac{x}{y}$，则全微分 $\\mathrm{d}z =$",
+   "options": [
+    "$\\dfrac{1}{y}\\mathrm{d}x - \\dfrac{x}{y^2}\\mathrm{d}y$",
+    "$\\dfrac{1}{y}\\mathrm{d}x + \\dfrac{x}{y^2}\\mathrm{d}y$",
+    "$-\\dfrac{x}{y^2}\\mathrm{d}x + \\dfrac{1}{y}\\mathrm{d}y$",
+    "$\\dfrac{x}{y^2}\\mathrm{d}x + \\dfrac{1}{y}\\mathrm{d}y$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数的全微分公式（多元函数微分学）。\n**考点出处**：多元函数微分学（偏导数求值）\n**第一步：写出全微分公式。**\n\n$$\\mathrm{d}z = \\frac{\\partial z}{\\partial x}\\mathrm{d}x + \\frac{\\partial z}{\\partial y}\\mathrm{d}y$$\n\n**\"哪个变量的微分，就配哪个变量的偏导数\"**——这是全微分唯一的结构。\n\n**第二步：求两个偏导数。**\n\n对 $x$ 求偏导时把 $y$ 当常数（$z = \\dfrac{1}{y}\\cdot x$ 是关于 $x$ 的一次函数）：\n\n$$\\frac{\\partial z}{\\partial x} = \\frac{1}{y}$$\n\n对 $y$ 求偏导时把 $x$ 当常数（$z = x\\cdot y^{-1}$，用幂函数求导）：\n\n$$\\frac{\\partial z}{\\partial y} = x\\cdot(-1)y^{-2} = -\\frac{x}{y^2}$$\n\n**第三步：组装。**\n\n$$\\mathrm{d}z = \\frac{1}{y}\\mathrm{d}x - \\frac{x}{y^2}\\mathrm{d}y$$\n\n选 **A**。",
+   "misconception": "- **B 选项的错因是\"负号丢失\"**：$\\dfrac{\\partial z}{\\partial y} = -\\dfrac{x}{y^2}$ 里的负号来自 $y^{-1}$ 求导，**丢了这个负号就正好落到 B**。\n- **C、D 选项的错因是\"偏导与微分配对颠倒\"**：它们把 $\\dfrac{\\partial z}{\\partial x}$ 放到了 $\\mathrm{d}y$ 前面、把 $\\dfrac{\\partial z}{\\partial y}$ 放到了 $\\mathrm{d}x$ 前面。**$\\mathrm{d}x$ 永远配 $\\dfrac{\\partial z}{\\partial x}$**，这是死规定。\n- **求 $\\dfrac{\\partial z}{\\partial y}$ 时分子 $x$ 是常数因子**：写成 $\\dfrac{\\partial z}{\\partial y} = \\dfrac{1}{x}$ 是最常见的低级错误（把 $z = x/y$ 看成了 $y/x$）。\n- **全微分是\"线性主部\"**：结果一定是 $\\mathrm{d}x$、$\\mathrm{d}y$ 的一次齐次式，若算出的式子里出现 $x^2$、$\\dfrac{1}{y^2}$ 之外的东西或常数项，立刻回头检查。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 636
+  },
+  {
+   "id": "zk-202604-02",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 2 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 2,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $z = 2x^3 - 3y^2$，则全微分 $\\left.\\mathrm{d}z\\right|_{(1,1)} =$",
+   "options": [
+    "$0$",
+    "$\\mathrm{d}x - \\mathrm{d}y$",
+    "$6\\mathrm{d}x - 6\\mathrm{d}y$",
+    "$6\\mathrm{d}x + 6\\mathrm{d}y$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数的全微分（多元函数微分学）。\n**考点出处**：二元函数的全微分（多元函数微分学）\n**第一步：写出全微分公式。**\n\n$$\\mathrm{d}z = \\frac{\\partial z}{\\partial x}\\mathrm{d}x + \\frac{\\partial z}{\\partial y}\\mathrm{d}y$$\n\n**第二步：分别求两个偏导数。**\n\n$$\\frac{\\partial z}{\\partial x} = 6x^2, \\qquad \\frac{\\partial z}{\\partial y} = -6y$$\n\n**第三步：代入 $(1,1)$。**\n\n$$\\left.\\frac{\\partial z}{\\partial x}\\right|_{(1,1)} = 6\\times 1^2 = 6, \\qquad \\left.\\frac{\\partial z}{\\partial y}\\right|_{(1,1)} = -6\\times 1 = -6$$\n\n**第四步：组装成全微分。**\n\n$$\\left.\\mathrm{d}z\\right|_{(1,1)} = 6\\,\\mathrm{d}x - 6\\,\\mathrm{d}y$$\n\n选 **C**。",
+   "misconception": "- **D 选项 $6\\mathrm{d}x+6\\mathrm{d}y$ 是\"符号陷阱\"**：$-3y^2$ 对 $y$ 求导得 $-6y$，**负号丢了就会选 D**。\n- **B 选项 $\\mathrm{d}x-\\mathrm{d}y$**：$6x^2$ 代 $x=1$ 得 $6$，不是 $1$；把系数 $6$ 漏掉就落到 B。\n- **A 选项 $0$**：可能在点 $(1,1)$ 处算出 $z = 2-3 = -1$ 就以为\"全微分为 $0$\"，**混淆了函数值与微分**。\n- **必须先求偏导、再代点**：顺序反了（先代点再求导）会把函数变成常数，偏导全为 $0$。\n- **全微分与全增量要分清**：本题问的是 $\\mathrm{d}z$，**不是** $\\Delta z$。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 637
+  },
+  {
+   "id": "c9-s2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.4",
+   "knowledgePoints": [
+    "9.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.4 多元复合函数的求导法则",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $z=f(u,v)$ 可微，$u=x^2-y^2$，$v=xy$，则 $\\dfrac{\\partial z}{\\partial x}=$",
+   "options": [
+    "$2x\\dfrac{\\partial f}{\\partial u}-2y\\dfrac{\\partial f}{\\partial v}$",
+    "$2x\\dfrac{\\partial f}{\\partial u}+y\\dfrac{\\partial f}{\\partial v}$",
+    "$2x\\dfrac{\\partial f}{\\partial u}+x\\dfrac{\\partial f}{\\partial v}$",
+    "$\\dfrac{\\partial f}{\\partial u}\\cdot 2x\\cdot\\dfrac{\\partial f}{\\partial v}\\cdot y$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：链式法则（§9.4）：$\\dfrac{\\partial z}{\\partial x}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial x}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial x}$。其中 $\\dfrac{\\partial u}{\\partial x}=2x$，$\\dfrac{\\partial v}{\\partial x}=y$，故 $\\dfrac{\\partial z}{\\partial x}=2xf_u+yf_v$，B 正确。\nA 错：把 $v$ 对 $x$ 的偏导误为 $-2y$（那是 $u$ 对 $y$ 的导数）。\nC 错：$v=xy$ 对 $x$ 求导得 $y$ 不是 $x$。\nD 错：把「链式相加」写成了「相乘」。",
+   "misconception": "⚠️易错点：画链式图「$z$ 分叉到 $u,v$、各自连到 $x$」——分线相加、沿线相乘；$u=x^2-y^2$ 对 $y$ 的导数才是 $-2y$。",
+   "extension": null,
+   "tags": [
+    "链式法则",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 638
+  },
+  {
+   "id": "ky2-2011-3-8434c7",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.8",
+   "knowledgePoints": [
+    "9.8"
+   ],
+   "source": {
+    "text": "2011 年考研数学二第 3 题",
+    "kind": "exam-original",
+    "year": 2011,
+    "region": "全国",
+    "paper": "2011 年考研数学二",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "函数 $f(x) = \\ln |(x - 1)(x - 2)(x - 3)|$ 的驻点个数为……（）",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：C\n应选 (C). 由 $f(x) = \\ln |x - 1| + \\ln |x - 2| + \\ln |x - 3|$ 得\n$$\nf ^ {\\prime} (x) = \\frac {1}{x - 1} + \\frac {1}{x - 2} + \\frac {1}{x - 3} = \\frac {3 x ^ {2} - 1 2 x + 1 1}{(x - 1) (x - 2) (x - 3)}.\n$$\n令 $f^{\\prime}(x) = 0$ ，得 $x_{1,2} = \\frac{6 \\pm \\sqrt{3}}{3}$ ，故 $f(x)$ 有两个不同的驻点.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 639
+  },
+  {
+   "id": "ky2-2013-5-4c80b8",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2013 年考研数学二第 5 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学二",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $z = \\frac{y}{x} f(xy)$ ，其中函数 $f$ 可微，则 $\\frac{x}{y}\\frac{\\partial z}{\\partial x} + \\frac{\\partial z}{\\partial y} = \\dots$ （ ）",
+   "options": [
+    "$2yf^{\\prime}(xy)$",
+    "$-2yf'(xy)$",
+    "$\\frac{2}{x} f(xy)$",
+    "$-\\frac{2}{x} f(xy)$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A\n应选 (A). 已知 $z = \\frac{y}{x} f(xy)$ ，所以\n$$\n\\frac {\\partial z}{\\partial x} = - \\frac {y}{x ^ {2}} f (x y) + \\frac {y ^ {2}}{x} f ^ {\\prime} (x y), \\quad \\Rightarrow \\quad \\frac {\\partial z}{\\partial y} = \\frac {1}{x} f (x y) + y f ^ {\\prime} (x y).\n$$\n所以 $\\frac{x}{y} \\frac{\\partial z}{\\partial x} + \\frac{\\partial z}{\\partial y} = 2y f'(xy)$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 640
+  },
+  {
+   "id": "ky2-2015-5-4a56fa",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2015 年考研数学二第 5 题",
+    "kind": "exam-original",
+    "year": 2015,
+    "region": "全国",
+    "paper": "2015 年考研数学二",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(u, v)$ 满足 $f\\left(x + y, \\frac{y}{x}\\right) = x^2 - y^2$ ，则 $\\left.\\frac{\\partial f}{\\partial u}\\right|_{\\substack{u = 1 \\\\ v = 1}}$ 与 $\\left.\\frac{\\partial f}{\\partial v}\\right|_{\\substack{u = 1 \\\\ v = 1}}$ 依次是…（）",
+   "options": [
+    "$\\frac{1}{2}, 0$",
+    "$0, \\frac{1}{2}$",
+    "$-\\frac{1}{2}, 0.$",
+    "$0, - \\frac{1}{2}$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：D\n应选 (D). 令 $u = x + y, \\nu = \\frac{y}{x}$ , 则 $x = \\frac{u}{1 + \\nu}, y = \\frac{u\\nu}{1 + \\nu}$ , 从而得到\n$$\nf (u, \\nu) = \\left(\\frac {u}{1 + \\nu}\\right) ^ {2} - \\left(\\frac {u \\nu}{1 + \\nu}\\right) ^ {2} = \\frac {u ^ {2} (1 - \\nu)}{1 + \\nu}.\n$$\n求偏导得 $\\frac{\\partial f}{\\partial u} = \\frac{2u(1 - \\nu)}{1 + \\nu}, \\frac{\\partial f}{\\partial \\nu} = -\\frac{2u^2}{(1 + \\nu)^2}$ 因而 $\\left.\\frac{\\partial f}{\\partial u}\\right|_{\\substack{u = 1\\\\ \\nu = 1}} = 0,\\left.\\frac{\\partial f}{\\partial\\nu}\\right|_{\\substack{u = 1\\\\ \\nu = 1}} = -\\frac{1}{2}.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 641
+  },
+  {
+   "id": "ky2-2017-5-edc9a9",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2017 年考研数学二第 5 题",
+    "kind": "exam-original",
+    "year": 2017,
+    "region": "全国",
+    "paper": "2017 年考研数学二",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设 $f(x, y)$ 具有一阶偏导数，且对任意的 $(x, y)$ ，都有 $\\frac{\\partial f(x, y)}{\\partial x} > 0$ ， $\\frac{\\partial f(x, y)}{\\partial y} < 0$ 则……（）",
+   "options": [
+    "$f(0,0) > f(1,1)$",
+    "$f(0,0) < f(1,1)$",
+    "$f(0,1) > f(1,0)$",
+    "$f(0,1) < f(1,0)$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：D\n应选 (D). 由于 $\\frac{\\partial f(x, y)}{\\partial x} > 0$ , 可知 $f(x, y)$ 关于 $x$ 单调递增, 故有 $f(0, 1) < f(1, 1)$ . 又由于 $\\frac{\\partial f(x, y)}{\\partial y} < 0$ , 可知 $f(x, y)$ 关于 $y$ 单调递减, 故有 $f(1, 1) < f(1, 0)$ , 从而 $f(0, 1) < f(1, 0)$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 642
+  },
+  {
+   "id": "zk-202210-07",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 7 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 7,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "函数 $z = x\\mathrm{e}^y$ 在点 $M(1, 0)$ 处的梯度为",
+   "options": [
+    "$\\{1, 1\\}$",
+    "$\\{0, 1\\}$",
+    "$\\{1, 0\\}$",
+    "$\\{1, 2\\}$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数的梯度（多元函数微分学）。\n**考点出处**：二元函数的梯度（多元函数微分学）\n**第一步：求两个一阶偏导。**\n\n对 $x$ 求偏导时 $y$ 是常数，$\\mathrm{e}^y$ 整个当系数：\n\n$$\\frac{\\partial z}{\\partial x} = \\mathrm{e}^y$$\n\n对 $y$ 求偏导时 $x$ 是常数，$\\mathrm{e}^y$ 的导数仍是 $\\mathrm{e}^y$：\n\n$$\\frac{\\partial z}{\\partial y} = x\\mathrm{e}^y$$\n\n**第二步：代入点 $(1, 0)$。**\n\n$\\mathrm{e}^0 = 1$，所以\n\n$$\\left.\\frac{\\partial z}{\\partial x}\\right|_{(1,0)} = \\mathrm{e}^0 = 1, \\qquad \\left.\\frac{\\partial z}{\\partial y}\\right|_{(1,0)} = 1\\times\\mathrm{e}^0 = 1$$\n\n**第三步：梯度是向量。**\n\n$$\\mathrm{grad}\\,z(1,0) = \\left\\{\\frac{\\partial z}{\\partial x},\\ \\frac{\\partial z}{\\partial y}\\right\\}_{(1,0)} = \\{1,\\ 1\\} = \\boldsymbol{i} + \\boldsymbol{j}$$\n\n故选 **A**。",
+   "misconception": "- **梯度是向量，不是数**。答案必须写成 $\\{1,1\\}$ 或 $\\boldsymbol{i}+\\boldsymbol{j}$；**写成孤零零一个 $1$ 是没有分的。二元函数的梯度有两个分量，别只写一个。**\n- **B 选项 $\\{0,1\\}$**：把 $\\mathrm{e}^y$ 在 $y=0$ 处当成了 $0$。**$\\mathrm{e}^0 = 1$，不是 $0$**——这是把\"指数为 0\"和\"函数值为 0\"搞混了。\n- **C 选项 $\\{1,0\\}$**：把两个分量写反，或把 $\\dfrac{\\partial z}{\\partial y} = x\\mathrm{e}^y$ 在 $x=1$ 处算成了 $0$（其实等于 $1\\times1 = 1$）。\n- **D 选项 $\\{1,2\\}$**：对 $\\mathrm{e}^y$ 求 $x$ 的偏导时多乘了一个因子，或把两个分量相加当成第二个分量。\n- **先求一般表达式、再代点**：直接代点再求导是错的。本题在 $(1,0)$ 处两个分量恰好都是 1，纯属数值巧合，**换个点（如 $(2,1)$）就要分别算 $\\mathrm{e}$ 和 $2\\mathrm{e}$。**\n- 梯度指向函数增长最快的方向，这一点在第 14 题（方向导数，同一章节的另一槽位）里会直接用到。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 643
+  },
+  {
+   "id": "zk-202304-07",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2023 年 4 月 自考 00023 高等数学（工本）第 7 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 7,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "$\\displaystyle\\lim_{\\substack{x\\to 0 \\\\ y\\to 0}} \\frac{\\sin(xy^2)}{y} =$",
+   "options": [
+    "$0$",
+    "$1$",
+    "$2$",
+    "$\\infty$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数的极限（无穷小与有界量的乘积）（多元函数微分学）。\n**考点出处**：二元函数的极限（多元函数微分学）\n**第一步：用\"有界 × 无穷小\"夹逼。**\n\n对任何实数 $u$，都有 $|\\sin u| \\le |u|$。取 $u = xy^2$：\n\n$$|\\sin(xy^2)| \\le |xy^2|$$\n\n两边同除以 $|y|$（$y \\ne 0$）：\n\n$$\\left|\\frac{\\sin(xy^2)}{y}\\right| \\le \\frac{|xy^2|}{|y|} = |xy|$$\n\n**第二步：让 $(x,y) \\to (0,0)$。**\n\n$$|xy| \\to 0$$\n\n由夹逼准则（两边夹）：\n\n$$\\lim_{(x,y)\\to(0,0)}\\frac{\\sin(xy^2)}{y} = 0$$\n\n选 **A**。\n\n**另解（等价无穷小）**：当 $(x,y)\\to(0,0)$ 时 $xy^2 \\to 0$，故 $\\sin(xy^2) \\sim xy^2$，于是\n\n$$\\frac{\\sin(xy^2)}{y} \\sim \\frac{xy^2}{y} = xy \\to 0$$",
+   "misconception": "- **关键在于\"分子比分母高一阶无穷小\"**：分子对 $y$ 是**二阶**无穷小（$xy^2$），分母是**一阶**（$y$），一除还剩一个 $y$，所以整体趋于 $0$。\n- **B 选项 $1$ 对应误用 $\\lim\\limits_{u\\to0}\\frac{\\sin u}{u}=1$**：那个公式要求分子分母是**同一个** $u$。本题分母是 $y$，不是 $xy^2$，硬套公式就会得出 $1$。\n- **D 选项 $\\infty$ 对应\"只看分母趋于 0\"**：忘了分子也同时趋于 $0$。**判断 $\\frac00$ 型必须同时看分子分母的阶数，不能只看分母。**\n- **C 选项 $2$** 纯粹是凑数干扰项，无对应错误路径——本题只要按阶数分析，就不会选到它。\n- 记住这个模板：**\"若分子是分母的高阶无穷小，极限为 0\"**，这是二元函数极限里最常见的送分结构。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 644
+  },
+  {
+   "id": "zk-202310-07",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 7 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 7,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $f(x, y) = \\dfrac{4xy}{x^2 - y^2}$，则 $f\\!\\left(1, \\dfrac{y}{x}\\right) =$",
+   "options": [
+    "$\\dfrac{4y}{x^2 - y^2}$",
+    "$\\dfrac{4y}{y^2 - x^2}$",
+    "$\\dfrac{4xy}{x^2 - y^2}$",
+    "$\\dfrac{4xy}{y^2 - x^2}$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数的**求值（代入运算）**。\n**考点出处**：二元函数求值（代入）（多元函数微分学）\n$f\\!\\left(1, \\dfrac{y}{x}\\right)$ 的含义是：把 $f(x,y)$ 表达式中的**第一个变量 $x$ 全部换成 $1$**，**第二个变量 $y$ 全部换成 $\\dfrac{y}{x}$**。**就是老老实实代入，没有任何复合技巧。**\n\n**第一步：代入。**\n\n$$f\\!\\left(1, \\frac{y}{x}\\right) = \\frac{4\\cdot 1 \\cdot \\dfrac{y}{x}}{1^2 - \\left(\\dfrac{y}{x}\\right)^2}$$\n\n**第二步：化简分子。**\n\n$$4 \\cdot 1 \\cdot \\frac{y}{x} = \\frac{4y}{x}$$\n\n**第三步：化简分母。**\n\n$$1 - \\left(\\frac{y}{x}\\right)^2 = 1 - \\frac{y^2}{x^2} = \\frac{x^2 - y^2}{x^2}$$\n\n**第四步：分子除以分母（乘以倒数）。**\n\n$$f\\!\\left(1, \\frac{y}{x}\\right) = \\frac{\\dfrac{4y}{x}}{\\dfrac{x^2-y^2}{x^2}} = \\frac{4y}{x}\\cdot\\frac{x^2}{x^2-y^2} = \\frac{4xy}{x^2-y^2}$$\n\n答案是 **C**。",
+   "misconception": "- **本题的计算关键在第四步的\"约掉一个 $x$\"**：$\\dfrac{4y}{x}\\cdot\\dfrac{x^2}{x^2-y^2} = \\dfrac{4xy}{x^2-y^2}$。漏掉这一步就会误选 A。\n  - **A 选项 $\\dfrac{4y}{x^2-y^2}$ 正是\"忘记约 $x$\"的产物**，这是本题最典型的错误。\n- **B、D 两个选项是\"分母符号写反\"**：$x^2 - y^2$ 与 $y^2 - x^2$ 互为相反数。本题分母化简结果为 $1 - \\frac{y^2}{x^2} = \\frac{x^2-y^2}{x^2}$，**分子分母同乘 $x^2$（正数）不改变符号**，所以分母是 $x^2-y^2$，**不能写成 $y^2-x^2$**。\n- **代入的顺序别搞反**：$f\\!\\left(1, \\dfrac{y}{x}\\right)$ 中的 $1$ 是给**第一个位置**（原 $x$）的，$\\dfrac{y}{x}$ 是给**第二个位置**（原 $y$）的。这里符号 $x$ 在两个位置都出现，容易看花眼，代入时一定要**逐项替换**。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 645
+  },
+  {
+   "id": "zk-202404-07",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 7 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 7,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "极限 $\\displaystyle\\lim_{\\substack{x\\to 1\\\\ y\\to 0}} \\frac{1}{y}\\sin(xy) =$",
+   "options": [
+    "$0$",
+    "$1$",
+    "$2$",
+    "$\\infty$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：重要极限 $\\displaystyle\\lim_{u\\to 0}\\frac{\\sin u}{u} = 1$ 在二元极限中的应用。\n**考点出处**：二元函数的极限（多元函数微分学）\n**⚠️ 首先看清趋近方式：$x \\to 1$，$y \\to 0$。**\n\n这一点是本题的关键，**不是 $(x,y)\\to(0,0)$**。\n\n**第一步：凑形式。**\n\n我们想把式子凑成 $\\dfrac{\\sin(\\square)}{\\square}$ 的样子。注意到\n\n$$\\frac{1}{y}\\sin(xy) = \\frac{\\sin(xy)}{y}$$\n\n分子分母同乘 $x$：\n\n$$\\frac{\\sin(xy)}{y} = x\\cdot\\frac{\\sin(xy)}{xy}$$\n\n**第二步：利用重要极限。**\n\n当 $(x,y)\\to(1,0)$ 时，$xy \\to 1\\times 0 = 0$，所以令 $u = xy \\to 0$，有\n\n$$\\lim_{xy\\to 0}\\frac{\\sin(xy)}{xy} = 1$$\n\n**第三步：求乘积的极限。**\n\n$$\\lim_{\\substack{x\\to 1\\\\ y\\to 0}} x\\cdot\\frac{\\sin(xy)}{xy} = \\left(\\lim_{x\\to 1} x\\right)\\cdot\\left(\\lim_{xy\\to 0}\\frac{\\sin(xy)}{xy}\\right) = 1 \\times 1 = 1$$\n\n所以答案是 **B**。",
+   "misconception": "- **最大的坑是把 $x\\to 1$ 看成 $x\\to 0$**。如果趋近点是 $(0,0)$，那么 $\\lim x \\cdot \\frac{\\sin(xy)}{xy} = 0 \\times 1 = 0$，答案就变成 A 了。**做题时一定要先圈出趋近点。**\n- 这类题的标准套路是\"**凑重要极限 + 分离出剩余因子**\"，把能用重要极限的部分凑成 $\\frac{\\sin u}{u}$，剩下的因子单独求极限。\n- 因为 $\\sin(xy)$ 里 $x$、$y$ 是相乘的，所以当 $x\\to 1$、$y\\to0$ 时乘积趋于 $0$，这正是能用重要极限的原因。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 646
+  },
+  {
+   "id": "zk-202410-07",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 7 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 7,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "函数 $z = 3(x + y) - x^3 - y^3$ 的驻点是",
+   "options": [
+    "$(2, -1)$",
+    "$(1, -2)$",
+    "$(-1, -1)$",
+    "$(-1, 2)$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数的驻点（多元函数微分学）。\n**考点出处**：二元函数的驻点（多元函数微分学）\n**第一步：求两个一阶偏导并令其为零。**\n\n先把函数展开：\n\n$$z = 3x + 3y - x^3 - y^3$$\n\n$$\\frac{\\partial z}{\\partial x} = 3 - 3x^2 = 0 \\quad\\Longrightarrow\\quad x^2 = 1 \\quad\\Longrightarrow\\quad x = \\pm 1$$\n\n$$\\frac{\\partial z}{\\partial y} = 3 - 3y^2 = 0 \\quad\\Longrightarrow\\quad y^2 = 1 \\quad\\Longrightarrow\\quad y = \\pm 1$$\n\n**第二步：组合出驻点。**\n\n驻点必须是 $(\\pm1, \\pm1)$ 之一：$(1,1)$、$(1,-1)$、$(-1,1)$、$(-1,-1)$。\n\n四个选项中只有 $(-1,-1)$ 落在这组里，选 **C**。",
+   "misconception": "- **A、B、D 三个选项都含 $\\pm2$，可以直接排除**：本题 $z_y = 3-3y^2$ 解出的是 $y = \\pm1$，**不可能出现 $y = \\pm2$**。看到 $2$ 或 $-2$ 就该立刻警觉。\n- **解 $y^2 = 1$ 时不要只取正根**：$y = \\pm1$ 都可能是驻点坐标。本题靠选项筛出 $(-1,-1)$，但**换一道题就要把四个组合全部列出**，不能只写 $(1,1)$。\n- **驻点的定义是\"所有一阶偏导同时为零\"**，只满足其中一个方程的点不算驻点。\n- 注意本题问的是**驻点**，不是极值点——**不需要**求二阶偏导、不需要判别 $\\Delta = B^2-AC$。**看清题目问什么，别多做。**（本卷的极值判别在别处没有出现，但 2023.10 卷考过，仍是重点。）\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 647
+  },
+  {
+   "id": "zk-202504-07",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.8",
+   "knowledgePoints": [
+    "9.8"
+   ],
+   "source": {
+    "text": "2025 年 4 月 自考 00023 高等数学（工本）第 7 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 7,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "下列点是函数 $z = 4(x + y) - x^2 + y^2$ 的驻点的是",
+   "options": [
+    "$(2, -2)$",
+    "$(2, 0)$",
+    "$(0, 2)$",
+    "$(2, 2)$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数的驻点（一阶偏导同时为零），多元函数微分学。\n**考点出处**：驻点（驻点）\n**第一步：把函数展开，看清每一项。**\n\n$$z = 4x + 4y - x^2 + y^2$$\n\n**注意 $y^2$ 前面是正号**，这是本题最关键的细节。\n\n**第二步：求两个一阶偏导。**\n\n对 $x$ 求偏导（$y$ 当常数）：\n\n$$\\frac{\\partial z}{\\partial x} = 4 - 2x$$\n\n对 $y$ 求偏导（$x$ 当常数）：\n\n$$\\frac{\\partial z}{\\partial y} = 4 + 2y$$\n\n**第三步：令两者同时为零。**\n\n$$4 - 2x = 0 \\quad\\Longrightarrow\\quad x = 2$$\n\n$$4 + 2y = 0 \\quad\\Longrightarrow\\quad y = -2$$\n\n**第四步：驻点是 $(2, -2)$，选 A。**\n\n四个选项中只有 A 落在解集里。",
+   "misconception": "- **D 选项 $(2, 2)$ 是本题最大的陷阱，它来自 $y$ 的符号错**：因为函数里是 $+y^2$，所以 $\\dfrac{\\partial z}{\\partial y} = 4 + 2y$，解出 $y = -2$。**如果把 $+y^2$ 误看成 $-y^2$（或把求导结果写成 $4-2y$），就会解出 $y = +2$，正好落进 D。**\n- **B 选项 $(2,0)$ 来自\"只解了一个方程\"**：$x = 2$ 是对的，但把 $y$ 随手当成 $0$。**驻点必须两个方程同时成立。**\n- **C 选项 $(0,2)$ 是两个坐标都错**（$x$、$y$ 都取错符号）。\n- **对照记忆**：2024.10 卷第 7 题是 $z = 3(x+y) - x^3 - y^3$，两题都是\"驻点\"，但那一卷两个变量都是**立方项且带负号**（解出 $x = \\pm1$，$y = \\pm1$）；本卷是**平方项、$x$ 带负号、$y$ 带正号**（解出 $x = 2$，$y = -2$）。**同一个槽位，换了正负号，考的就是你有没有把符号看进去。**\n- **本题只问\"驻点\"，不问\"极值点\"**：**不需要**求二阶偏导，**不需要**判别 $B^2 - AC$。**看清题目问什么，别做无用功（但极值判别本身仍是重点，见附录 A）。**\n- **验算**：$z_x(2,-2) = 4 - 4 = 0$ ✓，$z_y(2,-2) = 4 + 2\\times(-2) = 0$ ✓。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 648
+  },
+  {
+   "id": "zk-202510-07",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 7 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 7,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设函数 $z = x^4 - y^4 - 8x^2 + 4y$，则点 $(2,1)$ 是该函数的",
+   "options": [
+    "驻点",
+    "间断点",
+    "极大值点",
+    "极小值点"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：驻点的判定与二元函数极值判别法（多元函数微分学）。\n**考点出处**：多元函数微分学（只求驻点）\n**第一步：求两个一阶偏导。**\n\n$$\\frac{\\partial z}{\\partial x} = 4x^3 - 16x = 4x(x^2 - 4)$$\n\n$$\\frac{\\partial z}{\\partial y} = 4 - 4y^3$$\n\n**第二步：验证在 $(2,1)$ 处两个偏导是否都为零。**\n\n$$\\left.\\frac{\\partial z}{\\partial x}\\right|_{(2,1)} = 4\\times 8 - 16\\times 2 = 32 - 32 = 0 ✓$$\n\n$$\\left.\\frac{\\partial z}{\\partial y}\\right|_{(2,1)} = 4 - 4\\times 1 = 0 ✓$$\n\n两个一阶偏导同时为零，所以 $(2,1)$ 是**驻点**。\n\n**第三步：进一步判断它是不是极值点（这是排除 C、D 的关键）。**\n\n先求三个二阶偏导：\n\n$$A = \\frac{\\partial^2 z}{\\partial x^2} = 12x^2 - 16 \\ \\Big|_{(2,1)} = 48 - 16 = 32$$\n\n$$B = \\frac{\\partial^2 z}{\\partial x\\partial y} = 0 \\ \\Big|_{(2,1)} = 0$$\n\n$$C = \\frac{\\partial^2 z}{\\partial y^2} = -12y^2 \\ \\Big|_{(2,1)} = -12$$\n\n判别式：\n\n$$AC - B^2 = 32\\times(-12) - 0^2 = -384 < 0$$\n\n判别式小于零，说明 $(2,1)$ **不是极值点**（是鞍点）。\n\n**第四步：结论。**\n\n点 $(2,1)$ 是驻点，但既不是极大值点也不是极小值点。选 **A**。",
+   "misconception": "- **只验证\"一阶偏导为零\"就下结论选 C、D，是本题最大的失分点**。一阶偏导为零只说明是**驻点**，要判断极值必须再看二阶判别式 $AC - B^2$ 的符号。本题 $AC - B^2 = -384 < 0$，直接排除 C、D。\n- **判别式的符号别记反**：$AC - B^2 < 0 \\Rightarrow$ **不是**极值；$AC - B^2 > 0 \\Rightarrow$ 是极值（此时再看 $A$：$A > 0$ 极小，$A < 0$ 极大）。若把判据记反，本题就会误选 D（因为 $A = 32 > 0$）。\n- **注意 $C = z_{yy}$ 是负数**：$z = x^4 - y^4 - 8x^2 + 4y$，$y^4$ 前面是**减号**，所以 $z_{yy} = -12y^2 < 0$。**丢掉这个负号会让 $AC - B^2$ 变成正、误判为极值点。**\n- **B 选项\"间断点\"可以秒排**：这是多项式函数，在平面上处处连续，$(2,1)$ 在定义域内，不可能是间断点。\n- **审题**：题目问的是\"是它的什么点\"，四个选项中只有 A 是\"与极值无关的定性判断\"。**遇到这种题，先把驻点算出来，再看要不要判别——但既然 C、D 摆在眼前，就必须判别。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 649
+  },
+  {
+   "id": "zk-202604-07",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 7 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 7,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "下列点是函数 $z = (6x - x^2)(4y - y^2)$ 的驻点的是",
+   "options": [
+    "$(3,2)$",
+    "$(3,0)$",
+    "$(0,2)$",
+    "$(3,4)$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数的驻点（多元函数微分学）。\n**考点出处**：二元函数的驻点（多元函数微分学）\n**第一步：求两个一阶偏导数。**\n\n把 $z$ 看成两个一元因式的乘积：\n\n$$z = (6x - x^2)(4y - y^2)$$\n\n对 $x$ 求偏导（$4y-y^2$ 当常数）：\n\n$$\\frac{\\partial z}{\\partial x} = (6 - 2x)(4y - y^2)$$\n\n对 $y$ 求偏导（$6x-x^2$ 当常数）：\n\n$$\\frac{\\partial z}{\\partial y} = (6x - x^2)(4 - 2y)$$\n\n**第二步：令两个偏导数同时为零。**\n\n$$\\begin{cases}(6-2x)(4y-y^2) = 0\\\\[4pt](6x-x^2)(4-2y) = 0\\end{cases}$$\n\n先把每个因式分解：\n\n$$6 - 2x = 0 \\Longrightarrow x = 3;\\qquad 4y - y^2 = y(4-y) = 0 \\Longrightarrow y = 0 \\ \\vee\\ y = 4$$\n\n$$6x - x^2 = x(6-x) = 0 \\Longrightarrow x = 0 \\ \\vee\\ x = 6;\\qquad 4 - 2y = 0 \\Longrightarrow y = 2$$\n\n**第三步：逐项检验四个选项。**\n\n· 选项 / $\\dfrac{\\partial z}{\\partial x}$ / $\\dfrac{\\partial z}{\\partial y}$ / 是否驻点\n· A. $(3,2)$ / $(6-6)(8-4) = 0$ / $(18-9)(4-4) = 0$ / **是** ✓\n· B. $(3,0)$ / $(6-6)(0-0) = 0$ / $(18-9)(4-0) = 36$ / 否\n· C. $(0,2)$ / $(6-0)(8-4) = 24$ / $(0-0)(4-4) = 0$ / 否\n· D. $(3,4)$ / $(6-6)(16-16) = 0$ / $(18-9)(4-8) = -36$ / 否\n\n只有 $x=3$、$y=2$ 使两个偏导同时为零，选 **A**。",
+   "misconception": "- **B、C、D 三个选项都是\"只满足一个偏导为零\"的**：它们的构造方式就是**只让一个因式为零**，用来钓\"只算了一半\"的考生。**驻点必须两个偏导同时为零，缺一不可。**\n- **$y=0$ 与 $y=4$ 使 $\\frac{\\partial z}{\\partial x}=0$，但那时还要看第二个方程**：B 选项 $(3,0)$ 就是这种\"半对\"的点。\n- **产品求导别展开硬算**：$z = (6x-x^2)(4y-y^2)$ 对 $x$ 求偏导时，$(4y-y^2)$ 是**常数因子**，只需把 $(6x-x^2)$ 求导，得 $6-2x$。**展开成四项再求导会平添出错机会。**\n- **本题只问驻点，不问极值**：**不需要算二阶偏导、不需要判别 $\\Delta = B^2-AC$**，省时间。若题目改问\"极值点\"或\"极大值点\"，才需要继续判。\n- **驻点是\"一阶必要条件的解\"**：它不一定是极值点（也可能是鞍点），但本题只要求找出驻点。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 650
+  },
+  {
+   "id": "c9-s3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9.3",
+   "knowledgePoints": [
+    "9.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.3 全微分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "二元函数 $z=f(x,y)$ 在点 $(x_0,y_0)$ 处可微的一个**充分**条件是",
+   "options": [
+    "$f$ 在该点连续",
+    "$f$ 在该点的两个偏导数都存在",
+    "$f$ 的两个偏导数在该点的某邻域内存在且在该点连续",
+    "$f$ 在该点沿任意方向的方向导数都存在"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：可微的充分条件（§9.3 定理）：偏导数存在且连续 $\\Rightarrow$ 可微，C 正确。\nA 错：连续推不出可微（一元、二元皆然）。\nB 错：偏导存在推不出可微，经典反例 $f(x,y)=\\dfrac{xy}{x^2+y^2}$（补充定义 $f(0,0)=0$）在原点两个偏导均为 $0$ 但不连续，更不可微。\nD 错：方向导数都存在也推不出可微（同上反例沿坐标轴方向导数存在）。",
+   "misconception": "⚠️易错点：二元函数中「偏导存在」是比一元「导数存在」弱得多的条件——只涉及两条坐标线上的信息；可微才能保证各方向导数存在且 $d z=f_xdx+f_ydy$。",
+   "extension": "引申：可微的充要条件是 $\\Delta z-[f_x\\Delta x+f_y\\Delta y]=o(\\rho)$（$\\rho=\\sqrt{\\Delta x^2+\\Delta y^2}$），判定可微直接用它，比「偏导连续」更本质（那只是充分条件）。",
+   "tags": [
+    "可微性",
+    "充分条件",
+    "高频考点",
+    "困难"
+   ],
+   "verify": [],
+   "idx": 651
+  },
+  {
+   "id": "c9-m1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.3",
+   "knowledgePoints": [
+    "9.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.3 全微分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "若 $z=f(x,y)$ 在点 $P$ 处可微，则下列结论必然成立的有",
+   "options": [
+    "$f$ 在点 $P$ 处连续",
+    "$f$ 在点 $P$ 处的两个偏导数都存在",
+    "$f$ 在点 $P$ 处沿任意方向 $\\vec l$ 的方向导数都存在",
+    "$f$ 在点 $P$ 处的两个偏导数都连续"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：可微 $\\Rightarrow$ 连续、偏导存在、沿任意方向的方向导数存在且 $\\dfrac{\\partial f}{\\partial\\vec l}=f_x\\cos\\alpha+f_y\\cos\\beta$（§9.3、§9.7），A、B、C 正确。\nD 错：「偏导连续 $\\Rightarrow$ 可微」，反向不成立，可微不能保证偏导连续。",
+   "misconception": "⚠️易错点：关系链「偏导连续 $\\Rightarrow$ 可微 $\\Rightarrow$ 连续、偏导存在、方向导数存在」是单向的；逆命题全部不成立。",
+   "extension": null,
+   "tags": [
+    "可微性",
+    "关系链",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 652
+  },
+  {
+   "id": "c9-m2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9.8",
+   "knowledgePoints": [
+    "9.8"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.8 多元函数的极值及其求法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $z=f(x,y)$ 在点 $P_0(x_0,y_0)$ 的某邻域内有直到二阶的连续偏导数，记 $A=f_{xx}(P_0)$，$B=f_{xy}(P_0)$，$C=f_{yy}(P_0)$，下列说法正确的有",
+   "options": [
+    "若 $f$ 可微且 $P_0$ 是极值点，则 $f_x(P_0)=f_y(P_0)=0$",
+    "若 $AC-B^2>0$ 且 $A>0$，则 $P_0$ 是极大值点",
+    "若 $AC-B^2=0$，则不能判定 $P_0$ 是否为极值点",
+    "若 $AC-B^2<0$，则 $P_0$ 不是极值点"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元函数极值的必要条件与 AC−B² 判别法（§9.8 定理）：极值必要条件 $f_x=f_y=0$（可微时），A 正确；$AC-B^2=0$ 时判别法失效（如 $z=x^4+y^4$ 在原点取极小、$z=x^3y$? 用 $z=x^3$ 型例子说明不确定），C 正确；$AC-B^2<0$ 时不是极值（鞍点），D 正确。\nB 错：$AC-B^2>0$ 且 $A>0$ 是**极小**值点（抛物面开口向上），$A<0$ 才是极大。",
+   "misconception": "⚠️易错点：$A>0$ 对应「碗口朝上」的极小；与一元 $f''>0$ 极小一致，可类比记忆；$AC-B^2\\le0$ 的点一律不是极值点（$=0$ 是失效待判）。",
+   "extension": null,
+   "tags": [
+    "二元极值",
+    "AC-B^2 判别法",
+    "高频考点",
+    "困难"
+   ],
+   "verify": [],
+   "idx": 653
+  },
+  {
+   "id": "c9-j1",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.1",
+   "knowledgePoints": [
+    "9.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.1 多元函数的基本概念",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "若二重极限 $\\lim\\limits_{(x,y)\\to(0,0)}f(x,y)=A$，则点 $(x,y)$ 沿任何路径趋于原点时 $f(x,y)$ 都趋于 $A$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元极限定义要求「任意方式」趋近时函数值都趋于同一常数（§9.1），这正是二重极限与一元极限（只有左右两个方向）的本质区别。命题正确。",
+   "misconception": "⚠️易错点：证明二重极限**不存在**只需找两条路径极限不同（如 $y=kx$）；但要证明极限**存在**必须用定义或夹逼，逐路径验证无效。",
+   "extension": null,
+   "tags": [
+    "二重极限",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 654
+  },
+  {
+   "id": "c9-j2",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.2 偏导数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "若 $f(x,y)$ 在点 $(0,0)$ 处的两个偏导数都存在，则 $f(x,y)$ 在 $(0,0)$ 处必连续。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：偏导数只反映函数沿两条坐标轴直线的变化，控制不住其他路径。反例：$f(x,y)=\\dfrac{xy}{x^2+y^2}$（$f(0,0)=0$）在原点 $f_x=f_y=0$ 存在，但沿 $y=x$ 趋于原点时 $f\\to\\dfrac12\\ne f(0,0)$，不连续。命题错误（§9.2）。",
+   "misconception": "⚠️易错点：一元「可导必连续」不能平移到多元的「偏导存在必连续」——多元与连续挂钩的是「可微」。",
+   "extension": null,
+   "tags": [
+    "偏导与连续",
+    "高频考点"
+   ],
+   "verify": [],
+   "idx": 655
+  },
+  {
+   "id": "c9-j3",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.8",
+   "knowledgePoints": [
+    "9.8"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.8 多元函数的极值及其求法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "可微函数的极值点必是驻点。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：二元极值必要条件：若 $f$ 在 $P_0$ 可微（有偏导）且取极值，则 $f_x(P_0)=f_y(P_0)=0$，即 $P_0$ 为驻点（§9.8）。命题正确。注意逆命题不真，驻点未必是极值点（如 $z=xy$ 的原点是鞍点）。",
+   "misconception": "⚠️易错点：与一元一样，「极值点 $\\subseteq$ 驻点 $\\cup$ 偏导不存在点」；本题有「可微」前提故极值点必为驻点。",
+   "extension": null,
+   "tags": [
+    "极值必要条件"
+   ],
+   "verify": [],
+   "idx": 656
+  },
+  {
+   "id": "c9-b1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.2 偏导数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $z=\\ln(x^2+y^2)$，则 $\\dfrac{\\partial z}{\\partial x}=$ ____。",
+   "options": null,
+   "answer": [
+    "2x/(x^2+y^2)"
+   ],
+   "accept": [
+    "2x/(x^2+y^2)",
+    "2x/(x^2+y^2)",
+    "2*x/(x^2+y^2)",
+    "2x/(x*x+y*y)"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：链式法则（§9.2）：$\\dfrac{\\partial z}{\\partial x}=\\dfrac{1}{x^2+y^2}\\cdot 2x=\\dfrac{2x}{x^2+y^2}$（$y$ 冻结，内层导数为 $2x$）。",
+   "misconception": "⚠️易错点：内层是 $x^2+y^2$ 而非 $x^2$，链式因子是 $2x$。",
+   "extension": null,
+   "tags": [
+    "偏导数"
+   ],
+   "verify": [],
+   "idx": 657
+  },
+  {
+   "id": "c9-b2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.2 偏导数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $z=x^2y^3$，则 $\\dfrac{\\partial z}{\\partial x}\\Big|_{(1,-1)}=$ ____。",
+   "options": null,
+   "answer": [
+    "-2"
+   ],
+   "accept": [
+    "-2",
+    "−2"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\dfrac{\\partial z}{\\partial x}=2xy^3$，代 $(1,-1)$：$2\\cdot1\\cdot(-1)^3=-2$（§9.2）。",
+   "misconception": "⚠️易错点：$(-1)^3=-1$ 的符号；$\\dfrac{\\partial z}{\\partial y}=3x^2y^2$ 在该点为 $3$，别与 $z_x$ 混淆。",
+   "extension": null,
+   "tags": [
+    "偏导数求值"
+   ],
+   "verify": [],
+   "idx": 658
+  },
+  {
+   "id": "ky2-2015-13-0121b4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2015 年考研数学二第 13 题",
+    "kind": "exam-original",
+    "year": 2015,
+    "region": "全国",
+    "paper": "2015 年考研数学二",
+    "number": "13",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "若函数 $z = z(x, y)$ 由方程 $\\mathrm{e}^{x + 2y + 3z} + xyz = 1$ 确定，则 $\\left.\\mathrm{d}z\\right|_{(0,0)} =$ ________.",
+   "options": null,
+   "answer": [
+    "$-\\frac{1}{3} (\\mathrm{d}x + 2 \\mathrm{~d}y)$ . 对方程两边求偏导得"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$-\\frac{1}{3} (\\mathrm{d}x + 2 \\mathrm{~d}y)$ . 对方程两边求偏导得\n应填 $-\\frac{1}{3} (\\mathrm{d}x + 2 \\mathrm{~d}y)$ . 对方程两边求偏导得\n$$\n(3 \\mathrm {e} ^ {x + 2 y + 3 z} + x y) \\frac {\\partial z}{\\partial x} = - y z - \\mathrm {e} ^ {x + 2 y + 3 z}, \\quad (3 \\mathrm {e} ^ {x + 2 y + 3 z} + x y) \\frac {\\partial z}{\\partial y} = - x z - 2 \\mathrm {e} ^ {x + 2 y + 3 z}.\n$$\n当 $x = 0, y = 0$ 时 $z = 0$ ，将该点代入可求得\n$$\n\\left. \\frac {\\partial z}{\\partial x} \\right| _ {(0, 0)} = - \\frac {1}{3}, \\quad \\left. \\frac {\\partial z}{\\partial y} \\right| _ {(0, 0)} = - \\frac {2}{3}.\n$$\n故有 $\\left.\\mathrm{d}z\\right|_{(0,0)} = -\\frac{1}{3}\\mathrm{d}x - \\frac{2}{3}\\mathrm{d}y = -\\frac{1}{3} (\\mathrm{d}x + 2\\mathrm{d}y).$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 659
+  },
+  {
+   "id": "ky-2007-12-9d06b6",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2007 年考研数学（一）第 12 题",
+    "kind": "exam-original",
+    "year": 2007,
+    "region": "全国",
+    "paper": "2007 年考研数学（一）",
+    "number": "12",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2007年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2007年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2007年解析/2007年解析.md"
+   },
+   "stem": "设 $f(u, v)$ 为二元可微函数， $z = f(x^y, y^x)$ ，则 $\\frac{\\partial z}{\\partial x} = \\_$",
+   "options": null,
+   "answer": [
+    "$yx^{y - 1}f_1' + y^x\\ln yf_2'$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$yx^{y - 1}f_1' + y^x\\ln yf_2'$\n【解】 $z = f(x^{y}, y^{x})$ 两边对 $x$ 求偏导，得 $\\frac{\\partial z}{\\partial x} = yx^{y - 1}f_{1}' + y^{x}\\ln yf_{2}'$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 660
+  },
+  {
+   "id": "ky-2011-11-8fe32a",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2011 年考研数学（一）第 11 题",
+    "kind": "exam-original",
+    "year": 2011,
+    "region": "全国",
+    "paper": "2011 年考研数学（一）",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2011年解析/2011年解析.md"
+   },
+   "stem": "设函数 $F(x, y) = \\int_{0}^{xy} \\frac{\\sin t}{1 + t^2} \\mathrm{d}t$ ，则 $\\left. \\frac{\\partial^2 F}{\\partial x^2} \\right|_{\\substack{x = 0 \\\\ y = 2}} =$ ________.",
+   "options": null,
+   "answer": [
+    "4"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：4\n【解】 $\\frac{\\partial F}{\\partial x} = \\frac{y \\sin xy}{1 + (xy)^2}, \\quad \\frac{\\partial^2 F}{\\partial x^2} = y \\cdot \\frac{y(1 + x^2y^2) \\cos xy - 2xy^2 \\sin xy}{(1 + x^2y^2)^2},$\n\n则 $\\frac{\\partial^2F}{\\partial x^2}\\Big|_{\\substack{x = 0\\\\ y = 2}} = 4.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 661
+  }
+ ]
+}

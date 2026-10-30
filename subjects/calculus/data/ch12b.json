@@ -1,0 +1,2040 @@
+{
+ "chapter": 12,
+ "questions": [
+  {
+   "id": "c12-c1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.1 常数项级数的概念和性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "判断级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}$ 的敛散性，若收敛求其和。",
+   "options": null,
+   "answer": [
+    "收敛，和为 1"
+   ],
+   "accept": null,
+   "answerText": "裂项：$\\dfrac{1}{n(n+1)}=\\dfrac1n-\\dfrac{1}{n+1}$，部分和\n$$S_n=\\sum_{k=1}^{n}\\left(\\frac1k-\\frac{1}{k+1}\\right)=1-\\frac{1}{n+1}\\ \\longrightarrow\\ 1.$$\n故级数收敛，和为 $1$。",
+   "points": [
+    {
+     "text": "裂项 $\\dfrac{1}{n(n+1)}=\\dfrac1n-\\dfrac{1}{n+1}$。",
+     "partial": 2
+    },
+    {
+     "text": "求部分和 $S_n=1-\\dfrac{1}{n+1}$（中间项相消）。",
+     "partial": 2
+    },
+    {
+     "text": "取极限得 $S=1$，级数收敛。",
+     "partial": 2
+    },
+    {
+     "text": "说明：裂项相消法适用于通项为 $\\dfrac{1}{(an+b)(an+b+c)}$ 型的级数。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：用部分和极限判敛并求和（§12.1 定义法）。\n**考点出处**：同济《高等数学》第七版 §12.1 常数项级数的概念和性质。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "裂项相消",
+    "定义法",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "sum",
+     "code": "nn=symbols('nn', positive=True, integer=True); Sum(1/(nn*(nn+1)), (nn, 1, oo)).doit()",
+     "expected": "1"
+    }
+   ],
+   "idx": 824
+  },
+  {
+   "id": "ky-2004-9-b6961c",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2004 年考研数学（一）第 9 题",
+    "kind": "exam-original",
+    "year": 2004,
+    "region": "全国",
+    "paper": "2004 年考研数学（一）",
+    "number": "9",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2004年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2004年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2004年解析/2004年解析.md"
+   },
+   "stem": "设 $\\sum_{n=1}^{\\infty} a_{n}$ 为正项级数. 下列结论中正确的是( )",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】方法一 取 $a_{n} = \\frac{1}{n\\ln(n + 1)}$ ，显然 $\\lim_{n\\to \\infty}na_n = 0$ ，但级数 $\\sum_{n = 1}^{\\infty}a_n = \\sum_{n = 1}^{\\infty}\\frac{1}{n\\ln(n + 1)}$ 发散，（A）不对；\n\n取 $a_{n} = \\frac{1}{n^{\\frac{3}{2}}}$ ，级数 $\\sum_{n = 1}^{\\infty}a_n = \\sum_{n = 1}^{\\infty}\\frac{1}{n^{\\frac{3}{2}}}$ 收敛，但 $\\lim_{n\\to \\infty}n^{2}a_{n} = \\lim_{n\\to \\infty}\\sqrt{n} = +\\infty$ ，（C）不对；\n\n取 $a_{n} = \\frac{1}{\\ln(n + 1)}$ ，级数 $\\sum_{n = 1}^{\\infty}a_n = \\sum_{n = 1}^{\\infty}\\frac{1}{\\ln(n + 1)}$ 发散，但 $\\lim_{n\\to \\infty}na_n = +\\infty$ ，(D)不对，应选(B).\n\n方法二 设 $\\lim_{n\\to \\infty}na_n = \\lambda >0$ ，取 $\\varepsilon_0 = \\frac{\\lambda}{2} >0$ ，因为 $\\lim_{n\\to \\infty}na_n = \\lambda$ ，所以存在 $N$ ，当 $n > N$ 时， $|na_{n} - \\lambda| < \\frac{\\lambda}{2}$ ，于是 $na_{n} > \\frac{\\lambda}{2}$ 或 $a_{n} > \\frac{\\lambda}{2n}$\n\n而 $\\sum_{n = 1}^{\\infty}\\frac{\\lambda}{2n}$ 发散，由正项级数的比较审敛法得 $\\sum_{n = 1}^{\\infty}a_{n}$ 发散，应选（B）.",
+   "points": [
+    {
+     "text": "【解】方法一 取 $a_{n} = \\frac{1}{n\\ln(n + 1)}$ ，显然 $\\lim_{n\\to \\infty}na_n = 0$ ，但级数 $\\sum_{n = 1}^{\\infty}a_n = \\sum_{n = 1}^{\\infty}\\frac{1}{n\\ln(n + 1)}$ 发散，（A）不对；",
+     "partial": 2
+    },
+    {
+     "text": "取 $a_{n} = \\frac{1}{n^{\\frac{3}{2}}}$ ，级数 $\\sum_{n = 1}^{\\infty}a_n = \\sum_{n = 1}^{\\infty}\\frac{1}{n^{\\frac{3}{2}}}$ 收敛，但 $\\lim_{n\\to \\infty}n^{2}a_{n} = \\lim_{n\\to \\infty}\\sqrt{n} = +\\infty$ ，（C）不对；",
+     "partial": 2
+    },
+    {
+     "text": "取 $a_{n} = \\frac{1}{\\ln(n + 1)}$ ，级数 $\\sum_{n = 1}^{\\infty}a_n = \\sum_{n = 1}^{\\infty}\\frac{1}{\\ln(n + 1)}$ 发散，但 $\\lim_{n\\to \\infty}na_n = +\\infty$ ，(D)不对，应选(B).",
+     "partial": 2
+    },
+    {
+     "text": "方法二 设 $\\lim_{n\\to \\infty}na_n = \\lambda >0$ ，取 $\\varepsilon_0 = \\frac{\\lambda}{2} >0$ ，因为 $\\lim_{n\\to \\infty}na_n = \\lambda$ ，所以存在 $N$ ，当 $n > N$ 时， $|na_{n} - \\lambda| < \\frac{\\lambda}{2}$ ，于是 $na_{n} > \\frac{\\lambda}{2}$ 或 $a_{n} > \\frac{\\lambda}{2n}$",
+     "partial": 2
+    },
+    {
+     "text": "而 $\\sum_{n = 1}^{\\infty}\\frac{\\lambda}{2n}$ 发散，由正项级数的比较审敛法得 $\\sum_{n = 1}^{\\infty}a_{n}$ 发散，应选（B）.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：B\n【解】方法一 取 $a_{n} = \\frac{1}{n\\ln(n + 1)}$ ，显然 $\\lim_{n\\to \\infty}na_n = 0$ ，但级数 $\\sum_{n = 1}^{\\infty}a_n = \\sum_{n = 1}^{\\infty}\\frac{1}{n\\ln(n + 1)}$ 发散，（A）不对；\n\n取 $a_{n} = \\frac{1}{n^{\\frac{3}{2}}}$ ，级数 $\\sum_{n = 1}^{\\infty}a_n = \\sum_{n = 1}^{\\infty}\\frac{1}{n^{\\frac{3}{2}}}$ 收敛，但 $\\lim_{n\\to \\infty}n^{2}a_{n} = \\lim_{n\\to \\infty}\\sqrt{n} = +\\infty$ ，（C）不对；\n\n取 $a_{n} = \\frac{1}{\\ln(n + 1)}$ ，级数 $\\sum_{n = 1}^{\\infty}a_n = \\sum_{n = 1}^{\\infty}\\frac{1}{\\ln(n + 1)}$ 发散，但 $\\lim_{n\\to \\infty}na_n = +\\infty$ ，(D)不对，应选(B).\n\n方法二 设 $\\lim_{n\\to \\infty}na_n = \\lambda >0$ ，取 $\\varepsilon_0 = \\frac{\\lambda}{2} >0$ ，因为 $\\lim_{n\\to \\infty}na_n = \\lambda$ ，所以存在 $N$ ，当 $n > N$ 时， $|na_{n} - \\lambda| < \\frac{\\lambda}{2}$ ，于是 $na_{n} > \\frac{\\lambda}{2}$ 或 $a_{n} > \\frac{\\lambda}{2n}$\n\n而 $\\sum_{n = 1}^{\\infty}\\frac{\\lambda}{2n}$ 发散，由正项级数的比较审敛法得 $\\sum_{n = 1}^{\\infty}a_{n}$ 发散，应选（B）.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 825
+  },
+  {
+   "id": "ky-2006-9-8deaff",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2006 年考研数学（一）第 9 题",
+    "kind": "exam-original",
+    "year": 2006,
+    "region": "全国",
+    "paper": "2006 年考研数学（一）",
+    "number": "9",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2006年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2006年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2006年解析/2006年解析.md"
+   },
+   "stem": "若级数 $\\sum_{n=1}^{\\infty} a_n$ 收敛, 则级数( )",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】方法一 令 $S_{n} = a_{1} + a_{2} + \\dots +a_{n}$ ，因为 $\\sum_{n = 1}^{\\infty}a_{n}$ 收敛，所以 $\\lim_{n\\to \\infty}a_n = 0$ 且 $\\lim_{n\\to \\infty}S_n$ 存在，令 $\\lim_{n\\to \\infty}S_n = S.$\n\n令 $S_{n}^{(1)} = \\frac{a_{1} + a_{2}}{2} +\\frac{a_{2} + a_{3}}{2} +\\dots +\\frac{a_{n} + a_{n + 1}}{2} = S_{n} - \\frac{a_{1}}{2} +\\frac{a_{n + 1}}{2},$\n\n因为 $\\lim_{n\\to \\infty}S_n^{(1)} = S - \\frac{a_1}{2}$ 存在，所以 $\\sum_{n = 1}^{\\infty}\\frac{a_n + a_{n + 1}}{2}$ 收敛，应选(D).\n\n方法二\n\n取 $a_{n} = \\frac{(-1)^{n}}{n}$ ，级数 $\\sum_{n = 1}^{\\infty}a_{n}$ 收敛，但 $\\sum_{n = 1}^{\\infty}|a_n| = \\sum_{n = 1}^{\\infty}\\frac{1}{n}$ 及 $\\sum_{n = 1}^{\\infty}(-1)^{n}a_{n} = \\sum_{n = 1}^{\\infty}\\frac{1}{n}$ 发散，(A)，(B)不对；\n\n取 $a_{n} = \\frac{(-1)^{n}}{\\sqrt{n}}$ ，级数 $\\sum_{n=1}^{\\infty} a_{n}$ 收敛， $\\sum_{n=1}^{\\infty} a_{n} a_{n+1} = -\\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n(n+1)}}$\n\n因为 $\\frac{1}{\\sqrt{n(n + 1)}} \\sim \\frac{1}{n}$ 且级数 $\\sum_{n = 1}^{\\infty} \\frac{1}{n}$ 发散，所以 $-\\sum_{n = 1}^{\\infty} \\frac{1}{\\sqrt{n(n + 1)}}$ 发散，即 $\\sum_{n = 1}^{\\infty} a_n a_{n + 1}$ 发散，（C）不对，应选(D).\n\n方法三 由级数 $\\sum_{n=1}^{\\infty} a_n$ 收敛得 $\\sum_{n=1}^{\\infty} \\frac{1}{2} a_n$ 与 $\\sum_{n=1}^{\\infty} \\frac{1}{2} a_{n+1}$ 收敛，由级数收敛的基本性质得 $\\sum_{n=1}^{\\infty} \\frac{a_n + a_{n+1}}{2}$ 收敛.\n\n方法点评：常数项级数敛散性判断通常考虑如下几个方面：\n\n（1）是否满足级数收敛的必要条件，若不满足必要条件，则级数一定发散；\n(2) 是否可以由级数收敛的定义判断, 即 $\\lim_{n\\to \\infty}S_n$ 是否存在.\n\n确定具体的级数类型，如正项级数或交错级数，再根据该类级数敛散判别法.",
+   "points": [
+    {
+     "text": "【解】方法一 令 $S_{n} = a_{1} + a_{2} + \\dots +a_{n}$ ，因为 $\\sum_{n = 1}^{\\infty}a_{n}$ 收敛，所以 $\\lim_{n\\to \\infty}a_n = 0$ 且 $\\lim_{n\\to \\infty}S_n$ 存在，令 $\\lim_{n\\to \\infty}S_n = S.$",
+     "partial": 2
+    },
+    {
+     "text": "令 $S_{n}^{(1)} = \\frac{a_{1} + a_{2}}{2} +\\frac{a_{2} + a_{3}}{2} +\\dots +\\frac{a_{n} + a_{n + 1}}{2} = S_{n} - \\frac{a_{1}}{2} +\\frac{a_{n + 1}}{2},$",
+     "partial": 2
+    },
+    {
+     "text": "因为 $\\lim_{n\\to \\infty}S_n^{(1)} = S - \\frac{a_1}{2}$ 存在，所以 $\\sum_{n = 1}^{\\infty}\\frac{a_n + a_{n + 1}}{2}$ 收敛，应选(D).",
+     "partial": 2
+    },
+    {
+     "text": "方法二",
+     "partial": 2
+    },
+    {
+     "text": "取 $a_{n} = \\frac{(-1)^{n}}{n}$ ，级数 $\\sum_{n = 1}^{\\infty}a_{n}$ 收敛，但 $\\sum_{n = 1}^{\\infty}|a_n| = \\sum_{n = 1}^{\\infty}\\frac{1}{n}$ 及 $\\sum_{n = 1}^{\\infty}(-1)^{n}a_{n} = \\sum_{n = 1}^{\\infty}\\frac{1}{n}$ 发散，(A)，(B)不对；",
+     "partial": 2
+    },
+    {
+     "text": "取 $a_{n} = \\frac{(-1)^{n}}{\\sqrt{n}}$ ，级数 $\\sum_{n=1}^{\\infty} a_{n}$ 收敛， $\\sum_{n=1}^{\\infty} a_{n} a_{n+1} = -\\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n(n+1)}}$；因为 $\\frac{1}{\\sqrt{n(n + 1)}} \\sim \\frac{1}{n}$ 且级数 $\\sum_{n = 1}^{\\infty} \\frac{1}{n}$ 发散，所以 $-\\sum_{n = 1}^{\\infty} \\frac{1}{\\sqrt{n(n + 1)}}$ 发散，即 $\\sum_{n = 1}^{\\infty} a_n a_{n + 1}$ 发散，（C）不对，应选(D).；方法三 由级数 $\\sum_{n=1}^{\\infty} a_n$ 收敛得 $\\sum_{n=1}^{\\infty} \\frac{1}{2} a_n$ 与 $\\sum_{n=1}^{\\infty} \\frac{1}{2} a_{n+1}$ 收敛，由级数收敛的基本性质得 $\\sum_{n=1}^{\\infty} \\frac{a_n + a_{n+1}}{2}$ 收敛.；方法点评：常数项级数敛散性判断通常考虑如下几个方面：；是否满足级数收敛的必要条件，若不满足必要条件，则级数一定发散；；是否可以由级数收敛的定义判断, 即 $\\lim_{n\\to \\infty}S_n$ 是否存在.\n\n确定具体的级数类型，如正项级数或交错级数，再根据该类级数敛散判别法.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：D\n【解】方法一 令 $S_{n} = a_{1} + a_{2} + \\dots +a_{n}$ ，因为 $\\sum_{n = 1}^{\\infty}a_{n}$ 收敛，所以 $\\lim_{n\\to \\infty}a_n = 0$ 且 $\\lim_{n\\to \\infty}S_n$ 存在，令 $\\lim_{n\\to \\infty}S_n = S.$\n\n令 $S_{n}^{(1)} = \\frac{a_{1} + a_{2}}{2} +\\frac{a_{2} + a_{3}}{2} +\\dots +\\frac{a_{n} + a_{n + 1}}{2} = S_{n} - \\frac{a_{1}}{2} +\\frac{a_{n + 1}}{2},$\n\n因为 $\\lim_{n\\to \\infty}S_n^{(1)} = S - \\frac{a_1}{2}$ 存在，所以 $\\sum_{n = 1}^{\\infty}\\frac{a_n + a_{n + 1}}{2}$ 收敛，应选(D).\n\n方法二\n\n取 $a_{n} = \\frac{(-1)^{n}}{n}$ ，级数 $\\sum_{n = 1}^{\\infty}a_{n}$ 收敛，但 $\\sum_{n = 1}^{\\infty}|a_n| = \\sum_{n = 1}^{\\infty}\\frac{1}{n}$ 及 $\\sum_{n = 1}^{\\infty}(-1)^{n}a_{n} = \\sum_{n = 1}^{\\infty}\\frac{1}{n}$ 发散，(A)，(B)不对；\n\n取 $a_{n} = \\frac{(-1)^{n}}{\\sqrt{n}}$ ，级数 $\\sum_{n=1}^{\\infty} a_{n}$ 收敛， $\\sum_{n=1}^{\\infty} a_{n} a_{n+1} = -\\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n(n+1)}}$\n\n因为 $\\frac{1}{\\sqrt{n(n + 1)}} \\sim \\frac{1}{n}$ 且级数 $\\sum_{n = 1}^{\\infty} \\frac{1}{n}$ 发散，所以 $-\\sum_{n = 1}^{\\infty} \\frac{1}{\\sqrt{n(n + 1)}}$ 发散，即 $\\sum_{n = 1}^{\\infty} a_n a_{n + 1}$ 发散，（C）不对，应选(D).\n\n方法三 由级数 $\\sum_{n=1}^{\\infty} a_n$ 收敛得 $\\sum_{n=1}^{\\infty} \\frac{1}{2} a_n$ 与 $\\sum_{n=1}^{\\infty} \\frac{1}{2} a_{n+1}$ 收敛，由级数收敛的基本性质得 $\\sum_{n=1}^{\\infty} \\frac{a_n + a_{n+1}}{2}$ 收敛.\n\n方法点评：常数项级数敛散性判断通常考虑如下几个方面：\n\n（1）是否满足级数收敛的必要条件，若不满足必要条件，则级数一定发散；\n(2) 是否可以由级数收敛的定义判断, 即 $\\lim_{n\\to \\infty}S_n$ 是否存在.\n\n确定具体的级数类型，如正项级数或交错级数，再根据该类级数敛散判别法.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 826
+  },
+  {
+   "id": "c12-c2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.3",
+   "knowledgePoints": [
+    "12.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "判断级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{n\\cdot 3^n}$ 是绝对收敛、条件收敛还是发散。",
+   "options": null,
+   "answer": [
+    "绝对收敛"
+   ],
+   "accept": null,
+   "answerText": "先取绝对值：$\\left|\\dfrac{(-1)^{n-1}}{n\\cdot3^n}\\right|=\\dfrac{1}{n\\cdot3^n}\\le\\dfrac{1}{3^n}$（$n\\ge1$），而 $\\sum\\dfrac{1}{3^n}$ 是公比 $\\dfrac13$ 的收敛几何级数，由比较判别法 $\\sum\\dfrac{1}{n\\cdot3^n}$ 收敛。\n故原级数**绝对收敛**（从而收敛）。",
+   "points": [
+    {
+     "text": "取绝对值得正项级数 $\\sum\\dfrac{1}{n\\cdot3^n}$。",
+     "partial": 2
+    },
+    {
+     "text": "放缩 $\\dfrac{1}{n\\cdot3^n}\\le\\dfrac{1}{3^n}$（$n\\ge1$），与收敛的几何级数比较。",
+     "partial": 2
+    },
+    {
+     "text": "由比较判别法得绝对值级数收敛，故原级数绝对收敛。",
+     "partial": 2
+    },
+    {
+     "text": "也可用比值法：$\\rho=\\lim\\dfrac{n\\cdot3^n}{(n+1)3^{n+1}}=\\dfrac13<1$。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：绝对收敛判别流程与比较/比值判别法（§12.3、§12.2）。\n**考点出处**：同济《高等数学》第七版 §12.3、§12.2。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "绝对收敛",
+    "比较判别",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "绝对收敛",
+     "code": "nn=symbols('nn', positive=True, integer=True); Sum(1/(nn*3**nn), (nn, 1, oo)).is_absolutely_convergent()",
+     "expected": "True"
+    }
+   ],
+   "idx": 827
+  },
+  {
+   "id": "ky-2011-2-73a967",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2011 年考研数学（一）第 2 题",
+    "kind": "exam-original",
+    "year": 2011,
+    "region": "全国",
+    "paper": "2011 年考研数学（一）",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2011年解析/2011年解析.md"
+   },
+   "stem": "设数列 $\\{a_{n}\\}$ 单调减少, $\\lim_{n\\to \\infty}a_n = 0, S_n = \\sum_{k = 1}^{n}a_k(n = 1,2,\\dots)$ 无界, 则幂级数 $\\sum_{n = 1}^{\\infty}a_n(x - 1)^n$ 的收敛域为（）",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】因为 $S_{n} = a_{1} + a_{2} + \\dots +a_{n}$ 无界，所以 $\\lim_{n\\to \\infty}S_n$ 不存在，\n\n于是级数 $\\sum_{n=1}^{\\infty} a_n$ 发散，即级数 $\\sum_{n=1}^{\\infty} a_n x^n$ 在 $x = 1$ 处发散；\n\n因为 $\\{a_{n}\\}$ 单调递减且 $\\lim_{n\\to \\infty}a_n = 0$ ，所以由莱布尼茨审敛法得 $\\sum_{n = 1}^{\\infty}(-1)^n a_n$ 收敛，\n\n即级数 $\\sum_{n=1}^{\\infty} a_n x^n$ 在 $x = -1$ 处收敛，从而级数 $\\sum_{n=1}^{\\infty} a_n x^n$ 的收敛半径为 $R = 1$ ，且收敛域为 $[-1,1)$ ，故级数 $\\sum_{n=1}^{\\infty} a_n (x - 1)^n$ 的收敛域为 $-1 \\leqslant x - 1 < 1$ ，即 $[0,2)$ ，应选(C).",
+   "points": [
+    {
+     "text": "【解】因为 $S_{n} = a_{1} + a_{2} + \\dots +a_{n}$ 无界，所以 $\\lim_{n\\to \\infty}S_n$ 不存在，",
+     "partial": 2
+    },
+    {
+     "text": "于是级数 $\\sum_{n=1}^{\\infty} a_n$ 发散，即级数 $\\sum_{n=1}^{\\infty} a_n x^n$ 在 $x = 1$ 处发散；",
+     "partial": 2
+    },
+    {
+     "text": "因为 $\\{a_{n}\\}$ 单调递减且 $\\lim_{n\\to \\infty}a_n = 0$ ，所以由莱布尼茨审敛法得 $\\sum_{n = 1}^{\\infty}(-1)^n a_n$ 收敛，",
+     "partial": 2
+    },
+    {
+     "text": "即级数 $\\sum_{n=1}^{\\infty} a_n x^n$ 在 $x = -1$ 处收敛，从而级数 $\\sum_{n=1}^{\\infty} a_n x^n$ 的收敛半径为 $R = 1$ ，且收敛域为 $[-1,1)$ ，故级数 $\\sum_{n=1}^{\\infty} a_n (x - 1)^n$ 的收敛域为 $-1 \\leqslant x - 1 < 1$ ，即 $[0,2)$ ，应选(C).",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：C\n【解】因为 $S_{n} = a_{1} + a_{2} + \\dots +a_{n}$ 无界，所以 $\\lim_{n\\to \\infty}S_n$ 不存在，\n\n于是级数 $\\sum_{n=1}^{\\infty} a_n$ 发散，即级数 $\\sum_{n=1}^{\\infty} a_n x^n$ 在 $x = 1$ 处发散；\n\n因为 $\\{a_{n}\\}$ 单调递减且 $\\lim_{n\\to \\infty}a_n = 0$ ，所以由莱布尼茨审敛法得 $\\sum_{n = 1}^{\\infty}(-1)^n a_n$ 收敛，\n\n即级数 $\\sum_{n=1}^{\\infty} a_n x^n$ 在 $x = -1$ 处收敛，从而级数 $\\sum_{n=1}^{\\infty} a_n x^n$ 的收敛半径为 $R = 1$ ，且收敛域为 $[-1,1)$ ，故级数 $\\sum_{n=1}^{\\infty} a_n (x - 1)^n$ 的收敛域为 $-1 \\leqslant x - 1 < 1$ ，即 $[0,2)$ ，应选(C).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 828
+  },
+  {
+   "id": "ky-2013-3-472921",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2013 年考研数学（一）第 3 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学（一）",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2013年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2013年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2013年解析/2013年解析.md"
+   },
+   "stem": "设 $f(x) = \\left|x - \\frac{1}{2}\\right|, b_n = 2\\int_0^1 f(x)\\sin n\\pi x\\mathrm{d}x (n = 1,2,\\dots)$ . 令 $S(x) = \\sum_{n=1}^{\\infty} b_n \\sin n\\pi x$ ，则 $S\\left(-\\frac{9}{4}\\right) =$ （）",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】将函数 $f(x)$ 进行奇延拓，再进行周期延拓，函数 $f(x)$ 的正弦级数为 $\\sum_{n=1}^{\\infty} b_n \\sin n\\pi x$ 。 $S(x)$ 为正弦级数的和函数，显然 $S(x)$ 是以2为周期的函数。\n\n于是 $S\\left(-\\frac{9}{4}\\right) = S\\left(-\\frac{1}{4}\\right) = -S\\left(\\frac{1}{4}\\right)$ .\n\n因为 $x = \\frac{1}{4}$ 为 $f(x)$ 的连续点，所以 $S\\left(-\\frac{9}{4}\\right) = S\\left(-\\frac{1}{4}\\right) = -S\\left(\\frac{1}{4}\\right) = -f\\left(\\frac{1}{4}\\right) = -\\frac{1}{4}$ ，应选(C).",
+   "points": [
+    {
+     "text": "【解】将函数 $f(x)$ 进行奇延拓，再进行周期延拓，函数 $f(x)$ 的正弦级数为 $\\sum_{n=1}^{\\infty} b_n \\sin n\\pi x$ 。 $S(x)$ 为正弦级数的和函数，显然 $S(x)$ 是以2为周期的函数。",
+     "partial": 2
+    },
+    {
+     "text": "于是 $S\\left(-\\frac{9}{4}\\right) = S\\left(-\\frac{1}{4}\\right) = -S\\left(\\frac{1}{4}\\right)$ .",
+     "partial": 2
+    },
+    {
+     "text": "因为 $x = \\frac{1}{4}$ 为 $f(x)$ 的连续点，所以 $S\\left(-\\frac{9}{4}\\right) = S\\left(-\\frac{1}{4}\\right) = -S\\left(\\frac{1}{4}\\right) = -f\\left(\\frac{1}{4}\\right) = -\\frac{1}{4}$ ，应选(C).",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：C\n【解】将函数 $f(x)$ 进行奇延拓，再进行周期延拓，函数 $f(x)$ 的正弦级数为 $\\sum_{n=1}^{\\infty} b_n \\sin n\\pi x$ 。 $S(x)$ 为正弦级数的和函数，显然 $S(x)$ 是以2为周期的函数。\n\n于是 $S\\left(-\\frac{9}{4}\\right) = S\\left(-\\frac{1}{4}\\right) = -S\\left(\\frac{1}{4}\\right)$ .\n\n因为 $x = \\frac{1}{4}$ 为 $f(x)$ 的连续点，所以 $S\\left(-\\frac{9}{4}\\right) = S\\left(-\\frac{1}{4}\\right) = -S\\left(\\frac{1}{4}\\right) = -f\\left(\\frac{1}{4}\\right) = -\\frac{1}{4}$ ，应选(C).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 829
+  },
+  {
+   "id": "ky-2015-3-7c3e22",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2015 年考研数学（一）第 3 题",
+    "kind": "exam-original",
+    "year": 2015,
+    "region": "全国",
+    "paper": "2015 年考研数学（一）",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2015年解析/2015年解析.md"
+   },
+   "stem": "若级数 $\\sum_{n=1}^{\\infty} a_n$ 条件收敛, 则 $x = \\sqrt{3}$ 与 $x = 3$ 依次为幂级数 $\\sum_{n=1}^{\\infty} n a_n (x - 1)^n$ 的( )",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】 因为 $\\sum_{n=1}^{\\infty} a_{n}$ 条件收敛，所以 $\\sum_{n=1}^{\\infty} a_{n} x^{n}$ 的收敛半径为 1，\n\n$\\sum_{n=1}^{\\infty} a_n (x - 1)^n$ 的收敛区间为 $-1 < x - 1 < 1$ ，即 $0 < x < 2$\n\n因为 $\\sqrt{3} - 1 \\in (-1, 1)$ , $3 - 1 \\notin [-1, 1]$ ,\n\n所以级数 $\\sum_{n=1}^{\\infty} a_n (x - 1)^n$ 在 $x = \\sqrt{3}$ 处绝对收敛，在 $x = 3$ 处发散，\n\n因为 $\\sum_{n=1}^{\\infty} n a_n (x - 1)^n$ 与 $\\sum_{n=1}^{\\infty} a_n (x - 1)^n$ 收敛半径相同、收敛区间相同，\n\n所以 $\\sum_{n=1}^{\\infty} n a_n (x - 1)^n$ 在 $x = \\sqrt{3}$ 处绝对收敛，在 $x = 3$ 处发散，应选(B).",
+   "points": [
+    {
+     "text": "【解】 因为 $\\sum_{n=1}^{\\infty} a_{n}$ 条件收敛，所以 $\\sum_{n=1}^{\\infty} a_{n} x^{n}$ 的收敛半径为 1，",
+     "partial": 2
+    },
+    {
+     "text": "$\\sum_{n=1}^{\\infty} a_n (x - 1)^n$ 的收敛区间为 $-1 < x - 1 < 1$ ，即 $0 < x < 2$",
+     "partial": 2
+    },
+    {
+     "text": "因为 $\\sqrt{3} - 1 \\in (-1, 1)$ , $3 - 1 \\notin [-1, 1]$ ,",
+     "partial": 2
+    },
+    {
+     "text": "所以级数 $\\sum_{n=1}^{\\infty} a_n (x - 1)^n$ 在 $x = \\sqrt{3}$ 处绝对收敛，在 $x = 3$ 处发散，",
+     "partial": 2
+    },
+    {
+     "text": "因为 $\\sum_{n=1}^{\\infty} n a_n (x - 1)^n$ 与 $\\sum_{n=1}^{\\infty} a_n (x - 1)^n$ 收敛半径相同、收敛区间相同，",
+     "partial": 2
+    },
+    {
+     "text": "所以 $\\sum_{n=1}^{\\infty} n a_n (x - 1)^n$ 在 $x = \\sqrt{3}$ 处绝对收敛，在 $x = 3$ 处发散，应选(B).",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：B\n【解】 因为 $\\sum_{n=1}^{\\infty} a_{n}$ 条件收敛，所以 $\\sum_{n=1}^{\\infty} a_{n} x^{n}$ 的收敛半径为 1，\n\n$\\sum_{n=1}^{\\infty} a_n (x - 1)^n$ 的收敛区间为 $-1 < x - 1 < 1$ ，即 $0 < x < 2$\n\n因为 $\\sqrt{3} - 1 \\in (-1, 1)$ , $3 - 1 \\notin [-1, 1]$ ,\n\n所以级数 $\\sum_{n=1}^{\\infty} a_n (x - 1)^n$ 在 $x = \\sqrt{3}$ 处绝对收敛，在 $x = 3$ 处发散，\n\n因为 $\\sum_{n=1}^{\\infty} n a_n (x - 1)^n$ 与 $\\sum_{n=1}^{\\infty} a_n (x - 1)^n$ 收敛半径相同、收敛区间相同，\n\n所以 $\\sum_{n=1}^{\\infty} n a_n (x - 1)^n$ 在 $x = \\sqrt{3}$ 处绝对收敛，在 $x = 3$ 处发散，应选(B).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 830
+  },
+  {
+   "id": "c12-c3",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.5",
+   "knowledgePoints": [
+    "12.5"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.5 函数展开成幂级数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "将函数 $f(x)=\\ln(1+x)$ 展开成 $x$ 的幂级数，并写出收敛域。",
+   "options": null,
+   "answer": [
+    "ln(1+x)=sum[(-1)^(n-1)*x^n/n], 收敛域 (-1,1]"
+   ],
+   "accept": null,
+   "answerText": "由几何级数逐项积分：$\\dfrac{1}{1+x}=\\sum\\limits_{n=0}^{\\infty}(-1)^nx^n$（$-1<x<1$），两边从 $0$ 到 $x$ 积分：\n$$\\ln(1+x)=\\int_0^x\\frac{dt}{1+t}=\\sum_{n=0}^{\\infty}\\frac{(-1)^n}{n+1}x^{n+1}=\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{n}x^n.$$\n收敛半径 $R=1$；端点检验：$x=1$ 时 $\\sum\\dfrac{(-1)^{n-1}}{n}$ 由莱布尼茨判别法收敛（= $\\ln2$）；$x=-1$ 时 $\\sum-\\dfrac1n$ 发散。故收敛域为 $(-1,1]$。",
+   "points": [
+    {
+     "text": "由 $\\dfrac{1}{1+x}=\\sum(-1)^nx^n$（$|x|<1$）出发，逐项积分得 $\\ln(1+x)=\\sum\\limits_{n\\ge1}\\dfrac{(-1)^{n-1}}{n}x^n$。",
+     "partial": 2
+    },
+    {
+     "text": "收敛半径 $R=1$；逐项积分不改变收敛半径。",
+     "partial": 2
+    },
+    {
+     "text": "端点检验：$x=1$ 收敛（莱布尼茨），$x=-1$ 发散（调和级数）。",
+     "partial": 2
+    },
+    {
+     "text": "结论：$\\ln(1+x)=\\sum\\limits_{n=1}^{\\infty}\\dfrac{(-1)^{n-1}}{n}x^n$，$x\\in(-1,1]$。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：逐项积分法求展开式与端点收敛性讨论（§12.5，教材例题）。\n**考点出处**：同济《高等数学》第七版 §12.5 函数展开成幂级数。",
+   "misconception": null,
+   "extension": "引申：本题结果在 $x=1$ 处给出 $\\ln2=1-\\dfrac12+\\dfrac13-\\cdots$，是条件收敛交错级数的标志性例子；类似地 $\\arctan x=\\sum\\dfrac{(-1)^n}{2n+1}x^{2n+1}$（$|x|\\le1$），代 $x=1$ 得 $\\dfrac\\pi4$。",
+   "tags": [
+    "幂级数展开",
+    "逐项积分",
+    "困难",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "x=1/2核验",
+     "code": "nn=symbols('nn', positive=True, integer=True); S=summation(((-1)**(nn-1))*(Rational(1,2)**nn)/nn, (nn, 1, oo)); simplify(S - log(Rational(3,2)))",
+     "expected": "0"
+    }
+   ],
+   "idx": 831
+  },
+  {
+   "id": "ky-2004-18-e5c035",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2004 年考研数学（一）第 18 题",
+    "kind": "exam-original",
+    "year": 2004,
+    "region": "全国",
+    "paper": "2004 年考研数学（一）",
+    "number": "18",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2004年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2004年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2004年解析/2004年解析.md"
+   },
+   "stem": "设有方程 $x^n + nx - 1 = 0$ ，其中 $n$ 为正整数。证明此方程存在唯一正实根 $x_n$ ，并证明当 $\\alpha > 1$ 时，级数 $\\sum_{n=1}^{\\infty} x_n^\\alpha$ 收敛。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "令 $f(x) = x^{n} + nx - 1$ ， $f(0) = -1$ ， $f(1) = n$\n因为 $f(0)f(1) < 0$ ，所以由零点定理，存在 $x_{n} \\in (0,1)$ ，使得 $f(x_{n}) = 0$ ，即方程 $x^{n} + nx - 1 = 0$ 有正根 $x_{n}$\n\n因为 $f^{\\prime}(x) = nx^{n - 1} + n > 0 (x > 0)$ ，所以 $f(x)$ 在 $[0, +\\infty)$ 上单调增加，\n\n故 $x^n + nx - 1 = 0$ 存在唯一的正根 $x_n$ .\n\n由 $x_{n}^{n} + nx_{n} - 1 = 0$ 得 $0 < x_{n} = \\frac{1}{n} (1 - x_{n}^{n}) < \\frac{1}{n}$ ，于是 $0 < x_{n}^{\\alpha} < \\frac{1}{n^{\\alpha}}$\n\n因为 $\\alpha > 1$ 时 $\\sum_{n=1}^{\\infty} \\frac{1}{n^{\\alpha}}$ 收敛, 所以由正项级数的比较审敛法得 $\\sum_{n=1}^{\\infty} x_{n}^{\\alpha}$ 收敛.",
+   "points": [
+    {
+     "text": "令 $f(x) = x^{n} + nx - 1$ ， $f(0) = -1$ ， $f(1) = n$\n因为 $f(0)f(1) < 0$ ，所以由零点定理，存在 $x_{n} \\in (0,1)$ ，使得 $f(x_{n}) = 0$ ，即方程 $x^{n} + nx - 1 = 0$ 有正根 $x_{n}$",
+     "partial": 2
+    },
+    {
+     "text": "因为 $f^{\\prime}(x) = nx^{n - 1} + n > 0 (x > 0)$ ，所以 $f(x)$ 在 $[0, +\\infty)$ 上单调增加，",
+     "partial": 2
+    },
+    {
+     "text": "故 $x^n + nx - 1 = 0$ 存在唯一的正根 $x_n$ .",
+     "partial": 2
+    },
+    {
+     "text": "由 $x_{n}^{n} + nx_{n} - 1 = 0$ 得 $0 < x_{n} = \\frac{1}{n} (1 - x_{n}^{n}) < \\frac{1}{n}$ ，于是 $0 < x_{n}^{\\alpha} < \\frac{1}{n^{\\alpha}}$",
+     "partial": 2
+    },
+    {
+     "text": "因为 $\\alpha > 1$ 时 $\\sum_{n=1}^{\\infty} \\frac{1}{n^{\\alpha}}$ 收敛, 所以由正项级数的比较审敛法得 $\\sum_{n=1}^{\\infty} x_{n}^{\\alpha}$ 收敛.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n令 $f(x) = x^{n} + nx - 1$ ， $f(0) = -1$ ， $f(1) = n$\n因为 $f(0)f(1) < 0$ ，所以由零点定理，存在 $x_{n} \\in (0,1)$ ，使得 $f(x_{n}) = 0$ ，即方程 $x^{n} + nx - 1 = 0$ 有正根 $x_{n}$\n\n因为 $f^{\\prime}(x) = nx^{n - 1} + n > 0 (x > 0)$ ，所以 $f(x)$ 在 $[0, +\\infty)$ 上单调增加，\n\n故 $x^n + nx - 1 = 0$ 存在唯一的正根 $x_n$ .\n\n由 $x_{n}^{n} + nx_{n} - 1 = 0$ 得 $0 < x_{n} = \\frac{1}{n} (1 - x_{n}^{n}) < \\frac{1}{n}$ ，于是 $0 < x_{n}^{\\alpha} < \\frac{1}{n^{\\alpha}}$\n\n因为 $\\alpha > 1$ 时 $\\sum_{n=1}^{\\infty} \\frac{1}{n^{\\alpha}}$ 收敛, 所以由正项级数的比较审敛法得 $\\sum_{n=1}^{\\infty} x_{n}^{\\alpha}$ 收敛.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 832
+  },
+  {
+   "id": "ky-2005-16-cf6a9f",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.4",
+   "knowledgePoints": [
+    "12.4"
+   ],
+   "source": {
+    "text": "2005 年考研数学（一）第 16 题",
+    "kind": "exam-original",
+    "year": 2005,
+    "region": "全国",
+    "paper": "2005 年考研数学（一）",
+    "number": "16",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2005年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2005年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2005年解析/2005年解析.md"
+   },
+   "stem": "求幂级数 $\\sum_{n=1}^{\\infty} (-1)^{n-1} \\left[1 + \\frac{1}{n(2n-1)}\\right] x^{2n}$ 的收敛区间与和函数 $f(x)$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "方法一 由 $\\lim_{n\\to \\infty}\\left|\\frac{a_{n + 1}}{a_n}\\right| = 1$ ，得级数的收敛半径为 $R = 1$ ，收敛区间为 $(-1,1)$\n令 $f(x) = \\sum_{n=1}^{\\infty}(-1)^{n-1}\\left[1 + \\frac{1}{n(2n-1)}\\right]x^{2n}$ ,\n\n则 $f(x) = \\sum_{n = 1}^{\\infty}(-1)^{n - 1}x^{2n} + \\sum_{n = 1}^{\\infty}(-1)^{n - 1}\\frac{x^{2n}}{n(2n - 1)}$\n\n$$\n\\begin{array}{l} = - \\sum_ {n = 1} ^ {\\infty} (- x ^ {2}) ^ {n} + 2 \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n (2 n - 1)} \\\\ = \\frac {x ^ {2}}{1 + x ^ {2}} + 2 \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n (2 n - 1)}, \\\\ \\end{array}\n$$\n\n令 $S_{1}(x) = \\sum_{n = 1}^{\\infty}(-1)^{n - 1}\\frac{x^{2n}}{2n(2n - 1)}$ ， $S_{1}(0) = 0$\n\n$$\nS _ {1} ^ {\\prime} (x) = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n - 1}}{2 n - 1}, \\quad S _ {1} ^ {\\prime} (0) = 0,\n$$\n\n$$\nS _ {1} ^ {\\prime \\prime} (x) = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n - 2} = \\sum_ {n = 1} ^ {\\infty} (- x ^ {2}) ^ {n - 1} = \\frac {1}{1 + x ^ {2}},\n$$\n\n于是 $S_1'(x) = S_1'(x) - S_1'(0) = \\int_{0}^{x} \\frac{1}{1 + x^2} \\, \\mathrm{d}x = \\arctan x$\n\n$$\n\\begin{array}{l} S _ {1} (x) = S _ {1} (x) - S _ {1} (0) = \\int_ {0} ^ {x} \\arctan x \\mathrm {d} x = x \\arctan x - \\int_ {0} ^ {x} \\frac {x}{1 + x ^ {2}} \\mathrm {d} x \\\\ = x \\arctan x - \\frac {1}{2} \\ln \\left(1 + x ^ {2}\\right), \\\\ \\end{array}\n$$\n\n故 $f(x) = \\frac{x^2}{1 + x^2} + 2x\\arctan x - \\ln (1 + x^2)$ .\n\n方法二 由 $\\lim_{n\\to \\infty}\\left|\\frac{a_{n + 1}}{a_n}\\right| = 1$ 得级数的收敛半径为 $R = 1$ ，级数的收敛区间为 $(-1,1)$\n\n$$\n\\begin{array}{l} S (x) = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\left[ 1 + \\frac {1}{n (2 n - 1)} \\right] x ^ {2 n} \\\\ = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n} + 2 \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n (2 n - 1)} \\\\ \\end{array}\n$$\n\n而 $\\sum_{n = 1}^{\\infty}(-1)^{n - 1}x^{2n} = \\frac{x^2}{1 - (-x^2)} = \\frac{x^2}{1 + x^2},$\n\n又 $\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^{2n}}{2n(2n-1)}=\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^{2n}}{2n-1}-\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^{2n}}{2n},$\n\n$$\n\\begin{array}{l} \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n - 1} = x \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n - 1}}{2 n - 1} = x \\sum_ {n = 1} ^ {\\infty} \\int_ {0} ^ {x} (- 1) ^ {n - 1} x ^ {2 n - 2} d x \\\\ = x \\int_ {0} ^ {x} \\left[ \\sum_ {n = 1} ^ {\\infty} (- x ^ {2}) ^ {n - 1} \\right] d x = x \\int_ {0} ^ {x} \\frac {1}{1 + x ^ {2}} d x = x \\arctan x, \\\\ \\end{array}\n$$\n\n$$\n\\begin{array}{l} \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n} = \\sum_ {n = 1} ^ {\\infty} \\int_ {0} ^ {x} (- 1) ^ {n - 1} x ^ {2 n - 1} d x = \\int_ {0} ^ {x} \\left[ \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n - 1} \\right] d x \\\\ = \\int_ {0} ^ {x} x \\left[ \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n - 2} \\right] d x = \\int_ {0} ^ {x} \\frac {x}{1 + x ^ {2}} d x = \\frac {1}{2} \\ln (1 + x ^ {2}), \\\\ \\end{array}\n$$\n\n故 $f(x) = \\frac{x^2}{1 + x^2} + 2x\\arctan x - \\ln (1 + x^2)$ .",
+   "points": [
+    {
+     "text": "方法一 由 $\\lim_{n\\to \\infty}\\left|\\frac{a_{n + 1}}{a_n}\\right| = 1$ ，得级数的收敛半径为 $R = 1$ ，收敛区间为 $(-1,1)$\n令 $f(x) = \\sum_{n=1}^{\\infty}(-1)^{n-1}\\left[1 + \\frac{1}{n(2n-1)}\\right]x^{2n}$ ,",
+     "partial": 2
+    },
+    {
+     "text": "则 $f(x) = \\sum_{n = 1}^{\\infty}(-1)^{n - 1}x^{2n} + \\sum_{n = 1}^{\\infty}(-1)^{n - 1}\\frac{x^{2n}}{n(2n - 1)}$",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\begin{array}{l} = - \\sum_ {n = 1} ^ {\\infty} (- x ^ {2}) ^ {n} + 2 \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n (2 n - 1)} \\\\ = \\frac {x ^ {2}}{1 + x ^ {2}} + 2 \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n (2 n - 1)}, \\\\ \\end{array}\n$$",
+     "partial": 2
+    },
+    {
+     "text": "令 $S_{1}(x) = \\sum_{n = 1}^{\\infty}(-1)^{n - 1}\\frac{x^{2n}}{2n(2n - 1)}$ ， $S_{1}(0) = 0$",
+     "partial": 2
+    },
+    {
+     "text": "$$\nS _ {1} ^ {\\prime} (x) = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n - 1}}{2 n - 1}, \\quad S _ {1} ^ {\\prime} (0) = 0,\n$$",
+     "partial": 2
+    },
+    {
+     "text": "$$\nS _ {1} ^ {\\prime \\prime} (x) = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n - 2} = \\sum_ {n = 1} ^ {\\infty} (- x ^ {2}) ^ {n - 1} = \\frac {1}{1 + x ^ {2}},\n$$；于是 $S_1'(x) = S_1'(x) - S_1'(0) = \\int_{0}^{x} \\frac{1}{1 + x^2} \\, \\mathrm{d}x = \\arctan x$；$$\n\\begin{array}{l} S _ {1} (x) = S _ {1} (x) - S _ {1} (0) = \\int_ {0} ^ {x} \\arctan x \\mathrm {d} x = x \\arctan x - \\int_ {0} ^ {x} \\frac {x}{1 + x ^ {2}} \\mathrm {d} x \\\\ = x \\arctan x - \\frac {1}{2} \\ln \\left(1 + x ^ {2}\\right), \\\\ \\end{array}\n$$；故 $f(x) = \\frac{x^2}{1 + x^2} + 2x\\arctan x - \\ln (1 + x^2)$ .；方法二 由 $\\lim_{n\\to \\infty}\\left|\\frac{a_{n + 1}}{a_n}\\right| = 1$ 得级数的收敛半径为 $R = 1$ ，级数的收敛区间为 $(-1,1)$；$$\n\\begin{array}{l} S (x) = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\left[ 1 + \\frac {1}{n (2 n - 1)} \\right] x ^ {2 n} \\\\ = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n} + 2 \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n (2 n - 1)} \\\\ \\end{array}\n$$；而 $\\sum_{n = 1}^{\\infty}(-1)^{n - 1}x^{2n} = \\frac{x^2}{1 - (-x^2)} = \\frac{x^2}{1 + x^2},$；又 $\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^{2n}}{2n(2n-1)}=\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^{2n}}{2n-1}-\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^{2n}}{2n},$；$$\n\\begin{array}{l} \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n - 1} = x \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n - 1}}{2 n - 1} = x \\sum_ {n = 1} ^ {\\infty} \\int_ {0} ^ {x} (- 1) ^ {n - 1} x ^ {2 n - 2} d x \\\\ = x \\int_ {0} ^ {x} \\left[ \\sum_ {n = 1} ^ {\\infty} (- x ^ {2}) ^ {n - 1} \\right] d x = x \\int_ {0} ^ {x} \\frac {1}{1 + x ^ {2}} d x = x \\arctan x, \\\\ \\end{array}\n$$；$$\n\\begin{array}{l} \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n} = \\sum_ {n = 1} ^ {\\infty} \\int_ {0} ^ {x} (- 1) ^ {n - 1} x ^ {2 n - 1} d x = \\int_ {0} ^ {x} \\left[ \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n - 1} \\right] d x \\\\ = \\int_ {0} ^ {x} x \\left[ \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n - 2} \\right] d x = \\int_ {0} ^ {x} \\frac {x}{1 + x ^ {2}} d x = \\frac {1}{2} \\ln (1 + x ^ {2}), \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n方法一 由 $\\lim_{n\\to \\infty}\\left|\\frac{a_{n + 1}}{a_n}\\right| = 1$ ，得级数的收敛半径为 $R = 1$ ，收敛区间为 $(-1,1)$\n令 $f(x) = \\sum_{n=1}^{\\infty}(-1)^{n-1}\\left[1 + \\frac{1}{n(2n-1)}\\right]x^{2n}$ ,\n\n则 $f(x) = \\sum_{n = 1}^{\\infty}(-1)^{n - 1}x^{2n} + \\sum_{n = 1}^{\\infty}(-1)^{n - 1}\\frac{x^{2n}}{n(2n - 1)}$\n\n$$\n\\begin{array}{l} = - \\sum_ {n = 1} ^ {\\infty} (- x ^ {2}) ^ {n} + 2 \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n (2 n - 1)} \\\\ = \\frac {x ^ {2}}{1 + x ^ {2}} + 2 \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n (2 n - 1)}, \\\\ \\end{array}\n$$\n\n令 $S_{1}(x) = \\sum_{n = 1}^{\\infty}(-1)^{n - 1}\\frac{x^{2n}}{2n(2n - 1)}$ ， $S_{1}(0) = 0$\n\n$$\nS _ {1} ^ {\\prime} (x) = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n - 1}}{2 n - 1}, \\quad S _ {1} ^ {\\prime} (0) = 0,\n$$\n\n$$\nS _ {1} ^ {\\prime \\prime} (x) = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n - 2} = \\sum_ {n = 1} ^ {\\infty} (- x ^ {2}) ^ {n - 1} = \\frac {1}{1 + x ^ {2}},\n$$\n\n于是 $S_1'(x) = S_1'(x) - S_1'(0) = \\int_{0}^{x} \\frac{1}{1 + x^2} \\, \\mathrm{d}x = \\arctan x$\n\n$$\n\\begin{array}{l} S _ {1} (x) = S _ {1} (x) - S _ {1} (0) = \\int_ {0} ^ {x} \\arctan x \\mathrm {d} x = x \\arctan x - \\int_ {0} ^ {x} \\frac {x}{1 + x ^ {2}} \\mathrm {d} x \\\\ = x \\arctan x - \\frac {1}{2} \\ln \\left(1 + x ^ {2}\\right), \\\\ \\end{array}\n$$\n\n故 $f(x) = \\frac{x^2}{1 + x^2} + 2x\\arctan x - \\ln (1 + x^2)$ .\n\n方法二 由 $\\lim_{n\\to \\infty}\\left|\\frac{a_{n + 1}}{a_n}\\right| = 1$ 得级数的收敛半径为 $R = 1$ ，级数的收敛区间为 $(-1,1)$\n\n$$\n\\begin{array}{l} S (x) = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\left[ 1 + \\frac {1}{n (2 n - 1)} \\right] x ^ {2 n} \\\\ = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n} + 2 \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n (2 n - 1)} \\\\ \\end{array}\n$$\n\n而 $\\sum_{n = 1}^{\\infty}(-1)^{n - 1}x^{2n} = \\frac{x^2}{1 - (-x^2)} = \\frac{x^2}{1 + x^2},$\n\n又 $\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^{2n}}{2n(2n-1)}=\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^{2n}}{2n-1}-\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^{2n}}{2n},$\n\n$$\n\\begin{array}{l} \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n - 1} = x \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n - 1}}{2 n - 1} = x \\sum_ {n = 1} ^ {\\infty} \\int_ {0} ^ {x} (- 1) ^ {n - 1} x ^ {2 n - 2} d x \\\\ = x \\int_ {0} ^ {x} \\left[ \\sum_ {n = 1} ^ {\\infty} (- x ^ {2}) ^ {n - 1} \\right] d x = x \\int_ {0} ^ {x} \\frac {1}{1 + x ^ {2}} d x = x \\arctan x, \\\\ \\end{array}\n$$\n\n$$\n\\begin{array}{l} \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n} = \\sum_ {n = 1} ^ {\\infty} \\int_ {0} ^ {x} (- 1) ^ {n - 1} x ^ {2 n - 1} d x = \\int_ {0} ^ {x} \\left[ \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n - 1} \\right] d x \\\\ = \\int_ {0} ^ {x} x \\left[ \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n - 2} \\right] d x = \\int_ {0} ^ {x} \\frac {x}{1 + x ^ {2}} d x = \\frac {1}{2} \\ln (1 + x ^ {2}), \\\\ \\end{array}\n$$\n\n故 $f(x) = \\frac{x^2}{1 + x^2} + 2x\\arctan x - \\ln (1 + x^2)$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 833
+  },
+  {
+   "id": "ky-2006-17-20097f",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.4",
+   "knowledgePoints": [
+    "12.4"
+   ],
+   "source": {
+    "text": "2006 年考研数学（一）第 17 题",
+    "kind": "exam-original",
+    "year": 2006,
+    "region": "全国",
+    "paper": "2006 年考研数学（一）",
+    "number": "17",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2006年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2006年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2006年解析/2006年解析.md"
+   },
+   "stem": "将函数 $f(x) = \\frac{x}{2 + x - x^2}$ 展开成 $x$ 的幂级数",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$f(x) = \\frac{x}{2 + x - x^2} = \\frac{x}{(x + 1)(2 - x)} = \\frac{x}{3}\\left(\\frac{1}{1 + x} +\\frac{1}{2 - x}\\right),$\n而 $\\frac{1}{1 + x} = \\sum_{n=0}^{\\infty} (-1)^n x^n (-1 < x < 1)$ ,\n\n$$\n\\frac {1}{2 - x} = \\frac {1}{2} \\cdot \\frac {1}{1 - \\frac {x}{2}} = \\frac {1}{2} \\sum_ {n = 0} ^ {\\infty} \\frac {x ^ {n}}{2 ^ {n}} = \\sum_ {n = 0} ^ {\\infty} \\frac {x ^ {n}}{2 ^ {n + 1}} (- 2 <   x <   2),\n$$\n\n于是 $f(x) = \\sum_{n=0}^{\\infty} \\frac{1}{3}\\left[(-1)^n + \\frac{1}{2^{n+1}}\\right]x^{n+1} (-1 < x < 1)$ .",
+   "points": [
+    {
+     "text": "$f(x) = \\frac{x}{2 + x - x^2} = \\frac{x}{(x + 1)(2 - x)} = \\frac{x}{3}\\left(\\frac{1}{1 + x} +\\frac{1}{2 - x}\\right),$\n而 $\\frac{1}{1 + x} = \\sum_{n=0}^{\\infty} (-1)^n x^n (-1 < x < 1)$ ,",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\frac {1}{2 - x} = \\frac {1}{2} \\cdot \\frac {1}{1 - \\frac {x}{2}} = \\frac {1}{2} \\sum_ {n = 0} ^ {\\infty} \\frac {x ^ {n}}{2 ^ {n}} = \\sum_ {n = 0} ^ {\\infty} \\frac {x ^ {n}}{2 ^ {n + 1}} (- 2 <   x <   2),\n$$",
+     "partial": 2
+    },
+    {
+     "text": "于是 $f(x) = \\sum_{n=0}^{\\infty} \\frac{1}{3}\\left[(-1)^n + \\frac{1}{2^{n+1}}\\right]x^{n+1} (-1 < x < 1)$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$f(x) = \\frac{x}{2 + x - x^2} = \\frac{x}{(x + 1)(2 - x)} = \\frac{x}{3}\\left(\\frac{1}{1 + x} +\\frac{1}{2 - x}\\right),$\n而 $\\frac{1}{1 + x} = \\sum_{n=0}^{\\infty} (-1)^n x^n (-1 < x < 1)$ ,\n\n$$\n\\frac {1}{2 - x} = \\frac {1}{2} \\cdot \\frac {1}{1 - \\frac {x}{2}} = \\frac {1}{2} \\sum_ {n = 0} ^ {\\infty} \\frac {x ^ {n}}{2 ^ {n}} = \\sum_ {n = 0} ^ {\\infty} \\frac {x ^ {n}}{2 ^ {n + 1}} (- 2 <   x <   2),\n$$\n\n于是 $f(x) = \\sum_{n=0}^{\\infty} \\frac{1}{3}\\left[(-1)^n + \\frac{1}{2^{n+1}}\\right]x^{n+1} (-1 < x < 1)$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 834
+  },
+  {
+   "id": "ky-2007-20-94f298",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.5",
+   "knowledgePoints": [
+    "12.5"
+   ],
+   "source": {
+    "text": "2007 年考研数学（一）第 20 题",
+    "kind": "exam-original",
+    "year": 2007,
+    "region": "全国",
+    "paper": "2007 年考研数学（一）",
+    "number": "20",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2007年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2007年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2007年解析/2007年解析.md"
+   },
+   "stem": "设幂级数 $\\sum_{n=0}^{\\infty} a_n x^n$ 在 $(- \\infty, +\\infty)$ 内收敛，其和函数 $y(x)$ 满足\n$$\ny ^ {\\prime \\prime} - 2 x y ^ {\\prime} - 4 y = 0, \\quad y (0) = 0, \\quad y ^ {\\prime} (0) = 1.\n$$\n(I) 证明 $a_{n+2} = \\frac{2}{n+1} a_n, n = 1, 2, \\cdots$ ;\n（Ⅱ）求 $y(x)$ 的表达式",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "（I）令 $y(x) = \\sum_{n=0}^{\\infty} a_n x^n$ ，则\n$$\ny ^ {\\prime} (x) = \\sum_ {n = 1} ^ {\\infty} n a _ {n} x ^ {n - 1},\n$$\n\n$$\ny ^ {\\prime \\prime} (x) = \\sum_ {n = 2} ^ {\\infty} n (n - 1) a _ {n} x ^ {n - 2} = \\sum_ {n = 0} ^ {\\infty} (n + 1) (n + 2) a _ {n + 2} x ^ {n},\n$$\n\n由 $y(0) = 0, y'(0) = 1$ 得 $a_0 = 0, a_1 = 1$\n\n于是 $y^{\\prime \\prime} - 2xy^{\\prime} - 4y = \\sum_{n = 0}^{\\infty}(n + 1)(n + 2)a_{n + 2}x^{n} - 2\\sum_{n = 1}^{\\infty}na_{n}x^{n} - 4\\sum_{n = 0}^{\\infty}a_{n}x^{n}$\n\n$$\n\\begin{array}{l} = \\sum_ {n = 0} ^ {\\infty} (n + 1) (n + 2) a _ {n + 2} x ^ {n} - 2 \\sum_ {n = 0} ^ {\\infty} n a _ {n} x ^ {n} - 4 \\sum_ {n = 0} ^ {\\infty} a _ {n} x ^ {n} \\\\ = \\sum_ {n = 0} ^ {\\infty} [ (n + 1) (n + 2) a _ {n + 2} - 2 (n + 2) a _ {n} ] x ^ {n}. \\\\ \\end{array}\n$$\n\n因为 $y(x) = \\sum_{n=0}^{\\infty} a_n x^n$ 满足微分方程 $y'' - 2xy' - 4y = 0$\n\n所以 $(n + 1)(n + 2)a_{n + 2} - 2(n + 2)a_n = 0$\n\n故 $a_{n + 2} = \\frac{2}{n + 1} a_n (n = 0,1,2,\\dots)$\n\n（Ⅱ）由 $a_0 = 0$ 及 $a_{n + 2} = \\frac{2}{n + 1} a_n(n = 0,1,2,\\dots)$ 得 $a_{2k} = 0(k = 1,2,\\dots)$\n\n由 $a_{1} = 1$ 及归纳法得 $a_{2n + 1} = \\frac{1}{n!} (n = 0,1,2,\\dots)$\n\n故 $y(x) = \\sum_{n=0}^{\\infty} \\frac{x^{2n+1}}{n!} = x \\sum_{n=0}^{\\infty} \\frac{(x^2)^n}{n!} = x \\mathrm{e}^{x^2}$ .",
+   "points": [
+    {
+     "text": "令 $y(x) = \\sum_{n=0}^{\\infty} a_n x^n$ ，则\n$$\ny ^ {\\prime} (x) = \\sum_ {n = 1} ^ {\\infty} n a _ {n} x ^ {n - 1},\n$$",
+     "partial": 2
+    },
+    {
+     "text": "$$\ny ^ {\\prime \\prime} (x) = \\sum_ {n = 2} ^ {\\infty} n (n - 1) a _ {n} x ^ {n - 2} = \\sum_ {n = 0} ^ {\\infty} (n + 1) (n + 2) a _ {n + 2} x ^ {n},\n$$",
+     "partial": 2
+    },
+    {
+     "text": "由 $y(0) = 0, y'(0) = 1$ 得 $a_0 = 0, a_1 = 1$",
+     "partial": 2
+    },
+    {
+     "text": "于是 $y^{\\prime \\prime} - 2xy^{\\prime} - 4y = \\sum_{n = 0}^{\\infty}(n + 1)(n + 2)a_{n + 2}x^{n} - 2\\sum_{n = 1}^{\\infty}na_{n}x^{n} - 4\\sum_{n = 0}^{\\infty}a_{n}x^{n}$",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\begin{array}{l} = \\sum_ {n = 0} ^ {\\infty} (n + 1) (n + 2) a _ {n + 2} x ^ {n} - 2 \\sum_ {n = 0} ^ {\\infty} n a _ {n} x ^ {n} - 4 \\sum_ {n = 0} ^ {\\infty} a _ {n} x ^ {n} \\\\ = \\sum_ {n = 0} ^ {\\infty} [ (n + 1) (n + 2) a _ {n + 2} - 2 (n + 2) a _ {n} ] x ^ {n}. \\\\ \\end{array}\n$$",
+     "partial": 2
+    },
+    {
+     "text": "因为 $y(x) = \\sum_{n=0}^{\\infty} a_n x^n$ 满足微分方程 $y'' - 2xy' - 4y = 0$；所以 $(n + 1)(n + 2)a_{n + 2} - 2(n + 2)a_n = 0$；故 $a_{n + 2} = \\frac{2}{n + 1} a_n (n = 0,1,2,\\dots)$；由 $a_0 = 0$ 及 $a_{n + 2} = \\frac{2}{n + 1} a_n(n = 0,1,2,\\dots)$ 得 $a_{2k} = 0(k = 1,2,\\dots)$\n\n由 $a_{1} = 1$ 及归纳法得 $a_{2n + 1} = \\frac{1}{n!} (n = 0,1,2,\\dots)$\n\n故 $y(x) = \\sum_{n=0}^{\\infty} \\frac{x^{2n+1}}{n!} = x \\sum_{n=0}^{\\infty} \\frac{(x^2)^n}{n!} = x \\mathrm{e}^{x^2}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n（I）令 $y(x) = \\sum_{n=0}^{\\infty} a_n x^n$ ，则\n$$\ny ^ {\\prime} (x) = \\sum_ {n = 1} ^ {\\infty} n a _ {n} x ^ {n - 1},\n$$\n\n$$\ny ^ {\\prime \\prime} (x) = \\sum_ {n = 2} ^ {\\infty} n (n - 1) a _ {n} x ^ {n - 2} = \\sum_ {n = 0} ^ {\\infty} (n + 1) (n + 2) a _ {n + 2} x ^ {n},\n$$\n\n由 $y(0) = 0, y'(0) = 1$ 得 $a_0 = 0, a_1 = 1$\n\n于是 $y^{\\prime \\prime} - 2xy^{\\prime} - 4y = \\sum_{n = 0}^{\\infty}(n + 1)(n + 2)a_{n + 2}x^{n} - 2\\sum_{n = 1}^{\\infty}na_{n}x^{n} - 4\\sum_{n = 0}^{\\infty}a_{n}x^{n}$\n\n$$\n\\begin{array}{l} = \\sum_ {n = 0} ^ {\\infty} (n + 1) (n + 2) a _ {n + 2} x ^ {n} - 2 \\sum_ {n = 0} ^ {\\infty} n a _ {n} x ^ {n} - 4 \\sum_ {n = 0} ^ {\\infty} a _ {n} x ^ {n} \\\\ = \\sum_ {n = 0} ^ {\\infty} [ (n + 1) (n + 2) a _ {n + 2} - 2 (n + 2) a _ {n} ] x ^ {n}. \\\\ \\end{array}\n$$\n\n因为 $y(x) = \\sum_{n=0}^{\\infty} a_n x^n$ 满足微分方程 $y'' - 2xy' - 4y = 0$\n\n所以 $(n + 1)(n + 2)a_{n + 2} - 2(n + 2)a_n = 0$\n\n故 $a_{n + 2} = \\frac{2}{n + 1} a_n (n = 0,1,2,\\dots)$\n\n（Ⅱ）由 $a_0 = 0$ 及 $a_{n + 2} = \\frac{2}{n + 1} a_n(n = 0,1,2,\\dots)$ 得 $a_{2k} = 0(k = 1,2,\\dots)$\n\n由 $a_{1} = 1$ 及归纳法得 $a_{2n + 1} = \\frac{1}{n!} (n = 0,1,2,\\dots)$\n\n故 $y(x) = \\sum_{n=0}^{\\infty} \\frac{x^{2n+1}}{n!} = x \\sum_{n=0}^{\\infty} \\frac{(x^2)^n}{n!} = x \\mathrm{e}^{x^2}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 835
+  },
+  {
+   "id": "ky-2008-19-7ca028",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2008 年考研数学（一）第 19 题",
+    "kind": "exam-original",
+    "year": 2008,
+    "region": "全国",
+    "paper": "2008 年考研数学（一）",
+    "number": "19",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2008年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2008年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2008年解析/2008年解析.md"
+   },
+   "stem": "将函数 $f(x) = 1 - x^{2}(0\\leqslant x\\leqslant \\pi)$ 展开成余弦级数,并求 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{n^2}$ 的和.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "将 $f(x)$ 进行偶延拓，则\n$$\n\\begin{array}{l} a _ {0} = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} f (x) d x = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} \\left(1 - x ^ {2}\\right) d x = 2 \\left(1 - \\frac {\\pi^ {2}}{3}\\right), \\\\ a _ {n} = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} f (x) \\cos n x d x = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} \\left(1 - x ^ {2}\\right) \\cos n x d x \\\\ = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} \\cos n x d x - \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} x ^ {2} \\cos n x d x = - \\frac {2}{n \\pi} \\int_ {0} ^ {\\pi} x ^ {2} d (\\sin n x) \\\\ = - \\frac {2 x ^ {2} \\sin n x}{n \\pi} \\Big | _ {0} ^ {\\pi} + \\frac {4}{n \\pi} \\int_ {0} ^ {\\pi} x \\sin n x d x = \\frac {4}{n \\pi} \\int_ {0} ^ {\\pi} x \\sin n x d x \\\\ = - \\frac {4}{n ^ {2} \\pi} \\int_ {0} ^ {\\pi} x d (\\cos n x) = - \\left. \\frac {4 x \\cos n x}{n ^ {2} \\pi} \\right| _ {0} ^ {\\pi} + \\frac {4}{n ^ {2} \\pi} \\int_ {0} ^ {\\pi} \\cos n x d x \\\\ = \\frac {4 (- 1) ^ {n + 1}}{n ^ {2}} (n = 1, 2, \\dots); \\\\ \\end{array}\n$$\n\n$b_{n} = 0(n = 1,2,\\dots)$ ，于是 $f(x) = 1 - x^{2}$ 的余弦级数为\n\n$$\n1 - x ^ {2} = 1 - \\frac {\\pi^ {2}}{3} + \\sum_ {n = 1} ^ {\\infty} \\frac {4 (- 1) ^ {n + 1}}{n ^ {2}} \\cos n x \\quad (0 \\leqslant x \\leqslant \\pi),\n$$\n\n令 $x = 0$ ，则 $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^{2}} = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n^{2}} = \\frac{\\pi^{2}}{12}$ .",
+   "points": [
+    {
+     "text": "将 $f(x)$ 进行偶延拓，则\n$$\n\\begin{array}{l} a _ {0} = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} f (x) d x = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} \\left(1 - x ^ {2}\\right) d x = 2 \\left(1 - \\frac {\\pi^ {2}}{3}\\right), \\\\ a _ {n} = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} f (x) \\cos n x d x = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} \\left(1 - x ^ {2}\\right) \\cos n x d x \\\\ = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} \\cos n x d x - \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} x ^ {2} \\cos n x d x = - \\frac {2}{n \\pi} \\int_ {0} ^ {\\pi} x ^ {2} d (\\sin n x) \\\\ = - \\frac {2 x ^ {2} \\sin n x}{n \\pi} \\Big | _ {0} ^ {\\pi} + \\frac {4}{n \\pi} \\int_ {0} ^ {\\pi} x \\sin n x d x = \\frac {4}{n \\pi} \\int_ {0} ^ {\\pi} x \\sin n x d x \\\\ = - \\frac {4}{n ^ {2} \\pi} \\int_ {0} ^ {\\pi} x d (\\cos n x) = - \\left. \\frac {4 x \\cos n x}{n ^ {2} \\pi} \\right| _ {0} ^ {\\pi} + \\frac {4}{n ^ {2} \\pi} \\int_ {0} ^ {\\pi} \\cos n x d x \\\\ = \\frac {4 (- 1) ^ {n + 1}}{n ^ {2}} (n = 1, 2, \\dots); \\\\ \\end{array}\n$$",
+     "partial": 2
+    },
+    {
+     "text": "$b_{n} = 0(n = 1,2,\\dots)$ ，于是 $f(x) = 1 - x^{2}$ 的余弦级数为",
+     "partial": 2
+    },
+    {
+     "text": "$$\n1 - x ^ {2} = 1 - \\frac {\\pi^ {2}}{3} + \\sum_ {n = 1} ^ {\\infty} \\frac {4 (- 1) ^ {n + 1}}{n ^ {2}} \\cos n x \\quad (0 \\leqslant x \\leqslant \\pi),\n$$",
+     "partial": 2
+    },
+    {
+     "text": "令 $x = 0$ ，则 $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^{2}} = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n^{2}} = \\frac{\\pi^{2}}{12}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n将 $f(x)$ 进行偶延拓，则\n$$\n\\begin{array}{l} a _ {0} = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} f (x) d x = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} \\left(1 - x ^ {2}\\right) d x = 2 \\left(1 - \\frac {\\pi^ {2}}{3}\\right), \\\\ a _ {n} = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} f (x) \\cos n x d x = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} \\left(1 - x ^ {2}\\right) \\cos n x d x \\\\ = \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} \\cos n x d x - \\frac {2}{\\pi} \\int_ {0} ^ {\\pi} x ^ {2} \\cos n x d x = - \\frac {2}{n \\pi} \\int_ {0} ^ {\\pi} x ^ {2} d (\\sin n x) \\\\ = - \\frac {2 x ^ {2} \\sin n x}{n \\pi} \\Big | _ {0} ^ {\\pi} + \\frac {4}{n \\pi} \\int_ {0} ^ {\\pi} x \\sin n x d x = \\frac {4}{n \\pi} \\int_ {0} ^ {\\pi} x \\sin n x d x \\\\ = - \\frac {4}{n ^ {2} \\pi} \\int_ {0} ^ {\\pi} x d (\\cos n x) = - \\left. \\frac {4 x \\cos n x}{n ^ {2} \\pi} \\right| _ {0} ^ {\\pi} + \\frac {4}{n ^ {2} \\pi} \\int_ {0} ^ {\\pi} \\cos n x d x \\\\ = \\frac {4 (- 1) ^ {n + 1}}{n ^ {2}} (n = 1, 2, \\dots); \\\\ \\end{array}\n$$\n\n$b_{n} = 0(n = 1,2,\\dots)$ ，于是 $f(x) = 1 - x^{2}$ 的余弦级数为\n\n$$\n1 - x ^ {2} = 1 - \\frac {\\pi^ {2}}{3} + \\sum_ {n = 1} ^ {\\infty} \\frac {4 (- 1) ^ {n + 1}}{n ^ {2}} \\cos n x \\quad (0 \\leqslant x \\leqslant \\pi),\n$$\n\n令 $x = 0$ ，则 $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^{2}} = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n^{2}} = \\frac{\\pi^{2}}{12}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 836
+  },
+  {
+   "id": "ky-2010-18-9c9d20",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.4",
+   "knowledgePoints": [
+    "12.4"
+   ],
+   "source": {
+    "text": "2010 年考研数学（一）第 18 题",
+    "kind": "exam-original",
+    "year": 2010,
+    "region": "全国",
+    "paper": "2010 年考研数学（一）",
+    "number": "18",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2010年解析/2010年解析.md"
+   },
+   "stem": "求幂级数 $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{2n-1} x^{2n}$ 的收敛域及和函数.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由 $\\lim_{n\\to \\infty}\\left|\\frac{u_{n + 1}}{u_n}\\right| = 1$ ，得幂级数 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n}$ 的收敛半径为 $R = 1$\n当 $x = \\pm 1$ 时， $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n} = \\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1}$ ，由交错级数审敛法得 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1}$ 收敛，故幂级数 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n}$ 的收敛域为[一1,1].\n\n令 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n} = S(x)$\n\n则 $S(x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{2n-1} x^{2n} = x \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{2n-1} x^{2n-1} = x S_1(x)$ ,\n\n其中 $S_{1}(x) = \\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n - 1}.$\n\n而 $S_{1}^{\\prime}(x) = \\sum_{n = 1}^{\\infty}(-1)^{n - 1}x^{2n - 2} = \\frac{1}{1 + x^{2}},\\quad S_{1}(0) = 0,$\n\n所以 $S_{1}(x) = \\int_{0}^{x} S_{1}'(x) \\mathrm{d}x = \\arctan x$ ，故 $S(x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{2n-1} x^{2n} = x S_{1}(x) = x \\arctan x$ .",
+   "points": [
+    {
+     "text": "由 $\\lim_{n\\to \\infty}\\left|\\frac{u_{n + 1}}{u_n}\\right| = 1$ ，得幂级数 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n}$ 的收敛半径为 $R = 1$\n当 $x = \\pm 1$ 时， $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n} = \\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1}$ ，由交错级数审敛法得 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1}$ 收敛，故幂级数 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n}$ 的收敛域为[一1,1].",
+     "partial": 2
+    },
+    {
+     "text": "令 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n} = S(x)$",
+     "partial": 2
+    },
+    {
+     "text": "则 $S(x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{2n-1} x^{2n} = x \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{2n-1} x^{2n-1} = x S_1(x)$ ,",
+     "partial": 2
+    },
+    {
+     "text": "其中 $S_{1}(x) = \\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n - 1}.$",
+     "partial": 2
+    },
+    {
+     "text": "而 $S_{1}^{\\prime}(x) = \\sum_{n = 1}^{\\infty}(-1)^{n - 1}x^{2n - 2} = \\frac{1}{1 + x^{2}},\\quad S_{1}(0) = 0,$",
+     "partial": 2
+    },
+    {
+     "text": "所以 $S_{1}(x) = \\int_{0}^{x} S_{1}'(x) \\mathrm{d}x = \\arctan x$ ，故 $S(x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{2n-1} x^{2n} = x S_{1}(x) = x \\arctan x$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由 $\\lim_{n\\to \\infty}\\left|\\frac{u_{n + 1}}{u_n}\\right| = 1$ ，得幂级数 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n}$ 的收敛半径为 $R = 1$\n当 $x = \\pm 1$ 时， $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n} = \\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1}$ ，由交错级数审敛法得 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1}$ 收敛，故幂级数 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n}$ 的收敛域为[一1,1].\n\n令 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n} = S(x)$\n\n则 $S(x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{2n-1} x^{2n} = x \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{2n-1} x^{2n-1} = x S_1(x)$ ,\n\n其中 $S_{1}(x) = \\sum_{n = 1}^{\\infty}\\frac{(-1)^{n - 1}}{2n - 1} x^{2n - 1}.$\n\n而 $S_{1}^{\\prime}(x) = \\sum_{n = 1}^{\\infty}(-1)^{n - 1}x^{2n - 2} = \\frac{1}{1 + x^{2}},\\quad S_{1}(0) = 0,$\n\n所以 $S_{1}(x) = \\int_{0}^{x} S_{1}'(x) \\mathrm{d}x = \\arctan x$ ，故 $S(x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{2n-1} x^{2n} = x S_{1}(x) = x \\arctan x$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 837
+  },
+  {
+   "id": "ky-2013-16-7d6e62",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.5",
+   "knowledgePoints": [
+    "12.5"
+   ],
+   "source": {
+    "text": "2013 年考研数学（一）第 16 题",
+    "kind": "exam-original",
+    "year": 2013,
+    "region": "全国",
+    "paper": "2013 年考研数学（一）",
+    "number": "16",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2013年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2013年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2013年解析/2013年解析.md"
+   },
+   "stem": "设数列 $\\{a_{n}\\}$ 满足条件： $a_0 = 3,a_1 = 1,a_{n - 2} - n(n - 1)a_n = 0(n\\geqslant 2),S(x)$ 是幂级数 $\\sum_{n = 0}^{\\infty}a_nx^n$ 的和函数.\n(I) 证明 $S''(x) - S(x) = 0$ ;\n（Ⅱ）求 $S(x)$ 的表达式",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "（I）由逐项可导性得 $S^{\\prime}(x) = \\sum_{n = 1}^{\\infty}na_{n}x^{n - 1}$\n$$\nS ^ {\\prime \\prime} (x) = \\sum_ {n = 2} ^ {\\infty} n (n - 1) a _ {n} x ^ {n - 2} = \\sum_ {n = 0} ^ {\\infty} (n + 2) (n + 1) a _ {n + 2} x ^ {n}.\n$$\n\n由 $a_{n - 2} - n(n - 1)a_n = 0$ ，得 $a_{n} = (n + 2)(n + 1)a_{n + 2}(n = 0,1,2,\\dots)$\n\n于是 $S''(x) = S(x)$ 或 $S''(x) - S(x) = 0$\n\n（Ⅱ） $S^{\\prime \\prime}(x) - S(x) = 0$ 的特征方程为 $\\lambda^2 -1 = 0$ ，特征值为 $\\lambda_{1} = -1,\\lambda_{2} = 1$\n\n$$\nS (x) = C _ {1} \\mathrm {e} ^ {- x} + C _ {2} \\mathrm {e} ^ {x};\n$$\n\n由 $S(0) = a_0 = 3, S'(0) = a_1 = 1$ 得 $\\left\\{ \\begin{array}{l} C_1 + C_2 = 3, \\\\ -C_1 + C_2 = 1, \\end{array} \\right.$ 解得 $C_1 = 1, C_2 = 2$ ，故幂级数的和函数 $S(x) = \\mathrm{e}^{-x} + 2\\mathrm{e}^{x}$ .",
+   "points": [
+    {
+     "text": "由逐项可导性得 $S^{\\prime}(x) = \\sum_{n = 1}^{\\infty}na_{n}x^{n - 1}$\n$$\nS ^ {\\prime \\prime} (x) = \\sum_ {n = 2} ^ {\\infty} n (n - 1) a _ {n} x ^ {n - 2} = \\sum_ {n = 0} ^ {\\infty} (n + 2) (n + 1) a _ {n + 2} x ^ {n}.\n$$",
+     "partial": 2
+    },
+    {
+     "text": "由 $a_{n - 2} - n(n - 1)a_n = 0$ ，得 $a_{n} = (n + 2)(n + 1)a_{n + 2}(n = 0,1,2,\\dots)$",
+     "partial": 2
+    },
+    {
+     "text": "于是 $S''(x) = S(x)$ 或 $S''(x) - S(x) = 0$",
+     "partial": 2
+    },
+    {
+     "text": "$S^{\\prime \\prime}(x) - S(x) = 0$ 的特征方程为 $\\lambda^2 -1 = 0$ ，特征值为 $\\lambda_{1} = -1,\\lambda_{2} = 1$",
+     "partial": 2
+    },
+    {
+     "text": "$$\nS (x) = C _ {1} \\mathrm {e} ^ {- x} + C _ {2} \\mathrm {e} ^ {x};\n$$",
+     "partial": 2
+    },
+    {
+     "text": "由 $S(0) = a_0 = 3, S'(0) = a_1 = 1$ 得 $\\left\\{ \\begin{array}{l} C_1 + C_2 = 3, \\\\ -C_1 + C_2 = 1, \\end{array} \\right.$ 解得 $C_1 = 1, C_2 = 2$ ，故幂级数的和函数 $S(x) = \\mathrm{e}^{-x} + 2\\mathrm{e}^{x}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n（I）由逐项可导性得 $S^{\\prime}(x) = \\sum_{n = 1}^{\\infty}na_{n}x^{n - 1}$\n$$\nS ^ {\\prime \\prime} (x) = \\sum_ {n = 2} ^ {\\infty} n (n - 1) a _ {n} x ^ {n - 2} = \\sum_ {n = 0} ^ {\\infty} (n + 2) (n + 1) a _ {n + 2} x ^ {n}.\n$$\n\n由 $a_{n - 2} - n(n - 1)a_n = 0$ ，得 $a_{n} = (n + 2)(n + 1)a_{n + 2}(n = 0,1,2,\\dots)$\n\n于是 $S''(x) = S(x)$ 或 $S''(x) - S(x) = 0$\n\n（Ⅱ） $S^{\\prime \\prime}(x) - S(x) = 0$ 的特征方程为 $\\lambda^2 -1 = 0$ ，特征值为 $\\lambda_{1} = -1,\\lambda_{2} = 1$\n\n$$\nS (x) = C _ {1} \\mathrm {e} ^ {- x} + C _ {2} \\mathrm {e} ^ {x};\n$$\n\n由 $S(0) = a_0 = 3, S'(0) = a_1 = 1$ 得 $\\left\\{ \\begin{array}{l} C_1 + C_2 = 3, \\\\ -C_1 + C_2 = 1, \\end{array} \\right.$ 解得 $C_1 = 1, C_2 = 2$ ，故幂级数的和函数 $S(x) = \\mathrm{e}^{-x} + 2\\mathrm{e}^{x}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 838
+  },
+  {
+   "id": "ky-2014-19-924fc6",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2014 年考研数学（一）第 19 题",
+    "kind": "exam-original",
+    "year": 2014,
+    "region": "全国",
+    "paper": "2014 年考研数学（一）",
+    "number": "19",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2014年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2014年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2014年解析/2014年解析.md"
+   },
+   "stem": "设数列 $\\{a_{n}\\},\\{b_{n}\\}$ 满足 $0 < a_{n} < \\frac{\\pi}{2}, 0 < b_{n} < \\frac{\\pi}{2}, \\cos a_{n} - a_{n} = \\cos b_{n}$ , 且级数 $\\sum_{n=1}^{\\infty} b_{n}$ 收敛.\n(I) 证明 $\\lim_{n \\to \\infty} a_n = 0$ ;\n（Ⅱ）证明级数 $\\sum_{n = 1}^{\\infty}\\frac{a_n}{b_n}$ 收敛.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "（I）由 $\\cos a_{n} - a_{n} = \\cos b_{n}$ 得 $a_{n} = \\cos a_{n} - \\cos b_{n}$\n因为 $a_{n} > 0$ ，所以 $a_{n} = \\cos a_{n} - \\cos b_{n} > 0$ ，故 $0 < a_{n} < b_{n}$\n\n又因为 $\\sum_{n = 1}^{\\infty}b_n$ 收敛，所以 $\\sum_{n = 1}^{\\infty}a_{n}$ 收敛，故 $\\lim_{n\\to \\infty}a_n = 0.$\n\n（Ⅱ）方法一 由 $a_{n} = \\cos a_{n} - \\cos b_{n}$ 得\n\n$$\n\\frac {a _ {n}}{b _ {n}} = \\frac {\\cos a _ {n} - \\cos b _ {n}}{b _ {n}} = - \\frac {2 \\sin \\left(\\frac {a _ {n} + b _ {n}}{2}\\right) \\sin \\left(\\frac {a _ {n} - b _ {n}}{2}\\right)}{b _ {n}} \\sim \\frac {b _ {n} ^ {2} - a _ {n} ^ {2}}{2 b _ {n}},\n$$\n\n因为 $0 \\leqslant \\frac{b_n^2 - a_n^2}{2b_n} \\leqslant \\frac{b_n}{2}$ 且 $\\sum_{n=1}^{\\infty} b_n$ 收敛，所以 $\\sum_{n=1}^{\\infty} \\frac{b_n^2 - a_n^2}{2b_n}$ 收敛，\n\n由正项级数比较审敛法得 $\\sum_{n = 1}^{\\infty}\\frac{a_n}{b_n}$ 收敛.\n\n方法二 由 $\\lim_{n\\to \\infty}\\frac{\\frac{a_n}{b_n}}{b_n} = \\lim_{n\\to \\infty}\\frac{a_n}{b_n^2} = \\lim_{n\\to \\infty}\\frac{1 - \\cos b_n}{b_n^2}\\cdot \\frac{a_n}{1 - \\cos b_n}$\n\n$$\n= \\frac {1}{2} \\lim  _ {n \\rightarrow \\infty} \\frac {a _ {n}}{1 - \\cos b _ {n}} = \\frac {1}{2} \\lim  _ {n \\rightarrow \\infty} \\frac {a _ {n}}{a _ {n} + 1 - \\cos a _ {n}} = \\frac {1}{2},\n$$\n\n且级数 $\\sum_{n=1}^{\\infty} b_n$ 收敛，根据正项级数比较审敛法得级数 $\\sum_{n=1}^{\\infty} \\frac{a_n}{b_n}$ 收敛.\n\n方法点评：本题考查正项级数的比较审敛法，\n\n在判断正项级数收敛时，若存在另一个正项级数且知其敛散性，一般使用比较审敛法.",
+   "points": [
+    {
+     "text": "由 $\\cos a_{n} - a_{n} = \\cos b_{n}$ 得 $a_{n} = \\cos a_{n} - \\cos b_{n}$\n因为 $a_{n} > 0$ ，所以 $a_{n} = \\cos a_{n} - \\cos b_{n} > 0$ ，故 $0 < a_{n} < b_{n}$\n\n又因为 $\\sum_{n = 1}^{\\infty}b_n$ 收敛，所以 $\\sum_{n = 1}^{\\infty}a_{n}$ 收敛，故 $\\lim_{n\\to \\infty}a_n = 0.$",
+     "partial": 2
+    },
+    {
+     "text": "方法一 由 $a_{n} = \\cos a_{n} - \\cos b_{n}$ 得",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\frac {a _ {n}}{b _ {n}} = \\frac {\\cos a _ {n} - \\cos b _ {n}}{b _ {n}} = - \\frac {2 \\sin \\left(\\frac {a _ {n} + b _ {n}}{2}\\right) \\sin \\left(\\frac {a _ {n} - b _ {n}}{2}\\right)}{b _ {n}} \\sim \\frac {b _ {n} ^ {2} - a _ {n} ^ {2}}{2 b _ {n}},\n$$",
+     "partial": 2
+    },
+    {
+     "text": "因为 $0 \\leqslant \\frac{b_n^2 - a_n^2}{2b_n} \\leqslant \\frac{b_n}{2}$ 且 $\\sum_{n=1}^{\\infty} b_n$ 收敛，所以 $\\sum_{n=1}^{\\infty} \\frac{b_n^2 - a_n^2}{2b_n}$ 收敛，",
+     "partial": 2
+    },
+    {
+     "text": "由正项级数比较审敛法得 $\\sum_{n = 1}^{\\infty}\\frac{a_n}{b_n}$ 收敛.",
+     "partial": 2
+    },
+    {
+     "text": "方法二 由 $\\lim_{n\\to \\infty}\\frac{\\frac{a_n}{b_n}}{b_n} = \\lim_{n\\to \\infty}\\frac{a_n}{b_n^2} = \\lim_{n\\to \\infty}\\frac{1 - \\cos b_n}{b_n^2}\\cdot \\frac{a_n}{1 - \\cos b_n}$；$$\n= \\frac {1}{2} \\lim  _ {n \\rightarrow \\infty} \\frac {a _ {n}}{1 - \\cos b _ {n}} = \\frac {1}{2} \\lim  _ {n \\rightarrow \\infty} \\frac {a _ {n}}{a _ {n} + 1 - \\cos a _ {n}} = \\frac {1}{2},\n$$；且级数 $\\sum_{n=1}^{\\infty} b_n$ 收敛，根据正项级数比较审敛法得级数 $\\sum_{n=1}^{\\infty} \\frac{a_n}{b_n}$ 收敛.；方法点评：本题考查正项级数的比较审敛法，；在判断正项级数收敛时，若存在另一个正项级数且知其敛散性，一般使用比较审敛法.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n（I）由 $\\cos a_{n} - a_{n} = \\cos b_{n}$ 得 $a_{n} = \\cos a_{n} - \\cos b_{n}$\n因为 $a_{n} > 0$ ，所以 $a_{n} = \\cos a_{n} - \\cos b_{n} > 0$ ，故 $0 < a_{n} < b_{n}$\n\n又因为 $\\sum_{n = 1}^{\\infty}b_n$ 收敛，所以 $\\sum_{n = 1}^{\\infty}a_{n}$ 收敛，故 $\\lim_{n\\to \\infty}a_n = 0.$\n\n（Ⅱ）方法一 由 $a_{n} = \\cos a_{n} - \\cos b_{n}$ 得\n\n$$\n\\frac {a _ {n}}{b _ {n}} = \\frac {\\cos a _ {n} - \\cos b _ {n}}{b _ {n}} = - \\frac {2 \\sin \\left(\\frac {a _ {n} + b _ {n}}{2}\\right) \\sin \\left(\\frac {a _ {n} - b _ {n}}{2}\\right)}{b _ {n}} \\sim \\frac {b _ {n} ^ {2} - a _ {n} ^ {2}}{2 b _ {n}},\n$$\n\n因为 $0 \\leqslant \\frac{b_n^2 - a_n^2}{2b_n} \\leqslant \\frac{b_n}{2}$ 且 $\\sum_{n=1}^{\\infty} b_n$ 收敛，所以 $\\sum_{n=1}^{\\infty} \\frac{b_n^2 - a_n^2}{2b_n}$ 收敛，\n\n由正项级数比较审敛法得 $\\sum_{n = 1}^{\\infty}\\frac{a_n}{b_n}$ 收敛.\n\n方法二 由 $\\lim_{n\\to \\infty}\\frac{\\frac{a_n}{b_n}}{b_n} = \\lim_{n\\to \\infty}\\frac{a_n}{b_n^2} = \\lim_{n\\to \\infty}\\frac{1 - \\cos b_n}{b_n^2}\\cdot \\frac{a_n}{1 - \\cos b_n}$\n\n$$\n= \\frac {1}{2} \\lim  _ {n \\rightarrow \\infty} \\frac {a _ {n}}{1 - \\cos b _ {n}} = \\frac {1}{2} \\lim  _ {n \\rightarrow \\infty} \\frac {a _ {n}}{a _ {n} + 1 - \\cos a _ {n}} = \\frac {1}{2},\n$$\n\n且级数 $\\sum_{n=1}^{\\infty} b_n$ 收敛，根据正项级数比较审敛法得级数 $\\sum_{n=1}^{\\infty} \\frac{a_n}{b_n}$ 收敛.\n\n方法点评：本题考查正项级数的比较审敛法，\n\n在判断正项级数收敛时，若存在另一个正项级数且知其敛散性，一般使用比较审敛法.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 839
+  },
+  {
+   "id": "ky-2020-17-8b84b5",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.4",
+   "knowledgePoints": [
+    "12.4"
+   ],
+   "source": {
+    "text": "2020 年考研数学（一）第 17 题",
+    "kind": "exam-original",
+    "year": 2020,
+    "region": "全国",
+    "paper": "2020 年考研数学（一）",
+    "number": "17",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2020年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2020年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2020年解析/2020年解析.md"
+   },
+   "stem": "设数列 $\\{a_{n}\\}$ 满足： $a_1 = 1,(n + 1)a_{n + 1} = \\left(n + \\frac{1}{2}\\right)a_n$ ，证明：当 $|x| < 1$ 时，幂级数 $\\sum_{n = 1}^{\\infty}a_{n}x^{n}$ 收敛，并求其和函数.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由 $(n + 1)a_{n + 1} = \\left(n + \\frac{1}{2}\\right)a_n$ 得 $\\frac{a_{n + 1}}{a_n} = \\frac{n + \\frac{1}{2}}{n + 1},$\n从而 $\\lim_{n\\to \\infty}\\frac{a_{n + 1}}{a_n} = 1$ ，即幂级数 $\\sum_{n = 1}^{\\infty}a_{n}x^{n}$ 的收敛半径为 $R = 1$\n\n故当 $|x| < 1$ 时，幂级数 $\\sum_{n=1}^{\\infty} a_n x^n$ 收敛.\n\n令 $S(x) = \\sum_{n=1}^{\\infty} a_n x^n$ ，则\n\n$$\n\\begin{array}{l} S ^ {\\prime} (x) = 1 + \\sum_ {n = 1} ^ {\\infty} (n + 1) a _ {n + 1} x ^ {n} = 1 + \\sum_ {n = 1} ^ {\\infty} \\left(n + \\frac {1}{2}\\right) a _ {n} x ^ {n} \\\\ = 1 + x \\sum_ {n = 1} ^ {\\infty} n a _ {n} x ^ {n - 1} + \\frac {1}{2} \\sum_ {n = 1} ^ {\\infty} a _ {n} x ^ {n} = 1 + x S ^ {\\prime} (x) + \\frac {1}{2} S (x), \\\\ \\end{array}\n$$\n\n即 $S^{\\prime}(x) - \\frac{1}{2(1 - x)} S(x) = \\frac{1}{1 - x}$ ，解得\n\n$$\nS (x) = (- 2 \\sqrt {1 - x} + C) \\frac {1}{\\sqrt {1 - x}} = \\frac {C}{\\sqrt {1 - x}} - 2,\n$$\n\n由 $S(0) = 0$ 得 $C = 2$ ，故 $S(x) = \\frac{2}{\\sqrt{1 - x}} - 2.$",
+   "points": [
+    {
+     "text": "由 $(n + 1)a_{n + 1} = \\left(n + \\frac{1}{2}\\right)a_n$ 得 $\\frac{a_{n + 1}}{a_n} = \\frac{n + \\frac{1}{2}}{n + 1},$\n从而 $\\lim_{n\\to \\infty}\\frac{a_{n + 1}}{a_n} = 1$ ，即幂级数 $\\sum_{n = 1}^{\\infty}a_{n}x^{n}$ 的收敛半径为 $R = 1$",
+     "partial": 2
+    },
+    {
+     "text": "故当 $|x| < 1$ 时，幂级数 $\\sum_{n=1}^{\\infty} a_n x^n$ 收敛.",
+     "partial": 2
+    },
+    {
+     "text": "令 $S(x) = \\sum_{n=1}^{\\infty} a_n x^n$ ，则",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\begin{array}{l} S ^ {\\prime} (x) = 1 + \\sum_ {n = 1} ^ {\\infty} (n + 1) a _ {n + 1} x ^ {n} = 1 + \\sum_ {n = 1} ^ {\\infty} \\left(n + \\frac {1}{2}\\right) a _ {n} x ^ {n} \\\\ = 1 + x \\sum_ {n = 1} ^ {\\infty} n a _ {n} x ^ {n - 1} + \\frac {1}{2} \\sum_ {n = 1} ^ {\\infty} a _ {n} x ^ {n} = 1 + x S ^ {\\prime} (x) + \\frac {1}{2} S (x), \\\\ \\end{array}\n$$",
+     "partial": 2
+    },
+    {
+     "text": "即 $S^{\\prime}(x) - \\frac{1}{2(1 - x)} S(x) = \\frac{1}{1 - x}$ ，解得",
+     "partial": 2
+    },
+    {
+     "text": "$$\nS (x) = (- 2 \\sqrt {1 - x} + C) \\frac {1}{\\sqrt {1 - x}} = \\frac {C}{\\sqrt {1 - x}} - 2,\n$$；由 $S(0) = 0$ 得 $C = 2$ ，故 $S(x) = \\frac{2}{\\sqrt{1 - x}} - 2.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由 $(n + 1)a_{n + 1} = \\left(n + \\frac{1}{2}\\right)a_n$ 得 $\\frac{a_{n + 1}}{a_n} = \\frac{n + \\frac{1}{2}}{n + 1},$\n从而 $\\lim_{n\\to \\infty}\\frac{a_{n + 1}}{a_n} = 1$ ，即幂级数 $\\sum_{n = 1}^{\\infty}a_{n}x^{n}$ 的收敛半径为 $R = 1$\n\n故当 $|x| < 1$ 时，幂级数 $\\sum_{n=1}^{\\infty} a_n x^n$ 收敛.\n\n令 $S(x) = \\sum_{n=1}^{\\infty} a_n x^n$ ，则\n\n$$\n\\begin{array}{l} S ^ {\\prime} (x) = 1 + \\sum_ {n = 1} ^ {\\infty} (n + 1) a _ {n + 1} x ^ {n} = 1 + \\sum_ {n = 1} ^ {\\infty} \\left(n + \\frac {1}{2}\\right) a _ {n} x ^ {n} \\\\ = 1 + x \\sum_ {n = 1} ^ {\\infty} n a _ {n} x ^ {n - 1} + \\frac {1}{2} \\sum_ {n = 1} ^ {\\infty} a _ {n} x ^ {n} = 1 + x S ^ {\\prime} (x) + \\frac {1}{2} S (x), \\\\ \\end{array}\n$$\n\n即 $S^{\\prime}(x) - \\frac{1}{2(1 - x)} S(x) = \\frac{1}{1 - x}$ ，解得\n\n$$\nS (x) = (- 2 \\sqrt {1 - x} + C) \\frac {1}{\\sqrt {1 - x}} = \\frac {C}{\\sqrt {1 - x}} - 2,\n$$\n\n由 $S(0) = 0$ 得 $C = 2$ ，故 $S(x) = \\frac{2}{\\sqrt{1 - x}} - 2.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 840
+  },
+  {
+   "id": "ky-2021-18-c231a2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.5",
+   "knowledgePoints": [
+    "12.5"
+   ],
+   "source": {
+    "text": "2021 年考研数学（一）第 18 题",
+    "kind": "exam-original",
+    "year": 2021,
+    "region": "全国",
+    "paper": "2021 年考研数学（一）",
+    "number": "18",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2021年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2021年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2021年解析/2021年解析.md"
+   },
+   "stem": "设 $u_{n}(x) = \\mathrm{e}^{-nx} + \\frac{x^{n + 1}}{n(n + 1)} (n = 1,2,\\dots)$ ，求级数 $\\sum_{n = 1}^{\\infty}u_n(x)$ 的收敛域及和函数.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\sum_{n=1}^{\\infty} u_n(x) = \\sum_{n=1}^{\\infty} \\mathrm{e}^{-nx} + \\sum_{n=1}^{\\infty} \\frac{x^{n+1}}{n(n+1)}$ ,\n当 $\\lim_{n\\to \\infty}\\frac{\\mathrm{e}^{-(n + 1)x}}{\\mathrm{e}^{-nx}} = \\mathrm{e}^{-x} <   1$ 即 $x > 0$ 时， $\\sum_{n = 1}^{\\infty}\\mathrm{e}^{-nx}$ 收敛；\n\n再由 $\\lim_{n\\to \\infty}\\frac{\\frac{1}{(n + 1)(n + 2)}}{\\frac{1}{n(n + 1)}} = 1$ 得 $\\sum_{n = 1}^{\\infty}\\frac{x^{n + 1}}{n(n + 1)}$ 的收敛半径为 $R = 1$\n\n当 $x = \\pm 1$ 时， $\\sum_{n = 1}^{\\infty}\\left|\\frac{(\\pm 1)^{n + 1}}{n(n + 1)}\\right| = \\sum_{n = 1}^{\\infty}\\frac{1}{n(n + 1)} = 1$ 故 $\\sum_{n = 1}^{\\infty}\\frac{x^{n + 1}}{n(n + 1)}$ 的收敛域为[-1,1]，故级数 $\\sum_{n = 1}^{\\infty}u_n(x)$ 的收敛域为(0,1].\n\n令 $S(x) = \\sum_{n=1}^{\\infty} u_n(x) = \\sum_{n=1}^{\\infty} \\mathrm{e}^{-nx} + \\sum_{n=1}^{\\infty} \\frac{x^{n+1}}{n(n+1)} = S_1(x) + S_2(x)$ ，\n\n且 $S_{1}(x) = \\sum_{n = 1}^{\\infty}\\mathrm{e}^{-nx} = \\frac{\\mathrm{e}^{-x}}{1 - \\mathrm{e}^{-x}} = \\frac{1}{\\mathrm{e}^{x} - 1};$\n\n$$\n\\begin{array}{l} S _ {2} (x) = \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n + 1}}{n (n + 1)} = \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n + 1}}{n} - \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n + 1}}{n + 1} = x \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n}}{n} - \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n}}{n} + x \\\\ = (1 - x) \\ln (1 - x) + x (0 <   x <   1), \\\\ \\end{array}\n$$\n\n当 $x = 1$ 时，由 $S_{1}(1) = \\frac{1}{\\mathrm{e} - 1}, S_{2}(1) = 1$ 得 $S(1) = \\frac{1}{\\mathrm{e} - 1} + 1 = \\frac{\\mathrm{e}}{\\mathrm{e} - 1}$ ，\n\n故 $S(x) = \\left\\{ \\begin{array}{ll} \\frac{1}{\\mathrm{e}^x - 1} + (1 - x)\\ln (1 - x) + x, & 0 < x < 1, \\\\ \\frac{\\mathrm{e}}{\\mathrm{e} - 1}, & x = 1. \\end{array} \\right.$",
+   "points": [
+    {
+     "text": "$\\sum_{n=1}^{\\infty} u_n(x) = \\sum_{n=1}^{\\infty} \\mathrm{e}^{-nx} + \\sum_{n=1}^{\\infty} \\frac{x^{n+1}}{n(n+1)}$ ,\n当 $\\lim_{n\\to \\infty}\\frac{\\mathrm{e}^{-(n + 1)x}}{\\mathrm{e}^{-nx}} = \\mathrm{e}^{-x} <   1$ 即 $x > 0$ 时， $\\sum_{n = 1}^{\\infty}\\mathrm{e}^{-nx}$ 收敛；",
+     "partial": 2
+    },
+    {
+     "text": "再由 $\\lim_{n\\to \\infty}\\frac{\\frac{1}{(n + 1)(n + 2)}}{\\frac{1}{n(n + 1)}} = 1$ 得 $\\sum_{n = 1}^{\\infty}\\frac{x^{n + 1}}{n(n + 1)}$ 的收敛半径为 $R = 1$",
+     "partial": 2
+    },
+    {
+     "text": "当 $x = \\pm 1$ 时， $\\sum_{n = 1}^{\\infty}\\left|\\frac{(\\pm 1)^{n + 1}}{n(n + 1)}\\right| = \\sum_{n = 1}^{\\infty}\\frac{1}{n(n + 1)} = 1$ 故 $\\sum_{n = 1}^{\\infty}\\frac{x^{n + 1}}{n(n + 1)}$ 的收敛域为[-1,1]，故级数 $\\sum_{n = 1}^{\\infty}u_n(x)$ 的收敛域为(0,1].",
+     "partial": 2
+    },
+    {
+     "text": "令 $S(x) = \\sum_{n=1}^{\\infty} u_n(x) = \\sum_{n=1}^{\\infty} \\mathrm{e}^{-nx} + \\sum_{n=1}^{\\infty} \\frac{x^{n+1}}{n(n+1)} = S_1(x) + S_2(x)$ ，",
+     "partial": 2
+    },
+    {
+     "text": "且 $S_{1}(x) = \\sum_{n = 1}^{\\infty}\\mathrm{e}^{-nx} = \\frac{\\mathrm{e}^{-x}}{1 - \\mathrm{e}^{-x}} = \\frac{1}{\\mathrm{e}^{x} - 1};$",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\begin{array}{l} S _ {2} (x) = \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n + 1}}{n (n + 1)} = \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n + 1}}{n} - \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n + 1}}{n + 1} = x \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n}}{n} - \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n}}{n} + x \\\\ = (1 - x) \\ln (1 - x) + x (0 <   x <   1), \\\\ \\end{array}\n$$；当 $x = 1$ 时，由 $S_{1}(1) = \\frac{1}{\\mathrm{e} - 1}, S_{2}(1) = 1$ 得 $S(1) = \\frac{1}{\\mathrm{e} - 1} + 1 = \\frac{\\mathrm{e}}{\\mathrm{e} - 1}$ ，；故 $S(x) = \\left\\{ \\begin{array}{ll} \\frac{1}{\\mathrm{e}^x - 1} + (1 - x)\\ln (1 - x) + x, & 0 < x < 1, \\\\ \\frac{\\mathrm{e}}{\\mathrm{e} - 1}, & x = 1. \\end{array} \\right.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$\\sum_{n=1}^{\\infty} u_n(x) = \\sum_{n=1}^{\\infty} \\mathrm{e}^{-nx} + \\sum_{n=1}^{\\infty} \\frac{x^{n+1}}{n(n+1)}$ ,\n当 $\\lim_{n\\to \\infty}\\frac{\\mathrm{e}^{-(n + 1)x}}{\\mathrm{e}^{-nx}} = \\mathrm{e}^{-x} <   1$ 即 $x > 0$ 时， $\\sum_{n = 1}^{\\infty}\\mathrm{e}^{-nx}$ 收敛；\n\n再由 $\\lim_{n\\to \\infty}\\frac{\\frac{1}{(n + 1)(n + 2)}}{\\frac{1}{n(n + 1)}} = 1$ 得 $\\sum_{n = 1}^{\\infty}\\frac{x^{n + 1}}{n(n + 1)}$ 的收敛半径为 $R = 1$\n\n当 $x = \\pm 1$ 时， $\\sum_{n = 1}^{\\infty}\\left|\\frac{(\\pm 1)^{n + 1}}{n(n + 1)}\\right| = \\sum_{n = 1}^{\\infty}\\frac{1}{n(n + 1)} = 1$ 故 $\\sum_{n = 1}^{\\infty}\\frac{x^{n + 1}}{n(n + 1)}$ 的收敛域为[-1,1]，故级数 $\\sum_{n = 1}^{\\infty}u_n(x)$ 的收敛域为(0,1].\n\n令 $S(x) = \\sum_{n=1}^{\\infty} u_n(x) = \\sum_{n=1}^{\\infty} \\mathrm{e}^{-nx} + \\sum_{n=1}^{\\infty} \\frac{x^{n+1}}{n(n+1)} = S_1(x) + S_2(x)$ ，\n\n且 $S_{1}(x) = \\sum_{n = 1}^{\\infty}\\mathrm{e}^{-nx} = \\frac{\\mathrm{e}^{-x}}{1 - \\mathrm{e}^{-x}} = \\frac{1}{\\mathrm{e}^{x} - 1};$\n\n$$\n\\begin{array}{l} S _ {2} (x) = \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n + 1}}{n (n + 1)} = \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n + 1}}{n} - \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n + 1}}{n + 1} = x \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n}}{n} - \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n}}{n} + x \\\\ = (1 - x) \\ln (1 - x) + x (0 <   x <   1), \\\\ \\end{array}\n$$\n\n当 $x = 1$ 时，由 $S_{1}(1) = \\frac{1}{\\mathrm{e} - 1}, S_{2}(1) = 1$ 得 $S(1) = \\frac{1}{\\mathrm{e} - 1} + 1 = \\frac{\\mathrm{e}}{\\mathrm{e} - 1}$ ，\n\n故 $S(x) = \\left\\{ \\begin{array}{ll} \\frac{1}{\\mathrm{e}^x - 1} + (1 - x)\\ln (1 - x) + x, & 0 < x < 1, \\\\ \\frac{\\mathrm{e}}{\\mathrm{e} - 1}, & x = 1. \\end{array} \\right.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 841
+  },
+  {
+   "id": "zk-202210-19",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 19 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 19,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "判断级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{(n+1)(n+2)}$ 的敛散性。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "> **本题官方评分参考**：写出通项占 2 分；找到比较对象 $\\dfrac{1}{n^2}$ 并说明它收敛占 2 分；由比较审敛法下结论占 2 分。\n\n**第一步：写出通项，确认是正项级数。**\n\n$$u_n = \\frac{1}{(n+1)(n+2)} > 0$$\n\n**第二步：找一个已知敛散性的级数作比较。**\n\n分母 $(n+1)(n+2) = n^2 + 3n + 2 > n^2$，取倒数得\n\n$$u_n = \\frac{1}{(n+1)(n+2)} < \\frac{1}{n^2}$$\n\n**第三步：确认比较对象收敛。**\n\n$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^2}$ 是 $p = 2 > 1$ 的 $p$ 级数，**收敛**。\n\n**第四步：由比较审敛法下结论。**\n\n因为 $0 < u_n < \\dfrac{1}{n^2}$，而 $\\displaystyle\\sum \\frac{1}{n^2}$ 收敛，所以由**比较审敛法**知，级数\n\n$$\\sum_{n=1}^{\\infty}\\frac{1}{(n+1)(n+2)}$$\n\n**收敛**。",
+   "points": [
+    {
+     "text": "> 本题官方评分参考：写出通项占 2 分；找到比较对象 $\\dfrac{1}{n^2}$ 并说明它收敛占 2 分；由比较审敛法下结论占 2 分。",
+     "partial": 2
+    },
+    {
+     "text": "写出通项，确认是正项级数。\n\n$$u_n = \\frac{1}{(n+1)(n+2)} > 0$$",
+     "partial": 2
+    },
+    {
+     "text": "找一个已知敛散性的级数作比较。\n\n分母 $(n+1)(n+2) = n^2 + 3n + 2 > n^2$，取倒数得\n\n$$u_n = \\frac{1}{(n+1)(n+2)} < \\frac{1}{n^2}$$",
+     "partial": 2
+    },
+    {
+     "text": "确认比较对象收敛。\n\n$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^2}$ 是 $p = 2 > 1$ 的 $p$ 级数，收敛。",
+     "partial": 2
+    },
+    {
+     "text": "由比较审敛法下结论。",
+     "partial": 2
+    },
+    {
+     "text": "因为 $0 < u_n < \\dfrac{1}{n^2}$，而 $\\displaystyle\\sum \\frac{1}{n^2}$ 收敛，所以由比较审敛法知，级数；$$\\sum_{n=1}^{\\infty}\\frac{1}{(n+1)(n+2)}$$；收敛。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：正项级数的比较审敛法（无穷级数）。\n**考点出处**：正项级数的比较审敛法（无穷级数）\n> **本题官方评分参考**：写出通项占 2 分；找到比较对象 $\\dfrac{1}{n^2}$ 并说明它收敛占 2 分；由比较审敛法下结论占 2 分。\n\n**第一步：写出通项，确认是正项级数。**\n\n$$u_n = \\frac{1}{(n+1)(n+2)} > 0$$\n\n**第二步：找一个已知敛散性的级数作比较。**\n\n分母 $(n+1)(n+2) = n^2 + 3n + 2 > n^2$，取倒数得\n\n$$u_n = \\frac{1}{(n+1)(n+2)} < \\frac{1}{n^2}$$\n\n**第三步：确认比较对象收敛。**\n\n$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^2}$ 是 $p = 2 > 1$ 的 $p$ 级数，**收敛**。\n\n**第四步：由比较审敛法下结论。**\n\n因为 $0 < u_n < \\dfrac{1}{n^2}$，而 $\\displaystyle\\sum \\frac{1}{n^2}$ 收敛，所以由**比较审敛法**知，级数\n\n$$\\sum_{n=1}^{\\infty}\\frac{1}{(n+1)(n+2)}$$\n\n**收敛**。",
+   "misconception": "- **比较对象要选对**：分母是 $(n+1)(n+2) \\sim n^2$，所以和 $\\displaystyle\\sum\\frac{1}{n^2}$ 比较。**选调和级数 $\\displaystyle\\sum\\frac1n$ 是错的——它发散，比较不出\"收敛\"的结论。**\n- **不等号方向不能反**：要证明收敛，必须写成\"$u_n \\le$ 某个收敛级数的通项\"。$u_n < \\dfrac{1}{n^2}$ 是正确方向；写成 $u_n > \\dfrac{1}{n^2}$ 就什么也证不出。\n- **$p$ 级数判据要背牢**：$\\displaystyle\\sum\\frac{1}{n^p}$ 在 **$p > 1$ 时收敛，$p \\le 1$ 时发散**。本题 $p = 2$，收敛。\n- **结论要写完整**：不能只写不等式就停笔，**必须写出\"由比较审敛法知该级数收敛\"**，这是评分点。\n- **本题与\"裂项求和\"是同一道题的两条路**：本课程 2026.04 卷第 9 题就直接考了裂项相消求和。**当作敛散性判断时用比较法更快；当作求和题时用裂项。**看出这个通项可以裂项，本身就是一种好习惯。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 842
+  },
+  {
+   "id": "zk-202210-21",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 21 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 21,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求幂级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(x-1)^n}{n\\cdot 3^n}$ 的收敛半径和收敛区间。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：换元化简，把中心挪到原点。**\n\n令 $t = x - 1$，原级数化为\n\n$$\\sum_{n=1}^{\\infty}\\frac{t^n}{n\\cdot 3^n}, \\qquad a_n = \\frac{1}{n\\cdot 3^n}$$\n\n**第二步：用比值法求 $\\rho$。**\n\n$$\\left|\\frac{a_{n+1}}{a_n}\\right| = \\frac{\\dfrac{1}{(n+1)3^{n+1}}}{\\dfrac{1}{n3^{n}}} = \\frac{n\\cdot 3^{n}}{(n+1)\\cdot 3^{n+1}} = \\frac{1}{3}\\cdot\\frac{n}{n+1}$$\n\n取极限：\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\frac{1}{3}\\lim_{n\\to\\infty}\\frac{n}{n+1} = \\frac{1}{3}\\times 1 = \\frac{1}{3}$$\n\n**第三步：求收敛半径。**\n\n$$R = \\frac{1}{\\rho} = \\frac{1}{1/3} = 3$$\n\n**第四步：写出收敛区间。**\n\n由 $|t| < R = 3$ 得 $|x - 1| < 3$，即\n\n$$-2 < x < 4$$\n\n题目问的是**收敛区间**，按定义取**开区间**，即\n\n$$\\boxed{R = 3, \\qquad (-2,\\ 4)}$$\n\n**端点补充说明（若题目改问\"收敛域\"）**：\n\n- 当 $x = 4$（即 $t = 3$）：$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{3^n}{n\\cdot3^n} = \\sum_{n=1}^{\\infty}\\frac{1}{n}$，**调和级数发散**；\n- 当 $x = -2$（即 $t = -3$）：$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-3)^n}{n\\cdot3^n} = \\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n}$，**交错调和级数，由莱布尼茨判别法收敛**。\n\n所以**收敛域为 $[-2, 4)$**（左闭右开）。",
+   "points": [
+    {
+     "text": "换元化简，把中心挪到原点。\n\n令 $t = x - 1$，原级数化为\n\n$$\\sum_{n=1}^{\\infty}\\frac{t^n}{n\\cdot 3^n}, \\qquad a_n = \\frac{1}{n\\cdot 3^n}$$",
+     "partial": 2
+    },
+    {
+     "text": "用比值法求 $\\rho$。\n\n$$\\left|\\frac{a_{n+1}}{a_n}\\right| = \\frac{\\dfrac{1}{(n+1)3^{n+1}}}{\\dfrac{1}{n3^{n}}} = \\frac{n\\cdot 3^{n}}{(n+1)\\cdot 3^{n+1}} = \\frac{1}{3}\\cdot\\frac{n}{n+1}$$\n\n取极限：\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\frac{1}{3}\\lim_{n\\to\\infty}\\frac{n}{n+1} = \\frac{1}{3}\\times 1 = \\frac{1}{3}$$",
+     "partial": 2
+    },
+    {
+     "text": "求收敛半径。\n\n$$R = \\frac{1}{\\rho} = \\frac{1}{1/3} = 3$$",
+     "partial": 2
+    },
+    {
+     "text": "写出收敛区间。",
+     "partial": 2
+    },
+    {
+     "text": "由 $|t| < R = 3$ 得 $|x - 1| < 3$，即",
+     "partial": 2
+    },
+    {
+     "text": "$$-2 < x < 4$$；题目问的是收敛区间，按定义取开区间，即；$$\\boxed{R = 3, \\qquad (-2,\\ 4)}$$；端点补充说明（若题目改问\"收敛域\"）：；- 当 $x = 4$（即 $t = 3$）：$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{3^n}{n\\cdot3^n} = \\sum_{n=1}^{\\infty}\\frac{1}{n}$，调和级数发散；；- 当 $x = -2$（即 $t = -3$）：$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-3)^n}{n\\cdot3^n} = \\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n}$，交错调和级数，由莱布尼茨判别法收敛。；所以收敛域为 $[-2, 4)$（左闭右开）。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：幂级数的收敛半径与收敛区间（无穷级数）。\n**考点出处**：幂级数的收敛半径与收敛区间（无穷级数）\n**第一步：换元化简，把中心挪到原点。**\n\n令 $t = x - 1$，原级数化为\n\n$$\\sum_{n=1}^{\\infty}\\frac{t^n}{n\\cdot 3^n}, \\qquad a_n = \\frac{1}{n\\cdot 3^n}$$\n\n**第二步：用比值法求 $\\rho$。**\n\n$$\\left|\\frac{a_{n+1}}{a_n}\\right| = \\frac{\\dfrac{1}{(n+1)3^{n+1}}}{\\dfrac{1}{n3^{n}}} = \\frac{n\\cdot 3^{n}}{(n+1)\\cdot 3^{n+1}} = \\frac{1}{3}\\cdot\\frac{n}{n+1}$$\n\n取极限：\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\frac{1}{3}\\lim_{n\\to\\infty}\\frac{n}{n+1} = \\frac{1}{3}\\times 1 = \\frac{1}{3}$$\n\n**第三步：求收敛半径。**\n\n$$R = \\frac{1}{\\rho} = \\frac{1}{1/3} = 3$$\n\n**第四步：写出收敛区间。**\n\n由 $|t| < R = 3$ 得 $|x - 1| < 3$，即\n\n$$-2 < x < 4$$\n\n题目问的是**收敛区间**，按定义取**开区间**，即\n\n$$\\boxed{R = 3, \\qquad (-2,\\ 4)}$$\n\n**端点补充说明（若题目改问\"收敛域\"）**：\n\n- 当 $x = 4$（即 $t = 3$）：$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{3^n}{n\\cdot3^n} = \\sum_{n=1}^{\\infty}\\frac{1}{n}$，**调和级数发散**；\n- 当 $x = -2$（即 $t = -3$）：$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-3)^n}{n\\cdot3^n} = \\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n}$，**交错调和级数，由莱布尼茨判别法收敛**。\n\n所以**收敛域为 $[-2, 4)$**（左闭右开）。",
+   "misconception": "- **\"收敛区间\"和\"收敛域\"不是一回事，这是本考点最大的坑**：\n  - **收敛区间**：开区间 $(x_0 - R,\\ x_0 + R)$，只由收敛半径决定；\n  - **收敛域**：把两个端点代进去**单独讨论**后得到的完整集合。\n  **本题问的是收敛区间，按官方答案写 $(-2, 4)$。** 本课程 2023.04 卷第 21 题的处理完全一致（那题官方同样给了开区间 $(-1,1)$，而端点 $x=-1$ 实际收敛）。\n- **$R = \\dfrac{1}{\\rho}$，不是 $R = \\rho$**：本题 $\\rho = \\dfrac13$，所以 $R = 3$。**记反了会得到 $R = \\frac13$，全盘皆错。**\n- **千万不要忘记中心是 $x = 1$**：收敛区间是关于 $1$ 对称的 $(-2, 4)$，**不是 $(-3, 3)$**。这是本题最容易丢分的地方——含 $(x-1)^n$ 的级数，区间必须围绕 $x = 1$ 平移。\n- **$\\dfrac{n}{n+1} \\to 1$，不是 $\\to 0$**。\n- **$3^n$ 在比值里的处理**：$\\dfrac{3^n}{3^{n+1}} = \\dfrac13$。**漏掉 $3^n$ 会得到 $\\rho = 1$、$R = 1$、区间 $(0,2)$，全错。**\n- **若题目要求写\"收敛域\"**，务必把两个端点都代进去验一遍，**结果写成 $[-2, 4)$ 这种半开半闭形式**——漏掉端点讨论会扣分。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 843
+  },
+  {
+   "id": "zk-202310-19",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 19 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 19,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "将函数 $f(x) = \\ln(1+x)$ 展开为 $x$ 的幂级数。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：求导，转化为熟悉的几何级数。**\n\n$$f(x) = \\ln(1+x) \\;\\Longrightarrow\\; f'(x) = \\frac{1}{1+x}$$\n\n回忆几何级数展开式（这是必背的基础展开式）：\n\n$$\\frac{1}{1-x} = \\sum_{n=0}^{\\infty}x^n \\qquad (|x| < 1)$$\n\n把 $x$ 换成 $-x$：\n\n$$\\frac{1}{1+x} = \\frac{1}{1-(-x)} = \\sum_{n=0}^{\\infty}(-x)^n = \\sum_{n=0}^{\\infty}(-1)^n x^n \\qquad (|x| < 1)$$\n\n所以\n\n$$f'(x) = \\sum_{n=0}^{\\infty}(-1)^n x^n \\qquad (|x| < 1)$$\n\n**第二步：利用 $f(x) = f(0) + \\displaystyle\\int_0^x f'(t)\\,\\mathrm{d}t$ 逐项积分。**\n\n因为 $f(0) = \\ln(1+0) = \\ln 1 = 0$：\n\n$$f(x) = 0 + \\int_0^x \\left[\\sum_{n=0}^{\\infty}(-1)^n t^n\\right]\\mathrm{d}t = \\sum_{n=0}^{\\infty}(-1)^n \\int_0^x t^n\\,\\mathrm{d}t$$\n\n逐项积分：\n\n$$\\int_0^x t^n\\,\\mathrm{d}t = \\left[\\frac{t^{n+1}}{n+1}\\right]_0^x = \\frac{x^{n+1}}{n+1}$$\n\n所以\n\n$$f(x) = \\sum_{n=0}^{\\infty}(-1)^n\\frac{x^{n+1}}{n+1}$$\n\n**第三步：把指标整理成标准形式。**\n\n作指标代换 $n+1 = m$（即把 $n$ 换成 $m-1$），当 $n = 0$ 时 $m = 1$，当 $n\\to\\infty$ 时 $m\\to\\infty$：\n\n$$f(x) = \\sum_{m=1}^{\\infty}(-1)^{m-1}\\frac{x^{m}}{m}$$\n\n把哑标 $m$ 换回 $n$（哑标叫什么名字无所谓）：\n\n$$\\boxed{\\ln(1+x) = \\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^n}{n}}$$\n\n**第四步：确定收敛域（端点必须单独讨论）。**\n\n由第一步得到 $f'(x)$ 的展开式要求 $|x| < 1$，所以先有 $-1 < x < 1$。**两个端点 $x = \\pm 1$ 要代回原级数单独检验：**\n\n**当 $x = 1$ 时：**\n\n$$\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{1}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\cdots$$\n\n这是**交错调和级数**，由**莱布尼茨判别法**（$\\dfrac{1}{n}$ 单调递减趋于 $0$），**收敛**。✅\n\n（实际上它收敛于 $\\ln 2$，与 $\\ln(1+1) = \\ln 2$ 完全吻合。）\n\n**当 $x = -1$ 时：**\n\n$$\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{(-1)^n}{n} = \\sum_{n=1}^{\\infty}\\frac{(-1)^{2n-1}}{n} = \\sum_{n=1}^{\\infty}\\frac{-1}{n} = -\\sum_{n=1}^{\\infty}\\frac{1}{n}$$\n\n这是**调和级数的相反数**，**发散**。❌\n\n（这与\"$\\ln(1+x)$ 在 $x = -1$ 处无定义\"也吻合。）\n\n**所以收敛域为 $-1 < x \\le 1$。**",
+   "points": [
+    {
+     "text": "求导，转化为熟悉的几何级数。\n\n$$f(x) = \\ln(1+x) \\;\\Longrightarrow\\; f'(x) = \\frac{1}{1+x}$$\n\n回忆几何级数展开式（这是必背的基础展开式）：\n\n$$\\frac{1}{1-x} = \\sum_{n=0}^{\\infty}x^n \\qquad (|x| < 1)$$\n\n把 $x$ 换成 $-x$：\n\n$$\\frac{1}{1+x} = \\frac{1}{1-(-x)} = \\sum_{n=0}^{\\infty}(-x)^n = \\sum_{n=0}^{\\infty}(-1)^n x^n \\qquad (|x| < 1)$$\n\n所以\n\n$$f'(x) = \\sum_{n=0}^{\\infty}(-1)^n x^n \\qquad (|x| < 1)$$",
+     "partial": 2
+    },
+    {
+     "text": "利用 $f(x) = f(0) + \\displaystyle\\int_0^x f'(t)\\,\\mathrm{d}t$ 逐项积分。\n\n因为 $f(0) = \\ln(1+0) = \\ln 1 = 0$：\n\n$$f(x) = 0 + \\int_0^x \\left[\\sum_{n=0}^{\\infty}(-1)^n t^n\\right]\\mathrm{d}t = \\sum_{n=0}^{\\infty}(-1)^n \\int_0^x t^n\\,\\mathrm{d}t$$\n\n逐项积分：\n\n$$\\int_0^x t^n\\,\\mathrm{d}t = \\left[\\frac{t^{n+1}}{n+1}\\right]_0^x = \\frac{x^{n+1}}{n+1}$$\n\n所以\n\n$$f(x) = \\sum_{n=0}^{\\infty}(-1)^n\\frac{x^{n+1}}{n+1}$$",
+     "partial": 2
+    },
+    {
+     "text": "把指标整理成标准形式。\n\n作指标代换 $n+1 = m$（即把 $n$ 换成 $m-1$），当 $n = 0$ 时 $m = 1$，当 $n\\to\\infty$ 时 $m\\to\\infty$：\n\n$$f(x) = \\sum_{m=1}^{\\infty}(-1)^{m-1}\\frac{x^{m}}{m}$$\n\n把哑标 $m$ 换回 $n$（哑标叫什么名字无所谓）：\n\n$$\\boxed{\\ln(1+x) = \\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^n}{n}}$$",
+     "partial": 2
+    },
+    {
+     "text": "确定收敛域（端点必须单独讨论）。",
+     "partial": 2
+    },
+    {
+     "text": "由第一步得到 $f'(x)$ 的展开式要求 $|x| < 1$，所以先有 $-1 < x < 1$。",
+     "partial": 2
+    },
+    {
+     "text": "两个端点 $x = \\pm 1$ 要代回原级数单独检验：；当 $x = 1$ 时：；$$\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{1}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\cdots$$；这是交错调和级数，由莱布尼茨判别法（$\\dfrac{1}{n}$ 单调递减趋于 $0$），收敛。；✅；（实际上它收敛于 $\\ln 2$，与 $\\ln(1+1) = \\ln 2$ 完全吻合。；）；当 $x = -1$ 时：；$$\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{(-1)^n}{n} = \\sum_{n=1}^{\\infty}\\frac{(-1)^{2n-1}}{n} = \\sum_{n=1}^{\\infty}\\frac{-1}{n} = -\\sum_{n=1}^{\\infty}\\frac{1}{n}$$；这是调和级数的相反数，发散。；❌；（这与\"$\\ln(1+x)$ 在 $x = -1$ 处无定义\"也吻合。；所以收敛域为 $-1 < x \\le 1$。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：**幂级数展开**：先展开导数，再逐项积分。\n**考点出处**：函数的幂级数展开（无穷级数）\n**第一步：求导，转化为熟悉的几何级数。**\n\n$$f(x) = \\ln(1+x) \\;\\Longrightarrow\\; f'(x) = \\frac{1}{1+x}$$\n\n回忆几何级数展开式（这是必背的基础展开式）：\n\n$$\\frac{1}{1-x} = \\sum_{n=0}^{\\infty}x^n \\qquad (|x| < 1)$$\n\n把 $x$ 换成 $-x$：\n\n$$\\frac{1}{1+x} = \\frac{1}{1-(-x)} = \\sum_{n=0}^{\\infty}(-x)^n = \\sum_{n=0}^{\\infty}(-1)^n x^n \\qquad (|x| < 1)$$\n\n所以\n\n$$f'(x) = \\sum_{n=0}^{\\infty}(-1)^n x^n \\qquad (|x| < 1)$$\n\n**第二步：利用 $f(x) = f(0) + \\displaystyle\\int_0^x f'(t)\\,\\mathrm{d}t$ 逐项积分。**\n\n因为 $f(0) = \\ln(1+0) = \\ln 1 = 0$：\n\n$$f(x) = 0 + \\int_0^x \\left[\\sum_{n=0}^{\\infty}(-1)^n t^n\\right]\\mathrm{d}t = \\sum_{n=0}^{\\infty}(-1)^n \\int_0^x t^n\\,\\mathrm{d}t$$\n\n逐项积分：\n\n$$\\int_0^x t^n\\,\\mathrm{d}t = \\left[\\frac{t^{n+1}}{n+1}\\right]_0^x = \\frac{x^{n+1}}{n+1}$$\n\n所以\n\n$$f(x) = \\sum_{n=0}^{\\infty}(-1)^n\\frac{x^{n+1}}{n+1}$$\n\n**第三步：把指标整理成标准形式。**\n\n作指标代换 $n+1 = m$（即把 $n$ 换成 $m-1$），当 $n = 0$ 时 $m = 1$，当 $n\\to\\infty$ 时 $m\\to\\infty$：\n\n$$f(x) = \\sum_{m=1}^{\\infty}(-1)^{m-1}\\frac{x^{m}}{m}$$\n\n把哑标 $m$ 换回 $n$（哑标叫什么名字无所谓）：\n\n$$\\boxed{\\ln(1+x) = \\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^n}{n}}$$\n\n**第四步：确定收敛域（端点必须单独讨论）。**\n\n由第一步得到 $f'(x)$ 的展开式要求 $|x| < 1$，所以先有 $-1 < x < 1$。**两个端点 $x = \\pm 1$ 要代回原级数单独检验：**\n\n**当 $x = 1$ 时：**\n\n$$\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{1}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\cdots$$\n\n这是**交错调和级数**，由**莱布尼茨判别法**（$\\dfrac{1}{n}$ 单调递减趋于 $0$），**收敛**。✅\n\n（实际上它收敛于 $\\ln 2$，与 $\\ln(1+1) = \\ln 2$ 完全吻合。）\n\n**当 $x = -1$ 时：**\n\n$$\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{(-1)^n}{n} = \\sum_{n=1}^{\\infty}\\frac{(-1)^{2n-1}}{n} = \\sum_{n=1}^{\\infty}\\frac{-1}{n} = -\\sum_{n=1}^{\\infty}\\frac{1}{n}$$\n\n这是**调和级数的相反数**，**发散**。❌\n\n（这与\"$\\ln(1+x)$ 在 $x = -1$ 处无定义\"也吻合。）\n\n**所以收敛域为 $-1 < x \\le 1$。**",
+   "misconception": "- **收敛域的两端必须单独讨论，且结论\"左开右闭\"**。这是本题最容易丢分的地方：\n  - $x = 1$ 处**收敛**（交错调和级数）⟹ **右侧闭**；\n  - $x = -1$ 处**发散**（调和级数）⟹ **左侧开**。\n  - 最终写成 $-1 < x \\le 1$。**只写 $|x| < 1$ 或写成 $-1 \\le x \\le 1$ 都要扣分。**\n- **指数上的 $(-1)^{n-1}$ 与 $(-1)^n$ 的转换别搞错**：从 $\\sum(-1)^n\\frac{x^{n+1}}{n+1}$ 换成 $\\sum(-1)^{n-1}\\frac{x^n}{n}$，是因为指标平移了 1 位，所以 $(-1)$ 的指数也要相应调整。**验证 $n=1$ 时首项应为 $+x$**：$(-1)^{1-1}\\frac{x^1}{1} = x$ ✅ 与 $\\ln(1+x) \\approx x$ 相符。\n- **逐项积分的合法性**：幂级数在收敛区间内可以逐项积分，积分后收敛半径不变，但**端点敛散性可能改变**（本题就是右侧从开变成闭），所以必须重新检验端点。\n- **另一种做法**（用已知展开式 + 变量替换）：由 $\\ln(1+u) = \\sum(-1)^{n-1}\\frac{u^n}{n}$ 直接令 $u = x$ 得到。但**这需要你已经背下结论**，而\"先求导再积分\"是从基本原理推出来的，**考试中更稳妥**。\n- **必须背的基础展开式**（本题的基础）：\n· 函数 / 展开式 / 收敛域\n· $\\dfrac{1}{1-x}$ / $\\displaystyle\\sum_{n=0}^{\\infty}x^n$ / $(-1,1)$\n· $\\dfrac{1}{1+x}$ / $\\displaystyle\\sum_{n=0}^{\\infty}(-1)^nx^n$ / $(-1,1)$\n· $\\mathrm{e}^x$ / $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{x^n}{n!}$ / $(-\\infty,+\\infty)$\n· $\\sin x$ / $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^nx^{2n+1}}{(2n+1)!}$ / $(-\\infty,+\\infty)$\n· $\\ln(1+x)$ / $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}x^n}{n}$ / $(-1,1]$\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 844
+  },
+  {
+   "id": "zk-202310-21",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.2",
+   "knowledgePoints": [
+    "12.2"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 21 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 21,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "判断无穷级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\left(\\frac{n}{3n+1}\\right)^{n}$ 的敛散性。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：观察通项的形式，选择审敛法。**\n\n通项为\n\n$$u_n = \\left(\\frac{n}{3n+1}\\right)^{n}$$\n\n**注意到整个通项是\"某个表达式的 $n$ 次方\"**——这种结构是**根值审敛法**的典型标志。因为开 $n$ 次方后，那个 $n$ 次方会**恰好被消掉**，计算非常简洁。\n\n**第二步：写出根值审敛法的判别式。**\n\n根值审敛法：计算\n\n$$\\rho = \\lim_{n\\to\\infty}\\sqrt[n]{u_n}$$\n\n则\n\n- $\\rho < 1$ 时级数**收敛**；\n- $\\rho > 1$ 时级数**发散**；\n- $\\rho = 1$ 时**失效**（需另用他法）。\n\n**第三步：计算 $\\rho$。**\n\n$$\\sqrt[n]{u_n} = \\sqrt[n]{\\left(\\frac{n}{3n+1}\\right)^{n}} = \\frac{n}{3n+1}$$\n\n**⚠️ 这一步是本题的核心**：$n$ 次方与 $n$ 次根号**恰好互相抵消**，只剩底数。\n\n求极限：\n\n$$\\rho = \\lim_{n\\to\\infty}\\frac{n}{3n+1}$$\n\n分子分母同除以 $n$：\n\n$$= \\lim_{n\\to\\infty}\\frac{1}{3 + \\dfrac{1}{n}} = \\frac{1}{3 + 0} = \\frac{1}{3}$$\n\n**第四步：判断敛散性。**\n\n$$\\rho = \\frac{1}{3} < 1$$\n\n由根值审敛法，**该级数收敛**。\n\n**（补充：为什么\"分子分母同除以 $n$\"是合理的。）**\n\n$\\dfrac{n}{3n+1}$ 是\"同次多项式之比\"，极限等于**最高次项系数之比** $\\dfrac{1}{3}$，这是常用结论，可以直接读出。",
+   "points": [
+    {
+     "text": "观察通项的形式，选择审敛法。\n\n通项为\n\n$$u_n = \\left(\\frac{n}{3n+1}\\right)^{n}$$\n\n注意到整个通项是\"某个表达式的 $n$ 次方\"——这种结构是根值审敛法的典型标志。因为开 $n$ 次方后，那个 $n$ 次方会恰好被消掉，计算非常简洁。",
+     "partial": 2
+    },
+    {
+     "text": "写出根值审敛法的判别式。\n\n根值审敛法：计算\n\n$$\\rho = \\lim_{n\\to\\infty}\\sqrt[n]{u_n}$$\n\n则\n\n- $\\rho < 1$ 时级数收敛；\n- $\\rho > 1$ 时级数发散；\n- $\\rho = 1$ 时失效（需另用他法）。",
+     "partial": 2
+    },
+    {
+     "text": "计算 $\\rho$。",
+     "partial": 2
+    },
+    {
+     "text": "$$\\sqrt[n]{u_n} = \\sqrt[n]{\\left(\\frac{n}{3n+1}\\right)^{n}} = \\frac{n}{3n+1}$$",
+     "partial": 2
+    },
+    {
+     "text": "⚠️ 这一步是本题的核心：$n$ 次方与 $n$ 次根号恰好互相抵消，只剩底数。",
+     "partial": 2
+    },
+    {
+     "text": "求极限：；$$\\rho = \\lim_{n\\to\\infty}\\frac{n}{3n+1}$$；分子分母同除以 $n$：；$$= \\lim_{n\\to\\infty}\\frac{1}{3 + \\dfrac{1}{n}} = \\frac{1}{3 + 0} = \\frac{1}{3}$$；判断敛散性。\n\n$$\\rho = \\frac{1}{3} < 1$$\n\n由根值审敛法，该级数收敛。\n\n（补充：为什么\"分子分母同除以 $n$\"是合理的。）\n\n$\\dfrac{n}{3n+1}$ 是\"同次多项式之比\"，极限等于最高次项系数之比 $\\dfrac{1}{3}$，这是常用结论，可以直接读出。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：**根值（柯西）审敛法**。\n**考点出处**：根值（柯西）审敛法（无穷级数）\n**第一步：观察通项的形式，选择审敛法。**\n\n通项为\n\n$$u_n = \\left(\\frac{n}{3n+1}\\right)^{n}$$\n\n**注意到整个通项是\"某个表达式的 $n$ 次方\"**——这种结构是**根值审敛法**的典型标志。因为开 $n$ 次方后，那个 $n$ 次方会**恰好被消掉**，计算非常简洁。\n\n**第二步：写出根值审敛法的判别式。**\n\n根值审敛法：计算\n\n$$\\rho = \\lim_{n\\to\\infty}\\sqrt[n]{u_n}$$\n\n则\n\n- $\\rho < 1$ 时级数**收敛**；\n- $\\rho > 1$ 时级数**发散**；\n- $\\rho = 1$ 时**失效**（需另用他法）。\n\n**第三步：计算 $\\rho$。**\n\n$$\\sqrt[n]{u_n} = \\sqrt[n]{\\left(\\frac{n}{3n+1}\\right)^{n}} = \\frac{n}{3n+1}$$\n\n**⚠️ 这一步是本题的核心**：$n$ 次方与 $n$ 次根号**恰好互相抵消**，只剩底数。\n\n求极限：\n\n$$\\rho = \\lim_{n\\to\\infty}\\frac{n}{3n+1}$$\n\n分子分母同除以 $n$：\n\n$$= \\lim_{n\\to\\infty}\\frac{1}{3 + \\dfrac{1}{n}} = \\frac{1}{3 + 0} = \\frac{1}{3}$$\n\n**第四步：判断敛散性。**\n\n$$\\rho = \\frac{1}{3} < 1$$\n\n由根值审敛法，**该级数收敛**。\n\n**（补充：为什么\"分子分母同除以 $n$\"是合理的。）**\n\n$\\dfrac{n}{3n+1}$ 是\"同次多项式之比\"，极限等于**最高次项系数之比** $\\dfrac{1}{3}$，这是常用结论，可以直接读出。",
+   "misconception": "- **选对方法就成功了一半**。本题通项是\"$n$ 次方\"形式，**根值法开 $n$ 次方后立刻简化**；如果用**比值审敛法**（达朗贝尔），要算\n  $$\\lim_{n\\to\\infty}\\frac{u_{n+1}}{u_n} = \\lim_{n\\to\\infty}\\frac{\\left(\\frac{n+1}{3n+4}\\right)^{n+1}}{\\left(\\frac{n}{3n+1}\\right)^{n}}$$\n  相当繁琐，**虽然也能算出 $\\frac{1}{3}$，但费力不讨好**。**\"通项带 $n$ 次方 ⟹ 首选根值法\"是固定套路。**\n- **$\\rho = \\dfrac{1}{3}$，不是 $3$！**\n  - 注意**根值法是\"$\\rho$ 与 $1$ 比较\"**，不是与某个数比较。\n  - **极限算出来是 $\\frac{1}{3}$**（分子 $n$、分母 $3n+1$，分母增长更快），**别看成 $3$**。若误算成 $3 > 1$，就会错判为发散。\n- **$\\rho = 1$ 时根值法失效**，不能用。本题 $\\rho = \\frac{1}{3} \\ne 1$，判别有效。\n- **结论的表达要完整**：要写明\"由**根值审敛法**知，因为 $\\rho = \\frac{1}{3} < 1$，所以该级数**收敛**\"。综合题按步骤给分，**只写\"收敛\"两个字可能拿不到过程分**。\n- **顺带复习三种审敛法的适用场景**：\n· 方法 / 适用特征 / 判别式\n· 比值法 / 含阶乘 $n!$、连乘 / $\\rho = \\lim\\dfrac{u_{n+1}}{u_n}$\n· **根值法** / **含 $n$ 次方 $\\left(\\ \\right)^n$** / $\\rho = \\lim\\sqrt[n]{u_n}$　**（本题）**\n· 比较法 / 通项是分式、可与 $p$ 级数比较 / 找参照级数\n  - 记忆口诀：**\"见到阶乘用比值，见到 $n$ 次方用根值。\"**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 845
+  },
+  {
+   "id": "zk-202404-19",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 19 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 19,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "判断级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1+n}{1+n^2}$ 的敛散性。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：观察通项的量级，猜测比较对象。**\n\n$$u_n = \\frac{1+n}{1+n^2}$$\n\n当 $n$ 很大时，分子 $\\approx n$（1 可忽略），分母 $\\approx n^2$（1 可忽略），所以\n\n$$u_n \\approx \\frac{n}{n^2} = \\frac{1}{n}$$\n\n因此猜测与**调和级数** $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n}$ 比较。\n\n**第二步：取 $v_n = \\dfrac{1}{n}$，求比值极限。**\n\n$$\\lim_{n\\to\\infty}\\frac{u_n}{v_n} = \\lim_{n\\to\\infty}\\frac{\\dfrac{1+n}{1+n^2}}{\\dfrac{1}{n}} = \\lim_{n\\to\\infty}\\frac{n(1+n)}{1+n^2} = \\lim_{n\\to\\infty}\\frac{n + n^2}{1 + n^2}$$\n\n**第三步：分子分母同除以最高次幂 $n^2$。**\n\n$$= \\lim_{n\\to\\infty}\\frac{\\dfrac{1}{n} + 1}{\\dfrac{1}{n^2} + 1} = \\frac{0 + 1}{0 + 1} = 1$$\n\n**第四步：得出结论。**\n\n因为极限 $l = 1$，满足 $0 < l < +\\infty$，所以 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1+n}{1+n^2}$ 与 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n}$ **同敛散**。\n\n而调和级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n}$ **发散**（这是必须记住的经典结论）。\n\n**故原级数发散。**",
+   "points": [
+    {
+     "text": "观察通项的量级，猜测比较对象。\n\n$$u_n = \\frac{1+n}{1+n^2}$$\n\n当 $n$ 很大时，分子 $\\approx n$（1 可忽略），分母 $\\approx n^2$（1 可忽略），所以\n\n$$u_n \\approx \\frac{n}{n^2} = \\frac{1}{n}$$\n\n因此猜测与调和级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n}$ 比较。",
+     "partial": 2
+    },
+    {
+     "text": "取 $v_n = \\dfrac{1}{n}$，求比值极限。\n\n$$\\lim_{n\\to\\infty}\\frac{u_n}{v_n} = \\lim_{n\\to\\infty}\\frac{\\dfrac{1+n}{1+n^2}}{\\dfrac{1}{n}} = \\lim_{n\\to\\infty}\\frac{n(1+n)}{1+n^2} = \\lim_{n\\to\\infty}\\frac{n + n^2}{1 + n^2}$$",
+     "partial": 2
+    },
+    {
+     "text": "分子分母同除以最高次幂 $n^2$。\n\n$$= \\lim_{n\\to\\infty}\\frac{\\dfrac{1}{n} + 1}{\\dfrac{1}{n^2} + 1} = \\frac{0 + 1}{0 + 1} = 1$$",
+     "partial": 2
+    },
+    {
+     "text": "得出结论。",
+     "partial": 2
+    },
+    {
+     "text": "因为极限 $l = 1$，满足 $0 < l < +\\infty$，所以 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1+n}{1+n^2}$ 与 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n}$ 同敛散。",
+     "partial": 2
+    },
+    {
+     "text": "而调和级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n}$ 发散（这是必须记住的经典结论）。；故原级数发散。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：正项级数的**比较判别法（极限形式）**：若 $\\displaystyle\\lim_{n\\to\\infty}\\frac{u_n}{v_n} = l$（$0 < l < +\\infty$），则 $\\sum u_n$ 与 $\\sum v_n$ **同敛散**。\n**考点出处**：正项级数的比较判别法（无穷级数）\n**第一步：观察通项的量级，猜测比较对象。**\n\n$$u_n = \\frac{1+n}{1+n^2}$$\n\n当 $n$ 很大时，分子 $\\approx n$（1 可忽略），分母 $\\approx n^2$（1 可忽略），所以\n\n$$u_n \\approx \\frac{n}{n^2} = \\frac{1}{n}$$\n\n因此猜测与**调和级数** $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n}$ 比较。\n\n**第二步：取 $v_n = \\dfrac{1}{n}$，求比值极限。**\n\n$$\\lim_{n\\to\\infty}\\frac{u_n}{v_n} = \\lim_{n\\to\\infty}\\frac{\\dfrac{1+n}{1+n^2}}{\\dfrac{1}{n}} = \\lim_{n\\to\\infty}\\frac{n(1+n)}{1+n^2} = \\lim_{n\\to\\infty}\\frac{n + n^2}{1 + n^2}$$\n\n**第三步：分子分母同除以最高次幂 $n^2$。**\n\n$$= \\lim_{n\\to\\infty}\\frac{\\dfrac{1}{n} + 1}{\\dfrac{1}{n^2} + 1} = \\frac{0 + 1}{0 + 1} = 1$$\n\n**第四步：得出结论。**\n\n因为极限 $l = 1$，满足 $0 < l < +\\infty$，所以 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1+n}{1+n^2}$ 与 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n}$ **同敛散**。\n\n而调和级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n}$ **发散**（这是必须记住的经典结论）。\n\n**故原级数发散。**",
+   "misconception": "- **调和级数 $\\sum \\frac{1}{n}$ 发散是必备常识**。它的通项趋于 0，但级数仍然发散——这是\"通项趋于 0 只是收敛的必要条件，不是充分条件\"的经典例子。\n  与之对比，$p$ 级数 $\\sum \\dfrac{1}{n^p}$ 在 $p > 1$ 时收敛、$p \\le 1$ 时发散。\n- **求比值极限的技巧：分子分母同除以 $n$ 的最高次幂**。这里是 $n^2$，除完以后 $\\dfrac{1}{n} \\to 0$、$\\dfrac{1}{n^2} \\to 0$，极限立刻看出来。\n- **不要用比值判别法（达朗贝尔）**：对 $\\dfrac{1+n}{1+n^2}$ 用比值法，极限会等于 1，判别失效。**凡是通项是 $n$ 的有理式，用比较法或等价无穷小最快。**\n- 等价无穷小视角（更快的做法）：当 $n\\to\\infty$ 时\n  $$\\frac{1+n}{1+n^2} \\sim \\frac{n}{n^2} = \\frac{1}{n}$$\n  而 $\\sum \\frac{1}{n}$ 发散，故原级数发散。**考场上用这个思路几秒钟就能出结果**，但要写出规范的比较过程才给满分。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 846
+  },
+  {
+   "id": "zk-202404-21",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 21 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 21,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求幂级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{2^n}{2n+1}x^n$ 的收敛半径和收敛区间。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：写出系数 $a_n$。**\n\n$$a_n = \\frac{2^n}{2n+1}$$\n\n**第二步：求相邻系数之比的极限。**\n\n$$\\frac{a_{n+1}}{a_n} = \\frac{\\dfrac{2^{n+1}}{2(n+1) + 1}}{\\dfrac{2^n}{2n+1}} = \\frac{2^{n+1}}{2n+3}\\cdot\\frac{2n+1}{2^n} = 2\\cdot\\frac{2n+1}{2n+3}$$\n\n求极限：\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty} 2\\cdot\\frac{2n+1}{2n+3} = 2\\cdot 1 = 2$$\n\n（因为 $\\displaystyle\\lim_{n\\to\\infty}\\frac{2n+1}{2n+3} = 1$，分子分母同次幂，系数之比为 $\\frac{2}{2}=1$）\n\n**第三步：求收敛半径。**\n\n$$R = \\frac{1}{\\rho} = \\frac{1}{2}$$\n\n**第四步：写出收敛区间。**\n\n$$|x| < R = \\frac{1}{2} \\quad\\Longrightarrow\\quad -\\frac{1}{2} < x < \\frac{1}{2}$$\n\n即收敛区间为 $\\left(-\\dfrac{1}{2},\\ \\dfrac{1}{2}\\right)$。",
+   "points": [
+    {
+     "text": "写出系数 $a_n$。\n\n$$a_n = \\frac{2^n}{2n+1}$$",
+     "partial": 2
+    },
+    {
+     "text": "求相邻系数之比的极限。",
+     "partial": 2
+    },
+    {
+     "text": "$$\\frac{a_{n+1}}{a_n} = \\frac{\\dfrac{2^{n+1}}{2(n+1) + 1}}{\\dfrac{2^n}{2n+1}} = \\frac{2^{n+1}}{2n+3}\\cdot\\frac{2n+1}{2^n} = 2\\cdot\\frac{2n+1}{2n+3}$$",
+     "partial": 2
+    },
+    {
+     "text": "求极限：",
+     "partial": 2
+    },
+    {
+     "text": "$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty} 2\\cdot\\frac{2n+1}{2n+3} = 2\\cdot 1 = 2$$",
+     "partial": 2
+    },
+    {
+     "text": "（因为 $\\displaystyle\\lim_{n\\to\\infty}\\frac{2n+1}{2n+3} = 1$，分子分母同次幂，系数之比为 $\\frac{2}{2}=1$）；求收敛半径。\n\n$$R = \\frac{1}{\\rho} = \\frac{1}{2}$$；写出收敛区间。\n\n$$|x| < R = \\frac{1}{2} \\quad\\Longrightarrow\\quad -\\frac{1}{2} < x < \\frac{1}{2}$$\n\n即收敛区间为 $\\left(-\\dfrac{1}{2},\\ \\dfrac{1}{2}\\right)$。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：幂级数的**收敛半径**：$\\displaystyle\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right|$，则 $R = \\dfrac{1}{\\rho}$。\n**考点出处**：幂级数的收敛半径与收敛区间（无穷级数）\n**第一步：写出系数 $a_n$。**\n\n$$a_n = \\frac{2^n}{2n+1}$$\n\n**第二步：求相邻系数之比的极限。**\n\n$$\\frac{a_{n+1}}{a_n} = \\frac{\\dfrac{2^{n+1}}{2(n+1) + 1}}{\\dfrac{2^n}{2n+1}} = \\frac{2^{n+1}}{2n+3}\\cdot\\frac{2n+1}{2^n} = 2\\cdot\\frac{2n+1}{2n+3}$$\n\n求极限：\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty} 2\\cdot\\frac{2n+1}{2n+3} = 2\\cdot 1 = 2$$\n\n（因为 $\\displaystyle\\lim_{n\\to\\infty}\\frac{2n+1}{2n+3} = 1$，分子分母同次幂，系数之比为 $\\frac{2}{2}=1$）\n\n**第三步：求收敛半径。**\n\n$$R = \\frac{1}{\\rho} = \\frac{1}{2}$$\n\n**第四步：写出收敛区间。**\n\n$$|x| < R = \\frac{1}{2} \\quad\\Longrightarrow\\quad -\\frac{1}{2} < x < \\frac{1}{2}$$\n\n即收敛区间为 $\\left(-\\dfrac{1}{2},\\ \\dfrac{1}{2}\\right)$。",
+   "misconception": "- **公式别记反**：是 $R = \\dfrac{1}{\\rho}$，其中 $\\rho = \\lim\\left|\\dfrac{a_{n+1}}{a_n}\\right|$。\n  - **容易混淆的点**：这里算出的 $\\rho = 2$，所以 $R = \\frac{1}{2}$，**不要把 $\\rho$ 直接当半径**。\n- **化简 $\\dfrac{a_{n+1}}{a_n}$ 时的技巧**：把 $2^{n+1}$ 和 $2^n$ 相除得 $2$，剩下的 $\\dfrac{2n+1}{2n+3}$ 趋于 1。\n- 注意 $a_n$ 里**不含 $x$**：系数 $a_n$ 只取 $x^n$ 前面的那部分，即 $\\dfrac{2^n}{2n+1}$。\n- 这题如果改用**根值判别法**也可以：$\\sqrt[n]{\\dfrac{2^n}{2n+1}} = \\dfrac{2}{\\sqrt[n]{2n+1}} \\to 2$，同样得 $\\rho = 2$。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 847
+  },
+  {
+   "id": "zk-202410-19",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.2",
+   "knowledgePoints": [
+    "12.2"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 19 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 19,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "判断级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n^2}{2^n}$ 的敛散性。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：写出通项，确认是正项级数。**\n\n$$u_n = \\frac{n^2}{2^n} > 0$$\n\n通项同时含 $n$ 的幂与指数，**首选比值审敛法**。\n\n**第二步：求后项比前项的比值。**\n\n$$\\frac{u_{n+1}}{u_n} = \\frac{\\dfrac{(n+1)^2}{2^{n+1}}}{\\dfrac{n^2}{2^n}} = \\frac{(n+1)^2}{2^{n+1}}\\cdot\\frac{2^n}{n^2} = \\frac{1}{2}\\left(\\frac{n+1}{n}\\right)^2$$\n\n**第三步：取极限。**\n\n$$\\lim_{n\\to\\infty}\\frac{u_{n+1}}{u_n} = \\frac{1}{2}\\lim_{n\\to\\infty}\\left(1 + \\frac{1}{n}\\right)^2 = \\frac{1}{2}\\times1^2 = \\frac{1}{2}$$\n\n**第四步：由比值审敛法下结论。**\n\n$$\\frac{1}{2} < 1$$\n\n所以由**比值审敛法**知，级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n^2}{2^n}$ **收敛**。",
+   "points": [
+    {
+     "text": "写出通项，确认是正项级数。\n\n$$u_n = \\frac{n^2}{2^n} > 0$$\n\n通项同时含 $n$ 的幂与指数，首选比值审敛法。",
+     "partial": 2
+    },
+    {
+     "text": "求后项比前项的比值。",
+     "partial": 2
+    },
+    {
+     "text": "$$\\frac{u_{n+1}}{u_n} = \\frac{\\dfrac{(n+1)^2}{2^{n+1}}}{\\dfrac{n^2}{2^n}} = \\frac{(n+1)^2}{2^{n+1}}\\cdot\\frac{2^n}{n^2} = \\frac{1}{2}\\left(\\frac{n+1}{n}\\right)^2$$",
+     "partial": 2
+    },
+    {
+     "text": "取极限。\n\n$$\\lim_{n\\to\\infty}\\frac{u_{n+1}}{u_n} = \\frac{1}{2}\\lim_{n\\to\\infty}\\left(1 + \\frac{1}{n}\\right)^2 = \\frac{1}{2}\\times1^2 = \\frac{1}{2}$$",
+     "partial": 2
+    },
+    {
+     "text": "由比值审敛法下结论。\n\n$$\\frac{1}{2} < 1$$\n\n所以由比值审敛法知，级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n^2}{2^n}$ 收敛。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：比值（达朗贝尔）审敛法（无穷级数）。\n**考点出处**：比值审敛法（无穷级数）\n**第一步：写出通项，确认是正项级数。**\n\n$$u_n = \\frac{n^2}{2^n} > 0$$\n\n通项同时含 $n$ 的幂与指数，**首选比值审敛法**。\n\n**第二步：求后项比前项的比值。**\n\n$$\\frac{u_{n+1}}{u_n} = \\frac{\\dfrac{(n+1)^2}{2^{n+1}}}{\\dfrac{n^2}{2^n}} = \\frac{(n+1)^2}{2^{n+1}}\\cdot\\frac{2^n}{n^2} = \\frac{1}{2}\\left(\\frac{n+1}{n}\\right)^2$$\n\n**第三步：取极限。**\n\n$$\\lim_{n\\to\\infty}\\frac{u_{n+1}}{u_n} = \\frac{1}{2}\\lim_{n\\to\\infty}\\left(1 + \\frac{1}{n}\\right)^2 = \\frac{1}{2}\\times1^2 = \\frac{1}{2}$$\n\n**第四步：由比值审敛法下结论。**\n\n$$\\frac{1}{2} < 1$$\n\n所以由**比值审敛法**知，级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n^2}{2^n}$ **收敛**。",
+   "misconception": "- **$\\dfrac{2^{n+1}}{2^n} = 2$，所以商里出现的系数是 $\\dfrac{1}{2}$**：写的时候容易把它写成 $2$，那样极限变成 $2 > 1$，就会**错误地判定\"发散\"**。\n- **$\\left(\\dfrac{n+1}{n}\\right)^2 \\to 1$，不是 $\\to 0$**：$\\dfrac{n+1}{n} = 1 + \\dfrac1n \\to 1$。\n- **比值审敛法极限等于 1 时失效**：本题是 $\\dfrac12$，可以直接下结论；若算出 $1$，必须改用比较判别法或等价无穷小。\n- **结论要写完整**：不能只写 $\\dfrac12 < 1$ 就停笔，**必须写出\"由比值审敛法知该级数收敛\"**，这是评分点。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 848
+  },
+  {
+   "id": "zk-202410-21",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.3",
+   "knowledgePoints": [
+    "12.3"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 21 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 21,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "判断级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{\\sqrt n}$ 是否收敛？若收敛，是绝对收敛还是条件收敛？",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "> **本题官方评分参考**：用莱布尼茨判别法判定级数收敛占 3 分；用 $p$ 级数判定绝对值级数发散、并写出\"条件收敛\"的结论占 2 分。\n\n**第一步：用莱布尼茨判别法判断级数本身收敛。**\n\n记 $u_n = \\dfrac{1}{\\sqrt n} > 0$，需要验证两个条件。\n\n**条件 (1)：$u_n$ 单调递减。**\n\n因为 $\\sqrt n < \\sqrt{n+1}$，取倒数得\n\n$$u_n = \\frac{1}{\\sqrt n} > \\frac{1}{\\sqrt{n+1}} = u_{n+1} \\qquad (n = 1, 2, \\cdots)$$\n\n**条件 (2)：$u_n \\to 0$。**\n\n$$\\lim_{n\\to\\infty}u_n = \\lim_{n\\to\\infty}\\frac{1}{\\sqrt n} = 0$$\n\n两个条件都满足，由**莱布尼茨判别法**，交错级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{\\sqrt n}$ **收敛**。\n\n**第二步：判断是否绝对收敛——考察加绝对值后的正项级数。**\n\n$$\\sum_{n=1}^{\\infty}\\left|\\frac{(-1)^{n-1}}{\\sqrt n}\\right| = \\sum_{n=1}^{\\infty}\\frac{1}{\\sqrt n} = \\sum_{n=1}^{\\infty}\\frac{1}{n^{1/2}}$$\n\n这是 $p$ 级数，$p = \\dfrac12 \\le 1$，所以**发散**。\n\n**第三步：综合下结论。**\n\n原级数收敛，而绝对值级数发散，所以原级数**条件收敛**。\n\n（数值印证：$\\displaystyle\\sum_{n=1}^{10^4}\\frac{1}{\\sqrt n}\\approx 198.5$，$\\displaystyle\\sum_{n=1}^{10^6}\\frac{1}{\\sqrt n}\\approx 1998.5$，部分和持续增长，发散无疑；而交错级数的部分和 $\\displaystyle\\sum_{n=1}^{10^4}\\frac{(-1)^{n-1}}{\\sqrt n}\\approx 0.5999$，趋于有限值。）",
+   "points": [
+    {
+     "text": "> 本题官方评分参考：用莱布尼茨判别法判定级数收敛占 3 分；用 $p$ 级数判定绝对值级数发散、并写出\"条件收敛\"的结论占 2 分。",
+     "partial": 2
+    },
+    {
+     "text": "用莱布尼茨判别法判断级数本身收敛。",
+     "partial": 2
+    },
+    {
+     "text": "记 $u_n = \\dfrac{1}{\\sqrt n} > 0$，需要验证两个条件。",
+     "partial": 2
+    },
+    {
+     "text": "条件 (1)：$u_n$ 单调递减。",
+     "partial": 2
+    },
+    {
+     "text": "因为 $\\sqrt n < \\sqrt{n+1}$，取倒数得",
+     "partial": 2
+    },
+    {
+     "text": "$$u_n = \\frac{1}{\\sqrt n} > \\frac{1}{\\sqrt{n+1}} = u_{n+1} \\qquad (n = 1, 2, \\cdots)$$；条件 (2)：$u_n \\to 0$。；$$\\lim_{n\\to\\infty}u_n = \\lim_{n\\to\\infty}\\frac{1}{\\sqrt n} = 0$$；两个条件都满足，由莱布尼茨判别法，交错级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{\\sqrt n}$ 收敛。；判断是否绝对收敛——考察加绝对值后的正项级数。\n\n$$\\sum_{n=1}^{\\infty}\\left|\\frac{(-1)^{n-1}}{\\sqrt n}\\right| = \\sum_{n=1}^{\\infty}\\frac{1}{\\sqrt n} = \\sum_{n=1}^{\\infty}\\frac{1}{n^{1/2}}$$\n\n这是 $p$ 级数，$p = \\dfrac12 \\le 1$，所以发散。；综合下结论。\n\n原级数收敛，而绝对值级数发散，所以原级数条件收敛。\n\n（数值印证：$\\displaystyle\\sum_{n=1}^{10^4}\\frac{1}{\\sqrt n}\\approx 198.5$，$\\displaystyle\\sum_{n=1}^{10^6}\\frac{1}{\\sqrt n}\\approx 1998.5$，部分和持续增长，发散无疑；而交错级数的部分和 $\\displaystyle\\sum_{n=1}^{10^4}\\frac{(-1)^{n-1}}{\\sqrt n}\\approx 0.5999$，趋于有限值。）",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：交错级数的莱布尼茨判别法与绝对收敛／条件收敛的判定（无穷级数）。\n**考点出处**：交错级数与条件收敛（无穷级数）\n> **本题官方评分参考**：用莱布尼茨判别法判定级数收敛占 3 分；用 $p$ 级数判定绝对值级数发散、并写出\"条件收敛\"的结论占 2 分。\n\n**第一步：用莱布尼茨判别法判断级数本身收敛。**\n\n记 $u_n = \\dfrac{1}{\\sqrt n} > 0$，需要验证两个条件。\n\n**条件 (1)：$u_n$ 单调递减。**\n\n因为 $\\sqrt n < \\sqrt{n+1}$，取倒数得\n\n$$u_n = \\frac{1}{\\sqrt n} > \\frac{1}{\\sqrt{n+1}} = u_{n+1} \\qquad (n = 1, 2, \\cdots)$$\n\n**条件 (2)：$u_n \\to 0$。**\n\n$$\\lim_{n\\to\\infty}u_n = \\lim_{n\\to\\infty}\\frac{1}{\\sqrt n} = 0$$\n\n两个条件都满足，由**莱布尼茨判别法**，交错级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{\\sqrt n}$ **收敛**。\n\n**第二步：判断是否绝对收敛——考察加绝对值后的正项级数。**\n\n$$\\sum_{n=1}^{\\infty}\\left|\\frac{(-1)^{n-1}}{\\sqrt n}\\right| = \\sum_{n=1}^{\\infty}\\frac{1}{\\sqrt n} = \\sum_{n=1}^{\\infty}\\frac{1}{n^{1/2}}$$\n\n这是 $p$ 级数，$p = \\dfrac12 \\le 1$，所以**发散**。\n\n**第三步：综合下结论。**\n\n原级数收敛，而绝对值级数发散，所以原级数**条件收敛**。\n\n（数值印证：$\\displaystyle\\sum_{n=1}^{10^4}\\frac{1}{\\sqrt n}\\approx 198.5$，$\\displaystyle\\sum_{n=1}^{10^6}\\frac{1}{\\sqrt n}\\approx 1998.5$，部分和持续增长，发散无疑；而交错级数的部分和 $\\displaystyle\\sum_{n=1}^{10^4}\\frac{(-1)^{n-1}}{\\sqrt n}\\approx 0.5999$，趋于有限值。）",
+   "misconception": "- **两个条件缺一不可**：莱布尼茨判别法要求 $u_n$ **单调递减**且**趋于 0**。只验证 $u_n\\to0$ 是不够的（调和级数 $\\frac1n\\to0$ 却发散）。\n- **$p$ 级数判据别记反**：$\\displaystyle\\sum\\frac{1}{n^p}$ 在 $p > 1$ 时**收敛**，$p \\le 1$ 时**发散**。本题 $p = \\frac12 < 1$，故**发散**。若误判为收敛，就会得出\"绝对收敛\"的错误结论。\n- **\"收敛\"与\"绝对收敛\"是两回事**：先判\"级数是否收敛\"，再判\"绝对值级数是否收敛\"，**两步都要写**。题目问的是\"绝对还是条件\"，只答\"收敛\"拿不到全分。\n- **用词要规范**：结论写成\"该级数**条件收敛**\"，比\"收敛但不是绝对收敛\"更贴合标准答案。\n- **绝对收敛 ⟹ 收敛，反之不成立**：所以\"条件收敛\"必然是\"收敛但不绝对收敛\"，不存在\"条件收敛却发散\"的情况。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 849
+  },
+  {
+   "id": "zk-202504-19",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.2",
+   "knowledgePoints": [
+    "12.2"
+   ],
+   "source": {
+    "text": "2025 年 4 月 自考 00023 高等数学（工本）第 19 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 19,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设 $f(x)$ 是周期为 $2\\pi$ 的函数，它在区间 $[-\\pi, \\pi)$ 上表达式为 $f(x) = |x|$，其傅里叶级数展开式为 $\\dfrac{a_0}{2} + \\displaystyle\\sum_{n=1}^{\\infty}a_n\\cos nx$，求系数 $a_3$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：写出傅里叶余弦系数的公式。**\n\n$$a_n = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi}f(x)\\cos nx\\,\\mathrm{d}x$$\n\n**第二步：利用 $f(x) = |x|$ 是偶函数、$\\cos nx$ 也是偶函数，把积分化为两倍的半区间积分。**\n\n被积函数 $|x|\\cos nx$ 是**偶函数**，所以\n\n$$a_3 = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi}|x|\\cos 3x\\,\\mathrm{d}x = \\frac{2}{\\pi}\\int_0^{\\pi}x\\cos 3x\\,\\mathrm{d}x$$\n\n（在 $[0,\\pi]$ 上 $|x| = x$，绝对值可以去掉。）\n\n**第三步：分部积分。**\n\n取 $u = x$，$\\mathrm{d}v = \\cos 3x\\,\\mathrm{d}x$，则 $\\mathrm{d}u = \\mathrm{d}x$，$v = \\dfrac{\\sin 3x}{3}$：\n\n$$\\int_0^{\\pi}x\\cos 3x\\,\\mathrm{d}x = \\left[\\frac{x\\sin 3x}{3}\\right]_0^{\\pi} - \\frac{1}{3}\\int_0^{\\pi}\\sin 3x\\,\\mathrm{d}x$$\n\n**第四步：处理边界项与剩余积分。**\n\n边界项：$\\sin 3\\pi = 0$，$\\sin 0 = 0$，所以\n\n$$\\left[\\frac{x\\sin 3x}{3}\\right]_0^{\\pi} = 0 - 0 = 0$$\n\n剩余积分：\n\n$$\\int_0^{\\pi}\\sin 3x\\,\\mathrm{d}x = \\left[-\\frac{\\cos 3x}{3}\\right]_0^{\\pi} = -\\frac{\\cos 3\\pi}{3} + \\frac{\\cos 0}{3} = -\\frac{(-1)}{3} + \\frac{1}{3} = \\frac{2}{3}$$\n\n**第五步：合并。**\n\n$$\\int_0^{\\pi}x\\cos 3x\\,\\mathrm{d}x = 0 - \\frac{1}{3}\\times\\frac{2}{3} = -\\frac{2}{9}$$\n\n$$a_3 = \\frac{2}{\\pi}\\times\\left(-\\frac{2}{9}\\right) = -\\frac{4}{9\\pi}$$\n\n$$\\boxed{a_3 = -\\frac{4}{9\\pi}}$$\n\n**拓展（记住这个通项，本类题就能秒杀）**：\n\n$$a_n = \\frac{2}{\\pi}\\cdot\\frac{(-1)^n - 1}{n^2}$$\n\n即：当 $n$ 为奇数时 $a_n = -\\dfrac{4}{\\pi n^2}$；当 $n$ 为偶数时 $a_n = 0$。\n\n代入 $n = 3$ 立得 $-\\dfrac{4}{9\\pi}$ ✓。（顺带可得 $a_1 = -\\dfrac{4}{\\pi}$，$a_2 = 0$，$a_4 = 0$。）\n\n**独立验算**：SymPy 符号计算 $\\dfrac{1}{\\pi}\\displaystyle\\int_{-\\pi}^{\\pi}|x|\\cos 3x\\,\\mathrm{d}x$ 得 $-\\dfrac{4}{9\\pi}$ ✓；按通项公式算也是 $-\\dfrac{4}{9\\pi}$ ✓",
+   "points": [
+    {
+     "text": "写出傅里叶余弦系数的公式。\n\n$$a_n = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi}f(x)\\cos nx\\,\\mathrm{d}x$$",
+     "partial": 2
+    },
+    {
+     "text": "利用 $f(x) = |x|$ 是偶函数、$\\cos nx$ 也是偶函数，把积分化为两倍的半区间积分。\n\n被积函数 $|x|\\cos nx$ 是偶函数，所以\n\n$$a_3 = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi}|x|\\cos 3x\\,\\mathrm{d}x = \\frac{2}{\\pi}\\int_0^{\\pi}x\\cos 3x\\,\\mathrm{d}x$$\n\n（在 $[0,\\pi]$ 上 $|x| = x$，绝对值可以去掉。）",
+     "partial": 2
+    },
+    {
+     "text": "分部积分。\n\n取 $u = x$，$\\mathrm{d}v = \\cos 3x\\,\\mathrm{d}x$，则 $\\mathrm{d}u = \\mathrm{d}x$，$v = \\dfrac{\\sin 3x}{3}$：\n\n$$\\int_0^{\\pi}x\\cos 3x\\,\\mathrm{d}x = \\left[\\frac{x\\sin 3x}{3}\\right]_0^{\\pi} - \\frac{1}{3}\\int_0^{\\pi}\\sin 3x\\,\\mathrm{d}x$$",
+     "partial": 2
+    },
+    {
+     "text": "处理边界项与剩余积分。\n\n边界项：$\\sin 3\\pi = 0$，$\\sin 0 = 0$，所以\n\n$$\\left[\\frac{x\\sin 3x}{3}\\right]_0^{\\pi} = 0 - 0 = 0$$\n\n剩余积分：\n\n$$\\int_0^{\\pi}\\sin 3x\\,\\mathrm{d}x = \\left[-\\frac{\\cos 3x}{3}\\right]_0^{\\pi} = -\\frac{\\cos 3\\pi}{3} + \\frac{\\cos 0}{3} = -\\frac{(-1)}{3} + \\frac{1}{3} = \\frac{2}{3}$$",
+     "partial": 2
+    },
+    {
+     "text": "合并。",
+     "partial": 2
+    },
+    {
+     "text": "$$\\int_0^{\\pi}x\\cos 3x\\,\\mathrm{d}x = 0 - \\frac{1}{3}\\times\\frac{2}{3} = -\\frac{2}{9}$$；$$a_3 = \\frac{2}{\\pi}\\times\\left(-\\frac{2}{9}\\right) = -\\frac{4}{9\\pi}$$；$$\\boxed{a_3 = -\\frac{4}{9\\pi}}$$；拓展（记住这个通项，本类题就能秒杀）：；$$a_n = \\frac{2}{\\pi}\\cdot\\frac{(-1)^n - 1}{n^2}$$；即：当 $n$ 为奇数时 $a_n = -\\dfrac{4}{\\pi n^2}$；；当 $n$ 为偶数时 $a_n = 0$。；代入 $n = 3$ 立得 $-\\dfrac{4}{9\\pi}$ ✓。；（顺带可得 $a_1 = -\\dfrac{4}{\\pi}$，$a_2 = 0$，$a_4 = 0$。；）；独立验算：SymPy 符号计算 $\\dfrac{1}{\\pi}\\displaystyle\\int_{-\\pi}^{\\pi}|x|\\cos 3x\\,\\mathrm{d}x$ 得 $-\\dfrac{4}{9\\pi}$ ✓；；按通项公式算也是 $-\\dfrac{4}{9\\pi}$ ✓",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：傅里叶系数公式（偶函数、余弦级数），无穷级数。\n**考点出处**：比值审敛法（傅里叶系数 $a_3$）\n**第一步：写出傅里叶余弦系数的公式。**\n\n$$a_n = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi}f(x)\\cos nx\\,\\mathrm{d}x$$\n\n**第二步：利用 $f(x) = |x|$ 是偶函数、$\\cos nx$ 也是偶函数，把积分化为两倍的半区间积分。**\n\n被积函数 $|x|\\cos nx$ 是**偶函数**，所以\n\n$$a_3 = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi}|x|\\cos 3x\\,\\mathrm{d}x = \\frac{2}{\\pi}\\int_0^{\\pi}x\\cos 3x\\,\\mathrm{d}x$$\n\n（在 $[0,\\pi]$ 上 $|x| = x$，绝对值可以去掉。）\n\n**第三步：分部积分。**\n\n取 $u = x$，$\\mathrm{d}v = \\cos 3x\\,\\mathrm{d}x$，则 $\\mathrm{d}u = \\mathrm{d}x$，$v = \\dfrac{\\sin 3x}{3}$：\n\n$$\\int_0^{\\pi}x\\cos 3x\\,\\mathrm{d}x = \\left[\\frac{x\\sin 3x}{3}\\right]_0^{\\pi} - \\frac{1}{3}\\int_0^{\\pi}\\sin 3x\\,\\mathrm{d}x$$\n\n**第四步：处理边界项与剩余积分。**\n\n边界项：$\\sin 3\\pi = 0$，$\\sin 0 = 0$，所以\n\n$$\\left[\\frac{x\\sin 3x}{3}\\right]_0^{\\pi} = 0 - 0 = 0$$\n\n剩余积分：\n\n$$\\int_0^{\\pi}\\sin 3x\\,\\mathrm{d}x = \\left[-\\frac{\\cos 3x}{3}\\right]_0^{\\pi} = -\\frac{\\cos 3\\pi}{3} + \\frac{\\cos 0}{3} = -\\frac{(-1)}{3} + \\frac{1}{3} = \\frac{2}{3}$$\n\n**第五步：合并。**\n\n$$\\int_0^{\\pi}x\\cos 3x\\,\\mathrm{d}x = 0 - \\frac{1}{3}\\times\\frac{2}{3} = -\\frac{2}{9}$$\n\n$$a_3 = \\frac{2}{\\pi}\\times\\left(-\\frac{2}{9}\\right) = -\\frac{4}{9\\pi}$$\n\n$$\\boxed{a_3 = -\\frac{4}{9\\pi}}$$\n\n**拓展（记住这个通项，本类题就能秒杀）**：\n\n$$a_n = \\frac{2}{\\pi}\\cdot\\frac{(-1)^n - 1}{n^2}$$\n\n即：当 $n$ 为奇数时 $a_n = -\\dfrac{4}{\\pi n^2}$；当 $n$ 为偶数时 $a_n = 0$。\n\n代入 $n = 3$ 立得 $-\\dfrac{4}{9\\pi}$ ✓。（顺带可得 $a_1 = -\\dfrac{4}{\\pi}$，$a_2 = 0$，$a_4 = 0$。）\n\n**独立验算**：SymPy 符号计算 $\\dfrac{1}{\\pi}\\displaystyle\\int_{-\\pi}^{\\pi}|x|\\cos 3x\\,\\mathrm{d}x$ 得 $-\\dfrac{4}{9\\pi}$ ✓；按通项公式算也是 $-\\dfrac{4}{9\\pi}$ ✓",
+   "misconception": "- **系数公式前面的 $\\dfrac{1}{\\pi}$ 是\"整个周期上积分\"的版本**：$a_n = \\dfrac{1}{\\pi}\\displaystyle\\int_{-\\pi}^{\\pi}f(x)\\cos nx\\,\\mathrm{d}x$。**利用偶函数写成 $2\\displaystyle\\int_0^{\\pi}$ 时，$\\dfrac{1}{\\pi}$ 不变**（是 $\\dfrac{1}{\\pi}\\times 2$，不是把 $\\dfrac{1}{\\pi}$ 改成 $\\dfrac{2}{\\pi}$ 后再乘 2）。**这一步的系数是本题最容易多乘或少乘的地方：正确结果是 $\\dfrac{2}{\\pi}\\displaystyle\\int_0^{\\pi}$，等价于 $\\dfrac{1}{\\pi}\\times 2\\displaystyle\\int_0^{\\pi}$。**\n- **结果一定是负的**：$\\cos 3\\pi = -1$，$\\cos 0 = 1$，两者相减得 $-2$，**负号来自这里，不能丢**。\n- **$\\cos 3\\pi$ 不是 $1$ 而是 $-1$**：$3\\pi$ 是 $\\pi$ 的奇数倍。**别把 $\\cos 3\\pi$ 当成 $\\cos 2\\pi = 1$。**\n- **分部积分的边界项 $\\left[\\dfrac{x\\sin 3x}{3}\\right]_0^{\\pi}$ 恰好为 $0$**，但**不能直接跳过不写**——评分标准里这一步是给分点，且换个题目（例如求 $a_1$）它同样为 $0$，但求 $b_n$ 时就未必。**养成写出来的习惯。**\n- **求内层 $\\displaystyle\\int\\sin 3x\\,\\mathrm{d}x$ 时的 $\\dfrac{1}{3}$ 别丢**：$\\displaystyle\\int\\sin 3x\\,\\mathrm{d}x = -\\dfrac{\\cos 3x}{3}$。**丢了会得到 $-\\dfrac{4}{3\\pi}$。**\n- **本题只求 $a_3$，不必整套展开**：题目已经直接给出级数形式并指定了 $a_3$，**只算一个系数即可**，别去求 $a_0$、$b_n$ 浪费时间。\n- **顺手记一条：$f(x) = |x|$ 是偶函数，所以傅里叶级数只含余弦项（$b_n = 0$）**，与题面给出的形式一致。**如果题目给的是正弦级数，那就是奇函数，别搞混。**\n- **与 2024.10 卷第 19 题对照**：那一卷考的是\"比值审敛法判断敛散性\"，本卷考的是\"傅里叶系数公式代入\"。**槽位相同（第 19 题 = 无穷级数），但一个是判别法、一个是公式套用——无穷级数这一章的\"工具\"必须备齐。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 850
+  },
+  {
+   "id": "zk-202504-21",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.3",
+   "knowledgePoints": [
+    "12.3"
+   ],
+   "source": {
+    "text": "2025 年 4 月 自考 00023 高等数学（工本）第 21 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 21,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求幂级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{x^n}{2^n n}$ 的收敛域。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：认清通项，确认是幂级数。**\n\n$$a_n = \\frac{1}{2^n n}, \\qquad u_n(x) = \\frac{x^n}{2^n n}$$\n\n**第二步：用比值法求收敛半径。**\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty}\\left|\\frac{\\dfrac{1}{2^{n+1}(n+1)}}{\\dfrac{1}{2^n n}}\\right| = \\lim_{n\\to\\infty}\\frac{2^n n}{2^{n+1}(n+1)} = \\lim_{n\\to\\infty}\\frac{n}{2(n+1)}$$\n\n$$\\rho = \\frac{1}{2}\\lim_{n\\to\\infty}\\frac{n}{n+1} = \\frac{1}{2}\\times 1 = \\frac{1}{2}$$\n\n收敛半径\n\n$$R = \\frac{1}{\\rho} = 2$$\n\n所以在 $|x| < 2$ 时**绝对收敛**，在 $|x| > 2$ 时**发散**。**剩下两个端点 $x = \\pm 2$ 必须单独讨论。**\n\n**第三步：讨论右端点 $x = 2$。**\n\n$$\\sum_{n=1}^{\\infty}\\frac{2^n}{2^n n} = \\sum_{n=1}^{\\infty}\\frac{1}{n}$$\n\n这是**调和级数**（$p$ 级数中 $p = 1$ 的情形），**发散**。\n\n所以 $x = 2$ **不取**。\n\n**第四步：讨论左端点 $x = -2$。**\n\n$$\\sum_{n=1}^{\\infty}\\frac{(-2)^n}{2^n n} = \\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n} = -1 + \\frac{1}{2} - \\frac{1}{3} + \\frac{1}{4} - \\cdots$$\n\n这是**交错调和级数**。用莱布尼茨判别法：$u_n = \\dfrac{1}{n}$ 单调递减且趋于 $0$，故**收敛**。\n\n（进一步看，其绝对值级数正是发散的调和级数，所以它是**条件收敛**。）\n\n所以 $x = -2$ **要取**。\n\n**第五步：合并——收敛域为 $[-2,\\ 2)$。**\n\n$$\\boxed{[-2,\\ 2)}$$\n\n**独立验算（数值）**：在 $x = -2$ 处，部分和\n\n$$\\sum_{n=1}^{10000}\\frac{(-1)^n}{n} \\approx -0.69306 \\approx -\\ln 2$$\n\n**明显收敛到 $-\\ln 2$** ✓；而 $\\displaystyle\\sum_{n=1}^{10000}\\frac{1}{n} \\approx 9.7876$ 仍在持续增长，**发散无疑** ✓。",
+   "points": [
+    {
+     "text": "认清通项，确认是幂级数。\n\n$$a_n = \\frac{1}{2^n n}, \\qquad u_n(x) = \\frac{x^n}{2^n n}$$",
+     "partial": 2
+    },
+    {
+     "text": "用比值法求收敛半径。",
+     "partial": 2
+    },
+    {
+     "text": "$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty}\\left|\\frac{\\dfrac{1}{2^{n+1}(n+1)}}{\\dfrac{1}{2^n n}}\\right| = \\lim_{n\\to\\infty}\\frac{2^n n}{2^{n+1}(n+1)} = \\lim_{n\\to\\infty}\\frac{n}{2(n+1)}$$",
+     "partial": 2
+    },
+    {
+     "text": "$$\\rho = \\frac{1}{2}\\lim_{n\\to\\infty}\\frac{n}{n+1} = \\frac{1}{2}\\times 1 = \\frac{1}{2}$$",
+     "partial": 2
+    },
+    {
+     "text": "收敛半径",
+     "partial": 2
+    },
+    {
+     "text": "$$R = \\frac{1}{\\rho} = 2$$；所以在 $|x| < 2$ 时绝对收敛，在 $|x| > 2$ 时发散。；剩下两个端点 $x = \\pm 2$ 必须单独讨论。；讨论右端点 $x = 2$。\n\n$$\\sum_{n=1}^{\\infty}\\frac{2^n}{2^n n} = \\sum_{n=1}^{\\infty}\\frac{1}{n}$$\n\n这是调和级数（$p$ 级数中 $p = 1$ 的情形），发散。\n\n所以 $x = 2$ 不取。；讨论左端点 $x = -2$。\n\n$$\\sum_{n=1}^{\\infty}\\frac{(-2)^n}{2^n n} = \\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n} = -1 + \\frac{1}{2} - \\frac{1}{3} + \\frac{1}{4} - \\cdots$$\n\n这是交错调和级数。用莱布尼茨判别法：$u_n = \\dfrac{1}{n}$ 单调递减且趋于 $0$，故收敛。\n\n（进一步看，其绝对值级数正是发散的调和级数，所以它是条件收敛。）\n\n所以 $x = -2$ 要取。；合并——收敛域为 $[-2,\\ 2)$。\n\n$$\\boxed{[-2,\\ 2)}$$\n\n独立验算（数值）：在 $x = -2$ 处，部分和\n\n$$\\sum_{n=1}^{10000}\\frac{(-1)^n}{n} \\approx -0.69306 \\approx -\\ln 2$$\n\n明显收敛到 $-\\ln 2$ ✓；而 $\\displaystyle\\sum_{n=1}^{10000}\\frac{1}{n} \\approx 9.7876$ 仍在持续增长，发散无疑 ✓。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：幂级数的收敛半径（比值法）+ 端点的单独讨论，无穷级数。\n**考点出处**：交错级数与条件收敛（幂级数的收敛域）\n**第一步：认清通项，确认是幂级数。**\n\n$$a_n = \\frac{1}{2^n n}, \\qquad u_n(x) = \\frac{x^n}{2^n n}$$\n\n**第二步：用比值法求收敛半径。**\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty}\\left|\\frac{\\dfrac{1}{2^{n+1}(n+1)}}{\\dfrac{1}{2^n n}}\\right| = \\lim_{n\\to\\infty}\\frac{2^n n}{2^{n+1}(n+1)} = \\lim_{n\\to\\infty}\\frac{n}{2(n+1)}$$\n\n$$\\rho = \\frac{1}{2}\\lim_{n\\to\\infty}\\frac{n}{n+1} = \\frac{1}{2}\\times 1 = \\frac{1}{2}$$\n\n收敛半径\n\n$$R = \\frac{1}{\\rho} = 2$$\n\n所以在 $|x| < 2$ 时**绝对收敛**，在 $|x| > 2$ 时**发散**。**剩下两个端点 $x = \\pm 2$ 必须单独讨论。**\n\n**第三步：讨论右端点 $x = 2$。**\n\n$$\\sum_{n=1}^{\\infty}\\frac{2^n}{2^n n} = \\sum_{n=1}^{\\infty}\\frac{1}{n}$$\n\n这是**调和级数**（$p$ 级数中 $p = 1$ 的情形），**发散**。\n\n所以 $x = 2$ **不取**。\n\n**第四步：讨论左端点 $x = -2$。**\n\n$$\\sum_{n=1}^{\\infty}\\frac{(-2)^n}{2^n n} = \\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n} = -1 + \\frac{1}{2} - \\frac{1}{3} + \\frac{1}{4} - \\cdots$$\n\n这是**交错调和级数**。用莱布尼茨判别法：$u_n = \\dfrac{1}{n}$ 单调递减且趋于 $0$，故**收敛**。\n\n（进一步看，其绝对值级数正是发散的调和级数，所以它是**条件收敛**。）\n\n所以 $x = -2$ **要取**。\n\n**第五步：合并——收敛域为 $[-2,\\ 2)$。**\n\n$$\\boxed{[-2,\\ 2)}$$\n\n**独立验算（数值）**：在 $x = -2$ 处，部分和\n\n$$\\sum_{n=1}^{10000}\\frac{(-1)^n}{n} \\approx -0.69306 \\approx -\\ln 2$$\n\n**明显收敛到 $-\\ln 2$** ✓；而 $\\displaystyle\\sum_{n=1}^{10000}\\frac{1}{n} \\approx 9.7876$ 仍在持续增长，**发散无疑** ✓。",
+   "misconception": "- **端点必须单独讨论，这是本题的唯一评分陷阱**：收敛半径只保证 $(−2, 2)$ **内部**的敛散性，**端点处的敛散性与 $R$ 无关，必须代进去另判**。**只写\"收敛域为 $(-2,2)$\"或\"$[-2,2]$\"都要扣分。**\n- **两端点的命运相反，答案的左闭右开别写反**：$x = 2$ 时是调和级数（**发散，取不到**），$x = -2$ 时是交错调和级数（**收敛，取得到**），所以是 $[-2, 2)$，**不是 $(-2, 2]$**。\n- **$R = 2$ 而不是 $\\dfrac{1}{2}$**：$\\rho = \\dfrac{1}{2}$ 是\"比值的极限\"，**收敛半径是它的倒数**。这是最高频的一步之差。\n- **$\\dfrac{2^n}{2^{n+1}} = \\dfrac{1}{2}$ 别写成 $2$**：比值化简时把 $2^{n+1}$ 当作分子、$2^n$ 当作分母，结果系数是 $\\dfrac{1}{2}$。**写成 $2$ 会得到 $\\rho = 2$、$R = \\dfrac{1}{2}$，全错。**\n- **左端点的级数从 $n = 1$ 起，首项是 $-1$（$n$ 为奇数时 $(-1)^n = -1$）**：与常见的 $\\displaystyle\\sum\\frac{(-1)^{n-1}}{n} = 1 - \\frac12 + \\frac13 - \\cdots = \\ln 2$ 相比**整体差一个负号**。**这不影响收敛性的判断，但如果题目要求\"求级数的和\"，就要小心这个符号。**\n- **莱布尼茨判别法两个条件都要写**：$u_n$ **单调递减**且 $\\lim u_n = 0$。**只写\"趋于 0\"是不够的**（调和级数的通项也趋于 0，但它发散）。\n- **与 2024.10 卷第 21 题对照**：那一卷考的是\"交错级数 $\\displaystyle\\sum\\frac{(-1)^{n-1}}{\\sqrt n}$ 是绝对收敛还是条件收敛\"，本卷考的是\"幂级数的收敛域\"。**两者都用到莱布尼茨判别法与 $p$ 级数判据——那两条结论是这一章的地基。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 851
+  },
+  {
+   "id": "zk-202510-19",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.2",
+   "knowledgePoints": [
+    "12.2"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 19 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 19,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设 $f(x)$ 是周期为 $2\\pi$ 的函数，它在 $[-\\pi, \\pi)$ 上表达式为",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：写出傅里叶系数的公式。**\n\n对周期为 $2\\pi$ 的函数，正弦项系数为\n\n$$b_n = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi} f(x)\\sin nx\\,\\mathrm{d}x$$\n\n**注意前面的系数是 $\\dfrac{1}{\\pi}$**，区间长度是 $2\\pi$。\n\n**第二步：代入 $n = 3$。**\n\n$$b_3 = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi} f(x)\\sin 3x\\,\\mathrm{d}x$$\n\n**第三步：利用 $f$ 的分段表达式拆区间。**\n\n在 $[-\\pi, 0)$ 上 $f(x) = 0$，这一段的积分为 $0$；在 $[0,\\pi)$ 上 $f(x) = 1$。所以\n\n$$b_3 = \\frac{1}{\\pi}\\left[\\int_{-\\pi}^{0} 0\\cdot\\sin 3x\\,\\mathrm{d}x + \\int_{0}^{\\pi} 1\\cdot\\sin 3x\\,\\mathrm{d}x\\right] = \\frac{1}{\\pi}\\int_{0}^{\\pi}\\sin 3x\\,\\mathrm{d}x$$\n\n**左半段整个消失**，这是本题最大的简化。\n\n**第四步：算出定积分。**\n\n$$\\int_0^{\\pi}\\sin 3x\\,\\mathrm{d}x = \\left[-\\frac{1}{3}\\cos 3x\\right]_0^{\\pi} = -\\frac{1}{3}\\left(\\cos 3\\pi - \\cos 0\\right)$$\n\n因为 $\\cos 3\\pi = \\cos\\pi = -1$，$\\cos 0 = 1$：\n\n$$= -\\frac{1}{3}(-1 - 1) = -\\frac{1}{3}\\times(-2) = \\frac{2}{3}$$\n\n**第五步：除以 $\\pi$。**\n\n$$b_3 = \\frac{1}{\\pi}\\cdot\\frac{2}{3} = \\frac{2}{3\\pi}$$\n\n$$\\boxed{b_3 = \\frac{2}{3\\pi}}$$",
+   "points": [
+    {
+     "text": "写出傅里叶系数的公式。\n\n对周期为 $2\\pi$ 的函数，正弦项系数为\n\n$$b_n = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi} f(x)\\sin nx\\,\\mathrm{d}x$$\n\n注意前面的系数是 $\\dfrac{1}{\\pi}$，区间长度是 $2\\pi$。",
+     "partial": 2
+    },
+    {
+     "text": "代入 $n = 3$。\n\n$$b_3 = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi} f(x)\\sin 3x\\,\\mathrm{d}x$$",
+     "partial": 2
+    },
+    {
+     "text": "利用 $f$ 的分段表达式拆区间。",
+     "partial": 2
+    },
+    {
+     "text": "在 $[-\\pi, 0)$ 上 $f(x) = 0$，这一段的积分为 $0$；",
+     "partial": 2
+    },
+    {
+     "text": "在 $[0,\\pi)$ 上 $f(x) = 1$。",
+     "partial": 2
+    },
+    {
+     "text": "所以；$$b_3 = \\frac{1}{\\pi}\\left[\\int_{-\\pi}^{0} 0\\cdot\\sin 3x\\,\\mathrm{d}x + \\int_{0}^{\\pi} 1\\cdot\\sin 3x\\,\\mathrm{d}x\\right] = \\frac{1}{\\pi}\\int_{0}^{\\pi}\\sin 3x\\,\\mathrm{d}x$$；左半段整个消失，这是本题最大的简化。；算出定积分。\n\n$$\\int_0^{\\pi}\\sin 3x\\,\\mathrm{d}x = \\left[-\\frac{1}{3}\\cos 3x\\right]_0^{\\pi} = -\\frac{1}{3}\\left(\\cos 3\\pi - \\cos 0\\right)$$\n\n因为 $\\cos 3\\pi = \\cos\\pi = -1$，$\\cos 0 = 1$：\n\n$$= -\\frac{1}{3}(-1 - 1) = -\\frac{1}{3}\\times(-2) = \\frac{2}{3}$$；除以 $\\pi$。\n\n$$b_3 = \\frac{1}{\\pi}\\cdot\\frac{2}{3} = \\frac{2}{3\\pi}$$\n\n$$\\boxed{b_3 = \\frac{2}{3\\pi}}$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：周期为 $2\\pi$ 的函数的傅里叶系数公式（无穷级数）。\n**考点出处**：无穷级数（比值审敛法）\n**第一步：写出傅里叶系数的公式。**\n\n对周期为 $2\\pi$ 的函数，正弦项系数为\n\n$$b_n = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi} f(x)\\sin nx\\,\\mathrm{d}x$$\n\n**注意前面的系数是 $\\dfrac{1}{\\pi}$**，区间长度是 $2\\pi$。\n\n**第二步：代入 $n = 3$。**\n\n$$b_3 = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi} f(x)\\sin 3x\\,\\mathrm{d}x$$\n\n**第三步：利用 $f$ 的分段表达式拆区间。**\n\n在 $[-\\pi, 0)$ 上 $f(x) = 0$，这一段的积分为 $0$；在 $[0,\\pi)$ 上 $f(x) = 1$。所以\n\n$$b_3 = \\frac{1}{\\pi}\\left[\\int_{-\\pi}^{0} 0\\cdot\\sin 3x\\,\\mathrm{d}x + \\int_{0}^{\\pi} 1\\cdot\\sin 3x\\,\\mathrm{d}x\\right] = \\frac{1}{\\pi}\\int_{0}^{\\pi}\\sin 3x\\,\\mathrm{d}x$$\n\n**左半段整个消失**，这是本题最大的简化。\n\n**第四步：算出定积分。**\n\n$$\\int_0^{\\pi}\\sin 3x\\,\\mathrm{d}x = \\left[-\\frac{1}{3}\\cos 3x\\right]_0^{\\pi} = -\\frac{1}{3}\\left(\\cos 3\\pi - \\cos 0\\right)$$\n\n因为 $\\cos 3\\pi = \\cos\\pi = -1$，$\\cos 0 = 1$：\n\n$$= -\\frac{1}{3}(-1 - 1) = -\\frac{1}{3}\\times(-2) = \\frac{2}{3}$$\n\n**第五步：除以 $\\pi$。**\n\n$$b_3 = \\frac{1}{\\pi}\\cdot\\frac{2}{3} = \\frac{2}{3\\pi}$$\n\n$$\\boxed{b_3 = \\frac{2}{3\\pi}}$$",
+   "misconception": "- **系数是 $\\dfrac{1}{\\pi}$，不是 $\\dfrac{1}{2\\pi}$**：周期为 $2\\pi$ 时，$a_n$、$b_n$ 前面的系数都是 $\\dfrac{1}{\\pi}$（因为区间长度 $2\\pi$ 与 $\\dfrac{1}{2\\pi}\\times 2$ 相消）。**用错系数会得到 $\\dfrac{1}{3\\pi}$，正好差一半。**\n- **$\\cos 3\\pi = -1$ 是关键符号**：$-\\dfrac{1}{3}(\\cos 3\\pi - \\cos 0) = -\\dfrac{1}{3}(-1-1) = +\\dfrac{2}{3}$。**这里有两层负号**（外面那个 $-\\dfrac13$、括号里的 $-1-1$），漏任何一层都会得到 $-\\dfrac23$ 或 $0$。\n- **别忘 $\\mathrm{d}x$ 上的 $3$**：$-\\dfrac13\\cos 3x$ 的 $\\dfrac13$ 来自内层 $3x$ 的链式法则，**写成 $-\\cos 3x$ 会得到 $\\dfrac{2}{\\pi}$**。\n- **左半段 $f = 0$ 可以整段丢掉**：不必去算 $\\displaystyle\\int_{-\\pi}^0$。但要**在解答里交代清楚\"这一段的被积函数是 $0$\"**，否则会像漏了一步。\n- **题目区间是 $[-\\pi,\\pi)$（左闭右开）**：与官方答案写的 $[-\\pi,\\pi]$ 只差一个端点，**对积分毫无影响**（单点不改变积分值），不必纠结。\n- **别算错对象**：题目要的是**正弦项**系数 $b_3$。若误算余弦项系数，$a_3 = \\dfrac{1}{\\pi}\\displaystyle\\int_0^{\\pi}\\cos 3x\\,\\mathrm{d}x = \\dfrac{1}{\\pi}\\left[\\dfrac{\\sin 3x}{3}\\right]_0^{\\pi} = 0$。**答案 $0$ 与本题的 $\\dfrac{2}{3\\pi}$ 完全不同**，看一眼题目问的是 $a$ 还是 $b$ 只需一秒钟。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 852
+  },
+  {
+   "id": "zk-202510-21",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.3",
+   "knowledgePoints": [
+    "12.3"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 21 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 21,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求幂级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(x-3)^n}{n^2}$ 的收敛域.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：换元，把级数化成标准幂级数。**\n\n令 $t = x - 3$，则原级数化为\n\n$$\\sum_{n=1}^{\\infty}\\frac{t^n}{n^2}$$\n\n这是以 $t = 0$ 为中心的幂级数，系数 $a_n = \\dfrac{1}{n^2}$。\n\n**第二步：用比值法求收敛半径。**\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty}\\left|\\frac{\\frac{1}{(n+1)^2}}{\\frac{1}{n^2}}\\right| = \\lim_{n\\to\\infty}\\frac{n^2}{(n+1)^2} = \\lim_{n\\to\\infty}\\left(\\frac{n}{n+1}\\right)^2 = 1$$\n\n$$R = \\frac{1}{\\rho} = 1$$\n\n**第三步：由收敛半径得开区间。**\n\n$|t| < 1$ 时级数**绝对收敛**；$|t| > 1$ 时级数**发散**。所以收敛区间至少是 $(-1,\\ 1)$。\n\n**第四步：端点必须单独讨论（两端都要讨论）。**\n\n- **$t = 1$**：级数变为\n  $$\\sum_{n=1}^{\\infty}\\frac{1}{n^2}$$\n  这是 $p = 2 > 1$ 的 $p$ 级数，**收敛**。\n\n- **$t = -1$**：级数变为\n  $$\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n^2}$$\n  加绝对值后是 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^2}$，仍然收敛，所以 $t = -1$ 处**绝对收敛**。\n\n两个端点都收敛，所以 $t$ 的收敛域是**闭区间** $[-1,\\ 1]$。\n\n**第五步：换回 $x$。**\n\n$$-1 \\le t \\le 1 \\Longrightarrow -1 \\le x - 3 \\le 1 \\Longrightarrow 2 \\le x \\le 4$$\n\n$$\\boxed{[2,\\ 4]}$$\n\n**数值印证**：$t = 1$ 时部分和趋于 $\\dfrac{\\pi^2}{6} \\approx 1.6449$（取 $2\\times 10^5$ 项得 $1.64493$），$t = -1$ 时趋于 $-\\dfrac{\\pi^2}{12} \\approx -0.8225$，都收敛；而 $t = \\pm 1.05$ 时 $|u_n| = \\dfrac{1.05^n}{n^2}$ 指数增长（$n = 400$ 时已达 $1869$），通项不趋于 $0$，必发散。**端点内外行为的分界确实在 $|t| = 1$。**",
+   "points": [
+    {
+     "text": "换元，把级数化成标准幂级数。\n\n令 $t = x - 3$，则原级数化为\n\n$$\\sum_{n=1}^{\\infty}\\frac{t^n}{n^2}$$\n\n这是以 $t = 0$ 为中心的幂级数，系数 $a_n = \\dfrac{1}{n^2}$。",
+     "partial": 2
+    },
+    {
+     "text": "用比值法求收敛半径。\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty}\\left|\\frac{\\frac{1}{(n+1)^2}}{\\frac{1}{n^2}}\\right| = \\lim_{n\\to\\infty}\\frac{n^2}{(n+1)^2} = \\lim_{n\\to\\infty}\\left(\\frac{n}{n+1}\\right)^2 = 1$$\n\n$$R = \\frac{1}{\\rho} = 1$$",
+     "partial": 2
+    },
+    {
+     "text": "由收敛半径得开区间。\n\n$|t| < 1$ 时级数绝对收敛；$|t| > 1$ 时级数发散。所以收敛区间至少是 $(-1,\\ 1)$。",
+     "partial": 2
+    },
+    {
+     "text": "端点必须单独讨论（两端都要讨论）。\n\n- $t = 1$：级数变为\n  $$\\sum_{n=1}^{\\infty}\\frac{1}{n^2}$$\n  这是 $p = 2 > 1$ 的 $p$ 级数，收敛。\n\n- $t = -1$：级数变为\n  $$\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n^2}$$\n  加绝对值后是 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^2}$，仍然收敛，所以 $t = -1$ 处绝对收敛。\n\n两个端点都收敛，所以 $t$ 的收敛域是闭区间 $[-1,\\ 1]$。",
+     "partial": 2
+    },
+    {
+     "text": "换回 $x$。",
+     "partial": 2
+    },
+    {
+     "text": "$$-1 \\le t \\le 1 \\Longrightarrow -1 \\le x - 3 \\le 1 \\Longrightarrow 2 \\le x \\le 4$$；$$\\boxed{[2,\\ 4]}$$；数值印证：$t = 1$ 时部分和趋于 $\\dfrac{\\pi^2}{6} \\approx 1.6449$（取 $2\\times 10^5$ 项得 $1.64493$），$t = -1$ 时趋于 $-\\dfrac{\\pi^2}{12} \\approx -0.8225$，都收敛；；而 $t = \\pm 1.05$ 时 $|u_n| = \\dfrac{1.05^n}{n^2}$ 指数增长（$n = 400$ 时已达 $1869$），通项不趋于 $0$，必发散。；端点内外行为的分界确实在 $|t| = 1$。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：幂级数的收敛半径、端点敛散性讨论与收敛域（无穷级数）。\n**考点出处**：无穷级数（交错级数与条件收敛）\n**第一步：换元，把级数化成标准幂级数。**\n\n令 $t = x - 3$，则原级数化为\n\n$$\\sum_{n=1}^{\\infty}\\frac{t^n}{n^2}$$\n\n这是以 $t = 0$ 为中心的幂级数，系数 $a_n = \\dfrac{1}{n^2}$。\n\n**第二步：用比值法求收敛半径。**\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty}\\left|\\frac{\\frac{1}{(n+1)^2}}{\\frac{1}{n^2}}\\right| = \\lim_{n\\to\\infty}\\frac{n^2}{(n+1)^2} = \\lim_{n\\to\\infty}\\left(\\frac{n}{n+1}\\right)^2 = 1$$\n\n$$R = \\frac{1}{\\rho} = 1$$\n\n**第三步：由收敛半径得开区间。**\n\n$|t| < 1$ 时级数**绝对收敛**；$|t| > 1$ 时级数**发散**。所以收敛区间至少是 $(-1,\\ 1)$。\n\n**第四步：端点必须单独讨论（两端都要讨论）。**\n\n- **$t = 1$**：级数变为\n  $$\\sum_{n=1}^{\\infty}\\frac{1}{n^2}$$\n  这是 $p = 2 > 1$ 的 $p$ 级数，**收敛**。\n\n- **$t = -1$**：级数变为\n  $$\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n^2}$$\n  加绝对值后是 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^2}$，仍然收敛，所以 $t = -1$ 处**绝对收敛**。\n\n两个端点都收敛，所以 $t$ 的收敛域是**闭区间** $[-1,\\ 1]$。\n\n**第五步：换回 $x$。**\n\n$$-1 \\le t \\le 1 \\Longrightarrow -1 \\le x - 3 \\le 1 \\Longrightarrow 2 \\le x \\le 4$$\n\n$$\\boxed{[2,\\ 4]}$$\n\n**数值印证**：$t = 1$ 时部分和趋于 $\\dfrac{\\pi^2}{6} \\approx 1.6449$（取 $2\\times 10^5$ 项得 $1.64493$），$t = -1$ 时趋于 $-\\dfrac{\\pi^2}{12} \\approx -0.8225$，都收敛；而 $t = \\pm 1.05$ 时 $|u_n| = \\dfrac{1.05^n}{n^2}$ 指数增长（$n = 400$ 时已达 $1869$），通项不趋于 $0$，必发散。**端点内外行为的分界确实在 $|t| = 1$。**",
+   "misconception": "- **端点必须单独讨论，而且两个端点都要讨论**：这是本题的核心得分点（官方答案在这里给了 3 分）。本题两端都收敛，所以是**闭区间 $[2,4]$**；若只写 $(2,4)$ 就丢分。\n- **$t = -1$ 是\"绝对收敛\"，不是\"条件收敛\"**：因为 $\\displaystyle\\sum\\frac{1}{n^2}$ 收敛（$p = 2 > 1$）。**交错级数不等于条件收敛**——只有当\"原级数收敛而绝对值级数发散\"时才是条件收敛。\n- **别忘了把中心 $3$ 加回去**：收敛半径是 $1$，但收敛**区间**是从中心 $x = 3$ 向左右各 $1$，即 $[2,4]$。**直接答 $[-1,1]$ 是最典型的失误**（那是 $t$ 的区间，不是 $x$ 的）。\n- **比值里的 $n^2$ 与 $(n+1)^2$ 别写反**：$\\dfrac{a_{n+1}}{a_n} = \\dfrac{n^2}{(n+1)^2}$（后项比前项时，$(n+1)^2$ 在分母）。虽然本题写反了极限仍是 $1$，但**换个级数就会致命**。\n- **收敛半径 $R = 1$ 与\"收敛域是 $[-1,1]$\"是两回事**：$R$ 只给出开区间，端点必须代入验证。**\"先求 $R$、再验端点\"是幂级数题的固定两步。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 853
+  },
+  {
+   "id": "zk-202604-19",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.7",
+   "knowledgePoints": [
+    "12.7"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 19 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 19,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "设 $f(x)$ 是周期为 $2\\pi$ 的函数，它在区间 $[-\\pi, \\pi)$ 上表达式为",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：写出 $b_n$ 的公式。**\n\n$$b_n = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi}f(x)\\sin nx\\,\\mathrm{d}x$$\n\n**第二步：代入本例的 $f(x)$（分段函数），利用一半为零。**\n\n在 $[0,\\pi)$ 上 $f(x) = 0$，积分只剩 $[-\\pi, 0)$ 这一段：\n\n$$b_n = \\frac{1}{\\pi}\\int_{-\\pi}^{0}x\\sin nx\\,\\mathrm{d}x$$\n\n**第三步：取 $n = 5$。**\n\n$$b_5 = \\frac{1}{\\pi}\\int_{-\\pi}^{0}x\\sin 5x\\,\\mathrm{d}x$$\n\n**第四步：分部积分。** 令 $u = x$、$\\mathrm{d}v = \\sin5x\\,\\mathrm{d}x$，则 $\\mathrm{d}u = \\mathrm{d}x$、$v = -\\frac{1}{5}\\cos5x$：\n\n$$b_5 = \\frac{1}{\\pi}\\left\\{\\left[-\\frac{x}{5}\\cos5x\\right]_{-\\pi}^{0} + \\frac{1}{5}\\int_{-\\pi}^{0}\\cos5x\\,\\mathrm{d}x\\right\\}$$\n\n**第五步：逐项算。**\n\n边界项：在 $x = 0$ 处为 $0$；在 $x = -\\pi$ 处为 $-\\frac{-\\pi}{5}\\cos(-5\\pi) = \\frac{\\pi}{5}\\cos5\\pi = \\frac{\\pi}{5}\\times(-1) = -\\frac{\\pi}{5}$。\n\n$$\\left[-\\frac{x}{5}\\cos5x\\right]_{-\\pi}^{0} = 0 - \\left(-\\frac{\\pi}{5}\\right) = \\frac{\\pi}{5}$$\n\n积分项：\n\n$$\\int_{-\\pi}^{0}\\cos5x\\,\\mathrm{d}x = \\left[\\frac{\\sin5x}{5}\\right]_{-\\pi}^{0} = \\frac{\\sin0 - \\sin(-5\\pi)}{5} = 0$$\n\n（$\\sin(-5\\pi) = 0$。）\n\n**第六步：合并。**\n\n$$b_5 = \\frac{1}{\\pi}\\left(\\frac{\\pi}{5} + 0\\right) = \\frac{1}{5}$$\n\n**独立验算（用 SymPy 直接积分）**：$\\int_{-\\pi}^{0}x\\sin5x\\,\\mathrm{d}x = \\frac{\\pi}{5}$，故 $b_5 = \\frac{1}{\\pi}\\cdot\\frac{\\pi}{5} = \\frac15$ ✓",
+   "points": [
+    {
+     "text": "写出 $b_n$ 的公式。\n\n$$b_n = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi}f(x)\\sin nx\\,\\mathrm{d}x$$",
+     "partial": 2
+    },
+    {
+     "text": "代入本例的 $f(x)$（分段函数），利用一半为零。\n\n在 $[0,\\pi)$ 上 $f(x) = 0$，积分只剩 $[-\\pi, 0)$ 这一段：\n\n$$b_n = \\frac{1}{\\pi}\\int_{-\\pi}^{0}x\\sin nx\\,\\mathrm{d}x$$",
+     "partial": 2
+    },
+    {
+     "text": "取 $n = 5$。\n\n$$b_5 = \\frac{1}{\\pi}\\int_{-\\pi}^{0}x\\sin 5x\\,\\mathrm{d}x$$",
+     "partial": 2
+    },
+    {
+     "text": "分部积分。 令 $u = x$、$\\mathrm{d}v = \\sin5x\\,\\mathrm{d}x$，则 $\\mathrm{d}u = \\mathrm{d}x$、$v = -\\frac{1}{5}\\cos5x$：\n\n$$b_5 = \\frac{1}{\\pi}\\left\\{\\left[-\\frac{x}{5}\\cos5x\\right]_{-\\pi}^{0} + \\frac{1}{5}\\int_{-\\pi}^{0}\\cos5x\\,\\mathrm{d}x\\right\\}$$",
+     "partial": 2
+    },
+    {
+     "text": "逐项算。\n\n边界项：在 $x = 0$ 处为 $0$；在 $x = -\\pi$ 处为 $-\\frac{-\\pi}{5}\\cos(-5\\pi) = \\frac{\\pi}{5}\\cos5\\pi = \\frac{\\pi}{5}\\times(-1) = -\\frac{\\pi}{5}$。\n\n$$\\left[-\\frac{x}{5}\\cos5x\\right]_{-\\pi}^{0} = 0 - \\left(-\\frac{\\pi}{5}\\right) = \\frac{\\pi}{5}$$\n\n积分项：\n\n$$\\int_{-\\pi}^{0}\\cos5x\\,\\mathrm{d}x = \\left[\\frac{\\sin5x}{5}\\right]_{-\\pi}^{0} = \\frac{\\sin0 - \\sin(-5\\pi)}{5} = 0$$\n\n（$\\sin(-5\\pi) = 0$。）",
+     "partial": 2
+    },
+    {
+     "text": "合并。\n\n$$b_5 = \\frac{1}{\\pi}\\left(\\frac{\\pi}{5} + 0\\right) = \\frac{1}{5}$$\n\n独立验算（用 SymPy 直接积分）：$\\int_{-\\pi}^{0}x\\sin5x\\,\\mathrm{d}x = \\frac{\\pi}{5}$，故 $b_5 = \\frac{1}{\\pi}\\cdot\\frac{\\pi}{5} = \\frac15$ ✓",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：傅里叶系数（无穷级数）。\n**考点出处**：傅里叶系数（无穷级数）\n**第一步：写出 $b_n$ 的公式。**\n\n$$b_n = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi}f(x)\\sin nx\\,\\mathrm{d}x$$\n\n**第二步：代入本例的 $f(x)$（分段函数），利用一半为零。**\n\n在 $[0,\\pi)$ 上 $f(x) = 0$，积分只剩 $[-\\pi, 0)$ 这一段：\n\n$$b_n = \\frac{1}{\\pi}\\int_{-\\pi}^{0}x\\sin nx\\,\\mathrm{d}x$$\n\n**第三步：取 $n = 5$。**\n\n$$b_5 = \\frac{1}{\\pi}\\int_{-\\pi}^{0}x\\sin 5x\\,\\mathrm{d}x$$\n\n**第四步：分部积分。** 令 $u = x$、$\\mathrm{d}v = \\sin5x\\,\\mathrm{d}x$，则 $\\mathrm{d}u = \\mathrm{d}x$、$v = -\\frac{1}{5}\\cos5x$：\n\n$$b_5 = \\frac{1}{\\pi}\\left\\{\\left[-\\frac{x}{5}\\cos5x\\right]_{-\\pi}^{0} + \\frac{1}{5}\\int_{-\\pi}^{0}\\cos5x\\,\\mathrm{d}x\\right\\}$$\n\n**第五步：逐项算。**\n\n边界项：在 $x = 0$ 处为 $0$；在 $x = -\\pi$ 处为 $-\\frac{-\\pi}{5}\\cos(-5\\pi) = \\frac{\\pi}{5}\\cos5\\pi = \\frac{\\pi}{5}\\times(-1) = -\\frac{\\pi}{5}$。\n\n$$\\left[-\\frac{x}{5}\\cos5x\\right]_{-\\pi}^{0} = 0 - \\left(-\\frac{\\pi}{5}\\right) = \\frac{\\pi}{5}$$\n\n积分项：\n\n$$\\int_{-\\pi}^{0}\\cos5x\\,\\mathrm{d}x = \\left[\\frac{\\sin5x}{5}\\right]_{-\\pi}^{0} = \\frac{\\sin0 - \\sin(-5\\pi)}{5} = 0$$\n\n（$\\sin(-5\\pi) = 0$。）\n\n**第六步：合并。**\n\n$$b_5 = \\frac{1}{\\pi}\\left(\\frac{\\pi}{5} + 0\\right) = \\frac{1}{5}$$\n\n**独立验算（用 SymPy 直接积分）**：$\\int_{-\\pi}^{0}x\\sin5x\\,\\mathrm{d}x = \\frac{\\pi}{5}$，故 $b_5 = \\frac{1}{\\pi}\\cdot\\frac{\\pi}{5} = \\frac15$ ✓",
+   "misconception": "- **$n=5$ 时 $\\cos5x$ 的周期性与符号**：$\\cos5\\pi = \\cos\\pi = -1$（$5\\pi$ 与 $\\pi$ 的余弦相同），所以边界项是 $+\\frac{\\pi}{5}$。**把 $\\cos5\\pi$ 当成 $+1$ 会得到 $-\\frac{\\pi}{5}$，最终答案是 $-\\frac15$，符号全反。**\n- **积分下限是 $-\\pi$ 而不是 $0$**：$f(x)$ 在 $[-\\pi,0)$ 上非零，**这一段的贡献才是全部**。若误在 $[0,\\pi]$ 上积分，被积函数恒为 $0$，会得到 $b_5 = 0$。\n- **正负号在分部积分中的传递**：$\\int x\\sin5x\\,\\mathrm{d}x$ 中 $v = -\\frac{\\cos5x}{5}$（**负号**），而 $\\int v\\,\\mathrm{d}u$ 前又是 $+$ 号（$-uv + \\int v\\mathrm{d}u$ 的变体），**两处符号要分清楚**，建议固定用 $\\int u\\,\\mathrm{d}v = uv - \\int v\\,\\mathrm{d}u$ 的标准形式，避免记混。\n- **第二个积分项不要漏**：$\\frac{1}{5}\\int_{-\\pi}^{0}\\cos5x\\,\\mathrm{d}x$ 虽然结果为 $0$，但**必须写出来**，这是评分点。\n- **$b_n$ 的公式里有 $\\frac{1}{\\pi}$ 这个因子**：**别丢**，它把 $\\frac{\\pi}{5}$ 约成 $\\frac15$。\n- **奇偶性可以帮助验证**：$f(x)$ 在 $[-\\pi,0)$ 上取 $x$（负值），在 $[0,\\pi)$ 上取 $0$，整体**不是奇函数也不是偶函数**，所以 $a_n$、$b_n$ 一般都不为零，**不能套用\"奇函数只有 $b_n$\"的简化**。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 854
+  },
+  {
+   "id": "zk-202604-21",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.1",
+   "knowledgePoints": [
+    "12.1"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 21 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 21,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求幂级数 $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{x^{n}}{n}$ 的收敛域。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：求收敛半径（用比值法）。**\n\n记 $a_n = \\dfrac{1}{n}$，则\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty}\\frac{\\dfrac{1}{n+1}}{\\dfrac{1}{n}} = \\lim_{n\\to\\infty}\\frac{n}{n+1} = 1$$\n\n$$R = \\frac{1}{\\rho} = 1$$\n\n**第二步：由 $|x| < 1$ 得收敛区间 $(-1, 1)$。**\n\n**第三步：端点必须单独讨论。**\n\n**左端点 $x = -1$**：级数变为\n\n$$\\sum_{n=1}^{\\infty}\\frac{(-1)^{n}}{n} = -1 + \\frac12 - \\frac13 + \\frac14 - \\cdots$$\n\n这是**交错级数**，$u_n = \\frac1n$ 单调递减且趋于 $0$，由**莱布尼茨判别法**知它**收敛**（且其和为 $-\\ln 2$）。\n\n**右端点 $x = 1$**：级数变为\n\n$$\\sum_{n=1}^{\\infty}\\frac{1}{n}$$\n\n这是**调和级数**，$p = 1 \\le 1$，**发散**。\n\n**第四步：合并结论。**\n\n左端点收敛、右端点发散，故收敛域为\n\n$$[-1,\\ 1)$$\n\n**独立验算（数值印证）**：取部分和看趋势——\n\n$$\\sum_{n=1}^{10^4}\\frac{(-1)^n}{n}\\approx -0.6930,\\qquad -\\ln 2\\approx -0.6931$$\n\n上面这个部分和**稳定趋于有限值** $-\\ln 2$，说明左端点级数**收敛**；而\n\n$$\\sum_{n=1}^{10^4}\\frac{1}{n}\\approx 9.7876,\\qquad \\sum_{n=1}^{10^6}\\frac{1}{n}\\approx 14.3927$$\n\n部分和**持续增长、没有上界**，说明右端点级数**发散**。与端点讨论结论一致 ✓\n\n> **关于官方答案册的排版提示**：答案册第 3 页第 21 题的解答中，紧接着\"收敛半径为 $R = 1$\"之后的两行分别是\"当 $x = -1$ 时，$\\sum\\frac{(-1)^n}{n}$ 是收敛的\"与\"当 $x = 1$ 时，$\\sum\\frac1n$ 是发散的\"，**这两句本身完全正确**，且与题面推导一致。答案册排版紧凑，两行非常贴近，**读者不要因为行距小而把两个端点的标签看反**。收敛域 $[-1,1)$ 的结论无误。",
+   "points": [
+    {
+     "text": "求收敛半径（用比值法）。\n\n记 $a_n = \\dfrac{1}{n}$，则\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty}\\frac{\\dfrac{1}{n+1}}{\\dfrac{1}{n}} = \\lim_{n\\to\\infty}\\frac{n}{n+1} = 1$$\n\n$$R = \\frac{1}{\\rho} = 1$$",
+     "partial": 2
+    },
+    {
+     "text": "由 $|x| < 1$ 得收敛区间 $(-1, 1)$。",
+     "partial": 2
+    },
+    {
+     "text": "端点必须单独讨论。\n\n左端点 $x = -1$：级数变为\n\n$$\\sum_{n=1}^{\\infty}\\frac{(-1)^{n}}{n} = -1 + \\frac12 - \\frac13 + \\frac14 - \\cdots$$\n\n这是交错级数，$u_n = \\frac1n$ 单调递减且趋于 $0$，由莱布尼茨判别法知它收敛（且其和为 $-\\ln 2$）。\n\n右端点 $x = 1$：级数变为\n\n$$\\sum_{n=1}^{\\infty}\\frac{1}{n}$$\n\n这是调和级数，$p = 1 \\le 1$，发散。",
+     "partial": 2
+    },
+    {
+     "text": "合并结论。",
+     "partial": 2
+    },
+    {
+     "text": "左端点收敛、右端点发散，故收敛域为",
+     "partial": 2
+    },
+    {
+     "text": "$$[-1,\\ 1)$$；独立验算（数值印证）：取部分和看趋势——；$$\\sum_{n=1}^{10^4}\\frac{(-1)^n}{n}\\approx -0.6930,\\qquad -\\ln 2\\approx -0.6931$$；上面这个部分和稳定趋于有限值 $-\\ln 2$，说明左端点级数收敛；；而；$$\\sum_{n=1}^{10^4}\\frac{1}{n}\\approx 9.7876,\\qquad \\sum_{n=1}^{10^6}\\frac{1}{n}\\approx 14.3927$$；部分和持续增长、没有上界，说明右端点级数发散。；与端点讨论结论一致 ✓；> 关于官方答案册的排版提示：答案册第 3 页第 21 题的解答中，紧接着\"收敛半径为 $R = 1$\"之后的两行分别是\"当 $x = -1$ 时，$\\sum\\frac{(-1)^n}{n}$ 是收敛的\"与\"当 $x = 1$ 时，$\\sum\\frac1n$ 是发散的\"，这两句本身完全正确，且与题面推导一致。；答案册排版紧凑，两行非常贴近，读者不要因为行距小而把两个端点的标签看反。；收敛域 $[-1,1)$ 的结论无误。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：幂级数的收敛半径与收敛域（端点单独讨论）（无穷级数）。\n**考点出处**：幂级数的收敛半径与收敛域（无穷级数）\n**第一步：求收敛半径（用比值法）。**\n\n记 $a_n = \\dfrac{1}{n}$，则\n\n$$\\rho = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| = \\lim_{n\\to\\infty}\\frac{\\dfrac{1}{n+1}}{\\dfrac{1}{n}} = \\lim_{n\\to\\infty}\\frac{n}{n+1} = 1$$\n\n$$R = \\frac{1}{\\rho} = 1$$\n\n**第二步：由 $|x| < 1$ 得收敛区间 $(-1, 1)$。**\n\n**第三步：端点必须单独讨论。**\n\n**左端点 $x = -1$**：级数变为\n\n$$\\sum_{n=1}^{\\infty}\\frac{(-1)^{n}}{n} = -1 + \\frac12 - \\frac13 + \\frac14 - \\cdots$$\n\n这是**交错级数**，$u_n = \\frac1n$ 单调递减且趋于 $0$，由**莱布尼茨判别法**知它**收敛**（且其和为 $-\\ln 2$）。\n\n**右端点 $x = 1$**：级数变为\n\n$$\\sum_{n=1}^{\\infty}\\frac{1}{n}$$\n\n这是**调和级数**，$p = 1 \\le 1$，**发散**。\n\n**第四步：合并结论。**\n\n左端点收敛、右端点发散，故收敛域为\n\n$$[-1,\\ 1)$$\n\n**独立验算（数值印证）**：取部分和看趋势——\n\n$$\\sum_{n=1}^{10^4}\\frac{(-1)^n}{n}\\approx -0.6930,\\qquad -\\ln 2\\approx -0.6931$$\n\n上面这个部分和**稳定趋于有限值** $-\\ln 2$，说明左端点级数**收敛**；而\n\n$$\\sum_{n=1}^{10^4}\\frac{1}{n}\\approx 9.7876,\\qquad \\sum_{n=1}^{10^6}\\frac{1}{n}\\approx 14.3927$$\n\n部分和**持续增长、没有上界**，说明右端点级数**发散**。与端点讨论结论一致 ✓\n\n> **关于官方答案册的排版提示**：答案册第 3 页第 21 题的解答中，紧接着\"收敛半径为 $R = 1$\"之后的两行分别是\"当 $x = -1$ 时，$\\sum\\frac{(-1)^n}{n}$ 是收敛的\"与\"当 $x = 1$ 时，$\\sum\\frac1n$ 是发散的\"，**这两句本身完全正确**，且与题面推导一致。答案册排版紧凑，两行非常贴近，**读者不要因为行距小而把两个端点的标签看反**。收敛域 $[-1,1)$ 的结论无误。",
+   "misconception": "- **端点必须单独讨论，不能只写 $(-1,1)$**：这是幂级数题最大的失分点。题目问的是**收敛域**（含端点），不是**收敛区间**。**只写 $(-1,1)$ 会丢掉左端点那一分。**\n- **$x = -1$ 收敛、$x = 1$ 发散，两边结论相反**：$\\sum\\frac{(-1)^n}{n}$ 是收敛的交错级数（莱布尼茨判别法），$\\sum\\frac1n$ 是发散的调和级数。**把这两个端点搞反，答案就会写成 $(-1,1]$——这是最常见的错误。**\n- **收敛半径公式中的次序**：$\\rho = \\lim\\left|\\frac{a_{n+1}}{a_n}\\right|$ 时 $R = \\frac1\\rho$；若用 $\\rho = \\lim\\left|\\frac{a_n}{a_{n+1}}\\right|$，则 $R = \\rho$ 直接就是半径。**两套记法别混用。**\n- **$\\frac{n}{n+1}\\to1$（不是 $\\to0$）**：这是求极限的基本功，写成 $0$ 会导致 $R = \\infty$ 的荒谬结论。\n- **莱布尼茨判别法要验证两个条件**：$u_n$ **单调递减**且 $\\to 0$。$\\frac1n$ 两条都满足，可以下结论。\n- **$p$ 级数判据在右端点的应用**：$p = 1$ 恰好是发散的分界线，**\"$\\le1$ 发散\"要记牢**。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 855
+  }
+ ]
+}

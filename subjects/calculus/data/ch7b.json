@@ -1,0 +1,2223 @@
+{
+ "chapter": 7,
+ "questions": [
+  {
+   "id": "ky-2019-10-b59962",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "2019 年考研数学（一）第 10 题",
+    "kind": "exam-original",
+    "year": 2019,
+    "region": "全国",
+    "paper": "2019 年考研数学（一）",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2019年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2019年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2019年解析/2019年解析.md"
+   },
+   "stem": "微分方程 $2yy' - y^2 - 2 = 0$ 满足条件 $y(0) = 1$ 的特解 $y = \\_$",
+   "options": null,
+   "answer": [
+    "$\\sqrt{3\\mathrm{e}^x - 2}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\sqrt{3\\mathrm{e}^x - 2}$\n【解】方法一 由 $2yy' - y^2 - 2 = 0$ 得 $\\frac{2y\\mathrm{d}y}{y^2 + 2} = \\mathrm{d}x$\n\n积分得 $\\ln (y^2 + 2) = x + C$\n\n再由 $y(0) = 1$ 得 $C = \\ln 3$ ，即 $\\ln (y^2 +2) = \\ln (3\\mathrm{e}^x)$\n\n从而 $y^{2} + 2 = 3\\mathrm{e}^{x}$ ，故 $y = \\sqrt{3\\mathrm{e}^x - 2}$\n\n方法二 令 $y^{2} = u$ ，则原方程化为 $\\frac{\\mathrm{d}u}{\\mathrm{d}x} - u = 2$\n\n解得 $u = \\left(\\int 2\\mathrm{e}^{\\int -\\mathrm{d}x}\\mathrm{d}x + C\\right)\\mathrm{e}^{-\\int -\\mathrm{d}x} = (-2\\mathrm{e}^{-x} + C)\\mathrm{e}^{x},$\n\n即 $y^{2} = (-2\\mathrm{e}^{-x} + C)\\mathrm{e}^{x} = Ce^{x} - 2$\n\n由 $y(0) = 1$ 得 $C = 3$ ，故 $y = \\sqrt{3\\mathrm{e}^x - 2}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 519
+  },
+  {
+   "id": "c7-t1",
+   "type": "term",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §7.1 微分方程的基本概念",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "名词解释：微分方程的通解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "若微分方程的解中含有相互独立的任意常数，且其个数恰好等于方程的阶数，则称这样的解为微分方程的通解；通过初始条件确定任意常数后得到的解称为特解。",
+   "points": [
+    {
+     "text": "定义：含独立任意常数、且常数的个数等于方程阶数的解称为通解。",
+     "partial": 2
+    },
+    {
+     "text": "与特解的关系：由初始条件（如 $y(x_0)=y_0$，$y'(x_0)=y_1$）定出通解中的常数，得特解；$n$ 阶方程需要 $n$ 个初始条件。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：通解、特解与初始条件的定义见 §7.1。\n**考点出处**：同济《高等数学》第七版 §7.1 微分方程的基本概念。",
+   "misconception": "⚠️易错点：通解未必包含方程的一切解（可能漏掉不能由通解取值得到的「奇解」）；通解的图形是一族积分曲线，特解是其中一条。",
+   "extension": null,
+   "tags": [
+    "通解",
+    "概念",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 520
+  },
+  {
+   "id": "c7-t2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7.4",
+   "knowledgePoints": [
+    "7.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §7.4 一阶线性微分方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "简答：写出一阶线性微分方程的标准形式及其通解公式，并说明常数变易法的思想。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "标准形式：$\\dfrac{dy}{dx}+P(x)y=Q(x)$。通解公式：$y=e^{-\\int P(x)dx}\\left[\\int Q(x)e^{\\int P(x)dx}\\,dx+C\\right]$。常数变易法思想：先解对应齐次方程 $y'+P(x)y=0$ 得 $y=Ce^{-\\int P dx}$，再把常数 $C$ 换成待定函数 $C(x)$ 代入原方程定出 $C(x)$，即得非齐次通解——「把齐次解中的常数升级为函数」。",
+   "points": [
+    {
+     "text": "标准形式 $y'+P(x)y=Q(x)$ 与通解公式 $y=e^{-\\int Pdx}\\left[\\int Qe^{\\int Pdx}dx+C\\right]$。",
+     "partial": 2
+    },
+    {
+     "text": "常数变易法：齐次通解 $Ce^{-\\int Pdx}$ 中的 $C$ 换成待定函数 $C(x)$，代回原方程解出 $C'(x)=Q(x)e^{\\int Pdx}$；或用积分因子——两边乘 $e^{\\int Pdx}$ 后左端恰为 $\\left(ye^{\\int Pdx}\\right)'$，直接积分。",
+     "partial": 2
+    },
+    {
+     "text": "注意：公式中不定积分取一个原函数即可，常数并入最后的 $C$；先把方程化成 $y'$ 系数为 $1$ 的标准形式再读出 $P,Q$。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：一阶线性方程的解法与常数变易法见 §7.4。\n**考点出处**：同济《高等数学》第七版 §7.4 一阶线性微分方程。",
+   "misconception": "⚠️易错点：先把方程化成标准形式（$y'$ 的系数为 $1$）再读出 $P,Q$；套公式时 $e^{\\int Pdx}$ 与 $e^{-\\int Pdx}$ 的位置易颠倒。",
+   "extension": null,
+   "tags": [
+    "一阶线性方程",
+    "简答",
+    "必背"
+   ],
+   "verify": [],
+   "idx": 521
+  },
+  {
+   "id": "c7-c1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7.4",
+   "knowledgePoints": [
+    "7.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §7.4 一阶线性微分方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求微分方程 $y'+2y=4x$ 的通解。",
+   "options": null,
+   "answer": [
+    "y=C*exp(-2x)+2x-1"
+   ],
+   "accept": null,
+   "answerText": "一阶线性方程，$P(x)=2$，$Q(x)=4x$。\n齐次通解 $Y=Ce^{-2x}$；设特解 $y^*=ax+b$，代入方程：$a+2(ax+b)=4x$，比较得 $2a=4$、$a+2b=0$，即 $a=2$、$b=-1$。\n故通解 $y=Ce^{-2x}+2x-1$。",
+   "points": [
+    {
+     "text": "识别一阶线性方程，齐次通解 $Y=Ce^{-2x}$。",
+     "partial": 2
+    },
+    {
+     "text": "设特解 $y^*=ax+b$（$Q$ 为一次多项式），代入比较系数得 $a=2,b=-1$。",
+     "partial": 2
+    },
+    {
+     "text": "通解 = 齐次通解 + 特解：$y=Ce^{-2x}+2x-1$。",
+     "partial": 2
+    },
+    {
+     "text": "代回验证：$y'=-2Ce^{-2x}+2$，$y'+2y=2+4x-2=4x$ 成立。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：一阶线性方程通解公式或待定系数法（§7.4）。\n**考点出处**：同济《高等数学》第七版 §7.4 一阶线性微分方程。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "一阶线性方程",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "dsolve",
+     "code": "FF=Function('FF'); C1=symbols('C1'); sol=dsolve(FF(x).diff(x)+2*FF(x)-4*x, FF(x)); simplify(sol.rhs - (C1*exp(-2*x)+2*x-1))",
+     "expected": "0"
+    }
+   ],
+   "idx": 522
+  },
+  {
+   "id": "ky-2008-3-b7108b",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "2008 年考研数学（一）第 3 题",
+    "kind": "exam-original",
+    "year": 2008,
+    "region": "全国",
+    "paper": "2008 年考研数学（一）",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2008年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2008年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2008年解析/2008年解析.md"
+   },
+   "stem": "在下列微分方程中，以 $y = C_1\\mathrm{e}^x +C_2\\cos 2x + C_3\\sin 2x(C_1,C_2,C_3$ 为任意常数）为通解的是（",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】由微分方程的通解为 $y = C_{1}\\mathrm{e}^{x} + C_{2}\\cos 2x + C_{3}\\sin 2x$ ，得三阶常系数齐次线性微分方程的特征根为 $\\lambda_1 = 1, \\lambda_{2,3} = \\pm 2\\mathrm{i}$\n\n特征方程为 $(\\lambda - 1)(\\lambda^2 + 4) = 0$ ，即 $\\lambda^3 - \\lambda^2 + 4\\lambda - 4 = 0$\n\n故所求微分方程为 $y^{\\prime \\prime} - y^{\\prime \\prime} + 4y^{\\prime} - 4y = 0$ ，应选(D).",
+   "points": [
+    {
+     "text": "【解】由微分方程的通解为 $y = C_{1}\\mathrm{e}^{x} + C_{2}\\cos 2x + C_{3}\\sin 2x$ ，得三阶常系数齐次线性微分方程的特征根为 $\\lambda_1 = 1, \\lambda_{2,3} = \\pm 2\\mathrm{i}$",
+     "partial": 2
+    },
+    {
+     "text": "特征方程为 $(\\lambda - 1)(\\lambda^2 + 4) = 0$ ，即 $\\lambda^3 - \\lambda^2 + 4\\lambda - 4 = 0$",
+     "partial": 2
+    },
+    {
+     "text": "故所求微分方程为 $y^{\\prime \\prime} - y^{\\prime \\prime} + 4y^{\\prime} - 4y = 0$ ，应选(D).",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：D\n【解】由微分方程的通解为 $y = C_{1}\\mathrm{e}^{x} + C_{2}\\cos 2x + C_{3}\\sin 2x$ ，得三阶常系数齐次线性微分方程的特征根为 $\\lambda_1 = 1, \\lambda_{2,3} = \\pm 2\\mathrm{i}$\n\n特征方程为 $(\\lambda - 1)(\\lambda^2 + 4) = 0$ ，即 $\\lambda^3 - \\lambda^2 + 4\\lambda - 4 = 0$\n\n故所求微分方程为 $y^{\\prime \\prime} - y^{\\prime \\prime} + 4y^{\\prime} - 4y = 0$ ，应选(D).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 523
+  },
+  {
+   "id": "c7-c2",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.2",
+   "knowledgePoints": [
+    "7.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §7.2 可分离变量的微分方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求微分方程 $y'=x(1+y^2)$ 的通解。",
+   "options": null,
+   "answer": [
+    "arctan(y)=x^2/2+C"
+   ],
+   "accept": null,
+   "answerText": "分离变量：$\\dfrac{dy}{1+y^2}=x\\,dx$，两边积分：\n$$\\arctan y=\\frac{x^2}{2}+C,$$\n即 $y=\\tan\\left(\\dfrac{x^2}{2}+C\\right)$（或保留隐函数形式）。",
+   "points": [
+    {
+     "text": "分离变量：$\\dfrac{dy}{1+y^2}=x\\,dx$（注意 $1+y^2\\ne0$ 恒成立）。",
+     "partial": 2
+    },
+    {
+     "text": "两边积分：$\\arctan y=\\dfrac{x^2}{2}+C$。",
+     "partial": 2
+    },
+    {
+     "text": "可显化为 $y=\\tan\\left(\\dfrac{x^2}{2}+C\\right)$。",
+     "partial": 2
+    },
+    {
+     "text": "核验：对隐函数形式求导 $\\dfrac{y'}{1+y^2}=x$，还原原方程。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：可分离变量方程（§7.2），积分后出现反正切。\n**考点出处**：同济《高等数学》第七版 §7.2 可分离变量的微分方程。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "可分离变量",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "核验",
+     "code": "C1=symbols('C1'); yx=tan(x**2/2+C1); simplify(yx.diff(x) - x*(1+yx**2))",
+     "expected": "0"
+    }
+   ],
+   "idx": 524
+  },
+  {
+   "id": "ky-2016-3-63d5a1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "2016 年考研数学（一）第 3 题",
+    "kind": "exam-original",
+    "year": 2016,
+    "region": "全国",
+    "paper": "2016 年考研数学（一）",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2016年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2016年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2016年解析/2016年解析.md"
+   },
+   "stem": "若 $y = (1 + x^{2})^{2} - \\sqrt{1 + x^{2}}$ , $y = (1 + x^{2})^{2} + \\sqrt{1 + x^{2}}$ 是微分方程 $y' + p(x)y = q(x)$ 的两个解, 则 $q(x) = (\\quad)$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "【解】设 $y_{1} = (1 + x^{2})^{2} - \\sqrt{1 + x^{2}}$ ， $y_{2} = (1 + x^{2})^{2} + \\sqrt{1 + x^{2}}$\n\n由线性微分方程解的结构得 $y_{2} - y_{1} = 2\\sqrt{1 + x^{2}}$ 为 $y^\\prime +p(x)y = 0$ 的解，\n\n代入得 $\\frac{2x}{\\sqrt{1 + x^2}} + p(x) \\cdot 2\\sqrt{1 + x^2} = 0$ ，解得 $p(x) = -\\frac{x}{1 + x^2}$\n\n再由线性微分方程解的结构，得 $\\frac{y_1 + y_2}{2} = (1 + x^2)^2$ 为 $y^\\prime +p(x)y = q(x)$ 的解，代入得 $4x(1 + x^{2}) - \\frac{x}{1 + x^{2}}\\bullet (1 + x^{2})^{2} = q(x)$ ，解得 $q(x) = 3x(1 + x^2)$ ，应选(A).",
+   "points": [
+    {
+     "text": "【解】设 $y_{1} = (1 + x^{2})^{2} - \\sqrt{1 + x^{2}}$ ， $y_{2} = (1 + x^{2})^{2} + \\sqrt{1 + x^{2}}$",
+     "partial": 2
+    },
+    {
+     "text": "由线性微分方程解的结构得 $y_{2} - y_{1} = 2\\sqrt{1 + x^{2}}$ 为 $y^\\prime +p(x)y = 0$ 的解，",
+     "partial": 2
+    },
+    {
+     "text": "代入得 $\\frac{2x}{\\sqrt{1 + x^2}} + p(x) \\cdot 2\\sqrt{1 + x^2} = 0$ ，解得 $p(x) = -\\frac{x}{1 + x^2}$",
+     "partial": 2
+    },
+    {
+     "text": "再由线性微分方程解的结构，得 $\\frac{y_1 + y_2}{2} = (1 + x^2)^2$ 为 $y^\\prime +p(x)y = q(x)$ 的解，代入得 $4x(1 + x^{2}) - \\frac{x}{1 + x^{2}}\\bullet (1 + x^{2})^{2} = q(x)$ ，解得 $q(x) = 3x(1 + x^2)$ ，应选(A).",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：A\n【解】设 $y_{1} = (1 + x^{2})^{2} - \\sqrt{1 + x^{2}}$ ， $y_{2} = (1 + x^{2})^{2} + \\sqrt{1 + x^{2}}$\n\n由线性微分方程解的结构得 $y_{2} - y_{1} = 2\\sqrt{1 + x^{2}}$ 为 $y^\\prime +p(x)y = 0$ 的解，\n\n代入得 $\\frac{2x}{\\sqrt{1 + x^2}} + p(x) \\cdot 2\\sqrt{1 + x^2} = 0$ ，解得 $p(x) = -\\frac{x}{1 + x^2}$\n\n再由线性微分方程解的结构，得 $\\frac{y_1 + y_2}{2} = (1 + x^2)^2$ 为 $y^\\prime +p(x)y = q(x)$ 的解，代入得 $4x(1 + x^{2}) - \\frac{x}{1 + x^{2}}\\bullet (1 + x^{2})^{2} = q(x)$ ，解得 $q(x) = 3x(1 + x^2)$ ，应选(A).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 525
+  },
+  {
+   "id": "c7-c3",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §7.7 二阶常系数非齐次线性微分方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求微分方程 $y''-5y'+6y=xe^{2x}$ 的通解。",
+   "options": null,
+   "answer": [
+    "y=C1*exp(2x)+C2*exp(3x)-(x^2/2+x)*exp(2x)"
+   ],
+   "accept": null,
+   "answerText": "特征方程 $r^2-5r+6=0$，根 $r_1=2$，$r_2=3$，齐次通解 $Y=C_1e^{2x}+C_2e^{3x}$。\n右端 $\\lambda=2$ 为单特征根，设 $y^*=x(ax+b)e^{2x}$。代入原方程（利用 $\\left(e^{2x}u\\right)$ 代换后方程化为 $u''-u'=x$）：\n解得 $u=-\\dfrac{x^2}{2}-x$，即 $y^*=-\\left(\\dfrac{x^2}{2}+x\\right)e^{2x}$。\n故通解\n$$y=C_1e^{2x}+C_2e^{3x}-\\left(\\frac{x^2}{2}+x\\right)e^{2x}.$$\n（可直接代入验证：$y^{*\\prime\\prime}-5y^{*\\prime}+6y^*=xe^{2x}$。）",
+   "points": [
+    {
+     "text": "求特征根 $r_1=2,r_2=3$，写齐次通解 $C_1e^{2x}+C_2e^{3x}$。",
+     "partial": 2
+    },
+    {
+     "text": "判定 $\\lambda=2$ 为单特征根，特解设 $y^*=x(ax+b)e^{2x}$。",
+     "partial": 2
+    },
+    {
+     "text": "代入定系数得 $a=-\\dfrac12,\\ b=-1$，即 $y^*=-\\left(\\dfrac{x^2}{2}+x\\right)e^{2x}$。",
+     "partial": 2
+    },
+    {
+     "text": "通解 = 齐次通解 + 特解，并代回验证特解满足原方程。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：二阶常系数非齐次方程的特征方程法与待定系数法（§7.6、§7.7）。\n**考点出处**：同济《高等数学》第七版 §7.7 二阶常系数非齐次线性微分方程。",
+   "misconception": "⚠️易错点：待定系数代入时运算量大，常用代换 $y=e^{2x}u(x)$ 把方程降为 $u''-u'=x$ 再解；特解中 $x(ax+b)$ 的幂次由 $\\lambda$ 是单根决定，差一次整题皆错。",
+   "extension": null,
+   "tags": [
+    "二阶常系数非齐次",
+    "困难",
+    "高频考点"
+   ],
+   "verify": [
+    {
+     "desc": "特征根",
+     "code": "rr=symbols('rr'); solve(rr**2 - 5*rr + 6, rr)",
+     "expected": "[2, 3]"
+    },
+    {
+     "desc": "特解核验",
+     "code": "yp=exp(2*x)*(-(x**2)/2 - x); simplify(yp.diff(x,2) - 5*yp.diff(x) + 6*yp - x*exp(2*x))",
+     "expected": "0"
+    }
+   ],
+   "idx": 526
+  },
+  {
+   "id": "ky2-1987-1-601144",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "1987 年考研数学三第 1 题",
+    "kind": "exam-original",
+    "year": 1987,
+    "region": "全国",
+    "paper": "1987 年考研数学三",
+    "number": "1",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分7分)\n求微分方程 $x\\frac{\\mathrm{dy}}{\\mathrm{dx}} = x - y$ 满足条件 $y\\big|_{x = \\sqrt{2}} = 0$ 的解.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "通解为 $y = \\frac{1}{x}\\left(\\frac{1}{2} x^2 + C\\right)$ , 满足初始条件的特解为 $y = \\frac{x}{2} - \\frac{1}{x}$ .",
+   "points": [
+    {
+     "text": "通解为 $y = \\frac{1}{x}\\left(\\frac{1}{2} x^2 + C\\right)$ , 满足初始条件的特解为 $y = \\frac{x}{2} - \\frac{1}{x}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n通解为 $y = \\frac{1}{x}\\left(\\frac{1}{2} x^2 + C\\right)$ , 满足初始条件的特解为 $y = \\frac{x}{2} - \\frac{1}{x}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 527
+  },
+  {
+   "id": "ky2-1987-2-1bd341",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1987 年考研数学三第 2 题",
+    "kind": "exam-original",
+    "year": 1987,
+    "region": "全国",
+    "paper": "1987 年考研数学三",
+    "number": "2",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分8分)\n求微分方程 $y^{\\prime \\prime} + 2y^{\\prime} + y = x\\mathrm{e}^{x}$ 的通解",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "原方程的通解为 $y = (C_{1} + C_{2}x)\\mathrm{e}^{-2x} + \\frac{1}{4} (x - 1)\\mathrm{e}^{x}.$",
+   "points": [
+    {
+     "text": "原方程的通解为 $y = (C_{1} + C_{2}x)\\mathrm{e}^{-2x} + \\frac{1}{4} (x - 1)\\mathrm{e}^{x}.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n原方程的通解为 $y = (C_{1} + C_{2}x)\\mathrm{e}^{-2x} + \\frac{1}{4} (x - 1)\\mathrm{e}^{x}.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 528
+  },
+  {
+   "id": "ky2-1988-3-96377b",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1988 年考研数学三第 3 题",
+    "kind": "exam-original",
+    "year": 1988,
+    "region": "全国",
+    "paper": "1988 年考研数学三",
+    "number": "3",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求微分方程 $y' + \\frac{1}{x} y = \\frac{1}{x(x^2 + 1)}$ 的通解（一般解）.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "通解为 $y = \\frac{1}{x} (\\arctan x + C)$ .",
+   "points": [
+    {
+     "text": "通解为 $y = \\frac{1}{x} (\\arctan x + C)$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n通解为 $y = \\frac{1}{x} (\\arctan x + C)$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 529
+  },
+  {
+   "id": "ky2-1989-x-8ae23f",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "1989 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1989,
+    "region": "全国",
+    "paper": "1989 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求微分方程 $xy' + (1 - x)y = \\mathrm{e}^{2x}(0 < x < +\\infty)$ 满足 $y(1) = 0$ 的解.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "原方程即 $y' + \\frac{1 - x}{x}y = \\frac{e^{2x}}{x}$ . $\\nu(x) = \\exp\\left(\\int \\frac{1 - x}{x} \\, \\mathrm{d}x\\right) = \\frac{x}{\\mathrm{e}^x}$ ，所以通解为\n$$\ny = \\frac {1}{\\nu (x)} \\left(\\int \\frac {\\mathrm {e} ^ {2 x}}{x} \\nu (x) \\mathrm {d} x + C\\right) = \\frac {\\mathrm {e} ^ {x}}{x} \\left(\\int \\frac {\\mathrm {e} ^ {2 x}}{x} \\frac {x}{\\mathrm {e} ^ {x}} \\mathrm {d} x + C\\right) = \\frac {\\mathrm {e} ^ {x} (\\mathrm {e} ^ {x} + C)}{x}.\n$$\n代入初始条件，得 $C = -\\mathbf{e}$ ，因此特解为 $y = \\frac{\\mathrm{e}^x(\\mathrm{e}^x - \\mathrm{e})}{x}$",
+   "points": [
+    {
+     "text": "原方程即 $y' + \\frac{1 - x}{x}y = \\frac{e^{2x}}{x}$ . $\\nu(x) = \\exp\\left(\\int \\frac{1 - x}{x} \\, \\mathrm{d}x\\right) = \\frac{x}{\\mathrm{e}^x}$ ，所以通解为\n$$\ny = \\frac {1}{\\nu (x)} \\left(\\int \\frac {\\mathrm {e} ^ {2 x}}{x} \\nu (x) \\mathrm {d} x + C\\right) = \\frac {\\mathrm {e} ^ {x}}{x} \\left(\\int \\frac {\\mathrm {e} ^ {2 x}}{x} \\frac {x}{\\mathrm {e} ^ {x}} \\mathrm {d} x + C\\right) = \\frac {\\mathrm {e} ^ {x} (\\mathrm {e} ^ {x} + C)}{x}.\n$$\n代入初始条件，得 $C = -\\mathbf{e}$ ，因此特解为 $y = \\frac{\\mathrm{e}^x(\\mathrm{e}^x - \\mathrm{e})}{x}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n原方程即 $y' + \\frac{1 - x}{x}y = \\frac{e^{2x}}{x}$ . $\\nu(x) = \\exp\\left(\\int \\frac{1 - x}{x} \\, \\mathrm{d}x\\right) = \\frac{x}{\\mathrm{e}^x}$ ，所以通解为\n$$\ny = \\frac {1}{\\nu (x)} \\left(\\int \\frac {\\mathrm {e} ^ {2 x}}{x} \\nu (x) \\mathrm {d} x + C\\right) = \\frac {\\mathrm {e} ^ {x}}{x} \\left(\\int \\frac {\\mathrm {e} ^ {2 x}}{x} \\frac {x}{\\mathrm {e} ^ {x}} \\mathrm {d} x + C\\right) = \\frac {\\mathrm {e} ^ {x} (\\mathrm {e} ^ {x} + C)}{x}.\n$$\n代入初始条件，得 $C = -\\mathbf{e}$ ，因此特解为 $y = \\frac{\\mathrm{e}^x(\\mathrm{e}^x - \\mathrm{e})}{x}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 530
+  },
+  {
+   "id": "ky2-1990-x-f7b438",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1990 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1990,
+    "region": "全国",
+    "paper": "1990 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求微分方程 $y^{\\prime \\prime} + 4y^{\\prime} + 4y = \\mathrm{e}^{ax}$ 之通解，其中 $a$ 为实数.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$a \\neq -2$ 时, $y = (C_{1} + C_{2}x)\\mathrm{e}^{-2x} + \\frac{1}{(a + 2)^{2}}\\mathrm{e}^{ax}$ .\n$a = -2$ 时, $y = \\left(C_{1} + C_{2} x\\right) \\mathrm{e}^{-2 x} + \\frac{1}{2} x^{2} \\mathrm{e}^{-2 x}$ .",
+   "points": [
+    {
+     "text": "$a \\neq -2$ 时, $y = (C_{1} + C_{2}x)\\mathrm{e}^{-2x} + \\frac{1}{(a + 2)^{2}}\\mathrm{e}^{ax}$ .\n$a = -2$ 时, $y = \\left(C_{1} + C_{2} x\\right) \\mathrm{e}^{-2 x} + \\frac{1}{2} x^{2} \\mathrm{e}^{-2 x}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$a \\neq -2$ 时, $y = (C_{1} + C_{2}x)\\mathrm{e}^{-2x} + \\frac{1}{(a + 2)^{2}}\\mathrm{e}^{ax}$ .\n$a = -2$ 时, $y = \\left(C_{1} + C_{2} x\\right) \\mathrm{e}^{-2 x} + \\frac{1}{2} x^{2} \\mathrm{e}^{-2 x}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 531
+  },
+  {
+   "id": "ky2-1991-5-bada6c",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1991 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1991,
+    "region": "全国",
+    "paper": "1991 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求微分方程 $xy' + y = xe^{x}$ 满足 $y(1) = 1$ 的特解",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$y = \\frac{x - 1}{x}\\mathrm{e}^{x} + \\frac{1}{x}.$",
+   "points": [
+    {
+     "text": "$y = \\frac{x - 1}{x}\\mathrm{e}^{x} + \\frac{1}{x}.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$y = \\frac{x - 1}{x}\\mathrm{e}^{x} + \\frac{1}{x}.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 532
+  },
+  {
+   "id": "ky2-1991-x-9af4d3",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1991 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1991,
+    "region": "全国",
+    "paper": "1991 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求微分方程 $y^{\\prime \\prime} + y = x + \\cos x$ 的通解",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$y = C_{1}\\cos x + C_{2}\\sin x + x + \\frac{1}{2} x\\sin x$ ，其中 $C_1$ 和 $C_2$ 为任意常数",
+   "points": [
+    {
+     "text": "$y = C_{1}\\cos x + C_{2}\\sin x + x + \\frac{1}{2} x\\sin x$ ，其中 $C_1$ 和 $C_2$ 为任意常数",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$y = C_{1}\\cos x + C_{2}\\sin x + x + \\frac{1}{2} x\\sin x$ ，其中 $C_1$ 和 $C_2$ 为任意常数",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 533
+  },
+  {
+   "id": "ky2-1992-5-47a7ad",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1992 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1992,
+    "region": "全国",
+    "paper": "1992 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求微分方程 $(y - x^{3})\\mathrm{d}x - 2x\\mathrm{d}y = 0$ 的通解",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "当 $x > 0$ 时 $y = C\\sqrt{x} - \\frac{1}{5} x^3$ , 当 $x < 0$ 时 $y = C\\sqrt{-x} - \\frac{1}{5} x^3$ .\n四、（本题满分9分）\n同试卷一第三[3]题\n五、（本题满分9分）\n求微分方程 $y^{\\prime \\prime} - 3y^{\\prime} + 2y = x\\mathrm{e}^{x}$ 的通解\n解. $y = C_{1} \\mathrm{e}^{x} + C_{2} \\mathrm{e}^{2x} - \\left(\\frac{1}{2} x^{2} + x\\right) \\mathrm{e}^{x}$ .",
+   "points": [
+    {
+     "text": "当 $x > 0$ 时 $y = C\\sqrt{x} - \\frac{1}{5} x^3$ , 当 $x < 0$ 时 $y = C\\sqrt{-x} - \\frac{1}{5} x^3$ .\n四、（本题满分9分）\n同试卷一第三[3]题\n五、（本题满分9分）\n求微分方程 $y^{\\prime \\prime} - 3y^{\\prime} + 2y = x\\mathrm{e}^{x}$ 的通解\n解. $y = C_{1} \\mathrm{e}^{x} + C_{2} \\mathrm{e}^{2x} - \\left(\\frac{1}{2} x^{2} + x\\right) \\mathrm{e}^{x}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n当 $x > 0$ 时 $y = C\\sqrt{x} - \\frac{1}{5} x^3$ , 当 $x < 0$ 时 $y = C\\sqrt{-x} - \\frac{1}{5} x^3$ .\n四、（本题满分9分）\n同试卷一第三[3]题\n五、（本题满分9分）\n求微分方程 $y^{\\prime \\prime} - 3y^{\\prime} + 2y = x\\mathrm{e}^{x}$ 的通解\n解. $y = C_{1} \\mathrm{e}^{x} + C_{2} \\mathrm{e}^{2x} - \\left(\\frac{1}{2} x^{2} + x\\right) \\mathrm{e}^{x}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 534
+  },
+  {
+   "id": "ky2-1993-5-8a821b",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1993 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1993,
+    "region": "全国",
+    "paper": "1993 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求微分方程 $(x^{2} - 1)\\mathrm{d}y + (2xy - \\cos x)\\mathrm{d}x = 0$ 满足初始条件 $y|_{x=0} = 0$ 的特解.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$y = \\frac{\\sin x - 1}{x^2 - 1}$",
+   "points": [
+    {
+     "text": "$y = \\frac{\\sin x - 1}{x^2 - 1}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$y = \\frac{\\sin x - 1}{x^2 - 1}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 535
+  },
+  {
+   "id": "ky2-1993-x-c54f99",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1993 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1993,
+    "region": "全国",
+    "paper": "1993 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设二阶常系数线性微分方程 $y'' + \\alpha y' + \\beta y = \\gamma \\mathrm{e}^{x}$ 的一个特解为 $y = \\mathrm{e}^{2x} + (1 + x)\\mathrm{e}^{x}$ , 试确定常数 $\\alpha, \\beta, \\gamma$ , 并求该方程的通解.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$y = C_{1}\\mathrm{e}^{x} + C_{2}\\mathrm{e}^{2x} + x\\mathrm{e}^{x}$",
+   "points": [
+    {
+     "text": "$y = C_{1}\\mathrm{e}^{x} + C_{2}\\mathrm{e}^{2x} + x\\mathrm{e}^{x}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$y = C_{1}\\mathrm{e}^{x} + C_{2}\\mathrm{e}^{2x} + x\\mathrm{e}^{x}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 536
+  },
+  {
+   "id": "ky2-1994-x-eb7634",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1994 年考研数学三第 — 题",
+    "kind": "exam-original",
+    "year": 1994,
+    "region": "全国",
+    "paper": "1994 年考研数学三",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求微分方程 $y'' + a^2y = \\sin x$ 的通解，其中常数 $a > 0$ .",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "当 $a \\neq 1$ 时, 原方程的通解为 $y = C_{1} \\cos ax + C_{2} \\sin ax + \\frac{1}{a^{2} - 1} \\sin x$ ;\n当 $a = 1$ 时，原方程的通解为 $y = C_{1}\\cos x + C_{2}\\sin x + - \\frac{1}{2} x\\cos x.$",
+   "points": [
+    {
+     "text": "当 $a \\neq 1$ 时, 原方程的通解为 $y = C_{1} \\cos ax + C_{2} \\sin ax + \\frac{1}{a^{2} - 1} \\sin x$ ;\n当 $a = 1$ 时，原方程的通解为 $y = C_{1}\\cos x + C_{2}\\sin x + - \\frac{1}{2} x\\cos x.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n当 $a \\neq 1$ 时, 原方程的通解为 $y = C_{1} \\cos ax + C_{2} \\sin ax + \\frac{1}{a^{2} - 1} \\sin x$ ;\n当 $a = 1$ 时，原方程的通解为 $y = C_{1}\\cos x + C_{2}\\sin x + - \\frac{1}{2} x\\cos x.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 537
+  },
+  {
+   "id": "ky2-1996-5-65d2b6",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1996 年考研数学三第 5 题",
+    "kind": "exam-original",
+    "year": 1996,
+    "region": "全国",
+    "paper": "1996 年考研数学三",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求微分方程 $y'' + y' = x^2$ 的通解",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$y = \\frac{1}{3} x^3 -x^2 +2x + C_1 + C_2\\mathrm{e}^{-x}.$",
+   "points": [
+    {
+     "text": "$y = \\frac{1}{3} x^3 -x^2 +2x + C_1 + C_2\\mathrm{e}^{-x}.$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$y = \\frac{1}{3} x^3 -x^2 +2x + C_1 + C_2\\mathrm{e}^{-x}.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学三"
+   ],
+   "verify": [],
+   "idx": 538
+  },
+  {
+   "id": "ky2-1997-4-213719",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1997 年考研数学二第 4 题",
+    "kind": "exam-original",
+    "year": 1997,
+    "region": "全国",
+    "paper": "1997 年考研数学二",
+    "number": "4",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求微分方程 $\\left(3x^{2} + 2xy - y^{2}\\right)\\mathrm{d}x + \\left(x^{2} - 2xy\\right)\\mathrm{d}y = 0$ 的通解.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "通解为 $xy^{2} - x^{2}y - x^{3} = C$ .",
+   "points": [
+    {
+     "text": "通解为 $xy^{2} - x^{2}y - x^{3} = C$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n通解为 $xy^{2} - x^{2}y - x^{3} = C$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 539
+  },
+  {
+   "id": "ky2-1997-5-51c887",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "1997 年考研数学二第 5 题",
+    "kind": "exam-original",
+    "year": 1997,
+    "region": "全国",
+    "paper": "1997 年考研数学二",
+    "number": "5",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "已知 $y_{1} = x\\mathrm{e}^{x} + \\mathrm{e}^{2x}, y_{2} = x\\mathrm{e}^{x} + \\mathrm{e}^{-x}, y_{3} = x\\mathrm{e}^{x} + \\mathrm{e}^{2x} - \\mathrm{e}^{-x}$ 是某二阶线性非齐次微分方程的三个解，求此微分方程.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$y^{\\prime \\prime} - y^{\\prime} - 2y = \\mathrm{e}^{x} - 2x\\mathrm{e}^{x}$",
+   "points": [
+    {
+     "text": "$y^{\\prime \\prime} - y^{\\prime} - 2y = \\mathrm{e}^{x} - 2x\\mathrm{e}^{x}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n$y^{\\prime \\prime} - y^{\\prime} - 2y = \\mathrm{e}^{x} - 2x\\mathrm{e}^{x}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 540
+  },
+  {
+   "id": "ky2-1997-x-a9feba",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1997 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 1997,
+    "region": "全国",
+    "paper": "1997 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "$\\lambda$ 取何值时，方程组 $\\left\\{ \\begin{array}{ll}2x_{1} + \\lambda x_{2} - x_{3} = 1\\\\ \\lambda x_{1} - x_{2} + x_{3} = 2\\\\ 4x_{1} + 5x_{2} - 5x_{3} = -1 \\end{array} \\right.$ 无解，有唯一解或由无穷多解？并在有无穷多解时写出方程组的通解.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "当 $\\lambda = -\\frac{4}{5}$ 时, 原方程组无解.\n当 $\\lambda \\neq 1$ 且 $\\lambda \\neq -\\frac{4}{5}$ 时，方程组有唯一解.\n当 $\\lambda = 1$ 时, 原方程组有无穷多解, 其通解为\n$$\n\\left(x _ {1}, x _ {2}, x _ {3}\\right) ^ {T} = \\left(1, - 1, 0\\right) ^ {T} + k (0, 1, 1) ^ {T},\n$$\n其中 $k$ 为任意常数",
+   "points": [
+    {
+     "text": "当 $\\lambda = -\\frac{4}{5}$ 时, 原方程组无解.\n当 $\\lambda \\neq 1$ 且 $\\lambda \\neq -\\frac{4}{5}$ 时，方程组有唯一解.\n当 $\\lambda = 1$ 时, 原方程组有无穷多解, 其通解为\n$$\n\\left(x _ {1}, x _ {2}, x _ {3}\\right) ^ {T} = \\left(1, - 1, 0\\right) ^ {T} + k (0, 1, 1) ^ {T},\n$$\n其中 $k$ 为任意常数",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n当 $\\lambda = -\\frac{4}{5}$ 时, 原方程组无解.\n当 $\\lambda \\neq 1$ 且 $\\lambda \\neq -\\frac{4}{5}$ 时，方程组有唯一解.\n当 $\\lambda = 1$ 时, 原方程组有无穷多解, 其通解为\n$$\n\\left(x _ {1}, x _ {2}, x _ {3}\\right) ^ {T} = \\left(1, - 1, 0\\right) ^ {T} + k (0, 1, 1) ^ {T},\n$$\n其中 $k$ 为任意常数",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 541
+  },
+  {
+   "id": "ky2-1998-x-eb7634",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "1998 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 1998,
+    "region": "全国",
+    "paper": "1998 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "利用代换 $y = \\frac{u}{\\cos x}$ 将方程 $y''\\cos x - 2y'\\sin x + 3y\\cos x = \\mathrm{e}^x$ 化简，并求出原方程的通解.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "原方程化简为 $u'' + 4u = \\mathrm{e}^x$ ，其通解为 $y = C_1\\frac{\\cos 2x}{\\cos x} + C_2\\sin x + \\frac{\\mathrm{e}^x}{5\\cos x}$ .",
+   "points": [
+    {
+     "text": "原方程化简为 $u'' + 4u = \\mathrm{e}^x$ ，其通解为 $y = C_1\\frac{\\cos 2x}{\\cos x} + C_2\\sin x + \\frac{\\mathrm{e}^x}{5\\cos x}$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n原方程化简为 $u'' + 4u = \\mathrm{e}^x$ ，其通解为 $y = C_1\\frac{\\cos 2x}{\\cos x} + C_2\\sin x + \\frac{\\mathrm{e}^x}{5\\cos x}$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 542
+  },
+  {
+   "id": "ky2-1999-x-637be5",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "1999 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 1999,
+    "region": "全国",
+    "paper": "1999 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求初值问题 $\\left\\{ \\begin{array}{l} \\left(y + \\sqrt{x^2 + y^2}\\right) \\mathrm{d}x - x \\mathrm{~d}y = 0 (x > 0) \\\\ \\left.y\\right|_{x=1} = 0 \\end{array} \\right.$ 的解.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "将原方程变形得\n$$\n\\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\frac {y + \\sqrt {x ^ {2} + y ^ {2}}}{x} = \\frac {y}{x} + \\sqrt {1 + (\\frac {y}{x}) ^ {2}}.\n$$\n令 $\\frac{y}{x} = u$ ，则 $\\frac{\\mathrm{d}y}{\\mathrm{d}x} = u + x\\frac{\\mathrm{d}u}{\\mathrm{d}x}$ ，代入上式得\n$$\nu + x \\frac {\\mathrm {d} u}{\\mathrm {d} x} = u + \\sqrt {1 + u ^ {2}} \\Rightarrow \\frac {\\mathrm {d} u}{\\sqrt {1 + u ^ {2}}} = \\frac {\\mathrm {d} x}{x}.\n$$\n积分得 $\\ln (u + \\sqrt{1 + u^2}) = \\ln (Cx)$ , 其中 $C$ 是常数. 由 $x > 0$ 得 $C > 0$ , 去掉根号得\n$$\nu + \\sqrt {1 + u ^ {2}} = C x \\Rightarrow \\frac {y}{x} + \\sqrt {1 + \\left(\\frac {y}{x}\\right) ^ {2}} = C x.\n$$\n把 $y \\big|_{x=1} = 0$ 代入并化简得 $y = \\frac{1}{2} x^2 - \\frac{1}{2} (x > 0)$ .",
+   "points": [
+    {
+     "text": "将原方程变形得\n$$\n\\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\frac {y + \\sqrt {x ^ {2} + y ^ {2}}}{x} = \\frac {y}{x} + \\sqrt {1 + (\\frac {y}{x}) ^ {2}}.\n$$\n令 $\\frac{y}{x} = u$ ，则 $\\frac{\\mathrm{d}y}{\\mathrm{d}x} = u + x\\frac{\\mathrm{d}u}{\\mathrm{d}x}$ ，代入上式得\n$$\nu + x \\frac {\\mathrm {d} u}{\\mathrm {d} x} = u + \\sqrt {1 + u ^ {2}} \\Rightarrow \\frac {\\mathrm {d} u}{\\sqrt {1 + u ^ {2}}} = \\frac {\\mathrm {d} x}{x}.\n$$\n积分得 $\\ln (u + \\sqrt{1 + u^2}) = \\ln (Cx)$ , 其中 $C$ 是常数. 由 $x > 0$ 得 $C > 0$ , 去掉根号得\n$$\nu + \\sqrt {1 + u ^ {2}} = C x \\Rightarrow \\frac {y}{x} + \\sqrt {1 + \\left(\\frac {y}{x}\\right) ^ {2}} = C x.\n$$\n把 $y \\big|_{x=1} = 0$ 代入并化简得 $y = \\frac{1}{2} x^2 - \\frac{1}{2} (x > 0)$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n将原方程变形得\n$$\n\\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\frac {y + \\sqrt {x ^ {2} + y ^ {2}}}{x} = \\frac {y}{x} + \\sqrt {1 + (\\frac {y}{x}) ^ {2}}.\n$$\n令 $\\frac{y}{x} = u$ ，则 $\\frac{\\mathrm{d}y}{\\mathrm{d}x} = u + x\\frac{\\mathrm{d}u}{\\mathrm{d}x}$ ，代入上式得\n$$\nu + x \\frac {\\mathrm {d} u}{\\mathrm {d} x} = u + \\sqrt {1 + u ^ {2}} \\Rightarrow \\frac {\\mathrm {d} u}{\\sqrt {1 + u ^ {2}}} = \\frac {\\mathrm {d} x}{x}.\n$$\n积分得 $\\ln (u + \\sqrt{1 + u^2}) = \\ln (Cx)$ , 其中 $C$ 是常数. 由 $x > 0$ 得 $C > 0$ , 去掉根号得\n$$\nu + \\sqrt {1 + u ^ {2}} = C x \\Rightarrow \\frac {y}{x} + \\sqrt {1 + \\left(\\frac {y}{x}\\right) ^ {2}} = C x.\n$$\n把 $y \\big|_{x=1} = 0$ 代入并化简得 $y = \\frac{1}{2} x^2 - \\frac{1}{2} (x > 0)$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 543
+  },
+  {
+   "id": "ky2-2001-x-e42116",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.3",
+   "knowledgePoints": [
+    "7.3"
+   ],
+   "source": {
+    "text": "2001 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2001,
+    "region": "全国",
+    "paper": "2001 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "设函数 $f(x), g(x)$ 满足 $f'(x) = g(x), g'(x) = 2\\mathrm{e}^x - f(x)$ ，且 $f(0) = 0, g(0) = 2$ ，求\n$$\n\\int_ {0} ^ {\\pi} \\left[ \\frac {g (x)}{1 + x} - \\frac {f (x)}{(1 + x) ^ {2}} \\right] \\mathrm {d} x.\n$$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由已知条件, 可得 $f(x)$ 满足\n$$\nf ^ {\\prime \\prime} (x) + f (x) = 2 \\mathrm {e} ^ {x}, \\quad f (0) = 0,, f ^ {\\prime} (0) = 2.\n$$\n此为二阶常系数线性非齐次方程，解得\n$$\nf (x) = C _ {1} \\cos x + C _ {2} \\sin x + e ^ {x}.\n$$\n从而所求的积分可以计算如下：\n$$\n\\begin{array}{l} \\int_ {0} ^ {\\pi} \\left[ \\frac {g (x)}{1 + x} - \\frac {f (x)}{(1 + x) ^ {2}} \\right] d x = \\int_ {0} ^ {\\pi} \\frac {g (x) (1 + x) - f (x)}{(1 + x) ^ {2}} d x \\\\ = \\int_ {0} ^ {\\pi} \\frac {f ^ {\\prime} (x) (1 + x) - f (x)}{(1 + x) ^ {2}} d x = \\int_ {0} ^ {\\pi} d \\left(\\frac {f (x)}{1 + x}\\right) \\\\ = \\left[ \\frac {f (x)}{1 + x} \\right] _ {0} ^ {\\pi} = \\frac {f (\\pi)}{1 + \\pi} - \\frac {f (0)}{1 + 0} = \\frac {1 + \\mathrm {e} ^ {\\pi}}{1 + \\pi}. \\\\ \\end{array}\n$$",
+   "points": [
+    {
+     "text": "由已知条件, 可得 $f(x)$ 满足\n$$\nf ^ {\\prime \\prime} (x) + f (x) = 2 \\mathrm {e} ^ {x}, \\quad f (0) = 0,, f ^ {\\prime} (0) = 2.\n$$\n此为二阶常系数线性非齐次方程，解得\n$$\nf (x) = C _ {1} \\cos x + C _ {2} \\sin x + e ^ {x}.\n$$\n从而所求的积分可以计算如下：\n$$\n\\begin{array}{l} \\int_ {0} ^ {\\pi} \\left[ \\frac {g (x)}{1 + x} - \\frac {f (x)}{(1 + x) ^ {2}} \\right] d x = \\int_ {0} ^ {\\pi} \\frac {g (x) (1 + x) - f (x)}{(1 + x) ^ {2}} d x \\\\ = \\int_ {0} ^ {\\pi} \\frac {f ^ {\\prime} (x) (1 + x) - f (x)}{(1 + x) ^ {2}} d x = \\int_ {0} ^ {\\pi} d \\left(\\frac {f (x)}{1 + x}\\right) \\\\ = \\left[ \\frac {f (x)}{1 + x} \\right] _ {0} ^ {\\pi} = \\frac {f (\\pi)}{1 + \\pi} - \\frac {f (0)}{1 + 0} = \\frac {1 + \\mathrm {e} ^ {\\pi}}{1 + \\pi}. \\\\ \\end{array}\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由已知条件, 可得 $f(x)$ 满足\n$$\nf ^ {\\prime \\prime} (x) + f (x) = 2 \\mathrm {e} ^ {x}, \\quad f (0) = 0,, f ^ {\\prime} (0) = 2.\n$$\n此为二阶常系数线性非齐次方程，解得\n$$\nf (x) = C _ {1} \\cos x + C _ {2} \\sin x + e ^ {x}.\n$$\n从而所求的积分可以计算如下：\n$$\n\\begin{array}{l} \\int_ {0} ^ {\\pi} \\left[ \\frac {g (x)}{1 + x} - \\frac {f (x)}{(1 + x) ^ {2}} \\right] d x = \\int_ {0} ^ {\\pi} \\frac {g (x) (1 + x) - f (x)}{(1 + x) ^ {2}} d x \\\\ = \\int_ {0} ^ {\\pi} \\frac {f ^ {\\prime} (x) (1 + x) - f (x)}{(1 + x) ^ {2}} d x = \\int_ {0} ^ {\\pi} d \\left(\\frac {f (x)}{1 + x}\\right) \\\\ = \\left[ \\frac {f (x)}{1 + x} \\right] _ {0} ^ {\\pi} = \\frac {f (\\pi)}{1 + \\pi} - \\frac {f (0)}{1 + 0} = \\frac {1 + \\mathrm {e} ^ {\\pi}}{1 + \\pi}. \\\\ \\end{array}\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 544
+  },
+  {
+   "id": "ky2-2002-x-e4a93f",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "2002 年考研数学二第 — 题",
+    "kind": "exam-original",
+    "year": 2002,
+    "region": "全国",
+    "paper": "2002 年考研数学二",
+    "number": "None",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "求微分方程 $x \\mathrm{~d} y + (x - 2 y) \\mathrm{~d} x = 0$ 的一个解 $y = y(x)$ , 使得由曲线 $y = y(x)$ 与直线 $x = 1$ , $x = 2$ 以及 $x$ 轴所围成的平面图形绕 $x$ 轴旋转一周的旋转体体积最小.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "这是一阶线性微分方程 $y' - \\frac{2}{x} y = -1$ , 由通解公式有\n$$\ny = \\mathrm {e} ^ {\\int \\frac {2}{x} \\mathrm {d} x} \\left[ - \\int \\mathrm {e} ^ {- \\int \\frac {2}{x} \\mathrm {d} x} \\mathrm {d} x + C \\right] = x ^ {2} \\left[ - \\int \\frac {1}{x ^ {2}} \\mathrm {d} x + C \\right] = x ^ {2} \\left(\\frac {1}{x} + C\\right) = x + C x ^ {2}.\n$$\n由曲线 $y = x + Cx^{2}$ 与 $x = 1, x = 2$ 及 $x$ 轴围成的图形绕 $x$ 轴旋转一周的旋转体的体积为\n$$\nV = \\pi \\int_ {1} ^ {2} (x + C x ^ {2}) ^ {2} d x = \\pi \\left(\\frac {3 1}{5} C ^ {2} + \\frac {1 5}{2} C + \\frac {7}{3}\\right).\n$$\n求导并令导数为零，得到\n$$\n\\frac {\\mathrm {d} V}{\\mathrm {d} C} = \\pi \\left(\\frac {6 2}{5} C + \\frac {1 5}{2}\\right) = 0.\n$$\n解得 $C = -\\frac{75}{124}$ . 又 $V''(C) > 0$ , 故 $C = -\\frac{75}{124}$ 为 $V$ 的惟一极小值点, 也是最小值点, 于是所求曲线为 $y = x - \\frac{75}{124} x^2$ .",
+   "points": [
+    {
+     "text": "这是一阶线性微分方程 $y' - \\frac{2}{x} y = -1$ , 由通解公式有\n$$\ny = \\mathrm {e} ^ {\\int \\frac {2}{x} \\mathrm {d} x} \\left[ - \\int \\mathrm {e} ^ {- \\int \\frac {2}{x} \\mathrm {d} x} \\mathrm {d} x + C \\right] = x ^ {2} \\left[ - \\int \\frac {1}{x ^ {2}} \\mathrm {d} x + C \\right] = x ^ {2} \\left(\\frac {1}{x} + C\\right) = x + C x ^ {2}.\n$$\n由曲线 $y = x + Cx^{2}$ 与 $x = 1, x = 2$ 及 $x$ 轴围成的图形绕 $x$ 轴旋转一周的旋转体的体积为\n$$\nV = \\pi \\int_ {1} ^ {2} (x + C x ^ {2}) ^ {2} d x = \\pi \\left(\\frac {3 1}{5} C ^ {2} + \\frac {1 5}{2} C + \\frac {7}{3}\\right).\n$$\n求导并令导数为零，得到\n$$\n\\frac {\\mathrm {d} V}{\\mathrm {d} C} = \\pi \\left(\\frac {6 2}{5} C + \\frac {1 5}{2}\\right) = 0.\n$$\n解得 $C = -\\frac{75}{124}$ . 又 $V''(C) > 0$ , 故 $C = -\\frac{75}{124}$ 为 $V$ 的惟一极小值点, 也是最小值点, 于是所求曲线为 $y = x - \\frac{75}{124} x^2$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n这是一阶线性微分方程 $y' - \\frac{2}{x} y = -1$ , 由通解公式有\n$$\ny = \\mathrm {e} ^ {\\int \\frac {2}{x} \\mathrm {d} x} \\left[ - \\int \\mathrm {e} ^ {- \\int \\frac {2}{x} \\mathrm {d} x} \\mathrm {d} x + C \\right] = x ^ {2} \\left[ - \\int \\frac {1}{x ^ {2}} \\mathrm {d} x + C \\right] = x ^ {2} \\left(\\frac {1}{x} + C\\right) = x + C x ^ {2}.\n$$\n由曲线 $y = x + Cx^{2}$ 与 $x = 1, x = 2$ 及 $x$ 轴围成的图形绕 $x$ 轴旋转一周的旋转体的体积为\n$$\nV = \\pi \\int_ {1} ^ {2} (x + C x ^ {2}) ^ {2} d x = \\pi \\left(\\frac {3 1}{5} C ^ {2} + \\frac {1 5}{2} C + \\frac {7}{3}\\right).\n$$\n求导并令导数为零，得到\n$$\n\\frac {\\mathrm {d} V}{\\mathrm {d} C} = \\pi \\left(\\frac {6 2}{5} C + \\frac {1 5}{2}\\right) = 0.\n$$\n解得 $C = -\\frac{75}{124}$ . 又 $V''(C) > 0$ , 故 $C = -\\frac{75}{124}$ 为 $V$ 的惟一极小值点, 也是最小值点, 于是所求曲线为 $y = x - \\frac{75}{124} x^2$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 545
+  },
+  {
+   "id": "ky2-2005-18-38fde3",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "2005 年考研数学二第 18 题",
+    "kind": "exam-original",
+    "year": 2005,
+    "region": "全国",
+    "paper": "2005 年考研数学二",
+    "number": "18",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 12 分)\n用变量代换 $x = \\cos t$ （ $0 < t < \\pi$ ）化简微分方程 $(1 - x^{2})y^{\\prime \\prime} - xy^{\\prime} + y = 0$ ，并求其满足 $y\\big|_{x=0} = 1, y^{\\prime}\\big|_{x=0} = 2$ 的特解.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由复合函数求导的链式法则得\n$$\ny ^ {\\prime} = \\frac {\\mathrm {d} y}{\\mathrm {d} t} \\cdot \\frac {\\mathrm {d} t}{\\mathrm {d} x} = - \\frac {1}{\\sin t} \\frac {\\mathrm {d} y}{\\mathrm {d} t},\n$$\n$$\ny ^ {\\prime \\prime} = \\frac {\\mathrm {d} y ^ {\\prime}}{\\mathrm {d} t} \\cdot \\frac {\\mathrm {d} t}{\\mathrm {d} x} = \\left(\\frac {\\cos t}{\\sin^ {2} t} \\frac {\\mathrm {d} y}{\\mathrm {d} t} - \\frac {1}{\\sin t} \\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} t ^ {2}}\\right) \\cdot \\left(- \\frac {1}{\\sin t}\\right).\n$$\n代入原方程得\n$$\n(1 - \\cos^ {2} t) \\left(\\frac {\\cos t}{\\sin^ {2} t} \\frac {\\mathrm {d} y}{\\mathrm {d} t} - \\frac {1}{\\sin t} \\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} t ^ {2}}\\right) \\cdot \\left(- \\frac {1}{\\sin t}\\right) - \\cos t \\left(- \\frac {1}{\\sin t} \\frac {\\mathrm {d} y}{\\mathrm {d} t}\\right) + y = 0.\n$$\n化简得 $\\frac{\\mathrm{d}^2y}{\\mathrm{d}t^2} + y = 0$ ，其特征方程为 $r^2 + 1 = 0$ ，特征根 $r_{1,2} = \\pm i$ ，通解为 $y = C_1 \\cos t + C_2 \\sin t$ 。所以\n$$\ny = C _ {1} \\cos t + C _ {2} \\sin t = C _ {1} x + C _ {2} \\sqrt {1 - x ^ {2}},\n$$\n$$\ny ^ {\\prime} = C _ {1} x ^ {\\prime} + C _ {2} \\left(\\sqrt {1 - x ^ {2}}\\right) ^ {\\prime} = C _ {1} + \\frac {2 x}{2 \\sqrt {1 - x ^ {2}}}.\n$$\n将初始条件 $y \\big|_{x=0} = 1, y' \\big|_{x=0} = 2$ 代入，解得 $C_1 = 2, C_2 = 1$ 。故所求特解为\n$$\ny = 2 x + \\sqrt {1 - x ^ {2}}, \\quad - 1 <   x <   1.\n$$",
+   "points": [
+    {
+     "text": "由复合函数求导的链式法则得\n$$\ny ^ {\\prime} = \\frac {\\mathrm {d} y}{\\mathrm {d} t} \\cdot \\frac {\\mathrm {d} t}{\\mathrm {d} x} = - \\frac {1}{\\sin t} \\frac {\\mathrm {d} y}{\\mathrm {d} t},\n$$\n$$\ny ^ {\\prime \\prime} = \\frac {\\mathrm {d} y ^ {\\prime}}{\\mathrm {d} t} \\cdot \\frac {\\mathrm {d} t}{\\mathrm {d} x} = \\left(\\frac {\\cos t}{\\sin^ {2} t} \\frac {\\mathrm {d} y}{\\mathrm {d} t} - \\frac {1}{\\sin t} \\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} t ^ {2}}\\right) \\cdot \\left(- \\frac {1}{\\sin t}\\right).\n$$\n代入原方程得\n$$\n(1 - \\cos^ {2} t) \\left(\\frac {\\cos t}{\\sin^ {2} t} \\frac {\\mathrm {d} y}{\\mathrm {d} t} - \\frac {1}{\\sin t} \\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} t ^ {2}}\\right) \\cdot \\left(- \\frac {1}{\\sin t}\\right) - \\cos t \\left(- \\frac {1}{\\sin t} \\frac {\\mathrm {d} y}{\\mathrm {d} t}\\right) + y = 0.\n$$\n化简得 $\\frac{\\mathrm{d}^2y}{\\mathrm{d}t^2} + y = 0$ ，其特征方程为 $r^2 + 1 = 0$ ，特征根 $r_{1,2} = \\pm i$ ，通解为 $y = C_1 \\cos t + C_2 \\sin t$ 。",
+     "partial": 2
+    },
+    {
+     "text": "所以\n$$\ny = C _ {1} \\cos t + C _ {2} \\sin t = C _ {1} x + C _ {2} \\sqrt {1 - x ^ {2}},\n$$\n$$\ny ^ {\\prime} = C _ {1} x ^ {\\prime} + C _ {2} \\left(\\sqrt {1 - x ^ {2}}\\right) ^ {\\prime} = C _ {1} + \\frac {2 x}{2 \\sqrt {1 - x ^ {2}}}.\n$$\n将初始条件 $y \\big|_{x=0} = 1, y' \\big|_{x=0} = 2$ 代入，解得 $C_1 = 2, C_2 = 1$ 。",
+     "partial": 2
+    },
+    {
+     "text": "故所求特解为\n$$\ny = 2 x + \\sqrt {1 - x ^ {2}}, \\quad - 1 <   x <   1.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由复合函数求导的链式法则得\n$$\ny ^ {\\prime} = \\frac {\\mathrm {d} y}{\\mathrm {d} t} \\cdot \\frac {\\mathrm {d} t}{\\mathrm {d} x} = - \\frac {1}{\\sin t} \\frac {\\mathrm {d} y}{\\mathrm {d} t},\n$$\n$$\ny ^ {\\prime \\prime} = \\frac {\\mathrm {d} y ^ {\\prime}}{\\mathrm {d} t} \\cdot \\frac {\\mathrm {d} t}{\\mathrm {d} x} = \\left(\\frac {\\cos t}{\\sin^ {2} t} \\frac {\\mathrm {d} y}{\\mathrm {d} t} - \\frac {1}{\\sin t} \\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} t ^ {2}}\\right) \\cdot \\left(- \\frac {1}{\\sin t}\\right).\n$$\n代入原方程得\n$$\n(1 - \\cos^ {2} t) \\left(\\frac {\\cos t}{\\sin^ {2} t} \\frac {\\mathrm {d} y}{\\mathrm {d} t} - \\frac {1}{\\sin t} \\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} t ^ {2}}\\right) \\cdot \\left(- \\frac {1}{\\sin t}\\right) - \\cos t \\left(- \\frac {1}{\\sin t} \\frac {\\mathrm {d} y}{\\mathrm {d} t}\\right) + y = 0.\n$$\n化简得 $\\frac{\\mathrm{d}^2y}{\\mathrm{d}t^2} + y = 0$ ，其特征方程为 $r^2 + 1 = 0$ ，特征根 $r_{1,2} = \\pm i$ ，通解为 $y = C_1 \\cos t + C_2 \\sin t$ 。所以\n$$\ny = C _ {1} \\cos t + C _ {2} \\sin t = C _ {1} x + C _ {2} \\sqrt {1 - x ^ {2}},\n$$\n$$\ny ^ {\\prime} = C _ {1} x ^ {\\prime} + C _ {2} \\left(\\sqrt {1 - x ^ {2}}\\right) ^ {\\prime} = C _ {1} + \\frac {2 x}{2 \\sqrt {1 - x ^ {2}}}.\n$$\n将初始条件 $y \\big|_{x=0} = 1, y' \\big|_{x=0} = 2$ 代入，解得 $C_1 = 2, C_2 = 1$ 。故所求特解为\n$$\ny = 2 x + \\sqrt {1 - x ^ {2}}, \\quad - 1 <   x <   1.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 546
+  },
+  {
+   "id": "ky2-2007-19-fdb7ab",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "2007 年考研数学二第 19 题",
+    "kind": "exam-original",
+    "year": 2007,
+    "region": "全国",
+    "paper": "2007 年考研数学二",
+    "number": "19",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 11 分)\n求微分方程 $y''(x + y'^2) = y'$ 满足初始条件 $y(1) = y'(1) = 1$ 的特解.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "令 $y' = p$ ，则 $y'' = p'$ ，原方程化为 $p'(x + p^2) = p$ 。即\n$$\n\\frac {\\mathrm {d} x}{\\mathrm {d} p} - \\frac {x}{p} = p.\n$$\n由一阶线性微分方程求解公式，得\n$$\nx = \\mathrm {e} ^ {\\int \\frac {1}{p} \\mathrm {d} p} \\left(\\int p \\mathrm {e} ^ {\\int - \\frac {1}{p} \\mathrm {d} p} \\mathrm {d} p + C _ {1}\\right) = p \\left(\\int \\mathrm {d} p + C _ {1}\\right) = p (p + C _ {1}).\n$$\n代入初始条件得 $C_{1} = 0$ , 于是 $p^{2} = x$ . 由 $y^{\\prime}(1) = 1$ 知 $p = \\sqrt{x}$ , 即\n$$\n\\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\sqrt {x} \\quad \\Rightarrow \\quad y = \\frac {2}{3} x ^ {\\frac {3}{2}} + C _ {2}.\n$$\n代入初始条件得 $C_{2} = \\frac{1}{3}$ , 所以特解为\n$$\ny = \\frac {2}{3} x ^ {\\frac {3}{2}} + \\frac {1}{3}.\n$$",
+   "points": [
+    {
+     "text": "令 $y' = p$ ，则 $y'' = p'$ ，原方程化为 $p'(x + p^2) = p$ 。",
+     "partial": 2
+    },
+    {
+     "text": "即\n$$\n\\frac {\\mathrm {d} x}{\\mathrm {d} p} - \\frac {x}{p} = p.\n$$\n由一阶线性微分方程求解公式，得\n$$\nx = \\mathrm {e} ^ {\\int \\frac {1}{p} \\mathrm {d} p} \\left(\\int p \\mathrm {e} ^ {\\int - \\frac {1}{p} \\mathrm {d} p} \\mathrm {d} p + C _ {1}\\right) = p \\left(\\int \\mathrm {d} p + C _ {1}\\right) = p (p + C _ {1}).\n$$\n代入初始条件得 $C_{1} = 0$ , 于是 $p^{2} = x$ . 由 $y^{\\prime}(1) = 1$ 知 $p = \\sqrt{x}$ , 即\n$$\n\\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\sqrt {x} \\quad \\Rightarrow \\quad y = \\frac {2}{3} x ^ {\\frac {3}{2}} + C _ {2}.\n$$\n代入初始条件得 $C_{2} = \\frac{1}{3}$ , 所以特解为\n$$\ny = \\frac {2}{3} x ^ {\\frac {3}{2}} + \\frac {1}{3}.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n令 $y' = p$ ，则 $y'' = p'$ ，原方程化为 $p'(x + p^2) = p$ 。即\n$$\n\\frac {\\mathrm {d} x}{\\mathrm {d} p} - \\frac {x}{p} = p.\n$$\n由一阶线性微分方程求解公式，得\n$$\nx = \\mathrm {e} ^ {\\int \\frac {1}{p} \\mathrm {d} p} \\left(\\int p \\mathrm {e} ^ {\\int - \\frac {1}{p} \\mathrm {d} p} \\mathrm {d} p + C _ {1}\\right) = p \\left(\\int \\mathrm {d} p + C _ {1}\\right) = p (p + C _ {1}).\n$$\n代入初始条件得 $C_{1} = 0$ , 于是 $p^{2} = x$ . 由 $y^{\\prime}(1) = 1$ 知 $p = \\sqrt{x}$ , 即\n$$\n\\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\sqrt {x} \\quad \\Rightarrow \\quad y = \\frac {2}{3} x ^ {\\frac {3}{2}} + C _ {2}.\n$$\n代入初始条件得 $C_{2} = \\frac{1}{3}$ , 所以特解为\n$$\ny = \\frac {2}{3} x ^ {\\frac {3}{2}} + \\frac {1}{3}.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 547
+  },
+  {
+   "id": "ky2-2009-18-fbcd65",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "2009 年考研数学二第 18 题",
+    "kind": "exam-original",
+    "year": 2009,
+    "region": "全国",
+    "paper": "2009 年考研数学二",
+    "number": "18",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n设非负函数 $y = y(x)$ （ $x \\geqslant 0$ ）满足微分方程 $xy'' - y' + 2 = 0$ ，当曲线 $y = y(x)$ 过原点时，其与直线 $x = 1$ 及 $y = 0$ 围成平面区域 $D$ 的面积为 2，求 $D$ 绕 $y$ 轴旋转所得旋转体体积.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "令 $p = y'$ , 代入微分方程得 $p' - \\frac{1}{x} p = -\\frac{2}{x}$ , 解得 $p = 2 + C_1 x$ , 即 $y' = 2 + C_1 x$ . 因此通解为 $y = C_2 + 2x + \\frac{C_1}{2} x^2$ , 其中 $C_1, C_2$ 为任意常数. 由题设, $y(0) = 0$ 即 $C_2 = 0$ , 而且\n$$\n2 = \\int_ {0} ^ {1} y (x) d x = \\int_ {0} ^ {1} \\left(2 x + \\frac {C _ {1}}{2} x ^ {2}\\right) d x = \\left[ x ^ {2} + \\frac {C _ {1}}{6} x ^ {3} \\right] _ {0} ^ {1} = 1 + \\frac {C _ {1}}{6},\n$$\n从而 $C_1 = 6$ ，于是所求非负函数为 $y = 2x + 3x^2 (x\\geqslant 0)$ . 所求体积为\n$$\nV = 2 \\pi \\int_ {0} ^ {1} x y (x) d x = 2 \\pi \\int_ {0} ^ {1} \\left(2 x ^ {2} + 3 x ^ {3}\\right) d x = \\frac {1 7}{6} \\pi .\n$$",
+   "points": [
+    {
+     "text": "令 $p = y'$ , 代入微分方程得 $p' - \\frac{1}{x} p = -\\frac{2}{x}$ , 解得 $p = 2 + C_1 x$ , 即 $y' = 2 + C_1 x$ . 因此通解为 $y = C_2 + 2x + \\frac{C_1}{2} x^2$ , 其中 $C_1, C_2$ 为任意常数. 由题设, $y(0) = 0$ 即 $C_2 = 0$ , 而且\n$$\n2 = \\int_ {0} ^ {1} y (x) d x = \\int_ {0} ^ {1} \\left(2 x + \\frac {C _ {1}}{2} x ^ {2}\\right) d x = \\left[ x ^ {2} + \\frac {C _ {1}}{6} x ^ {3} \\right] _ {0} ^ {1} = 1 + \\frac {C _ {1}}{6},\n$$\n从而 $C_1 = 6$ ，于是所求非负函数为 $y = 2x + 3x^2 (x\\geqslant 0)$ . 所求体积为\n$$\nV = 2 \\pi \\int_ {0} ^ {1} x y (x) d x = 2 \\pi \\int_ {0} ^ {1} \\left(2 x ^ {2} + 3 x ^ {3}\\right) d x = \\frac {1 7}{6} \\pi .\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n令 $p = y'$ , 代入微分方程得 $p' - \\frac{1}{x} p = -\\frac{2}{x}$ , 解得 $p = 2 + C_1 x$ , 即 $y' = 2 + C_1 x$ . 因此通解为 $y = C_2 + 2x + \\frac{C_1}{2} x^2$ , 其中 $C_1, C_2$ 为任意常数. 由题设, $y(0) = 0$ 即 $C_2 = 0$ , 而且\n$$\n2 = \\int_ {0} ^ {1} y (x) d x = \\int_ {0} ^ {1} \\left(2 x + \\frac {C _ {1}}{2} x ^ {2}\\right) d x = \\left[ x ^ {2} + \\frac {C _ {1}}{6} x ^ {3} \\right] _ {0} ^ {1} = 1 + \\frac {C _ {1}}{6},\n$$\n从而 $C_1 = 6$ ，于是所求非负函数为 $y = 2x + 3x^2 (x\\geqslant 0)$ . 所求体积为\n$$\nV = 2 \\pi \\int_ {0} ^ {1} x y (x) d x = 2 \\pi \\int_ {0} ^ {1} \\left(2 x ^ {2} + 3 x ^ {3}\\right) d x = \\frac {1 7}{6} \\pi .\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 548
+  },
+  {
+   "id": "ky2-2009-20-45eb60",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "2009 年考研数学二第 20 题",
+    "kind": "exam-original",
+    "year": 2009,
+    "region": "全国",
+    "paper": "2009 年考研数学二",
+    "number": "20",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 12 分)\n设 $y = y(x)$ 是区间 $(- \\pi, \\pi)$ 内过点 $\\left(-\\frac{\\pi}{\\sqrt{2}}, \\frac{\\pi}{\\sqrt{2}}\\right)$ 的光滑曲线，当 $-\\pi < x < 0$ 时，曲线上任一点处的法线都过原点，当 $0 \\leqslant x < \\pi$ 时，函数 $y(x)$ 满足 $y'' + y + x = 0$ 。求 $y(x)$ 的表达式。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "由题意, 当 $-\\pi < x < 0$ 时, $y = -\\frac{x}{y'}$ , 即 $y \\mathrm{~d} y = -x \\mathrm{~d} x$ , 得 $y^{2} = -x^{2} + C$ , 又曲线过点 $\\left(-\\frac{\\pi}{\\sqrt{2}}, \\frac{\\pi}{\\sqrt{2}}\\right)$ , 故 $C = \\pi^{2}$ , 从而有 $y = \\sqrt{\\pi^{2} - x^{2}}$ .\n当 $0 \\leqslant x < \\pi$ 时， $y(x)$ 满足 $y'' + y + x = 0$ 。它对应的齐次方程的通解为 $y^* = c_1 \\cos x + c_2 \\sin x$ ；设它有特解 $y^* = ax + b$ ，解得 $a = -1, b = 0$ ，故 $y^* = -x$ 。因此当 $0 \\leqslant x < \\pi$ 时 $y = C_1 \\cos x + C_2 \\sin x - x$ 。\n由于 $y = y(x)$ 是 $(- \\pi, \\pi)$ 内的光滑曲线，故它在 $x = 0$ 处连续且可导，于是由 $y(0^{-}) = \\pi = y(0^{+}) = C_{1}$ ，得 $C_{1} = \\pi$ ；由 $y_{-}^{\\prime}(0) = 0 = y_{+}^{\\prime}(0) = C_{2} - 1$ ，得 $C_{2} = 1$ 。所以 $y(x)$ 的表达式为\n$$\ny = \\left\\{ \\begin{array}{l l} \\sqrt {\\pi^ {2} - x ^ {2}}, & - \\pi <   x <   0; \\\\ \\pi \\cos x + \\sin x - x, & 0 \\leqslant x <   \\pi . \\end{array} \\right.\n$$",
+   "points": [
+    {
+     "text": "由题意, 当 $-\\pi < x < 0$ 时, $y = -\\frac{x}{y'}$ , 即 $y \\mathrm{~d} y = -x \\mathrm{~d} x$ , 得 $y^{2} = -x^{2} + C$ , 又曲线过点 $\\left(-\\frac{\\pi}{\\sqrt{2}}, \\frac{\\pi}{\\sqrt{2}}\\right)$ , 故 $C = \\pi^{2}$ , 从而有 $y = \\sqrt{\\pi^{2} - x^{2}}$ .\n当 $0 \\leqslant x < \\pi$ 时， $y(x)$ 满足 $y'' + y + x = 0$ 。",
+     "partial": 2
+    },
+    {
+     "text": "它对应的齐次方程的通解为 $y^* = c_1 \\cos x + c_2 \\sin x$ ；",
+     "partial": 2
+    },
+    {
+     "text": "设它有特解 $y^* = ax + b$ ，解得 $a = -1, b = 0$ ，故 $y^* = -x$ 。",
+     "partial": 2
+    },
+    {
+     "text": "因此当 $0 \\leqslant x < \\pi$ 时 $y = C_1 \\cos x + C_2 \\sin x - x$ 。",
+     "partial": 2
+    },
+    {
+     "text": "由于 $y = y(x)$ 是 $(- \\pi, \\pi)$ 内的光滑曲线，故它在 $x = 0$ 处连续且可导，于是由 $y(0^{-}) = \\pi = y(0^{+}) = C_{1}$ ，得 $C_{1} = \\pi$ ；",
+     "partial": 2
+    },
+    {
+     "text": "由 $y_{-}^{\\prime}(0) = 0 = y_{+}^{\\prime}(0) = C_{2} - 1$ ，得 $C_{2} = 1$ 。；所以 $y(x)$ 的表达式为\n$$\ny = \\left\\{ \\begin{array}{l l} \\sqrt {\\pi^ {2} - x ^ {2}}, & - \\pi <   x <   0; \\\\ \\pi \\cos x + \\sin x - x, & 0 \\leqslant x <   \\pi . \\end{array} \\right.\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n由题意, 当 $-\\pi < x < 0$ 时, $y = -\\frac{x}{y'}$ , 即 $y \\mathrm{~d} y = -x \\mathrm{~d} x$ , 得 $y^{2} = -x^{2} + C$ , 又曲线过点 $\\left(-\\frac{\\pi}{\\sqrt{2}}, \\frac{\\pi}{\\sqrt{2}}\\right)$ , 故 $C = \\pi^{2}$ , 从而有 $y = \\sqrt{\\pi^{2} - x^{2}}$ .\n当 $0 \\leqslant x < \\pi$ 时， $y(x)$ 满足 $y'' + y + x = 0$ 。它对应的齐次方程的通解为 $y^* = c_1 \\cos x + c_2 \\sin x$ ；设它有特解 $y^* = ax + b$ ，解得 $a = -1, b = 0$ ，故 $y^* = -x$ 。因此当 $0 \\leqslant x < \\pi$ 时 $y = C_1 \\cos x + C_2 \\sin x - x$ 。\n由于 $y = y(x)$ 是 $(- \\pi, \\pi)$ 内的光滑曲线，故它在 $x = 0$ 处连续且可导，于是由 $y(0^{-}) = \\pi = y(0^{+}) = C_{1}$ ，得 $C_{1} = \\pi$ ；由 $y_{-}^{\\prime}(0) = 0 = y_{+}^{\\prime}(0) = C_{2} - 1$ ，得 $C_{2} = 1$ 。所以 $y(x)$ 的表达式为\n$$\ny = \\left\\{ \\begin{array}{l l} \\sqrt {\\pi^ {2} - x ^ {2}}, & - \\pi <   x <   0; \\\\ \\pi \\cos x + \\sin x - x, & 0 \\leqslant x <   \\pi . \\end{array} \\right.\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 549
+  },
+  {
+   "id": "ky2-2014-16-22340e",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "2014 年考研数学二第 16 题",
+    "kind": "exam-original",
+    "year": 2014,
+    "region": "全国",
+    "paper": "2014 年考研数学二",
+    "number": "16",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "（本题满分10分）\n已知函数 $y = y\\left( x\\right)$ 满足微分方程 ${x}^{2} + {y}^{2}{y}^{\\prime } = 1 - {y}^{\\prime }$ ,且 $y\\left( 2\\right) = 0$ ,求 $y\\left( x\\right)$ 的极大值和极小值.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "将微分方程分离变量得 $(1 + y^{2})\\mathrm{d}y = (1 - x^{2})\\mathrm{d}x$ ，两边分别积分得通解为\n$$\n\\frac {1}{3} y ^ {3} + y = x - \\frac {1}{3} x ^ {3} + C.\n$$\n由 $y(2) = 0$ 得 $C = \\frac{2}{3}$ , 即\n$$\n\\frac {1}{3} y ^ {3} + y = x - \\frac {1}{3} x ^ {3} + \\frac {2}{3}.\n$$\n令 $\\frac{\\mathrm{dy}}{\\mathrm{dx}} = \\frac{1 - x^2}{1 + y^2} = 0$ 得 $x = \\pm 1$ ，且有\n$$\n\\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} x ^ {2}} = \\frac {- 2 x (1 + y ^ {2}) ^ {2} - 2 y (1 - x ^ {2}) ^ {2}}{(1 + y ^ {2}) ^ {3}}.\n$$\n当 $x = 1$ 时，可解得 $y = 1, y'' = -1 < 0$ ，函数取得极大值 $y = 1$ ；当 $x = -1$ 时，可解得 $y = 0, y'' = 2 > 0$ ，函数取得极小值 $y = 0$ .",
+   "points": [
+    {
+     "text": "将微分方程分离变量得 $(1 + y^{2})\\mathrm{d}y = (1 - x^{2})\\mathrm{d}x$ ，两边分别积分得通解为\n$$\n\\frac {1}{3} y ^ {3} + y = x - \\frac {1}{3} x ^ {3} + C.\n$$\n由 $y(2) = 0$ 得 $C = \\frac{2}{3}$ , 即\n$$\n\\frac {1}{3} y ^ {3} + y = x - \\frac {1}{3} x ^ {3} + \\frac {2}{3}.\n$$\n令 $\\frac{\\mathrm{dy}}{\\mathrm{dx}} = \\frac{1 - x^2}{1 + y^2} = 0$ 得 $x = \\pm 1$ ，且有\n$$\n\\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} x ^ {2}} = \\frac {- 2 x (1 + y ^ {2}) ^ {2} - 2 y (1 - x ^ {2}) ^ {2}}{(1 + y ^ {2}) ^ {3}}.\n$$\n当 $x = 1$ 时，可解得 $y = 1, y'' = -1 < 0$ ，函数取得极大值 $y = 1$ ；",
+     "partial": 2
+    },
+    {
+     "text": "当 $x = -1$ 时，可解得 $y = 0, y'' = 2 > 0$ ，函数取得极小值 $y = 0$ .",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n将微分方程分离变量得 $(1 + y^{2})\\mathrm{d}y = (1 - x^{2})\\mathrm{d}x$ ，两边分别积分得通解为\n$$\n\\frac {1}{3} y ^ {3} + y = x - \\frac {1}{3} x ^ {3} + C.\n$$\n由 $y(2) = 0$ 得 $C = \\frac{2}{3}$ , 即\n$$\n\\frac {1}{3} y ^ {3} + y = x - \\frac {1}{3} x ^ {3} + \\frac {2}{3}.\n$$\n令 $\\frac{\\mathrm{dy}}{\\mathrm{dx}} = \\frac{1 - x^2}{1 + y^2} = 0$ 得 $x = \\pm 1$ ，且有\n$$\n\\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} x ^ {2}} = \\frac {- 2 x (1 + y ^ {2}) ^ {2} - 2 y (1 - x ^ {2}) ^ {2}}{(1 + y ^ {2}) ^ {3}}.\n$$\n当 $x = 1$ 时，可解得 $y = 1, y'' = -1 < 0$ ，函数取得极大值 $y = 1$ ；当 $x = -1$ 时，可解得 $y = 0, y'' = 2 > 0$ ，函数取得极小值 $y = 0$ .",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 550
+  },
+  {
+   "id": "ky2-2016-19-9b0529",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "2016 年考研数学二第 19 题",
+    "kind": "exam-original",
+    "year": 2016,
+    "region": "全国",
+    "paper": "2016 年考研数学二",
+    "number": "19",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n已知 $y_{1}(x) = \\mathrm{e}^{x}$ , $y_{2}(x) = u(x)\\mathrm{e}^{x}$ 是二阶微分方程 $(2x - 1)y^{n} - (2x + 1)y^{\\prime} + 2y = 0$ 的解, 若 $u(-1) = e$ , $u(0) = -1$ , 求 $u(x)$ , 并写出该微分方程的通解.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "将 $y_{2}(x) = u(x)\\mathrm{e}^{x}$ 代入微分方程, 整理得\n$$\n(2 x - 1) u ^ {\\prime \\prime} (x) + (2 x - 3) u ^ {\\prime} (x) = 0.\n$$\n这是可降阶微分方程，解得 $u(x) = -(2x + 1)\\mathrm{e}^{-x}$ 。所以原微分方程的通解为\n$$\ny = k _ {1} y _ {1} (x) + k _ {2} y _ {2} (x) = k _ {1} \\mathrm {e} ^ {x} - k _ {2} (2 x + 1),\n$$\n其中 $k_{1}, k_{2}$ 为任意常数.",
+   "points": [
+    {
+     "text": "将 $y_{2}(x) = u(x)\\mathrm{e}^{x}$ 代入微分方程, 整理得\n$$\n(2 x - 1) u ^ {\\prime \\prime} (x) + (2 x - 3) u ^ {\\prime} (x) = 0.\n$$\n这是可降阶微分方程，解得 $u(x) = -(2x + 1)\\mathrm{e}^{-x}$ 。",
+     "partial": 2
+    },
+    {
+     "text": "所以原微分方程的通解为\n$$\ny = k _ {1} y _ {1} (x) + k _ {2} y _ {2} (x) = k _ {1} \\mathrm {e} ^ {x} - k _ {2} (2 x + 1),\n$$\n其中 $k_{1}, k_{2}$ 为任意常数.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n将 $y_{2}(x) = u(x)\\mathrm{e}^{x}$ 代入微分方程, 整理得\n$$\n(2 x - 1) u ^ {\\prime \\prime} (x) + (2 x - 3) u ^ {\\prime} (x) = 0.\n$$\n这是可降阶微分方程，解得 $u(x) = -(2x + 1)\\mathrm{e}^{-x}$ 。所以原微分方程的通解为\n$$\ny = k _ {1} y _ {1} (x) + k _ {2} y _ {2} (x) = k _ {1} \\mathrm {e} ^ {x} - k _ {2} (2 x + 1),\n$$\n其中 $k_{1}, k_{2}$ 为任意常数.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 551
+  },
+  {
+   "id": "ky2-2019-17-dcaec1",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "2019 年考研数学二第 17 题",
+    "kind": "exam-original",
+    "year": 2019,
+    "region": "全国",
+    "paper": "2019 年考研数学二",
+    "number": "17",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math2-Papers/blob/main/solutions/math2_1987-2019/math2_1987-2019.md"
+   },
+   "stem": "(本题满分 10 分)\n设函数 $y(x)$ 是微分方程 $y^\\prime -xy = \\frac{1}{2\\sqrt{x}}\\mathrm{e}^{\\frac{x^2}{2}}$ 满足条件 $y(1) = \\sqrt{\\mathrm{e}}$ 的特解.\n(I) 求 $y(x)$ 的表达式；\n(II) 设平面区域 $D = \\{(x, y) | 1 \\leqslant x \\leqslant 2, 0 \\leqslant y \\leqslant y(x)\\}$ , 求 $D$ 绕 $x$ 轴旋转一周所形成的旋转体的体积.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "(I) 由一阶线性微分方程的通解公式, 求得 $y = (\\sqrt{x} + C)\\mathrm{e}^{\\frac{x^2}{2}}$ , 再由初始条件 $y(1) = \\sqrt{\\mathrm{e}}$ 得 $C = 0$ , 所以特解为 $y(x) = \\sqrt{x}\\mathrm{e}^{\\frac{x^2}{2}}$ .\n(II) 由旋转体的体积公式得\n$$\nV = \\pi \\int_ {1} ^ {2} y (x) ^ {2} d x = \\pi \\int_ {1} ^ {2} x e ^ {x ^ {2}} d x = \\frac {\\pi}{2} (e ^ {4} - e).\n$$",
+   "points": [
+    {
+     "text": "(I) 由一阶线性微分方程的通解公式, 求得 $y = (\\sqrt{x} + C)\\mathrm{e}^{\\frac{x^2}{2}}$ , 再由初始条件 $y(1) = \\sqrt{\\mathrm{e}}$ 得 $C = 0$ , 所以特解为 $y(x) = \\sqrt{x}\\mathrm{e}^{\\frac{x^2}{2}}$ .\n(II) 由旋转体的体积公式得\n$$\nV = \\pi \\int_ {1} ^ {2} y (x) ^ {2} d x = \\pi \\int_ {1} ^ {2} x e ^ {x ^ {2}} d x = \\frac {\\pi}{2} (e ^ {4} - e).\n$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n(I) 由一阶线性微分方程的通解公式, 求得 $y = (\\sqrt{x} + C)\\mathrm{e}^{\\frac{x^2}{2}}$ , 再由初始条件 $y(1) = \\sqrt{\\mathrm{e}}$ 得 $C = 0$ , 所以特解为 $y(x) = \\sqrt{x}\\mathrm{e}^{\\frac{x^2}{2}}$ .\n(II) 由旋转体的体积公式得\n$$\nV = \\pi \\int_ {1} ^ {2} y (x) ^ {2} d x = \\pi \\int_ {1} ^ {2} x e ^ {x ^ {2}} d x = \\frac {\\pi}{2} (e ^ {4} - e).\n$$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题",
+    "考研数学二"
+   ],
+   "verify": [],
+   "idx": 552
+  },
+  {
+   "id": "ky-2018-18-eff411",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "2018 年考研数学（一）第 18 题",
+    "kind": "exam-original",
+    "year": 2018,
+    "region": "全国",
+    "paper": "2018 年考研数学（一）",
+    "number": "18",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2018年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2018年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2018年解析/2018年解析.md"
+   },
+   "stem": "已知微分方程 $y' + y = f(x)$ ，其中 $f(x)$ 是 $\\mathbf{R}$ 上的连续函数\n（I）若 $f(x) = x$ ，求方程的通解；\n（Ⅱ）若 $f(x)$ 是周期为 $T$ 的函数，证明：方程存在唯一的以 $T$ 为周期的解",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "（I）当 $f(x) = x$ 时，方程化为 $y^\\prime +y = x$ ，其通解为\n$$\ny = \\mathrm {e} ^ {- x} (C + \\int x \\mathrm {e} ^ {x} \\mathrm {d} x) = \\mathrm {e} ^ {- x} (C + x \\mathrm {e} ^ {x} - \\mathrm {e} ^ {x}) = C \\mathrm {e} ^ {- x} + x - 1.\n$$\n\n（Ⅱ）方程 $y' + y = f(x)$ 的通解为 $y = \\mathrm{e}^{-\\int_0^x \\mathrm{d}t} \\left[ C + \\int_0^x \\mathrm{e}^{\\int_0^t \\mathrm{d}s} f(t) \\, \\mathrm{d}t \\right]$ ，\n\n即 $y = \\mathrm{e}^{-x}\\left[C + \\int_0^x\\mathrm{e}^t f(t)\\mathrm{d}t\\right].$\n\n得 $y(x + T) - y(x) = \\mathrm{e}^{-x}\\left[\\left(\\frac{1}{\\mathrm{e}^T} - 1\\right)C + \\frac{1}{\\mathrm{e}^T}\\int_0^{x + T}\\mathrm{e}^t f(t)\\mathrm{d}t - \\int_0^x\\mathrm{e}^t f(t)\\mathrm{d}t\\right]$\n\n若 $f(x)$ 是周期为 $T$ 的连续函数，则\n\n$$\n\\begin{array}{l} \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {x + T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t = \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t + \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {T} ^ {x + T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t \\\\ = \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t + \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {x} \\mathrm {e} ^ {u + T} f (u + T) \\mathrm {d} u \\\\ = \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t + \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {x} \\mathrm {e} ^ {T} \\mathrm {e} ^ {u} f (u) \\mathrm {d} u = \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t + \\int_ {0} ^ {x} \\mathrm {e} ^ {s} f (t) \\mathrm {d} t \\\\ \\end{array}\n$$\n\n于是 $y(x + T) - y(x) = \\mathrm{e}^{-x}\\left[\\left(\\frac{1}{\\mathrm{e}^T} - 1\\right)C + \\frac{1}{\\mathrm{e}^T}\\int_0^T\\mathrm{e}^t f(t)\\mathrm{d}t\\right]$ ,\n\n因此当且仅当 $C = \\frac{1}{\\mathrm{e}^T - 1}\\int_0^T\\mathrm{e}^t f(t)\\mathrm{d}t$ 时， $y(x + T) - y(x) = 0$ ，即方程存在唯一的以 $T$ 为周期的解.",
+   "points": [
+    {
+     "text": "当 $f(x) = x$ 时，方程化为 $y^\\prime +y = x$ ，其通解为\n$$\ny = \\mathrm {e} ^ {- x} (C + \\int x \\mathrm {e} ^ {x} \\mathrm {d} x) = \\mathrm {e} ^ {- x} (C + x \\mathrm {e} ^ {x} - \\mathrm {e} ^ {x}) = C \\mathrm {e} ^ {- x} + x - 1.\n$$",
+     "partial": 2
+    },
+    {
+     "text": "方程 $y' + y = f(x)$ 的通解为 $y = \\mathrm{e}^{-\\int_0^x \\mathrm{d}t} \\left[ C + \\int_0^x \\mathrm{e}^{\\int_0^t \\mathrm{d}s} f(t) \\, \\mathrm{d}t \\right]$ ，",
+     "partial": 2
+    },
+    {
+     "text": "即 $y = \\mathrm{e}^{-x}\\left[C + \\int_0^x\\mathrm{e}^t f(t)\\mathrm{d}t\\right].$",
+     "partial": 2
+    },
+    {
+     "text": "得 $y(x + T) - y(x) = \\mathrm{e}^{-x}\\left[\\left(\\frac{1}{\\mathrm{e}^T} - 1\\right)C + \\frac{1}{\\mathrm{e}^T}\\int_0^{x + T}\\mathrm{e}^t f(t)\\mathrm{d}t - \\int_0^x\\mathrm{e}^t f(t)\\mathrm{d}t\\right]$",
+     "partial": 2
+    },
+    {
+     "text": "若 $f(x)$ 是周期为 $T$ 的连续函数，则",
+     "partial": 2
+    },
+    {
+     "text": "$$\n\\begin{array}{l} \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {x + T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t = \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t + \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {T} ^ {x + T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t \\\\ = \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t + \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {x} \\mathrm {e} ^ {u + T} f (u + T) \\mathrm {d} u \\\\ = \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t + \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {x} \\mathrm {e} ^ {T} \\mathrm {e} ^ {u} f (u) \\mathrm {d} u = \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t + \\int_ {0} ^ {x} \\mathrm {e} ^ {s} f (t) \\mathrm {d} t \\\\ \\end{array}\n$$；于是 $y(x + T) - y(x) = \\mathrm{e}^{-x}\\left[\\left(\\frac{1}{\\mathrm{e}^T} - 1\\right)C + \\frac{1}{\\mathrm{e}^T}\\int_0^T\\mathrm{e}^t f(t)\\mathrm{d}t\\right]$ ,；因此当且仅当 $C = \\frac{1}{\\mathrm{e}^T - 1}\\int_0^T\\mathrm{e}^t f(t)\\mathrm{d}t$ 时， $y(x + T) - y(x) = 0$ ，即方程存在唯一的以 $T$ 为周期的解.",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：见解析\n（I）当 $f(x) = x$ 时，方程化为 $y^\\prime +y = x$ ，其通解为\n$$\ny = \\mathrm {e} ^ {- x} (C + \\int x \\mathrm {e} ^ {x} \\mathrm {d} x) = \\mathrm {e} ^ {- x} (C + x \\mathrm {e} ^ {x} - \\mathrm {e} ^ {x}) = C \\mathrm {e} ^ {- x} + x - 1.\n$$\n\n（Ⅱ）方程 $y' + y = f(x)$ 的通解为 $y = \\mathrm{e}^{-\\int_0^x \\mathrm{d}t} \\left[ C + \\int_0^x \\mathrm{e}^{\\int_0^t \\mathrm{d}s} f(t) \\, \\mathrm{d}t \\right]$ ，\n\n即 $y = \\mathrm{e}^{-x}\\left[C + \\int_0^x\\mathrm{e}^t f(t)\\mathrm{d}t\\right].$\n\n得 $y(x + T) - y(x) = \\mathrm{e}^{-x}\\left[\\left(\\frac{1}{\\mathrm{e}^T} - 1\\right)C + \\frac{1}{\\mathrm{e}^T}\\int_0^{x + T}\\mathrm{e}^t f(t)\\mathrm{d}t - \\int_0^x\\mathrm{e}^t f(t)\\mathrm{d}t\\right]$\n\n若 $f(x)$ 是周期为 $T$ 的连续函数，则\n\n$$\n\\begin{array}{l} \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {x + T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t = \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t + \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {T} ^ {x + T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t \\\\ = \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t + \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {x} \\mathrm {e} ^ {u + T} f (u + T) \\mathrm {d} u \\\\ = \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t + \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {x} \\mathrm {e} ^ {T} \\mathrm {e} ^ {u} f (u) \\mathrm {d} u = \\frac {1}{\\mathrm {e} ^ {T}} \\int_ {0} ^ {T} \\mathrm {e} ^ {t} f (t) \\mathrm {d} t + \\int_ {0} ^ {x} \\mathrm {e} ^ {s} f (t) \\mathrm {d} t \\\\ \\end{array}\n$$\n\n于是 $y(x + T) - y(x) = \\mathrm{e}^{-x}\\left[\\left(\\frac{1}{\\mathrm{e}^T} - 1\\right)C + \\frac{1}{\\mathrm{e}^T}\\int_0^T\\mathrm{e}^t f(t)\\mathrm{d}t\\right]$ ,\n\n因此当且仅当 $C = \\frac{1}{\\mathrm{e}^T - 1}\\int_0^T\\mathrm{e}^t f(t)\\mathrm{d}t$ 时， $y(x + T) - y(x) = 0$ ，即方程存在唯一的以 $T$ 为周期的解.",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "verify": [],
+   "idx": 553
+  },
+  {
+   "id": "zk-202210-20",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "2022 年 10 月 自考 00023 高等数学（工本）第 20 题",
+    "kind": "exam-original",
+    "year": 2022,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 20,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2022-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求微分方程 $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x} = 2x + y$ 的通解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：化成标准形式 $y' + P(x)y = Q(x)$。**\n\n把 $y$ 移到左边：\n\n$$y' - y = 2x$$\n\n对照标准形式，得\n\n$$P(x) = -1, \\qquad Q(x) = 2x$$\n\n**第二步：写出通解公式。**\n\n$$y = \\mathrm{e}^{-\\int P\\mathrm{d}x}\\left(\\int Q\\,\\mathrm{e}^{\\int P\\mathrm{d}x}\\,\\mathrm{d}x + C\\right)$$\n\n**第三步：先算 $\\displaystyle\\int P\\,\\mathrm{d}x$。**\n\n$$\\int(-1)\\,\\mathrm{d}x = -x$$\n\n所以\n\n$$\\mathrm{e}^{-\\int P\\mathrm{d}x} = \\mathrm{e}^{x}, \\qquad \\mathrm{e}^{\\int P\\mathrm{d}x} = \\mathrm{e}^{-x}$$\n\n**第四步：代入公式。**\n\n$$y = \\mathrm{e}^{x}\\left(\\int 2x\\mathrm{e}^{-x}\\,\\mathrm{d}x + C\\right)$$\n\n**第五步：分部积分算 $\\displaystyle\\int 2x\\mathrm{e}^{-x}\\mathrm{d}x$。**\n\n$$\\int x\\mathrm{e}^{-x}\\,\\mathrm{d}x = -x\\mathrm{e}^{-x} + \\int \\mathrm{e}^{-x}\\,\\mathrm{d}x = -x\\mathrm{e}^{-x} - \\mathrm{e}^{-x}$$\n\n所以\n\n$$\\int 2x\\mathrm{e}^{-x}\\,\\mathrm{d}x = 2\\left(-x\\mathrm{e}^{-x} - \\mathrm{e}^{-x}\\right) = -2x\\mathrm{e}^{-x} - 2\\mathrm{e}^{-x}$$\n\n**第六步：代回化简。**\n\n$$y = \\mathrm{e}^{x}\\left(-2x\\mathrm{e}^{-x} - 2\\mathrm{e}^{-x} + C\\right) = -2x - 2 + C\\mathrm{e}^{x}$$\n\n即\n\n$$\\boxed{y = C\\mathrm{e}^{x} - 2x - 2}$$\n\n**独立验算**：\n\n$$y' = C\\mathrm{e}^{x} - 2 \\quad\\Longrightarrow\\quad y' - y = \\left(C\\mathrm{e}^{x} - 2\\right) - \\left(C\\mathrm{e}^{x} - 2x - 2\\right) = 2x ✓$$\n\n**另一种验算（待定系数猜特解）**：设特解 $y^* = ax + b$，代入 $y' - y = 2x$ 得\n\n$$a - (ax + b) = -ax + (a - b) = 2x$$\n\n比较系数：$-a = 2 \\Rightarrow a = -2$；$a - b = 0 \\Rightarrow b = a = -2$。所以 $y^* = -2x - 2$ ✓ 与公式法一致。",
+   "points": [
+    {
+     "text": "化成标准形式 $y' + P(x)y = Q(x)$。\n\n把 $y$ 移到左边：\n\n$$y' - y = 2x$$\n\n对照标准形式，得\n\n$$P(x) = -1, \\qquad Q(x) = 2x$$",
+     "partial": 2
+    },
+    {
+     "text": "写出通解公式。\n\n$$y = \\mathrm{e}^{-\\int P\\mathrm{d}x}\\left(\\int Q\\,\\mathrm{e}^{\\int P\\mathrm{d}x}\\,\\mathrm{d}x + C\\right)$$",
+     "partial": 2
+    },
+    {
+     "text": "先算 $\\displaystyle\\int P\\,\\mathrm{d}x$。\n\n$$\\int(-1)\\,\\mathrm{d}x = -x$$\n\n所以\n\n$$\\mathrm{e}^{-\\int P\\mathrm{d}x} = \\mathrm{e}^{x}, \\qquad \\mathrm{e}^{\\int P\\mathrm{d}x} = \\mathrm{e}^{-x}$$",
+     "partial": 2
+    },
+    {
+     "text": "代入公式。\n\n$$y = \\mathrm{e}^{x}\\left(\\int 2x\\mathrm{e}^{-x}\\,\\mathrm{d}x + C\\right)$$",
+     "partial": 2
+    },
+    {
+     "text": "分部积分算 $\\displaystyle\\int 2x\\mathrm{e}^{-x}\\mathrm{d}x$。\n\n$$\\int x\\mathrm{e}^{-x}\\,\\mathrm{d}x = -x\\mathrm{e}^{-x} + \\int \\mathrm{e}^{-x}\\,\\mathrm{d}x = -x\\mathrm{e}^{-x} - \\mathrm{e}^{-x}$$\n\n所以\n\n$$\\int 2x\\mathrm{e}^{-x}\\,\\mathrm{d}x = 2\\left(-x\\mathrm{e}^{-x} - \\mathrm{e}^{-x}\\right) = -2x\\mathrm{e}^{-x} - 2\\mathrm{e}^{-x}$$",
+     "partial": 2
+    },
+    {
+     "text": "代回化简。\n\n$$y = \\mathrm{e}^{x}\\left(-2x\\mathrm{e}^{-x} - 2\\mathrm{e}^{-x} + C\\right) = -2x - 2 + C\\mathrm{e}^{x}$$\n\n即\n\n$$\\boxed{y = C\\mathrm{e}^{x} - 2x - 2}$$\n\n独立验算：\n\n$$y' = C\\mathrm{e}^{x} - 2 \\quad\\Longrightarrow\\quad y' - y = \\left(C\\mathrm{e}^{x} - 2\\right) - \\left(C\\mathrm{e}^{x} - 2x - 2\\right) = 2x ✓$$\n\n另一种验算（待定系数猜特解）：设特解 $y^* = ax + b$，代入 $y' - y = 2x$ 得\n\n$$a - (ax + b) = -ax + (a - b) = 2x$$\n\n比较系数：$-a = 2 \\Rightarrow a = -2$；$a - b = 0 \\Rightarrow b = a = -2$。所以 $y^* = -2x - 2$ ✓ 与公式法一致。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：一阶线性非齐次微分方程的通解公式（常微分方程）。\n**考点出处**：一阶线性微分方程通解（常微分方程）\n**第一步：化成标准形式 $y' + P(x)y = Q(x)$。**\n\n把 $y$ 移到左边：\n\n$$y' - y = 2x$$\n\n对照标准形式，得\n\n$$P(x) = -1, \\qquad Q(x) = 2x$$\n\n**第二步：写出通解公式。**\n\n$$y = \\mathrm{e}^{-\\int P\\mathrm{d}x}\\left(\\int Q\\,\\mathrm{e}^{\\int P\\mathrm{d}x}\\,\\mathrm{d}x + C\\right)$$\n\n**第三步：先算 $\\displaystyle\\int P\\,\\mathrm{d}x$。**\n\n$$\\int(-1)\\,\\mathrm{d}x = -x$$\n\n所以\n\n$$\\mathrm{e}^{-\\int P\\mathrm{d}x} = \\mathrm{e}^{x}, \\qquad \\mathrm{e}^{\\int P\\mathrm{d}x} = \\mathrm{e}^{-x}$$\n\n**第四步：代入公式。**\n\n$$y = \\mathrm{e}^{x}\\left(\\int 2x\\mathrm{e}^{-x}\\,\\mathrm{d}x + C\\right)$$\n\n**第五步：分部积分算 $\\displaystyle\\int 2x\\mathrm{e}^{-x}\\mathrm{d}x$。**\n\n$$\\int x\\mathrm{e}^{-x}\\,\\mathrm{d}x = -x\\mathrm{e}^{-x} + \\int \\mathrm{e}^{-x}\\,\\mathrm{d}x = -x\\mathrm{e}^{-x} - \\mathrm{e}^{-x}$$\n\n所以\n\n$$\\int 2x\\mathrm{e}^{-x}\\,\\mathrm{d}x = 2\\left(-x\\mathrm{e}^{-x} - \\mathrm{e}^{-x}\\right) = -2x\\mathrm{e}^{-x} - 2\\mathrm{e}^{-x}$$\n\n**第六步：代回化简。**\n\n$$y = \\mathrm{e}^{x}\\left(-2x\\mathrm{e}^{-x} - 2\\mathrm{e}^{-x} + C\\right) = -2x - 2 + C\\mathrm{e}^{x}$$\n\n即\n\n$$\\boxed{y = C\\mathrm{e}^{x} - 2x - 2}$$\n\n**独立验算**：\n\n$$y' = C\\mathrm{e}^{x} - 2 \\quad\\Longrightarrow\\quad y' - y = \\left(C\\mathrm{e}^{x} - 2\\right) - \\left(C\\mathrm{e}^{x} - 2x - 2\\right) = 2x ✓$$\n\n**另一种验算（待定系数猜特解）**：设特解 $y^* = ax + b$，代入 $y' - y = 2x$ 得\n\n$$a - (ax + b) = -ax + (a - b) = 2x$$\n\n比较系数：$-a = 2 \\Rightarrow a = -2$；$a - b = 0 \\Rightarrow b = a = -2$。所以 $y^* = -2x - 2$ ✓ 与公式法一致。",
+   "misconception": "- **$P(x) = -1$，是负的**：把 $y' = 2x + y$ 整理成 $y' - y = 2x$ 后，$y$ 的系数 $-1$ 就是 $P(x)$。**漏掉这个负号会得到 $\\mathrm{e}^{-x}\\left(\\int 2x\\mathrm{e}^{x}\\mathrm{d}x + C\\right)$，整题归零。**\n- **$\\displaystyle\\int x\\mathrm{e}^{-x}\\mathrm{d}x = -x\\mathrm{e}^{-x} - \\mathrm{e}^{-x}$ 的两个负号都要对**：分部积分 $\\int x\\mathrm{e}^{-x}\\mathrm{d}x = -x\\mathrm{e}^{-x} + \\int\\mathrm{e}^{-x}\\mathrm{d}x$，而 $\\int\\mathrm{e}^{-x}\\mathrm{d}x = -\\mathrm{e}^{-x}$，所以是 $-x\\mathrm{e}^{-x} - \\mathrm{e}^{-x}$。**这是本题最大的失分点。**\n- **最后必须展开**：$\\mathrm{e}^{x}\\left(-2x\\mathrm{e}^{-x} - 2\\mathrm{e}^{-x} + C\\right)$ 要化简成 $-2x - 2 + C\\mathrm{e}^{x}$，两项指数正好抵消。**不展开虽然等价，但看不出\"齐次通解 + 特解\"的结构。**\n- **通解必须含且只含一个任意常数 $C$**（一阶方程）。写成 $C_1$、$C_2$ 就错了。\n- **答案的形态是\"$C\\mathrm{e}^{x}$（齐次通解）$+ (-2x-2)$（非齐次特解）\"**：这是\"非齐次通解 = 齐次通解 + 特解\"这一结构的直接体现。**能用结构检验答案，是判断做没做对的最快方式。**\n- **结果形态自查**：右端 $Q(x) = 2x$ 是一次多项式，所以特解也应该是同次的多项式 $-2x-2$。**若你的答案里特解部分出现了指数或三角函数，一定是错的。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 554
+  },
+  {
+   "id": "zk-202310-20",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "2023 年 10 月 自考 00023 高等数学（工本）第 20 题",
+    "kind": "exam-original",
+    "year": 2023,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 20,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2023-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求微分方程 $y'' + 5y' + 6y = 0$ 的通解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：写出特征方程。**\n\n对应关系：\n\n$$y'' \\;\\longrightarrow\\; r^2, \\qquad y' \\;\\longrightarrow\\; r, \\qquad y \\;\\longrightarrow\\; 1$$\n\n所以方程 $y'' + 5y' + 6y = 0$ 对应的**特征方程**为\n\n$$r^2 + 5r + 6 = 0$$\n\n**第二步：解特征方程。**\n\n因式分解：\n\n$$r^2 + 5r + 6 = (r+2)(r+3) = 0$$\n\n（验证：$(r+2)(r+3) = r^2 + 3r + 2r + 6 = r^2 + 5r + 6$ ✅）\n\n得两个**相异实根**：\n\n$$r_1 = -2, \\qquad r_2 = -3$$\n\n**第三步：按根的类型写通解。**\n\n两个相异实根 $r_1 \\ne r_2$ 的情形，通解为\n\n$$y = C_1\\mathrm{e}^{r_1 x} + C_2\\mathrm{e}^{r_2 x}$$\n\n代入 $r_1 = -2$、$r_2 = -3$：\n\n$$\\boxed{y = C_1\\mathrm{e}^{-2x} + C_2\\mathrm{e}^{-3x}}$$\n\n（$C_1, C_2$ 为任意常数。）\n\n**第四步：验算。**\n\n$$y = C_1\\mathrm{e}^{-2x} + C_2\\mathrm{e}^{-3x}$$\n$$y' = -2C_1\\mathrm{e}^{-2x} - 3C_2\\mathrm{e}^{-3x}$$\n$$y'' = 4C_1\\mathrm{e}^{-2x} + 9C_2\\mathrm{e}^{-3x}$$\n\n代入左边：\n\n$$y'' + 5y' + 6y = \\left(4C_1\\mathrm{e}^{-2x} + 9C_2\\mathrm{e}^{-3x}\\right) + 5\\left(-2C_1\\mathrm{e}^{-2x} - 3C_2\\mathrm{e}^{-3x}\\right) + 6\\left(C_1\\mathrm{e}^{-2x} + C_2\\mathrm{e}^{-3x}\\right)$$\n\n按 $\\mathrm{e}^{-2x}$ 和 $\\mathrm{e}^{-3x}$ 分别合并：\n\n- $\\mathrm{e}^{-2x}$ 的系数：$4C_1 - 10C_1 + 6C_1 = 0$ ✅\n- $\\mathrm{e}^{-3x}$ 的系数：$9C_2 - 15C_2 + 6C_2 = 0$ ✅\n\n左边恒为 $0$，等于右边，**验算通过**。",
+   "points": [
+    {
+     "text": "写出特征方程。\n\n对应关系：\n\n$$y'' \\;\\longrightarrow\\; r^2, \\qquad y' \\;\\longrightarrow\\; r, \\qquad y \\;\\longrightarrow\\; 1$$\n\n所以方程 $y'' + 5y' + 6y = 0$ 对应的特征方程为\n\n$$r^2 + 5r + 6 = 0$$",
+     "partial": 2
+    },
+    {
+     "text": "解特征方程。\n\n因式分解：\n\n$$r^2 + 5r + 6 = (r+2)(r+3) = 0$$\n\n（验证：$(r+2)(r+3) = r^2 + 3r + 2r + 6 = r^2 + 5r + 6$ ✅）\n\n得两个相异实根：\n\n$$r_1 = -2, \\qquad r_2 = -3$$",
+     "partial": 2
+    },
+    {
+     "text": "按根的类型写通解。\n\n两个相异实根 $r_1 \\ne r_2$ 的情形，通解为\n\n$$y = C_1\\mathrm{e}^{r_1 x} + C_2\\mathrm{e}^{r_2 x}$$\n\n代入 $r_1 = -2$、$r_2 = -3$：\n\n$$\\boxed{y = C_1\\mathrm{e}^{-2x} + C_2\\mathrm{e}^{-3x}}$$\n\n（$C_1, C_2$ 为任意常数。）",
+     "partial": 2
+    },
+    {
+     "text": "验算。",
+     "partial": 2
+    },
+    {
+     "text": "$$y = C_1\\mathrm{e}^{-2x} + C_2\\mathrm{e}^{-3x}$$\n$$y' = -2C_1\\mathrm{e}^{-2x} - 3C_2\\mathrm{e}^{-3x}$$\n$$y'' = 4C_1\\mathrm{e}^{-2x} + 9C_2\\mathrm{e}^{-3x}$$",
+     "partial": 2
+    },
+    {
+     "text": "代入左边：；$$y'' + 5y' + 6y = \\left(4C_1\\mathrm{e}^{-2x} + 9C_2\\mathrm{e}^{-3x}\\right) + 5\\left(-2C_1\\mathrm{e}^{-2x} - 3C_2\\mathrm{e}^{-3x}\\right) + 6\\left(C_1\\mathrm{e}^{-2x} + C_2\\mathrm{e}^{-3x}\\right)$$；按 $\\mathrm{e}^{-2x}$ 和 $\\mathrm{e}^{-3x}$ 分别合并：；- $\\mathrm{e}^{-2x}$ 的系数：$4C_1 - 10C_1 + 6C_1 = 0$ ✅\n- $\\mathrm{e}^{-3x}$ 的系数：$9C_2 - 15C_2 + 6C_2 = 0$ ✅；左边恒为 $0$，等于右边，验算通过。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：**二阶常系数齐次线性微分方程**的求解（特征方程法）。\n**考点出处**：二阶常系数齐次线性微分方程（常微分方程）\n**第一步：写出特征方程。**\n\n对应关系：\n\n$$y'' \\;\\longrightarrow\\; r^2, \\qquad y' \\;\\longrightarrow\\; r, \\qquad y \\;\\longrightarrow\\; 1$$\n\n所以方程 $y'' + 5y' + 6y = 0$ 对应的**特征方程**为\n\n$$r^2 + 5r + 6 = 0$$\n\n**第二步：解特征方程。**\n\n因式分解：\n\n$$r^2 + 5r + 6 = (r+2)(r+3) = 0$$\n\n（验证：$(r+2)(r+3) = r^2 + 3r + 2r + 6 = r^2 + 5r + 6$ ✅）\n\n得两个**相异实根**：\n\n$$r_1 = -2, \\qquad r_2 = -3$$\n\n**第三步：按根的类型写通解。**\n\n两个相异实根 $r_1 \\ne r_2$ 的情形，通解为\n\n$$y = C_1\\mathrm{e}^{r_1 x} + C_2\\mathrm{e}^{r_2 x}$$\n\n代入 $r_1 = -2$、$r_2 = -3$：\n\n$$\\boxed{y = C_1\\mathrm{e}^{-2x} + C_2\\mathrm{e}^{-3x}}$$\n\n（$C_1, C_2$ 为任意常数。）\n\n**第四步：验算。**\n\n$$y = C_1\\mathrm{e}^{-2x} + C_2\\mathrm{e}^{-3x}$$\n$$y' = -2C_1\\mathrm{e}^{-2x} - 3C_2\\mathrm{e}^{-3x}$$\n$$y'' = 4C_1\\mathrm{e}^{-2x} + 9C_2\\mathrm{e}^{-3x}$$\n\n代入左边：\n\n$$y'' + 5y' + 6y = \\left(4C_1\\mathrm{e}^{-2x} + 9C_2\\mathrm{e}^{-3x}\\right) + 5\\left(-2C_1\\mathrm{e}^{-2x} - 3C_2\\mathrm{e}^{-3x}\\right) + 6\\left(C_1\\mathrm{e}^{-2x} + C_2\\mathrm{e}^{-3x}\\right)$$\n\n按 $\\mathrm{e}^{-2x}$ 和 $\\mathrm{e}^{-3x}$ 分别合并：\n\n- $\\mathrm{e}^{-2x}$ 的系数：$4C_1 - 10C_1 + 6C_1 = 0$ ✅\n- $\\mathrm{e}^{-3x}$ 的系数：$9C_2 - 15C_2 + 6C_2 = 0$ ✅\n\n左边恒为 $0$，等于右边，**验算通过**。",
+   "misconception": "- **特征根是 $-2$ 和 $-3$，不是 $2$ 和 $3$！** 这是本题唯一的、也是最大的失分点。\n  - 由 $(r+2)(r+3) = 0$ 得 $r + 2 = 0$ 或 $r + 3 = 0$，即 $r = -2$ 或 $r = -3$。\n  - **很多同学因式分解对了，写根时却漏掉负号**，写成 $\\mathrm{e}^{2x}$、$\\mathrm{e}^{3x}$，答案错误。**\"因式是 $(r+2)$，根就是 $-2$\"，这一符号转换必须走心。**\n- **通解中必须有两个任意常数 $C_1, C_2$**，因为这是二阶方程。**只写一个 $C$ 是错的**，而且两个常数不能合并（$\\mathrm{e}^{-2x}$ 与 $\\mathrm{e}^{-3x}$ 线性无关）。\n- **特征方程与微分方程的对应关系要记牢**：$y''\\to r^2$、$y'\\to r$、$y\\to 1$。**常数项 $6$ 直接对应特征方程的常数项 $6$。**\n- **三种根型的通解形式（必背）**：\n· 特征根情况 / 通解形式\n· 两个相异实根 $r_1 \\ne r_2$ / $y = C_1\\mathrm{e}^{r_1x} + C_2\\mathrm{e}^{r_2x}$　**（本题）**\n· 二重实根 $r_1 = r_2 = r$ / $y = (C_1 + C_2x)\\mathrm{e}^{rx}$\n· 共轭复根 $\\alpha \\pm \\beta\\mathrm{i}$ / $y = \\mathrm{e}^{\\alpha x}\\left(C_1\\cos\\beta x + C_2\\sin\\beta x\\right)$\n- 本题是**齐次**方程（右端为 $0$），所以**不需要求特解**，直接写通解即可。若右端不为 $0$（非齐次），才需要\"齐次通解 + 一个特解\"。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 555
+  },
+  {
+   "id": "zk-202404-20",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "2024 年 4 月 自考 00023 高等数学（工本）第 20 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 20,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求微分方程 $y'' - 2y' - 3y = 0$ 的通解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：写出特征方程。**\n\n对于 $y'' + py' + qy = 0$，特征方程为 $r^2 + pr + q = 0$。\n\n本题 $p = -2$，$q = -3$，所以特征方程是\n\n$$r^2 - 2r - 3 = 0$$\n\n**第二步：解特征方程，求特征根。**\n\n因式分解：\n\n$$r^2 - 2r - 3 = (r - 3)(r + 1) = 0$$\n\n（验算：$(r-3)(r+1) = r^2 + r - 3r - 3 = r^2 - 2r - 3$ ✅）\n\n所以**两个不相等的实根**：\n\n$$r_1 = -1,\\qquad r_2 = 3$$\n\n**第三步：根据根的类型写出通解。**\n\n两个**相异实根** $r_1 \\ne r_2$ 时，通解为\n\n$$y = C_1e^{r_1x} + C_2e^{r_2x}$$\n\n代入 $r_1 = -1$、$r_2 = 3$：\n\n$$y = C_1e^{-x} + C_2e^{3x}$$",
+   "points": [
+    {
+     "text": "写出特征方程。\n\n对于 $y'' + py' + qy = 0$，特征方程为 $r^2 + pr + q = 0$。\n\n本题 $p = -2$，$q = -3$，所以特征方程是\n\n$$r^2 - 2r - 3 = 0$$",
+     "partial": 2
+    },
+    {
+     "text": "解特征方程，求特征根。",
+     "partial": 2
+    },
+    {
+     "text": "因式分解：",
+     "partial": 2
+    },
+    {
+     "text": "$$r^2 - 2r - 3 = (r - 3)(r + 1) = 0$$",
+     "partial": 2
+    },
+    {
+     "text": "（验算：$(r-3)(r+1) = r^2 + r - 3r - 3 = r^2 - 2r - 3$ ✅）",
+     "partial": 2
+    },
+    {
+     "text": "所以两个不相等的实根：；$$r_1 = -1,\\qquad r_2 = 3$$；根据根的类型写出通解。\n\n两个相异实根 $r_1 \\ne r_2$ 时，通解为\n\n$$y = C_1e^{r_1x} + C_2e^{r_2x}$$\n\n代入 $r_1 = -1$、$r_2 = 3$：\n\n$$y = C_1e^{-x} + C_2e^{3x}$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：**二阶常系数齐次线性微分方程**的特征方程法。\n**考点出处**：二阶常系数齐次线性微分方程（常微分方程）\n**第一步：写出特征方程。**\n\n对于 $y'' + py' + qy = 0$，特征方程为 $r^2 + pr + q = 0$。\n\n本题 $p = -2$，$q = -3$，所以特征方程是\n\n$$r^2 - 2r - 3 = 0$$\n\n**第二步：解特征方程，求特征根。**\n\n因式分解：\n\n$$r^2 - 2r - 3 = (r - 3)(r + 1) = 0$$\n\n（验算：$(r-3)(r+1) = r^2 + r - 3r - 3 = r^2 - 2r - 3$ ✅）\n\n所以**两个不相等的实根**：\n\n$$r_1 = -1,\\qquad r_2 = 3$$\n\n**第三步：根据根的类型写出通解。**\n\n两个**相异实根** $r_1 \\ne r_2$ 时，通解为\n\n$$y = C_1e^{r_1x} + C_2e^{r_2x}$$\n\n代入 $r_1 = -1$、$r_2 = 3$：\n\n$$y = C_1e^{-x} + C_2e^{3x}$$",
+   "misconception": "- **三种根的情况必须区分清楚**（这是本章的核心考点）：\n\n· 特征根情况 / 通解形式\n· 两个相异实根 $r_1 \\ne r_2$ / $y = C_1e^{r_1x} + C_2e^{r_2x}$\n· 两个相等实根 $r_1 = r_2 = r$ / $y = (C_1 + C_2x)e^{rx}$\n· 一对共轭复根 $\\alpha \\pm \\beta i$ / $y = e^{\\alpha x}(C_1\\cos\\beta x + C_2\\sin\\beta x)$\n\n- **特征方程系数的对应关系**：$y''$ 的系数 → $r^2$，$y'$ 的系数 → $r$，$y$ 的系数 → 常数项。本题 $y'$ 前是 $-2$，所以特征方程里是一次项 $-2r$。**符号别抄错。**\n- **$r_1 = -1$ 对应 $e^{-x}$**，指数上的负号要保留。\n- 因式分解不熟练时可以用求根公式：$r = \\dfrac{2 \\pm \\sqrt{4+12}}{2} = \\dfrac{2\\pm 4}{2}$，得 $r = 3$ 或 $r = -1$。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 556
+  },
+  {
+   "id": "zk-202410-20",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "knowledgePoints": [
+    "7.1"
+   ],
+   "source": {
+    "text": "2024 年 10 月 自考 00023 高等数学（工本）第 20 题",
+    "kind": "exam-original",
+    "year": 2024,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 20,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2024-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求微分方程 $y' + \\dfrac{2y}{x} = 1$ 的通解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：对照标准形式，认出 $P(x)$ 和 $Q(x)$。**\n\n标准形式为 $y' + P(x)y = Q(x)$，本题已经是标准形式：\n\n$$P(x) = \\frac{2}{x}, \\qquad Q(x) = 1$$\n\n**第二步：写出通解公式。**\n\n$$y = \\mathrm{e}^{-\\int P(x)\\mathrm{d}x}\\left(\\int Q(x)\\,\\mathrm{e}^{\\int P(x)\\mathrm{d}x}\\,\\mathrm{d}x + C\\right)$$\n\n**第三步：先算 $\\displaystyle\\int P(x)\\mathrm{d}x$。**\n\n$$\\int\\frac{2}{x}\\mathrm{d}x = 2\\ln|x|$$\n\n（在 $x > 0$ 的区间上取 $2\\ln x$ 即可；指数化后 $\\mathrm{e}^{2\\ln x} = x^2$，$\\mathrm{e}^{-2\\ln x} = \\dfrac{1}{x^2}$。）\n\n**第四步：代入公式。**\n\n$$y = \\mathrm{e}^{-2\\ln x}\\left(\\int 1\\cdot\\mathrm{e}^{2\\ln x}\\,\\mathrm{d}x + C\\right) = \\frac{1}{x^2}\\left(\\int x^2\\,\\mathrm{d}x + C\\right)$$\n\n$$= \\frac{1}{x^2}\\left(\\frac{x^3}{3} + C\\right) = \\frac{C}{x^2} + \\frac{x}{3}$$\n\n$$\\boxed{y = \\frac{C}{x^2} + \\frac{x}{3}}$$",
+   "points": [
+    {
+     "text": "对照标准形式，认出 $P(x)$ 和 $Q(x)$。\n\n标准形式为 $y' + P(x)y = Q(x)$，本题已经是标准形式：\n\n$$P(x) = \\frac{2}{x}, \\qquad Q(x) = 1$$",
+     "partial": 2
+    },
+    {
+     "text": "写出通解公式。\n\n$$y = \\mathrm{e}^{-\\int P(x)\\mathrm{d}x}\\left(\\int Q(x)\\,\\mathrm{e}^{\\int P(x)\\mathrm{d}x}\\,\\mathrm{d}x + C\\right)$$",
+     "partial": 2
+    },
+    {
+     "text": "先算 $\\displaystyle\\int P(x)\\mathrm{d}x$。\n\n$$\\int\\frac{2}{x}\\mathrm{d}x = 2\\ln|x|$$\n\n（在 $x > 0$ 的区间上取 $2\\ln x$ 即可；指数化后 $\\mathrm{e}^{2\\ln x} = x^2$，$\\mathrm{e}^{-2\\ln x} = \\dfrac{1}{x^2}$。）",
+     "partial": 2
+    },
+    {
+     "text": "代入公式。",
+     "partial": 2
+    },
+    {
+     "text": "$$y = \\mathrm{e}^{-2\\ln x}\\left(\\int 1\\cdot\\mathrm{e}^{2\\ln x}\\,\\mathrm{d}x + C\\right) = \\frac{1}{x^2}\\left(\\int x^2\\,\\mathrm{d}x + C\\right)$$",
+     "partial": 2
+    },
+    {
+     "text": "$$= \\frac{1}{x^2}\\left(\\frac{x^3}{3} + C\\right) = \\frac{C}{x^2} + \\frac{x}{3}$$；$$\\boxed{y = \\frac{C}{x^2} + \\frac{x}{3}}$$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：一阶线性非齐次微分方程的通解公式（常微分方程）。\n**考点出处**：一阶线性微分方程通解（常微分方程）\n**第一步：对照标准形式，认出 $P(x)$ 和 $Q(x)$。**\n\n标准形式为 $y' + P(x)y = Q(x)$，本题已经是标准形式：\n\n$$P(x) = \\frac{2}{x}, \\qquad Q(x) = 1$$\n\n**第二步：写出通解公式。**\n\n$$y = \\mathrm{e}^{-\\int P(x)\\mathrm{d}x}\\left(\\int Q(x)\\,\\mathrm{e}^{\\int P(x)\\mathrm{d}x}\\,\\mathrm{d}x + C\\right)$$\n\n**第三步：先算 $\\displaystyle\\int P(x)\\mathrm{d}x$。**\n\n$$\\int\\frac{2}{x}\\mathrm{d}x = 2\\ln|x|$$\n\n（在 $x > 0$ 的区间上取 $2\\ln x$ 即可；指数化后 $\\mathrm{e}^{2\\ln x} = x^2$，$\\mathrm{e}^{-2\\ln x} = \\dfrac{1}{x^2}$。）\n\n**第四步：代入公式。**\n\n$$y = \\mathrm{e}^{-2\\ln x}\\left(\\int 1\\cdot\\mathrm{e}^{2\\ln x}\\,\\mathrm{d}x + C\\right) = \\frac{1}{x^2}\\left(\\int x^2\\,\\mathrm{d}x + C\\right)$$\n\n$$= \\frac{1}{x^2}\\left(\\frac{x^3}{3} + C\\right) = \\frac{C}{x^2} + \\frac{x}{3}$$\n\n$$\\boxed{y = \\frac{C}{x^2} + \\frac{x}{3}}$$",
+   "misconception": "- **$\\displaystyle\\int x^2\\mathrm{d}x = \\frac{x^3}{3}$ 的系数别丢**：花括号里必须保留 $\\frac13$，否则会写出 $y = \\frac{C}{x^2} + x$。\n- **$\\mathrm{e}^{2\\ln x} = x^2$、$\\mathrm{e}^{-2\\ln x} = \\frac{1}{x^2}$**：指数与对数的互逆关系是本题化简的关键一步，必须熟练。\n- **$P(x)$ 取的是 $\\frac{2}{x}$，不是 $2x$**：$y' + \\frac2x y = 1$，分母里的 $x$ 属于 $P(x)$。**取错会得到完全不同的结果。**\n- **最后要展开成两项**：$\\dfrac{1}{x^2}\\left(\\dfrac{x^3}{3}+C\\right) = \\dfrac{x}{3} + \\dfrac{C}{x^2}$。不展开也算对，但**展开后能一眼看出\"齐次通解 + 特解\"的结构**（$\\frac{C}{x^2}$ 是齐次通解，$\\frac{x}{3}$ 是特解）。\n- **验算**：$y = \\dfrac{C}{x^2} + \\dfrac{x}{3}$，$y' = -\\dfrac{2C}{x^3} + \\dfrac13$，则 $y' + \\dfrac{2y}{x} = -\\dfrac{2C}{x^3} + \\dfrac13 + \\dfrac{2C}{x^3} + \\dfrac23 = 1$ ✓\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 557
+  },
+  {
+   "id": "zk-202504-20",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "2025 年 4 月 自考 00023 高等数学（工本）第 20 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 20,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "验证 $y = \\mathrm{e}^x$ 是微分方程 $xy' - y\\ln y = 0$ 的一个特解，并求该微分方程满足初始条件 $\\left.y\\right|_{x=1} = \\mathrm{e}^2$ 的特解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一问：验证 $y = \\mathrm{e}^x$ 是特解。**\n\n先求导：\n\n$$y = \\mathrm{e}^x \\quad\\Longrightarrow\\quad y' = \\mathrm{e}^x$$\n\n代入方程左端：\n\n$$xy' - y\\ln y = x\\mathrm{e}^x - \\mathrm{e}^x\\ln\\left(\\mathrm{e}^x\\right)$$\n\n由对数的基本性质 $\\ln\\left(\\mathrm{e}^x\\right) = x$，得\n\n$$= x\\mathrm{e}^x - \\mathrm{e}^x \\cdot x = x\\mathrm{e}^x - x\\mathrm{e}^x = 0$$\n\n左端恒等于 $0$（等于右端），故 $y = \\mathrm{e}^x$ 是该方程的一个特解。∎\n\n> **提示**：把\"$y = \\mathrm{e}^x$ 是特解\"理解为\"它恰好满足 $\\ln y = x$，也就是 $y = \\mathrm{e}^x$\"——**这正是 $\\ln y$ 这个非线性项能被\"解开\"的原因。**\n\n**第二问：求通解，再定常数。**\n\n**第一步：分离变量。**\n\n把方程写成\n\n$$x\\frac{\\mathrm{d}y}{\\mathrm{d}x} = y\\ln y$$\n\n（这里 $x \\ne 0$，因为初值给在 $x = 1$。）分离变量，把含 $y$ 的放到一边、含 $x$ 的放到另一边：\n\n$$\\frac{1}{y\\ln y}\\,\\mathrm{d}y = \\frac{1}{x}\\,\\mathrm{d}x$$\n\n**第二步：两边积分。**\n\n左端用换元法：令 $u = \\ln y$，则 $\\mathrm{d}u = \\dfrac{1}{y}\\mathrm{d}y$，于是\n\n$$\\int\\frac{1}{y\\ln y}\\,\\mathrm{d}y = \\int\\frac{1}{u}\\,\\mathrm{d}u = \\ln|u| = \\ln|\\ln y|$$\n\n右端：\n\n$$\\int\\frac{1}{x}\\mathrm{d}x = \\ln|x|$$\n\n所以\n\n$$\\ln|\\ln y| = \\ln|x| + C_1$$\n\n**第三步：去掉对数，解出 $y$。**\n\n由 $\\ln|\\ln y| - \\ln|x| = C_1$ 得\n\n$$\\ln\\left|\\frac{\\ln y}{x}\\right| = C_1 \\quad\\Longrightarrow\\quad \\frac{\\ln y}{x} = \\pm\\mathrm{e}^{C_1} = C$$\n\n即\n\n$$\\ln y = Cx \\quad\\Longrightarrow\\quad y = \\mathrm{e}^{Cx}$$\n\n**这就是通解。**\n\n**第四步：代入初始条件定出 $C$。**\n\n$$\\left.y\\right|_{x=1} = \\mathrm{e}^{C\\times 1} = \\mathrm{e}^{C} = \\mathrm{e}^2 \\quad\\Longrightarrow\\quad C = 2$$\n\n**第五步：写出特解。**\n\n$$\\boxed{y^* = \\mathrm{e}^{2x}}$$\n\n**验算**：$y' = 2\\mathrm{e}^{2x}$，$\\ln y = 2x$，则\n\n$$xy' - y\\ln y = x\\cdot 2\\mathrm{e}^{2x} - \\mathrm{e}^{2x}\\cdot 2x = 0 \\ ✓$$\n\n且 $y(1) = \\mathrm{e}^2$ ✓",
+   "points": [
+    {
+     "text": "第一问：验证 $y = \\mathrm{e}^x$ 是特解。\n\n先求导：\n\n$$y = \\mathrm{e}^x \\quad\\Longrightarrow\\quad y' = \\mathrm{e}^x$$\n\n代入方程左端：\n\n$$xy' - y\\ln y = x\\mathrm{e}^x - \\mathrm{e}^x\\ln\\left(\\mathrm{e}^x\\right)$$\n\n由对数的基本性质 $\\ln\\left(\\mathrm{e}^x\\right) = x$，得\n\n$$= x\\mathrm{e}^x - \\mathrm{e}^x \\cdot x = x\\mathrm{e}^x - x\\mathrm{e}^x = 0$$\n\n左端恒等于 $0$（等于右端），故 $y = \\mathrm{e}^x$ 是该方程的一个特解。∎\n\n> 提示：把\"$y = \\mathrm{e}^x$ 是特解\"理解为\"它恰好满足 $\\ln y = x$，也就是 $y = \\mathrm{e}^x$\"——这正是 $\\ln y$ 这个非线性项能被\"解开\"的原因。\n\n第二问：求通解，再定常数。",
+     "partial": 2
+    },
+    {
+     "text": "分离变量。\n\n把方程写成\n\n$$x\\frac{\\mathrm{d}y}{\\mathrm{d}x} = y\\ln y$$\n\n（这里 $x \\ne 0$，因为初值给在 $x = 1$。）分离变量，把含 $y$ 的放到一边、含 $x$ 的放到另一边：\n\n$$\\frac{1}{y\\ln y}\\,\\mathrm{d}y = \\frac{1}{x}\\,\\mathrm{d}x$$",
+     "partial": 2
+    },
+    {
+     "text": "两边积分。\n\n左端用换元法：令 $u = \\ln y$，则 $\\mathrm{d}u = \\dfrac{1}{y}\\mathrm{d}y$，于是\n\n$$\\int\\frac{1}{y\\ln y}\\,\\mathrm{d}y = \\int\\frac{1}{u}\\,\\mathrm{d}u = \\ln|u| = \\ln|\\ln y|$$\n\n右端：\n\n$$\\int\\frac{1}{x}\\mathrm{d}x = \\ln|x|$$\n\n所以\n\n$$\\ln|\\ln y| = \\ln|x| + C_1$$",
+     "partial": 2
+    },
+    {
+     "text": "去掉对数，解出 $y$。\n\n由 $\\ln|\\ln y| - \\ln|x| = C_1$ 得\n\n$$\\ln\\left|\\frac{\\ln y}{x}\\right| = C_1 \\quad\\Longrightarrow\\quad \\frac{\\ln y}{x} = \\pm\\mathrm{e}^{C_1} = C$$\n\n即\n\n$$\\ln y = Cx \\quad\\Longrightarrow\\quad y = \\mathrm{e}^{Cx}$$\n\n这就是通解。",
+     "partial": 2
+    },
+    {
+     "text": "代入初始条件定出 $C$。\n\n$$\\left.y\\right|_{x=1} = \\mathrm{e}^{C\\times 1} = \\mathrm{e}^{C} = \\mathrm{e}^2 \\quad\\Longrightarrow\\quad C = 2$$",
+     "partial": 2
+    },
+    {
+     "text": "写出特解。\n\n$$\\boxed{y^* = \\mathrm{e}^{2x}}$$\n\n验算：$y' = 2\\mathrm{e}^{2x}$，$\\ln y = 2x$，则\n\n$$xy' - y\\ln y = x\\cdot 2\\mathrm{e}^{2x} - \\mathrm{e}^{2x}\\cdot 2x = 0 \\ ✓$$\n\n且 $y(1) = \\mathrm{e}^2$ ✓",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：微分方程解的验证 + 可分离变量方程的通解与初值问题，常微分方程。\n**考点出处**：一阶线性方程通解（验证特解 + 可分离变量初值）\n**第一问：验证 $y = \\mathrm{e}^x$ 是特解。**\n\n先求导：\n\n$$y = \\mathrm{e}^x \\quad\\Longrightarrow\\quad y' = \\mathrm{e}^x$$\n\n代入方程左端：\n\n$$xy' - y\\ln y = x\\mathrm{e}^x - \\mathrm{e}^x\\ln\\left(\\mathrm{e}^x\\right)$$\n\n由对数的基本性质 $\\ln\\left(\\mathrm{e}^x\\right) = x$，得\n\n$$= x\\mathrm{e}^x - \\mathrm{e}^x \\cdot x = x\\mathrm{e}^x - x\\mathrm{e}^x = 0$$\n\n左端恒等于 $0$（等于右端），故 $y = \\mathrm{e}^x$ 是该方程的一个特解。∎\n\n> **提示**：把\"$y = \\mathrm{e}^x$ 是特解\"理解为\"它恰好满足 $\\ln y = x$，也就是 $y = \\mathrm{e}^x$\"——**这正是 $\\ln y$ 这个非线性项能被\"解开\"的原因。**\n\n**第二问：求通解，再定常数。**\n\n**第一步：分离变量。**\n\n把方程写成\n\n$$x\\frac{\\mathrm{d}y}{\\mathrm{d}x} = y\\ln y$$\n\n（这里 $x \\ne 0$，因为初值给在 $x = 1$。）分离变量，把含 $y$ 的放到一边、含 $x$ 的放到另一边：\n\n$$\\frac{1}{y\\ln y}\\,\\mathrm{d}y = \\frac{1}{x}\\,\\mathrm{d}x$$\n\n**第二步：两边积分。**\n\n左端用换元法：令 $u = \\ln y$，则 $\\mathrm{d}u = \\dfrac{1}{y}\\mathrm{d}y$，于是\n\n$$\\int\\frac{1}{y\\ln y}\\,\\mathrm{d}y = \\int\\frac{1}{u}\\,\\mathrm{d}u = \\ln|u| = \\ln|\\ln y|$$\n\n右端：\n\n$$\\int\\frac{1}{x}\\mathrm{d}x = \\ln|x|$$\n\n所以\n\n$$\\ln|\\ln y| = \\ln|x| + C_1$$\n\n**第三步：去掉对数，解出 $y$。**\n\n由 $\\ln|\\ln y| - \\ln|x| = C_1$ 得\n\n$$\\ln\\left|\\frac{\\ln y}{x}\\right| = C_1 \\quad\\Longrightarrow\\quad \\frac{\\ln y}{x} = \\pm\\mathrm{e}^{C_1} = C$$\n\n即\n\n$$\\ln y = Cx \\quad\\Longrightarrow\\quad y = \\mathrm{e}^{Cx}$$\n\n**这就是通解。**\n\n**第四步：代入初始条件定出 $C$。**\n\n$$\\left.y\\right|_{x=1} = \\mathrm{e}^{C\\times 1} = \\mathrm{e}^{C} = \\mathrm{e}^2 \\quad\\Longrightarrow\\quad C = 2$$\n\n**第五步：写出特解。**\n\n$$\\boxed{y^* = \\mathrm{e}^{2x}}$$\n\n**验算**：$y' = 2\\mathrm{e}^{2x}$，$\\ln y = 2x$，则\n\n$$xy' - y\\ln y = x\\cdot 2\\mathrm{e}^{2x} - \\mathrm{e}^{2x}\\cdot 2x = 0 \\ ✓$$\n\n且 $y(1) = \\mathrm{e}^2$ ✓",
+   "misconception": "- **第一问\"验证\"必须把代入过程完整写出来**：这是**给分点**，不能只写一句\"显然成立\"。要写清 $y' = \\mathrm{e}^x$、$\\ln \\mathrm{e}^x = x$、最终等于 $0$ 这条链。\n- **分离变量时左侧是 $\\dfrac{1}{y\\ln y}$，不是 $\\dfrac{1}{y}$**：$\\ln y$ 那一层不能丢。**丢了会解出 $y = \\mathrm{e}^{Cx}$ 之外的错误形式（例如 $y = Cx$）。**\n- **积分 $\\displaystyle\\int\\frac{\\mathrm{d}y}{y\\ln y} = \\ln|\\ln y|$ 是本题的技术难点**：**换元 $u = \\ln y$** 一步到位。**别写成 $\\ln y \\cdot \\ln y$ 或 $\\dfrac{\\ln y}{y}$ 之类的怪东西。**\n- **指数化时别把 $\\ln y = Cx$ 直接写成 $y = Cx$**：这是本题最容易犯的错——**$\\ln y = Cx$ 的下一步是 $y = \\mathrm{e}^{Cx}$，指数不能丢。**\n- **定常数时 $\\mathrm{e}^{C} = \\mathrm{e}^2 \\Rightarrow C = 2$**，用的是\"指数函数单调\"，**不要两边取对数后写成 $C = \\mathrm{e}^2$。**\n- **通解里的常数必须保留到代入初值那一刻**：**先求通解、再代初值**，顺序不能反。若一开始就把 $x=1, y=\\mathrm{e}^2$ 代进去，会算不出 $C$。\n- **结果自查**：把 $y^* = \\mathrm{e}^{2x}$ 代回原方程，指数项 $2x\\mathrm{e}^{2x}$ 恰好抵消 ✓；**这类题一定要做这一步，只要 10 秒。**\n- **与 2024.10 卷第 20 题正好\"对调\"**：那一卷求的是**一阶线性非齐次方程的通解**，本卷考的是**验证 + 可分离变量初值问题**。**两个题型的解法都要练熟——它们会轮流出现在第 20 题。**\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 558
+  },
+  {
+   "id": "zk-202510-20",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.4",
+   "knowledgePoints": [
+    "7.4"
+   ],
+   "source": {
+    "text": "2025 年 10 月 自考 00023 高等数学（工本）第 20 题",
+    "kind": "exam-original",
+    "year": 2025,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 20,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2025-10.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "验证 $y = 1$ 是微分方程 $y'' - 2y' + y = 1$ 的一个特解，并求该微分方程满足初始条件 $y|_{x=0} = 1$，$y'|_{x=0} = 1$ 的特解.",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：验证 $y = 1$ 是特解（按题目要求写出验证过程）。**\n\n由 $y = 1$ 得\n\n$$y' = 0, \\qquad y'' = 0$$\n\n代入方程左端：\n\n$$y'' - 2y' + y = 0 - 2\\times 0 + 1 = 1$$\n\n与右端相等，所以 $y = 1$ 是方程的一个特解 ✓。\n\n**第二步：解对应的齐次方程，求出齐次通解。**\n\n齐次方程为\n\n$$y'' - 2y' + y = 0$$\n\n写出特征方程：\n\n$$r^2 - 2r + 1 = 0 \\Longrightarrow (r-1)^2 = 0 \\Longrightarrow r_1 = r_2 = 1$$\n\n**这是一个二重根**。二重根对应的齐次通解形式是\n\n$$y_h = (C_1 + C_2x)\\mathrm{e}^{x}$$\n\n（**不能写成 $C_1\\mathrm{e}^x + C_2\\mathrm{e}^x$ 就收工**——那样两个常数其实合成了一个，无法用来满足两个初始条件。）\n\n**第三步：写出非齐次方程的通解。**\n\n非齐次通解 = 齐次通解 + 一个特解：\n\n$$y = (C_1 + C_2x)\\mathrm{e}^{x} + 1$$\n\n**第四步：代入初始条件定常数。**\n\n先由 $y(0) = 1$：\n\n$$y(0) = (C_1 + C_2\\times 0)\\mathrm{e}^0 + 1 = C_1 + 1 = 1 \\Longrightarrow C_1 = 0$$\n\n再求导（**注意是乘积求导，两项都要写**）：\n\n$$y' = \\left[(C_1 + C_2x)\\mathrm{e}^x\\right]' + 0 = C_2\\mathrm{e}^x + (C_1 + C_2x)\\mathrm{e}^x = (C_1 + C_2 + C_2x)\\mathrm{e}^x$$\n\n由 $y'(0) = 1$：\n\n$$y'(0) = (C_1 + C_2 + 0)\\mathrm{e}^0 = C_1 + C_2 = 0 + C_2 = 1 \\Longrightarrow C_2 = 1$$\n\n**第五步：写出所求特解。**\n\n$$\\boxed{y^* = x\\mathrm{e}^x + 1}$$\n\n**第六步：验算。**\n\n$$y^* = x\\mathrm{e}^x + 1 \\Longrightarrow y^{*\\prime} = (x+1)\\mathrm{e}^x \\Longrightarrow y^{*\\prime\\prime} = (x+2)\\mathrm{e}^x$$\n\n$$y^{*\\prime\\prime} - 2y^{*\\prime} + y^* = (x+2)\\mathrm{e}^x - 2(x+1)\\mathrm{e}^x + x\\mathrm{e}^x + 1 = 0\\cdot\\mathrm{e}^x + 1 = 1 ✓$$\n\n且 $y^*(0) = 0 + 1 = 1$ ✓，$y^{*\\prime}(0) = 1\\cdot\\mathrm{e}^0 = 1$ ✓。完全符合。",
+   "points": [
+    {
+     "text": "验证 $y = 1$ 是特解（按题目要求写出验证过程）。\n\n由 $y = 1$ 得\n\n$$y' = 0, \\qquad y'' = 0$$\n\n代入方程左端：\n\n$$y'' - 2y' + y = 0 - 2\\times 0 + 1 = 1$$\n\n与右端相等，所以 $y = 1$ 是方程的一个特解 ✓。",
+     "partial": 2
+    },
+    {
+     "text": "解对应的齐次方程，求出齐次通解。\n\n齐次方程为\n\n$$y'' - 2y' + y = 0$$\n\n写出特征方程：\n\n$$r^2 - 2r + 1 = 0 \\Longrightarrow (r-1)^2 = 0 \\Longrightarrow r_1 = r_2 = 1$$\n\n这是一个二重根。二重根对应的齐次通解形式是\n\n$$y_h = (C_1 + C_2x)\\mathrm{e}^{x}$$\n\n（不能写成 $C_1\\mathrm{e}^x + C_2\\mathrm{e}^x$ 就收工——那样两个常数其实合成了一个，无法用来满足两个初始条件。）",
+     "partial": 2
+    },
+    {
+     "text": "写出非齐次方程的通解。\n\n非齐次通解 = 齐次通解 + 一个特解：\n\n$$y = (C_1 + C_2x)\\mathrm{e}^{x} + 1$$",
+     "partial": 2
+    },
+    {
+     "text": "代入初始条件定常数。\n\n先由 $y(0) = 1$：\n\n$$y(0) = (C_1 + C_2\\times 0)\\mathrm{e}^0 + 1 = C_1 + 1 = 1 \\Longrightarrow C_1 = 0$$\n\n再求导（注意是乘积求导，两项都要写）：\n\n$$y' = \\left[(C_1 + C_2x)\\mathrm{e}^x\\right]' + 0 = C_2\\mathrm{e}^x + (C_1 + C_2x)\\mathrm{e}^x = (C_1 + C_2 + C_2x)\\mathrm{e}^x$$\n\n由 $y'(0) = 1$：\n\n$$y'(0) = (C_1 + C_2 + 0)\\mathrm{e}^0 = C_1 + C_2 = 0 + C_2 = 1 \\Longrightarrow C_2 = 1$$",
+     "partial": 2
+    },
+    {
+     "text": "写出所求特解。\n\n$$\\boxed{y^* = x\\mathrm{e}^x + 1}$$",
+     "partial": 2
+    },
+    {
+     "text": "验算。\n\n$$y^* = x\\mathrm{e}^x + 1 \\Longrightarrow y^{*\\prime} = (x+1)\\mathrm{e}^x \\Longrightarrow y^{*\\prime\\prime} = (x+2)\\mathrm{e}^x$$\n\n$$y^{*\\prime\\prime} - 2y^{*\\prime} + y^* = (x+2)\\mathrm{e}^x - 2(x+1)\\mathrm{e}^x + x\\mathrm{e}^x + 1 = 0\\cdot\\mathrm{e}^x + 1 = 1 ✓$$\n\n且 $y^*(0) = 0 + 1 = 1$ ✓，$y^{*\\prime}(0) = 1\\cdot\\mathrm{e}^0 = 1$ ✓。完全符合。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：二阶常系数线性非齐次方程（特解验证 + 通解结构 + 初值问题），常微分方程。\n**考点出处**：常微分方程（一阶线性非齐次通解）\n**第一步：验证 $y = 1$ 是特解（按题目要求写出验证过程）。**\n\n由 $y = 1$ 得\n\n$$y' = 0, \\qquad y'' = 0$$\n\n代入方程左端：\n\n$$y'' - 2y' + y = 0 - 2\\times 0 + 1 = 1$$\n\n与右端相等，所以 $y = 1$ 是方程的一个特解 ✓。\n\n**第二步：解对应的齐次方程，求出齐次通解。**\n\n齐次方程为\n\n$$y'' - 2y' + y = 0$$\n\n写出特征方程：\n\n$$r^2 - 2r + 1 = 0 \\Longrightarrow (r-1)^2 = 0 \\Longrightarrow r_1 = r_2 = 1$$\n\n**这是一个二重根**。二重根对应的齐次通解形式是\n\n$$y_h = (C_1 + C_2x)\\mathrm{e}^{x}$$\n\n（**不能写成 $C_1\\mathrm{e}^x + C_2\\mathrm{e}^x$ 就收工**——那样两个常数其实合成了一个，无法用来满足两个初始条件。）\n\n**第三步：写出非齐次方程的通解。**\n\n非齐次通解 = 齐次通解 + 一个特解：\n\n$$y = (C_1 + C_2x)\\mathrm{e}^{x} + 1$$\n\n**第四步：代入初始条件定常数。**\n\n先由 $y(0) = 1$：\n\n$$y(0) = (C_1 + C_2\\times 0)\\mathrm{e}^0 + 1 = C_1 + 1 = 1 \\Longrightarrow C_1 = 0$$\n\n再求导（**注意是乘积求导，两项都要写**）：\n\n$$y' = \\left[(C_1 + C_2x)\\mathrm{e}^x\\right]' + 0 = C_2\\mathrm{e}^x + (C_1 + C_2x)\\mathrm{e}^x = (C_1 + C_2 + C_2x)\\mathrm{e}^x$$\n\n由 $y'(0) = 1$：\n\n$$y'(0) = (C_1 + C_2 + 0)\\mathrm{e}^0 = C_1 + C_2 = 0 + C_2 = 1 \\Longrightarrow C_2 = 1$$\n\n**第五步：写出所求特解。**\n\n$$\\boxed{y^* = x\\mathrm{e}^x + 1}$$\n\n**第六步：验算。**\n\n$$y^* = x\\mathrm{e}^x + 1 \\Longrightarrow y^{*\\prime} = (x+1)\\mathrm{e}^x \\Longrightarrow y^{*\\prime\\prime} = (x+2)\\mathrm{e}^x$$\n\n$$y^{*\\prime\\prime} - 2y^{*\\prime} + y^* = (x+2)\\mathrm{e}^x - 2(x+1)\\mathrm{e}^x + x\\mathrm{e}^x + 1 = 0\\cdot\\mathrm{e}^x + 1 = 1 ✓$$\n\n且 $y^*(0) = 0 + 1 = 1$ ✓，$y^{*\\prime}(0) = 1\\cdot\\mathrm{e}^0 = 1$ ✓。完全符合。",
+   "misconception": "- **二重根的通解形式是 $(C_1 + C_2x)\\mathrm{e}^{x}$**：这是本题的分水岭。若写成 $y_h = C_1\\mathrm{e}^x + C_2\\mathrm{e}^x$，两个常数实际上是同一个，**无法同时满足 $y(0)$ 和 $y'(0)$ 两个条件**。\n- **求导时乘积法则别漏项**：$y = (C_1+C_2x)\\mathrm{e}^x$ 的导数是\n  $$y' = C_2\\mathrm{e}^x + (C_1+C_2x)\\mathrm{e}^x$$\n\n  **第一项来自对括号求导，第二项来自对 $\\mathrm{e}^x$ 求导，两项都不能少。**\n  **只写 $C_2\\mathrm{e}^x$ 是最常见的错误**（把 $\\mathrm{e}^x$ 当常数了）。\n- **别把非齐次的特解 $+1$ 漏掉**：若把通解写成 $y = (C_1+C_2x)\\mathrm{e}^x$，则由 $y(0)=1$ 得 $C_1 = 1$、由 $y'(0)=1$ 得 $C_1+C_2 = 1$ 得 $C_2 = 0$，得到 $y = \\mathrm{e}^x$。代回原方程：$\\mathrm{e}^x - 2\\mathrm{e}^x + \\mathrm{e}^x = 0 \\ne 1$，**立刻暴露错误**。\n- **初始条件的写法**：$y|_{x=0} = 1$ 就是 $y(0) = 1$；$y'|_{x=0} = 1$ 就是 $y'(0) = 1$。**两个条件分别用于定两个常数**，顺序通常是\"先代 $y$ 定 $C_1$，再对 $y'$ 用 $C_2$\"。\n- **不要忘记题目第一问**：题目要求\"**验证** $y=1$ 是一个特解\"，这一步**必须写出代入验证的过程**（$0-0+1=1$），不能只在通解里悄悄用一下。评分参考里这一步单独给了 2 分。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 559
+  },
+  {
+   "id": "zk-202604-20",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.3",
+   "knowledgePoints": [
+    "7.3"
+   ],
+   "source": {
+    "text": "2026 年 4 月 自考 00023 高等数学（工本）第 20 题",
+    "kind": "exam-original",
+    "year": 2026,
+    "region": "全国",
+    "paper": "自考 00023 高等数学（工本）",
+    "number": 20,
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/huangnaisheng/zikao-exam-solutions/blob/main/00023-高等数学（工本）/2026-04.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面文件；采分点由解析的「第 N 步」拆分。"
+   },
+   "stem": "求微分方程 $y'' - 3y' - 4y = 0$ 满足初始条件 $\\left.y\\right|_{x=0} = 0$、$\\left.y'\\right|_{x=0} = -5$ 的特解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**第一步：写特征方程。**\n\n$$r^2 - 3r - 4 = 0$$\n\n**第二步：求特征根。**\n\n$$(r + 1)(r - 4) = 0 \\quad\\Longrightarrow\\quad r_1 = -1,\\qquad r_2 = 4$$\n\n（两个不相等的实根，通解为两个指数函数之和。）\n\n**第三步：写通解。**\n\n$$y = C_1\\mathrm{e}^{-x} + C_2\\mathrm{e}^{4x}$$\n\n**第四步：代入初始条件求 $C_1$、$C_2$。**\n\n先求导：\n\n$$y' = -C_1\\mathrm{e}^{-x} + 4C_2\\mathrm{e}^{4x}$$\n\n由 $y(0) = 0$：\n\n$$C_1 + C_2 = 0$$\n\n由 $y'(0) = -5$：\n\n$$-C_1 + 4C_2 = -5$$\n\n**第五步：解方程组。**\n\n由第一式得 $C_1 = -C_2$，代入第二式：\n\n$$-(-C_2) + 4C_2 = C_2 + 4C_2 = 5C_2 = -5 \\quad\\Longrightarrow\\quad C_2 = -1$$\n\n$$C_1 = -C_2 = 1$$\n\n**第六步：写出特解。**\n\n$$y = \\mathrm{e}^{-x} - \\mathrm{e}^{4x}$$\n\n**独立验算**：$y' = -\\mathrm{e}^{-x} - 4\\mathrm{e}^{4x}$，$y'' = \\mathrm{e}^{-x} - 16\\mathrm{e}^{4x}$，则\n\n$$y'' - 3y' - 4y = \\left(\\mathrm{e}^{-x} - 16\\mathrm{e}^{4x}\\right) - 3\\left(-\\mathrm{e}^{-x} - 4\\mathrm{e}^{4x}\\right) - 4\\left(\\mathrm{e}^{-x} - \\mathrm{e}^{4x}\\right)$$\n\n$$= \\mathrm{e}^{-x} - 16\\mathrm{e}^{4x} + 3\\mathrm{e}^{-x} + 12\\mathrm{e}^{4x} - 4\\mathrm{e}^{-x} + 4\\mathrm{e}^{4x} = (1+3-4)\\mathrm{e}^{-x} + (-16+12+4)\\mathrm{e}^{4x} = 0 \\quad\\checkmark$$\n\n初值：$y(0) = 1 - 1 = 0$ ✓；$y'(0) = -1 - 4 = -5$ ✓",
+   "points": [
+    {
+     "text": "写特征方程。\n\n$$r^2 - 3r - 4 = 0$$",
+     "partial": 2
+    },
+    {
+     "text": "求特征根。\n\n$$(r + 1)(r - 4) = 0 \\quad\\Longrightarrow\\quad r_1 = -1,\\qquad r_2 = 4$$\n\n（两个不相等的实根，通解为两个指数函数之和。）",
+     "partial": 2
+    },
+    {
+     "text": "写通解。\n\n$$y = C_1\\mathrm{e}^{-x} + C_2\\mathrm{e}^{4x}$$",
+     "partial": 2
+    },
+    {
+     "text": "代入初始条件求 $C_1$、$C_2$。\n\n先求导：\n\n$$y' = -C_1\\mathrm{e}^{-x} + 4C_2\\mathrm{e}^{4x}$$\n\n由 $y(0) = 0$：\n\n$$C_1 + C_2 = 0$$\n\n由 $y'(0) = -5$：\n\n$$-C_1 + 4C_2 = -5$$",
+     "partial": 2
+    },
+    {
+     "text": "解方程组。\n\n由第一式得 $C_1 = -C_2$，代入第二式：\n\n$$-(-C_2) + 4C_2 = C_2 + 4C_2 = 5C_2 = -5 \\quad\\Longrightarrow\\quad C_2 = -1$$\n\n$$C_1 = -C_2 = 1$$",
+     "partial": 2
+    },
+    {
+     "text": "写出特解。\n\n$$y = \\mathrm{e}^{-x} - \\mathrm{e}^{4x}$$\n\n独立验算：$y' = -\\mathrm{e}^{-x} - 4\\mathrm{e}^{4x}$，$y'' = \\mathrm{e}^{-x} - 16\\mathrm{e}^{4x}$，则\n\n$$y'' - 3y' - 4y = \\left(\\mathrm{e}^{-x} - 16\\mathrm{e}^{4x}\\right) - 3\\left(-\\mathrm{e}^{-x} - 4\\mathrm{e}^{4x}\\right) - 4\\left(\\mathrm{e}^{-x} - \\mathrm{e}^{4x}\\right)$$\n\n$$= \\mathrm{e}^{-x} - 16\\mathrm{e}^{4x} + 3\\mathrm{e}^{-x} + 12\\mathrm{e}^{4x} - 4\\mathrm{e}^{-x} + 4\\mathrm{e}^{4x} = (1+3-4)\\mathrm{e}^{-x} + (-16+12+4)\\mathrm{e}^{4x} = 0 \\quad\\checkmark$$\n\n初值：$y(0) = 1 - 1 = 0$ ✓；$y'(0) = -1 - 4 = -5$ ✓",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：二阶常系数齐次线性微分方程的特征根法（常微分方程）。\n**考点出处**：二阶常系数齐次方程的特解（常微分方程）\n**第一步：写特征方程。**\n\n$$r^2 - 3r - 4 = 0$$\n\n**第二步：求特征根。**\n\n$$(r + 1)(r - 4) = 0 \\quad\\Longrightarrow\\quad r_1 = -1,\\qquad r_2 = 4$$\n\n（两个不相等的实根，通解为两个指数函数之和。）\n\n**第三步：写通解。**\n\n$$y = C_1\\mathrm{e}^{-x} + C_2\\mathrm{e}^{4x}$$\n\n**第四步：代入初始条件求 $C_1$、$C_2$。**\n\n先求导：\n\n$$y' = -C_1\\mathrm{e}^{-x} + 4C_2\\mathrm{e}^{4x}$$\n\n由 $y(0) = 0$：\n\n$$C_1 + C_2 = 0$$\n\n由 $y'(0) = -5$：\n\n$$-C_1 + 4C_2 = -5$$\n\n**第五步：解方程组。**\n\n由第一式得 $C_1 = -C_2$，代入第二式：\n\n$$-(-C_2) + 4C_2 = C_2 + 4C_2 = 5C_2 = -5 \\quad\\Longrightarrow\\quad C_2 = -1$$\n\n$$C_1 = -C_2 = 1$$\n\n**第六步：写出特解。**\n\n$$y = \\mathrm{e}^{-x} - \\mathrm{e}^{4x}$$\n\n**独立验算**：$y' = -\\mathrm{e}^{-x} - 4\\mathrm{e}^{4x}$，$y'' = \\mathrm{e}^{-x} - 16\\mathrm{e}^{4x}$，则\n\n$$y'' - 3y' - 4y = \\left(\\mathrm{e}^{-x} - 16\\mathrm{e}^{4x}\\right) - 3\\left(-\\mathrm{e}^{-x} - 4\\mathrm{e}^{4x}\\right) - 4\\left(\\mathrm{e}^{-x} - \\mathrm{e}^{4x}\\right)$$\n\n$$= \\mathrm{e}^{-x} - 16\\mathrm{e}^{4x} + 3\\mathrm{e}^{-x} + 12\\mathrm{e}^{4x} - 4\\mathrm{e}^{-x} + 4\\mathrm{e}^{4x} = (1+3-4)\\mathrm{e}^{-x} + (-16+12+4)\\mathrm{e}^{4x} = 0 \\quad\\checkmark$$\n\n初值：$y(0) = 1 - 1 = 0$ ✓；$y'(0) = -1 - 4 = -5$ ✓",
+   "misconception": "- **特征方程中 $y$ 的系数是 $-4$，不是 $+4$**：$y''-3y'-4y=0$ 对应 $r^2-3r-4=0$，因式分解得 $(r+1)(r-4)$，**根是 $-1$ 与 $4$**。若把系数看成 $+4$，会解出 $r = -1, 4$ 之外的根（如 $r=-1,4$ 与 $r=1,-4$ 混淆）。\n- **两根不等，通解是两个指数之和**：$C_1\\mathrm{e}^{-x} + C_2\\mathrm{e}^{4x}$。**若两根相等要写 $C_1\\mathrm{e}^{rx} + C_2x\\mathrm{e}^{rx}$，若是复根要用 $\\mathrm{e}^{\\alpha x}(C_1\\cos\\beta x + C_2\\sin\\beta x)$——三种情形别混。**\n- **$y' = -C_1\\mathrm{e}^{-x} + 4C_2\\mathrm{e}^{4x}$ 中 $4C_2$ 的系数 $4$**：$\\left(\\mathrm{e}^{4x}\\right)' = 4\\mathrm{e}^{4x}$，**别漏掉这个 $4$**。\n- **初始条件用 $x=0$ 代入时 $\\mathrm{e}^0 = 1$**：$y(0) = C_1 + C_2$，$y'(0) = -C_1 + 4C_2$，**不要把 $\\mathrm{e}^{-x}$ 与 $\\mathrm{e}^{4x}$ 在 $x=0$ 处算成别的数**。\n- **两个方程联立的解法**：$C_1 + C_2 = 0$、$-C_1+4C_2 = -5$，相加得 $5C_2 = -5$，**这一步最快**。\n- **最后要写成具体的特解**（不含任意常数），**保留 $C_1$、$C_2$ 就没做完**。\n- **结果自查**：$y(0) = 0$ ✓，且 $y'$ 在 $0$ 处为负说明函数在原点附近递减，与 $y(0)=0$、$y'(0)=-5<0$ 相符。\n\n---",
+   "extension": null,
+   "tags": [
+    "自考真题"
+   ],
+   "verify": [],
+   "idx": 560
+  }
+ ]
+}
