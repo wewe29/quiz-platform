@@ -19,8 +19,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PLATFORM = os.path.abspath(os.path.join(HERE, "..", ".."))
 
 
-def run(cmd, cwd, label):
+def run(cmd, cwd, label, extra_env=None):
     env = dict(os.environ, PYTHONIOENCODING="utf-8")
+    if extra_env:
+        env.update(extra_env)
     p = subprocess.run(cmd, cwd=cwd, env=env, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     out = p.stdout.decode("utf-8", "replace")
     lines = [l for l in out.splitlines() if l.strip()]
@@ -48,9 +50,14 @@ def main():
         print("=" * 60)
         print("[subject] %s" % sid)
         out = os.path.join(PLATFORM, "subjects", sid)
+        # 门禁链里的单文件构建（update_site）会把成品写到「项目根」；
+        # 平台构建把它重定向到临时目录，避免 1.6MB 副产品污染 sources/。
+        env_tmp = os.path.join(PLATFORM, ".build-tmp", sid)
+        os.makedirs(env_tmp, exist_ok=True)
         run([sys.executable, os.path.join(sources, sid, "tools", "build_subject.py"),
              "--out", out] + extra,
-            cwd=os.path.join(sources, sid, "tools"), label="%s 门禁+导出" % sid)
+            cwd=os.path.join(sources, sid, "tools"), label="%s 门禁+导出" % sid,
+            extra_env={"QUIZ_PROJECT_DIR": env_tmp})
         run([sys.executable, os.path.join(HERE, "katex_assets.py"),
              "--subject-dir", out],
             cwd=HERE, label="%s KaTeX 自托管" % sid)
