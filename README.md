@@ -3,9 +3,10 @@
 多学科大学课程刷题小应用：**门户 + 学科子站 + 统一数据契约 + 门禁流水线自动部署**。
 实施方案与迭代计划见《线性代数复习资料/应用化实施方案与迭代计划.md》，决策记录见 [docs/decisions.md](docs/decisions.md)。
 
-## 在线
+## 在线 / 交付
 
-- 平台门户：https://wewe29.github.io/quiz-platform/
+- **交付物**：`python tools/platform/build_all.py --dist` → `dist/` 目录（纯静态、相对路径、零第三方依赖），放进任何静态文件服务即成完整网站；**托管与部署由使用者自行决定**，本项目不预设托管平台。
+- 仓库自带的 GitHub Pages workflow（`.github/`）只是恰好可用的一种可选自动化，不需要可直接删除。
 - 线性代数单文件离线版（保留渠道）：https://wewe29.github.io/linear-algebra-quiz/
 
 ## 目录
@@ -25,7 +26,7 @@ tools/platform/            build_all.py（总构建）/ validate_platform.py（�
 docs/decisions.md          架构决策记录
 ```
 
-## 发布流程（以线性代数为例）
+## 构建与交付流程（以线性代数为例）
 
 ```powershell
 # 1. 在学科工作区改题库/界面后，跑门禁并导出平台产物：
@@ -35,12 +36,13 @@ python tools\build_subject.py                # 完整门禁 → subjects/linalg/
 # 2. 同步工具链镜像到平台仓（正本→镜像，禁止反向）：
 robocopy tools D:\workspace\5-docs\quiz-platform\sources\linalg\tools /MIR /XD __pycache__
 
-# 3. 推送平台仓 → CI 重新构建全部门禁并部署：
+# 3. 平台仓全量构建 + 校验 + 组装交付物：
 cd D:\workspace\5-docs\quiz-platform
-git add -A && git commit -m "..." && git push
+python tools\platform\build_all.py --dist    # 产出 dist/，交给你的托管方式
 ```
 
-本机快速验证：`python tools/platform/build_all.py --dist` 后 `python -m http.server -d dist`。
+本机预览：`python -m http.server -d dist` 后浏览器打开 `http://localhost:8000`。
+（可选）推送平台仓会触发仓库自带的 Pages workflow——不用它就删掉 `.github/`。
 
 ## 门禁
 

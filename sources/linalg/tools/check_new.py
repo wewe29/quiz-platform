@@ -60,31 +60,33 @@ def main():
     if not args:
         args = ["ch1b", "ch2b", "ch3b", "ch4b", "ch5b", "ch6b"]
 
-    from qa_bank.common import audit, load_bank
+    from qa_bank.common import audit, GROUP
     from verify_quiz import check_content, run_sympy_checks
     from audit_choice import check as check_choice
     from audit_open import check as check_open
     from qa_bank import target as T
 
-    # 基础库（ch1..ch6，原 180 题）的实际题型分布。
-    # 用途：把 target.py 的 MATRIX（题型 × 章节，**全库**口径）减去基础库，
-    # 反推出「这个扩写章该写多少」，从而让 QUOTA 表与单一事实源自动对账。
-    _base = load_bank(["ch1", "ch2", "ch3", "ch4", "ch5", "ch6"])
-    _base_type = Counter((q["chapter"], q["typeGroup"]) for q in _base)
-
     # 去重基准（existing_stems.txt）= 当前全库题干的导出，由 tools\export_stems.py 生成。
-    # 存的是**题干键 -> 题号列表**：同一题干对应多个题号，本身就说明库里撞了题。
+    # 格式：`题号 | 模块 | 题型 | 题干`。**必须带模块名**：
+    #   题号会随章节增删整体重排（加一章，后面的题号全变），
+    #   光靠题号认不出「这条基准是不是本章自己的题」——
+    #   曾因如此把本章每一道题都误报成「与 q-xxx 重复」。
+    #   按模块名剔，既不误报自己，又不放过别的章真撞题干。
+    # 注意：这里**不预先 import 基础章**。common.py 的题号由全局计数器按导入顺序分配，
+    # 多 import 一次就会把待检章的题号整体顶偏（实测 q-001… 被顶成 q-181…），
+    # 报错信息里的题号就全错了。基础库的章节 × 题型计数改从基准文件里数。
     base_by_key = {}
+    base_type = Counter()
     stems_path = os.path.join(HERE, "research", "existing_stems.txt")
     with io.open(stems_path, "r", encoding="utf-8") as f:
         for line in f:
-            parts = line.split("|", 2)
-            if len(parts) >= 3:
-                key = parts[2].strip()[:60]
-                base_by_key.setdefault(key, []).append(parts[0].strip())
-
-    # seen 只记「本次运行里已经检查过的章」，用于跨章查重
-    seen = {}
+            parts = line.split("|", 3)
+            if len(parts) >= 4:
+                qid, mname, qtype = parts[0].strip(), parts[1].strip(), parts[2].strip()
+                key = parts[3].strip()[:60]
+                base_by_key.setdefault(key, []).append((mname, qid))
+                if not mname.endswith("b"):          # ch1..ch6 = 基础库
+                    base_type[(int(mname[2]), GROUP.get(qtype, qtype))] += 1
 
     grand_fail = 0
     for name in args:
@@ -99,11 +101,6 @@ def main():
         print("=" * 72)
         print("%s：%d 题" % (name, len(qs)))
 
-        # 基准里含本章自己的题（题库已扩到 500 题），比对时要按**题号**剔掉本章，
-        # 否则本章每道题都会被自己报成「与 q-xxx 重复」。
-        # 按题号剔而不是按题干剔：别的章真与本章撞题干时，别章的题号仍在基准里，照样抓得到。
-        own_ids = set(q["id"] for q in qs)
-
         # S1 配额
         want = QUOTA[name]
         ch = int(name[2])
@@ -117,7 +114,7 @@ def main():
                 err.append("S1 难度 %s = %d，配额 %d" % (d, cd.get(d, 0), n))
         # S1b 本表配额 ↔ target.py 的 MATRIX 对账（两处口径不许各说各话）
         for t, n in want["type"].items():
-            implied = T.MATRIX[t][ch] - _base_type.get((ch, t), 0)
+            implied = T.MATRIX[t][ch] - base_type.get((ch, t), 0)
             if implied != n:
                 err.append("S1b 配额表与 target.py 不一致：%s %s 本表 %d，"
                            "target.py 矩阵推出 %d" % (name, t, n, implied))
@@ -136,12 +133,9 @@ def main():
         check_content(qs, err, warn)
         for q in qs:
             key = (q.get("stem") or "").strip()[:60]
-            others = [i for i in base_by_key.get(key, []) if i not in own_ids]
+            others = [(m, i) for (m, i) in base_by_key.get(key, []) if m != name]
             if others:
-                err.append("S4 %s 题干与 %s 重复" % (q["id"], others[0]))
-            if key in seen:
-                err.append("S4 %s 题干与 %s 重复" % (q["id"], seen[key]))
-            seen[key] = q["id"]
+                err.append("S4 %s 题干与 %s 的 %s 重复" % (q["id"], others[0][0], others[0][1]))
 
         # S5 SymPy
         nver = run_sympy_checks(qs, err, quiet)
