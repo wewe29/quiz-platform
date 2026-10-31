@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>高等数学 905 题 · 离线单文件版下载</title>
+<meta name="description" content="整个《高等数学》题库刷题程序装进 1 个 HTML 文件（905 题、零外部依赖）。下载后双击即用，断网也能刷。">
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --fg:#1a1c1f; --muted:#5b6470; --line:#e3e6ea;
+    --accent:#1d4ed8; --accent-fg:#fff; --soft:#eef2fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#14161a; --card:#1c1f25; --fg:#e8eaed; --muted:#9aa4b2; --line:#2b3038;
+           --accent:#5b8cf5; --accent-fg:#0f1115; --soft:#1c2331; }
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    display:flex; justify-content:center; padding:48px 20px;
+  }
+  .wrap{ width:100%; max-width:660px; }
+  .card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:32px 28px; }
+  h1{ font-size:22px; margin:0 0 12px; letter-spacing:.01em; }
+  p{ margin:0 0 14px; color:var(--muted); }
+  p.lead{ color:var(--fg); }
+  .dl{
+    display:block; margin:24px 0 8px; padding:18px 20px; border-radius:12px;
+    background:var(--accent); color:var(--accent-fg); text-decoration:none; text-align:center;
+    font-weight:700; font-size:17px;
+  }
+  .dl:hover{ filter:brightness(1.06); }
+  .dl small{ display:block; font-weight:400; opacity:.85; font-size:13px; margin-top:5px; }
+  .facts{ margin:20px 0 0; padding:0; list-style:none; border-top:1px solid var(--line); }
+  .facts li{
+    display:flex; gap:12px; padding:11px 0; border-bottom:1px solid var(--line);
+    font-size:14.5px; color:var(--muted);
+  }
+  .facts b{ color:var(--fg); font-weight:600; min-width:104px; flex:none; }
+  .alt{ margin:22px 0 0; padding:16px 18px; background:var(--soft); border-radius:10px; }
+  .alt p{ margin:0 0 8px; font-size:14.5px; }
+  .alt a{ color:var(--accent); }
+  .foot{ margin-top:22px; padding-top:16px; border-top:1px solid var(--line); font-size:13px; color:var(--muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>高等数学 905 题 · 离线单文件版</h1>
+      <p class="lead">整个刷题程序 —— 题库、公式渲染库、字体 —— 全装进 <strong>1 个 HTML 文件</strong>。下载下来双击就能用，断网也能刷，不需要装任何东西、不需要账号。</p>
+
+      <a class="dl" href="calculus-quiz-offline.html" download>下载单文件离线版<small>calculus-quiz-offline.html · 3,430,226 字节（约 3.27 MB）</small></a>
+      <p style="font-size:13px">点上面的按钮直接下载；如果浏览器把它打开而不是存下来，右键链接选「另存为」即可，存下来的就是这个文件。</p>
+
+      <ul class="facts">
+        <li><b>题量</b>905 题，12 章，题型 6 种（单选 257 / 多选 24 / 判断 36 / 填空 147 / 简答 24 / 计算与分析 417）</li>
+        <li><b>难度</b>基础 229 / 中等 372 / 困难 304，按难度、题型、章节、知识点筛选</li>
+        <li><b>解析</b>逐题给「答案依据 + 考点出处」，客观题逐项说明其余选项错在哪；主观题按采分点自评</li>
+        <li><b>真题</b>676 道考研与自考真题，标注年份、卷别、题号与可点开的源链接</li>
+        <li><b>依赖</b>零 —— 运行时不发任何网络请求</li>
+        <li><b>进度</b>存在浏览器本地（localStorage），不上传</li>
+      </ul>
+
+      <div class="alt">
+        <p><b>不想下文件？直接在浏览器里刷也行：</b></p>
+        <p><a href="https://study-math.space.mcode.cn/">主站 · 五学科 2060 题</a>（高等数学 / 线性代数 / 数据可视化 / 机器学习 / 概率论与数理统计，可安装到桌面离线用）</p>
+        <p><a href="https://ukhfwff2y0f0h.space.mcode.cn/">高数专站 · 905 题</a>（只刷高数的直达入口）</p>
+      </div>
+
+      <div class="foot">
+        这台机器上本地址不提供在线答题，只负责把单文件版发给你 —— 在线刷题请用上面两个链接。
+      </div>
+    </div>
+  </div>
+</body>
+</html>

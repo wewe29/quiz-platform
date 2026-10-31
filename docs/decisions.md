@@ -119,14 +119,14 @@ Lighthouse 打分留给托管方自测；平台门禁只拦结构性缺失（man
 
 ## D22 · 镜像补全为「正本 tools 全量」（2026-10-31）
 
-**决策**：把高数正本 `5-docs\高等数学复习资料\tools` 的**全部源码**同步进镜像 `sources/calculus/tools/`（此前只有 `qa_bank/` + 6 个构建脚本），与线代镜像的形态一致（线代镜像本来就带 `assets/`、`template.html`、`research/`）。同步由常驻脚本 `tools/platform/sync_mirror.py` 执行（新增 `--subject` 登记与 `--check` 漂移模式），默认排除 `__pycache__`、`*.pyc`、`_cache`（高数 `research/_cache` 实测 156 MB 外部抓取缓存）、`_drops*.jsonl`（2 MB 日志）。
+**决策**：把高数正本 `5-docs\高等数学复习资料` 的**全部源码**同步进镜像 `sources/calculus/`（此前只有 `qa_bank/` + 6 个构建脚本），与线代镜像的形态一致（线代镜像本来就带 `assets/`、`template.html`、`research/`）。同步的不是整个正本根目录，而是**正本根下的若干块**（`sync_mirror.py` 的 `SUBJECTS.pairs`）：`tools/`（全部源码）、`site_pages/`（已上线的指路页与离线下载页的页面源）、`交付说明.md`；构建产物（`_site_v2/`、单文件成品 HTML、`research/_cache`）不入库。同步由常驻脚本 `tools/platform/sync_mirror.py` 执行（新增 `--subject` 登记与 `--check` 漂移模式），默认排除 `__pycache__`、`*.pyc`、`_cache`（高数 `research/_cache` 实测 156 MB 外部抓取缓存）、`_drops*.jsonl`（2 MB 日志）。
 
 **理由**：高数站的前端源码——`assets/js/**`（21 个文件，含刚修完 BUG-12 的 `ui/render.js`）、`build_static.py`、`build_single.py`、`template_v2.html`、三道 JS 门禁（`check_keyboard_contract.js` 等）、`tests/**`、以及 676 道真题的出题脚本 `research/build_kaoyan_bank.py` 等——**只存在于裸目录，任何版本控制里都没有**；`5-docs` 下只有 `quiz-platform` 是 git 仓，线代与高数正本都是裸目录。磁盘一坏，刚验完的 BUG-12 修复和新门禁就永久丢失。D10 已经把「镜像是正本 tools 的拷贝」写成决策，**高数镜像缺的那部分不是设计选择，是漏同步**——所以另立一个仓会直接违反 D10。
 
 **后果**：
-- 高数镜像 88 → **176 文件**，与正本内容一致（`sync_mirror.py --check` 退出 0）；补进前端 201 KB、出题与审计脚本约 1.3 MB、`tests/` 32 KB。
+- 高数镜像 88 → **179 文件**，与正本内容一致（`sync_mirror.py --check` 退出 0）；补进前端 201 KB、出题与审计脚本约 1.3 MB、`tests/` 32 KB，以及两个已上线页面的源文件与交付文档。
 - **换行符按内容判定，不按字节判定**：仓内由 `.gitattributes` 统一成 LF（D21），而正本是裸目录、换行符不统一（实测 4 个 v1 遗留文件 `assets/app.js`、`build_quiz.py`、`template.html`、`verify_quiz.py` 在正本是 CRLF，仓内 blob 是 LF）。所以 `--check` 把两侧 CRLF 归一后再比，并分三档报告「逐字节相同 / 仅换行符差异 / 真差异」——**只有缺文件与真差异算漂移**。若按字节硬比，重新 checkout 后会误报 4 处假漂移。
 - 镜像对 CI **完全惰性**：`build_all.py` 只调用各学科 `build_subject.py`，高数那份只读 `qa_bank/` 与门禁脚本，从不读 `assets/`；`validate_platform.py` 的外链检查显式跳过 `sources/` 与 `tools/`。⇒ 补镜像不改变 `dist/` 与 `subjects/` 的任何字节。
 - `sources/*/tools/research/_cache/` 已进 `.gitignore` 兜底。
-- **判据与反向测试**：`sync_mirror.py --check` 在镜像漂移时退出 1（本次实测：同步前报「缺 88 个」并退出 1，同步后 0 差异并退出 0）。沙盒反向测试 12 项全绿：改内容 → 退出 1；删文件 → 退出 1；**仅换行符差异 → 退出 0（不误报）**；排除规则确认 `__pycache__`/`_cache` 不进镜像。
+- **判据与反向测试**：`sync_mirror.py --check` 在镜像漂移时退出 1（本次实测：同步前报「缺 88 个」并退出 1，同步后 0 差异并退出 0）。沙盒反向测试 16 项全绿：改内容 → 退出 1；删文件 → 退出 1；**仅换行符差异 → 退出 0（不误报）**；单文件对与目录对各自的内容差异/缺失都能检出；排除规则确认 `__pycache__`/`_cache` 不进镜像。
 
