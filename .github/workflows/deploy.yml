@@ -35,10 +35,20 @@ jobs:
       - name: Install deps
         run: pip install sympy
 
+      - name: Run platform self-tests (regression tests for the gates themselves)
+        env:
+          PYTHONIOENCODING: utf-8
+        run: python tools/platform/test_platform_gates.py
+
       - name: Build all subjects (content gates + export + validate)
         env:
           PYTHONIOENCODING: utf-8
         run: python tools/platform/build_all.py --dist
+
+      - name: Fail on drift (committed portal != regenerated portal)
+        run: |
+          git diff --exit-code -- index.html \
+            || (echo "::error::门户 index.html 与按 registry 重新生成的结果不一致：改了学科/题量却没提交重生成后的 index.html" && exit 1)
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

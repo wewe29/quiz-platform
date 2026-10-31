@@ -14,6 +14,9 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 PLATFORM = os.path.abspath(os.path.join(HERE, "..", ".."))
 
+sys.path.insert(0, HERE)   # portal_meta 与本脚本同目录
+from portal_meta import describe as portal_desc, read_meta  # noqa: E402
+
 SHARD_BUDGET = 200 * 1024          # 单分片字节上限
 SHELL_BUDGET = 300 * 1024          # 学科壳（html + js + css，不含 vendor/data）上限
 PORTAL_BUDGET = 100 * 1024         # 门户（index.html + portal js/css）上限
@@ -270,6 +273,26 @@ def check_pwa(platform):
     print("  [pwa] manifest/sw/注册/横幅 结构齐备" if not errors else "  [pwa] 见 FAIL 项")
 
 
+def check_portal_meta(platform, subjects):
+    """门户 meta 文案必须与 registry 一致（口径单一事实源，防手改漂移）。
+
+    2026-10-31 实证过反面：ML 与数可视早已上线，meta 仍写着「接计划接入」，
+    线上对外文案是错的，而当时全部门禁全绿——因为没有任何一道门禁看这句文案。
+    """
+    p = os.path.join(platform, "index.html")
+    if not os.path.isfile(p):
+        err("缺门户 index.html")
+        return
+    html = open(p, encoding="utf-8").read()
+    got = read_meta(html)
+    want = portal_desc(subjects)
+    if got is None:
+        err('门户 index.html 缺 <meta name="description">')
+    elif got != want:
+        err("门户 meta description 与 registry 不一致：\n        期望：%s\n        实际：%s"
+            % (want, got))
+
+
 def main():
     subjects_dir = os.path.join(PLATFORM, "subjects")
     reg_path = os.path.join(subjects_dir, "registry.json")
@@ -298,6 +321,8 @@ def main():
         err("门户体积 %d 字节超预算 %d" % (portal_size, PORTAL_BUDGET))
     else:
         print("  [portal] %6.1f KB / 预算 %d KB" % (portal_size / 1024.0, PORTAL_BUDGET // 1024))
+
+    check_portal_meta(PLATFORM, list(listed.values()))
 
     for sid in sorted(listed):
         print("  [check] 学科 %s" % sid)

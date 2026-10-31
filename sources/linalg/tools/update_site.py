@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-r"""一键更新：构建 + 六道门禁 + 同步暂存 + 打印部署参数。
+r"""一键更新：构建 + 七道门禁 + 同步暂存 + 打印部署参数。
 
 用法：
     python tools/update_site.py                # 完整流程（含暂存同步）
@@ -16,6 +16,9 @@ r"""一键更新：构建 + 六道门禁 + 同步暂存 + 打印部署参数。
     1. build_quiz.py     —— 构建（含答案键自洽、主观题结构、成品↔源码逐字段一致三道内建门禁）
     2. verify_quiz.py    —— A1–A6 结构不变量 + B1–B6 内容 + SymPy 数值复核
     3. audit_choice.py   —— 客观题「答案键 ↔ 解析」自洽（豁免「选错误项」题型）
+    3b. audit_value.py   —— 客观题「答案键 ↔ 解析数值」一致性（补 audit_choice 的盲区：
+                          实测 250 道客观题里只有 44 道解析点名了答案字母，
+                          其余 206 道在字母规则下无保护；2026-10-31 的 q-039 就漏在这里）
     4. audit_open.py     —— 主观题结构（采分点数/分值/文本）
     5. scan_escapes.py   —— LaTeX 转义扫描
     6. diff_bank.py      —— 源码 ↔ 成品逐字段比对
@@ -44,20 +47,30 @@ STAGE_SRC = os.path.join(WORKDIR, "_deploy", "linear-algebra-quiz-src")
 NODE_ID = "457086899044553"
 PUBLIC_URL = "https://u44tlmu73tjcs.space.mcode.cn"
 
+# 每项：(脚本名, 参数, 额外环境变量)
 GATES = [
-    ("verify_quiz.py", ["--quiet"]),
-    ("audit_choice.py", ["--quiet"]),
-    ("audit_open.py", []),
-    ("scan_escapes.py", []),
-    ("diff_bank.py", []),
+    ("verify_quiz.py", ["--quiet"], None),
+    ("audit_choice.py", ["--quiet"], None),
+    ("audit_value.py", ["--quiet"], None),
+    ("audit_open.py", [], None),
+    ("scan_escapes.py", [], None),
+    # diff_bank 必须比对**本次刚构建出来的**成品。
+    # 2026-10-31 实测的坑：平台构建（build_subject.py）把成品写到 QUIZ_PROJECT_DIR，
+    # 而 diff_bank 自己按「tools 的上一级」找成品、只认 QUIZ_HTML 环境变量——
+    # 平台构建从不设它，于是这道门禁一直在拿一份**旧成品**做比对（还恰好被提交
+    # 进了仓库），形同虚设。必须显式把 QUIZ_HTML 指到本次的成品。
+    ("diff_bank.py", [], {"QUIZ_HTML": PRODUCT}),
 ]
 
 
-def run(label, argv, show_tail=6):
+def run(label, argv, show_tail=6, extra_env=None):
     """跑一条 python 脚本，非零退出即抛错。"""
     cmd = [sys.executable] + argv
+    env = dict(os.environ)
+    if extra_env:
+        env.update(extra_env)
     p = subprocess.run(cmd, cwd=HERE, stdout=subprocess.PIPE,
-                       stderr=subprocess.STDOUT)
+                       stderr=subprocess.STDOUT, env=env)
     out = p.stdout.decode("utf-8", "replace")
     lines = [l for l in out.splitlines() if l.strip()]
     print("[%s] %s" % ("OK " if p.returncode == 0 else "FAIL", label))
@@ -126,9 +139,9 @@ def main():
         run("build_quiz.py", [os.path.join(HERE, "build_quiz.py")], show_tail=8)
 
         print("=" * 72)
-        print("[2/3] 六道验证链")
-        for script, extra in GATES:
-            run(script, [os.path.join(HERE, script)] + extra)
+        print("[2/3] 七道验证链")
+        for script, extra, genv in GATES:
+            run(script, [os.path.join(HERE, script)] + extra, extra_env=genv)
         run("check_html.py", [os.path.join(HERE, "check_html.py"), PRODUCT], show_tail=10)
 
     if "--no-stage" in args:

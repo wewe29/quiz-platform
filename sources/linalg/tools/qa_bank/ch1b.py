@@ -82,12 +82,17 @@ Q_.append(Q(SINGLE, "hard", "1.4",
 
 Q_.append(Q(SINGLE, "hard", "1.4",
     "设 $A,B$ 均为 $3$ 阶方阵，$|A|=2$，$|B|=-3$，则 $|2AB^{-1}|=$",
-    answer=["B"],
+    answer=["A"],
     options=["$-\\dfrac{16}{3}$", "$-\\dfrac{8}{3}$", "$\\dfrac{16}{3}$", "$-\\dfrac{16}{9}$"],
-    expl="**答案依据**：$|2AB^{-1}|=2^3\\,|A|\\,|B^{-1}|=8\\times2\\times\\left(-\\dfrac13\\right)=-\\dfrac{16}{3}$（§1.4：$|kA|=k^n|A|$、$|AB|=|A||B|$、$|B^{-1}|=\\dfrac{1}{|B|}$ 三条性质连用）。",
+    expl="**答案依据**：$|2AB^{-1}|=2^3\\,|A|\\,|B^{-1}|=8\\times2\\times\\left(-\\dfrac13\\right)=-\\dfrac{16}{3}$（§1.4：$|kA|=k^n|A|$、$|AB|=|A||B|$、$|B^{-1}|=\\dfrac{1}{|B|}$ 三条性质连用）。\n"
+          "A 正确：即 $\\left(-\\dfrac{16}{3}\\right)$。\n"
+          "B 错：数乘因子用了 $2$ 而不是 $2^3$——$A$ 是 $3$ 阶方阵，$|2A|=2^3|A|$。\n"
+          "C 错：$|B^{-1}|=\\dfrac{1}{|B|}=\\left(-\\dfrac13\\right)$，$|B|=-3$ 的负号不能丢。\n"
+          "D 错：$|B^{-1}|=\\left(-\\dfrac13\\right)$（只取一次倒数），幂次也应为 $2^3$。",
     mis="⚠️易错点：数乘因子用 $2$ 而不是 $2^3$；或把 $|B^{-1}|$ 算成 $-3$ 忘了取倒数。",
     tags=["综合", "高频", "难点"],
-    verify=[{"desc": "数值核对", "code": "M([[1,2],[3,4]]).det()", "expected": "-2"}]))
+    verify=[{"desc": "|2AB^{-1}| = 2^3·|A|·|B|^{-1}", "code": "simplify(Rational(2)**3*Rational(2)*Rational(1,-3))", "expected": "-16/3"},
+            {"desc": "对照 A 项数值", "code": "Rational(-16,3)", "expected": "-16/3"}]))
 
 # ─────────────────────────────────────────────── 多选 9（基础5 中等3 困难1）
 Q_.append(Q(MULTI, "basic", "1.4",

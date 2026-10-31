@@ -1,500 +1,500 @@
-q-001 | single | 三阶行列式 $\begin{vmatrix}1&2&3\\4&5&6\\7&8&10\end{vmatrix}$ 的值是
-q-002 | single | 设 $A$ 是 $n$ 阶方阵，下列等式一定成立的是
-q-003 | single | 设 $A,B$ 均为 $n$ 阶方阵，则 $|AB|=$
-q-031 | single | 二阶行列式 $\begin{vmatrix}-2&3\\4&5\end{vmatrix}$ 的值是
-q-032 | single | 设 $A$ 为 $3$ 阶方阵且 $|A|=5$，则 $|3A|=$
-q-033 | single | 排列 $217986354$ 的逆序数是
-q-004 | single | 设 $A=(a_{ij})_{3\times3}$，$A_{ij}$ 表示元素 $a_{ij}$ 的**代数余子式**，则 $A_{ij}$ 与元素 $a_{ij}$ 的关系是
-q-005 | single | 设 $A$ 为 $n$ 阶方阵且 $|A|\neq0$，则 $|A^*|$（$A^*$ 为 $A$ 的伴随矩阵）等于
-q-034 | single | 已知三阶行列式 $\begin{vmatrix}a_1&a_2&a_3\\b_1&b_2&b_3\\c_1&c_2&c_3\end{vmatrix}=3$，则 $\begin{vmatrix}a_1+2b_1&a_2+2b_2&a_3+2b_3\\b_1&b_2&b_3\\c_1+3b_1&c_2+3b_2&c_3+3b_3\end{vmatrix}=$
-q-035 | single | $n$ 阶排列 $n,\,n-1,\,\cdots,\,2,\,1$（完全倒序）的逆序数是
-q-036 | single | 设 $A$ 为 $3$ 阶方阵且 $|A|=2$，则 $|2A^{-1}|=$
-q-037 | single | 设 $A=(a_{ij})_{4\times4}$，则 $a_{11}A_{21}+a_{12}A_{22}+a_{13}A_{23}+a_{14}A_{24}=$（$A_{ij}$ 为代数余子式）
-q-038 | single | 设 $f(x)=\begin{vmatrix}x&1&1&1\\1&x&1&1\\1&1&x&1\\1&1&1&x\end{vmatrix}$，则 $f'(x)=$
-q-039 | single | 设 $A,B$ 均为 $3$ 阶方阵，$|A|=2$，$|B|=-3$，则 $|2AB^{-1}|=$
-q-006 | multi | 下列关于行列式性质的等式中，正确的有
-q-007 | multi | 关于行列式按行（列）展开定理，下列说法正确的有
-q-008 | multi | 设 $A$ 为 $n$ 阶方阵，则关于伴随矩阵 $A^*$ 的结论，正确的有
-q-040 | multi | 下列 $n$ 阶行列式中，**一定等于零**的有
-q-041 | multi | 关于余子式与代数余子式，下列说法中正确的有
-q-042 | multi | 关于 $n$ 阶行列式的定义，下列说法中正确的有
-q-043 | multi | 设 $A$ 为 $3$ 阶方阵且 $|A|=3$，下列结论中正确的有
-q-044 | multi | 关于对角线法则，下列说法中正确的有
-q-009 | multi | 设 $A$ 为 $n$ 阶方阵且 $|A|\neq0$，下列结论正确的有
-q-045 | multi | 设 $A$ 为 $n$ 阶方阵（$n\ge2$），$A^{*}$ 为伴随矩阵，下列结论中正确的有
-q-046 | multi | 设 $A$ 为 $4$ 阶方阵且 $|A|=2$，下列结论中正确的有
-q-047 | multi | 关于排列与对换，下列说法中正确的有
-q-010 | multi | 设 $A$ 为 $n$ 阶方阵，下列命题中**一定成立**的有
-q-048 | multi | 设 $A$ 为 $3$ 阶方阵，下列条件中能推出 $|A|=0$ 的有
-q-011 | judge | 对任意 $n$ 阶方阵 $A$，都有 $|A^T|=|A|$。
-q-012 | judge | 对任意同阶方阵 $A,B$，都有 $|AB|=|A|\,|B|$。
-q-013 | judge | 元素 $a_{ij}$ 的代数余子式 $A_{ij}$ 只与 $a_{ij}$ 的位置有关，与 $a_{ij}$ 的数值无关。
-q-014 | judge | $n$ 阶行列式的定义中，按所有 $n!$ 个排列求和，每一项的符号由该排列的逆序数奇偶性决定。
-q-049 | judge | $\begin{vmatrix}2&0\\0&3\end{vmatrix}=6$。
-q-050 | judge | 若 $n$ 阶行列式 $|A|=0$，则 $A$ 必有两行（列）成比例。
-q-051 | judge | 行列式按第 $i$ 行展开时，$\sum_{j=1}^{n}a_{ij}A_{ij}=|A|$ 对每个固定的 $i$ 都成立。
-q-052 | judge | 任一奇排列经过一次对换都可变为偶排列。
-q-053 | judge | 对任意同阶方阵 $A,B$，都有 $|A+B|=|A|+|B|$。
-q-015 | judge | 三阶行列式可以只用主对角线上的三个元素相乘减去副对角线上的三个元素相乘来计算。
-q-016 | judge | 设 $A$ 为 $n$ 阶方阵且 $n\ge2$，若 $|A|=0$，则必有 $A^*=0$（零矩阵）。
-q-054 | judge | 设 $A$ 为 $3$ 阶方阵且 $|A|=2$，则 $|2A|=8$。
-q-055 | judge | 若行列式的第 2 行是第 1 行的 3 倍，则该行列式必为零。
-q-056 | judge | $4$ 阶行列式按定义展开共有 $24$ 项（带符号的乘积项）。
-q-057 | judge | 设 $A$ 为 $3$ 阶实方阵且 $|A|=-1$，则 $|A+E|$ 一定不等于零。
-q-017 | blank | 行列式中 $|I_n|=$ （$I_n$ 为 $n$ 阶单位矩阵）。
-q-018 | blank | $A=\begin{vmatrix}2&1\\3&4\end{vmatrix}$，则 $|A|=$ 。
-q-058 | blank | $\begin{vmatrix}3&-1\\5&2\end{vmatrix}=$ 。
-q-059 | blank | 设 $A$ 为 $4$ 阶方阵且 $|A|=4$，则 $|3A|=$ 。
-q-060 | blank | 排列 $2431$ 的逆序数是 。
-q-061 | blank | $\begin{vmatrix}1&2&3\\0&4&5\\0&0&6\end{vmatrix}=$ 。
-q-064 | blank | 排列 $135\cdots(2n-1)246\cdots(2n)$（奇数递增接偶数递增）的逆序数是 。
-q-019 | blank | 设 $A,B$ 均为 $3$ 阶方阵，已知 $|A|=2$，$|B|=3$，则 $|AB|=$ 。
-q-020 | blank | 设 $A=(a_{ij})_{3\times3}$，元素 $a_{12}$ 的**余子式** $M_{12}$ 等于 $\begin{vmatrix}a_{21}&a_{23}\\a_{31}&a_{33}\end{vmatrix}$，则 $A_{12}=$ （用 $M_{12}$ 表示）。
-q-021 | blank | $n$ 阶行列式的定义式中，排列 $\sigma\in S_n$ 的总数是 $n!$，故 $n$ 阶行列式展开后共有 ______ 项（带符号的项）。
-q-062 | blank | 设 $A$ 为 $3$ 阶方阵且 $|A|=3$，则 $|A^{*}|=$ 。
-q-063 | blank | 设 $A=(a_{ij})_{3\times3}$，则 $a_{11}A_{31}+a_{12}A_{32}+a_{13}A_{33}=$ 。
-q-065 | blank | $\begin{vmatrix}1&1&1\\1&2&4\\1&4&16\end{vmatrix}=$ 。
-q-066 | blank | 设 $A$ 为 $3$ 阶方阵且 $|A|=2$，则 $\bigl||A|\,A^{*}\bigr|=$ 。
-q-022 | term | 名词解释：**代数余子式**（algebraic cofactor）。
-q-067 | term | 名词解释：**余子式**（minor）与**代数余子式**（algebraic cofactor）。
-q-068 | term | 名词解释：**逆序数**（inversion number）。
-q-023 | short | 写出行列式的五条基本性质，并说明 $|AB|=|A|\,|B|$ 的意义。
-q-024 | short | 写出 $n$ 阶行列式的两种定义式，并说明它们各自的适用场合。
-q-069 | short | 简述计算 $n$ 阶行列式的四种常用方法及各自适用的行列式类型。
-q-072 | short | 证明：若 $n$ 阶行列式有两行完全相同，则行列式为零。
-q-025 | short | 证明：对任意 $n$ 阶方阵 $A$，有 $|A^T|=|A|$。
-q-071 | short | 证明：设 $A=(a_{ij})_{n\times n}$，当 $i\neq k$ 时 $\sum_{j=1}^{n}a_{ij}A_{kj}=0$。
-q-073 | short | 证明：当 $n\ge2$ 时，$n$ 个元素的全体排列中奇排列与偶排列各占一半，各为 $\dfrac{n!}{2}$ 个。
-q-026 | short | 设 $A,B$ 均为 $n$ 阶方阵且 $AB=0$，$B\neq0$。证明：$|A|=0$，并由此说明「$AB=0$ 必有 $A=0$ 或 $B=0$」是错误命题。
-q-070 | short | 写出二阶与三阶行列式的对角线法则，并说明它为什么不能推广到 4 阶及更高阶。
-q-074 | short | 设 $A$ 为 $n$ 阶方阵（$n\ge2$），$A^{*}$ 为伴随矩阵。证明：$|A^{*}|=|A|^{n-1}$；并求 $n=3$、$|A|=2$ 时 $|A^{*}|$ 的值。
-q-027 | calc | 计算三阶行列式 $|A|=\begin{vmatrix}3&1&2\\-1&2&0\\1&1&1\end{vmatrix}|$。
-q-028 | calc | 利用行列式的性质计算 $|A|=\begin{vmatrix}1&2&3&4\\2&3&4&5\\3&4&5&6\\4&5&6&7\end{vmatrix}|$。
-q-075 | calc | 计算三阶行列式 $D=\begin{vmatrix}2&0&1\\1&3&2\\4&1&1\end{vmatrix}$。
-q-076 | calc | 计算 $D=\begin{vmatrix}1&1&1\\1&2&4\\1&3&9\end{vmatrix}$。
-q-077 | calc | 计算四阶行列式 $D=\begin{vmatrix}2&1&0&0\\3&4&0&0\\0&0&5&6\\0&0&7&8\end{vmatrix}$。
-q-078 | calc | 计算四阶行列式 $D=\begin{vmatrix}2&0&0&0\\1&3&0&0\\5&7&4&0\\9&1&8&5\end{vmatrix}$。
-q-029 | calc | 求参数 $a$ 的值，使行列式 $|A|=\begin{vmatrix}1&1&1\\1&2&a\\1&4&a^2\end{vmatrix}=0$。
-q-079 | calc | 利用行和相等技巧计算 $D=\begin{vmatrix}1&2&3\\2&3&1\\3&1&2\end{vmatrix}$。
-q-080 | calc | 设 $D(\lambda)=\begin{vmatrix}2-\lambda&1&0\\1&2-\lambda&1\\0&1&2-\lambda\end{vmatrix}$。将 $D(\lambda)$ 展开为 $\lambda$ 的多项式并求 $D(0)$。
-q-030 | calc | 计算四阶行列式 $|A|=\begin{vmatrix}1&1&1&1\\2&3&4&5\\0&1&1&1\\1&1&0&0\end{vmatrix}|$。
-q-081 | calc | 计算循环结构行列式 $D=\begin{vmatrix}1&2&3&4\\2&3&4&1\\3&4&1&2\\4&1&2&3\end{vmatrix}$。
-q-082 | calc | 计算字母行列式 $D=\begin{vmatrix}x&y&x+y\\y&x+y&x\\x+y&x&y\end{vmatrix}$。
-q-083 | single | 线性方程组 $$\begin{cases}2x_1+x_2=5\\x_1-x_2=1\end{cases}$$ 的系数矩阵 $A$ 与增广矩阵 $\bar A$ 分别是
-q-084 | single | 设 $A,B$ 均为 $n$ 阶方阵，$C=AB$，则 $C^T$ 等于
-q-085 | single | 设 $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$，$B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$，则 $AB=$
-q-086 | single | 设 $A$ 为 $n$ 阶方阵且 $A$ 可逆，下列命题中**一定成立**的是
-q-087 | single | 设 $A$ 为 $3$ 阶方阵且 $|A|=2$，则 $A^{-1}=$
-q-119 | single | 设 $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$，则 $2A+A^T=$
-q-120 | single | 设 $A=\begin{pmatrix}1&2\\3&5\end{pmatrix}$，$B=\begin{pmatrix}1&3\\2&5\end{pmatrix}$，则 $A$ 与 $B$ 的关系是
-q-123 | single | 设 $A=\begin{pmatrix}A_1&0\\0&A_2\end{pmatrix}$，其中 $A_1,A_2$ 均为 $n$ 阶可逆方阵，则 $A^{-1}=$
-q-088 | single | 设线性方程组 $$\begin{cases}x_1+2x_2=5\\2x_1+x_2=1\end{cases}$$ 的系数矩阵为 $A$，已知 $|A|\neq0$，则由克拉默法则 $x_1=$
-q-089 | single | 用分块法计算 $AB$（$A$ 为 $m\times n$ 阶，$B$ 为 $n\times p$ 阶），下列说法中**错误**的是
-q-121 | single | 设 $A,B$ 均为 $n$ 阶可逆方阵，则 $(AB)^{-1}=$
-q-122 | single | 设 $A$ 为 $n$ 阶可逆方阵，则 $(A^{2})^{-1}=$
-q-124 | single | 设线性方程组 $$\begin{cases}2x_1+x_2+x_3=1\\x_1+2x_2-x_3=2\\x_1+x_2+x_3=3\end{cases}$$ 的系数矩阵为 $A$，常数列为 $b$，则由克拉默法则 $x_2=$
-q-125 | single | 设 $A,B$ 均为 $n$ 阶对称矩阵且 $AB=BA$，则 $AB$ 必为
-q-126 | single | 设 $A=\begin{pmatrix}B&C\\0&D\end{pmatrix}$，其中 $B,D$ 均为 2 阶方阵、$C$ 为 2 阶方阵，则 $|A|=$
-q-127 | single | 设 $A$ 为 $n$ 阶方阵且 $|A|\neq0$，$A^{*}$ 为 $A$ 的伴随矩阵，则 $A=$
-q-128 | single | 设 $A=\begin{pmatrix}1&-1\\0&1\end{pmatrix}$，则对任意正整数 $n$，$A^{n}=$
-q-090 | multi | 下列关于矩阵运算的等式中，正确的有
-q-091 | multi | 设 $A,B$ 均为 $n$ 阶可逆方阵，下列结论正确的有
-q-092 | multi | 下列关于矩阵的说法中，正确的有
-q-093 | multi | 设线性方程组 $Ax=b$ 的系数矩阵 $A$ 为 $n$ 阶方阵，下列结论正确的有
-q-094 | multi | 关于矩阵的分块法，下列说法正确的有
-q-129 | multi | 关于矩阵的加法与数乘，下列说法中正确的有
-q-130 | multi | 关于伴随矩阵 $A^{*}$，下列说法中正确的有
-q-131 | multi | 关于矩阵与线性方程组的对应，下列说法中正确的有
-q-132 | multi | 关于克拉默法则，下列说法中正确的有
-q-133 | multi | 关于矩阵的分块，下列说法中正确的有
-q-134 | multi | 关于矩阵的幂，下列说法中正确的有
-q-095 | multi | 设 $A,B,C$ 均为 $n$ 阶方阵，关于矩阵的运算律，下列说法正确的有
-q-135 | multi | 关于矩阵方程 $AX=B$（$A$ 为 $n$ 阶可逆方阵，$B$ 为 $n$ 阶方阵），下列说法中正确的有
-q-136 | multi | 关于对称矩阵，下列说法中正确的有
-q-137 | multi | 关于线性方程组 $Ax=b$ 的可解性，下列说法中正确的有
-q-138 | multi | 设 $A,B$ 均为 $n$ 阶可逆方阵，记 $M=\begin{pmatrix}O&A\\B&O\end{pmatrix}$（$O$ 为 $n$ 阶零矩阵），下列结论中正确的有
-q-096 | judge | 设 $A,B$ 都是 $n$ 阶方阵，则 $(AB)^T=B^TA^T$。
-q-097 | judge | 一个 $m\times n$ 阶矩阵与一个 $n\times m$ 阶矩阵的元素个数相同，但它们的形状不同，是两个不同的矩阵。
-q-098 | judge | 若 $A,B$ 都是 $n$ 阶方阵且 $AB=E$，则必有 $A=B=E$。
-q-099 | judge | 由克拉默法则，线性方程组 $Ax=b$ 有唯一解的必要条件是 $|A|\neq0$。
-q-100 | judge | 用分块法计算矩阵的乘积，所得结果与直接按元素相乘的结果完全相同。
-q-139 | judge | 两个同阶矩阵相等的充要条件是它们的阶相同且对应元素逐一相等。
-q-140 | judge | 两个 $n$ 阶方阵 $A,B$ 的乘积 $AB$ 与 $BA$ 总是相等的。
-q-141 | judge | 设 $A$ 为 $n$ 阶方阵，若 $|A|=0$，则 $A$ 存在逆矩阵 $A^{-1}$。
-q-142 | judge | 用克拉默法则解一个 $n$ 元线性方程组，需要计算 $n+1$ 个 $n$ 阶行列式。
-q-143 | judge | 用分块法计算矩阵乘积 $AB$ 时，$A$ 的列块数必须与 $B$ 的行块数相同。
-q-144 | judge | 设 $A$ 为任意方阵，则 $(A^{T})^{T}=A$。
-q-101 | judge | 设 $A$ 为 $n$ 阶方阵（$n\ge2$），若 $A^2=A$，则必有 $A=E$ 或 $A=0$。
-q-145 | judge | 设 $A,B,C$ 均为 $n$ 阶方阵，若 $AB=BA=E$ 且 $AC=CA=E$，则 $B=C$。
-q-146 | judge | 线性方程组写成矩阵形式 $Ax=b$ 时，$b$ 是由各方程右端常数按方程顺序组成的列向量。
-q-147 | judge | 当系数行列式 $|A|=0$ 时，克拉默法则依然可以用来判定方程组的解的情况。
-q-102 | judge | 设 $A,B,C$ 均为 $n$ 阶方阵，若 $ABC=E$，则 $A,B,C$ 都可逆。
-q-148 | judge | 设 $A$ 为 $n$ 阶实方阵，若 $AA^{T}=A^{T}A$，则 $A$ 必为对称矩阵。
-q-103 | blank | 设 $A=\begin{pmatrix}2&1\\1&3\end{pmatrix}$，$B=\begin{pmatrix}1&1\\0&2\end{pmatrix}$，则乘积 $AB$ 的第 1 行第 2 列元素 $(AB)_{12}=$ ______ 。
-q-104 | blank | 设 $A$ 为 $n$ 阶方阵且 $A$ 可逆，则 $|A^{-1}|=$ ______ 。
-q-105 | blank | 设线性方程组有 3 个方程、2 个未知数 $x_1,x_2$，则其系数矩阵 $A$ 的阶是 ______ 。
-q-106 | blank | 用克拉默法则解 $n$ 元非齐次线性方程组 $Ax=b$ 时，$A_i$ 是把 $A$ 的第 $i$ 列换成 ______ 所得的 $n$ 阶方阵。
-q-149 | blank | 设 $A=\begin{pmatrix}1&3\\2&4\end{pmatrix}$，$B=\begin{pmatrix}2&0\\1&5\end{pmatrix}$，则 $(3A-2B)_{21}=$ ______ 。
-q-150 | blank | 设 $A$ 为 $m\times n$ 阶矩阵，则 $A^{T}$ 的阶是 ______ 。
-q-151 | blank | 设 $A$ 为 $n$ 阶方阵，$A^{*}$ 为 $A$ 的伴随矩阵，则 $AA^{*}=$ ______ 。
-q-152 | blank | 设线性方程组 $$\begin{cases}x_1+2x_2=5\\3x_1+4x_2=11\end{cases}$$ 的系数行列式为 $A$，则由克拉默法则 $x_1+x_2=$ ______ 。
-q-153 | blank | 设 $A=\begin{pmatrix}B&C\\0&D\end{pmatrix}$ 为箭形分块矩阵（$B,D$ 均为 2 阶可逆方阵），则 $A^{-1}$ 的左下角块是 ______ 矩阵。
-q-154 | blank | 设 $A$ 为 $n$ 阶方阵，则 $A+A^{T}$ 一定是 ______ 矩阵。
-q-107 | blank | 设 $A=\begin{pmatrix}A_{11}&A_{12}\\A_{21}&A_{22}\end{pmatrix}$，$B=\begin{pmatrix}B_{11}&B_{12}\\B_{21}&B_{22}\end{pmatrix}$ 都按 $2\times2$ 分块，则乘积 $AB$ 的**右上角块**是 ______ 。
-q-155 | blank | 设 $A$ 为 $n$ 阶方阵且 $A$ 可逆，则 $(A^{-1})^{T}=$ ______ 。
-q-156 | blank | 线性方程组 $$\begin{cases}x_1+2x_2+x_3=4\\2x_1+x_2-x_3=1\\x_1-x_2+2x_3=3\end{cases}$$ 的系数行列式为 $A$，则 $|A|=$ ______ 。
-q-157 | blank | 设 $A=\begin{pmatrix}B&C\\0&D\end{pmatrix}$（$B,D$ 均为 2 阶方阵、$C$ 为 2 阶方阵），则 $A^{2}$ 的**右下角块**是 ______ 。
-q-108 | blank | 设 $A=\begin{pmatrix}B&C\\0&D\end{pmatrix}$ 为**箭形分块**矩阵（$B,D$ 均为 2 阶方阵且可逆），则 $A$ 可逆，且 $A^{-1}$ 的**右上角块**为 ______ 。
-q-158 | blank | 设 $A$ 为 $n$ 阶方阵且 $|A|\neq0$，$A^{*}$ 为 $A$ 的伴随矩阵，则 $(A^{*})^{-1}=$ ______ （用 $A$ 与 $|A|$ 表示）。
-q-109 | term | 名词解释：**矩阵**（matrix）。
-q-110 | term | 名词解释：**逆矩阵**（inverse matrix）。
-q-159 | short | 把矩阵按形状、元素位置与对称性三个标准分类，并各举一例。
-q-160 | short | 写出矩阵转置的四条基本性质，并用元素展开证明 $(AB)^{T}=B^{T}A^{T}$。
-q-161 | short | 证明逆矩阵的唯一性，并说明由此得到「$A$ 可逆 $\iff A^{-1}$ 可逆」。
-q-162 | short | 比较克拉默法则与消元法（初等行变换）解线性方程组：各写出自左向右的计算步骤，说明二者的联系与各自适用的场合。
-q-163 | short | 写出分块对角矩阵的乘法规则、求逆公式与行列式公式，并说明 $|A|=|A_1|\cdots|A_k|$ 的理由。
-q-111 | short | 写出矩阵乘法的定义式与三条基本运算律，并说明矩阵乘法为什么不满足交换律和消去律。
-q-112 | short | 叙述克拉默法则的内容与适用条件，并说明当系数行列式 $|A|=0$ 时应改用什么方法判别方程组的解。
-q-164 | short | 说明对称矩阵的性质：给出它的等价刻画，并讨论它在和、数乘、幂与乘积下的封闭性。
-q-165 | short | 证明：设 $A,B$ 均为 $n$ 阶方阵且 $AB=E$，则 $A,B$ 都可逆且互为逆矩阵；并说明这为什么不能推出 $A=B=E$。
-q-166 | short | 写出伴随矩阵的定义与核心恒等式，并由此导出求逆公式、可逆的充要条件、$|A^{*}|$ 与 $(A^{*})^{-1}$ 的表达式。
-q-167 | short | 说明用分块法解矩阵方程的思路，并以箭形分块矩阵 $AX=M$ 为例写出分块展开式与求解步骤。
-q-113 | short | 说明矩阵分块法的含义与操作规则，写出箭形分块矩阵求逆的公式，并给出一个用分块法求逆的例子。
-q-168 | short | 设 $A=\begin{pmatrix}2&0\\0&4\end{pmatrix}$，$B$ 为 2 阶方阵且满足 $A^{-1}B-B=6E$，求 $B$。
-q-114 | calc | 计算矩阵乘积 $AB$，其中 $A=\begin{pmatrix}1&-1\\2&3\end{pmatrix}$，$B=\begin{pmatrix}3&1\\0&2\end{pmatrix}$。
-q-169 | calc | 计算矩阵 $A=\begin{pmatrix}1&2\\0&3\end{pmatrix}$ 的平方 $A^{2}$。
-q-170 | calc | 求矩阵 $A=\begin{pmatrix}2&1\\1&1\end{pmatrix}$ 的逆矩阵，并验证 $AA^{-1}=E$。
-q-171 | calc | 用分块法计算 $AA'$，其中 $A=\begin{pmatrix}1&1&2&1\\0&1&3&4\\0&0&3&1\\0&0&0&4\end{pmatrix}$，$A'=\begin{pmatrix}2&0&1&1\\0&1&0&1\\0&0&2&0\\0&0&0&3\end{pmatrix}$。
-q-172 | calc | 用矩阵形式解线性方程组 $$\begin{cases}2x_1+x_2+x_3=5\\x_1+2x_2+x_3=6\\x_1+x_2+2x_3=7\end{cases}$$。
-q-115 | calc | 计算 $AB-BA$，其中 $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$，$B=\begin{pmatrix}2&0\\1&1\end{pmatrix}$。
-q-116 | calc | 求矩阵 $A=\begin{pmatrix}1&1\\1&2\end{pmatrix}$ 的逆矩阵，并验证 $AA^{-1}=E$。
-q-117 | calc | 设 $a$ 为常数，线性方程组 $$\begin{cases}x_1+x_2+a x_3=1\\x_1+a x_2+x_3=1\\a x_1+x_2+x_3=1\end{cases}$$ 何时有唯一解？并在 $a=0$ 时求出它的解。
-q-173 | calc | 求矩阵 $A=\begin{pmatrix}1&\frac12&\frac12\\\frac12&1&\frac12\\\frac12&\frac12&1\end{pmatrix}$ 的逆矩阵，并作验算。
-q-174 | calc | 用克拉默法则解线性方程组 $$\begin{cases}x_1+x_2=2\\x_2+x_3=3\\x_1+x_3=4\end{cases}$$。
-q-175 | calc | 用分块法求矩阵 $A=\begin{pmatrix}0&B\\C&0\end{pmatrix}$ 的逆矩阵，其中 $B=\begin{pmatrix}1&2\\0&1\end{pmatrix}$，$C=\begin{pmatrix}3&0\\1&1\end{pmatrix}$，$0$ 为 2 阶零矩阵。
-q-118 | calc | 用分块法求矩阵 $A=\begin{pmatrix}1&1&1&1\\0&1&1&1\\0&0&1&1\\0&0&0&1\end{pmatrix}$ 的逆矩阵。
-q-176 | calc | 设 $A$ 为 3 阶方阵，$A^{*}=\begin{pmatrix}1&0&0\\0&1&0\\0&0&4\end{pmatrix}$ 且 $|A|>0$，求 $A$。
-q-177 | calc | 讨论参数 $a$ 的取值，使方程组 $$\begin{cases}ax_1+x_2=1\\x_1+ax_2=1\end{cases}$$ 有唯一解，并在有唯一解时求出解。
-q-178 | calc | 设 $A=\begin{pmatrix}1&2\\2&4\end{pmatrix}$，求 $A^{n}$（$n$ 为正整数）的一般表达式。
-q-179 | single | 下列变换中，**不属于**矩阵的初等变换的是
-q-180 | single | 设 $A=\begin{pmatrix}1&2&3\\2&4&6\\1&1&1\end{pmatrix}$，则 $r(A)=$
-q-181 | single | 设线性方程组 $Ax=b$ 的增广矩阵经初等行变换后可化为 $\begin{pmatrix}1&0&1&3\\0&1&2&5\\0&0&0&0\end{pmatrix}$，则该方程组
-q-182 | single | 设 $A$ 是 $n$ 阶方阵且 $r(A)=n$，则齐次线性方程组 $Ax=0$ 的解为
-q-215 | single | 设 $A$ 为 $3$ 阶方阵。先对 $A$ 作行变换 $R_1\leftrightarrow R_2$，再作 $R_3\leftarrow R_3+R_1$，则最终得到的矩阵可以写成 $PA$，其中 $P=$
-q-216 | single | 设 $A,B$ 均为 $n$ 阶方阵且 $AB=O$，则必有
-q-183 | single | 设 $A,B$ 均为 $m\times n$ 矩阵（$m,n\ge2$），且 $A$ 可以用有限次初等**行**变换化为 $B$，则下列结论**一定成立**的是
-q-184 | single | 设 $A,B$ 均为 $n$ 阶方阵，下列结论**错误**的是
-q-217 | single | 设 $A,B$ 均为 $n$ 阶方阵，方程组 $Ax=0$ 与 $Bx=0$ 的解集相同，则必有
-q-218 | single | 设 $A$ 为实矩阵，则 $r(A^{T}A)$ 等于
-q-219 | single | 设 $A$ 可逆，$Q$ 为初等矩阵，$B=AQ$，则 $B^{-1}=$
-q-220 | single | 设 $A$ 为 $m\times n$ 矩阵（$m<n$），线性方程组 $Ax=b$ 有解且 $r(A)=r(A|b)=m$，则该方程组的解向量
-q-185 | single | 设 $A$ 为 $n$ 阶方阵（$n\ge2$）且 $r(A)=n-1$，则下列结论**一定成立**的是
-q-221 | single | 设 $A$ 为 $m\times n$ 矩阵，$B$ 为 $p\times n$ 矩阵，则方程组 $Ax=0$ 与 $Bx=0$ 有非零公共解的充要条件是
-q-222 | single | 设 $P=\begin{pmatrix}1&1\\0&1\end{pmatrix}$，则 $P^{100}=$
-q-186 | multi | 关于初等矩阵，下列说法正确的有
-q-187 | multi | 设 $A$ 为 $n$ 阶方阵，下列命题正确的有
-q-188 | multi | 设线性方程组 $Ax=b$ 的系数矩阵与增广矩阵的秩分别为 $r(A)$ 与 $r(A|b)$，未知数个数为 $n$，则下列说法正确的有
-q-189 | multi | 设 $A$ 为 $n$ 阶方阵，关于齐次线性方程组 $Ax=0$，下列说法正确的有
-q-223 | multi | 关于初等变换对矩阵的影响，下列说法中成立的有
-q-224 | multi | 设 $A$ 为 $n$ 阶方阵，关于矩阵的秩与可逆性，下列说法中成立的有
-q-225 | multi | 关于齐次线性方程组 $Ax=0$，下列说法中成立的有
-q-226 | multi | 设 $A,B$ 均为 $m\times n$ 矩阵，下列等式或不等式中成立的有
-q-190 | multi | 设线性方程组 $Ax=b$ 有解，且 $r(A)=r<n$，则下列说法正确的有
-q-227 | multi | 关于矩阵的等价与标准形，下列说法中成立的有
-q-228 | multi | 关于线性方程组解的判定，下列说法中成立的有
-q-229 | multi | 设 $A,B$ 均为 $n$ 阶方阵，关于矩阵的秩，下列说法中成立的有
-q-191 | multi | 设 $A,B$ 均为 $m\times n$ 矩阵。关于矩阵的初等变换与等价，下列说法正确的有
-q-230 | multi | 关于两个线性方程组的同解与公共解，下列说法中成立的有
-q-192 | judge | 初等矩阵都是可逆矩阵，且初等矩阵的逆矩阵仍然是初等矩阵。
-q-193 | judge | 设 $A$ 是 $m\times n$ 矩阵，则必有 $r(A)\le\min\{m,n\}$。
-q-194 | judge | 线性方程组 $Ax=b$ 有解的充要条件是 $r(A)=r(A|b)$。
-q-195 | judge | 设 $A$ 为 $n$ 阶方阵，齐次线性方程组 $Ax=0$ 有非零解的充要条件是 $r(A)<n$。
-q-231 | judge | 对矩阵 $A$ 作初等行变换既不会改变 $A$ 的秩，也不会改变 $A$ 的列向量组。
-q-232 | judge | 若 $A,B$ 均为 $n$ 阶方阵且 $AB=O$，则 $r(A)+r(B)\le n$。
-q-233 | judge | 若方程组 $Ax=b$ 无解，则必有 $r(A)=n$。
-q-234 | judge | 用初等矩阵左乘 $A$ 相当于对 $A$ 作行初等变换，右乘 $A$ 相当于对 $A$ 作列初等变换。
-q-235 | judge | 设 $A$ 为 $m\times n$ 矩阵（$m<n$），则对任意 $b$，方程组 $Ax=b$ 的解向量个数 $\neq 1$。
-q-196 | judge | 矩阵 $A$ 与 $B$ 等价（可以经过有限次初等变换互相转化），则它们的行最简形矩阵必然相同。
-q-236 | judge | 设 $A$ 为实矩阵，则 $r(A^{T}A)=r(A)$。
-q-237 | judge | 两个同型矩阵 $A,B$ 等价的充要条件是它们有相同的行最简形矩阵。
-q-197 | judge | 设 $A$ 是 $n$ 阶矩阵且 $r(A)=r$，则 $A$ 的任意一个 $r$ 阶子式都不等于零。
-q-238 | judge | 设 $A$ 为 $m\times n$ 矩阵（$m\ge n$）且 $r(A)=n$，则对任意 $b$，方程组 $Ax=b$ 都有唯一解。
-q-198 | blank | 矩阵 $A$ 的秩 $r(A)$ 等于 $A$ 经初等行变换化为阶梯形矩阵后 ______ 的个数。
-q-199 | blank | 设 $A$ 是 $m\times n$ 矩阵，则 $r(A)\le$ ______（用 $\min$ 表示）。
-q-200 | blank | 设 $A$ 是 $n$ 阶方阵且 $r(A)=n$，则齐次线性方程组 $Ax=0$ 的解是 ______。
-q-239 | blank | 初等矩阵 $P$ 的逆矩阵 $P^{-1}$ 仍是 ______ 矩阵。
-q-240 | blank | 设 $A$ 为 $m\times n$ 矩阵，则 $A$ 是 ______ 矩阵等价于 $r(A)=0$。
-q-241 | blank | 设线性方程组 $Ax=b$ 有无穷多个解，未知数个数为 $n$，则其通解中独立参数的个数为 ______（用 $n$ 与 $r(A)$ 表示）。
-q-242 | blank | 两个同型矩阵 $A,B$ 等价的充要条件是它们的 ______ 相同。
-q-201 | blank | 线性方程组 $Ax=b$ 有解的充要条件是 $r(A)=r(A|b)$，其中 $r(A|b)$ 表示 ______ 的秩。
-q-202 | blank | 设 $A=\begin{pmatrix}1&1&1\\1&2&3\\2&3&4\end{pmatrix}$，则 $r(A)=$ ______。
-q-243 | blank | 若 $A$ 为 $n$ 阶方阵且 $r(A)=n$，则 $A$ 的行最简形矩阵是 ______ 矩阵。
-q-244 | blank | 若 $B=AC$，其中 $A$ 为 $m\times n$ 矩阵、$C$ 为 $n\times p$ 矩阵，则 $r(B)\le$ ______（用 $r(A)$ 表示）。
-q-245 | blank | 线性方程组 $\begin{cases}x_1+x_2+x_3=1\\x_1+x_2+x_3=2\end{cases}$ 的解的情况是 ______。
-q-203 | blank | 线性方程组 $\begin{cases}x_1+x_2+x_3=1\\x_1+2x_2+a x_3=3\\x_1+3x_2+a^2 x_3=5\end{cases}$ 有无穷多个解时，参数 $a=$ ______。
-q-246 | blank | 设 $A$ 为 $m\times n$ 矩阵、$B$ 为 $p\times n$ 矩阵。关于方程组 $Ax=0$ 与 $Bx=0$ 的非零公共解：堆叠矩阵 $\begin{pmatrix}A\\B\end{pmatrix}$ 的秩小于 ______。
-q-204 | term | 名词解释：**矩阵的秩**（rank of a matrix）。
-q-205 | term | 名词解释：**初等变换**（elementary transformation）与**初等矩阵**（elementary matrix）。
-q-247 | short | 说明为什么对增广矩阵作初等**行**变换不改变线性方程组的解集，并指出对增广矩阵作初等**列**变换会带来什么问题。
-q-248 | short | 写出用初等变换法与元素法求矩阵秩的步骤，并说明两种方法的联系与各自适用的场合。
-q-249 | short | 说明齐次线性方程组与非齐次线性方程组的解集在结构上的本质区别，并写出用「基础解系 + 特解」表示非齐次方程组通解的步骤。
-q-250 | short | 设线性方程组的方程个数多于未知数个数（$m>n$）。说明此时方程组解的情况有哪些可能，并给出判别依据。
-q-206 | short | 写出矩阵的三种初等变换，说明初等矩阵的作用，并给出「矩阵等价」的含义与充要条件。
-q-207 | short | 写出矩阵的秩的两种等价定义，说明秩的基本性质，并写出求矩阵的秩的两种方法。
-q-208 | short | 写出线性方程组解的判别定理，并说明用初等行变换（消元法）解线性方程组的具体步骤。
-q-251 | short | 写出三种初等变换对应初等矩阵的逆矩阵，并说明「$A$ 可逆 $\iff A$ 可以表示为有限个初等矩阵的乘积」的证明思路。
-q-252 | short | 证明 $r(AC)\le r(A)$，并由此证明：若 $A,B$ 均为 $n$ 阶方阵且 $AB=O$，则 $r(A)+r(B)\le n$。
-q-209 | short | 设 $A$ 为 $m\times n$ 矩阵，$b$ 为 $n$ 维列向量。证明：$Ax=b$ 有解 $\iff b$ 可以表示成 $A$ 的列向量组 $\alpha_1,\dots,\alpha_n$ 的线性组合；并由此说明「$r(A)=r(A|b)$」为什么是方程组有解的充要条件。
-q-253 | short | 讨论含参线性方程组的解的情况时，给出通用的解题步骤，并说明为什么必须同时计算 $r(A)$ 与 $r(A|b)$。
-q-254 | short | 说明矩阵方程 $AX=B$ 与线性方程组 $Ax=b$ 的关系：写出 $AX=B$ 有解的充要条件，并说明如何用初等行变换求解 $AX=B$。
-q-210 | calc | 用初等行变换把矩阵 $A=\begin{pmatrix}1&2&1\\2&4&3\\3&6&5\end{pmatrix}$ 化为行最简形矩阵，并求 $r(A)$。
-q-255 | calc | 用初等行变换把矩阵 $A=\begin{pmatrix}1&1&1\\1&2&4\\1&4&7\end{pmatrix}$ 化为行最简形矩阵，并求 $r(A)$。
-q-256 | calc | 求矩阵 $A=\begin{pmatrix}2&1&0\\1&2&1\\0&1&2\end{pmatrix}$ 的秩，并求出 $A$ 的一个最高阶非零子式的值。
-q-257 | calc | 用消元法解线性方程组 $\begin{cases}x_1+x_2+x_3=6\\2x_1-x_2+x_3=3\\x_1-2x_2+x_3=0\end{cases}$。
-q-258 | calc | 设 $P=\begin{pmatrix}1&1\\0&1\end{pmatrix}$ 是初等矩阵。求 $P^{2024}$，并说明用 $P^{2024}$ 左乘一个 $2$ 阶矩阵 $A$ 相当于对 $A$ 作了什么初等变换。
-q-259 | calc | 用消元法求齐次线性方程组 $\begin{cases}x_1+x_2+x_3=0\\x_1+2x_2+4x_3=0\end{cases}$ 的一个基础解系，并写出该方程组的通解。
-q-211 | calc | 求矩阵 $A=\begin{pmatrix}1&2&0&1\\0&1&1&2\\1&3&1&3\\2&4&1&4\end{pmatrix}$ 的秩，并求出 $A$ 中一个最高阶非零子式的值。
-q-212 | calc | 用消元法解线性方程组 $\begin{cases}x_1+2x_2+x_3=7\\x_1+3x_2+2x_3=11\\2x_1+4x_2+3x_3=16\end{cases}$。
-q-260 | calc | 用消元法求线性方程组 $\begin{cases}x_1+x_2=1\\x_1+2x_2+x_3=3\\x_2+x_3=2\end{cases}$ 的通解，并说明自由变量的个数与解空间的维数。
-q-213 | calc | 讨论参数 $a$ 的取值，使线性方程组 $\begin{cases}a x_1+x_2+x_3=1\\x_1+a x_2+x_3=1\\x_1+x_2+a x_3=1\end{cases}$ 分别有唯一解、有无穷多个解、无解。
-q-214 | calc | 设 $A=\begin{pmatrix}1&1&1\\1&2&3\\1&4&7\end{pmatrix}$，$b=(b_1,b_2,b_3)^{\mathsf T}$。(1) 求 $r(A)$；(2) 讨论 $b$ 满足什么条件时方程组 $Ax=b$ 有解，并在有解时说明通解的结构。
-q-261 | calc | 讨论参数 $a,b$ 的取值，使线性方程组 $\begin{cases}ax_1+bx_2+2x_3=1\\(b-1)x_2+x_3=0\\ax_1+bx_2+(1-b)x_3=3-2b\end{cases}$ 分别有唯一解、有无穷多个解、无解，并在有解时给出通解。
-q-262 | calc | 解矩阵方程 $AX=B$，其中 $A=\begin{pmatrix}1&1&1\\1&2&3\\1&3&6\end{pmatrix}$，$B=\begin{pmatrix}6\\14\\25\end{pmatrix}$；并写出用初等行变换求解矩阵方程的标准做法。
-q-263 | single | 设 $\boldsymbol{\alpha}_1=(1,0,1)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，则 $2\boldsymbol{\alpha}_1-\boldsymbol{\alpha}_2=$
-q-264 | single | 已知 $\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,0)^{\mathsf T}$，则向量组 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3$
-q-299 | single | 两组向量 $\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，$\boldsymbol{\beta}_1=(1,1,0)^{\mathsf T}$，$\boldsymbol{\beta}_2=(1,0,0)^{\mathsf T}$，则向量组 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2$ 与 $\boldsymbol{\beta}_1,\boldsymbol{\beta}_2$
-q-300 | single | 设 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 是 $R^n$ 中的两个向量，则 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 线性相关的充分必要条件是
-q-301 | single | 设 $A$ 是 $3$ 阶方阵且 $r(A)=2$，则 $A$ 的列向量组 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3$ 的秩是
-q-302 | single | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)=n-1$，则齐次线性方程组 $A\boldsymbol{x}=0$ 的基础解系所含向量的个数是
-q-265 | single | 设向量组 $\boldsymbol{\alpha}_1=(1,0,1)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,2)^{\mathsf T}$，$\boldsymbol{\alpha}_4=(1,0,0)^{\mathsf T}$，则向量组 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4$ 的秩是
-q-266 | single | 设 $A$ 为 $m\times n$ 矩阵且 $r(A)=m<n$，则齐次线性方程组 $A\boldsymbol{x}=0$ 的解空间的维数是
-q-303 | single | 已知向量组 $\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,1)^{\mathsf T}$，则向量 $\boldsymbol{\beta}=(2,3,5)^{\mathsf T}$ 可由它们线性表示为
-q-304 | single | 设 $A$ 是 $m\times n$ 矩阵，对 $A$ 作一次初等行变换得到矩阵 $B$，则 $B$ 的列向量组与 $A$ 的列向量组
-q-305 | single | 考虑向量组 $\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,k)^{\mathsf T}$，则其秩等于 $3$ 的充分必要条件是
-q-306 | single | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)=r<n$，非齐次线性方程组 $A\boldsymbol{x}=b$ 有解，则它的解集
-q-267 | single | 设 $K$ 是数域，$V$ 是由 $K$ 上向量组成的非空集合。下列条件中，**足以**判定 $V$ 是 $K$ 上的向量空间的是
-q-307 | single | 设向量组 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4$ 的秩为 $4$，记 $\boldsymbol{\beta}_1=\boldsymbol{\alpha}_1+\boldsymbol{\alpha}_2$，$\boldsymbol{\beta}_2=\boldsymbol{\alpha}_2+\boldsymbol{\alpha}_3$，$\boldsymbol{\beta}_3=\boldsymbol{\alpha}_3+\boldsymbol{\alpha}_4$，$\boldsymbol{\beta}_4=\boldsymbol{\alpha}_4+\boldsymbol{\alpha}_1$，则向量组 $\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\boldsymbol{\beta}_3,\boldsymbol{\beta}_4$ 的秩是
-q-308 | single | 在 $R^4$ 中，设 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4$ 是四个线性无关的向量，$W_1=L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2)$，$W_2=L(\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4)$（$L(\cdot)$ 表示由这些向量张成的子空间），则 $\dim(W_1\cap W_2)+\dim(W_1+W_2)$ 等于
-q-268 | multi | 关于向量的线性组合，下列说法正确的有
-q-309 | multi | 设 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 是 $R^n$ 中的向量，$k,l$ 是常数。下列等式中恒成立的有
-q-310 | multi | 关于向量组的线性相关性，下列结论正确的有
-q-311 | multi | 关于向量组的秩，下列说法正确的有
-q-312 | multi | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)<n$，关于齐次线性方程组 $A\boldsymbol{x}=0$，下列说法正确的有
-q-269 | multi | 设向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 线性无关，则下列结论正确的有
-q-271 | multi | 设 $n$ 维向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 的秩为 $r$，则下列结论正确的有
-q-272 | multi | 设 $A$ 为 $m\times n$ 矩阵且 $r(A)=r<n$，则关于齐次线性方程组 $A\boldsymbol{x}=0$，下列说法正确的有
-q-273 | multi | 设 $A$ 为 $m\times n$ 矩阵，非齐次线性方程组 $A\boldsymbol{x}=b$ 有解，则下列结论正确的有
-q-313 | multi | 设线性方程组 $A\boldsymbol{x}=b$ 与 $C\boldsymbol{x}=d$ 的系数矩阵与增广矩阵分别为 $A,C,(A\mid b),(C\mid d)$，下列说法正确的有
-q-314 | multi | 设 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 与 $\boldsymbol{\beta}_1,\dots,\boldsymbol{\beta}_t$ 是 $R^n$ 中的两组向量（$L(\cdot)$ 表示由这些向量张成的子空间）。下列说法正确的有
-q-315 | multi | 设 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 是 $R^n$ 中的 $s$ 个向量。下列命题中，与「向量组线性相关」等价的命题有
-q-316 | multi | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)=r$。下列说法正确的有
-q-270 | multi | 设 $\boldsymbol{\alpha}_1=(1,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(1,0,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(0,k,1)^{\mathsf T}$，则下列结论正确的有
-q-317 | multi | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)=r$。关于齐次线性方程组 $A\boldsymbol{x}=0$，下列说法正确的有
-q-318 | multi | 设 $V$ 是数域 $K$ 上的向量空间，$W_1,W_2$ 是 $V$ 的两个子空间。下列说法正确的有
-q-274 | judge | 零向量 $\boldsymbol{0}$ 可以由任意一个向量组线性表示。
-q-275 | judge | 两个向量 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 线性相关，当且仅当 $\boldsymbol{\alpha}=\boldsymbol{\beta}$。
-q-276 | judge | 若向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 的秩为 $r$，则该向量组可以由其中 $r$ 个向量线性表示。
-q-319 | judge | 若向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_m$ 线性无关，则向量 $\boldsymbol{\beta}$ 可由它们线性表示时，表示系数是唯一的。
-q-320 | judge | 含有零向量的向量组一定线性无关。
-q-321 | judge | 向量组的秩就是它的极大线性无关组所含向量的个数。
-q-322 | judge | 设 $A$ 为 $m\times n$ 矩阵且 $r(A)=r<n$，则非齐次线性方程组 $A\boldsymbol{x}=b$ 的通解中所含自由参数的个数等于 $n-r(A)$。
-q-323 | judge | 任意非空集合都是 $R^3$ 的子空间。
-q-277 | judge | 齐次线性方程组 $A\boldsymbol{x}=0$ 的任意两个解的任意线性组合仍是它的解。
-q-278 | judge | 若向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 线性相关，则它的任意部分组都线性相关。
-q-324 | judge | 若向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 与 $\boldsymbol{\beta}_1,\dots,\boldsymbol{\beta}_t$ 等价，则必有 $s=t$。
-q-325 | judge | 把向量组中的某个向量 $\boldsymbol{\beta}$ 替换为 $k\boldsymbol{\beta}$（$k\neq0$），所得向量组与原向量组的线性相关性相同。
-q-326 | judge | 若线性方程组 $A\boldsymbol{x}=b$ 有解，则它的任意两个解 $\boldsymbol{x}_1,\boldsymbol{x}_2$ 之和仍是它的解。
-q-279 | judge | 两个向量组等价的充分必要条件是它们的秩相等。
-q-327 | judge | 设 $W$ 是 $R^4$ 的一个三维子空间，$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4$ 是 $R^4$ 中的向量且都属于 $W$，则这四个向量线性相关。
-q-328 | judge | 若矩阵 $A$ 的列向量组线性相关，则 $A$ 的行向量组也线性相关。
-q-280 | blank | 设 $\boldsymbol{\alpha}=(2,1,-1)^{\mathsf T}$，$\boldsymbol{\beta}=(1,-1,3)^{\mathsf T}$，则 $3\boldsymbol{\alpha}-2\boldsymbol{\beta}=$ ______。
-q-281 | blank | 设 $\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,0)^{\mathsf T}$，则这三个向量中线性无关的向量最多有 ______ 个。
-q-282 | blank | 向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 的秩，等于它的 ______ 中所含向量的个数。
-q-283 | blank | 设 $A$ 为 $m\times n$ 矩阵且 $r(A)=r$，则齐次线性方程组 $A\boldsymbol{x}=0$ 的基础解系含有 ______ 个线性无关的解向量。
-q-329 | blank | 设 $\boldsymbol{\alpha}=(1,-1,2,0)^{\mathsf T}$，$\boldsymbol{\beta}=(0,3,-1,1)^{\mathsf T}$，则 $\boldsymbol{\alpha}-2\boldsymbol{\beta}=$ ______。
-q-330 | blank | 当向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 线性无关时，方程组 $k_1\boldsymbol{\alpha}_1+\cdots+k_s\boldsymbol{\alpha}_s=\boldsymbol{0}$ 只有 ______ 解。
-q-331 | blank | 以向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 为列向量构成的矩阵的秩，就是该向量组的 ______。
-q-332 | blank | 设 $\boldsymbol{x}_1,\boldsymbol{x}_2$ 都是线性方程组 $A\boldsymbol{x}=b$ 的解，则 $\boldsymbol{x}_1-\boldsymbol{x}_2$ 一定满足方程 $A\boldsymbol{x}=$ ______。
-q-333 | blank | 在 $R^3$ 中，集合 $W=\{(x,y,z)^{\mathsf T}\mid x+y+z=0\}$ 是 $R^3$ 的子空间，因为它是某个 ______ 线性方程组的解集。
-q-284 | blank | 在 $R^3$ 中，$W_1=\{(x,y,z)^{\mathsf T}\mid x+y+z=0\}$ 是 $R^3$ 的子空间，而 $W_2=\{(x,y,z)^{\mathsf T}\mid x+y+z=1\}$ 不是子空间。判断 $W_2$ 不是子空间的依据是：$W_2$ 中不含 ______ 向量。
-q-334 | blank | 若两组向量 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 与 $\boldsymbol{\beta}_1,\dots,\boldsymbol{\beta}_t$ 等价，则它们的秩 ______（填「相等」或「不等」）。
-q-335 | blank | 向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 线性相关的充要条件是：存在一组 ______ 的常数 $k_1,\dots,k_s$，使 $k_1\boldsymbol{\alpha}_1+\cdots+k_s\boldsymbol{\alpha}_s=\boldsymbol{0}$。
-q-336 | blank | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)<n$，非齐次方程组 $A\boldsymbol{x}=b$ 有解，则它的解集是零空间 $N(A)$ 的一个 ______。
-q-285 | blank | 若向量组 $\boldsymbol{\alpha}_1=(1,0,1)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,2)^{\mathsf T}$，$\boldsymbol{\alpha}_4=(1,0,0)^{\mathsf T}$，则这四个向量的极大线性无关组含有的向量个数是 ______。
-q-337 | blank | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)=r$。方程组 $A\boldsymbol{x}=0$ 的解空间的维数与 $A$ 的列空间的维数之和等于 ______。
-q-338 | blank | 在 $R^4$ 中取四个线性无关的向量 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4$，记 $W_1=L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2)$，$W_2=L(\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4)$，则 $\dim(W_1\cap W_2)=$ ______。
-q-286 | term | 名词解释：**线性相关**（linearly dependent）与**线性无关**（linearly independent）。
-q-287 | term | 名词解释：**极大线性无关组**与向量组的**秩**。
-q-288 | short | 写出向量组等价的定义，并说明向量组等价与「秩相等」之间的关系。
-q-339 | short | 说明「向量的线性组合」「线性表示」与「向量组的等价」这三个概念之间的关系，并写出向量组等价的两个方向上的要求。
-q-340 | short | 证明：设向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 线性无关，则它的任意部分组（例如 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_3$）也线性无关。
-q-341 | short | 写出向量组的秩与极大线性无关组的定义，并说明如何用初等行变换求出一个向量组的秩和一个极大线性无关组。
-q-342 | short | 说明线性方程组 $A\boldsymbol{x}=b$ 的解的个数如何由 $r(A)$ 与 $r(A\mid b)$ 决定，并说明有无穷多解时通解中自由参数的个数。
-q-343 | short | 说明如何求向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 张成的子空间 $L(\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s)$ 的一组基与维数，并说明该子空间为什么是 $R^n$ 的子空间。
-q-289 | short | 设 $A$ 为 $m\times n$ 矩阵且 $r(A)<n$。说明齐次线性方程组 $A\boldsymbol{x}=0$ 的解的结构：基础解系是什么？通解如何写出？解空间的维数是多少？
-q-290 | short | 设非齐次线性方程组 $A\boldsymbol{x}=b$ 有解。说明它的解集的结构：特解与通解的关系是什么？解集是不是线性空间？
-q-344 | short | 说明向量 $\boldsymbol{\beta}$ 由向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_m$ 线性表示时，表示系数的个数与向量组线性相关性之间的关系，并举例说明。
-q-345 | short | 给出判定一组向量线性相关或线性无关的两种常用方法，并说明每种方法的依据、适用场合以及各自的易错点。
-q-346 | short | 说明含参线性方程组解的讨论方法：如何按参数取值把方程组分情况讨论，每种情形下解的个数与通解的写法如何确定？
-q-291 | short | 写出向量空间与子空间的定义，说明 $W$ 是 $V$ 的子空间的判定定理，并解释「$W$ 非空且含零向量」为什么还不够。
-q-347 | short | 证明：设 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3$ 线性无关，记 $\boldsymbol{\beta}_1=\boldsymbol{\alpha}_1+\boldsymbol{\alpha}_2+\boldsymbol{\alpha}_3$，$\boldsymbol{\beta}_2=\boldsymbol{\alpha}_1+3\boldsymbol{\alpha}_2+5\boldsymbol{\alpha}_3$，$\boldsymbol{\beta}_3=\boldsymbol{\alpha}_1+9\boldsymbol{\alpha}_2+25\boldsymbol{\alpha}_3$，则 $\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\boldsymbol{\beta}_3$ 线性无关。
-q-348 | short | 证明：设 $V$ 是数域 $K$ 上的向量空间，$W$ 是 $V$ 的非空子集，则 $W$ 是 $V$ 的子空间的充分必要条件是对向量的加法与数乘封闭；并说明这一判据为什么不能只用「含零向量」来代替。
-q-292 | calc | 判断向量组 $\boldsymbol{\alpha}_1=(1,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(2,2,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,1)^{\mathsf T}$ 是否线性相关；若是，求出一组不全为零的系数 $k_1,k_2,k_3$ 使 $k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+k_3\boldsymbol{\alpha}_3=\boldsymbol{0}$。
-q-293 | calc | 求向量组 $\boldsymbol{\alpha}_1=(1,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,2,1)^{\mathsf T}$，$\boldsymbol{\alpha}_4=(2,3,1)^{\mathsf T}$ 的秩，并求出一个极大线性无关组。
-q-294 | calc | 判断向量 $\boldsymbol{\beta}=(1,2,3)^{\mathsf T}$ 能否由向量组 $\boldsymbol{\alpha}_1=(1,0,1)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,1)^{\mathsf T}$ 线性表示；若能，求出表示式。
-q-349 | calc | 设 $\boldsymbol{\alpha}_1=(1,2,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,0,1)^{\mathsf T}$，求向量 $\boldsymbol{\beta}=(2,3,3)^{\mathsf T}$ 由它们线性表示的表示式，并说明该表示式是否唯一。
-q-350 | calc | 设 $k$ 为常数，$\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,k)^{\mathsf T}$。讨论这三个向量线性相关、线性无关的条件；在线性相关时求出一组不全为零的系数。
-q-351 | calc | 求向量组 $\boldsymbol{\alpha}_1=(2,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(1,0,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(3,1,1)^{\mathsf T}$，$\boldsymbol{\alpha}_4=(1,1,-1)^{\mathsf T}$ 的秩，求出一个极大线性无关组，并把其余向量用它线性表示。
-q-352 | calc | 讨论参数 $a$ 的取值，使方程组 $\begin{cases}x_1+x_2+x_3=1\\2x_1+2x_2+a x_3=3\end{cases}$ 分别有唯一解、无解或无穷多解，并在有解时写出通解。
-q-353 | calc | 取 $\boldsymbol{\alpha}_1=(1,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,1)^{\mathsf T}$。求向量组 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2$ 张成的子空间 $L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2)$ 的一组基与维数，并说明 $L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2)$ 是 $R^3$ 的子空间。
-q-295 | calc | 求齐次线性方程组 $\begin{cases}x_1+x_2+x_3=0\\x_1+2x_2+3x_3=0\end{cases}$ 的基础解系，并写出它的通解。
-q-296 | calc | 求非齐次线性方程组 $\begin{cases}x_1+x_2+x_3=1\\x_1+2x_2+3x_3=2\end{cases}$ 的通解。
-q-297 | calc | 求向量组 $\boldsymbol{\alpha}_1=(1,1,1)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(1,2,4)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(2,3,5)^{\mathsf T}$，$\boldsymbol{\alpha}_4=(1,1,2)^{\mathsf T}$ 的秩，并求出一个极大线性无关组。
-q-354 | calc | 设向量组 $\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$ 与向量组 $\boldsymbol{\beta}_1=(1,1,0)^{\mathsf T}$，$\boldsymbol{\beta}_2=(1,-1,0)^{\mathsf T}$。判断这两组向量是否等价，并写出两个方向的线性表示式。
-q-355 | calc | 求线性方程组 $\begin{cases}x_1+x_2=3\\x_1-x_2=1\end{cases}$ 与 $\begin{cases}x_1+2x_2=4\\2x_1-x_2=3\end{cases}$ 的公共解，并说明公共解与「联立求解」的关系。
-q-356 | calc | 设 $A$ 是以 $s$ 个向量 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$（取自 $R^n$）为列构成的矩阵。证明下列三个命题等价：(1) 向量组线性无关；(2) $r(A)=s$；(3) 方程组 $A\boldsymbol{x}=\boldsymbol{0}$ 只有零解。
-q-298 | calc | 在 $R^3$ 中判断下列集合是否为 $R^3$ 的子空间，并说明理由：(1) $W_1=\{(x,y,z)^{\mathsf T}\mid x+y+z=0\}$；(2) $W_2=\{(x,y,z)^{\mathsf T}\mid x+y+z=1\}$；(3) $W_3=\{(x,y,z)^{\mathsf T}\mid x\cdot y=0\}$。
-q-357 | calc | 设线性方程组 $A\boldsymbol{x}=b$ 与 $C\boldsymbol{x}=d$ 同解。证明：必有 $r(A)=r(C)$ 且 $r(A\mid b)=r(C\mid d)$；并举例说明这两个等式成立还不足以保证两个方程组同解。
-q-358 | calc | 在 $R^3$ 中，设 $a$ 为常数。判断下列集合是否为 $R^3$ 的子空间，并说明理由：(1) $W_1=\{(x,y,z)^{\mathsf T}\mid x+a y-z=0\}$；(2) $W_2=\{(x,y,z)^{\mathsf T}\mid x+a y-z=1\}$；(3) $W_3=\{(x,y,z)^{\mathsf T}\mid x^{2}+y^{2}+z^{2}=1\}$。
-q-359 | single | 设 $A=\begin{pmatrix}1&2\\0&3\end{pmatrix}$，则 $A$ 的特征值为
-q-395 | single | 设 $\alpha=(1,0,-1)^{\mathsf T}$，$\beta=(1,1,0)^{\mathsf T}$，则 $(\alpha,\beta)$ 的值为
-q-396 | single | 设 $A=\begin{pmatrix}2&0\\0&3\end{pmatrix}$，则 $A+2E$ 的两个特征值是
-q-397 | single | 设 $A,B,C$ 均为 $n$ 阶方阵，若 $A\sim B$ 且 $B\sim C$，则下列结论**正确**的是
-q-398 | single | 二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2+2x_1x_3$ 的矩阵是
-q-360 | single | 设 $\alpha=(1,1,0)^{\mathsf T}$，$\beta=(1,0,1)^{\mathsf T}$，则 $\alpha$ 与 $\beta$ 的夹角 $\theta$ 为
-q-361 | single | 用**配方法**把二次型 $f(x_1,x_2)=x_1^2-2x_1x_2+3x_2^2$ 化为标准形，所得结果为
-q-399 | single | 关于正定二次型的判别，下列说法**正确**的是
-q-400 | single | 设 $A=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$，则 $A$ 的特征值是
-q-401 | single | 设 $\lambda_1,\lambda_2$ 是方阵 $A$ 的两个不同的特征值，则下列结论**正确**的是
-q-402 | single | 设 $A=\begin{pmatrix}1&2\\0&3\end{pmatrix}$，则与 $A$ 相似的矩阵是
-q-403 | single | 设 $A$ 为 $n$ 阶实对称矩阵，则下列结论**一定**成立的是
-q-404 | single | 关于二次型的标准形与规范形，下列说法**正确**的是
-q-362 | single | 设 $A=\begin{pmatrix}1&1&1\\1&1&1\\1&1&1\end{pmatrix}$，则 $A$ 的特征值及可对角化性为
-q-363 | single | 设二次型 $f(x)=x^{\mathsf T}Ax$ 的矩阵为 $A=\begin{pmatrix}1&1&0\\1&1&0\\0&0&-1\end{pmatrix}$，则下列结论**正确**的是
-q-405 | single | 设 $A$ 为 $n$ 阶实对称矩阵且 $A^2=E$，则下列结论**一定**成立的是
-q-406 | single | 设 $f(x,y,z)=x^2+4y^2+z^2+xz+2txy+2tyz$，则 $f$ 正定的充要条件是
-q-364 | multi | 关于实向量的内积与正交，下列说法正确的有
-q-365 | multi | 设 $A$ 为 $n$ 阶方阵，关于 $A$ 的特征值与特征向量，下列说法正确的有
-q-407 | multi | 关于正交向量组，下列说法正确的有
-q-408 | multi | 设 $A$ 为 $n$ 阶方阵，$\lambda$ 是 $A$ 的一个特征值，则下列结论正确的有
-q-409 | multi | 关于二次型与其矩阵的对应关系，下列说法正确的有
-q-410 | multi | 设 $A$ 为 $n$ 阶实对称矩阵，$f(x)=x^{\mathsf T}Ax$，关于 $f$ 的正定性，下列说法正确的有
-q-366 | multi | 设 $A,B$ 均为 $n$ 阶方阵，且 $B=P^{-1}AP$（$P$ 可逆）。则下列结论正确的有
-q-367 | multi | 设 $A$ 为 $n$ 阶实对称矩阵，关于 $A$ 的正定性，下列结论正确的有
-q-368 | multi | 设 $A$ 为 $n$ 阶实对称矩阵，下列结论正确的有
-q-411 | multi | 设 $A$ 为 $n$ 阶可逆方阵，$\lambda$ 是 $A$ 的一个特征值，则下列结论正确的有
-q-412 | multi | 设 $A$ 为 $n$ 阶方阵，关于 $A$ 的相似对角化，下列说法正确的有
-q-413 | multi | 设 $A$ 为 $n$ 阶实对称矩阵，关于 $A$ 的正交对角化，下列说法正确的有
-q-414 | multi | 关于向量的内积与长度，下列说法正确的有
-q-415 | multi | 设 $f(x)=x^{\mathsf T}Ax$，$A$ 为 $n$ 阶实对称矩阵，关于 $f$ 的秩与惯性指数，下列说法正确的有
-q-369 | multi | 关于二次型、合同变换与规范形，下列说法正确的有
-q-416 | multi | 关于用配方法把二次型化为标准形，下列说法正确的有
-q-417 | multi | 设 $A$ 为 $n$ 阶可逆矩阵，$P$ 为 $n$ 阶可逆矩阵，则下列结论正确的有
-q-370 | judge | 若 $\lambda_0$ 是方阵 $A$ 的特征值，则齐次线性方程组 $(A-\lambda_0E)x=0$ 必有非零解。
-q-418 | judge | 若实向量 $\alpha,\beta$ 都非零且 $\alpha\perp\beta$，则它们的夹角为 $\dfrac{\pi}{2}$。
-q-419 | judge | 若 $\lambda_1,\lambda_2$ 是方阵 $A$ 的两个不同的特征值，则它们对应的特征向量线性无关。
-q-420 | judge | 相似矩阵 $A,B$ 有相同的特征多项式，故它们有相同的特征向量。
-q-421 | judge | 二次型 $f(x_1,x_2)=2x_1x_2$ 的矩阵是 $\begin{pmatrix}0&2\\2&0\end{pmatrix}$。
-q-422 | judge | 用配方法把二次型化为标准形时，所作的线性变换一定是可逆的。
-q-423 | judge | 正定二次型 $f$ 对一切非零向量 $x$ 都有 $f(x)>0$，且 $f(0)=0$。
-q-371 | judge | 任意两个非零向量 $\alpha,\beta$ 线性相关，当且仅当 $\alpha\perp\beta$。
-q-372 | judge | 设 $A$ 为实对称矩阵，则 $A$ 正定的充要条件是 $A$ 的各阶顺序主子式都大于零。
-q-373 | judge | 实对称矩阵 $A$ 的任意两个特征向量都相互正交。
-q-424 | judge | 若方阵 $A$ 的特征值都是实数，则 $A$ 一定是实对称矩阵。
-q-425 | judge | 实对称矩阵 $A$ 总能找出一组两两正交的特征向量，它们构成 $\mathbf R^n$ 的一组标准正交基。
-q-426 | judge | 若 $A$ 与 $B$ 相似，则 $A$ 与 $B$ 的特征向量也相同。
-q-427 | judge | 两个二次型合同，当且仅当它们的矩阵有相同的秩。
-q-428 | judge | 设 $A$ 为实对称矩阵，$Q$ 为正交矩阵，则 $Q^{\mathsf T}AQ$ 与 $A$ 有相同的特征值。
-q-374 | blank | 设 $\alpha=(1,2,2)^{\mathsf T}$，则 $\|\alpha\|=$ ______ 。
-q-375 | blank | 设 $A=\begin{pmatrix}1&1\\0&2\end{pmatrix}$，则 $A$ 的两个特征值中**较大**的那个是 ______ 。
-q-429 | blank | 设 $\alpha=(1,1,0)^{\mathsf T}$，$\beta=(1,-1,0)^{\mathsf T}$，则 $(\alpha,\beta)=$ ______ 。
-q-430 | blank | 设 $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$，则 $A$ 的两个特征值之积为 ______ 。
-q-431 | blank | 设 $A=\begin{pmatrix}2&0\\0&3\end{pmatrix}$，则 $A^{-1}$ 的最大特征值是 ______ 。
-q-432 | blank | 二次型 $f(x_1,x_2,x_3)=2x_1^2+3x_2^2+4x_3^2+4x_1x_2$ 的矩阵的**秩**是 ______ 。
-q-433 | blank | 用配方法把 $f(x_1,x_2)=x_1^2+4x_1x_2+8x_2^2$ 化为标准形，则所得标准形是 ______ 。
-q-434 | blank | 设 $A=\begin{pmatrix}1&1\\1&1\end{pmatrix}$，则二次型 $f(x)=x^{\mathsf T}Ax$ 是 ______ 二次型（填「半正定」）。
-q-376 | blank | 二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2-2x_1x_2$ 的矩阵的**秩**为 ______ 。
-q-377 | blank | 设 $A=\begin{pmatrix}2&1\\1&2\end{pmatrix}$，则 $A$ 的二阶顺序主子式为 ______ 。
-q-378 | blank | 用配方法把二次型 $f(x_1,x_2)=x_1^2+2x_1x_2+3x_2^2$ 化为标准形 $y_1^2+k\,y_2^2$，则 $k=$ ______ 。
-q-435 | blank | 设 $\alpha=(2,2,2)^{\mathsf T}$，$\beta=(1,1,0)^{\mathsf T}$，则 $\alpha$ 在 $\beta$ 上的投影为 ______ 。
-q-436 | blank | 设 $A=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$，则 $A$ 的特征多项式 $|\lambda E-A|$ 为 ______ 。
-q-437 | blank | 设实对称矩阵 $A=\begin{pmatrix}2&0\\0&2\end{pmatrix}$，则 $A$ 的属于特征值 $2$ 的特征子空间的维数为 ______ 。
-q-438 | blank | 设 $A=\begin{pmatrix}0&1\\-1&0\end{pmatrix}$，则 $A^2=$ ______ 。
-q-439 | blank | 二次型 $f(x_1,x_2)=x_1^2+2x_2^2+2x_1x_2$ 的矩阵为 $A$，则 $f$ 的正惯性指数为 ______ 。
-q-379 | blank | 设实对称矩阵 $A=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix}$，则 $A$ 的三个特征值（从小到大排列，用逗号分隔）是 ______ 。
-q-440 | blank | 设 $f(x,y,z)=x^2+4y^2+z^2+xz+2txy+2tyz$，则 $f$ 正定的充要条件是 $t^2<$ ______ 。
-q-380 | term | 名词解释：**内积**与**向量的长度**（数量积与模）。
-q-381 | term | 名词解释：**特征值**与**特征向量**。
-q-382 | term | 名词解释：**正定二次型**与**正定矩阵**。
-q-383 | short | 写出施密特正交化方法的完整步骤，并说明它的作用。
-q-441 | short | 简述特征值与特征向量的定义，并说明特征向量必须取非零向量的理由。
-q-442 | short | 简述内积与正交的定义，并说明两个非零向量正交与它们线性无关之间的关系。
-q-443 | short | 写出二次型的矩阵、标准形与规范形的定义，并说明三者之间的区别。
-q-444 | short | 写出正定二次型的定义与两个常用判别法，并说明各判别法的适用条件。
-q-445 | short | 说明相似矩阵的定义，并列出相似矩阵保持不变的基本量。
-q-446 | short | 说明实对称矩阵对角化定理的内容，并写出正交矩阵的定义与基本性质。
-q-447 | short | 写出用配方法把二次型化为标准形的一般步骤，并说明每一步的依据。
-q-384 | short | 写出方阵 $A$ 可相似对角化的充要条件，并给出一个不可对角化的矩阵例子。
-q-448 | short | 证明：属于不同特征值的特征向量线性无关，并说明该结论的适用范围。
-q-449 | short | 说明实对称矩阵一定可以相似对角化的原因（重数与几何重数的关系）。
-q-450 | short | 叙述惯性定理的内容，并说明它为什么能保证二次型规范形的唯一性。
-q-451 | short | 说明正定二次型的主要性质：可加性、$A=B^{\mathsf T}B$ 的分解，以及 $A,B$ 正定推出 $A+B$ 正定的证明思路。
-q-385 | short | 证明：实对称矩阵属于**不同**特征值的两个特征向量相互正交，并说明该结论的适用范围。
-q-386 | short | 设 $A$ 为 $n$ 阶实对称矩阵，二次型 $f(x)=x^{\mathsf T}Ax$ 的秩为 $r$，正惯性指数为 $p$，负惯性指数为 $q$。① 说明 $r=p+q$ 的理由；② 写出 $f$ 的标准形与规范形；③ 说明为什么只给出秩不足以判别两个二次型是否合同。
-q-452 | short | 说明实对称矩阵正交对角化过程中重特征值的处理办法，并证明 $Q^{\mathsf T}AQ$ 的对角元就是 $A$ 的特征值。
-q-387 | calc | 求方阵 $A=\begin{pmatrix}1&2\\0&3\end{pmatrix}$ 的特征值与对应的特征向量。
-q-388 | calc | 用施密特正交化方法把向量组 $\alpha_1=(1,1,0)^{\mathsf T}$，$\alpha_2=(1,0,1)^{\mathsf T}$，$\alpha_3=(1,1,1)^{\mathsf T}$ 化为标准正交向量组。
-q-389 | calc | 设 $A=\begin{pmatrix}1&4\\0&3\end{pmatrix}$，求可逆矩阵 $P$，使 $P^{-1}AP=\mathrm{diag}(1,3)$。
-q-390 | calc | 设实对称矩阵 $A=\begin{pmatrix}2&1\\1&2\end{pmatrix}$，用正交变换把 $A$ 化为标准形，并求正交矩阵 $Q$。
-q-391 | calc | 求二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2+2x_1x_2-2x_2x_3$ 的矩阵 $A$，并求 $|A|$。
-q-453 | calc | 用施密特正交化方法把向量组 $\alpha_1=(1,1,1)^{\mathsf T}$，$\alpha_2=(1,0,-1)^{\mathsf T}$ 化为标准正交向量组。
-q-454 | calc | 求方阵 $A=\begin{pmatrix}3&1\\1&3\end{pmatrix}$ 的特征值与对应的特征向量。
-q-455 | calc | 求二次型 $f(x_1,x_2)=x_1^2+4x_2^2+4x_1x_2$ 的矩阵、秩与惯性指数。
-q-456 | calc | 设 $A=\begin{pmatrix}1&1&0\\0&2&1\\0&0&3\end{pmatrix}$，求可逆矩阵 $P$，使 $P^{-1}AP=\mathrm{diag}(1,2,3)$。
-q-457 | calc | 用配方法把二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2-2x_1x_3$ 化为标准形，并写出所作的可逆线性变换。
-q-458 | calc | 判断二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2+4x_1x_3$ 是否正定，并说明理由。
-q-392 | calc | 用配方法把二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2+2x_1x_2-2x_2x_3$ 化为标准形，并写出所作的可逆线性变换。
-q-393 | calc | 判断二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2-2x_1x_2+2x_2x_3-2x_1x_3$ 是否正定，并说明理由。
-q-394 | calc | 设实对称矩阵 $A=\begin{pmatrix}2&1&1\\1&2&1\\1&1&2\end{pmatrix}$，求它的特征值与一组标准正交特征向量，并求正交矩阵 $Q$ 使 $Q^{\mathsf T}AQ$ 为对角阵。
-q-459 | calc | 设 $A=\begin{pmatrix}1&2\\2&1\end{pmatrix}$，求 $A$ 的特征值、求可逆矩阵 $P$ 使 $P^{-1}AP$ 为对角阵，并写出 $A^n$ 的表达式。
-q-460 | calc | 设实对称矩阵 $A=\begin{pmatrix}2&0&0\\0&3&1\\0&1&3\end{pmatrix}$，求它的特征值与一组标准正交特征向量，并求正交矩阵 $Q$ 使 $Q^{\mathsf T}AQ$ 为对角阵。
-q-461 | calc | 求二次型 $f(x_1,x_2,x_3)=x_1^2+x_2^2+x_3^2-2x_1x_2-2x_2x_3$ 的矩阵、特征值、惯性指数与规范形。
-q-462 | calc | 设实对称矩阵 $A=\begin{pmatrix}2&2&0\\2&2&0\\0&0&1\end{pmatrix}$，求它的特征值与一组标准正交特征向量，并求正交矩阵 $Q$ 使 $Q^{\mathsf T}AQ$ 为对角阵。
-q-463 | calc | 用配方法把二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+5x_3^2+2x_1x_2+2x_1x_3+6x_2x_3$ 化为标准形，并写出所作的可逆线性变换 $x=Cy$ 的矩阵 $C$。
-q-464 | calc | 设 $f(x,y,z)=x^2+4y^2+z^2+xz+2txy+2tyz$，判断 $f$ 正定的充要条件，并用顺序主子式给出完整推导。
-q-465 | single | 设 $V$ 是数域 $F$ 上的线性空间。下列命题中，必为真的是
-q-471 | single | 设 $V$ 是数域 $F$ 上的线性空间，下列集合按通常运算构成线性空间的是
-q-472 | single | 设 $V$ 是 $3$ 维线性空间，则 $V$ 的任意一组基含有的向量个数是
-q-473 | single | 设 $T:\mathbb{R}^2\to\mathbb{R}^2$，$T(x,y)=(x+y,\ x-y)$，则 $T$ 是
-q-474 | single | 设 $\alpha_1,\alpha_2,\alpha_3$ 是 $V$ 的一组基，$\beta_1,\beta_2,\beta_3$ 是 $V$ 的另一组基，过渡矩阵 $P$ 的第 $1$ 列是
-q-475 | single | 设 $V$ 与 $W$ 的维数分别为 $2$ 与 $3$，$T$ 是从 $V$ 到 $W$ 的线性变换。$T$ 关于所选基的矩阵是
-q-476 | multi | 关于线性空间的性质，下列正确的有
-q-477 | multi | 设 $V$ 是 $n$ 维线性空间，下列说法正确的有
-q-478 | multi | 设 $T$ 是线性空间 $V$ 到 $W$ 的线性变换，下列结论正确的有
-q-466 | multi | 设 $T$ 是线性空间 $V$ 到 $W$ 的一个映射。关于 $T$ 是否为线性变换，下列说法正确的有
-q-479 | multi | 设 $T:V\to W$ 线性，$\dim V=3$，$\dim W=3$，$T$ 关于所选基的矩阵为 $A$，下列说法正确的有
-q-480 | multi | 设 $\alpha$ 与 $\beta$ 是线性空间 $V$ 的两组基，过渡矩阵 $P$ 的各列由 $\beta$ 中向量在 $\alpha$ 下的坐标拼成。下列说法正确的有
-q-467 | judge | 设 $\alpha_1,\dots,\alpha_n$ 是线性空间 $V$ 的一组向量。则 $\alpha_1,\dots,\alpha_n$ 是 $V$ 的一组基，当且仅当它们线性无关且能张成 $V$。
-q-481 | judge | 平凡线性空间 $\{\boldsymbol{0}\}$ 按通常运算构成线性空间。
-q-482 | judge | 设 $V$ 是 $n$ 维线性空间，则 $V$ 中任意 $n$ 个向量都构成 $V$ 的一组基。
-q-483 | judge | 零变换 $T(\alpha)=\boldsymbol{0}$ 是线性变换。
-q-484 | judge | 设 $V$ 是 $n$ 维线性空间，$\alpha_1,\dots,\alpha_n$ 是 $V$ 中 $n$ 个线性无关的向量，则 $\alpha_1,\dots,\alpha_n$ 是 $V$ 的一组基。
-q-485 | judge | 设 $T:V\to W$ 线性且 $\dim V=\dim W=n$，则 $T$ 可逆当且仅当 $T$ 为一一映射。
-q-468 | blank | 设 $\alpha_1,\alpha_2,\alpha_3$ 是 $\mathbb{R}^3$ 的一组基，则在基 $\alpha_1,\alpha_2,\alpha_3$ 下，向量 $\boldsymbol{\beta}=\alpha_1+2\alpha_2+3\alpha_3$ 的坐标是 ______。
-q-486 | blank | 实数域上的 $\mathbb{R}^3$ 按通常运算作为线性空间，其维数是
-q-487 | blank | 线性空间 $V$ 中零向量的个数是
-q-488 | blank | 设 $T:V\to W$ 是线性变换且 $T$ 为一一映射，则 $T$ 的核空间 $\ker T$ 的维数是
-q-489 | blank | 设 $V$ 是 $4$ 维线性空间，$T:V\to W$ 线性且 $T$ 的秩为 $2$，则核空间 $\ker T$ 的维数是
-q-490 | blank | 在线性空间 $V$ 中，设 $\alpha_1,\alpha_2,\alpha_3$ 是一组基，$\beta_1=\alpha_1,\ \beta_2=\alpha_1+\alpha_2,\ \beta_3=\alpha_1+\alpha_3$ 也是一组基。过渡矩阵 $P$（列向量为 $\beta_j$ 在基 $\alpha$ 下的坐标）的行列式 $|P|$ 是
-q-491 | short | 简述线性空间的定义要点（数域、集合、运算与公理）。
-q-492 | short | 写出向量组成为线性空间一组基的等价刻画，并说明维数为什么与基的选取无关。
-q-469 | short | 设 $\alpha_1,\alpha_2,\alpha_3$ 与 $\beta_1,\beta_2,\beta_3$ 是三维线性空间 $V$ 的两组基。说明基变换矩阵与坐标变换矩阵之间的关系。
-q-493 | short | 写出映射 $T:V\to W$ 成为线性变换的充要条件，并据此证明 $T(\boldsymbol{0})=\boldsymbol{0}$ 与 $T(-\alpha)=-T(\alpha)$。
-q-494 | short | 写出过渡矩阵 $P$ 的定义与坐标变换公式，并说明 $P$ 可逆的原因。
-q-495 | short | 说明线性变换矩阵表示式的构造方法，以及如何由矩阵求出核空间与像空间的维数。
-q-496 | calc | 设 $W$ 是 $\mathbb{R}^3$ 的一个子空间，$W=\operatorname{span}\{(1,1,0)^T,\ (0,1,1)^T\}$。求 $\dim W$ 与 $W$ 的一组基。
-q-497 | calc | 在 $\mathbb{R}^2$ 中取两组基 $\alpha=(\boldsymbol{e}_1,\boldsymbol{e}_2)$ 与 $\beta=((1,1)^T,\ (0,1)^T)$。求从基 $\beta$ 到基 $\alpha$ 的过渡矩阵 $P$ 与 $|P|$。
-q-498 | calc | 设 $T:\mathbb{R}^3\to\mathbb{R}^2$，$T(x,y,z)=(x+2y,\ y+z)$。求 $T$ 关于自然基的矩阵 $A$，并求 $A$ 的秩与像空间 $\operatorname{im}T$ 的维数。
-q-499 | calc | 设 $T:\mathbb{R}^4\to\mathbb{R}^3$ 的矩阵为 $A=\begin{pmatrix}1&1&0&0\\2&2&0&0\\0&0&0&1\end{pmatrix}$。求 $T$ 的秩、$\dim\ker T$ 与 $\dim\operatorname{im}T$。
-q-470 | calc | 设 $T$ 是 $\mathbb{R}^3$ 上的线性变换，已知 $$T(\boldsymbol{e}_1)=\begin{pmatrix}2\\0\\1\end{pmatrix},\quad T(\boldsymbol{e}_2)=\begin{pmatrix}0\\1\\1\end{pmatrix},\quad T(\boldsymbol{e}_3)=\begin{pmatrix}1\\1\\0\end{pmatrix},$$ 其中 $\boldsymbol{e}_1,\boldsymbol{e}_2,\boldsymbol{e}_3$ 为 $\mathbb{R}^3$ 的标准基。求 $T$ 的矩阵表示式 $A$；并判断 $T$ 是否为可逆变换，若可逆求出 $T^{-1}$ 的矩阵表示式。
-q-500 | calc | 设 $\alpha=(\alpha_1,\alpha_2,\alpha_3)$ 是线性空间 $V$ 的一组基，$\beta=(\alpha_1+\alpha_2,\ \alpha_2+\alpha_3,\ \alpha_3)$ 也是 $V$ 的一组基。求从基 $\beta$ 到基 $\alpha$ 的过渡矩阵 $P$，并求向量 $v=\alpha_1+2\alpha_2+3\alpha_3$ 在基 $\beta$ 下的坐标。
+q-001 | ch1 | single | 三阶行列式 $\begin{vmatrix}1&2&3\\4&5&6\\7&8&10\end{vmatrix}$ 的值是
+q-002 | ch1 | single | 设 $A$ 是 $n$ 阶方阵，下列等式一定成立的是
+q-003 | ch1 | single | 设 $A,B$ 均为 $n$ 阶方阵，则 $|AB|=$
+q-004 | ch1 | single | 设 $A=(a_{ij})_{3\times3}$，$A_{ij}$ 表示元素 $a_{ij}$ 的**代数余子式**，则 $A_{ij}$ 与元素 $a_{ij}$ 的关系是
+q-005 | ch1 | single | 设 $A$ 为 $n$ 阶方阵且 $|A|\neq0$，则 $|A^*|$（$A^*$ 为 $A$ 的伴随矩阵）等于
+q-006 | ch1 | multi | 下列关于行列式性质的等式中，正确的有
+q-007 | ch1 | multi | 关于行列式按行（列）展开定理，下列说法正确的有
+q-008 | ch1 | multi | 设 $A$ 为 $n$ 阶方阵，则关于伴随矩阵 $A^*$ 的结论，正确的有
+q-009 | ch1 | multi | 设 $A$ 为 $n$ 阶方阵且 $|A|\neq0$，下列结论正确的有
+q-010 | ch1 | multi | 设 $A$ 为 $n$ 阶方阵，下列命题中**一定成立**的有
+q-011 | ch1 | judge | 对任意 $n$ 阶方阵 $A$，都有 $|A^T|=|A|$。
+q-012 | ch1 | judge | 对任意同阶方阵 $A,B$，都有 $|AB|=|A|\,|B|$。
+q-013 | ch1 | judge | 元素 $a_{ij}$ 的代数余子式 $A_{ij}$ 只与 $a_{ij}$ 的位置有关，与 $a_{ij}$ 的数值无关。
+q-014 | ch1 | judge | $n$ 阶行列式的定义中，按所有 $n!$ 个排列求和，每一项的符号由该排列的逆序数奇偶性决定。
+q-015 | ch1 | judge | 三阶行列式可以只用主对角线上的三个元素相乘减去副对角线上的三个元素相乘来计算。
+q-016 | ch1 | judge | 设 $A$ 为 $n$ 阶方阵且 $n\ge2$，若 $|A|=0$，则必有 $A^*=0$（零矩阵）。
+q-017 | ch1 | blank | 行列式中 $|I_n|=$ （$I_n$ 为 $n$ 阶单位矩阵）。
+q-018 | ch1 | blank | $A=\begin{vmatrix}2&1\\3&4\end{vmatrix}$，则 $|A|=$ 。
+q-019 | ch1 | blank | 设 $A,B$ 均为 $3$ 阶方阵，已知 $|A|=2$，$|B|=3$，则 $|AB|=$ 。
+q-020 | ch1 | blank | 设 $A=(a_{ij})_{3\times3}$，元素 $a_{12}$ 的**余子式** $M_{12}$ 等于 $\begin{vmatrix}a_{21}&a_{23}\\a_{31}&a_{33}\end{vmatrix}$，则 $A_{12}=$ （用 $M_{12}$ 表示）。
+q-021 | ch1 | blank | $n$ 阶行列式的定义式中，排列 $\sigma\in S_n$ 的总数是 $n!$，故 $n$ 阶行列式展开后共有 ______ 项（带符号的项）。
+q-022 | ch1 | term | 名词解释：**代数余子式**（algebraic cofactor）。
+q-023 | ch1 | short | 写出行列式的五条基本性质，并说明 $|AB|=|A|\,|B|$ 的意义。
+q-024 | ch1 | short | 写出 $n$ 阶行列式的两种定义式，并说明它们各自的适用场合。
+q-025 | ch1 | short | 证明：对任意 $n$ 阶方阵 $A$，有 $|A^T|=|A|$。
+q-026 | ch1 | short | 设 $A,B$ 均为 $n$ 阶方阵且 $AB=0$，$B\neq0$。证明：$|A|=0$，并由此说明「$AB=0$ 必有 $A=0$ 或 $B=0$」是错误命题。
+q-027 | ch1 | calc | 计算三阶行列式 $|A|=\begin{vmatrix}3&1&2\\-1&2&0\\1&1&1\end{vmatrix}|$。
+q-028 | ch1 | calc | 利用行列式的性质计算 $|A|=\begin{vmatrix}1&2&3&4\\2&3&4&5\\3&4&5&6\\4&5&6&7\end{vmatrix}|$。
+q-029 | ch1 | calc | 求参数 $a$ 的值，使行列式 $|A|=\begin{vmatrix}1&1&1\\1&2&a\\1&4&a^2\end{vmatrix}=0$。
+q-030 | ch1 | calc | 计算四阶行列式 $|A|=\begin{vmatrix}1&1&1&1\\2&3&4&5\\0&1&1&1\\1&1&0&0\end{vmatrix}|$。
+q-031 | ch1b | single | 二阶行列式 $\begin{vmatrix}-2&3\\4&5\end{vmatrix}$ 的值是
+q-032 | ch1b | single | 设 $A$ 为 $3$ 阶方阵且 $|A|=5$，则 $|3A|=$
+q-033 | ch1b | single | 排列 $217986354$ 的逆序数是
+q-034 | ch1b | single | 已知三阶行列式 $\begin{vmatrix}a_1&a_2&a_3\\b_1&b_2&b_3\\c_1&c_2&c_3\end{vmatrix}=3$，则 $\begin{vmatrix}a_1+2b_1&a_2+2b_2&a_3+2b_3\\b_1&b_2&b_3\\c_1+3b_1&c_2+3b_2&c_3+3b_3\end{vmatrix}=$
+q-035 | ch1b | single | $n$ 阶排列 $n,\,n-1,\,\cdots,\,2,\,1$（完全倒序）的逆序数是
+q-036 | ch1b | single | 设 $A$ 为 $3$ 阶方阵且 $|A|=2$，则 $|2A^{-1}|=$
+q-037 | ch1b | single | 设 $A=(a_{ij})_{4\times4}$，则 $a_{11}A_{21}+a_{12}A_{22}+a_{13}A_{23}+a_{14}A_{24}=$（$A_{ij}$ 为代数余子式）
+q-038 | ch1b | single | 设 $f(x)=\begin{vmatrix}x&1&1&1\\1&x&1&1\\1&1&x&1\\1&1&1&x\end{vmatrix}$，则 $f'(x)=$
+q-039 | ch1b | single | 设 $A,B$ 均为 $3$ 阶方阵，$|A|=2$，$|B|=-3$，则 $|2AB^{-1}|=$
+q-040 | ch1b | multi | 下列 $n$ 阶行列式中，**一定等于零**的有
+q-041 | ch1b | multi | 关于余子式与代数余子式，下列说法中正确的有
+q-042 | ch1b | multi | 关于 $n$ 阶行列式的定义，下列说法中正确的有
+q-043 | ch1b | multi | 设 $A$ 为 $3$ 阶方阵且 $|A|=3$，下列结论中正确的有
+q-044 | ch1b | multi | 关于对角线法则，下列说法中正确的有
+q-045 | ch1b | multi | 设 $A$ 为 $n$ 阶方阵（$n\ge2$），$A^{*}$ 为伴随矩阵，下列结论中正确的有
+q-046 | ch1b | multi | 设 $A$ 为 $4$ 阶方阵且 $|A|=2$，下列结论中正确的有
+q-047 | ch1b | multi | 关于排列与对换，下列说法中正确的有
+q-048 | ch1b | multi | 设 $A$ 为 $3$ 阶方阵，下列条件中能推出 $|A|=0$ 的有
+q-049 | ch1b | judge | $\begin{vmatrix}2&0\\0&3\end{vmatrix}=6$。
+q-050 | ch1b | judge | 若 $n$ 阶行列式 $|A|=0$，则 $A$ 必有两行（列）成比例。
+q-051 | ch1b | judge | 行列式按第 $i$ 行展开时，$\sum_{j=1}^{n}a_{ij}A_{ij}=|A|$ 对每个固定的 $i$ 都成立。
+q-052 | ch1b | judge | 任一奇排列经过一次对换都可变为偶排列。
+q-053 | ch1b | judge | 对任意同阶方阵 $A,B$，都有 $|A+B|=|A|+|B|$。
+q-054 | ch1b | judge | 设 $A$ 为 $3$ 阶方阵且 $|A|=2$，则 $|2A|=8$。
+q-055 | ch1b | judge | 若行列式的第 2 行是第 1 行的 3 倍，则该行列式必为零。
+q-056 | ch1b | judge | $4$ 阶行列式按定义展开共有 $24$ 项（带符号的乘积项）。
+q-057 | ch1b | judge | 设 $A$ 为 $3$ 阶实方阵且 $|A|=-1$，则 $|A+E|$ 一定不等于零。
+q-058 | ch1b | blank | $\begin{vmatrix}3&-1\\5&2\end{vmatrix}=$ 。
+q-059 | ch1b | blank | 设 $A$ 为 $4$ 阶方阵且 $|A|=4$，则 $|3A|=$ 。
+q-060 | ch1b | blank | 排列 $2431$ 的逆序数是 。
+q-061 | ch1b | blank | $\begin{vmatrix}1&2&3\\0&4&5\\0&0&6\end{vmatrix}=$ 。
+q-062 | ch1b | blank | 设 $A$ 为 $3$ 阶方阵且 $|A|=3$，则 $|A^{*}|=$ 。
+q-063 | ch1b | blank | 设 $A=(a_{ij})_{3\times3}$，则 $a_{11}A_{31}+a_{12}A_{32}+a_{13}A_{33}=$ 。
+q-064 | ch1b | blank | 排列 $135\cdots(2n-1)246\cdots(2n)$（奇数递增接偶数递增）的逆序数是 。
+q-065 | ch1b | blank | $\begin{vmatrix}1&1&1\\1&2&4\\1&4&16\end{vmatrix}=$ 。
+q-066 | ch1b | blank | 设 $A$ 为 $3$ 阶方阵且 $|A|=2$，则 $\bigl||A|\,A^{*}\bigr|=$ 。
+q-067 | ch1b | term | 名词解释：**余子式**（minor）与**代数余子式**（algebraic cofactor）。
+q-068 | ch1b | term | 名词解释：**逆序数**（inversion number）。
+q-069 | ch1b | short | 简述计算 $n$ 阶行列式的四种常用方法及各自适用的行列式类型。
+q-070 | ch1b | short | 写出二阶与三阶行列式的对角线法则，并说明它为什么不能推广到 4 阶及更高阶。
+q-071 | ch1b | short | 证明：设 $A=(a_{ij})_{n\times n}$，当 $i\neq k$ 时 $\sum_{j=1}^{n}a_{ij}A_{kj}=0$。
+q-072 | ch1b | short | 证明：若 $n$ 阶行列式有两行完全相同，则行列式为零。
+q-073 | ch1b | short | 证明：当 $n\ge2$ 时，$n$ 个元素的全体排列中奇排列与偶排列各占一半，各为 $\dfrac{n!}{2}$ 个。
+q-074 | ch1b | short | 设 $A$ 为 $n$ 阶方阵（$n\ge2$），$A^{*}$ 为伴随矩阵。证明：$|A^{*}|=|A|^{n-1}$；并求 $n=3$、$|A|=2$ 时 $|A^{*}|$ 的值。
+q-075 | ch1b | calc | 计算三阶行列式 $D=\begin{vmatrix}2&0&1\\1&3&2\\4&1&1\end{vmatrix}$。
+q-076 | ch1b | calc | 计算 $D=\begin{vmatrix}1&1&1\\1&2&4\\1&3&9\end{vmatrix}$。
+q-077 | ch1b | calc | 计算四阶行列式 $D=\begin{vmatrix}2&1&0&0\\3&4&0&0\\0&0&5&6\\0&0&7&8\end{vmatrix}$。
+q-078 | ch1b | calc | 计算四阶行列式 $D=\begin{vmatrix}2&0&0&0\\1&3&0&0\\5&7&4&0\\9&1&8&5\end{vmatrix}$。
+q-079 | ch1b | calc | 利用行和相等技巧计算 $D=\begin{vmatrix}1&2&3\\2&3&1\\3&1&2\end{vmatrix}$。
+q-080 | ch1b | calc | 设 $D(\lambda)=\begin{vmatrix}2-\lambda&1&0\\1&2-\lambda&1\\0&1&2-\lambda\end{vmatrix}$。将 $D(\lambda)$ 展开为 $\lambda$ 的多项式并求 $D(0)$。
+q-081 | ch1b | calc | 计算循环结构行列式 $D=\begin{vmatrix}1&2&3&4\\2&3&4&1\\3&4&1&2\\4&1&2&3\end{vmatrix}$。
+q-082 | ch1b | calc | 计算字母行列式 $D=\begin{vmatrix}x&y&x+y\\y&x+y&x\\x+y&x&y\end{vmatrix}$。
+q-083 | ch2 | single | 线性方程组 $$\begin{cases}2x_1+x_2=5\\x_1-x_2=1\end{cases}$$ 的系数矩阵 $A$ 与增广矩阵 $\bar A$ 分别是
+q-084 | ch2 | single | 设 $A,B$ 均为 $n$ 阶方阵，$C=AB$，则 $C^T$ 等于
+q-085 | ch2 | single | 设 $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$，$B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$，则 $AB=$
+q-086 | ch2 | single | 设 $A$ 为 $n$ 阶方阵且 $A$ 可逆，下列命题中**一定成立**的是
+q-087 | ch2 | single | 设 $A$ 为 $3$ 阶方阵且 $|A|=2$，则 $A^{-1}=$
+q-088 | ch2 | single | 设线性方程组 $$\begin{cases}x_1+2x_2=5\\2x_1+x_2=1\end{cases}$$ 的系数矩阵为 $A$，已知 $|A|\neq0$，则由克拉默法则 $x_1=$
+q-089 | ch2 | single | 用分块法计算 $AB$（$A$ 为 $m\times n$ 阶，$B$ 为 $n\times p$ 阶），下列说法中**错误**的是
+q-090 | ch2 | multi | 下列关于矩阵运算的等式中，正确的有
+q-091 | ch2 | multi | 设 $A,B$ 均为 $n$ 阶可逆方阵，下列结论正确的有
+q-092 | ch2 | multi | 下列关于矩阵的说法中，正确的有
+q-093 | ch2 | multi | 设线性方程组 $Ax=b$ 的系数矩阵 $A$ 为 $n$ 阶方阵，下列结论正确的有
+q-094 | ch2 | multi | 关于矩阵的分块法，下列说法正确的有
+q-095 | ch2 | multi | 设 $A,B,C$ 均为 $n$ 阶方阵，关于矩阵的运算律，下列说法正确的有
+q-096 | ch2 | judge | 设 $A,B$ 都是 $n$ 阶方阵，则 $(AB)^T=B^TA^T$。
+q-097 | ch2 | judge | 一个 $m\times n$ 阶矩阵与一个 $n\times m$ 阶矩阵的元素个数相同，但它们的形状不同，是两个不同的矩阵。
+q-098 | ch2 | judge | 若 $A,B$ 都是 $n$ 阶方阵且 $AB=E$，则必有 $A=B=E$。
+q-099 | ch2 | judge | 由克拉默法则，线性方程组 $Ax=b$ 有唯一解的必要条件是 $|A|\neq0$。
+q-100 | ch2 | judge | 用分块法计算矩阵的乘积，所得结果与直接按元素相乘的结果完全相同。
+q-101 | ch2 | judge | 设 $A$ 为 $n$ 阶方阵（$n\ge2$），若 $A^2=A$，则必有 $A=E$ 或 $A=0$。
+q-102 | ch2 | judge | 设 $A,B,C$ 均为 $n$ 阶方阵，若 $ABC=E$，则 $A,B,C$ 都可逆。
+q-103 | ch2 | blank | 设 $A=\begin{pmatrix}2&1\\1&3\end{pmatrix}$，$B=\begin{pmatrix}1&1\\0&2\end{pmatrix}$，则乘积 $AB$ 的第 1 行第 2 列元素 $(AB)_{12}=$ ______ 。
+q-104 | ch2 | blank | 设 $A$ 为 $n$ 阶方阵且 $A$ 可逆，则 $|A^{-1}|=$ ______ 。
+q-105 | ch2 | blank | 设线性方程组有 3 个方程、2 个未知数 $x_1,x_2$，则其系数矩阵 $A$ 的阶是 ______ 。
+q-106 | ch2 | blank | 用克拉默法则解 $n$ 元非齐次线性方程组 $Ax=b$ 时，$A_i$ 是把 $A$ 的第 $i$ 列换成 ______ 所得的 $n$ 阶方阵。
+q-107 | ch2 | blank | 设 $A=\begin{pmatrix}A_{11}&A_{12}\\A_{21}&A_{22}\end{pmatrix}$，$B=\begin{pmatrix}B_{11}&B_{12}\\B_{21}&B_{22}\end{pmatrix}$ 都按 $2\times2$ 分块，则乘积 $AB$ 的**右上角块**是 ______ 。
+q-108 | ch2 | blank | 设 $A=\begin{pmatrix}B&C\\0&D\end{pmatrix}$ 为**箭形分块**矩阵（$B,D$ 均为 2 阶方阵且可逆），则 $A$ 可逆，且 $A^{-1}$ 的**右上角块**为 ______ 。
+q-109 | ch2 | term | 名词解释：**矩阵**（matrix）。
+q-110 | ch2 | term | 名词解释：**逆矩阵**（inverse matrix）。
+q-111 | ch2 | short | 写出矩阵乘法的定义式与三条基本运算律，并说明矩阵乘法为什么不满足交换律和消去律。
+q-112 | ch2 | short | 叙述克拉默法则的内容与适用条件，并说明当系数行列式 $|A|=0$ 时应改用什么方法判别方程组的解。
+q-113 | ch2 | short | 说明矩阵分块法的含义与操作规则，写出箭形分块矩阵求逆的公式，并给出一个用分块法求逆的例子。
+q-114 | ch2 | calc | 计算矩阵乘积 $AB$，其中 $A=\begin{pmatrix}1&-1\\2&3\end{pmatrix}$，$B=\begin{pmatrix}3&1\\0&2\end{pmatrix}$。
+q-115 | ch2 | calc | 计算 $AB-BA$，其中 $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$，$B=\begin{pmatrix}2&0\\1&1\end{pmatrix}$。
+q-116 | ch2 | calc | 求矩阵 $A=\begin{pmatrix}1&1\\1&2\end{pmatrix}$ 的逆矩阵，并验证 $AA^{-1}=E$。
+q-117 | ch2 | calc | 设 $a$ 为常数，线性方程组 $$\begin{cases}x_1+x_2+a x_3=1\\x_1+a x_2+x_3=1\\a x_1+x_2+x_3=1\end{cases}$$ 何时有唯一解？并在 $a=0$ 时求出它的解。
+q-118 | ch2 | calc | 用分块法求矩阵 $A=\begin{pmatrix}1&1&1&1\\0&1&1&1\\0&0&1&1\\0&0&0&1\end{pmatrix}$ 的逆矩阵。
+q-119 | ch2b | single | 设 $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$，则 $2A+A^T=$
+q-120 | ch2b | single | 设 $A=\begin{pmatrix}1&2\\3&5\end{pmatrix}$，$B=\begin{pmatrix}1&3\\2&5\end{pmatrix}$，则 $A$ 与 $B$ 的关系是
+q-121 | ch2b | single | 设 $A,B$ 均为 $n$ 阶可逆方阵，则 $(AB)^{-1}=$
+q-122 | ch2b | single | 设 $A$ 为 $n$ 阶可逆方阵，则 $(A^{2})^{-1}=$
+q-123 | ch2b | single | 设 $A=\begin{pmatrix}A_1&0\\0&A_2\end{pmatrix}$，其中 $A_1,A_2$ 均为 $n$ 阶可逆方阵，则 $A^{-1}=$
+q-124 | ch2b | single | 设线性方程组 $$\begin{cases}2x_1+x_2+x_3=1\\x_1+2x_2-x_3=2\\x_1+x_2+x_3=3\end{cases}$$ 的系数矩阵为 $A$，常数列为 $b$，则由克拉默法则 $x_2=$
+q-125 | ch2b | single | 设 $A,B$ 均为 $n$ 阶对称矩阵且 $AB=BA$，则 $AB$ 必为
+q-126 | ch2b | single | 设 $A=\begin{pmatrix}B&C\\0&D\end{pmatrix}$，其中 $B,D$ 均为 2 阶方阵、$C$ 为 2 阶方阵，则 $|A|=$
+q-127 | ch2b | single | 设 $A$ 为 $n$ 阶方阵且 $|A|\neq0$，$A^{*}$ 为 $A$ 的伴随矩阵，则 $A=$
+q-128 | ch2b | single | 设 $A=\begin{pmatrix}1&-1\\0&1\end{pmatrix}$，则对任意正整数 $n$，$A^{n}=$
+q-129 | ch2b | multi | 关于矩阵的加法与数乘，下列说法中正确的有
+q-130 | ch2b | multi | 关于伴随矩阵 $A^{*}$，下列说法中正确的有
+q-131 | ch2b | multi | 关于矩阵与线性方程组的对应，下列说法中正确的有
+q-132 | ch2b | multi | 关于克拉默法则，下列说法中正确的有
+q-133 | ch2b | multi | 关于矩阵的分块，下列说法中正确的有
+q-134 | ch2b | multi | 关于矩阵的幂，下列说法中正确的有
+q-135 | ch2b | multi | 关于矩阵方程 $AX=B$（$A$ 为 $n$ 阶可逆方阵，$B$ 为 $n$ 阶方阵），下列说法中正确的有
+q-136 | ch2b | multi | 关于对称矩阵，下列说法中正确的有
+q-137 | ch2b | multi | 关于线性方程组 $Ax=b$ 的可解性，下列说法中正确的有
+q-138 | ch2b | multi | 设 $A,B$ 均为 $n$ 阶可逆方阵，记 $M=\begin{pmatrix}O&A\\B&O\end{pmatrix}$（$O$ 为 $n$ 阶零矩阵），下列结论中正确的有
+q-139 | ch2b | judge | 两个同阶矩阵相等的充要条件是它们的阶相同且对应元素逐一相等。
+q-140 | ch2b | judge | 两个 $n$ 阶方阵 $A,B$ 的乘积 $AB$ 与 $BA$ 总是相等的。
+q-141 | ch2b | judge | 设 $A$ 为 $n$ 阶方阵，若 $|A|=0$，则 $A$ 存在逆矩阵 $A^{-1}$。
+q-142 | ch2b | judge | 用克拉默法则解一个 $n$ 元线性方程组，需要计算 $n+1$ 个 $n$ 阶行列式。
+q-143 | ch2b | judge | 用分块法计算矩阵乘积 $AB$ 时，$A$ 的列块数必须与 $B$ 的行块数相同。
+q-144 | ch2b | judge | 设 $A$ 为任意方阵，则 $(A^{T})^{T}=A$。
+q-145 | ch2b | judge | 设 $A,B,C$ 均为 $n$ 阶方阵，若 $AB=BA=E$ 且 $AC=CA=E$，则 $B=C$。
+q-146 | ch2b | judge | 线性方程组写成矩阵形式 $Ax=b$ 时，$b$ 是由各方程右端常数按方程顺序组成的列向量。
+q-147 | ch2b | judge | 当系数行列式 $|A|=0$ 时，克拉默法则依然可以用来判定方程组的解的情况。
+q-148 | ch2b | judge | 设 $A$ 为 $n$ 阶实方阵，若 $AA^{T}=A^{T}A$，则 $A$ 必为对称矩阵。
+q-149 | ch2b | blank | 设 $A=\begin{pmatrix}1&3\\2&4\end{pmatrix}$，$B=\begin{pmatrix}2&0\\1&5\end{pmatrix}$，则 $(3A-2B)_{21}=$ ______ 。
+q-150 | ch2b | blank | 设 $A$ 为 $m\times n$ 阶矩阵，则 $A^{T}$ 的阶是 ______ 。
+q-151 | ch2b | blank | 设 $A$ 为 $n$ 阶方阵，$A^{*}$ 为 $A$ 的伴随矩阵，则 $AA^{*}=$ ______ 。
+q-152 | ch2b | blank | 设线性方程组 $$\begin{cases}x_1+2x_2=5\\3x_1+4x_2=11\end{cases}$$ 的系数行列式为 $A$，则由克拉默法则 $x_1+x_2=$ ______ 。
+q-153 | ch2b | blank | 设 $A=\begin{pmatrix}B&C\\0&D\end{pmatrix}$ 为箭形分块矩阵（$B,D$ 均为 2 阶可逆方阵），则 $A^{-1}$ 的左下角块是 ______ 矩阵。
+q-154 | ch2b | blank | 设 $A$ 为 $n$ 阶方阵，则 $A+A^{T}$ 一定是 ______ 矩阵。
+q-155 | ch2b | blank | 设 $A$ 为 $n$ 阶方阵且 $A$ 可逆，则 $(A^{-1})^{T}=$ ______ 。
+q-156 | ch2b | blank | 线性方程组 $$\begin{cases}x_1+2x_2+x_3=4\\2x_1+x_2-x_3=1\\x_1-x_2+2x_3=3\end{cases}$$ 的系数行列式为 $A$，则 $|A|=$ ______ 。
+q-157 | ch2b | blank | 设 $A=\begin{pmatrix}B&C\\0&D\end{pmatrix}$（$B,D$ 均为 2 阶方阵、$C$ 为 2 阶方阵），则 $A^{2}$ 的**右下角块**是 ______ 。
+q-158 | ch2b | blank | 设 $A$ 为 $n$ 阶方阵且 $|A|\neq0$，$A^{*}$ 为 $A$ 的伴随矩阵，则 $(A^{*})^{-1}=$ ______ （用 $A$ 与 $|A|$ 表示）。
+q-159 | ch2b | short | 把矩阵按形状、元素位置与对称性三个标准分类，并各举一例。
+q-160 | ch2b | short | 写出矩阵转置的四条基本性质，并用元素展开证明 $(AB)^{T}=B^{T}A^{T}$。
+q-161 | ch2b | short | 证明逆矩阵的唯一性，并说明由此得到「$A$ 可逆 $\iff A^{-1}$ 可逆」。
+q-162 | ch2b | short | 比较克拉默法则与消元法（初等行变换）解线性方程组：各写出自左向右的计算步骤，说明二者的联系与各自适用的场合。
+q-163 | ch2b | short | 写出分块对角矩阵的乘法规则、求逆公式与行列式公式，并说明 $|A|=|A_1|\cdots|A_k|$ 的理由。
+q-164 | ch2b | short | 说明对称矩阵的性质：给出它的等价刻画，并讨论它在和、数乘、幂与乘积下的封闭性。
+q-165 | ch2b | short | 证明：设 $A,B$ 均为 $n$ 阶方阵且 $AB=E$，则 $A,B$ 都可逆且互为逆矩阵；并说明这为什么不能推出 $A=B=E$。
+q-166 | ch2b | short | 写出伴随矩阵的定义与核心恒等式，并由此导出求逆公式、可逆的充要条件、$|A^{*}|$ 与 $(A^{*})^{-1}$ 的表达式。
+q-167 | ch2b | short | 说明用分块法解矩阵方程的思路，并以箭形分块矩阵 $AX=M$ 为例写出分块展开式与求解步骤。
+q-168 | ch2b | short | 设 $A=\begin{pmatrix}2&0\\0&4\end{pmatrix}$，$B$ 为 2 阶方阵且满足 $A^{-1}B-B=6E$，求 $B$。
+q-169 | ch2b | calc | 计算矩阵 $A=\begin{pmatrix}1&2\\0&3\end{pmatrix}$ 的平方 $A^{2}$。
+q-170 | ch2b | calc | 求矩阵 $A=\begin{pmatrix}2&1\\1&1\end{pmatrix}$ 的逆矩阵，并验证 $AA^{-1}=E$。
+q-171 | ch2b | calc | 用分块法计算 $AA'$，其中 $A=\begin{pmatrix}1&1&2&1\\0&1&3&4\\0&0&3&1\\0&0&0&4\end{pmatrix}$，$A'=\begin{pmatrix}2&0&1&1\\0&1&0&1\\0&0&2&0\\0&0&0&3\end{pmatrix}$。
+q-172 | ch2b | calc | 用矩阵形式解线性方程组 $$\begin{cases}2x_1+x_2+x_3=5\\x_1+2x_2+x_3=6\\x_1+x_2+2x_3=7\end{cases}$$。
+q-173 | ch2b | calc | 求矩阵 $A=\begin{pmatrix}1&\frac12&\frac12\\\frac12&1&\frac12\\\frac12&\frac12&1\end{pmatrix}$ 的逆矩阵，并作验算。
+q-174 | ch2b | calc | 用克拉默法则解线性方程组 $$\begin{cases}x_1+x_2=2\\x_2+x_3=3\\x_1+x_3=4\end{cases}$$。
+q-175 | ch2b | calc | 用分块法求矩阵 $A=\begin{pmatrix}0&B\\C&0\end{pmatrix}$ 的逆矩阵，其中 $B=\begin{pmatrix}1&2\\0&1\end{pmatrix}$，$C=\begin{pmatrix}3&0\\1&1\end{pmatrix}$，$0$ 为 2 阶零矩阵。
+q-176 | ch2b | calc | 设 $A$ 为 3 阶方阵，$A^{*}=\begin{pmatrix}1&0&0\\0&1&0\\0&0&4\end{pmatrix}$ 且 $|A|>0$，求 $A$。
+q-177 | ch2b | calc | 讨论参数 $a$ 的取值，使方程组 $$\begin{cases}ax_1+x_2=1\\x_1+ax_2=1\end{cases}$$ 有唯一解，并在有唯一解时求出解。
+q-178 | ch2b | calc | 设 $A=\begin{pmatrix}1&2\\2&4\end{pmatrix}$，求 $A^{n}$（$n$ 为正整数）的一般表达式。
+q-179 | ch3 | single | 下列变换中，**不属于**矩阵的初等变换的是
+q-180 | ch3 | single | 设 $A=\begin{pmatrix}1&2&3\\2&4&6\\1&1&1\end{pmatrix}$，则 $r(A)=$
+q-181 | ch3 | single | 设线性方程组 $Ax=b$ 的增广矩阵经初等行变换后可化为 $\begin{pmatrix}1&0&1&3\\0&1&2&5\\0&0&0&0\end{pmatrix}$，则该方程组
+q-182 | ch3 | single | 设 $A$ 是 $n$ 阶方阵且 $r(A)=n$，则齐次线性方程组 $Ax=0$ 的解为
+q-183 | ch3 | single | 设 $A,B$ 均为 $m\times n$ 矩阵（$m,n\ge2$），且 $A$ 可以用有限次初等**行**变换化为 $B$，则下列结论**一定成立**的是
+q-184 | ch3 | single | 设 $A,B$ 均为 $n$ 阶方阵，下列结论**错误**的是
+q-185 | ch3 | single | 设 $A$ 为 $n$ 阶方阵（$n\ge2$）且 $r(A)=n-1$，则下列结论**一定成立**的是
+q-186 | ch3 | multi | 关于初等矩阵，下列说法正确的有
+q-187 | ch3 | multi | 设 $A$ 为 $n$ 阶方阵，下列命题正确的有
+q-188 | ch3 | multi | 设线性方程组 $Ax=b$ 的系数矩阵与增广矩阵的秩分别为 $r(A)$ 与 $r(A|b)$，未知数个数为 $n$，则下列说法正确的有
+q-189 | ch3 | multi | 设 $A$ 为 $n$ 阶方阵，关于齐次线性方程组 $Ax=0$，下列说法正确的有
+q-190 | ch3 | multi | 设线性方程组 $Ax=b$ 有解，且 $r(A)=r<n$，则下列说法正确的有
+q-191 | ch3 | multi | 设 $A,B$ 均为 $m\times n$ 矩阵。关于矩阵的初等变换与等价，下列说法正确的有
+q-192 | ch3 | judge | 初等矩阵都是可逆矩阵，且初等矩阵的逆矩阵仍然是初等矩阵。
+q-193 | ch3 | judge | 设 $A$ 是 $m\times n$ 矩阵，则必有 $r(A)\le\min\{m,n\}$。
+q-194 | ch3 | judge | 线性方程组 $Ax=b$ 有解的充要条件是 $r(A)=r(A|b)$。
+q-195 | ch3 | judge | 设 $A$ 为 $n$ 阶方阵，齐次线性方程组 $Ax=0$ 有非零解的充要条件是 $r(A)<n$。
+q-196 | ch3 | judge | 矩阵 $A$ 与 $B$ 等价（可以经过有限次初等变换互相转化），则它们的行最简形矩阵必然相同。
+q-197 | ch3 | judge | 设 $A$ 是 $n$ 阶矩阵且 $r(A)=r$，则 $A$ 的任意一个 $r$ 阶子式都不等于零。
+q-198 | ch3 | blank | 矩阵 $A$ 的秩 $r(A)$ 等于 $A$ 经初等行变换化为阶梯形矩阵后 ______ 的个数。
+q-199 | ch3 | blank | 设 $A$ 是 $m\times n$ 矩阵，则 $r(A)\le$ ______（用 $\min$ 表示）。
+q-200 | ch3 | blank | 设 $A$ 是 $n$ 阶方阵且 $r(A)=n$，则齐次线性方程组 $Ax=0$ 的解是 ______。
+q-201 | ch3 | blank | 线性方程组 $Ax=b$ 有解的充要条件是 $r(A)=r(A|b)$，其中 $r(A|b)$ 表示 ______ 的秩。
+q-202 | ch3 | blank | 设 $A=\begin{pmatrix}1&1&1\\1&2&3\\2&3&4\end{pmatrix}$，则 $r(A)=$ ______。
+q-203 | ch3 | blank | 线性方程组 $\begin{cases}x_1+x_2+x_3=1\\x_1+2x_2+a x_3=3\\x_1+3x_2+a^2 x_3=5\end{cases}$ 有无穷多个解时，参数 $a=$ ______。
+q-204 | ch3 | term | 名词解释：**矩阵的秩**（rank of a matrix）。
+q-205 | ch3 | term | 名词解释：**初等变换**（elementary transformation）与**初等矩阵**（elementary matrix）。
+q-206 | ch3 | short | 写出矩阵的三种初等变换，说明初等矩阵的作用，并给出「矩阵等价」的含义与充要条件。
+q-207 | ch3 | short | 写出矩阵的秩的两种等价定义，说明秩的基本性质，并写出求矩阵的秩的两种方法。
+q-208 | ch3 | short | 写出线性方程组解的判别定理，并说明用初等行变换（消元法）解线性方程组的具体步骤。
+q-209 | ch3 | short | 设 $A$ 为 $m\times n$ 矩阵，$b$ 为 $n$ 维列向量。证明：$Ax=b$ 有解 $\iff b$ 可以表示成 $A$ 的列向量组 $\alpha_1,\dots,\alpha_n$ 的线性组合；并由此说明「$r(A)=r(A|b)$」为什么是方程组有解的充要条件。
+q-210 | ch3 | calc | 用初等行变换把矩阵 $A=\begin{pmatrix}1&2&1\\2&4&3\\3&6&5\end{pmatrix}$ 化为行最简形矩阵，并求 $r(A)$。
+q-211 | ch3 | calc | 求矩阵 $A=\begin{pmatrix}1&2&0&1\\0&1&1&2\\1&3&1&3\\2&4&1&4\end{pmatrix}$ 的秩，并求出 $A$ 中一个最高阶非零子式的值。
+q-212 | ch3 | calc | 用消元法解线性方程组 $\begin{cases}x_1+2x_2+x_3=7\\x_1+3x_2+2x_3=11\\2x_1+4x_2+3x_3=16\end{cases}$。
+q-213 | ch3 | calc | 讨论参数 $a$ 的取值，使线性方程组 $\begin{cases}a x_1+x_2+x_3=1\\x_1+a x_2+x_3=1\\x_1+x_2+a x_3=1\end{cases}$ 分别有唯一解、有无穷多个解、无解。
+q-214 | ch3 | calc | 设 $A=\begin{pmatrix}1&1&1\\1&2&3\\1&4&7\end{pmatrix}$，$b=(b_1,b_2,b_3)^{\mathsf T}$。(1) 求 $r(A)$；(2) 讨论 $b$ 满足什么条件时方程组 $Ax=b$ 有解，并在有解时说明通解的结构。
+q-215 | ch3b | single | 设 $A$ 为 $3$ 阶方阵。先对 $A$ 作行变换 $R_1\leftrightarrow R_2$，再作 $R_3\leftarrow R_3+R_1$，则最终得到的矩阵可以写成 $PA$，其中 $P=$
+q-216 | ch3b | single | 设 $A,B$ 均为 $n$ 阶方阵且 $AB=O$，则必有
+q-217 | ch3b | single | 设 $A,B$ 均为 $n$ 阶方阵，方程组 $Ax=0$ 与 $Bx=0$ 的解集相同，则必有
+q-218 | ch3b | single | 设 $A$ 为实矩阵，则 $r(A^{T}A)$ 等于
+q-219 | ch3b | single | 设 $A$ 可逆，$Q$ 为初等矩阵，$B=AQ$，则 $B^{-1}=$
+q-220 | ch3b | single | 设 $A$ 为 $m\times n$ 矩阵（$m<n$），线性方程组 $Ax=b$ 有解且 $r(A)=r(A|b)=m$，则该方程组的解向量
+q-221 | ch3b | single | 设 $A$ 为 $m\times n$ 矩阵，$B$ 为 $p\times n$ 矩阵，则方程组 $Ax=0$ 与 $Bx=0$ 有非零公共解的充要条件是
+q-222 | ch3b | single | 设 $P=\begin{pmatrix}1&1\\0&1\end{pmatrix}$，则 $P^{100}=$
+q-223 | ch3b | multi | 关于初等变换对矩阵的影响，下列说法中成立的有
+q-224 | ch3b | multi | 设 $A$ 为 $n$ 阶方阵，关于矩阵的秩与可逆性，下列说法中成立的有
+q-225 | ch3b | multi | 关于齐次线性方程组 $Ax=0$，下列说法中成立的有
+q-226 | ch3b | multi | 设 $A,B$ 均为 $m\times n$ 矩阵，下列等式或不等式中成立的有
+q-227 | ch3b | multi | 关于矩阵的等价与标准形，下列说法中成立的有
+q-228 | ch3b | multi | 关于线性方程组解的判定，下列说法中成立的有
+q-229 | ch3b | multi | 设 $A,B$ 均为 $n$ 阶方阵，关于矩阵的秩，下列说法中成立的有
+q-230 | ch3b | multi | 关于两个线性方程组的同解与公共解，下列说法中成立的有
+q-231 | ch3b | judge | 对矩阵 $A$ 作初等行变换既不会改变 $A$ 的秩，也不会改变 $A$ 的列向量组。
+q-232 | ch3b | judge | 若 $A,B$ 均为 $n$ 阶方阵且 $AB=O$，则 $r(A)+r(B)\le n$。
+q-233 | ch3b | judge | 若方程组 $Ax=b$ 无解，则必有 $r(A)=n$。
+q-234 | ch3b | judge | 用初等矩阵左乘 $A$ 相当于对 $A$ 作行初等变换，右乘 $A$ 相当于对 $A$ 作列初等变换。
+q-235 | ch3b | judge | 设 $A$ 为 $m\times n$ 矩阵（$m<n$），则对任意 $b$，方程组 $Ax=b$ 的解向量个数 $\neq 1$。
+q-236 | ch3b | judge | 设 $A$ 为实矩阵，则 $r(A^{T}A)=r(A)$。
+q-237 | ch3b | judge | 两个同型矩阵 $A,B$ 等价的充要条件是它们有相同的行最简形矩阵。
+q-238 | ch3b | judge | 设 $A$ 为 $m\times n$ 矩阵（$m\ge n$）且 $r(A)=n$，则对任意 $b$，方程组 $Ax=b$ 都有唯一解。
+q-239 | ch3b | blank | 初等矩阵 $P$ 的逆矩阵 $P^{-1}$ 仍是 ______ 矩阵。
+q-240 | ch3b | blank | 设 $A$ 为 $m\times n$ 矩阵，则 $A$ 是 ______ 矩阵等价于 $r(A)=0$。
+q-241 | ch3b | blank | 设线性方程组 $Ax=b$ 有无穷多个解，未知数个数为 $n$，则其通解中独立参数的个数为 ______（用 $n$ 与 $r(A)$ 表示）。
+q-242 | ch3b | blank | 两个同型矩阵 $A,B$ 等价的充要条件是它们的 ______ 相同。
+q-243 | ch3b | blank | 若 $A$ 为 $n$ 阶方阵且 $r(A)=n$，则 $A$ 的行最简形矩阵是 ______ 矩阵。
+q-244 | ch3b | blank | 若 $B=AC$，其中 $A$ 为 $m\times n$ 矩阵、$C$ 为 $n\times p$ 矩阵，则 $r(B)\le$ ______（用 $r(A)$ 表示）。
+q-245 | ch3b | blank | 线性方程组 $\begin{cases}x_1+x_2+x_3=1\\x_1+x_2+x_3=2\end{cases}$ 的解的情况是 ______。
+q-246 | ch3b | blank | 设 $A$ 为 $m\times n$ 矩阵、$B$ 为 $p\times n$ 矩阵。关于方程组 $Ax=0$ 与 $Bx=0$ 的非零公共解：堆叠矩阵 $\begin{pmatrix}A\\B\end{pmatrix}$ 的秩小于 ______。
+q-247 | ch3b | short | 说明为什么对增广矩阵作初等**行**变换不改变线性方程组的解集，并指出对增广矩阵作初等**列**变换会带来什么问题。
+q-248 | ch3b | short | 写出用初等变换法与元素法求矩阵秩的步骤，并说明两种方法的联系与各自适用的场合。
+q-249 | ch3b | short | 说明齐次线性方程组与非齐次线性方程组的解集在结构上的本质区别，并写出用「基础解系 + 特解」表示非齐次方程组通解的步骤。
+q-250 | ch3b | short | 设线性方程组的方程个数多于未知数个数（$m>n$）。说明此时方程组解的情况有哪些可能，并给出判别依据。
+q-251 | ch3b | short | 写出三种初等变换对应初等矩阵的逆矩阵，并说明「$A$ 可逆 $\iff A$ 可以表示为有限个初等矩阵的乘积」的证明思路。
+q-252 | ch3b | short | 证明 $r(AC)\le r(A)$，并由此证明：若 $A,B$ 均为 $n$ 阶方阵且 $AB=O$，则 $r(A)+r(B)\le n$。
+q-253 | ch3b | short | 讨论含参线性方程组的解的情况时，给出通用的解题步骤，并说明为什么必须同时计算 $r(A)$ 与 $r(A|b)$。
+q-254 | ch3b | short | 说明矩阵方程 $AX=B$ 与线性方程组 $Ax=b$ 的关系：写出 $AX=B$ 有解的充要条件，并说明如何用初等行变换求解 $AX=B$。
+q-255 | ch3b | calc | 用初等行变换把矩阵 $A=\begin{pmatrix}1&1&1\\1&2&4\\1&4&7\end{pmatrix}$ 化为行最简形矩阵，并求 $r(A)$。
+q-256 | ch3b | calc | 求矩阵 $A=\begin{pmatrix}2&1&0\\1&2&1\\0&1&2\end{pmatrix}$ 的秩，并求出 $A$ 的一个最高阶非零子式的值。
+q-257 | ch3b | calc | 用消元法解线性方程组 $\begin{cases}x_1+x_2+x_3=6\\2x_1-x_2+x_3=3\\x_1-2x_2+x_3=0\end{cases}$。
+q-258 | ch3b | calc | 设 $P=\begin{pmatrix}1&1\\0&1\end{pmatrix}$ 是初等矩阵。求 $P^{2024}$，并说明用 $P^{2024}$ 左乘一个 $2$ 阶矩阵 $A$ 相当于对 $A$ 作了什么初等变换。
+q-259 | ch3b | calc | 用消元法求齐次线性方程组 $\begin{cases}x_1+x_2+x_3=0\\x_1+2x_2+4x_3=0\end{cases}$ 的一个基础解系，并写出该方程组的通解。
+q-260 | ch3b | calc | 用消元法求线性方程组 $\begin{cases}x_1+x_2=1\\x_1+2x_2+x_3=3\\x_2+x_3=2\end{cases}$ 的通解，并说明自由变量的个数与解空间的维数。
+q-261 | ch3b | calc | 讨论参数 $a,b$ 的取值，使线性方程组 $\begin{cases}ax_1+bx_2+2x_3=1\\(b-1)x_2+x_3=0\\ax_1+bx_2+(1-b)x_3=3-2b\end{cases}$ 分别有唯一解、有无穷多个解、无解，并在有解时给出通解。
+q-262 | ch3b | calc | 解矩阵方程 $AX=B$，其中 $A=\begin{pmatrix}1&1&1\\1&2&3\\1&3&6\end{pmatrix}$，$B=\begin{pmatrix}6\\14\\25\end{pmatrix}$；并写出用初等行变换求解矩阵方程的标准做法。
+q-263 | ch4 | single | 设 $\boldsymbol{\alpha}_1=(1,0,1)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，则 $2\boldsymbol{\alpha}_1-\boldsymbol{\alpha}_2=$
+q-264 | ch4 | single | 已知 $\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,0)^{\mathsf T}$，则向量组 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3$
+q-265 | ch4 | single | 设向量组 $\boldsymbol{\alpha}_1=(1,0,1)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,2)^{\mathsf T}$，$\boldsymbol{\alpha}_4=(1,0,0)^{\mathsf T}$，则向量组 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4$ 的秩是
+q-266 | ch4 | single | 设 $A$ 为 $m\times n$ 矩阵且 $r(A)=m<n$，则齐次线性方程组 $A\boldsymbol{x}=0$ 的解空间的维数是
+q-267 | ch4 | single | 设 $K$ 是数域，$V$ 是由 $K$ 上向量组成的非空集合。下列条件中，**足以**判定 $V$ 是 $K$ 上的向量空间的是
+q-268 | ch4 | multi | 关于向量的线性组合，下列说法正确的有
+q-269 | ch4 | multi | 设向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 线性无关，则下列结论正确的有
+q-270 | ch4 | multi | 设 $\boldsymbol{\alpha}_1=(1,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(1,0,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(0,k,1)^{\mathsf T}$，则下列结论正确的有
+q-271 | ch4 | multi | 设 $n$ 维向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 的秩为 $r$，则下列结论正确的有
+q-272 | ch4 | multi | 设 $A$ 为 $m\times n$ 矩阵且 $r(A)=r<n$，则关于齐次线性方程组 $A\boldsymbol{x}=0$，下列说法正确的有
+q-273 | ch4 | multi | 设 $A$ 为 $m\times n$ 矩阵，非齐次线性方程组 $A\boldsymbol{x}=b$ 有解，则下列结论正确的有
+q-274 | ch4 | judge | 零向量 $\boldsymbol{0}$ 可以由任意一个向量组线性表示。
+q-275 | ch4 | judge | 两个向量 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 线性相关，当且仅当 $\boldsymbol{\alpha}=\boldsymbol{\beta}$。
+q-276 | ch4 | judge | 若向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 的秩为 $r$，则该向量组可以由其中 $r$ 个向量线性表示。
+q-277 | ch4 | judge | 齐次线性方程组 $A\boldsymbol{x}=0$ 的任意两个解的任意线性组合仍是它的解。
+q-278 | ch4 | judge | 若向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 线性相关，则它的任意部分组都线性相关。
+q-279 | ch4 | judge | 两个向量组等价的充分必要条件是它们的秩相等。
+q-280 | ch4 | blank | 设 $\boldsymbol{\alpha}=(2,1,-1)^{\mathsf T}$，$\boldsymbol{\beta}=(1,-1,3)^{\mathsf T}$，则 $3\boldsymbol{\alpha}-2\boldsymbol{\beta}=$ ______。
+q-281 | ch4 | blank | 设 $\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,0)^{\mathsf T}$，则这三个向量中线性无关的向量最多有 ______ 个。
+q-282 | ch4 | blank | 向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 的秩，等于它的 ______ 中所含向量的个数。
+q-283 | ch4 | blank | 设 $A$ 为 $m\times n$ 矩阵且 $r(A)=r$，则齐次线性方程组 $A\boldsymbol{x}=0$ 的基础解系含有 ______ 个线性无关的解向量。
+q-284 | ch4 | blank | 在 $R^3$ 中，$W_1=\{(x,y,z)^{\mathsf T}\mid x+y+z=0\}$ 是 $R^3$ 的子空间，而 $W_2=\{(x,y,z)^{\mathsf T}\mid x+y+z=1\}$ 不是子空间。判断 $W_2$ 不是子空间的依据是：$W_2$ 中不含 ______ 向量。
+q-285 | ch4 | blank | 若向量组 $\boldsymbol{\alpha}_1=(1,0,1)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,2)^{\mathsf T}$，$\boldsymbol{\alpha}_4=(1,0,0)^{\mathsf T}$，则这四个向量的极大线性无关组含有的向量个数是 ______。
+q-286 | ch4 | term | 名词解释：**线性相关**（linearly dependent）与**线性无关**（linearly independent）。
+q-287 | ch4 | term | 名词解释：**极大线性无关组**与向量组的**秩**。
+q-288 | ch4 | short | 写出向量组等价的定义，并说明向量组等价与「秩相等」之间的关系。
+q-289 | ch4 | short | 设 $A$ 为 $m\times n$ 矩阵且 $r(A)<n$。说明齐次线性方程组 $A\boldsymbol{x}=0$ 的解的结构：基础解系是什么？通解如何写出？解空间的维数是多少？
+q-290 | ch4 | short | 设非齐次线性方程组 $A\boldsymbol{x}=b$ 有解。说明它的解集的结构：特解与通解的关系是什么？解集是不是线性空间？
+q-291 | ch4 | short | 写出向量空间与子空间的定义，说明 $W$ 是 $V$ 的子空间的判定定理，并解释「$W$ 非空且含零向量」为什么还不够。
+q-292 | ch4 | calc | 判断向量组 $\boldsymbol{\alpha}_1=(1,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(2,2,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,1)^{\mathsf T}$ 是否线性相关；若是，求出一组不全为零的系数 $k_1,k_2,k_3$ 使 $k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+k_3\boldsymbol{\alpha}_3=\boldsymbol{0}$。
+q-293 | ch4 | calc | 求向量组 $\boldsymbol{\alpha}_1=(1,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,2,1)^{\mathsf T}$，$\boldsymbol{\alpha}_4=(2,3,1)^{\mathsf T}$ 的秩，并求出一个极大线性无关组。
+q-294 | ch4 | calc | 判断向量 $\boldsymbol{\beta}=(1,2,3)^{\mathsf T}$ 能否由向量组 $\boldsymbol{\alpha}_1=(1,0,1)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,1)^{\mathsf T}$ 线性表示；若能，求出表示式。
+q-295 | ch4 | calc | 求齐次线性方程组 $\begin{cases}x_1+x_2+x_3=0\\x_1+2x_2+3x_3=0\end{cases}$ 的基础解系，并写出它的通解。
+q-296 | ch4 | calc | 求非齐次线性方程组 $\begin{cases}x_1+x_2+x_3=1\\x_1+2x_2+3x_3=2\end{cases}$ 的通解。
+q-297 | ch4 | calc | 求向量组 $\boldsymbol{\alpha}_1=(1,1,1)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(1,2,4)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(2,3,5)^{\mathsf T}$，$\boldsymbol{\alpha}_4=(1,1,2)^{\mathsf T}$ 的秩，并求出一个极大线性无关组。
+q-298 | ch4 | calc | 在 $R^3$ 中判断下列集合是否为 $R^3$ 的子空间，并说明理由：(1) $W_1=\{(x,y,z)^{\mathsf T}\mid x+y+z=0\}$；(2) $W_2=\{(x,y,z)^{\mathsf T}\mid x+y+z=1\}$；(3) $W_3=\{(x,y,z)^{\mathsf T}\mid x\cdot y=0\}$。
+q-299 | ch4b | single | 两组向量 $\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，$\boldsymbol{\beta}_1=(1,1,0)^{\mathsf T}$，$\boldsymbol{\beta}_2=(1,0,0)^{\mathsf T}$，则向量组 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2$ 与 $\boldsymbol{\beta}_1,\boldsymbol{\beta}_2$
+q-300 | ch4b | single | 设 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 是 $R^n$ 中的两个向量，则 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 线性相关的充分必要条件是
+q-301 | ch4b | single | 设 $A$ 是 $3$ 阶方阵且 $r(A)=2$，则 $A$ 的列向量组 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3$ 的秩是
+q-302 | ch4b | single | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)=n-1$，则齐次线性方程组 $A\boldsymbol{x}=0$ 的基础解系所含向量的个数是
+q-303 | ch4b | single | 已知向量组 $\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,1)^{\mathsf T}$，则向量 $\boldsymbol{\beta}=(2,3,5)^{\mathsf T}$ 可由它们线性表示为
+q-304 | ch4b | single | 设 $A$ 是 $m\times n$ 矩阵，对 $A$ 作一次初等行变换得到矩阵 $B$，则 $B$ 的列向量组与 $A$ 的列向量组
+q-305 | ch4b | single | 考虑向量组 $\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,k)^{\mathsf T}$，则其秩等于 $3$ 的充分必要条件是
+q-306 | ch4b | single | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)=r<n$，非齐次线性方程组 $A\boldsymbol{x}=b$ 有解，则它的解集
+q-307 | ch4b | single | 设向量组 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4$ 的秩为 $4$，记 $\boldsymbol{\beta}_1=\boldsymbol{\alpha}_1+\boldsymbol{\alpha}_2$，$\boldsymbol{\beta}_2=\boldsymbol{\alpha}_2+\boldsymbol{\alpha}_3$，$\boldsymbol{\beta}_3=\boldsymbol{\alpha}_3+\boldsymbol{\alpha}_4$，$\boldsymbol{\beta}_4=\boldsymbol{\alpha}_4+\boldsymbol{\alpha}_1$，则向量组 $\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\boldsymbol{\beta}_3,\boldsymbol{\beta}_4$ 的秩是
+q-308 | ch4b | single | 在 $R^4$ 中，设 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4$ 是四个线性无关的向量，$W_1=L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2)$，$W_2=L(\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4)$（$L(\cdot)$ 表示由这些向量张成的子空间），则 $\dim(W_1\cap W_2)+\dim(W_1+W_2)$ 等于
+q-309 | ch4b | multi | 设 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 是 $R^n$ 中的向量，$k,l$ 是常数。下列等式中恒成立的有
+q-310 | ch4b | multi | 关于向量组的线性相关性，下列结论正确的有
+q-311 | ch4b | multi | 关于向量组的秩，下列说法正确的有
+q-312 | ch4b | multi | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)<n$，关于齐次线性方程组 $A\boldsymbol{x}=0$，下列说法正确的有
+q-313 | ch4b | multi | 设线性方程组 $A\boldsymbol{x}=b$ 与 $C\boldsymbol{x}=d$ 的系数矩阵与增广矩阵分别为 $A,C,(A\mid b),(C\mid d)$，下列说法正确的有
+q-314 | ch4b | multi | 设 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 与 $\boldsymbol{\beta}_1,\dots,\boldsymbol{\beta}_t$ 是 $R^n$ 中的两组向量（$L(\cdot)$ 表示由这些向量张成的子空间）。下列说法正确的有
+q-315 | ch4b | multi | 设 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 是 $R^n$ 中的 $s$ 个向量。下列命题中，与「向量组线性相关」等价的命题有
+q-316 | ch4b | multi | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)=r$。下列说法正确的有
+q-317 | ch4b | multi | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)=r$。关于齐次线性方程组 $A\boldsymbol{x}=0$，下列说法正确的有
+q-318 | ch4b | multi | 设 $V$ 是数域 $K$ 上的向量空间，$W_1,W_2$ 是 $V$ 的两个子空间。下列说法正确的有
+q-319 | ch4b | judge | 若向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_m$ 线性无关，则向量 $\boldsymbol{\beta}$ 可由它们线性表示时，表示系数是唯一的。
+q-320 | ch4b | judge | 含有零向量的向量组一定线性无关。
+q-321 | ch4b | judge | 向量组的秩就是它的极大线性无关组所含向量的个数。
+q-322 | ch4b | judge | 设 $A$ 为 $m\times n$ 矩阵且 $r(A)=r<n$，则非齐次线性方程组 $A\boldsymbol{x}=b$ 的通解中所含自由参数的个数等于 $n-r(A)$。
+q-323 | ch4b | judge | 任意非空集合都是 $R^3$ 的子空间。
+q-324 | ch4b | judge | 若向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 与 $\boldsymbol{\beta}_1,\dots,\boldsymbol{\beta}_t$ 等价，则必有 $s=t$。
+q-325 | ch4b | judge | 把向量组中的某个向量 $\boldsymbol{\beta}$ 替换为 $k\boldsymbol{\beta}$（$k\neq0$），所得向量组与原向量组的线性相关性相同。
+q-326 | ch4b | judge | 若线性方程组 $A\boldsymbol{x}=b$ 有解，则它的任意两个解 $\boldsymbol{x}_1,\boldsymbol{x}_2$ 之和仍是它的解。
+q-327 | ch4b | judge | 设 $W$ 是 $R^4$ 的一个三维子空间，$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4$ 是 $R^4$ 中的向量且都属于 $W$，则这四个向量线性相关。
+q-328 | ch4b | judge | 若矩阵 $A$ 的列向量组线性相关，则 $A$ 的行向量组也线性相关。
+q-329 | ch4b | blank | 设 $\boldsymbol{\alpha}=(1,-1,2,0)^{\mathsf T}$，$\boldsymbol{\beta}=(0,3,-1,1)^{\mathsf T}$，则 $\boldsymbol{\alpha}-2\boldsymbol{\beta}=$ ______。
+q-330 | ch4b | blank | 当向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 线性无关时，方程组 $k_1\boldsymbol{\alpha}_1+\cdots+k_s\boldsymbol{\alpha}_s=\boldsymbol{0}$ 只有 ______ 解。
+q-331 | ch4b | blank | 以向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 为列向量构成的矩阵的秩，就是该向量组的 ______。
+q-332 | ch4b | blank | 设 $\boldsymbol{x}_1,\boldsymbol{x}_2$ 都是线性方程组 $A\boldsymbol{x}=b$ 的解，则 $\boldsymbol{x}_1-\boldsymbol{x}_2$ 一定满足方程 $A\boldsymbol{x}=$ ______。
+q-333 | ch4b | blank | 在 $R^3$ 中，集合 $W=\{(x,y,z)^{\mathsf T}\mid x+y+z=0\}$ 是 $R^3$ 的子空间，因为它是某个 ______ 线性方程组的解集。
+q-334 | ch4b | blank | 若两组向量 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 与 $\boldsymbol{\beta}_1,\dots,\boldsymbol{\beta}_t$ 等价，则它们的秩 ______（填「相等」或「不等」）。
+q-335 | ch4b | blank | 向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 线性相关的充要条件是：存在一组 ______ 的常数 $k_1,\dots,k_s$，使 $k_1\boldsymbol{\alpha}_1+\cdots+k_s\boldsymbol{\alpha}_s=\boldsymbol{0}$。
+q-336 | ch4b | blank | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)<n$，非齐次方程组 $A\boldsymbol{x}=b$ 有解，则它的解集是零空间 $N(A)$ 的一个 ______。
+q-337 | ch4b | blank | 设 $A$ 是 $m\times n$ 矩阵且 $r(A)=r$。方程组 $A\boldsymbol{x}=0$ 的解空间的维数与 $A$ 的列空间的维数之和等于 ______。
+q-338 | ch4b | blank | 在 $R^4$ 中取四个线性无关的向量 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4$，记 $W_1=L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2)$，$W_2=L(\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4)$，则 $\dim(W_1\cap W_2)=$ ______。
+q-339 | ch4b | short | 说明「向量的线性组合」「线性表示」与「向量组的等价」这三个概念之间的关系，并写出向量组等价的两个方向上的要求。
+q-340 | ch4b | short | 证明：设向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 线性无关，则它的任意部分组（例如 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_3$）也线性无关。
+q-341 | ch4b | short | 写出向量组的秩与极大线性无关组的定义，并说明如何用初等行变换求出一个向量组的秩和一个极大线性无关组。
+q-342 | ch4b | short | 说明线性方程组 $A\boldsymbol{x}=b$ 的解的个数如何由 $r(A)$ 与 $r(A\mid b)$ 决定，并说明有无穷多解时通解中自由参数的个数。
+q-343 | ch4b | short | 说明如何求向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$ 张成的子空间 $L(\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s)$ 的一组基与维数，并说明该子空间为什么是 $R^n$ 的子空间。
+q-344 | ch4b | short | 说明向量 $\boldsymbol{\beta}$ 由向量组 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_m$ 线性表示时，表示系数的个数与向量组线性相关性之间的关系，并举例说明。
+q-345 | ch4b | short | 给出判定一组向量线性相关或线性无关的两种常用方法，并说明每种方法的依据、适用场合以及各自的易错点。
+q-346 | ch4b | short | 说明含参线性方程组解的讨论方法：如何按参数取值把方程组分情况讨论，每种情形下解的个数与通解的写法如何确定？
+q-347 | ch4b | short | 证明：设 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3$ 线性无关，记 $\boldsymbol{\beta}_1=\boldsymbol{\alpha}_1+\boldsymbol{\alpha}_2+\boldsymbol{\alpha}_3$，$\boldsymbol{\beta}_2=\boldsymbol{\alpha}_1+3\boldsymbol{\alpha}_2+5\boldsymbol{\alpha}_3$，$\boldsymbol{\beta}_3=\boldsymbol{\alpha}_1+9\boldsymbol{\alpha}_2+25\boldsymbol{\alpha}_3$，则 $\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\boldsymbol{\beta}_3$ 线性无关。
+q-348 | ch4b | short | 证明：设 $V$ 是数域 $K$ 上的向量空间，$W$ 是 $V$ 的非空子集，则 $W$ 是 $V$ 的子空间的充分必要条件是对向量的加法与数乘封闭；并说明这一判据为什么不能只用「含零向量」来代替。
+q-349 | ch4b | calc | 设 $\boldsymbol{\alpha}_1=(1,2,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,0,1)^{\mathsf T}$，求向量 $\boldsymbol{\beta}=(2,3,3)^{\mathsf T}$ 由它们线性表示的表示式，并说明该表示式是否唯一。
+q-350 | ch4b | calc | 设 $k$ 为常数，$\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(1,1,k)^{\mathsf T}$。讨论这三个向量线性相关、线性无关的条件；在线性相关时求出一组不全为零的系数。
+q-351 | ch4b | calc | 求向量组 $\boldsymbol{\alpha}_1=(2,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(1,0,1)^{\mathsf T}$，$\boldsymbol{\alpha}_3=(3,1,1)^{\mathsf T}$，$\boldsymbol{\alpha}_4=(1,1,-1)^{\mathsf T}$ 的秩，求出一个极大线性无关组，并把其余向量用它线性表示。
+q-352 | ch4b | calc | 讨论参数 $a$ 的取值，使方程组 $\begin{cases}x_1+x_2+x_3=1\\2x_1+2x_2+a x_3=3\end{cases}$ 分别有唯一解、无解或无穷多解，并在有解时写出通解。
+q-353 | ch4b | calc | 取 $\boldsymbol{\alpha}_1=(1,1,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,1)^{\mathsf T}$。求向量组 $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2$ 张成的子空间 $L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2)$ 的一组基与维数，并说明 $L(\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2)$ 是 $R^3$ 的子空间。
+q-354 | ch4b | calc | 设向量组 $\boldsymbol{\alpha}_1=(1,0,0)^{\mathsf T}$，$\boldsymbol{\alpha}_2=(0,1,0)^{\mathsf T}$ 与向量组 $\boldsymbol{\beta}_1=(1,1,0)^{\mathsf T}$，$\boldsymbol{\beta}_2=(1,-1,0)^{\mathsf T}$。判断这两组向量是否等价，并写出两个方向的线性表示式。
+q-355 | ch4b | calc | 求线性方程组 $\begin{cases}x_1+x_2=3\\x_1-x_2=1\end{cases}$ 与 $\begin{cases}x_1+2x_2=4\\2x_1-x_2=3\end{cases}$ 的公共解，并说明公共解与「联立求解」的关系。
+q-356 | ch4b | calc | 设 $A$ 是以 $s$ 个向量 $\boldsymbol{\alpha}_1,\dots,\boldsymbol{\alpha}_s$（取自 $R^n$）为列构成的矩阵。证明下列三个命题等价：(1) 向量组线性无关；(2) $r(A)=s$；(3) 方程组 $A\boldsymbol{x}=\boldsymbol{0}$ 只有零解。
+q-357 | ch4b | calc | 设线性方程组 $A\boldsymbol{x}=b$ 与 $C\boldsymbol{x}=d$ 同解。证明：必有 $r(A)=r(C)$ 且 $r(A\mid b)=r(C\mid d)$；并举例说明这两个等式成立还不足以保证两个方程组同解。
+q-358 | ch4b | calc | 在 $R^3$ 中，设 $a$ 为常数。判断下列集合是否为 $R^3$ 的子空间，并说明理由：(1) $W_1=\{(x,y,z)^{\mathsf T}\mid x+a y-z=0\}$；(2) $W_2=\{(x,y,z)^{\mathsf T}\mid x+a y-z=1\}$；(3) $W_3=\{(x,y,z)^{\mathsf T}\mid x^{2}+y^{2}+z^{2}=1\}$。
+q-359 | ch5 | single | 设 $A=\begin{pmatrix}1&2\\0&3\end{pmatrix}$，则 $A$ 的特征值为
+q-360 | ch5 | single | 设 $\alpha=(1,1,0)^{\mathsf T}$，$\beta=(1,0,1)^{\mathsf T}$，则 $\alpha$ 与 $\beta$ 的夹角 $\theta$ 为
+q-361 | ch5 | single | 用**配方法**把二次型 $f(x_1,x_2)=x_1^2-2x_1x_2+3x_2^2$ 化为标准形，所得结果为
+q-362 | ch5 | single | 设 $A=\begin{pmatrix}1&1&1\\1&1&1\\1&1&1\end{pmatrix}$，则 $A$ 的特征值及可对角化性为
+q-363 | ch5 | single | 设二次型 $f(x)=x^{\mathsf T}Ax$ 的矩阵为 $A=\begin{pmatrix}1&1&0\\1&1&0\\0&0&-1\end{pmatrix}$，则下列结论**正确**的是
+q-364 | ch5 | multi | 关于实向量的内积与正交，下列说法正确的有
+q-365 | ch5 | multi | 设 $A$ 为 $n$ 阶方阵，关于 $A$ 的特征值与特征向量，下列说法正确的有
+q-366 | ch5 | multi | 设 $A,B$ 均为 $n$ 阶方阵，且 $B=P^{-1}AP$（$P$ 可逆）。则下列结论正确的有
+q-367 | ch5 | multi | 设 $A$ 为 $n$ 阶实对称矩阵，关于 $A$ 的正定性，下列结论正确的有
+q-368 | ch5 | multi | 设 $A$ 为 $n$ 阶实对称矩阵，下列结论正确的有
+q-369 | ch5 | multi | 关于二次型、合同变换与规范形，下列说法正确的有
+q-370 | ch5 | judge | 若 $\lambda_0$ 是方阵 $A$ 的特征值，则齐次线性方程组 $(A-\lambda_0E)x=0$ 必有非零解。
+q-371 | ch5 | judge | 任意两个非零向量 $\alpha,\beta$ 线性相关，当且仅当 $\alpha\perp\beta$。
+q-372 | ch5 | judge | 设 $A$ 为实对称矩阵，则 $A$ 正定的充要条件是 $A$ 的各阶顺序主子式都大于零。
+q-373 | ch5 | judge | 实对称矩阵 $A$ 的任意两个特征向量都相互正交。
+q-374 | ch5 | blank | 设 $\alpha=(1,2,2)^{\mathsf T}$，则 $\|\alpha\|=$ ______ 。
+q-375 | ch5 | blank | 设 $A=\begin{pmatrix}1&1\\0&2\end{pmatrix}$，则 $A$ 的两个特征值中**较大**的那个是 ______ 。
+q-376 | ch5 | blank | 二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2-2x_1x_2$ 的矩阵的**秩**为 ______ 。
+q-377 | ch5 | blank | 设 $A=\begin{pmatrix}2&1\\1&2\end{pmatrix}$，则 $A$ 的二阶顺序主子式为 ______ 。
+q-378 | ch5 | blank | 用配方法把二次型 $f(x_1,x_2)=x_1^2+2x_1x_2+3x_2^2$ 化为标准形 $y_1^2+k\,y_2^2$，则 $k=$ ______ 。
+q-379 | ch5 | blank | 设实对称矩阵 $A=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix}$，则 $A$ 的三个特征值（从小到大排列，用逗号分隔）是 ______ 。
+q-380 | ch5 | term | 名词解释：**内积**与**向量的长度**（数量积与模）。
+q-381 | ch5 | term | 名词解释：**特征值**与**特征向量**。
+q-382 | ch5 | term | 名词解释：**正定二次型**与**正定矩阵**。
+q-383 | ch5 | short | 写出施密特正交化方法的完整步骤，并说明它的作用。
+q-384 | ch5 | short | 写出方阵 $A$ 可相似对角化的充要条件，并给出一个不可对角化的矩阵例子。
+q-385 | ch5 | short | 证明：实对称矩阵属于**不同**特征值的两个特征向量相互正交，并说明该结论的适用范围。
+q-386 | ch5 | short | 设 $A$ 为 $n$ 阶实对称矩阵，二次型 $f(x)=x^{\mathsf T}Ax$ 的秩为 $r$，正惯性指数为 $p$，负惯性指数为 $q$。① 说明 $r=p+q$ 的理由；② 写出 $f$ 的标准形与规范形；③ 说明为什么只给出秩不足以判别两个二次型是否合同。
+q-387 | ch5 | calc | 求方阵 $A=\begin{pmatrix}1&2\\0&3\end{pmatrix}$ 的特征值与对应的特征向量。
+q-388 | ch5 | calc | 用施密特正交化方法把向量组 $\alpha_1=(1,1,0)^{\mathsf T}$，$\alpha_2=(1,0,1)^{\mathsf T}$，$\alpha_3=(1,1,1)^{\mathsf T}$ 化为标准正交向量组。
+q-389 | ch5 | calc | 设 $A=\begin{pmatrix}1&4\\0&3\end{pmatrix}$，求可逆矩阵 $P$，使 $P^{-1}AP=\mathrm{diag}(1,3)$。
+q-390 | ch5 | calc | 设实对称矩阵 $A=\begin{pmatrix}2&1\\1&2\end{pmatrix}$，用正交变换把 $A$ 化为标准形，并求正交矩阵 $Q$。
+q-391 | ch5 | calc | 求二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2+2x_1x_2-2x_2x_3$ 的矩阵 $A$，并求 $|A|$。
+q-392 | ch5 | calc | 用配方法把二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2+2x_1x_2-2x_2x_3$ 化为标准形，并写出所作的可逆线性变换。
+q-393 | ch5 | calc | 判断二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2-2x_1x_2+2x_2x_3-2x_1x_3$ 是否正定，并说明理由。
+q-394 | ch5 | calc | 设实对称矩阵 $A=\begin{pmatrix}2&1&1\\1&2&1\\1&1&2\end{pmatrix}$，求它的特征值与一组标准正交特征向量，并求正交矩阵 $Q$ 使 $Q^{\mathsf T}AQ$ 为对角阵。
+q-395 | ch5b | single | 设 $\alpha=(1,0,-1)^{\mathsf T}$，$\beta=(1,1,0)^{\mathsf T}$，则 $(\alpha,\beta)$ 的值为
+q-396 | ch5b | single | 设 $A=\begin{pmatrix}2&0\\0&3\end{pmatrix}$，则 $A+2E$ 的两个特征值是
+q-397 | ch5b | single | 设 $A,B,C$ 均为 $n$ 阶方阵，若 $A\sim B$ 且 $B\sim C$，则下列结论**正确**的是
+q-398 | ch5b | single | 二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2+2x_1x_3$ 的矩阵是
+q-399 | ch5b | single | 关于正定二次型的判别，下列说法**正确**的是
+q-400 | ch5b | single | 设 $A=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$，则 $A$ 的特征值是
+q-401 | ch5b | single | 设 $\lambda_1,\lambda_2$ 是方阵 $A$ 的两个不同的特征值，则下列结论**正确**的是
+q-402 | ch5b | single | 设 $A=\begin{pmatrix}1&2\\0&3\end{pmatrix}$，则与 $A$ 相似的矩阵是
+q-403 | ch5b | single | 设 $A$ 为 $n$ 阶实对称矩阵，则下列结论**一定**成立的是
+q-404 | ch5b | single | 关于二次型的标准形与规范形，下列说法**正确**的是
+q-405 | ch5b | single | 设 $A$ 为 $n$ 阶实对称矩阵且 $A^2=E$，则下列结论**一定**成立的是
+q-406 | ch5b | single | 设 $f(x,y,z)=x^2+4y^2+z^2+xz+2txy+2tyz$，则 $f$ 正定的充要条件是
+q-407 | ch5b | multi | 关于正交向量组，下列说法正确的有
+q-408 | ch5b | multi | 设 $A$ 为 $n$ 阶方阵，$\lambda$ 是 $A$ 的一个特征值，则下列结论正确的有
+q-409 | ch5b | multi | 关于二次型与其矩阵的对应关系，下列说法正确的有
+q-410 | ch5b | multi | 设 $A$ 为 $n$ 阶实对称矩阵，$f(x)=x^{\mathsf T}Ax$，关于 $f$ 的正定性，下列说法正确的有
+q-411 | ch5b | multi | 设 $A$ 为 $n$ 阶可逆方阵，$\lambda$ 是 $A$ 的一个特征值，则下列结论正确的有
+q-412 | ch5b | multi | 设 $A$ 为 $n$ 阶方阵，关于 $A$ 的相似对角化，下列说法正确的有
+q-413 | ch5b | multi | 设 $A$ 为 $n$ 阶实对称矩阵，关于 $A$ 的正交对角化，下列说法正确的有
+q-414 | ch5b | multi | 关于向量的内积与长度，下列说法正确的有
+q-415 | ch5b | multi | 设 $f(x)=x^{\mathsf T}Ax$，$A$ 为 $n$ 阶实对称矩阵，关于 $f$ 的秩与惯性指数，下列说法正确的有
+q-416 | ch5b | multi | 关于用配方法把二次型化为标准形，下列说法正确的有
+q-417 | ch5b | multi | 设 $A$ 为 $n$ 阶可逆矩阵，$P$ 为 $n$ 阶可逆矩阵，则下列结论正确的有
+q-418 | ch5b | judge | 若实向量 $\alpha,\beta$ 都非零且 $\alpha\perp\beta$，则它们的夹角为 $\dfrac{\pi}{2}$。
+q-419 | ch5b | judge | 若 $\lambda_1,\lambda_2$ 是方阵 $A$ 的两个不同的特征值，则它们对应的特征向量线性无关。
+q-420 | ch5b | judge | 相似矩阵 $A,B$ 有相同的特征多项式，故它们有相同的特征向量。
+q-421 | ch5b | judge | 二次型 $f(x_1,x_2)=2x_1x_2$ 的矩阵是 $\begin{pmatrix}0&2\\2&0\end{pmatrix}$。
+q-422 | ch5b | judge | 用配方法把二次型化为标准形时，所作的线性变换一定是可逆的。
+q-423 | ch5b | judge | 正定二次型 $f$ 对一切非零向量 $x$ 都有 $f(x)>0$，且 $f(0)=0$。
+q-424 | ch5b | judge | 若方阵 $A$ 的特征值都是实数，则 $A$ 一定是实对称矩阵。
+q-425 | ch5b | judge | 实对称矩阵 $A$ 总能找出一组两两正交的特征向量，它们构成 $\mathbf R^n$ 的一组标准正交基。
+q-426 | ch5b | judge | 若 $A$ 与 $B$ 相似，则 $A$ 与 $B$ 的特征向量也相同。
+q-427 | ch5b | judge | 两个二次型合同，当且仅当它们的矩阵有相同的秩。
+q-428 | ch5b | judge | 设 $A$ 为实对称矩阵，$Q$ 为正交矩阵，则 $Q^{\mathsf T}AQ$ 与 $A$ 有相同的特征值。
+q-429 | ch5b | blank | 设 $\alpha=(1,1,0)^{\mathsf T}$，$\beta=(1,-1,0)^{\mathsf T}$，则 $(\alpha,\beta)=$ ______ 。
+q-430 | ch5b | blank | 设 $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$，则 $A$ 的两个特征值之积为 ______ 。
+q-431 | ch5b | blank | 设 $A=\begin{pmatrix}2&0\\0&3\end{pmatrix}$，则 $A^{-1}$ 的最大特征值是 ______ 。
+q-432 | ch5b | blank | 二次型 $f(x_1,x_2,x_3)=2x_1^2+3x_2^2+4x_3^2+4x_1x_2$ 的矩阵的**秩**是 ______ 。
+q-433 | ch5b | blank | 用配方法把 $f(x_1,x_2)=x_1^2+4x_1x_2+8x_2^2$ 化为标准形，则所得标准形是 ______ 。
+q-434 | ch5b | blank | 设 $A=\begin{pmatrix}1&1\\1&1\end{pmatrix}$，则二次型 $f(x)=x^{\mathsf T}Ax$ 是 ______ 二次型（填「半正定」）。
+q-435 | ch5b | blank | 设 $\alpha=(2,2,2)^{\mathsf T}$，$\beta=(1,1,0)^{\mathsf T}$，则 $\alpha$ 在 $\beta$ 上的投影为 ______ 。
+q-436 | ch5b | blank | 设 $A=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$，则 $A$ 的特征多项式 $|\lambda E-A|$ 为 ______ 。
+q-437 | ch5b | blank | 设实对称矩阵 $A=\begin{pmatrix}2&0\\0&2\end{pmatrix}$，则 $A$ 的属于特征值 $2$ 的特征子空间的维数为 ______ 。
+q-438 | ch5b | blank | 设 $A=\begin{pmatrix}0&1\\-1&0\end{pmatrix}$，则 $A^2=$ ______ 。
+q-439 | ch5b | blank | 二次型 $f(x_1,x_2)=x_1^2+2x_2^2+2x_1x_2$ 的矩阵为 $A$，则 $f$ 的正惯性指数为 ______ 。
+q-440 | ch5b | blank | 设 $f(x,y,z)=x^2+4y^2+z^2+xz+2txy+2tyz$，则 $f$ 正定的充要条件是 $t^2<$ ______ 。
+q-441 | ch5b | short | 简述特征值与特征向量的定义，并说明特征向量必须取非零向量的理由。
+q-442 | ch5b | short | 简述内积与正交的定义，并说明两个非零向量正交与它们线性无关之间的关系。
+q-443 | ch5b | short | 写出二次型的矩阵、标准形与规范形的定义，并说明三者之间的区别。
+q-444 | ch5b | short | 写出正定二次型的定义与两个常用判别法，并说明各判别法的适用条件。
+q-445 | ch5b | short | 说明相似矩阵的定义，并列出相似矩阵保持不变的基本量。
+q-446 | ch5b | short | 说明实对称矩阵对角化定理的内容，并写出正交矩阵的定义与基本性质。
+q-447 | ch5b | short | 写出用配方法把二次型化为标准形的一般步骤，并说明每一步的依据。
+q-448 | ch5b | short | 证明：属于不同特征值的特征向量线性无关，并说明该结论的适用范围。
+q-449 | ch5b | short | 说明实对称矩阵一定可以相似对角化的原因（重数与几何重数的关系）。
+q-450 | ch5b | short | 叙述惯性定理的内容，并说明它为什么能保证二次型规范形的唯一性。
+q-451 | ch5b | short | 说明正定二次型的主要性质：可加性、$A=B^{\mathsf T}B$ 的分解，以及 $A,B$ 正定推出 $A+B$ 正定的证明思路。
+q-452 | ch5b | short | 说明实对称矩阵正交对角化过程中重特征值的处理办法，并证明 $Q^{\mathsf T}AQ$ 的对角元就是 $A$ 的特征值。
+q-453 | ch5b | calc | 用施密特正交化方法把向量组 $\alpha_1=(1,1,1)^{\mathsf T}$，$\alpha_2=(1,0,-1)^{\mathsf T}$ 化为标准正交向量组。
+q-454 | ch5b | calc | 求方阵 $A=\begin{pmatrix}3&1\\1&3\end{pmatrix}$ 的特征值与对应的特征向量。
+q-455 | ch5b | calc | 求二次型 $f(x_1,x_2)=x_1^2+4x_2^2+4x_1x_2$ 的矩阵、秩与惯性指数。
+q-456 | ch5b | calc | 设 $A=\begin{pmatrix}1&1&0\\0&2&1\\0&0&3\end{pmatrix}$，求可逆矩阵 $P$，使 $P^{-1}AP=\mathrm{diag}(1,2,3)$。
+q-457 | ch5b | calc | 用配方法把二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2-2x_1x_3$ 化为标准形，并写出所作的可逆线性变换。
+q-458 | ch5b | calc | 判断二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+3x_3^2+4x_1x_3$ 是否正定，并说明理由。
+q-459 | ch5b | calc | 设 $A=\begin{pmatrix}1&2\\2&1\end{pmatrix}$，求 $A$ 的特征值、求可逆矩阵 $P$ 使 $P^{-1}AP$ 为对角阵，并写出 $A^n$ 的表达式。
+q-460 | ch5b | calc | 设实对称矩阵 $A=\begin{pmatrix}2&0&0\\0&3&1\\0&1&3\end{pmatrix}$，求它的特征值与一组标准正交特征向量，并求正交矩阵 $Q$ 使 $Q^{\mathsf T}AQ$ 为对角阵。
+q-461 | ch5b | calc | 求二次型 $f(x_1,x_2,x_3)=x_1^2+x_2^2+x_3^2-2x_1x_2-2x_2x_3$ 的矩阵、特征值、惯性指数与规范形。
+q-462 | ch5b | calc | 设实对称矩阵 $A=\begin{pmatrix}2&2&0\\2&2&0\\0&0&1\end{pmatrix}$，求它的特征值与一组标准正交特征向量，并求正交矩阵 $Q$ 使 $Q^{\mathsf T}AQ$ 为对角阵。
+q-463 | ch5b | calc | 用配方法把二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2+5x_3^2+2x_1x_2+2x_1x_3+6x_2x_3$ 化为标准形，并写出所作的可逆线性变换 $x=Cy$ 的矩阵 $C$。
+q-464 | ch5b | calc | 设 $f(x,y,z)=x^2+4y^2+z^2+xz+2txy+2tyz$，判断 $f$ 正定的充要条件，并用顺序主子式给出完整推导。
+q-465 | ch6 | single | 设 $V$ 是数域 $F$ 上的线性空间。下列命题中，必为真的是
+q-466 | ch6 | multi | 设 $T$ 是线性空间 $V$ 到 $W$ 的一个映射。关于 $T$ 是否为线性变换，下列说法正确的有
+q-467 | ch6 | judge | 设 $\alpha_1,\dots,\alpha_n$ 是线性空间 $V$ 的一组向量。则 $\alpha_1,\dots,\alpha_n$ 是 $V$ 的一组基，当且仅当它们线性无关且能张成 $V$。
+q-468 | ch6 | blank | 设 $\alpha_1,\alpha_2,\alpha_3$ 是 $\mathbb{R}^3$ 的一组基，则在基 $\alpha_1,\alpha_2,\alpha_3$ 下，向量 $\boldsymbol{\beta}=\alpha_1+2\alpha_2+3\alpha_3$ 的坐标是 ______。
+q-469 | ch6 | short | 设 $\alpha_1,\alpha_2,\alpha_3$ 与 $\beta_1,\beta_2,\beta_3$ 是三维线性空间 $V$ 的两组基。说明基变换矩阵与坐标变换矩阵之间的关系。
+q-470 | ch6 | calc | 设 $T$ 是 $\mathbb{R}^3$ 上的线性变换，已知 $$T(\boldsymbol{e}_1)=\begin{pmatrix}2\\0\\1\end{pmatrix},\quad T(\boldsymbol{e}_2)=\begin{pmatrix}0\\1\\1\end{pmatrix},\quad T(\boldsymbol{e}_3)=\begin{pmatrix}1\\1\\0\end{pmatrix},$$ 其中 $\boldsymbol{e}_1,\boldsymbol{e}_2,\boldsymbol{e}_3$ 为 $\mathbb{R}^3$ 的标准基。求 $T$ 的矩阵表示式 $A$；并判断 $T$ 是否为可逆变换，若可逆求出 $T^{-1}$ 的矩阵表示式。
+q-471 | ch6b | single | 设 $V$ 是数域 $F$ 上的线性空间，下列集合按通常运算构成线性空间的是
+q-472 | ch6b | single | 设 $V$ 是 $3$ 维线性空间，则 $V$ 的任意一组基含有的向量个数是
+q-473 | ch6b | single | 设 $T:\mathbb{R}^2\to\mathbb{R}^2$，$T(x,y)=(x+y,\ x-y)$，则 $T$ 是
+q-474 | ch6b | single | 设 $\alpha_1,\alpha_2,\alpha_3$ 是 $V$ 的一组基，$\beta_1,\beta_2,\beta_3$ 是 $V$ 的另一组基，过渡矩阵 $P$ 的第 $1$ 列是
+q-475 | ch6b | single | 设 $V$ 与 $W$ 的维数分别为 $2$ 与 $3$，$T$ 是从 $V$ 到 $W$ 的线性变换。$T$ 关于所选基的矩阵是
+q-476 | ch6b | multi | 关于线性空间的性质，下列正确的有
+q-477 | ch6b | multi | 设 $V$ 是 $n$ 维线性空间，下列说法正确的有
+q-478 | ch6b | multi | 设 $T$ 是线性空间 $V$ 到 $W$ 的线性变换，下列结论正确的有
+q-479 | ch6b | multi | 设 $T:V\to W$ 线性，$\dim V=3$，$\dim W=3$，$T$ 关于所选基的矩阵为 $A$，下列说法正确的有
+q-480 | ch6b | multi | 设 $\alpha$ 与 $\beta$ 是线性空间 $V$ 的两组基，过渡矩阵 $P$ 的各列由 $\beta$ 中向量在 $\alpha$ 下的坐标拼成。下列说法正确的有
+q-481 | ch6b | judge | 平凡线性空间 $\{\boldsymbol{0}\}$ 按通常运算构成线性空间。
+q-482 | ch6b | judge | 设 $V$ 是 $n$ 维线性空间，则 $V$ 中任意 $n$ 个向量都构成 $V$ 的一组基。
+q-483 | ch6b | judge | 零变换 $T(\alpha)=\boldsymbol{0}$ 是线性变换。
+q-484 | ch6b | judge | 设 $V$ 是 $n$ 维线性空间，$\alpha_1,\dots,\alpha_n$ 是 $V$ 中 $n$ 个线性无关的向量，则 $\alpha_1,\dots,\alpha_n$ 是 $V$ 的一组基。
+q-485 | ch6b | judge | 设 $T:V\to W$ 线性且 $\dim V=\dim W=n$，则 $T$ 可逆当且仅当 $T$ 为一一映射。
+q-486 | ch6b | blank | 实数域上的 $\mathbb{R}^3$ 按通常运算作为线性空间，其维数是
+q-487 | ch6b | blank | 线性空间 $V$ 中零向量的个数是
+q-488 | ch6b | blank | 设 $T:V\to W$ 是线性变换且 $T$ 为一一映射，则 $T$ 的核空间 $\ker T$ 的维数是
+q-489 | ch6b | blank | 设 $V$ 是 $4$ 维线性空间，$T:V\to W$ 线性且 $T$ 的秩为 $2$，则核空间 $\ker T$ 的维数是
+q-490 | ch6b | blank | 在线性空间 $V$ 中，设 $\alpha_1,\alpha_2,\alpha_3$ 是一组基，$\beta_1=\alpha_1,\ \beta_2=\alpha_1+\alpha_2,\ \beta_3=\alpha_1+\alpha_3$ 也是一组基。过渡矩阵 $P$（列向量为 $\beta_j$ 在基 $\alpha$ 下的坐标）的行列式 $|P|$ 是
+q-491 | ch6b | short | 简述线性空间的定义要点（数域、集合、运算与公理）。
+q-492 | ch6b | short | 写出向量组成为线性空间一组基的等价刻画，并说明维数为什么与基的选取无关。
+q-493 | ch6b | short | 写出映射 $T:V\to W$ 成为线性变换的充要条件，并据此证明 $T(\boldsymbol{0})=\boldsymbol{0}$ 与 $T(-\alpha)=-T(\alpha)$。
+q-494 | ch6b | short | 写出过渡矩阵 $P$ 的定义与坐标变换公式，并说明 $P$ 可逆的原因。
+q-495 | ch6b | short | 说明线性变换矩阵表示式的构造方法，以及如何由矩阵求出核空间与像空间的维数。
+q-496 | ch6b | calc | 设 $W$ 是 $\mathbb{R}^3$ 的一个子空间，$W=\operatorname{span}\{(1,1,0)^T,\ (0,1,1)^T\}$。求 $\dim W$ 与 $W$ 的一组基。
+q-497 | ch6b | calc | 在 $\mathbb{R}^2$ 中取两组基 $\alpha=(\boldsymbol{e}_1,\boldsymbol{e}_2)$ 与 $\beta=((1,1)^T,\ (0,1)^T)$。求从基 $\beta$ 到基 $\alpha$ 的过渡矩阵 $P$ 与 $|P|$。
+q-498 | ch6b | calc | 设 $T:\mathbb{R}^3\to\mathbb{R}^2$，$T(x,y,z)=(x+2y,\ y+z)$。求 $T$ 关于自然基的矩阵 $A$，并求 $A$ 的秩与像空间 $\operatorname{im}T$ 的维数。
+q-499 | ch6b | calc | 设 $T:\mathbb{R}^4\to\mathbb{R}^3$ 的矩阵为 $A=\begin{pmatrix}1&1&0&0\\2&2&0&0\\0&0&0&1\end{pmatrix}$。求 $T$ 的秩、$\dim\ker T$ 与 $\dim\operatorname{im}T$。
+q-500 | ch6b | calc | 设 $\alpha=(\alpha_1,\alpha_2,\alpha_3)$ 是线性空间 $V$ 的一组基，$\beta=(\alpha_1+\alpha_2,\ \alpha_2+\alpha_3,\ \alpha_3)$ 也是 $V$ 的一组基。求从基 $\beta$ 到基 $\alpha$ 的过渡矩阵 $P$，并求向量 $v=\alpha_1+2\alpha_2+3\alpha_3$ 在基 $\beta$ 下的坐标。

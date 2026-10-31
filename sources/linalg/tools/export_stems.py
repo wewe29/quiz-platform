@@ -40,13 +40,6 @@ ORDER = ["ch1", "ch1b", "ch2", "ch2b", "ch3", "ch3b",
          "ch4", "ch4b", "ch5", "ch5b", "ch6", "ch6b"]
 
 
-def render(qs):
-    lines = []
-    for q in qs:
-        stem = (q.get("stem") or "").strip().replace("\r", " ").replace("\n", " ")
-        lines.append("%s | %s | %s | %s" % (q["id"], q.get("type", ""), stem))
-
-
 def collect():
     """按 ORDER 逐个导入模块，返回 (模块名, 题目列表) 序列。
 

@@ -3,3 +3,10 @@ __pycache__/
 /dist/
 platform-dist/
 .build-tmp/
+
+# 学科目录里的「单文件版成品」是 build_quiz.py 的**构建产物**，不是源码。
+# 2026-10-31 实测的坑：仓库里冻着一份 10-30 的旧成品，而 diff_bank.py
+# 兜底按「tools 的上一级」找成品、只认 QUIZ_HTML 环境变量——平台构建从不设它，
+# 于是「源码 ↔ 成品逐字段一致」这道门禁长期拿旧成品做比对，形同虚设。
+# 门禁已改为显式传 QUIZ_HTML（见 tools/update_site.py 的 GATES），产物不再入库。
+sources/*/01《线性代数》题库刷题网页.html

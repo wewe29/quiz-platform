@@ -14,6 +14,10 @@
     S6  客观题答案键 ↔ 解析自洽（audit_choice.check）
     S7  主观题结构（audit_open.check）
     S8  LaTeX 转义扫描（scan_escapes，致命级）
+    S9  客观题答案键 ↔ 解析**数值**一致（audit_value.check）——补 S6 的盲区：
+        S6 只认「解析里点名字母」，而实测 250 道客观题里只有 44 道点了名，
+        其余 206 道在字母规则下无保护（q-039 就漏在这里：答案键 B，
+        解析自己算的是 A）。
 退出码非 0 即存在 FAIL，扩写未通过。
 
 关于「配额」的两处口径：
@@ -154,6 +158,11 @@ def main():
         for row, col, body in segs:
             for idx, level in find_issues(body):
                 err.append("S8 %s:%d 转义问题[%s] …%s…" % (name, row, level, body[max(0, idx - 10):idx + 16]))
+
+        # S9 答案键 ↔ 解析数值一致性（S6 只认字母点名，这里补数值这条线）
+        from audit_value import check as check_value
+        for p in check_value(qs):
+            err.append("S9 %s" % p)
 
         for w in warn:
             print("  [warn] %s" % w)

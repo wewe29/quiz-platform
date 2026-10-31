@@ -1,0 +1,24 @@
+# 换行符：仓库内一律 LF，工作区 checkout 也是 LF。
+#
+# 为什么必须钉死（2026-10-31 实测）：
+#   本机 Git 的 core.autocrlf=true，工作区文件会在下次 checkout 被改成 CRLF；
+#   而 GitHub Pages 直接服务仓库 blob（LF）。一旦工作区被转成 CRLF，
+#   本机构建的 dist/ 字节就与线上不一致——而页面照跑，肉眼完全看不出来。
+#   单文件版仓已经为同一件事付过一次代价（线上多出 1706 字节）。
+#
+# 语义：
+#   text=auto  → 让 Git 自己判定文本/二进制，PNG、woff2 等二进制文件不受影响
+#   eol=lf     → 文本文件在工作区与仓库里都是 LF，与 Pages 服务的内容逐字节一致
+* text=auto eol=lf
+
+# 二进制资源明确豁免（避免任何换行转换）
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff2 binary
+*.woff binary
+*.ttf binary
+*.pdf binary
+*.zip binary
