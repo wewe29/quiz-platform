@@ -41,8 +41,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 727
+   "idx": 744
   },
   {
    "id": "ky2-2019-13-4a110d",
@@ -84,8 +85,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 728
+   "idx": 745
   },
   {
    "id": "ky-2012-12-fa2429",
@@ -126,8 +128,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 729
+   "idx": 746
   },
   {
    "id": "ky-2019-12-852f72",
@@ -168,8 +171,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 730
+   "idx": 747
   },
   {
    "id": "c10-t1",
@@ -219,8 +223,9 @@
     "概念",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 731
+   "idx": 748
   },
   {
    "id": "c10-t2",
@@ -274,8 +279,9 @@
     "简答",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 732
+   "idx": 749
   },
   {
    "id": "c10-c1",
@@ -334,6 +340,7 @@
     "二次积分",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -341,7 +348,7 @@
      "expected": "1/3"
     }
    ],
-   "idx": 733
+   "idx": 750
   },
   {
    "id": "c10-c2",
@@ -400,6 +407,7 @@
     "极坐标",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -407,7 +415,73 @@
      "expected": "1/8"
     }
    ],
-   "idx": 734
+   "idx": 751
+  },
+  {
+   "id": "q-193",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.2 二重积分的计算法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "计算 $\\displaystyle\\iint_D xy\\,\\mathrm{d}\\sigma$，其中 $D$ 由 $y=x$ 与 $y=x^{2}$ 围成。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "两曲线交点：$(0,0)$ 与 $(1,1)$。在 $D$ 内 $x\\ge x^{2}$（$0\\le x\\le1$），X 型区域：\n$$\\int_0^1\\mathrm{d}x\\int_{x^{2}}^{x}xy\\,\\mathrm{d}y=\\int_0^1 x\\cdot\\frac{y^{2}}{2}\\Big|_{x^{2}}^{x}\\mathrm{d}x=\\frac12\\int_0^1(x^{3}-x^{5})\\,\\mathrm{d}x=\\frac12\\left(\\frac14-\\frac16\\right)=\\boxed{\\frac{1}{24}}.$$",
+   "points": [
+    {
+     "text": "求交点 $(0,0)$、$(1,1)$ 并确定上下曲线",
+     "partial": 2
+    },
+    {
+     "text": "化为 X 型：内层对 $y$ 从 $x^{2}$ 到 $x$",
+     "partial": 2
+    },
+    {
+     "text": "内层积出 $\\frac{x^{3}-x^{5}}{2}$",
+     "partial": 2
+    },
+    {
+     "text": "结果 $=\\frac{1}{24}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§10.2 直角坐标系下二重积分（X 型区域）。\n**考点出处**：同济《高等数学》第七版 §10.2；题型改编自：经典模型（曲线围成区域）。",
+   "misconception": "⚠️易错点：$0\\le x\\le1$ 内 $x\\ge x^{2}$，上曲线 $y=x$、下曲线 $y=x^{2}$——写反会得负值；先画图。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "变式族·交换次序"
+   ],
+   "variantGroup": "vg-iterated",
+   "verify": [
+    {
+     "desc": "积分",
+     "code": "integrate(integrate(x*y, (y, x**2, x)), (x, 0, 1))",
+     "expected": "1/24"
+    }
+   ],
+   "idx": 752
   },
   {
    "id": "zk-202210-16",
@@ -471,8 +545,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 735
+   "idx": 753
   },
   {
    "id": "zk-202304-16",
@@ -536,8 +611,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 736
+   "idx": 754
   },
   {
    "id": "zk-202310-16",
@@ -601,8 +677,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 737
+   "idx": 755
   },
   {
    "id": "zk-202404-16",
@@ -666,8 +743,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 738
+   "idx": 756
   },
   {
    "id": "zk-202410-16",
@@ -731,8 +809,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 739
+   "idx": 757
   },
   {
    "id": "zk-202504-16",
@@ -796,8 +875,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 740
+   "idx": 758
   },
   {
    "id": "zk-202510-16",
@@ -861,8 +941,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 741
+   "idx": 759
   },
   {
    "id": "zk-202604-16",
@@ -926,8 +1007,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 742
+   "idx": 760
   },
   {
    "id": "c10-c3",
@@ -988,6 +1070,7 @@
     "困难",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -995,7 +1078,73 @@
      "expected": "pi/4"
     }
    ],
-   "idx": 743
+   "idx": 761
+  },
+  {
+   "id": "q-192",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 10,
+   "knowledgePoint": "10.2",
+   "knowledgePoints": [
+    "10.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.2 二重积分的计算法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "交换积分次序并计算：$\\displaystyle\\int_{0}^{1}\\mathrm{d}x\\int_{x}^{1}\\mathrm{e}^{-y^{2}}\\mathrm{d}y$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\mathrm{e}^{-y^{2}}$ 对 $y$ 积不出原函数——必须交换次序。区域 $D：0\\le x\\le y\\le1$ 改写为 $0\\le y\\le1,\\ 0\\le x\\le y$：\n$$\\int_{0}^{1}\\mathrm{d}y\\int_{0}^{y}\\mathrm{e}^{-y^{2}}\\mathrm{d}x=\\int_{0}^{1}y\\,\\mathrm{e}^{-y^{2}}\\mathrm{d}y=\\left[-\\frac12\\mathrm{e}^{-y^{2}}\\right]_0^1=\\frac12\\left(1-\\mathrm{e}^{-1}\\right).$$\n**创新点**：「积不出原函数」是交换次序的典型信号——被积函数对哪个变量可积决定次序。",
+   "points": [
+    {
+     "text": "识别 $\\mathrm{e}^{-y^{2}}$ 对 $y$ 积不出，必须换序",
+     "partial": 2
+    },
+    {
+     "text": "正确改写区域（$y$ 外层、$x$ 内层 $0\\le x\\le y$）",
+     "partial": 2
+    },
+    {
+     "text": "内层积出 $y\\,\\mathrm{e}^{-y^{2}}$",
+     "partial": 2
+    },
+    {
+     "text": "结果 $=\\frac12(1-\\mathrm{e}^{-1})$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§10.2 二重积分交换积分次序（X 型 ↔ Y 型区域）。\n**考点出处**：同济《高等数学》第七版 §10.2；题型改编自：考研数学真题经典模型（换序积分）。",
+   "misconception": "⚠️易错点：区域改写时内外层上下限方向——$x$ 从 0 到 $y$（不是 0 到 1）；换序后内层对 $x$ 积分时 $y$ 视为常数。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "变式族·交换次序"
+   ],
+   "variantGroup": "vg-iterated",
+   "verify": [
+    {
+     "desc": "换序结果",
+     "code": "integrate(integrate(exp(-y**2), (x, 0, y)), (y, 0, 1))",
+     "expected": "1/2 - exp(-1)/2"
+    }
+   ],
+   "idx": 762
   },
   {
    "id": "ky2-2005-21-00aa79",
@@ -1040,8 +1189,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 744
+   "idx": 763
   },
   {
    "id": "ky2-2008-18-0700d3",
@@ -1086,8 +1236,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 745
+   "idx": 764
   },
   {
    "id": "ky2-2009-19-564289",
@@ -1132,8 +1283,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 746
+   "idx": 765
   },
   {
    "id": "ky2-2010-20-e5b195",
@@ -1178,8 +1330,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 747
+   "idx": 766
   },
   {
    "id": "ky2-2012-18-d4dfd6",
@@ -1224,8 +1377,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 748
+   "idx": 767
   },
   {
    "id": "ky2-2014-17-cccdff",
@@ -1270,8 +1424,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 749
+   "idx": 768
   },
   {
    "id": "ky2-2015-18-b721f1",
@@ -1316,8 +1471,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 750
+   "idx": 769
   },
   {
    "id": "ky2-2016-18-5ba1a6",
@@ -1362,8 +1518,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 751
+   "idx": 770
   },
   {
    "id": "ky2-2017-20-e3bfc2",
@@ -1408,8 +1565,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 752
+   "idx": 771
   },
   {
    "id": "ky2-2018-17-aba66a",
@@ -1466,8 +1624,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 753
+   "idx": 772
   },
   {
    "id": "ky2-2019-18-74c59d",
@@ -1512,8 +1671,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 754
+   "idx": 773
   },
   {
    "id": "ky-2005-15-3f6a09",
@@ -1569,8 +1729,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 755
+   "idx": 774
   }
  ]
 }

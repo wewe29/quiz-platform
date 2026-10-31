@@ -2,48 +2,6 @@
  "chapter": 9,
  "questions": [
   {
-   "id": "ky-2015-11-9f4776",
-   "type": "blank",
-   "typeGroup": "blank",
-   "difficulty": "medium",
-   "chapter": 9,
-   "knowledgePoint": "9.2",
-   "knowledgePoints": [
-    "9.2"
-   ],
-   "source": {
-    "text": "2015 年考研数学（一）第 11 题",
-    "kind": "exam-original",
-    "year": 2015,
-    "region": "全国",
-    "paper": "2015 年考研数学（一）",
-    "number": "11",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md"
-   },
-   "provenance": {
-    "level": "original",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md",
-    "verifiedAt": "2026-10-28",
-    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2015年解析/2015年解析.md"
-   },
-   "stem": "若函数 $z = z(x, y)$ 由方程 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 确定，则 $\\left. \\mathrm{d}z \\right|_{(0,1)} =$ ________.",
-   "options": null,
-   "answer": [
-    "$-\\mathrm{d}x$"
-   ],
-   "accept": null,
-   "answerText": null,
-   "points": null,
-   "explanation": "**答案依据**：$-\\mathrm{d}x$\n【解】方法一 将 $x = 0, y = 1$ 代入 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 中，得 $z = 0, \\mathrm{e}^z + xyz + x + \\cos x = 2$ 两边分别对 $x, y$ 求偏导得\n\n$$\n\\mathrm {e} ^ {z} \\cdot \\frac {\\partial z}{\\partial x} + y (z + x \\frac {\\partial z}{\\partial x}) + 1 - \\sin x = 0, \\quad \\mathrm {e} ^ {z} \\cdot \\frac {\\partial z}{\\partial y} + x (z + y \\frac {\\partial z}{\\partial y}) = 0,\n$$\n\n代入得 $\\left.\\frac{\\partial z}{\\partial x}\\right|_{(0,1)} = -1,\\left.\\frac{\\partial z}{\\partial y}\\right|_{(0,1)} = 0,$\n\n故 $\\mathrm{d}z\\Big|_{(0,1)} = \\frac{\\partial z}{\\partial x}\\Big|_{(0,1)}\\mathrm{d}x + \\frac{\\partial z}{\\partial y}\\Big|_{(0,1)}\\mathrm{d}y = -\\mathrm{d}x.$\n\n方法二 将 $x = 0, y = 1$ 代入 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 中得 $z = 0$ .\n\n$\\mathrm{e}^z + xyz + x + \\cos x = 2$ 两边求全微分得\n\n$$\n\\mathrm {e} ^ {z} \\mathrm {d} z + y z \\mathrm {d} x + x z \\mathrm {d} y + x y \\mathrm {d} z + \\mathrm {d} x - \\sin x \\mathrm {d} x = 0,\n$$\n\n将 $x = 0, y = 1, z = 0$ 代入得 $\\mathrm{d}z|_{(0,1)} = -\\mathrm{d}x$",
-   "misconception": null,
-   "extension": null,
-   "tags": [
-    "考研真题"
-   ],
-   "verify": [],
-   "idx": 662
-  },
-  {
    "id": "ky-2016-11-f88627",
    "type": "blank",
    "typeGroup": "blank",
@@ -82,8 +40,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 663
+   "idx": 677
   },
   {
    "id": "ky-2017-11-f95aa5",
@@ -124,8 +83,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 664
+   "idx": 678
   },
   {
    "id": "c9-t1",
@@ -175,8 +135,9 @@
     "概念",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 665
+   "idx": 679
   },
   {
    "id": "c9-t2",
@@ -230,8 +191,9 @@
     "简答",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 666
+   "idx": 680
   },
   {
    "id": "c9-c1",
@@ -290,6 +252,7 @@
     "二阶偏导",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "混合偏导",
@@ -297,7 +260,7 @@
      "expected": "0"
     }
    ],
-   "idx": 667
+   "idx": 681
   },
   {
    "id": "ky-2007-6-006337",
@@ -353,8 +316,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 668
+   "idx": 682
   },
   {
    "id": "ky-2008-2-e73f31",
@@ -402,8 +366,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 669
+   "idx": 683
   },
   {
    "id": "ky-2010-2-64e227",
@@ -467,8 +432,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 670
+   "idx": 684
   },
   {
    "id": "c9-c2",
@@ -527,6 +493,7 @@
     "链式法则",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "偏导核验",
@@ -534,7 +501,73 @@
      "expected": "0"
     }
    ],
-   "idx": 671
+   "idx": 685
+  },
+  {
+   "id": "q-197",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.5",
+   "knowledgePoints": [
+    "9.5"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.5 隐函数的求导公式",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $z=z(x,y)$ 由 $x^{2}+y^{2}+z^{2}=1$ 确定，求 $\\dfrac{\\partial z}{\\partial x}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "隐函数求导：两边对 $x$ 求偏导（$z$ 是 $x$ 的函数）：\n$2x+2z\\dfrac{\\partial z}{\\partial x}=0\\Rightarrow\\boxed{\\dfrac{\\partial z}{\\partial x}=-\\dfrac{x}{z}}$。\n**创新点**：球面上该偏导数的几何意义——经线切线斜率在 $xOz$ 平面的投影；$z=0$（赤道）处分子分母关系退化，偏导不存在（球面竖直切面）。",
+   "points": [
+    {
+     "text": "两边对 $x$ 求偏导（链式：$z$ 项带 $\\dfrac{\\partial z}{\\partial x}$）",
+     "partial": 2
+    },
+    {
+     "text": "解出 $\\dfrac{\\partial z}{\\partial x}=-\\dfrac{x}{z}$",
+     "partial": 2
+    },
+    {
+     "text": "指出 $z=0$ 处偏导不存在的几何解释",
+     "partial": 2
+    },
+    {
+     "text": "推广：$x^{2}+y^{2}+z^{2}=R^{2}$ 时偏导同形 $-\\dfrac{x}{z}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§9.5 隐函数求导公式（一个方程确定一个隐函数）。\n**考点出处**：同济《高等数学》第七版 §9.5；题型改编自：经典模型（隐函数偏导）。",
+   "misconception": "⚠️易错点：对 $z^{2}$ 求导要带 $2z\\dfrac{\\partial z}{\\partial x}$（$z$ 依赖 $x$）；漏链式是最常见错误。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "变式族·多元极值"
+   ],
+   "variantGroup": "vg-multextrem",
+   "verify": [
+    {
+     "desc": "隐函数偏导",
+     "code": "z=symbols('z'); sp.simplify(2*x+2*z*(-x/z))",
+     "expected": "0"
+    }
+   ],
+   "idx": 686
   },
   {
    "id": "ky-2013-2-6e5a11",
@@ -590,8 +623,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 672
+   "idx": 687
   },
   {
    "id": "ky-2018-2-cfc6be",
@@ -647,8 +681,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 673
+   "idx": 688
   },
   {
    "id": "zk-202210-14",
@@ -712,8 +747,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 674
+   "idx": 689
   },
   {
    "id": "zk-202210-15",
@@ -777,8 +813,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 675
+   "idx": 690
   },
   {
    "id": "zk-202304-14",
@@ -842,8 +879,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 676
+   "idx": 691
   },
   {
    "id": "zk-202304-15",
@@ -907,8 +945,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 677
+   "idx": 692
   },
   {
    "id": "zk-202310-13",
@@ -972,8 +1011,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 678
+   "idx": 693
   },
   {
    "id": "zk-202310-14",
@@ -1037,8 +1077,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 679
+   "idx": 694
   },
   {
    "id": "zk-202310-15",
@@ -1102,8 +1143,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 680
+   "idx": 695
   },
   {
    "id": "zk-202404-14",
@@ -1167,8 +1209,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 681
+   "idx": 696
   },
   {
    "id": "zk-202404-15",
@@ -1232,8 +1275,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 682
+   "idx": 697
   },
   {
    "id": "zk-202410-13",
@@ -1297,8 +1341,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 683
+   "idx": 698
   },
   {
    "id": "zk-202410-15",
@@ -1362,8 +1407,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 684
+   "idx": 699
   },
   {
    "id": "zk-202504-15",
@@ -1427,8 +1473,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 685
+   "idx": 700
   },
   {
    "id": "zk-202510-13",
@@ -1492,8 +1539,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 686
+   "idx": 701
   },
   {
    "id": "zk-202510-15",
@@ -1557,8 +1605,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 687
+   "idx": 702
   },
   {
    "id": "zk-202604-14",
@@ -1622,8 +1671,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 688
+   "idx": 703
   },
   {
    "id": "zk-202604-15",
@@ -1687,8 +1737,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 689
+   "idx": 704
   },
   {
    "id": "c9-c3",
@@ -1748,6 +1799,7 @@
     "困难",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "驻点x",
@@ -1760,7 +1812,73 @@
      "expected": "[-5, 31]"
     }
    ],
-   "idx": 690
+   "idx": 705
+  },
+  {
+   "id": "q-195",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9.7",
+   "knowledgePoints": [
+    "9.7"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.7 方向导数与梯度",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求函数 $f(x,y)=x^{3}+y^{3}-3xy$ 的极值。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "驻点：$f_x=3x^{2}-3y=0,\\ f_y=3y^{2}-3x=0\\Rightarrow y=x^{2},\\ x=y^{2}$，解得 $(0,0)$ 与 $(1,1)$。\n$A=f_{xx}=6x,\\ B=f_{xy}=-3,\\ C=f_{yy}=6y$，判别式 $AC-B^{2}$：\n**$(0,0)$**：$AC-B^{2}=0-9=-9<0$——鞍点，非极值。\n**$(1,1)$**：$AC-B^{2}=36-9=27>0$ 且 $A=6>0$——**极小值点**，极小值 $f(1,1)=1+1-3=-1$。",
+   "points": [
+    {
+     "text": "解出驻点 $(0,0)$ 与 $(1,1)$",
+     "partial": 2
+    },
+    {
+     "text": "计算二阶判别式 $AC-B^{2}$",
+     "partial": 2
+    },
+    {
+     "text": "$(0,0)$ 判为鞍点、$(1,1)$ 判为极小值点",
+     "partial": 2
+    },
+    {
+     "text": "极小值 $f(1,1)=-1$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§9.7 多元函数极值的二阶充分条件（$AC-B^{2}>0$ 且 $A>0$ → 极小）。\n**考点出处**：同济《高等数学》第七版 §9.7；题型改编自：经典模型（二元极值判别）。",
+   "misconception": "⚠️易错点：$AC-B^{2}<0$ 是鞍点（不是极大也不是极小）；$f(0,0)=0$ 常被误认为极小值。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "变式族·多元极值"
+   ],
+   "variantGroup": "vg-multextrem",
+   "verify": [
+    {
+     "desc": "驻点与判别",
+     "code": "F=x**3+y**3-3*x*y; (sp.solve([sp.diff(F,x), sp.diff(F,y)], [x,y])[1], sp.hessian(F,(x,y)).subs([(x,1),(y,1)]).det())",
+     "expected": "((1, 1), 27)"
+    }
+   ],
+   "idx": 706
   },
   {
    "id": "ky2-1996-x-54434b",
@@ -1805,8 +1923,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 691
+   "idx": 707
   },
   {
    "id": "ky2-2004-21-acfeb2",
@@ -1851,8 +1970,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 692
+   "idx": 708
   },
   {
    "id": "ky2-2007-22-a1a85e",
@@ -1897,8 +2017,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 693
+   "idx": 709
   },
   {
    "id": "ky2-2009-17-fa5908",
@@ -1943,8 +2064,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 694
+   "idx": 710
   },
   {
    "id": "ky2-2010-19-f58a5f",
@@ -1989,8 +2111,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 695
+   "idx": 711
   },
   {
    "id": "ky2-2019-20-07a557",
@@ -2035,8 +2158,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 696
+   "idx": 712
   },
   {
    "id": "ky-2011-19-d4e7c7",
@@ -2100,8 +2224,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 697
+   "idx": 713
   }
  ]
 }

@@ -2,6 +2,62 @@
  "chapter": 12,
  "questions": [
   {
+   "id": "c12-t2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.2",
+   "knowledgePoints": [
+    "12.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.2 常数项级数的审敛法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "简答：叙述正项级数的比较判别法（含极限形式）与比值判别法的内容，并说明各自的适用场景。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "比较判别法：设 $0\\le a_n\\le b_n$，若 $\\sum b_n$ 收敛则 $\\sum a_n$ 收敛；若 $\\sum a_n$ 发散则 $\\sum b_n$ 发散（大敛推小敛、小散推大散）。极限形式：$\\lim\\dfrac{a_n}{b_n}=l$，当 $0<l<+\\infty$ 时两级数同敛散；$l=0$ 时由 $\\sum b_n$ 收敛推 $\\sum a_n$ 收敛。比值判别法：$\\rho=\\lim\\dfrac{a_{n+1}}{a_n}$，$\\rho<1$ 收敛、$\\rho>1$（含 $\\infty$）发散、$\\rho=1$ 失效。适用场景：比较法用于与 $p$-级数、几何级数对照（通项含 $n^p$、多项式比）；比值法用于通项含 $n!$、$c^n$、$n^n$ 等增长极快因子的情形。",
+   "points": [
+    {
+     "text": "比较判别法：大敛推小敛、小散推大散；基准级数是 $p$-级数与几何级数；极限形式 $\\lim\\dfrac{a_n}{b_n}=l\\in(0,+\\infty)$ 时同敛散。",
+     "partial": 2
+    },
+    {
+     "text": "比值判别法：$\\rho=\\lim\\dfrac{a_{n+1}}{a_n}$，$\\rho<1$ 收敛、$\\rho>1$ 发散、$\\rho=1$ 失效。",
+     "partial": 2
+    },
+    {
+     "text": "选用经验：通项含 $n!$、$c^n$、$n^n$ 优先比值法；只含幂函数比用比较法（$\\sum\\dfrac1{n^p}$ 用比值法恒得 $\\rho=1$，须换方法）。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：比较判别法、极限形式与比值判别法见 §12.2。\n**考点出处**：同济《高等数学》第七版 §12.2 常数项级数的审敛法。",
+   "misconception": "⚠️易错点：比较法不等号方向（大敛推小敛）易背反；比值法 $\\rho=1$ 时只能换用其他方法，如 $\\sum\\dfrac1{n^p}$ 用比值法恒得 $\\rho=1$。",
+   "extension": null,
+   "tags": [
+    "审敛法",
+    "简答",
+    "高频考点"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 845
+  },
+  {
    "id": "c12-c1",
    "type": "calc",
    "typeGroup": "calc",
@@ -59,6 +115,7 @@
     "定义法",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "sum",
@@ -66,7 +123,7 @@
      "expected": "1"
     }
    ],
-   "idx": 824
+   "idx": 846
   },
   {
    "id": "ky-2004-9-b6961c",
@@ -126,8 +183,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 825
+   "idx": 847
   },
   {
    "id": "ky-2006-9-8deaff",
@@ -191,8 +249,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 826
+   "idx": 848
   },
   {
    "id": "c12-c2",
@@ -252,6 +311,7 @@
     "比较判别",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "绝对收敛",
@@ -259,7 +319,7 @@
      "expected": "True"
     }
    ],
-   "idx": 827
+   "idx": 849
   },
   {
    "id": "ky-2011-2-73a967",
@@ -315,8 +375,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 828
+   "idx": 850
   },
   {
    "id": "ky-2013-3-472921",
@@ -368,8 +429,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 829
+   "idx": 851
   },
   {
    "id": "ky-2015-3-7c3e22",
@@ -433,8 +495,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 830
+   "idx": 852
   },
   {
    "id": "c12-c3",
@@ -495,6 +558,7 @@
     "困难",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "x=1/2核验",
@@ -502,7 +566,73 @@
      "expected": "0"
     }
    ],
-   "idx": 831
+   "idx": 853
+  },
+  {
+   "id": "q-199",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.3",
+   "knowledgePoints": [
+    "12.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求幂级数 $\\displaystyle\\sum_{n=1}^{\\infty}n x^{n-1}$ 的收敛域与和函数。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "收敛半径：$\\rho=\\lim\\left|\\dfrac{a_{n+1}}{a_n}\\right|=\\lim\\dfrac{n+1}{n}=1$，端点 $x=\\pm1$ 时通项不趋于 0，发散。收敛域 $(-1,1)$。\n求和：逐项积分还原——$\\displaystyle\\int_0^{x}\\sum n t^{n-1}\\mathrm{d}t=\\sum x^{n}=\\dfrac{x}{1-x}$，两边求导：$\\boxed{\\displaystyle\\sum_{n=1}^{\\infty}n x^{n-1}=\\dfrac{1}{(1-x)^{2}}},\\ |x|<1$。\n**创新点**：「先积后导」是幂级数求和的标准套路——把不认识的幂级数化成等比级数。",
+   "points": [
+    {
+     "text": "收敛半径 $\\rho=1$ 且端点发散，收敛域 $(-1,1)$",
+     "partial": 2
+    },
+    {
+     "text": "逐项积分化为等比级数 $\\dfrac{x}{1-x}$",
+     "partial": 2
+    },
+    {
+     "text": "求导得和函数 $\\dfrac{1}{(1-x)^{2}}$",
+     "partial": 2
+    },
+    {
+     "text": "注明收敛域",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§12.3 幂级数的逐项求导/逐项积分性质（收敛半径不变）。\n**考点出处**：同济《高等数学》第七版 §12.3；题型改编自：考研数学真题经典模型（幂级数求和）。",
+   "misconception": "⚠️易错点：求和函数后必须标注收敛域；逐项积分/求导在收敛区间内部合法，端点需单独讨论。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "变式族·级数判敛"
+   ],
+   "variantGroup": "vg-series",
+   "verify": [
+    {
+     "desc": "和函数求导还原",
+     "code": "sp.simplify(sp.diff(x/(1-x), x) - 1/(1-x)**2)",
+     "expected": "0"
+    }
+   ],
+   "idx": 854
   },
   {
    "id": "ky-2004-18-e5c035",
@@ -562,8 +692,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 832
+   "idx": 855
   },
   {
    "id": "ky-2005-16-cf6a9f",
@@ -627,8 +758,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 833
+   "idx": 856
   },
   {
    "id": "ky-2006-17-20097f",
@@ -680,8 +812,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 834
+   "idx": 857
   },
   {
    "id": "ky-2007-20-94f298",
@@ -745,8 +878,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 835
+   "idx": 858
   },
   {
    "id": "ky-2008-19-7ca028",
@@ -802,8 +936,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 836
+   "idx": 859
   },
   {
    "id": "ky-2010-18-9c9d20",
@@ -867,8 +1002,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 837
+   "idx": 860
   },
   {
    "id": "ky-2013-16-7d6e62",
@@ -932,8 +1068,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 838
+   "idx": 861
   },
   {
    "id": "ky-2014-19-924fc6",
@@ -997,8 +1134,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 839
+   "idx": 862
   },
   {
    "id": "ky-2020-17-8b84b5",
@@ -1062,8 +1200,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 840
+   "idx": 863
   },
   {
    "id": "ky-2021-18-c231a2",
@@ -1127,8 +1266,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 841
+   "idx": 864
   },
   {
    "id": "zk-202210-19",
@@ -1192,8 +1332,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 842
+   "idx": 865
   },
   {
    "id": "zk-202210-21",
@@ -1257,8 +1398,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 843
+   "idx": 866
   },
   {
    "id": "zk-202310-19",
@@ -1322,8 +1464,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 844
+   "idx": 867
   },
   {
    "id": "zk-202310-21",
@@ -1387,8 +1530,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 845
+   "idx": 868
   },
   {
    "id": "zk-202404-19",
@@ -1452,8 +1596,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 846
+   "idx": 869
   },
   {
    "id": "zk-202404-21",
@@ -1517,8 +1662,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 847
+   "idx": 870
   },
   {
    "id": "zk-202410-19",
@@ -1578,8 +1724,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 848
+   "idx": 871
   },
   {
    "id": "zk-202410-21",
@@ -1643,8 +1790,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 849
+   "idx": 872
   },
   {
    "id": "zk-202504-19",
@@ -1708,8 +1856,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 850
+   "idx": 873
   },
   {
    "id": "zk-202504-21",
@@ -1773,8 +1922,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 851
+   "idx": 874
   },
   {
    "id": "zk-202510-19",
@@ -1838,8 +1988,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 852
+   "idx": 875
   },
   {
    "id": "zk-202510-21",
@@ -1903,8 +2054,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 853
+   "idx": 876
   },
   {
    "id": "zk-202604-19",
@@ -1968,8 +2120,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 854
+   "idx": 877
   },
   {
    "id": "zk-202604-21",
@@ -2033,8 +2186,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 855
+   "idx": 878
   }
  ]
 }

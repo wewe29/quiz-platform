@@ -46,8 +46,9 @@
     "第一类曲线积分",
     "对称性"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 756
+   "idx": 775
   },
   {
    "id": "c11-s2",
@@ -94,6 +95,7 @@
     "格林公式",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -101,7 +103,7 @@
      "expected": "0"
     }
    ],
-   "idx": 757
+   "idx": 776
   },
   {
    "id": "c11-s3",
@@ -149,6 +151,7 @@
     "困难",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "高斯核验",
@@ -156,7 +159,7 @@
      "expected": "0"
     }
    ],
-   "idx": 758
+   "idx": 777
   },
   {
    "id": "c11-m1",
@@ -205,8 +208,9 @@
     "格林公式",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 759
+   "idx": 778
   },
   {
    "id": "c11-m2",
@@ -256,8 +260,9 @@
     "侧",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 760
+   "idx": 779
   },
   {
    "id": "c11-j1",
@@ -302,8 +307,9 @@
     "第一类曲线积分",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 761
+   "idx": 780
   },
   {
    "id": "c11-j2",
@@ -348,8 +354,9 @@
     "路径无关",
     "易错点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 762
+   "idx": 781
   },
   {
    "id": "c11-j3",
@@ -394,8 +401,9 @@
     "格林公式",
     "正向边界"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 763
+   "idx": 782
   },
   {
    "id": "c11-b1",
@@ -441,8 +449,9 @@
    "tags": [
     "弧长"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 764
+   "idx": 783
   },
   {
    "id": "c11-b2",
@@ -489,6 +498,7 @@
     "格林公式",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -496,7 +506,7 @@
      "expected": "0"
     }
    ],
-   "idx": 765
+   "idx": 784
   },
   {
    "id": "ky-2008-12-138afe",
@@ -537,8 +547,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 766
+   "idx": 785
   },
   {
    "id": "ky-2010-11-547b03",
@@ -579,8 +590,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 767
+   "idx": 786
   },
   {
    "id": "c11-t1",
@@ -630,8 +642,9 @@
     "概念",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 768
+   "idx": 787
   },
   {
    "id": "c11-t2",
@@ -685,8 +698,9 @@
     "简答",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 769
+   "idx": 788
   },
   {
    "id": "c11-c1",
@@ -745,6 +759,7 @@
     "第一类曲线积分",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -752,7 +767,7 @@
      "expected": "pi"
     }
    ],
-   "idx": 770
+   "idx": 789
   },
   {
    "id": "c11-c2",
@@ -811,6 +826,7 @@
     "第二类曲线积分",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -818,7 +834,7 @@
      "expected": "1"
     }
    ],
-   "idx": 771
+   "idx": 790
   },
   {
    "id": "zk-202210-17",
@@ -882,8 +898,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 772
+   "idx": 791
   },
   {
    "id": "zk-202304-17",
@@ -947,8 +964,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 773
+   "idx": 792
   },
   {
    "id": "zk-202310-17",
@@ -1012,8 +1030,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 774
+   "idx": 793
   },
   {
    "id": "zk-202404-17",
@@ -1077,8 +1096,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 775
+   "idx": 794
   },
   {
    "id": "zk-202410-17",
@@ -1142,8 +1162,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 776
+   "idx": 795
   },
   {
    "id": "zk-202504-17",
@@ -1207,8 +1228,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 777
+   "idx": 796
   },
   {
    "id": "zk-202510-17",
@@ -1272,8 +1294,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 778
+   "idx": 797
   },
   {
    "id": "zk-202604-17",
@@ -1337,8 +1360,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 779
+   "idx": 798
   },
   {
    "id": "c11-c3",
@@ -1398,6 +1422,7 @@
     "困难",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -1405,7 +1430,7 @@
      "expected": "pi/2"
     }
    ],
-   "idx": 780
+   "idx": 799
   },
   {
    "id": "zk-202210-18",
@@ -1469,8 +1494,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 781
+   "idx": 800
   },
   {
    "id": "zk-202210-22",
@@ -1534,8 +1560,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 782
+   "idx": 801
   },
   {
    "id": "zk-202310-18",
@@ -1599,8 +1626,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 783
+   "idx": 802
   },
   {
    "id": "zk-202310-22",
@@ -1664,8 +1692,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 784
+   "idx": 803
   },
   {
    "id": "zk-202404-18",
@@ -1729,8 +1758,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 785
+   "idx": 804
   },
   {
    "id": "zk-202404-22",
@@ -1794,8 +1824,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 786
+   "idx": 805
   },
   {
    "id": "zk-202410-22",
@@ -1859,8 +1890,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 787
+   "idx": 806
   },
   {
    "id": "zk-202504-22",
@@ -1924,8 +1956,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 788
+   "idx": 807
   },
   {
    "id": "zk-202510-18",
@@ -1989,8 +2022,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 789
+   "idx": 808
   },
   {
    "id": "zk-202510-22",
@@ -2054,8 +2088,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 790
+   "idx": 809
   },
   {
    "id": "zk-202604-22",
@@ -2119,8 +2154,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 791
+   "idx": 810
   }
  ]
 }

@@ -2,48 +2,6 @@
  "chapter": 7,
  "questions": [
   {
-   "id": "ky-2019-10-b59962",
-   "type": "blank",
-   "typeGroup": "blank",
-   "difficulty": "medium",
-   "chapter": 7,
-   "knowledgePoint": "7.7",
-   "knowledgePoints": [
-    "7.7"
-   ],
-   "source": {
-    "text": "2019 年考研数学（一）第 10 题",
-    "kind": "exam-original",
-    "year": 2019,
-    "region": "全国",
-    "paper": "2019 年考研数学（一）",
-    "number": "10",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2019年考研数学(一)真题.md"
-   },
-   "provenance": {
-    "level": "original",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2019年考研数学(一)真题.md",
-    "verifiedAt": "2026-10-28",
-    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2019年解析/2019年解析.md"
-   },
-   "stem": "微分方程 $2yy' - y^2 - 2 = 0$ 满足条件 $y(0) = 1$ 的特解 $y = \\_$",
-   "options": null,
-   "answer": [
-    "$\\sqrt{3\\mathrm{e}^x - 2}$"
-   ],
-   "accept": null,
-   "answerText": null,
-   "points": null,
-   "explanation": "**答案依据**：$\\sqrt{3\\mathrm{e}^x - 2}$\n【解】方法一 由 $2yy' - y^2 - 2 = 0$ 得 $\\frac{2y\\mathrm{d}y}{y^2 + 2} = \\mathrm{d}x$\n\n积分得 $\\ln (y^2 + 2) = x + C$\n\n再由 $y(0) = 1$ 得 $C = \\ln 3$ ，即 $\\ln (y^2 +2) = \\ln (3\\mathrm{e}^x)$\n\n从而 $y^{2} + 2 = 3\\mathrm{e}^{x}$ ，故 $y = \\sqrt{3\\mathrm{e}^x - 2}$\n\n方法二 令 $y^{2} = u$ ，则原方程化为 $\\frac{\\mathrm{d}u}{\\mathrm{d}x} - u = 2$\n\n解得 $u = \\left(\\int 2\\mathrm{e}^{\\int -\\mathrm{d}x}\\mathrm{d}x + C\\right)\\mathrm{e}^{-\\int -\\mathrm{d}x} = (-2\\mathrm{e}^{-x} + C)\\mathrm{e}^{x},$\n\n即 $y^{2} = (-2\\mathrm{e}^{-x} + C)\\mathrm{e}^{x} = Ce^{x} - 2$\n\n由 $y(0) = 1$ 得 $C = 3$ ，故 $y = \\sqrt{3\\mathrm{e}^x - 2}$",
-   "misconception": null,
-   "extension": null,
-   "tags": [
-    "考研真题"
-   ],
-   "verify": [],
-   "idx": 519
-  },
-  {
    "id": "c7-t1",
    "type": "term",
    "typeGroup": "short",
@@ -91,8 +49,9 @@
     "概念",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 520
+   "idx": 531
   },
   {
    "id": "c7-t2",
@@ -146,8 +105,9 @@
     "简答",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 521
+   "idx": 532
   },
   {
    "id": "c7-c1",
@@ -206,6 +166,7 @@
     "一阶线性方程",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "dsolve",
@@ -213,7 +174,7 @@
      "expected": "0"
     }
    ],
-   "idx": 522
+   "idx": 533
   },
   {
    "id": "ky-2008-3-b7108b",
@@ -265,8 +226,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 523
+   "idx": 534
   },
   {
    "id": "c7-c2",
@@ -325,6 +287,7 @@
     "可分离变量",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "核验",
@@ -332,7 +295,73 @@
      "expected": "0"
     }
    ],
-   "idx": 524
+   "idx": 535
+  },
+  {
+   "id": "q-189",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.5",
+   "knowledgePoints": [
+    "7.5"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §7.5 可降阶的高阶微分方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求微分方程 $y''-3y'+2y=0$ 的通解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "特征方程 $r^{2}-3r+2=0$，根 $r_1=1,\\ r_2=2$（两个不同实根）。\n通解：$\\boxed{y=C_1\\mathrm{e}^{x}+C_2\\mathrm{e}^{2x}}$（$C_1,C_2$ 为任意常数）。",
+   "points": [
+    {
+     "text": "写出特征方程 $r^{2}-3r+2=0$ 并求根 $1,2$",
+     "partial": 2
+    },
+    {
+     "text": "两不同实根对应通解结构",
+     "partial": 2
+    },
+    {
+     "text": "通解 $y=C_1\\mathrm{e}^{x}+C_2\\mathrm{e}^{2x}$",
+     "partial": 2
+    },
+    {
+     "text": "说明 $C_1,C_2$ 为任意常数",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§7.5 二阶常系数齐次线性微分方程的特征方程法。\n**考点出处**：同济《高等数学》第七版 §7.5；题型改编自：考研数学真题经典模型（特征方程法）。",
+   "misconception": "⚠️易错点：特征方程是把 $y''\\to r^2$、$y'\\to r$、$y\\to1$；判别式 $\\Delta=1>0$ 为两不同实根。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "变式族·二阶常系数"
+   ],
+   "variantGroup": "vg-ode",
+   "verify": [
+    {
+     "desc": "特征根",
+     "code": "sp.solve(x**2-3*x+2, x)",
+     "expected": "[1, 2]"
+    }
+   ],
+   "idx": 536
   },
   {
    "id": "ky-2016-3-63d5a1",
@@ -388,8 +417,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 525
+   "idx": 537
   },
   {
    "id": "c7-c3",
@@ -449,6 +479,7 @@
     "困难",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "特征根",
@@ -461,7 +492,73 @@
      "expected": "0"
     }
    ],
-   "idx": 526
+   "idx": 538
+  },
+  {
+   "id": "q-190",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.6",
+   "knowledgePoints": [
+    "7.6"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §7.6 二阶常系数齐次线性微分方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求微分方程 $y''-3y'+2y=\\mathrm{e}^{x}$ 的通解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "齐次通解 $Y=C_1\\mathrm{e}^{x}+C_2\\mathrm{e}^{2x}$。\n自由项 $\\mathrm{e}^{x}$：$\\lambda=1$ 是特征方程的**单根**，故特解设 $y^{*}=axe^{x}$。代入解得 $a=-1$，特解 $y^{*}=-x\\mathrm{e}^{x}$。\n通解：$\\boxed{y=C_1\\mathrm{e}^{x}+C_2\\mathrm{e}^{2x}-x\\mathrm{e}^{x}}$。\n**验证**：$y=-x\\mathrm{e}^{x}$ 代入左端 $=-\\mathrm{e}^{x}$？——实际 $\\mathrm{LHS}=-\\mathrm{e}^{x}$ 乘以 1 得 $-\\mathrm{e}^{x}$，注意右端是 $+\\mathrm{e}^{x}$，故 $a=-1$ 使 $-a=+1$ 成立。",
+   "points": [
+    {
+     "text": "齐次通解（复用上一题）",
+     "partial": 2
+    },
+    {
+     "text": "识别 $\\lambda=1$ 为单根，特解设 $axe^{x}$",
+     "partial": 2
+    },
+    {
+     "text": "代入解出 $a=-1$",
+     "partial": 2
+    },
+    {
+     "text": "通解 = 齐次通解 + 特解",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§7.6 非齐次项 $f(x)=\\mathrm{e}^{\\lambda x}P_m(x)$ 型，$\\lambda$ 是 $k$ 重特征根时特解设 $x^{k}\\mathrm{e}^{\\lambda x}Q_m(x)$。\n**考点出处**：同济《高等数学》第七版 §7.6；题型改编自：考研数学真题经典模型（非齐次特解设法）。",
+   "misconception": "⚠️易错点：$\\lambda=1$ 是特征单根，特解**必须**乘 $x$（漏乘会代入发现恒为 0）；特解前系数 $a=-1$ 别丢负号。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "变式族·二阶常系数"
+   ],
+   "variantGroup": "vg-ode",
+   "verify": [
+    {
+     "desc": "特解代入",
+     "code": "yy=-x*exp(x); sp.simplify(diff(yy,x,2)-3*diff(yy,x)+2*yy-exp(x))==0",
+     "expected": "True"
+    }
+   ],
+   "idx": 539
   },
   {
    "id": "ky2-1987-1-601144",
@@ -506,8 +603,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 527
+   "idx": 540
   },
   {
    "id": "ky2-1987-2-1bd341",
@@ -552,8 +650,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 528
+   "idx": 541
   },
   {
    "id": "ky2-1988-3-96377b",
@@ -598,8 +697,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 529
+   "idx": 542
   },
   {
    "id": "ky2-1989-x-8ae23f",
@@ -644,8 +744,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 530
+   "idx": 543
   },
   {
    "id": "ky2-1990-x-f7b438",
@@ -690,8 +791,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 531
+   "idx": 544
   },
   {
    "id": "ky2-1991-5-bada6c",
@@ -736,8 +838,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 532
+   "idx": 545
   },
   {
    "id": "ky2-1991-x-9af4d3",
@@ -782,8 +885,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 533
+   "idx": 546
   },
   {
    "id": "ky2-1992-5-47a7ad",
@@ -828,8 +932,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 534
+   "idx": 547
   },
   {
    "id": "ky2-1993-5-8a821b",
@@ -874,8 +979,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 535
+   "idx": 548
   },
   {
    "id": "ky2-1993-x-c54f99",
@@ -920,8 +1026,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 536
+   "idx": 549
   },
   {
    "id": "ky2-1994-x-eb7634",
@@ -966,8 +1073,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 537
+   "idx": 550
   },
   {
    "id": "ky2-1996-5-65d2b6",
@@ -1012,8 +1120,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 538
+   "idx": 551
   },
   {
    "id": "ky2-1997-4-213719",
@@ -1058,8 +1167,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 539
+   "idx": 552
   },
   {
    "id": "ky2-1997-5-51c887",
@@ -1104,8 +1214,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 540
+   "idx": 553
   },
   {
    "id": "ky2-1997-x-a9feba",
@@ -1150,8 +1261,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 541
+   "idx": 554
   },
   {
    "id": "ky2-1998-x-eb7634",
@@ -1196,8 +1308,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 542
+   "idx": 555
   },
   {
    "id": "ky2-1999-x-637be5",
@@ -1242,8 +1355,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 543
+   "idx": 556
   },
   {
    "id": "ky2-2001-x-e42116",
@@ -1288,8 +1402,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 544
+   "idx": 557
   },
   {
    "id": "ky2-2002-x-e4a93f",
@@ -1334,8 +1449,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 545
+   "idx": 558
   },
   {
    "id": "ky2-2005-18-38fde3",
@@ -1388,8 +1504,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 546
+   "idx": 559
   },
   {
    "id": "ky2-2007-19-fdb7ab",
@@ -1438,8 +1555,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 547
+   "idx": 560
   },
   {
    "id": "ky2-2009-18-fbcd65",
@@ -1484,8 +1602,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 548
+   "idx": 561
   },
   {
    "id": "ky2-2009-20-45eb60",
@@ -1550,8 +1669,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 549
+   "idx": 562
   },
   {
    "id": "ky2-2014-16-22340e",
@@ -1600,8 +1720,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 550
+   "idx": 563
   },
   {
    "id": "ky2-2016-19-9b0529",
@@ -1650,8 +1771,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 551
+   "idx": 564
   },
   {
    "id": "ky2-2019-17-dcaec1",
@@ -1696,8 +1818,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 552
+   "idx": 565
   },
   {
    "id": "ky-2018-18-eff411",
@@ -1761,8 +1884,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 553
+   "idx": 566
   },
   {
    "id": "zk-202210-20",
@@ -1826,8 +1950,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 554
+   "idx": 567
   },
   {
    "id": "zk-202310-20",
@@ -1891,8 +2016,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 555
+   "idx": 568
   },
   {
    "id": "zk-202404-20",
@@ -1956,8 +2082,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 556
+   "idx": 569
   },
   {
    "id": "zk-202410-20",
@@ -2021,8 +2148,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 557
+   "idx": 570
   },
   {
    "id": "zk-202504-20",
@@ -2086,8 +2214,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 558
+   "idx": 571
   },
   {
    "id": "zk-202510-20",
@@ -2151,8 +2280,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 559
+   "idx": 572
   },
   {
    "id": "zk-202604-20",
@@ -2216,8 +2346,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 560
+   "idx": 573
   }
  ]
 }

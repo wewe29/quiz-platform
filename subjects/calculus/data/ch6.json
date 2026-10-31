@@ -45,6 +45,7 @@
    "tags": [
     "面积"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -52,7 +53,7 @@
      "expected": "1/3"
     }
    ],
-   "idx": 428
+   "idx": 438
   },
   {
    "id": "ky2-1988-4-9071d5",
@@ -99,8 +100,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 429
+   "idx": 439
   },
   {
    "id": "ky2-1989-3-a2295d",
@@ -147,8 +149,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 430
+   "idx": 440
   },
   {
    "id": "ky2-1995-2-aeae76",
@@ -195,8 +198,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 431
+   "idx": 441
   },
   {
    "id": "ky2-1996-5-4ef6e0",
@@ -243,8 +247,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 432
+   "idx": 442
   },
   {
    "id": "c6-s2",
@@ -291,6 +296,7 @@
     "旋转体体积",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -298,7 +304,7 @@
      "expected": "pi/2"
     }
    ],
-   "idx": 433
+   "idx": 443
   },
   {
    "id": "c6-s3",
@@ -345,6 +351,7 @@
     "弧长",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -352,7 +359,7 @@
      "expected": "0"
     }
    ],
-   "idx": 434
+   "idx": 444
   },
   {
    "id": "c6-m1",
@@ -401,8 +408,9 @@
     "元素法",
     "简答"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 435
+   "idx": 445
   },
   {
    "id": "c6-m2",
@@ -452,6 +460,7 @@
     "旋转体",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "交点",
@@ -474,7 +483,7 @@
      "expected": "64*pi/15"
     }
    ],
-   "idx": 436
+   "idx": 446
   },
   {
    "id": "c6-j1",
@@ -519,8 +528,9 @@
     "面积",
     "易错点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 437
+   "idx": 447
   },
   {
    "id": "c6-j2",
@@ -565,8 +575,9 @@
     "旋转体体积",
     "易错点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 438
+   "idx": 448
   },
   {
    "id": "c6-j3",
@@ -611,8 +622,9 @@
     "弧长",
     "弧微分"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 439
+   "idx": 449
   },
   {
    "id": "c6-b1",
@@ -658,6 +670,7 @@
    "tags": [
     "面积"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -665,7 +678,7 @@
      "expected": "-1 + E"
     }
    ],
-   "idx": 440
+   "idx": 450
   },
   {
    "id": "c6-b2",
@@ -710,6 +723,7 @@
    "tags": [
     "旋转体体积"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -717,7 +731,7 @@
      "expected": "pi/5"
     }
    ],
-   "idx": 441
+   "idx": 451
   },
   {
    "id": "ky2-1992-5-781072",
@@ -759,8 +773,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 442
+   "idx": 452
   },
   {
    "id": "ky2-1996-5-f56a48",
@@ -802,8 +817,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 443
+   "idx": 453
   },
   {
    "id": "ky2-2003-4-71b408",
@@ -845,8 +861,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 444
+   "idx": 454
   },
   {
    "id": "ky2-2010-12-f61583",
@@ -888,8 +905,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 445
+   "idx": 455
   },
   {
    "id": "ky2-2013-11-4a0eb2",
@@ -931,8 +949,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 446
+   "idx": 456
   },
   {
    "id": "ky-2007-14-274352",
@@ -973,8 +992,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 447
+   "idx": 457
   },
   {
    "id": "ky-2011-9-363262",
@@ -1015,8 +1035,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 448
+   "idx": 458
   },
   {
    "id": "c6-t1",
@@ -1066,8 +1087,9 @@
     "概念",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 449
+   "idx": 459
   },
   {
    "id": "c6-t2",
@@ -1121,8 +1143,9 @@
     "简答",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 450
+   "idx": 460
   },
   {
    "id": "c6-c1",
@@ -1181,6 +1204,7 @@
     "面积",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -1188,7 +1212,7 @@
      "expected": "1/3"
     }
    ],
-   "idx": 451
+   "idx": 461
   },
   {
    "id": "c6-c2",
@@ -1247,6 +1271,7 @@
     "旋转体体积",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -1254,7 +1279,7 @@
      "expected": "8*pi"
     }
    ],
-   "idx": 452
+   "idx": 462
   },
   {
    "id": "c6-c3",
@@ -1314,6 +1339,7 @@
     "旋转体",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -1321,7 +1347,7 @@
      "expected": "0"
     }
    ],
-   "idx": 453
+   "idx": 463
   },
   {
    "id": "ky2-1987-x-5f7bec",
@@ -1366,8 +1392,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 454
+   "idx": 464
   },
   {
    "id": "ky2-1988-x-bb810e",
@@ -1412,8 +1439,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 455
+   "idx": 465
   },
   {
    "id": "ky2-1989-x-8ee7f2",
@@ -1458,8 +1486,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 456
+   "idx": 466
   },
   {
    "id": "ky2-1991-x-72a72e",
@@ -1504,8 +1533,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 457
+   "idx": 467
   },
   {
    "id": "ky2-1992-x-5fa317",
@@ -1550,8 +1580,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 458
+   "idx": 468
   },
   {
    "id": "ky2-1993-x-b66cf3",
@@ -1596,8 +1627,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 459
+   "idx": 469
   },
   {
    "id": "ky2-1994-x-bf3dc6",
@@ -1642,8 +1674,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 460
+   "idx": 470
   },
   {
    "id": "ky2-1995-5-af43c1",
@@ -1688,8 +1721,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 461
+   "idx": 471
   },
   {
    "id": "ky2-1997-x-ead5ac",
@@ -1734,8 +1768,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 462
+   "idx": 472
   },
   {
    "id": "ky2-1997-x-5d01a9",
@@ -1780,8 +1815,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 463
+   "idx": 473
   },
   {
    "id": "ky2-1998-x-b684c7",
@@ -1826,8 +1862,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 464
+   "idx": 474
   },
   {
    "id": "ky2-2000-x-93fac8",
@@ -1872,8 +1909,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 465
+   "idx": 475
   },
   {
    "id": "ky2-2000-x-0b6252",
@@ -1918,8 +1956,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 466
+   "idx": 476
   },
   {
    "id": "ky2-2001-x-484430",
@@ -1964,8 +2003,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 467
+   "idx": 477
   },
   {
    "id": "ky2-2001-x-6f33a2",
@@ -2010,8 +2050,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 468
+   "idx": 478
   },
   {
    "id": "ky2-2003-x-5ae04c",
@@ -2064,8 +2105,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 469
+   "idx": 479
   },
   {
    "id": "ky2-2007-18-6b98bf",
@@ -2122,8 +2164,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 470
+   "idx": 480
   },
   {
    "id": "ky2-2008-19-1e1a23",
@@ -2168,8 +2211,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 471
+   "idx": 481
   },
   {
    "id": "ky2-2013-16-2c38cd",
@@ -2214,8 +2258,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 472
+   "idx": 482
   },
   {
    "id": "ky2-2014-21-6695a2",
@@ -2268,8 +2313,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 473
+   "idx": 483
   },
   {
    "id": "ky2-2015-16-2a3300",
@@ -2314,8 +2360,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 474
+   "idx": 484
   },
   {
    "id": "ky2-2016-20-52c980",
@@ -2360,8 +2407,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 475
+   "idx": 485
   },
   {
    "id": "ky2-2018-20-0425aa",
@@ -2406,8 +2454,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 476
+   "idx": 486
   },
   {
    "id": "ky2-2019-19-26f555",
@@ -2452,8 +2501,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 477
+   "idx": 487
   }
  ]
 }

@@ -46,6 +46,7 @@
     "可分离变量",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "核验",
@@ -53,7 +54,7 @@
      "expected": "0"
     }
    ],
-   "idx": 478
+   "idx": 488
   },
   {
    "id": "ky2-2000-5-f63628",
@@ -100,8 +101,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 479
+   "idx": 489
   },
   {
    "id": "ky2-2003-3-03a24b",
@@ -148,8 +150,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 480
+   "idx": 490
   },
   {
    "id": "ky2-2006-10-427998",
@@ -196,8 +199,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 481
+   "idx": 491
   },
   {
    "id": "ky2-2010-2-02dd25",
@@ -244,8 +248,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 482
+   "idx": 492
   },
   {
    "id": "zk-202210-03",
@@ -291,8 +296,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 483
+   "idx": 493
   },
   {
    "id": "zk-202310-03",
@@ -338,8 +344,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 484
+   "idx": 494
   },
   {
    "id": "zk-202504-03",
@@ -385,8 +392,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 485
+   "idx": 495
   },
   {
    "id": "zk-202510-03",
@@ -432,8 +440,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 486
+   "idx": 496
   },
   {
    "id": "zk-202604-03",
@@ -479,8 +488,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 487
+   "idx": 497
   },
   {
    "id": "c7-s2",
@@ -527,6 +537,7 @@
     "一阶线性方程",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "核验",
@@ -534,7 +545,62 @@
      "expected": "0"
     }
    ],
-   "idx": 488
+   "idx": 498
+  },
+  {
+   "id": "q-191",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.5",
+   "knowledgePoints": [
+    "7.5"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §7.5 可降阶的高阶微分方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "接上题：微分方程 $y''-3y'+2y=0$ 满足初始条件 $y(0)=1,\\ y'(0)=0$ 的特解是",
+   "options": [
+    "$2\\mathrm{e}^{x}-\\mathrm{e}^{2x}$",
+    "$\\mathrm{e}^{x}+\\mathrm{e}^{2x}$",
+    "$\\mathrm{e}^{2x}-\\mathrm{e}^{x}$",
+    "$3\\mathrm{e}^{x}-2\\mathrm{e}^{2x}$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：通解 $y=C_1\\mathrm{e}^{x}+C_2\\mathrm{e}^{2x}$。由 $y(0)=C_1+C_2=1$、$y'(0)=C_1+2C_2=0$ 解得 $C_2=-1,\\ C_1=2$，特解 $y=2\\mathrm{e}^{x}-\\mathrm{e}^{2x}$。A 正确；\nB 不满足 $y'(0)=0$（$y'=e^x+2e^{2x}$，$y'(0)=3$）；C 是 $C_1=-1,C_2=1$（$y(0)=0$）；D 是 $C_1=3,C_2=-2$（$y'(0)=-1$）。",
+   "misconception": "⚠️易错点：先求导再代 $x=0$——$y'=C_1\\mathrm{e}^{x}+2C_2\\mathrm{e}^{2x}$；两个条件解两个常数。",
+   "extension": null,
+   "tags": [
+    "高频",
+    "变式族·二阶常系数"
+   ],
+   "variantGroup": "vg-ode",
+   "verify": [
+    {
+     "desc": "初始条件",
+     "code": "C1,C2=2,-1; (C1+C2==1) and (C1+2*C2==0)",
+     "expected": "True"
+    }
+   ],
+   "idx": 499
   },
   {
    "id": "ky2-2011-4-f65c56",
@@ -581,8 +647,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 489
+   "idx": 500
   },
   {
    "id": "ky2-2019-4-2ac6b3",
@@ -629,8 +696,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 490
+   "idx": 501
   },
   {
    "id": "zk-202210-10",
@@ -676,8 +744,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 491
+   "idx": 502
   },
   {
    "id": "zk-202304-10",
@@ -723,8 +792,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 492
+   "idx": 503
   },
   {
    "id": "zk-202310-10",
@@ -770,8 +840,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 493
+   "idx": 504
   },
   {
    "id": "zk-202404-10",
@@ -817,8 +888,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 494
+   "idx": 505
   },
   {
    "id": "zk-202410-10",
@@ -864,8 +936,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 495
+   "idx": 506
   },
   {
    "id": "zk-202504-10",
@@ -911,8 +984,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 496
+   "idx": 507
   },
   {
    "id": "zk-202510-10",
@@ -958,8 +1032,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 497
+   "idx": 508
   },
   {
    "id": "zk-202604-10",
@@ -1005,8 +1080,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 498
+   "idx": 509
   },
   {
    "id": "c7-s3",
@@ -1055,6 +1131,7 @@
     "高频考点",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "特征根",
@@ -1062,7 +1139,7 @@
      "expected": "[1]"
     }
    ],
-   "idx": 499
+   "idx": 510
   },
   {
    "id": "c7-m1",
@@ -1111,8 +1188,9 @@
     "特征方程",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 500
+   "idx": 511
   },
   {
    "id": "c7-m2",
@@ -1162,8 +1240,9 @@
     "特解设法",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 501
+   "idx": 512
   },
   {
    "id": "c7-j1",
@@ -1208,8 +1287,9 @@
     "通解概念",
     "易错点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 502
+   "idx": 513
   },
   {
    "id": "c7-j2",
@@ -1253,8 +1333,9 @@
    "tags": [
     "可降阶方程"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 503
+   "idx": 514
   },
   {
    "id": "c7-j3",
@@ -1300,8 +1381,9 @@
     "易错点",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 504
+   "idx": 515
   },
   {
    "id": "c7-b1",
@@ -1348,8 +1430,9 @@
    "tags": [
     "可分离变量"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 505
+   "idx": 516
   },
   {
    "id": "c7-b2",
@@ -1393,6 +1476,7 @@
    "tags": [
     "特征方程"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "特征根",
@@ -1400,7 +1484,7 @@
      "expected": "[-2]"
     }
    ],
-   "idx": 506
+   "idx": 517
   },
   {
    "id": "ky2-1994-5-212973",
@@ -1442,8 +1526,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 507
+   "idx": 518
   },
   {
    "id": "ky2-1995-2-03b54a",
@@ -1485,8 +1570,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 508
+   "idx": 519
   },
   {
    "id": "ky-2004-4-b989af",
@@ -1527,8 +1613,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 509
+   "idx": 520
   },
   {
    "id": "ky-2005-2-9bb9ca",
@@ -1569,8 +1656,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 510
+   "idx": 521
   },
   {
    "id": "ky-2006-2-5eda39",
@@ -1611,8 +1699,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 511
+   "idx": 522
   },
   {
    "id": "ky-2007-13-27985a",
@@ -1653,8 +1742,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 512
+   "idx": 523
   },
   {
    "id": "ky-2008-9-9e7044",
@@ -1695,8 +1785,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 513
+   "idx": 524
   },
   {
    "id": "ky-2011-10-59d6ca",
@@ -1737,8 +1828,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 514
+   "idx": 525
   },
   {
    "id": "ky-2012-9-76f4b2",
@@ -1779,8 +1871,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 515
+   "idx": 526
   },
   {
    "id": "ky-2013-10-dc1948",
@@ -1821,8 +1914,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 516
+   "idx": 527
   },
   {
    "id": "ky-2014-11-d20245",
@@ -1863,8 +1957,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 517
+   "idx": 528
   },
   {
    "id": "ky-2017-10-585590",
@@ -1905,8 +2000,52 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 518
+   "idx": 529
+  },
+  {
+   "id": "ky-2019-10-b59962",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "2019 年考研数学（一）第 10 题",
+    "kind": "exam-original",
+    "year": 2019,
+    "region": "全国",
+    "paper": "2019 年考研数学（一）",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2019年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2019年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2019年解析/2019年解析.md"
+   },
+   "stem": "微分方程 $2yy' - y^2 - 2 = 0$ 满足条件 $y(0) = 1$ 的特解 $y = \\_$",
+   "options": null,
+   "answer": [
+    "$\\sqrt{3\\mathrm{e}^x - 2}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\sqrt{3\\mathrm{e}^x - 2}$\n【解】方法一 由 $2yy' - y^2 - 2 = 0$ 得 $\\frac{2y\\mathrm{d}y}{y^2 + 2} = \\mathrm{d}x$\n\n积分得 $\\ln (y^2 + 2) = x + C$\n\n再由 $y(0) = 1$ 得 $C = \\ln 3$ ，即 $\\ln (y^2 +2) = \\ln (3\\mathrm{e}^x)$\n\n从而 $y^{2} + 2 = 3\\mathrm{e}^{x}$ ，故 $y = \\sqrt{3\\mathrm{e}^x - 2}$\n\n方法二 令 $y^{2} = u$ ，则原方程化为 $\\frac{\\mathrm{d}u}{\\mathrm{d}x} - u = 2$\n\n解得 $u = \\left(\\int 2\\mathrm{e}^{\\int -\\mathrm{d}x}\\mathrm{d}x + C\\right)\\mathrm{e}^{-\\int -\\mathrm{d}x} = (-2\\mathrm{e}^{-x} + C)\\mathrm{e}^{x},$\n\n即 $y^{2} = (-2\\mathrm{e}^{-x} + C)\\mathrm{e}^{x} = Ce^{x} - 2$\n\n由 $y(0) = 1$ 得 $C = 3$ ，故 $y = \\sqrt{3\\mathrm{e}^x - 2}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 530
   }
  ]
 }

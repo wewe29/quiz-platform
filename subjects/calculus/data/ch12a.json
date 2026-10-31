@@ -46,6 +46,7 @@
     "几何级数",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "sum",
@@ -53,7 +54,7 @@
      "expected": "1"
     }
    ],
-   "idx": 792
+   "idx": 811
   },
   {
    "id": "zk-202210-04",
@@ -99,8 +100,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 793
+   "idx": 812
   },
   {
    "id": "zk-202304-04",
@@ -146,8 +148,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 794
+   "idx": 813
   },
   {
    "id": "zk-202310-04",
@@ -193,8 +196,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 795
+   "idx": 814
   },
   {
    "id": "zk-202404-04",
@@ -240,8 +244,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 796
+   "idx": 815
   },
   {
    "id": "zk-202410-04",
@@ -287,8 +292,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 797
+   "idx": 816
   },
   {
    "id": "zk-202504-04",
@@ -334,8 +340,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 798
+   "idx": 817
   },
   {
    "id": "zk-202510-04",
@@ -381,8 +388,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 799
+   "idx": 818
   },
   {
    "id": "zk-202604-04",
@@ -428,8 +436,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 800
+   "idx": 819
   },
   {
    "id": "c12-s2",
@@ -477,8 +486,119 @@
     "条件收敛",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 801
+   "idx": 820
+  },
+  {
+   "id": "q-198",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.2",
+   "knowledgePoints": [
+    "12.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.2 常数项级数的审敛法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "下列级数中收敛的是",
+   "options": [
+    "$\\sum\\limits_{n=1}^{\\infty}\\dfrac{1}{\\sqrt{n}}$",
+    "$\\sum\\limits_{n=1}^{\\infty}\\dfrac{1}{n^{2}}$",
+    "$\\sum\\limits_{n=1}^{\\infty}\\dfrac{1}{n}$",
+    "$\\sum\\limits_{n=2}^{\\infty}\\dfrac{1}{n\\ln n}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$p$-级数 $\\sum\\dfrac{1}{n^{p}}$ 当 $p>1$ 收敛、$p\\le1$ 发散。B 的 $p=2>1$ 收敛（且 $\\sum\\dfrac{1}{n^{2}}=\\dfrac{\\pi^{2}}{6}$）；A 的 $p=\\dfrac12$、C 的 $p=1$（调和级数）均发散；\nD 是积分判别法的经典发散级数（$\\int\\dfrac{dx}{x\\ln x}=\\ln\\ln x\\to\\infty$）。\n**创新点**：A、C、D 构成「比 p-级数更细」的三个发散参照系。",
+   "misconception": "⚠️易错点：$\\dfrac{1}{n\\ln n}$ 与 $\\dfrac{1}{n\\ln^{2}n}$ 结论相反（后者收敛，积分判别）。",
+   "extension": null,
+   "tags": [
+    "高频",
+    "变式族·级数判敛"
+   ],
+   "variantGroup": "vg-series",
+   "verify": [
+    {
+     "desc": "B 收敛和",
+     "code": "sp.Sum(1/n**2, (n, 1, oo)).doit()",
+     "expected": "pi**2/6"
+    }
+   ],
+   "idx": 821
+  },
+  {
+   "id": "q-201",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.2",
+   "knowledgePoints": [
+    "12.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.2 常数项级数的审敛法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "（创新）级数 $\\displaystyle\\sum_{n=2}^{\\infty}\\dfrac{1}{n\\ln n}$ 的敛散性是",
+   "options": [
+    "收敛，且和为 $\\ln 2$",
+    "条件收敛",
+    "绝对收敛",
+    "发散（积分判别法）"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：积分判别法——$f(x)=\\dfrac{1}{x\\ln x}$ 单调递减正连续，$\\displaystyle\\int_2^{+\\infty}\\dfrac{dx}{x\\ln x}=\\left[\\ln\\ln x\\right]_2^{+\\infty}=+\\infty$，故级数发散。D 正确。\n**创新点**：$p$-级数判别不了的分界线级数——它是「比 $\\dfrac1n$ 更小但仍发散」的典型；而 $\\sum\\dfrac{1}{n\\ln^{2}n}$ 收敛，分界极其精细。",
+   "misconception": "⚠️易错点：与 $\\dfrac{1}{n\\ln^{2}n}$ 混淆（后者收敛）；直觉认为「比调和级数小就收敛」是错的。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "判敛"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "积分判别",
+     "code": "integrate(1/(x*log(x)), (x, 2, oo))",
+     "expected": "oo"
+    }
+   ],
+   "idx": 822
   },
   {
    "id": "ky2-2016-3-208208",
@@ -525,8 +645,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 802
+   "idx": 823
   },
   {
    "id": "zk-202210-09",
@@ -572,8 +693,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 803
+   "idx": 824
   },
   {
    "id": "zk-202304-09",
@@ -619,8 +741,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 804
+   "idx": 825
   },
   {
    "id": "zk-202310-09",
@@ -666,8 +789,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 805
+   "idx": 826
   },
   {
    "id": "zk-202404-09",
@@ -713,8 +837,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 806
+   "idx": 827
   },
   {
    "id": "zk-202410-09",
@@ -760,8 +885,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 807
+   "idx": 828
   },
   {
    "id": "zk-202504-09",
@@ -807,8 +933,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 808
+   "idx": 829
   },
   {
    "id": "zk-202510-09",
@@ -854,8 +981,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 809
+   "idx": 830
   },
   {
    "id": "zk-202604-09",
@@ -901,8 +1029,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 810
+   "idx": 831
   },
   {
    "id": "c12-s3",
@@ -950,8 +1079,64 @@
     "困难",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 811
+   "idx": 832
+  },
+  {
+   "id": "q-200",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 12,
+   "knowledgePoint": "12.3",
+   "knowledgePoints": [
+    "12.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "（创新）幂级数 $\\displaystyle\\sum_{n=0}^{\\infty}\\dfrac{x^{n}}{n!}$ 的和函数是",
+   "options": [
+    "$\\dfrac{1}{1-x}$",
+    "$-\\ln(1-x)$",
+    "$\\mathrm{e}^{x}$",
+    "$\\sin x$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\mathrm{e}^{x}$ 的麦克劳林展开恰为 $\\displaystyle\\sum_{n=0}^{\\infty}\\dfrac{x^{n}}{n!}$，收敛域 $(-\\infty,+\\infty)$。C 正确；\nA 是 $\\sum x^{n}$；B 是 $\\sum\\dfrac{x^{n}}{n}$；D 是 $\\sum\\dfrac{(-1)^{n}x^{2n+1}}{(2n+1)!}$。\n**创新点**：四个选项对应四个「必背经典幂级数」——记住展开式反推和函数是双向能力。",
+   "misconception": "⚠️易错点：$\\dfrac{x^{n}}{n!}$ 的分母是 $n!$（阶乘），不是 $n$——前者收敛域全轴，后者 $[-1,1)$。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "幂级数"
+   ],
+   "variantGroup": "vg-series",
+   "verify": [
+    {
+     "desc": "和函数",
+     "code": "sp.Sum(x**n/sp.factorial(n), (n, 0, oo)).doit()",
+     "expected": "exp(x)"
+    }
+   ],
+   "idx": 833
   },
   {
    "id": "c12-m1",
@@ -1001,8 +1186,9 @@
     "审敛法",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 812
+   "idx": 834
   },
   {
    "id": "c12-m2",
@@ -1052,8 +1238,9 @@
     "困难",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 813
+   "idx": 835
   },
   {
    "id": "c12-j1",
@@ -1099,8 +1286,9 @@
     "调和级数",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 814
+   "idx": 836
   },
   {
    "id": "c12-j2",
@@ -1145,8 +1333,9 @@
     "绝对收敛",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 815
+   "idx": 837
   },
   {
    "id": "c12-j3",
@@ -1192,8 +1381,9 @@
     "狄利克雷定理",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 816
+   "idx": 838
   },
   {
    "id": "c12-b1",
@@ -1237,6 +1427,7 @@
    "tags": [
     "几何级数"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "sum",
@@ -1244,7 +1435,7 @@
      "expected": "2/3"
     }
    ],
-   "idx": 817
+   "idx": 839
   },
   {
    "id": "c12-b2",
@@ -1292,8 +1483,9 @@
     "和函数",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 818
+   "idx": 840
   },
   {
    "id": "ky-2008-11-99256e",
@@ -1334,8 +1526,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 819
+   "idx": 841
   },
   {
    "id": "ky-2017-12-bf8a05",
@@ -1376,8 +1569,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 820
+   "idx": 842
   },
   {
    "id": "ky-2019-11-376d4d",
@@ -1418,8 +1612,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 821
+   "idx": 843
   },
   {
    "id": "c12-t1",
@@ -1470,63 +1665,9 @@
     "概念",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 822
-  },
-  {
-   "id": "c12-t2",
-   "type": "short",
-   "typeGroup": "short",
-   "difficulty": "basic",
-   "chapter": 12,
-   "knowledgePoint": "12.2",
-   "knowledgePoints": [
-    "12.2"
-   ],
-   "source": {
-    "text": "同济《高等数学》第七版 §12.2 常数项级数的审敛法",
-    "kind": "textbook",
-    "year": null,
-    "region": null,
-    "paper": null,
-    "number": null,
-    "url": null
-   },
-   "provenance": {
-    "level": null,
-    "url": null,
-    "verifiedAt": null,
-    "note": ""
-   },
-   "stem": "简答：叙述正项级数的比较判别法（含极限形式）与比值判别法的内容，并说明各自的适用场景。",
-   "options": null,
-   "answer": [],
-   "accept": null,
-   "answerText": "比较判别法：设 $0\\le a_n\\le b_n$，若 $\\sum b_n$ 收敛则 $\\sum a_n$ 收敛；若 $\\sum a_n$ 发散则 $\\sum b_n$ 发散（大敛推小敛、小散推大散）。极限形式：$\\lim\\dfrac{a_n}{b_n}=l$，当 $0<l<+\\infty$ 时两级数同敛散；$l=0$ 时由 $\\sum b_n$ 收敛推 $\\sum a_n$ 收敛。比值判别法：$\\rho=\\lim\\dfrac{a_{n+1}}{a_n}$，$\\rho<1$ 收敛、$\\rho>1$（含 $\\infty$）发散、$\\rho=1$ 失效。适用场景：比较法用于与 $p$-级数、几何级数对照（通项含 $n^p$、多项式比）；比值法用于通项含 $n!$、$c^n$、$n^n$ 等增长极快因子的情形。",
-   "points": [
-    {
-     "text": "比较判别法：大敛推小敛、小散推大散；基准级数是 $p$-级数与几何级数；极限形式 $\\lim\\dfrac{a_n}{b_n}=l\\in(0,+\\infty)$ 时同敛散。",
-     "partial": 2
-    },
-    {
-     "text": "比值判别法：$\\rho=\\lim\\dfrac{a_{n+1}}{a_n}$，$\\rho<1$ 收敛、$\\rho>1$ 发散、$\\rho=1$ 失效。",
-     "partial": 2
-    },
-    {
-     "text": "选用经验：通项含 $n!$、$c^n$、$n^n$ 优先比值法；只含幂函数比用比较法（$\\sum\\dfrac1{n^p}$ 用比值法恒得 $\\rho=1$，须换方法）。",
-     "partial": 2
-    }
-   ],
-   "explanation": "**答案依据**：比较判别法、极限形式与比值判别法见 §12.2。\n**考点出处**：同济《高等数学》第七版 §12.2 常数项级数的审敛法。",
-   "misconception": "⚠️易错点：比较法不等号方向（大敛推小敛）易背反；比值法 $\\rho=1$ 时只能换用其他方法，如 $\\sum\\dfrac1{n^p}$ 用比值法恒得 $\\rho=1$。",
-   "extension": null,
-   "tags": [
-    "审敛法",
-    "简答",
-    "高频考点"
-   ],
-   "verify": [],
-   "idx": 823
+   "idx": 844
   }
  ]
 }

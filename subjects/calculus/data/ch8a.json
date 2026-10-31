@@ -46,6 +46,7 @@
     "向量积",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "cross",
@@ -53,7 +54,7 @@
      "expected": "Matrix([[5], [5], [-5]])"
     }
    ],
-   "idx": 561
+   "idx": 574
   },
   {
    "id": "ky2-1989-5-01a5ae",
@@ -100,8 +101,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 562
+   "idx": 575
   },
   {
    "id": "ky2-2010-3-4a0f6b",
@@ -148,8 +150,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 563
+   "idx": 576
   },
   {
    "id": "zk-202210-01",
@@ -195,8 +198,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 564
+   "idx": 577
   },
   {
    "id": "zk-202304-01",
@@ -242,8 +246,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 565
+   "idx": 578
   },
   {
    "id": "zk-202310-01",
@@ -289,8 +294,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 566
+   "idx": 579
   },
   {
    "id": "zk-202404-01",
@@ -336,8 +342,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 567
+   "idx": 580
   },
   {
    "id": "zk-202410-01",
@@ -383,8 +390,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 568
+   "idx": 581
   },
   {
    "id": "zk-202504-01",
@@ -430,8 +438,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 569
+   "idx": 582
   },
   {
    "id": "zk-202510-01",
@@ -477,8 +486,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 570
+   "idx": 583
   },
   {
    "id": "zk-202604-01",
@@ -524,8 +534,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 571
+   "idx": 584
   },
   {
    "id": "c8-s2",
@@ -572,8 +583,9 @@
     "平面方程",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 572
+   "idx": 585
   },
   {
    "id": "zk-202210-06",
@@ -619,8 +631,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 573
+   "idx": 586
   },
   {
    "id": "zk-202304-06",
@@ -666,8 +679,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 574
+   "idx": 587
   },
   {
    "id": "zk-202310-06",
@@ -713,8 +727,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 575
+   "idx": 588
   },
   {
    "id": "zk-202404-06",
@@ -760,8 +775,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 576
+   "idx": 589
   },
   {
    "id": "zk-202410-06",
@@ -807,8 +823,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 577
+   "idx": 590
   },
   {
    "id": "zk-202504-06",
@@ -854,8 +871,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 578
+   "idx": 591
   },
   {
    "id": "zk-202510-06",
@@ -901,8 +919,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 579
+   "idx": 592
   },
   {
    "id": "zk-202604-06",
@@ -948,8 +967,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 580
+   "idx": 593
   },
   {
    "id": "c8-s3",
@@ -996,6 +1016,7 @@
     "线面夹角",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "sinφ",
@@ -1003,7 +1024,7 @@
      "expected": "0"
     }
    ],
-   "idx": 581
+   "idx": 594
   },
   {
    "id": "c8-m1",
@@ -1053,8 +1074,9 @@
     "向量积",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 582
+   "idx": 595
   },
   {
    "id": "c8-m2",
@@ -1103,6 +1125,7 @@
     "平面夹角",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "cosθ",
@@ -1115,7 +1138,7 @@
      "expected": "0"
     }
    ],
-   "idx": 583
+   "idx": 596
   },
   {
    "id": "c8-j1",
@@ -1160,8 +1183,9 @@
     "数量积",
     "垂直"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 584
+   "idx": 597
   },
   {
    "id": "c8-j2",
@@ -1207,8 +1231,9 @@
     "运算律",
     "易错点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 585
+   "idx": 598
   },
   {
    "id": "c8-j3",
@@ -1254,8 +1279,9 @@
     "柱面",
     "易错点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 586
+   "idx": 599
   },
   {
    "id": "c8-b1",
@@ -1298,6 +1324,7 @@
    "tags": [
     "向量模"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "norm",
@@ -1305,7 +1332,7 @@
      "expected": "3"
     }
    ],
-   "idx": 587
+   "idx": 600
   },
   {
    "id": "c8-b2",
@@ -1351,6 +1378,7 @@
    "tags": [
     "向量积"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "cross",
@@ -1358,7 +1386,7 @@
      "expected": "Matrix([[1], [-1], [1]])"
     }
    ],
-   "idx": 588
+   "idx": 601
   },
   {
    "id": "ky-2005-3-a5291c",
@@ -1399,8 +1427,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 589
+   "idx": 602
   },
   {
    "id": "ky-2005-4-5a07c9",
@@ -1441,8 +1470,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 590
+   "idx": 603
   },
   {
    "id": "ky-2006-3-f0942e",
@@ -1483,8 +1513,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 591
+   "idx": 604
   },
   {
    "id": "ky-2006-4-f9e734",
@@ -1525,8 +1556,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 592
+   "idx": 605
   },
   {
    "id": "ky-2010-13-ddf9f2",
@@ -1567,8 +1599,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 593
+   "idx": 606
   }
  ]
 }

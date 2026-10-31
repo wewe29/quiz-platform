@@ -47,8 +47,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 290
+   "idx": 292
   },
   {
    "id": "ky-2012-1-789f4e",
@@ -112,8 +113,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 291
+   "idx": 293
   },
   {
    "id": "ky-2014-1-dc2a9b",
@@ -165,8 +167,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 292
+   "idx": 294
   },
   {
    "id": "ky-2015-1-ce8ae1",
@@ -230,8 +233,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 293
+   "idx": 295
   },
   {
    "id": "ky-2019-3-b16227",
@@ -283,8 +287,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 294
+   "idx": 296
   },
   {
    "id": "c3-c3",
@@ -342,6 +347,7 @@
     "证明题",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "构造核验",
@@ -349,7 +355,138 @@
      "expected": "0"
     }
    ],
-   "idx": 295
+   "idx": 297
+  },
+  {
+   "id": "q-182",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 3,
+   "knowledgePoint": "3.3",
+   "knowledgePoints": [
+    "3.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §3.3 泰勒公式",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求极限 $\\lim\\limits_{x\\to0}\\dfrac{x-\\ln(1+x)}{x^{2}}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\ln(1+x)=x-\\dfrac{x^{2}}{2}+o(x^{2})$，故分子 $=x-\\left(x-\\dfrac{x^{2}}{2}\\right)+o(x^{2})=\\dfrac{x^{2}}{2}+o(x^{2})$，极限 $=\\boxed{\\dfrac{1}{2}}$。\n**举一反三**：泰勒展开比洛必达稳定——洛必达对本题要做两次且分母越导越复杂。",
+   "points": [
+    {
+     "text": "写出 $\\ln(1+x)$ 的二阶麦克劳林展开",
+     "partial": 2
+    },
+    {
+     "text": "分子化简为 $\\dfrac{x^{2}}{2}+o(x^{2})$",
+     "partial": 2
+    },
+    {
+     "text": "极限 $=\\dfrac{1}{2}$",
+     "partial": 2
+    },
+    {
+     "text": "对比洛必达说明展开法的优势",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§3.3 泰勒公式（麦克劳林）。\n**考点出处**：同济《高等数学》第七版 §3.3；题型改编自：考研数学真题经典模型（泰勒求极限）。",
+   "misconception": "⚠️易错点：把 $\\ln(1+x)$ 展开到一阶（$x$）——分子只剩 $o(x)$ 与 $x^{2}$ 不同阶，无法比较。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "变式族·泰勒展开"
+   ],
+   "variantGroup": "vg-taylor",
+   "verify": [
+    {
+     "desc": "极限",
+     "code": "limit((x-log(1+x))/x**2, x, 0)",
+     "expected": "1/2"
+    }
+   ],
+   "idx": 298
+  },
+  {
+   "id": "q-183",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 3,
+   "knowledgePoint": "3.3",
+   "knowledgePoints": [
+    "3.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §3.3 泰勒公式",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "求极限 $\\lim\\limits_{x\\to0}\\dfrac{\\sin x-x}{x^{3}}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\sin x=x-\\dfrac{x^{3}}{6}+o(x^{3})$，分子 $=-\\dfrac{x^{3}}{6}+o(x^{3})$，极限 $=\\boxed{-\\dfrac{1}{6}}$。\n**举一反三**：本族三题（$\\mathrm{e}^{x}$、$\\ln(1+x)$、$\\sin x$）的通用套路：把每个函数展到与分母同阶，逐项相减后读出首项系数。",
+   "points": [
+    {
+     "text": "写出 $\\sin x$ 的三阶麦克劳林展开",
+     "partial": 2
+    },
+    {
+     "text": "分子 $=-\\dfrac{x^{3}}{6}+o(x^{3})$",
+     "partial": 2
+    },
+    {
+     "text": "极限 $=-\\dfrac{1}{6}$（注意负号）",
+     "partial": 2
+    },
+    {
+     "text": "对比洛必达：三次求导越导越繁，展开法一次到位",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§3.3 泰勒公式。\n**考点出处**：同济《高等数学》第七版 §3.3；题型改编自：考研数学真题经典模型（泰勒求极限）。",
+   "misconception": "⚠️易错点：符号——$\\sin x$ 比 $x$ 小，分子为负；很多同学漏掉负号得 $+\\dfrac{1}{6}$。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编",
+    "变式族·泰勒展开"
+   ],
+   "variantGroup": "vg-taylor",
+   "verify": [
+    {
+     "desc": "极限",
+     "code": "limit((sin(x)-x)/x**3, x, 0)",
+     "expected": "-1/6"
+    }
+   ],
+   "idx": 299
   },
   {
    "id": "ky2-1988-x-12f44b",
@@ -394,8 +531,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 296
+   "idx": 300
   },
   {
    "id": "ky2-1989-x-e400f5",
@@ -440,8 +578,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 297
+   "idx": 301
   },
   {
    "id": "ky2-1990-3-400e2b",
@@ -486,8 +625,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 298
+   "idx": 302
   },
   {
    "id": "ky2-1993-x-9b09ab",
@@ -532,8 +672,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 299
+   "idx": 303
   },
   {
    "id": "ky2-1993-x-d8134b",
@@ -582,8 +723,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 300
+   "idx": 304
   },
   {
    "id": "ky2-1994-x-fc5517",
@@ -632,8 +774,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 301
+   "idx": 305
   },
   {
    "id": "ky2-1995-6-fd15aa",
@@ -678,8 +821,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 302
+   "idx": 306
   },
   {
    "id": "ky2-1996-4-395716",
@@ -724,8 +868,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 303
+   "idx": 307
   },
   {
    "id": "ky2-1997-x-76fb97",
@@ -774,8 +919,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 304
+   "idx": 308
   },
   {
    "id": "ky2-1998-x-788937",
@@ -820,8 +966,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 305
+   "idx": 309
   },
   {
    "id": "ky2-1999-x-ca9056",
@@ -870,8 +1017,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 306
+   "idx": 310
   },
   {
    "id": "ky2-2001-x-6b7e68",
@@ -916,8 +1064,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 307
+   "idx": 311
   },
   {
    "id": "ky2-2002-x-9f9ec6",
@@ -962,8 +1111,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 308
+   "idx": 312
   },
   {
    "id": "ky2-2003-x-031391",
@@ -1020,8 +1170,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 309
+   "idx": 313
   },
   {
    "id": "ky2-2006-19-f91ba5",
@@ -1066,8 +1217,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 310
+   "idx": 314
   },
   {
    "id": "ky2-2011-16-aa9331",
@@ -1116,8 +1268,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 311
+   "idx": 315
   },
   {
    "id": "ky2-2012-19-716720",
@@ -1162,8 +1315,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 312
+   "idx": 316
   },
   {
    "id": "ky2-2013-19-f210ff",
@@ -1212,8 +1366,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 313
+   "idx": 317
   },
   {
    "id": "ky2-2014-19-86c77a",
@@ -1258,8 +1413,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 314
+   "idx": 318
   },
   {
    "id": "ky2-2015-17-7e6af5",
@@ -1304,8 +1460,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 315
+   "idx": 319
   },
   {
    "id": "ky2-2015-19-09cf3f",
@@ -1370,8 +1527,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 316
+   "idx": 320
   },
   {
    "id": "ky2-2016-16-8bbd04",
@@ -1420,8 +1578,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 317
+   "idx": 321
   },
   {
    "id": "ky2-2016-17-bc851a",
@@ -1466,8 +1625,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 318
+   "idx": 322
   },
   {
    "id": "ky2-2019-15-4c1d52",
@@ -1512,8 +1672,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 319
+   "idx": 323
   },
   {
    "id": "ky-2004-19-b0067f",
@@ -1577,8 +1738,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 320
+   "idx": 324
   },
   {
    "id": "ky-2007-19-4b3f27",
@@ -1642,8 +1804,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 321
+   "idx": 325
   },
   {
    "id": "ky-2010-16-ff7c69",
@@ -1707,8 +1870,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 322
+   "idx": 326
   },
   {
    "id": "ky-2013-18-864dce",
@@ -1772,8 +1936,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 323
+   "idx": 327
   },
   {
    "id": "ky-2014-16-8b486c",
@@ -1837,8 +2002,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 324
+   "idx": 328
   },
   {
    "id": "ky-2016-17-400962",
@@ -1902,8 +2068,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 325
+   "idx": 329
   },
   {
    "id": "ky-2017-17-6a672f",
@@ -1959,8 +2126,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 326
+   "idx": 330
   },
   {
    "id": "ky-2018-16-508658",
@@ -2016,8 +2184,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 327
+   "idx": 331
   },
   {
    "id": "ky-2021-20-977d26",
@@ -2081,8 +2250,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 328
+   "idx": 332
   }
  ]
 }

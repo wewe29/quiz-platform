@@ -46,8 +46,9 @@
     "不定积分性质",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 329
+   "idx": 333
   },
   {
    "id": "ky2-1992-5-3e7b69",
@@ -94,8 +95,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 330
+   "idx": 334
   },
   {
    "id": "c4-s2",
@@ -142,6 +144,7 @@
     "第二类换元",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "求导还原",
@@ -149,7 +152,7 @@
      "expected": "0"
     }
    ],
-   "idx": 331
+   "idx": 335
   },
   {
    "id": "c4-s3",
@@ -196,6 +199,7 @@
     "分部积分",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "求导还原",
@@ -203,7 +207,7 @@
      "expected": "0"
     }
    ],
-   "idx": 332
+   "idx": 336
   },
   {
    "id": "c4-m1",
@@ -251,8 +255,9 @@
     "原函数",
     "概念辨析"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 333
+   "idx": 337
   },
   {
    "id": "c4-m2",
@@ -302,6 +307,7 @@
     "凑微分",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "C项核验(取f=cosx)",
@@ -309,7 +315,7 @@
      "expected": "0"
     }
    ],
-   "idx": 334
+   "idx": 338
   },
   {
    "id": "c4-j1",
@@ -354,8 +360,9 @@
     "不定积分",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 335
+   "idx": 339
   },
   {
    "id": "c4-j2",
@@ -400,8 +407,9 @@
     "凑微分",
     "第一类换元"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 336
+   "idx": 340
   },
   {
    "id": "c4-j3",
@@ -446,8 +454,9 @@
     "分部积分",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 337
+   "idx": 341
   },
   {
    "id": "c4-b1",
@@ -494,8 +503,9 @@
     "基本积分",
     "凑微分"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 338
+   "idx": 342
   },
   {
    "id": "c4-b2",
@@ -542,6 +552,7 @@
    "tags": [
     "凑微分"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "求导还原",
@@ -549,7 +560,7 @@
      "expected": "0"
     }
    ],
-   "idx": 339
+   "idx": 343
   },
   {
    "id": "ky2-1994-4-9dba10",
@@ -591,8 +602,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 340
+   "idx": 344
   },
   {
    "id": "ky2-1997-3-70bde9",
@@ -634,8 +646,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 341
+   "idx": 345
   },
   {
    "id": "c4-t1",
@@ -685,8 +698,9 @@
     "概念",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 342
+   "idx": 346
   },
   {
    "id": "c4-t2",
@@ -740,8 +754,9 @@
     "简答",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 343
+   "idx": 347
   },
   {
    "id": "c4-c1",
@@ -800,6 +815,7 @@
     "凑微分",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "积分",
@@ -807,7 +823,7 @@
      "expected": "sin(x**2)/2"
     }
    ],
-   "idx": 344
+   "idx": 348
   },
   {
    "id": "c4-c2",
@@ -866,6 +882,7 @@
     "分部积分",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "积分",
@@ -873,7 +890,7 @@
      "expected": "x**2*log(x)/2 - x**2/4"
     }
    ],
-   "idx": 345
+   "idx": 349
   },
   {
    "id": "c4-c3",
@@ -933,6 +950,7 @@
     "综合",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "积分",
@@ -945,7 +963,7 @@
      "expected": "0"
     }
    ],
-   "idx": 346
+   "idx": 350
   },
   {
    "id": "ky2-1989-2-e66af2",
@@ -990,8 +1008,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 347
+   "idx": 351
   },
   {
    "id": "ky2-1990-4-7185cb",
@@ -1036,8 +1055,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 348
+   "idx": 352
   },
   {
    "id": "ky2-1991-4-240556",
@@ -1082,8 +1102,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 349
+   "idx": 353
   },
   {
    "id": "ky2-1992-3-382eba",
@@ -1128,8 +1149,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 350
+   "idx": 354
   },
   {
    "id": "ky2-1995-3-5641db",
@@ -1174,8 +1196,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 351
+   "idx": 355
   },
   {
    "id": "ky2-1996-2-0acbdc",
@@ -1220,8 +1243,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 352
+   "idx": 356
   },
   {
    "id": "ky2-1997-3-d8f1a4",
@@ -1266,8 +1290,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 353
+   "idx": 357
   },
   {
    "id": "ky2-2000-x-9c5df4",
@@ -1312,8 +1337,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 354
+   "idx": 358
   },
   {
    "id": "ky2-2001-x-be6727",
@@ -1358,8 +1384,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 355
+   "idx": 359
   },
   {
    "id": "ky2-2006-16-fdd8ec",
@@ -1404,8 +1431,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 356
+   "idx": 360
   },
   {
    "id": "ky2-2016-21-8260a1",
@@ -1466,8 +1494,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 357
+   "idx": 361
   }
  ]
 }

@@ -97,45 +97,45 @@
   "12.7": "傅里叶级数"
  },
  "caliber": {
-  "total": 856,
+  "total": 879,
   "byType": {
-   "single": 223,
+   "single": 233,
    "multi": 24,
    "judge": 36,
    "blank": 147,
    "short": 24,
-   "calc": 402
+   "calc": 415
   },
   "byDifficulty": {
-   "basic": 221,
-   "medium": 341,
-   "hard": 294
+   "basic": 222,
+   "medium": 353,
+   "hard": 304
   },
   "byChapter": {
    "1": 154,
    "2": 97,
-   "3": 78,
+   "3": 82,
    "4": 29,
-   "5": 70,
+   "5": 76,
    "6": 50,
-   "7": 83,
+   "7": 86,
    "8": 66,
-   "9": 71,
-   "10": 58,
+   "9": 74,
+   "10": 61,
    "11": 36,
-   "12": 64
+   "12": 68
   },
   "limits": {
-   "singleMin": 36,
-   "singleMax": 76,
+   "singleMin": 37,
+   "singleMax": 79,
    "multiRange": 12
   }
  },
  "summary": {
-  "sub": "同济第七版 12 章 · 856 题 · 含考研真题 676 题",
-  "desc": "高等数学 856 题刷题子站：12 章、三难度、逐题解析与考点出处，考研真题标注年份卷种。",
-  "aboutHtml": "<p><b>内容来源</b>：以同济大学《高等数学》第七版章节体系为骨架出题；其中 <b>676</b> 题取自 1987–2026 年考研数学真题（原题或数据改编），出处栏标明年份与题号。</p><p><b>题型分布</b>：单选 223 · 多选 24 · 判断 36 · 填空 147 · 简答与名词解释 24 · 计算与分析 402；难度分基础 / 中等 / 困难三档。</p><p><b>判分口径</b>：客观题自动判分（多选少选、错选均 0 分）；简答与计算题<b>按采分点自评</b>（勾选「得到 / 未得到」），主观题满分 = 采分点分值之和。</p><p><b>多选计分</b>：全对得满分；<b>少选、错选均 0 分</b>。</p><p><b>自托管说明</b>：全站资源（题库数据、公式渲染库、字体）均自托管于本站，无任何第三方依赖；进度数据保存在浏览器本地。</p>",
-  "footerHtml": "<p>题库共 <b>856</b> 题：单选 223 · 多选 24 · 判断 36 · 填空 147 · 简答与名词解释 24 · 计算与分析 402；难度 基础 / 中等 / 困难 三档。</p><p>内容基准：同济大学《高等数学》第七版；真题题目标注年份与卷种。</p>",
+  "sub": "同济第七版 12 章 · 879 题 · 含考研真题 676 题",
+  "desc": "高等数学 879 题刷题子站：12 章、三难度、逐题解析与考点出处，考研真题标注年份卷种。",
+  "aboutHtml": "<p><b>内容来源</b>：以同济大学《高等数学》第七版章节体系为骨架出题；其中 <b>676</b> 题取自 1987–2026 年考研数学真题（原题或数据改编），出处栏标明年份与题号。</p><p><b>题型分布</b>：单选 233 · 多选 24 · 判断 36 · 填空 147 · 简答与名词解释 24 · 计算与分析 415；难度分基础 / 中等 / 困难三档。</p><p><b>判分口径</b>：客观题自动判分（多选少选、错选均 0 分）；简答与计算题<b>按采分点自评</b>（勾选「得到 / 未得到」），主观题满分 = 采分点分值之和。</p><p><b>多选计分</b>：全对得满分；<b>少选、错选均 0 分</b>。</p><p><b>自托管说明</b>：全站资源（题库数据、公式渲染库、字体）均自托管于本站，无任何第三方依赖；进度数据保存在浏览器本地。</p>",
+  "footerHtml": "<p>题库共 <b>879</b> 题：单选 233 · 多选 24 · 判断 36 · 填空 147 · 简答与名词解释 24 · 计算与分析 415；难度 基础 / 中等 / 困难 三档。</p><p>内容基准：同济大学《高等数学》第七版；真题题目标注年份与卷种。</p>",
   "realExamTagged": 676
  },
  "shards": [
@@ -143,127 +143,127 @@
    "file": "ch1a.json",
    "chapter": 1,
    "count": 77,
-   "sha256": "9F83C0615F689C10935D2883CF725B788E43E3E10D2850E2E0A05200054E1AB0"
+   "sha256": "406DA575B3D4AD3FC13862BB9BC650C5E75346F655A07CC53B945368D71CCA91"
   },
   {
    "file": "ch1b.json",
    "chapter": 1,
    "count": 38,
-   "sha256": "368433CA6F41BED3DE40531F2F58AFA2DD0E565A16D994777551B9E216375985"
+   "sha256": "9D1213606AEB5AB65D9FB48FB1CD9696F4CA0E7B159DF983F138870E33081C3B"
   },
   {
    "file": "ch1c.json",
    "chapter": 1,
    "count": 39,
-   "sha256": "4236E0CF40412A22661F57840E8D5D371B59F613F1A2B8F22867605910706889"
+   "sha256": "AAC76AA11BCAD92C2ECE9BEF2ECC0DFB44B6FB2C48BB0DCCD1470F57032CFE5B"
   },
   {
    "file": "ch2a.json",
    "chapter": 2,
    "count": 48,
-   "sha256": "6374E4D48DA24F7490F2863B4E1C62B0D68426415EF1E47CC191E4584392EAB9"
+   "sha256": "2D20C96C1796E28C737C5272196A7A62FFCE02190C380997743E8BEF52350E71"
   },
   {
    "file": "ch2b.json",
    "chapter": 2,
    "count": 49,
-   "sha256": "7CB4084FA7DD6506F4E55D754FE750383BD9D4F73ABE40CFC4E431A6377DC2F4"
+   "sha256": "54C1373A3C771F39389E8CB2566D1A9D0B2C3A1036B0EDEE14C07FC3026DB145"
   },
   {
    "file": "ch3a.json",
    "chapter": 3,
-   "count": 39,
-   "sha256": "775A6633964D20D1A8563FFF970CBAD1C3EEF857B270E4932D3E6DF946695145"
+   "count": 41,
+   "sha256": "637E73AF2B351494EDD7C5AF7C9C0D29F8FE3D95550A10C948FF6ACF8977167B"
   },
   {
    "file": "ch3b.json",
    "chapter": 3,
-   "count": 39,
-   "sha256": "97777AAB53F741FBE2CE3C277630295C9A79585BB44D756427669876545189AB"
+   "count": 41,
+   "sha256": "3280E433B8086BFB5FF942C8D995A78483777112CDC37B805BD287C26EDBEAA8"
   },
   {
    "file": "ch4.json",
    "chapter": 4,
    "count": 29,
-   "sha256": "44EAE5ECC9FD43388D3025FE4C91FE2C70E458C990B0B9FA2867CC2775300C58"
+   "sha256": "E68D629A386605DE0690D924FCBAEB50CFC2340E0AC1DE4C23C960B01F0123AB"
   },
   {
    "file": "ch5.json",
    "chapter": 5,
-   "count": 70,
-   "sha256": "3E34BC89686D556A5B9380C6D42119B03EFD0062E53A28C1FF8B8F4962768602"
+   "count": 76,
+   "sha256": "CA09F343D558DF76D3843C189BF83A13B3918A75819EC8F56EDA2E1B3A3C74C4"
   },
   {
    "file": "ch6.json",
    "chapter": 6,
    "count": 50,
-   "sha256": "3DF4C69684424637099144A7B679D590678187278849DC6E6E76CC7D308A06C4"
+   "sha256": "D8B0B58BA74830702FE08232790D690463D598A4E9B6948DDFEE44C27667B1B9"
   },
   {
    "file": "ch7a.json",
    "chapter": 7,
-   "count": 41,
-   "sha256": "DC33998994C26526CF4492FD0F70192D5F81EDB815CFCCFD76816BA18488BA38"
+   "count": 43,
+   "sha256": "98980B15B916D6C50E85CB3E8E82B1B6DB4503C90665B1765B0C532DBB0861BB"
   },
   {
    "file": "ch7b.json",
    "chapter": 7,
-   "count": 42,
-   "sha256": "73D5FEB643F80F570F01C083D003F2F5892487729D089057CC69DCCB6885F8DB"
+   "count": 43,
+   "sha256": "402835B9FEBCDC7B0EC51FB4BB43CBC12A4B0AAAC611BBB420E3FA8F1A2C0826"
   },
   {
    "file": "ch8a.json",
    "chapter": 8,
    "count": 33,
-   "sha256": "EA7D4FE3B70B12FC421A6811B53F31C46C37A61EA34F4EAC5659092AD7EE98A9"
+   "sha256": "0B4E0DE5CFAF32CB5C8884F3DCAB840ADEF33F2D2E7DE7F6F4E85724F8797EC6"
   },
   {
    "file": "ch8b.json",
    "chapter": 8,
    "count": 33,
-   "sha256": "6CB1B750EF1F7AF8A28F1C4F82597564B617B26E3430F21BE63F41746FF902E2"
+   "sha256": "56333F367E60F5739C7B257142E79E73EEB186F41FE8A6BB1E2F5AB8D16B80EC"
   },
   {
    "file": "ch9a.json",
    "chapter": 9,
-   "count": 35,
-   "sha256": "FB0AD355D6D132A96B5E8963B3A5C7867797B1D33CF4FBD3CB765C8101F1B503"
+   "count": 37,
+   "sha256": "E65E92D47E181CBD3749FF301DAEE27BB16364B09974234A9CD89B6A6BB8D4CC"
   },
   {
    "file": "ch9b.json",
    "chapter": 9,
-   "count": 36,
-   "sha256": "B804126B551032D0BDC049C5E3A3FF4D7254B54213C230902B2C3ACAE8197716"
+   "count": 37,
+   "sha256": "4E53919FAE43B5A1FADAEC353AAD575702EAF36B21FB1979ED0CE42EAF595B8E"
   },
   {
    "file": "ch10a.json",
    "chapter": 10,
-   "count": 29,
-   "sha256": "7A61B9AE1C595C82907E46EFE20C856133B2FFBA44D5E05725C218BFF544308F"
+   "count": 30,
+   "sha256": "7121CF0F6D3593B1B62818E257DF95D98143519DC7432FB0CFEFB8CCC6CE7184"
   },
   {
    "file": "ch10b.json",
    "chapter": 10,
-   "count": 29,
-   "sha256": "75276C156543D530D3FF712831FB53AC7B776B797DE9CD4525FDC4B2C973E6ED"
+   "count": 31,
+   "sha256": "E710FBA0ADF4F669E396EEDAB4FA489DAA9BB30A8B7159E0528CDC1DBCE441E4"
   },
   {
    "file": "ch11.json",
    "chapter": 11,
    "count": 36,
-   "sha256": "EF5578D690428717798418056347F0D1E1E14F845DA5FE6013574150CE95FC66"
+   "sha256": "DC48097C034743C990D3E1E126CE574DEF564A5B76879ACC6299033A2B925316"
   },
   {
    "file": "ch12a.json",
    "chapter": 12,
-   "count": 32,
-   "sha256": "7CF206FEE976CBE5AB76F3F2BDCC17A7F27E35E85DEF01E38B1E653E040E3C62"
+   "count": 34,
+   "sha256": "5EB8A13FF1C3833751E8E9EC0EDD12C81BF521452226868665A4969ECB6E5BAB"
   },
   {
    "file": "ch12b.json",
    "chapter": 12,
-   "count": 32,
-   "sha256": "53BF8162540FE37AD61EBD1B7092BB36E1B96E87D3970867F2DB7AAEA369EBF6"
+   "count": 34,
+   "sha256": "A162F5DB43B96697D7A0C4DCE40EF5A0DEE36FA97B060D388DE77C356B2FDC13"
   }
  ]
 }

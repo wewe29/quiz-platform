@@ -46,7 +46,7 @@ def Q(qtype, diff, kp, stem, answer=None, options=None, answer_text=None,
       points=None, expl="", mis=None, ext=None, tags=None, src=None,
       kind="textbook", accept=None, verify=None, qid=None,
       src_year=None, src_region=None, src_paper=None, src_number=None,
-      src_url=None, prov=None, kps=None):
+      src_url=None, prov=None, kps=None, variant_group=None):
     """构造一道题。
 
     qtype      : single/multi/judge/blank/term/short/calc
@@ -73,6 +73,7 @@ def Q(qtype, diff, kp, stem, answer=None, options=None, answer_text=None,
     src_url    : 可点开的来源 URL（exam-original 必填）
     prov       : dict，provenance 覆盖值，如 {"level":"original","url":...,"note":...}
     kps        : 附属知识点 list[str]（真题常跨节次）
+    variant_group: 举一反三变式族 id（同族题在子站组成模块）
     """
     _COUNTER["n"] += 1
     qid = qid or ("q-%03d" % _COUNTER["n"])
@@ -136,6 +137,7 @@ def Q(qtype, diff, kp, stem, answer=None, options=None, answer_text=None,
         "misconception": _fix_latex(mis) if mis else mis,
         "extension": _fix_latex(ext) if ext else ext,
         "tags": tags or [],
+        "variantGroup": variant_group,
         "verify": verify or [],
     }
 
@@ -148,7 +150,7 @@ def load_bank(chapters=None):
     """
     here = os.path.dirname(os.path.abspath(__file__))
     order = ["ch1", "ch2", "ch3", "ch4", "ch5", "ch6", "ch7",
-             "ch8", "ch9", "ch10", "ch11", "ch12"]
+             "ch8", "ch9", "ch10", "ch11", "ch12", "special"]
     if chapters is not None:
         order = [c for c in order if c in set(chapters)]
     allq = []

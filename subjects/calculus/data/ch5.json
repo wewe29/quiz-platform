@@ -45,6 +45,7 @@
    "tags": [
     "几何意义"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -52,7 +53,62 @@
      "expected": "0"
     }
    ],
-   "idx": 358
+   "idx": 362
+  },
+  {
+   "id": "q-187",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.4 反常积分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\displaystyle\\int_{-1}^{1}\\dfrac{x}{1+x^{2}}\\,\\mathrm{d}x=$",
+   "options": [
+    "$0$",
+    "$\\dfrac{\\ln 2}{2}$",
+    "$\\ln 2$",
+    "$\\dfrac{1}{2}$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：被积函数 $\\dfrac{x}{1+x^{2}}$ 是奇函数，对称区间上奇函数积分为 $0$。A 正确；\nB、C 是求出原函数 $\\dfrac{1}{2}\\ln(1+x^{2})$ 后忘了 $F(1)-F(-1)=0$；D 无依据。",
+   "misconception": "⚠️易错点：奇函数在对称区间上积分为零可直接使用，省去求原函数。",
+   "extension": null,
+   "tags": [
+    "基础",
+    "变式族·对称性"
+   ],
+   "variantGroup": "vg-symmetry",
+   "verify": [
+    {
+     "desc": "积分",
+     "code": "integrate(x/(1+x**2), (x, -1, 1))",
+     "expected": "0"
+    }
+   ],
+   "idx": 363
   },
   {
    "id": "ky2-1993-3-f2899b",
@@ -99,8 +155,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 359
+   "idx": 364
   },
   {
    "id": "c5-s2",
@@ -147,6 +204,7 @@
     "变上限积分",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "求导",
@@ -154,7 +212,61 @@
      "expected": "0"
     }
    ],
-   "idx": 360
+   "idx": 365
+  },
+  {
+   "id": "q-186",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.4 反常积分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\displaystyle\\int_{0}^{\\frac{\\pi}{2}}\\sin^{10}x\\,\\mathrm{d}x=$",
+   "options": [
+    "$\\dfrac{9!!}{10!!}$",
+    "$\\dfrac{63\\pi}{512}$",
+    "$\\dfrac{63}{512}$",
+    "$\\dfrac{1}{11}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$n=10$ 偶数：$\\dfrac{9!!}{10!!}\\cdot\\dfrac{\\pi}{2}=\\dfrac{9\\cdot7\\cdot5\\cdot3\\cdot1}{10\\cdot8\\cdot6\\cdot4\\cdot2}\\cdot\\dfrac{\\pi}{2}=\\dfrac{945}{3840}\\cdot\\dfrac{\\pi}{2}=\\dfrac{63\\pi}{512}$。B 正确；\nA 漏了 $\\dfrac{\\pi}{2}$；C 同样漏了；D 无依据。",
+   "misconception": "⚠️易错点：偶数幂必须乘 $\\dfrac{\\pi}{2}$；双阶乘 $10!!=10\\cdot8\\cdot6\\cdot4\\cdot2$。",
+   "extension": null,
+   "tags": [
+    "变式族·华里士"
+   ],
+   "variantGroup": "vg-wallis",
+   "verify": [
+    {
+     "desc": "积分",
+     "code": "integrate(sin(x)**10, (x, 0, pi/2))",
+     "expected": "63*pi/512"
+    }
+   ],
+   "idx": 366
   },
   {
    "id": "ky2-2013-4-2a41b2",
@@ -201,8 +313,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 361
+   "idx": 367
   },
   {
    "id": "ky2-2015-1-a4c2dc",
@@ -249,8 +362,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 362
+   "idx": 368
   },
   {
    "id": "ky2-2018-6-52ac23",
@@ -297,8 +411,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 363
+   "idx": 369
   },
   {
    "id": "ky2-2019-3-ef9ee7",
@@ -345,8 +460,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 364
+   "idx": 370
   },
   {
    "id": "c5-s3",
@@ -393,6 +509,7 @@
     "反常积分",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -400,7 +517,7 @@
      "expected": "-1"
     }
    ],
-   "idx": 365
+   "idx": 371
   },
   {
    "id": "c5-m1",
@@ -449,6 +566,7 @@
     "对称性",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "D项反例",
@@ -456,7 +574,7 @@
      "expected": "1"
     }
    ],
-   "idx": 366
+   "idx": 372
   },
   {
    "id": "c5-m2",
@@ -505,8 +623,9 @@
     "可积性",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 367
+   "idx": 373
   },
   {
    "id": "c5-j1",
@@ -551,8 +670,9 @@
     "牛顿-莱布尼茨公式",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 368
+   "idx": 374
   },
   {
    "id": "c5-j2",
@@ -597,8 +717,9 @@
     "瑕积分",
     "易错点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 369
+   "idx": 375
   },
   {
    "id": "c5-j3",
@@ -642,6 +763,7 @@
    "tags": [
     "反常积分"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -649,7 +771,7 @@
      "expected": "1"
     }
    ],
-   "idx": 370
+   "idx": 376
   },
   {
    "id": "c5-b1",
@@ -694,6 +816,7 @@
    "tags": [
     "变上限积分"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "求导",
@@ -701,7 +824,7 @@
      "expected": "0"
     }
    ],
-   "idx": 371
+   "idx": 377
   },
   {
    "id": "c5-b2",
@@ -747,6 +870,7 @@
     "降幂公式",
     "华里士公式"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -754,7 +878,7 @@
      "expected": "pi/4"
     }
    ],
-   "idx": 372
+   "idx": 378
   },
   {
    "id": "ky2-1988-5-55cf10",
@@ -796,8 +920,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 373
+   "idx": 379
   },
   {
    "id": "ky2-1990-3-baa68c",
@@ -839,8 +964,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 374
+   "idx": 380
   },
   {
    "id": "ky2-1990-4-7ccae1",
@@ -882,8 +1008,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 375
+   "idx": 381
   },
   {
    "id": "ky2-1992-4-e1722e",
@@ -925,8 +1052,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 376
+   "idx": 382
   },
   {
    "id": "ky2-1994-3-7581b9",
@@ -968,8 +1096,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 377
+   "idx": 383
   },
   {
    "id": "ky2-1996-2-5efb10",
@@ -1011,8 +1140,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 378
+   "idx": 384
   },
   {
    "id": "ky2-1997-4-fdb7ab",
@@ -1054,8 +1184,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 379
+   "idx": 385
   },
   {
    "id": "ky2-2001-3-8369d7",
@@ -1097,8 +1228,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 380
+   "idx": 386
   },
   {
    "id": "ky2-2009-10-f889cf",
@@ -1140,8 +1272,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 381
+   "idx": 387
   },
   {
    "id": "ky2-2011-12-fa1d87",
@@ -1183,8 +1316,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 382
+   "idx": 388
   },
   {
    "id": "ky2-2014-9-9d1c29",
@@ -1226,8 +1360,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 383
+   "idx": 389
   },
   {
    "id": "ky2-2014-13-60b4f0",
@@ -1269,8 +1404,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 384
+   "idx": 390
   },
   {
    "id": "ky2-2017-11-8be447",
@@ -1312,8 +1448,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 385
+   "idx": 391
   },
   {
    "id": "ky2-2017-13-b9e584",
@@ -1355,8 +1492,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 386
+   "idx": 392
   },
   {
    "id": "ky-2004-3-63352b",
@@ -1397,8 +1535,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 387
+   "idx": 393
   },
   {
    "id": "ky-2007-11-194e2f",
@@ -1439,8 +1578,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 388
+   "idx": 394
   },
   {
    "id": "ky-2009-11-4d88bf",
@@ -1481,8 +1621,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 389
+   "idx": 395
   },
   {
    "id": "ky-2010-9-bb48b9",
@@ -1523,8 +1664,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 390
+   "idx": 396
   },
   {
    "id": "ky-2012-10-9dcafb",
@@ -1565,8 +1707,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 391
+   "idx": 397
   },
   {
    "id": "ky-2013-12-14e1ae",
@@ -1607,8 +1750,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 392
+   "idx": 398
   },
   {
    "id": "ky-2015-10-15fe15",
@@ -1649,8 +1793,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 393
+   "idx": 399
   },
   {
    "id": "ky-2015-12-0344d2",
@@ -1691,8 +1836,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 394
+   "idx": 400
   },
   {
    "id": "c5-t1",
@@ -1742,8 +1888,9 @@
     "概念",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 395
+   "idx": 401
   },
   {
    "id": "c5-t2",
@@ -1797,8 +1944,9 @@
     "简答",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 396
+   "idx": 402
   },
   {
    "id": "c5-c1",
@@ -1857,6 +2005,7 @@
     "凑微分",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -1864,7 +2013,7 @@
      "expected": "1/2"
     }
    ],
-   "idx": 397
+   "idx": 403
   },
   {
    "id": "ky-2010-3-01cfa4",
@@ -1928,8 +2077,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 398
+   "idx": 404
   },
   {
    "id": "c5-c2",
@@ -1988,6 +2138,7 @@
     "分部积分",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -1995,7 +2146,138 @@
      "expected": "1"
     }
    ],
-   "idx": 399
+   "idx": 405
+  },
+  {
+   "id": "q-184",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.4 反常积分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "计算 $\\displaystyle\\int_{0}^{\\frac{\\pi}{2}}\\sin^{7}x\\,\\mathrm{d}x$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "华里士（点火）公式：$\\displaystyle\\int_{0}^{\\frac{\\pi}{2}}\\sin^{n}x\\,\\mathrm{d}x=\\dfrac{(n-1)!!}{n!!}\\cdot\\begin{cases}1, & n\\text{ 奇}\\\\ \\dfrac{\\pi}{2}, & n\\text{ 偶}\\end{cases}$\n$n=7$（奇数）：$\\dfrac{6\\cdot4\\cdot2}{7\\cdot5\\cdot3}=\\dfrac{48}{105}=\\boxed{\\dfrac{16}{35}}$。",
+   "points": [
+    {
+     "text": "写出华里士公式并识别 $n=7$ 为奇数",
+     "partial": 2
+    },
+    {
+     "text": "双阶乘计算 $\\dfrac{6\\cdot4\\cdot2}{7\\cdot5\\cdot3}$",
+     "partial": 2
+    },
+    {
+     "text": "结果 $=\\dfrac{16}{35}$",
+     "partial": 2
+    },
+    {
+     "text": "说明 $n$ 奇偶对是否乘 $\\dfrac{\\pi}{2}$ 的影响",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§5.4 定积分的分部积分递推（点火公式）。\n**考点出处**：同济《高等数学》第七版 §5.4；题型改编自：考研数学真题经典模型（华里士公式）。",
+   "misconception": "⚠️易错点：奇数幂不乘 $\\dfrac{\\pi}{2}$；双阶乘是同奇偶连乘，不是普通阶乘。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编",
+    "变式族·华里士"
+   ],
+   "variantGroup": "vg-wallis",
+   "verify": [
+    {
+     "desc": "积分",
+     "code": "integrate(sin(x)**7, (x, 0, pi/2))",
+     "expected": "16/35"
+    }
+   ],
+   "idx": 406
+  },
+  {
+   "id": "q-188",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.4 反常积分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "计算 $\\displaystyle\\int_{-1}^{1}\\left(x^{4}+x^{2}\\right)\\mathrm{d}x$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "被积函数为偶函数：$=2\\displaystyle\\int_{0}^{1}(x^{4}+x^{2})\\,\\mathrm{d}x=2\\left(\\dfrac{1}{5}+\\dfrac{1}{3}\\right)=2\\cdot\\dfrac{8}{15}=\\boxed{\\dfrac{16}{15}}$。",
+   "points": [
+    {
+     "text": "识别偶函数并用对称性化为 $2\\int_0^1$",
+     "partial": 2
+    },
+    {
+     "text": "牛顿-莱布尼茨计算 $\\dfrac{1}{5}+\\dfrac{1}{3}$",
+     "partial": 2
+    },
+    {
+     "text": "结果 $=\\dfrac{16}{15}$",
+     "partial": 2
+    },
+    {
+     "text": "对比不求对称性直接积分结果一致（自检）",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§5.4 奇偶函数在对称区间上的积分性质。\n**考点出处**：同济《高等数学》第七版 §5.4；题型改编自：经典模型（偶函数对称区间）。",
+   "misconception": "⚠️易错点：偶函数是「乘 2 取半区间」；若误当成奇函数会得 0。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "变式族·对称性"
+   ],
+   "variantGroup": "vg-symmetry",
+   "verify": [
+    {
+     "desc": "积分",
+     "code": "integrate(x**4+x**2, (x, -1, 1))",
+     "expected": "16/15"
+    }
+   ],
+   "idx": 407
   },
   {
    "id": "ky-2011-4-1d96a4",
@@ -2059,8 +2341,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 400
+   "idx": 408
   },
   {
    "id": "ky-2012-4-c096d0",
@@ -2120,8 +2403,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 401
+   "idx": 409
   },
   {
    "id": "ky-2016-1-5bd852",
@@ -2177,8 +2461,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 402
+   "idx": 410
   },
   {
    "id": "ky-2018-4-449598",
@@ -2230,8 +2515,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 403
+   "idx": 411
   },
   {
    "id": "c5-c3",
@@ -2291,6 +2577,7 @@
     "分部积分",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -2298,7 +2585,138 @@
      "expected": "1/2"
     }
    ],
-   "idx": 404
+   "idx": 412
+  },
+  {
+   "id": "q-185",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.4 反常积分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "计算 $\\displaystyle\\int_{0}^{\\frac{\\pi}{2}}\\cos^{6}x\\,\\sin^{2}x\\,\\mathrm{d}x$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "偶次混合幂：先用 $\\sin^{2}x=1-\\cos^{2}x$ 化为 $\\cos^{6}-\\cos^{8}$ 再分别用华里士：\n$$\\int_{0}^{\\frac{\\pi}{2}}\\cos^{6}x\\,\\mathrm{d}x=\\dfrac{5\\cdot3\\cdot1}{6\\cdot4\\cdot2}\\cdot\\dfrac{\\pi}{2}=\\dfrac{5\\pi}{32},\\quad \\int_{0}^{\\frac{\\pi}{2}}\\cos^{8}x\\,\\mathrm{d}x=\\dfrac{7\\cdot5\\cdot3\\cdot1}{8\\cdot6\\cdot4\\cdot2}\\cdot\\dfrac{\\pi}{2}=\\dfrac{35\\pi}{256}.$$\n相减：$\\dfrac{5\\pi}{32}-\\dfrac{35\\pi}{256}=\\dfrac{40\\pi-35\\pi}{256}=\\boxed{\\dfrac{5\\pi}{256}}$。",
+   "points": [
+    {
+     "text": "化为 $\\cos^{6}-\\cos^{8}$ 之差",
+     "partial": 2
+    },
+    {
+     "text": "两个华里士公式计算（偶数幂乘 $\\dfrac{\\pi}{2}$）",
+     "partial": 2
+    },
+    {
+     "text": "结果 $=\\dfrac{5\\pi}{256}$",
+     "partial": 2
+    },
+    {
+     "text": "或直接用推广公式 $\\dfrac{(m-1)!!(n-1)!!}{(m+n)!!}\\cdot\\dfrac{\\pi}{2}$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§5.4 华里士公式 + 平方降幂。\n**考点出处**：同济《高等数学》第七版 §5.4；题型改编自：考研数学真题经典模型（混合幂点火）。",
+   "misconception": "⚠️易错点：$m,n$ 都是偶数时结果带 $\\pi$；通分时 $\\dfrac{5}{32}=\\dfrac{40}{256}$ 别算错。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编",
+    "变式族·华里士"
+   ],
+   "variantGroup": "vg-wallis",
+   "verify": [
+    {
+     "desc": "积分",
+     "code": "integrate(cos(x)**6*sin(x)**2, (x, 0, pi/2))",
+     "expected": "5*pi/256"
+    }
+   ],
+   "idx": 413
+  },
+  {
+   "id": "q-203",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "knowledgePoints": [
+    "5.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.1 定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "（创新·定积分定义）求极限 $\\displaystyle\\lim_{n\\to\\infty}\\frac{1}{n}\\sum_{k=1}^{n}\\sin\\frac{k\\pi}{n}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "这是 $f(x)=\\sin\\pi x$ 在 $[0,1]$ 上的定积分定义（右端点分割）：\n$$\\lim_{n\\to\\infty}\\frac{1}{n}\\sum_{k=1}^{n}\\sin\\frac{k\\pi}{n}=\\int_{0}^{1}\\sin\\pi x\\,\\mathrm{d}x=\\left[-\\frac{\\cos\\pi x}{\\pi}\\right]_0^1=\\frac{2}{\\pi}.$$\n**创新点**：把「$n$ 项和的极限」翻译成「定积分」——识别 $\\dfrac{k\\pi}{n}$ 为分点、$\\dfrac1n$ 为小区间长度；与夹逼/定积分定义互为工具。",
+   "points": [
+    {
+     "text": "识别为 $\\int_0^1\\sin\\pi x\\,\\mathrm{d}x$ 的黎曼和",
+     "partial": 2
+    },
+    {
+     "text": "计算 $\\int_0^1\\sin\\pi x\\,\\mathrm{d}x=\\dfrac{2}{\\pi}$",
+     "partial": 2
+    },
+    {
+     "text": "说明分点与区间长度的对应",
+     "partial": 2
+    },
+    {
+     "text": "推广：$\\frac{b-a}{n}\\sum f\\left(a+\\frac{k(b-a)}{n}\\right)\\to\\int_a^b f\\,dx$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§5.1 定积分的定义（黎曼和极限）。\n**考点出处**：同济《高等数学》第七版 §5.1；题型改编自：考研数学真题经典模型（定积分定义求极限）。",
+   "misconception": "⚠️易错点：区间是 $[0,1]$（不是 $[0,\\pi]$）——$\\dfrac{k\\pi}{n}$ 里的 $\\pi$ 已含在被积函数中；写成 $\\int_0^{\\pi}\\sin x\\,\\mathrm{d}x$ 会得 2（错误）。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "定积分定义"
+   ],
+   "variantGroup": "vg-taylor",
+   "verify": [
+    {
+     "desc": "定积分",
+     "code": "integrate(sin(pi*x), (x, 0, 1))",
+     "expected": "2/pi"
+    }
+   ],
+   "idx": 414
   },
   {
    "id": "ky2-1987-x-4b9484",
@@ -2343,8 +2761,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 405
+   "idx": 415
   },
   {
    "id": "ky2-1987-x-d519ea",
@@ -2389,8 +2808,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 406
+   "idx": 416
   },
   {
    "id": "ky2-1988-x-abec7c",
@@ -2435,8 +2855,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 407
+   "idx": 417
   },
   {
    "id": "ky2-1989-5-1c3a91",
@@ -2481,8 +2902,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 408
+   "idx": 418
   },
   {
    "id": "ky2-1990-x-38e439",
@@ -2527,8 +2949,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 409
+   "idx": 419
   },
   {
    "id": "ky2-1991-2-de8229",
@@ -2573,8 +2996,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 410
+   "idx": 420
   },
   {
    "id": "ky2-1991-x-9f5925",
@@ -2619,8 +3043,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 411
+   "idx": 421
   },
   {
    "id": "ky2-1992-4-bc47b1",
@@ -2665,8 +3090,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 412
+   "idx": 422
   },
   {
    "id": "ky2-1993-3-b6f0e6",
@@ -2711,8 +3137,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 413
+   "idx": 423
   },
   {
    "id": "ky2-1993-4-d84e58",
@@ -2757,8 +3184,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 414
+   "idx": 424
   },
   {
    "id": "ky2-1994-2-397dd1",
@@ -2803,8 +3231,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 415
+   "idx": 425
   },
   {
    "id": "ky2-1996-1-8693f2",
@@ -2849,8 +3278,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 416
+   "idx": 426
   },
   {
    "id": "ky2-1996-x-5e6d47",
@@ -2895,8 +3325,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 417
+   "idx": 427
   },
   {
    "id": "ky2-1998-x-21cf52",
@@ -2941,8 +3372,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 418
+   "idx": 428
   },
   {
    "id": "ky2-1999-x-10c640",
@@ -2987,8 +3419,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 419
+   "idx": 429
   },
   {
    "id": "ky2-2002-x-17331e",
@@ -3033,8 +3466,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 420
+   "idx": 430
   },
   {
    "id": "ky2-2003-x-eb4b59",
@@ -3079,8 +3513,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 421
+   "idx": 431
   },
   {
    "id": "ky2-2004-17-5494f6",
@@ -3137,8 +3572,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 422
+   "idx": 432
   },
   {
    "id": "ky2-2008-17-53de41",
@@ -3183,8 +3619,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 423
+   "idx": 433
   },
   {
    "id": "ky2-2009-16-b92549",
@@ -3229,8 +3666,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 424
+   "idx": 434
   },
   {
    "id": "ky2-2019-16-4b30c5",
@@ -3275,8 +3713,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 425
+   "idx": 435
   },
   {
    "id": "ky-2013-15-23eacd",
@@ -3328,8 +3767,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 426
+   "idx": 436
   },
   {
    "id": "ky-2016-16-6f2a88",
@@ -3393,8 +3833,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 427
+   "idx": 437
   }
  ]
 }

@@ -41,6 +41,7 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 77
   },
@@ -84,6 +85,7 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 78
   },
@@ -127,6 +129,7 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 79
   },
@@ -169,6 +172,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 80
   },
@@ -211,6 +215,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 81
   },
@@ -253,6 +258,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 82
   },
@@ -295,6 +301,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 83
   },
@@ -337,6 +344,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 84
   },
@@ -379,6 +387,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 85
   },
@@ -429,6 +438,7 @@
     "概念",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 86
   },
@@ -483,6 +493,7 @@
     "间断点",
     "简答"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 87
   },
@@ -543,6 +554,7 @@
     "零因子",
     "极限"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "limit",
@@ -614,6 +626,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 89
   },
@@ -679,6 +692,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 90
   },
@@ -728,6 +742,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 91
   },
@@ -793,6 +808,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 92
   },
@@ -858,6 +874,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 93
   },
@@ -903,6 +920,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 94
   },
@@ -968,6 +986,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 95
   },
@@ -1033,6 +1052,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 96
   },
@@ -1082,6 +1102,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 97
   },
@@ -1147,6 +1168,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 98
   },
@@ -1207,6 +1229,7 @@
     "等价无穷小",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "limit",
@@ -1278,6 +1301,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 100
   },
@@ -1339,6 +1363,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 101
   },
@@ -1404,6 +1429,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 102
   },
@@ -1457,6 +1483,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 103
   },
@@ -1522,6 +1549,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 104
   },
@@ -1567,6 +1595,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 105
   },
@@ -1632,6 +1661,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 106
   },
@@ -1693,6 +1723,7 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 107
   },
@@ -1754,6 +1785,7 @@
     "泰勒展开",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "limit",
@@ -1806,6 +1838,7 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 109
   },
@@ -1852,6 +1885,7 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 110
   },
@@ -1898,6 +1932,7 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 111
   },
@@ -1944,6 +1979,7 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 112
   },
@@ -1990,6 +2026,7 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 113
   },
@@ -2036,6 +2073,7 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 114
   }

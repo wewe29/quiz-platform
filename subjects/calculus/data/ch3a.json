@@ -45,6 +45,7 @@
    "tags": [
     "罗尔定理"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "xi",
@@ -99,6 +100,7 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 252
   },
@@ -147,6 +149,7 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 253
   },
@@ -195,6 +198,7 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 254
   },
@@ -243,6 +247,7 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 255
   },
@@ -291,6 +296,7 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 256
   },
@@ -339,6 +345,7 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 257
   },
@@ -387,6 +394,7 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 258
   },
@@ -435,6 +443,7 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 259
   },
@@ -483,6 +492,7 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 260
   },
@@ -531,6 +541,7 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 261
   },
@@ -579,6 +590,7 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 262
   },
@@ -627,6 +639,7 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 263
   },
@@ -675,6 +688,7 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 264
   },
@@ -723,8 +737,64 @@
     "洛必达法则",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
    "idx": 265
+  },
+  {
+   "id": "q-202",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3.7",
+   "knowledgePoints": [
+    "3.7"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §3.7 曲率",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "（创新）曲线 $y=x^{2}$ 在点 $(0,0)$ 处的曲率 $K=$",
+   "options": [
+    "$0$",
+    "$2$",
+    "$\\dfrac{1}{2}$",
+    "$4$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：曲率公式 $K=\\dfrac{|y''|}{(1+y'^{2})^{3/2}}$。$y'=2x,\\ y''=2$；在 $(0,0)$：$K=\\dfrac{2}{(1+0)^{3/2}}=2$。B 正确；\nA 是把顶点当成平点；D 是忘了 $(1+y'^{2})^{3/2}$ 的分子分母。\n**创新点**：抛物线顶点曲率 $=2|a|$（$y=ax^{2}$ 的一般结论）——顶点处最「弯」。",
+   "misconception": "⚠️易错点：曲率公式分母是 $3/2$ 次幂；$x=0$ 处 $y'=0$ 使分母恰为 1，是唯一能口算的点。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "曲率"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "曲率",
+     "code": "2",
+     "expected": "2"
+    }
+   ],
+   "idx": 266
   },
   {
    "id": "ky2-2012-5-b9bc58",
@@ -771,8 +841,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 266
+   "idx": 267
   },
   {
    "id": "ky2-2014-6-ae43ac",
@@ -819,8 +890,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 267
+   "idx": 268
   },
   {
    "id": "ky2-2019-2-91d514",
@@ -867,8 +939,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 268
+   "idx": 269
   },
   {
    "id": "c3-s3",
@@ -915,6 +988,7 @@
     "渐近线",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "除法",
@@ -922,7 +996,67 @@
      "expected": "0"
     }
    ],
-   "idx": 269
+   "idx": 270
+  },
+  {
+   "id": "q-181",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 3,
+   "knowledgePoint": "3.3",
+   "knowledgePoints": [
+    "3.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §3.3 泰勒公式",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "极限 $\\lim\\limits_{x\\to0}\\dfrac{\\mathrm{e}^{x}-1-x-\\dfrac{x^{2}}{2}}{x^{3}}=$",
+   "options": [
+    "$0$",
+    "$\\dfrac{1}{2}$",
+    "$\\dfrac{1}{6}$",
+    "$1$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\mathrm{e}^{x}=1+x+\\dfrac{x^{2}}{2}+\\dfrac{x^{3}}{6}+o(x^{3})$（麦克劳林），分子恰为 $\\dfrac{x^{3}}{6}+o(x^{3})$，除以 $x^{3}$ 取极限得 $\\dfrac{1}{6}$。C 正确；\nA 错在展开阶数不够；B 是洛必达少做一步；D 无依据。\n**举一反三**：「多减几项」的分子展开到与分母同阶即可——比连做三次洛必达更快更稳。",
+   "misconception": "⚠️易错点：展开阶数不够（只到 $x^{2}$）会误判极限为 0——分子被减到只剩 $\\dfrac{x^{3}}{6}$ 起步。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "变式族·泰勒展开"
+   ],
+   "variantGroup": "vg-taylor",
+   "verify": [
+    {
+     "desc": "极限",
+     "code": "limit((exp(x)-1-x-x**2/2)/x**3, x, 0)",
+     "expected": "1/6"
+    },
+    {
+     "desc": "展开",
+     "code": "sp.series(exp(x), x, 0, 4)",
+     "expected": "1 + x + x**2/2 + x**3/6 + O(x**4)"
+    }
+   ],
+   "idx": 271
   },
   {
    "id": "c3-m1",
@@ -971,8 +1105,9 @@
     "单调性",
     "极值"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 270
+   "idx": 272
   },
   {
    "id": "c3-m2",
@@ -1021,8 +1156,9 @@
     "极值判定",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 271
+   "idx": 273
   },
   {
    "id": "c3-j1",
@@ -1067,8 +1203,9 @@
     "罗尔定理",
     "条件检验"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 272
+   "idx": 274
   },
   {
    "id": "c3-j2",
@@ -1113,8 +1250,9 @@
     "洛必达法则",
     "逻辑"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 273
+   "idx": 275
   },
   {
    "id": "c3-j3",
@@ -1159,8 +1297,9 @@
     "拐点",
     "凹凸性"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 274
+   "idx": 276
   },
   {
    "id": "c3-b1",
@@ -1204,6 +1343,7 @@
     "等价无穷小",
     "洛必达"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "limit",
@@ -1211,7 +1351,7 @@
      "expected": "2"
     }
    ],
-   "idx": 275
+   "idx": 277
   },
   {
    "id": "c3-b2",
@@ -1257,6 +1397,7 @@
     "泰勒公式",
     "麦克劳林"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "f'''(0)/6",
@@ -1264,7 +1405,7 @@
      "expected": "1/3"
     }
    ],
-   "idx": 276
+   "idx": 278
   },
   {
    "id": "ky2-1992-2-bf163f",
@@ -1306,8 +1447,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 277
+   "idx": 279
   },
   {
    "id": "ky2-1995-5-b87695",
@@ -1349,8 +1491,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 278
+   "idx": 280
   },
   {
    "id": "ky2-1998-5-9bf7ba",
@@ -1392,8 +1535,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 279
+   "idx": 281
   },
   {
    "id": "ky2-2005-2-bf9864",
@@ -1435,8 +1579,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 280
+   "idx": 282
   },
   {
    "id": "ky2-2017-9-06b324",
@@ -1478,8 +1623,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 281
+   "idx": 283
   },
   {
    "id": "c3-t1",
@@ -1529,8 +1675,9 @@
     "概念",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 282
+   "idx": 284
   },
   {
    "id": "c3-t2",
@@ -1584,8 +1731,9 @@
     "简答",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 283
+   "idx": 285
   },
   {
    "id": "c3-c1",
@@ -1644,6 +1792,7 @@
     "洛必达法则",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "limit",
@@ -1651,7 +1800,7 @@
      "expected": "1/6"
     }
    ],
-   "idx": 284
+   "idx": 286
   },
   {
    "id": "ky-2004-8-5bdc0c",
@@ -1715,8 +1864,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 285
+   "idx": 287
   },
   {
    "id": "ky-2005-8-567f69",
@@ -1780,8 +1930,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 286
+   "idx": 288
   },
   {
    "id": "ky-2006-10-45d63a",
@@ -1845,8 +1996,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 287
+   "idx": 289
   },
   {
    "id": "ky-2008-4-7fd74d",
@@ -1910,8 +2062,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 288
+   "idx": 290
   },
   {
    "id": "c3-c2",
@@ -1971,6 +2124,7 @@
     "极值",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "驻点",
@@ -1983,7 +2137,7 @@
      "expected": "[4, 3]"
     }
    ],
-   "idx": 289
+   "idx": 291
   }
  ]
 }

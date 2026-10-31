@@ -46,8 +46,9 @@
     "偏导数",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 627
+   "idx": 640
   },
   {
    "id": "ky2-1991-3-f81654",
@@ -94,8 +95,9 @@
     "考研真题",
     "考研数学三"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 628
+   "idx": 641
   },
   {
    "id": "ky2-2009-3-bf474d",
@@ -142,8 +144,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 629
+   "idx": 642
   },
   {
    "id": "zk-202210-02",
@@ -189,8 +192,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 630
+   "idx": 643
   },
   {
    "id": "zk-202304-02",
@@ -236,8 +240,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 631
+   "idx": 644
   },
   {
    "id": "zk-202310-02",
@@ -283,8 +288,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 632
+   "idx": 645
   },
   {
    "id": "zk-202404-02",
@@ -330,8 +336,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 633
+   "idx": 646
   },
   {
    "id": "zk-202410-02",
@@ -377,8 +384,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 634
+   "idx": 647
   },
   {
    "id": "zk-202504-02",
@@ -424,8 +432,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 635
+   "idx": 648
   },
   {
    "id": "zk-202510-02",
@@ -471,8 +480,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 636
+   "idx": 649
   },
   {
    "id": "zk-202604-02",
@@ -518,8 +528,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 637
+   "idx": 650
   },
   {
    "id": "c9-s2",
@@ -566,8 +577,64 @@
     "链式法则",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 638
+   "idx": 651
+  },
+  {
+   "id": "q-196",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.8",
+   "knowledgePoints": [
+    "9.8"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.8 多元函数的极值及其求法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "（创新）函数 $f(x,y)=xy$ 在点 $(1,1)$ 处沿方向 $\\boldsymbol{l}=(1,1)/\\sqrt{2}$ 的方向导数为",
+   "options": [
+    "$1$",
+    "$2$",
+    "$\\sqrt{2}$",
+    "$0$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\nabla f=(y,x)$，在 $(1,1)$ 处 $\\nabla f(1,1)=(1,1)$。方向 $\\boldsymbol{l}$ 恰为 $\\nabla f$ 的单位向量，故方向导数 $=|\\nabla f|\\cos0=\\sqrt{2}$。C 正确；\nA 是单分量贡献；B 是未除以 $\\sqrt2$ 的点积；D 是沿等高线方向（梯度正交）的结果。\n**创新点**：方向取梯度方向时方向导数最大 = 梯度的模——「最陡上升」的代数表述。",
+   "misconception": "⚠️易错点：点积 $(1,1)\\cdot(1,1)/\\sqrt{2}=2/\\sqrt{2}=\\sqrt{2}$——忘了单位化会得 2。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "方向导数"
+   ],
+   "variantGroup": "vg-multextrem",
+   "verify": [
+    {
+     "desc": "方向导数",
+     "code": "fx=sp.diff(x*y,x); fy=sp.diff(x*y,y); (fx.subs([(x,1),(y,1)])+fy.subs([(x,1),(y,1)]))/sp.sqrt(2)",
+     "expected": "sqrt(2)"
+    }
+   ],
+   "idx": 652
   },
   {
    "id": "ky2-2011-3-8434c7",
@@ -614,8 +681,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 639
+   "idx": 653
   },
   {
    "id": "ky2-2013-5-4c80b8",
@@ -662,8 +730,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 640
+   "idx": 654
   },
   {
    "id": "ky2-2015-5-4a56fa",
@@ -710,8 +779,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 641
+   "idx": 655
   },
   {
    "id": "ky2-2017-5-edc9a9",
@@ -758,8 +828,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 642
+   "idx": 656
   },
   {
    "id": "zk-202210-07",
@@ -805,8 +876,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 643
+   "idx": 657
   },
   {
    "id": "zk-202304-07",
@@ -852,8 +924,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 644
+   "idx": 658
   },
   {
    "id": "zk-202310-07",
@@ -899,8 +972,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 645
+   "idx": 659
   },
   {
    "id": "zk-202404-07",
@@ -946,8 +1020,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 646
+   "idx": 660
   },
   {
    "id": "zk-202410-07",
@@ -993,8 +1068,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 647
+   "idx": 661
   },
   {
    "id": "zk-202504-07",
@@ -1040,8 +1116,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 648
+   "idx": 662
   },
   {
    "id": "zk-202510-07",
@@ -1087,8 +1164,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 649
+   "idx": 663
   },
   {
    "id": "zk-202604-07",
@@ -1134,8 +1212,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 650
+   "idx": 664
   },
   {
    "id": "c9-s3",
@@ -1184,8 +1263,9 @@
     "高频考点",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 651
+   "idx": 665
   },
   {
    "id": "c9-m1",
@@ -1235,8 +1315,9 @@
     "关系链",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 652
+   "idx": 666
   },
   {
    "id": "c9-m2",
@@ -1287,8 +1368,9 @@
     "高频考点",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 653
+   "idx": 667
   },
   {
    "id": "c9-j1",
@@ -1333,8 +1415,9 @@
     "二重极限",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 654
+   "idx": 668
   },
   {
    "id": "c9-j2",
@@ -1379,8 +1462,9 @@
     "偏导与连续",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 655
+   "idx": 669
   },
   {
    "id": "c9-j3",
@@ -1424,8 +1508,9 @@
    "tags": [
     "极值必要条件"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 656
+   "idx": 670
   },
   {
    "id": "c9-b1",
@@ -1471,8 +1556,9 @@
    "tags": [
     "偏导数"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 657
+   "idx": 671
   },
   {
    "id": "c9-b2",
@@ -1516,8 +1602,9 @@
    "tags": [
     "偏导数求值"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 658
+   "idx": 672
   },
   {
    "id": "ky2-2015-13-0121b4",
@@ -1559,8 +1646,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 659
+   "idx": 673
   },
   {
    "id": "ky-2007-12-9d06b6",
@@ -1601,8 +1689,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 660
+   "idx": 674
   },
   {
    "id": "ky-2011-11-8fe32a",
@@ -1643,8 +1732,52 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 661
+   "idx": 675
+  },
+  {
+   "id": "ky-2015-11-9f4776",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2015 年考研数学（一）第 11 题",
+    "kind": "exam-original",
+    "year": 2015,
+    "region": "全国",
+    "paper": "2015 年考研数学（一）",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2015年解析/2015年解析.md"
+   },
+   "stem": "若函数 $z = z(x, y)$ 由方程 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 确定，则 $\\left. \\mathrm{d}z \\right|_{(0,1)} =$ ________.",
+   "options": null,
+   "answer": [
+    "$-\\mathrm{d}x$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$-\\mathrm{d}x$\n【解】方法一 将 $x = 0, y = 1$ 代入 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 中，得 $z = 0, \\mathrm{e}^z + xyz + x + \\cos x = 2$ 两边分别对 $x, y$ 求偏导得\n\n$$\n\\mathrm {e} ^ {z} \\cdot \\frac {\\partial z}{\\partial x} + y (z + x \\frac {\\partial z}{\\partial x}) + 1 - \\sin x = 0, \\quad \\mathrm {e} ^ {z} \\cdot \\frac {\\partial z}{\\partial y} + x (z + y \\frac {\\partial z}{\\partial y}) = 0,\n$$\n\n代入得 $\\left.\\frac{\\partial z}{\\partial x}\\right|_{(0,1)} = -1,\\left.\\frac{\\partial z}{\\partial y}\\right|_{(0,1)} = 0,$\n\n故 $\\mathrm{d}z\\Big|_{(0,1)} = \\frac{\\partial z}{\\partial x}\\Big|_{(0,1)}\\mathrm{d}x + \\frac{\\partial z}{\\partial y}\\Big|_{(0,1)}\\mathrm{d}y = -\\mathrm{d}x.$\n\n方法二 将 $x = 0, y = 1$ 代入 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 中得 $z = 0$ .\n\n$\\mathrm{e}^z + xyz + x + \\cos x = 2$ 两边求全微分得\n\n$$\n\\mathrm {e} ^ {z} \\mathrm {d} z + y z \\mathrm {d} x + x z \\mathrm {d} y + x y \\mathrm {d} z + \\mathrm {d} x - \\sin x \\mathrm {d} x = 0,\n$$\n\n将 $x = 0, y = 1, z = 0$ 代入得 $\\mathrm{d}z|_{(0,1)} = -\\mathrm{d}x$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 676
   }
  ]
 }

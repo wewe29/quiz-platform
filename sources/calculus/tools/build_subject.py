@@ -175,6 +175,7 @@ def gate_sympy(questions):
         if hasattr(sympy, const):
             base_ns[const] = getattr(sympy, const)
     base_ns["M"] = sympy.Matrix  # 确保矩阵别名不被覆盖
+    base_ns["sp"] = sympy  # 核验代码用 sp.factor/sp.solve/sp.hessian
     total = bad = 0
     for q in questions:
         for item in (q.get("verify") or []):

@@ -40,8 +40,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 594
+   "idx": 607
   },
   {
    "id": "ky-2014-12-96e10b",
@@ -82,8 +83,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 595
+   "idx": 608
   },
   {
    "id": "ky-2018-12-d97ce2",
@@ -124,8 +126,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 596
+   "idx": 609
   },
   {
    "id": "c8-t1",
@@ -175,8 +178,9 @@
     "概念",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 597
+   "idx": 610
   },
   {
    "id": "c8-t2",
@@ -230,8 +234,9 @@
     "简答",
     "必背"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 598
+   "idx": 611
   },
   {
    "id": "c8-c1",
@@ -290,6 +295,7 @@
     "平面方程",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "点在平面上",
@@ -302,7 +308,7 @@
      "expected": "3.74165738677394"
     }
    ],
-   "idx": 599
+   "idx": 612
   },
   {
    "id": "c8-c2",
@@ -361,6 +367,7 @@
     "直线方程",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "方向向量",
@@ -373,7 +380,7 @@
      "expected": "[0, 0]"
     }
    ],
-   "idx": 600
+   "idx": 613
   },
   {
    "id": "ky-2014-4-6edb72",
@@ -437,8 +444,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 601
+   "idx": 614
   },
   {
    "id": "ky-2017-3-6972c6",
@@ -494,8 +502,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 602
+   "idx": 615
   },
   {
    "id": "zk-202210-11",
@@ -559,8 +568,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 603
+   "idx": 616
   },
   {
    "id": "zk-202210-12",
@@ -624,8 +634,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 604
+   "idx": 617
   },
   {
    "id": "zk-202210-13",
@@ -689,8 +700,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 605
+   "idx": 618
   },
   {
    "id": "zk-202310-12",
@@ -754,8 +766,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 606
+   "idx": 619
   },
   {
    "id": "zk-202404-11",
@@ -819,8 +832,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 607
+   "idx": 620
   },
   {
    "id": "zk-202404-12",
@@ -876,8 +890,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 608
+   "idx": 621
   },
   {
    "id": "zk-202404-13",
@@ -941,8 +956,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 609
+   "idx": 622
   },
   {
    "id": "zk-202410-11",
@@ -1006,8 +1022,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 610
+   "idx": 623
   },
   {
    "id": "zk-202410-12",
@@ -1071,8 +1088,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 611
+   "idx": 624
   },
   {
    "id": "zk-202410-14",
@@ -1136,8 +1154,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 612
+   "idx": 625
   },
   {
    "id": "zk-202504-12",
@@ -1201,8 +1220,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 613
+   "idx": 626
   },
   {
    "id": "zk-202504-13",
@@ -1266,8 +1286,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 614
+   "idx": 627
   },
   {
    "id": "zk-202504-14",
@@ -1331,8 +1352,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 615
+   "idx": 628
   },
   {
    "id": "zk-202510-11",
@@ -1396,8 +1418,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 616
+   "idx": 629
   },
   {
    "id": "zk-202510-12",
@@ -1461,8 +1484,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 617
+   "idx": 630
   },
   {
    "id": "zk-202510-14",
@@ -1526,8 +1550,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 618
+   "idx": 631
   },
   {
    "id": "zk-202604-11",
@@ -1591,8 +1616,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 619
+   "idx": 632
   },
   {
    "id": "zk-202604-12",
@@ -1656,8 +1682,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 620
+   "idx": 633
   },
   {
    "id": "zk-202604-13",
@@ -1721,8 +1748,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 621
+   "idx": 634
   },
   {
    "id": "c8-c3",
@@ -1781,6 +1809,7 @@
     "线面交点",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "交点",
@@ -1788,7 +1817,7 @@
      "expected": "[1/2, 3/2, 1]"
     }
    ],
-   "idx": 622
+   "idx": 635
   },
   {
    "id": "ky2-2013-21-9424e8",
@@ -1833,8 +1862,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 623
+   "idx": 636
   },
   {
    "id": "ky-2009-17-e5dff9",
@@ -1898,8 +1928,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 624
+   "idx": 637
   },
   {
    "id": "ky-2010-19-c0d03e",
@@ -1963,8 +1994,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 625
+   "idx": 638
   },
   {
    "id": "ky-2017-19-fa7e69",
@@ -2024,8 +2056,9 @@
    "tags": [
     "考研真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 626
+   "idx": 639
   }
  ]
 }

@@ -45,8 +45,9 @@
    "tags": [
     "二重积分性质"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 698
+   "idx": 714
   },
   {
    "id": "zk-202210-05",
@@ -92,8 +93,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 699
+   "idx": 715
   },
   {
    "id": "zk-202304-05",
@@ -139,8 +141,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 700
+   "idx": 716
   },
   {
    "id": "zk-202310-05",
@@ -186,8 +189,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 701
+   "idx": 717
   },
   {
    "id": "zk-202404-05",
@@ -233,8 +237,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 702
+   "idx": 718
   },
   {
    "id": "zk-202410-05",
@@ -280,8 +285,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 703
+   "idx": 719
   },
   {
    "id": "zk-202504-05",
@@ -327,8 +333,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 704
+   "idx": 720
   },
   {
    "id": "zk-202510-05",
@@ -374,8 +381,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 705
+   "idx": 721
   },
   {
    "id": "zk-202604-05",
@@ -421,8 +429,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 706
+   "idx": 722
   },
   {
    "id": "c10-s2",
@@ -469,8 +478,64 @@
     "交换积分次序",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 707
+   "idx": 723
+  },
+  {
+   "id": "q-194",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 10,
+   "knowledgePoint": "10.1",
+   "knowledgePoints": [
+    "10.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §10.1 二重积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "（创新）区域 $D$ 由 $y=x^{2}$ 与 $y=1$ 围成，则 $D$ 的面积为",
+   "options": [
+    "$\\dfrac{1}{3}$",
+    "$\\dfrac{4}{3}$",
+    "$\\dfrac{2}{3}$",
+    "$\\dfrac{5}{3}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：交点 $(-1,1)$ 与 $(1,1)$，$D$ 内 $1\\ge x^{2}$。面积 $=\\int_{-1}^{1}(1-x^{2})\\,\\mathrm{d}x=\\left[x-\\dfrac{x^{3}}{3}\\right]_{-1}^{1}=\\dfrac{4}{3}$。B 正确；\nA、C 是只算了右半 $\\int_0^1$ 或漏了倍数；D 无依据。\n**创新点**：对称区域先用对称性 $2\\int_0^1$ 可减半计算量。",
+   "misconception": "⚠️易错点：区域关于 $y$ 轴对称（$x\\in[-1,1]$），只积 $[0,1]$ 会漏一半。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "几何"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "面积",
+     "code": "integrate(1-x**2, (x, -1, 1))",
+     "expected": "4/3"
+    }
+   ],
+   "idx": 724
   },
   {
    "id": "ky2-2012-6-c42b7f",
@@ -517,8 +582,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 708
+   "idx": 725
   },
   {
    "id": "ky2-2013-6-6544f2",
@@ -565,8 +631,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 709
+   "idx": 726
   },
   {
    "id": "ky2-2019-5-18ad76",
@@ -613,8 +680,9 @@
     "考研真题",
     "考研数学二"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 710
+   "idx": 727
   },
   {
    "id": "zk-202210-08",
@@ -660,8 +728,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 711
+   "idx": 728
   },
   {
    "id": "zk-202304-08",
@@ -707,8 +776,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 712
+   "idx": 729
   },
   {
    "id": "zk-202310-08",
@@ -754,8 +824,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 713
+   "idx": 730
   },
   {
    "id": "zk-202404-08",
@@ -801,8 +872,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 714
+   "idx": 731
   },
   {
    "id": "zk-202410-08",
@@ -848,8 +920,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 715
+   "idx": 732
   },
   {
    "id": "zk-202504-08",
@@ -895,8 +968,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 716
+   "idx": 733
   },
   {
    "id": "zk-202510-08",
@@ -942,8 +1016,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 717
+   "idx": 734
   },
   {
    "id": "zk-202604-08",
@@ -989,8 +1064,9 @@
    "tags": [
     "自考真题"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 718
+   "idx": 735
   },
   {
    "id": "c10-s3",
@@ -1038,6 +1114,7 @@
     "高频考点",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -1045,7 +1122,7 @@
      "expected": "0"
     }
    ],
-   "idx": 719
+   "idx": 736
   },
   {
    "id": "c10-m1",
@@ -1094,8 +1171,9 @@
     "极坐标",
     "适用条件"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 720
+   "idx": 737
   },
   {
    "id": "c10-m2",
@@ -1145,8 +1223,9 @@
     "对称性",
     "困难"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 721
+   "idx": 738
   },
   {
    "id": "c10-j1",
@@ -1190,8 +1269,9 @@
    "tags": [
     "几何意义"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 722
+   "idx": 739
   },
   {
    "id": "c10-j2",
@@ -1236,6 +1316,7 @@
     "几何意义",
     "半球体积"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "R=1核验",
@@ -1243,7 +1324,7 @@
      "expected": "0"
     }
    ],
-   "idx": 723
+   "idx": 740
   },
   {
    "id": "c10-j3",
@@ -1288,8 +1369,9 @@
     "对称性",
     "易错点"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 724
+   "idx": 741
   },
   {
    "id": "c10-b1",
@@ -1332,8 +1414,9 @@
    "tags": [
     "对称性"
    ],
+   "variantGroup": null,
    "verify": [],
-   "idx": 725
+   "idx": 742
   },
   {
    "id": "c10-b2",
@@ -1380,6 +1463,7 @@
     "极坐标",
     "高频考点"
    ],
+   "variantGroup": null,
    "verify": [
     {
      "desc": "integral",
@@ -1387,7 +1471,7 @@
      "expected": "0"
     }
    ],
-   "idx": 726
+   "idx": 743
   }
  ]
 }
