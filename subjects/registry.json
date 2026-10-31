@@ -24,9 +24,9 @@
    "name": "线性代数",
    "textbook": "同济大学《工程数学·线性代数》第六版",
    "url": "subjects/linalg/",
-   "total": 500,
+   "total": 528,
    "chapters": 6,
-   "realExamTagged": 50
+   "realExamTagged": 57
   },
   {
    "id": "ml",

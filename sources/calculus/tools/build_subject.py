@@ -321,6 +321,10 @@ def main():
 
     print("[subject] 步骤 3/3：写出产物")
     os.makedirs(data_dir, exist_ok=True)
+    # 写前清理：上一版构建的陈旧分片必须删除，否则 dist 里新旧并存
+    import glob as _glob
+    for old in _glob.glob(os.path.join(data_dir, "ch*.json")):
+        os.remove(old)
     shard_entries = []
     for p in shards:
         path = os.path.join(data_dir, p["name"])

@@ -23,7 +23,7 @@ sys.path.insert(0, HERE)
 ORDER = ["single", "multi", "judge", "blank", "short", "calc"]
 DIFFS = ["basic", "medium", "hard"]
 BASE_CHAPTERS = ["ch1", "ch2", "ch3", "ch4", "ch5", "ch6"]
-EXTRA_CHAPTERS = ["ch1b", "ch2b", "ch3b", "ch4b", "ch5b", "ch6b"]
+EXTRA_CHAPTERS = ["ch1b", "ch2b", "ch3b", "ch4b", "ch5b", "ch6b", "chx"]
 
 
 def existing_chapters():

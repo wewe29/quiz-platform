@@ -78,7 +78,7 @@ _COUNTER = {"n": 0}
 
 def Q(qtype, diff, kp, stem, answer=None, options=None, answer_text=None,
       points=None, expl="", mis=None, ext=None, tags=None, src=None,
-      kind="textbook", accept=None, verify=None, qid=None):
+      kind="textbook", accept=None, verify=None, qid=None, variant_group=None):
     """构造一道题。
 
     qtype      : single/multi/judge/blank/term/short/calc
@@ -96,6 +96,7 @@ def Q(qtype, diff, kp, stem, answer=None, options=None, answer_text=None,
     kind       : textbook/local/extension
     accept     : 填空题可接受的其他写法
     verify     : 可核验项 list[dict{desc,code,expected}]（SymPy 复核用）
+    variant_group: 举一反三变式族 id（同族题在子站组成模块）
     """
     _COUNTER["n"] += 1
     qid = qid or ("q-%03d" % _COUNTER["n"])
@@ -136,6 +137,7 @@ def Q(qtype, diff, kp, stem, answer=None, options=None, answer_text=None,
         "extension": ext,
         "tags": tags or [],
         "verify": verify or [],
+        "variantGroup": variant_group,
     }
 
 
@@ -147,7 +149,7 @@ def load_bank(chapters=None):
     """
     here = os.path.dirname(os.path.abspath(__file__))
     order = ["ch1", "ch1b", "ch2", "ch2b", "ch3", "ch3b",
-             "ch4", "ch4b", "ch5", "ch5b", "ch6", "ch6b"]
+             "ch4", "ch4b", "ch5", "ch5b", "ch6", "ch6b", "chx"]
     if chapters is not None:
         order = [c for c in order if c in set(chapters)]
     allq = []

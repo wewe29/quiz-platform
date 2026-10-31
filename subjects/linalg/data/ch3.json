@@ -33,7 +33,8 @@
     "重点"
    ],
    "verify": [],
-   "idx": 178
+   "variantGroup": null,
+   "idx": 190
   },
   {
    "id": "q-180",
@@ -84,7 +85,8 @@
      "expected": "0"
     }
    ],
-   "idx": 179
+   "variantGroup": null,
+   "idx": 191
   },
   {
    "id": "q-181",
@@ -130,7 +132,8 @@
      "expected": "2"
     }
    ],
-   "idx": 180
+   "variantGroup": null,
+   "idx": 192
   },
   {
    "id": "q-182",
@@ -176,7 +179,8 @@
      "expected": "0"
     }
    ],
-   "idx": 181
+   "variantGroup": null,
+   "idx": 193
   },
   {
    "id": "q-215",
@@ -217,7 +221,8 @@
      "expected": "Matrix([[0, 1, 0], [1, 0, 0], [0, 1, 1]])"
     }
    ],
-   "idx": 182
+   "variantGroup": null,
+   "idx": 194
   },
   {
    "id": "q-216",
@@ -263,7 +268,8 @@
      "expected": "2"
     }
    ],
-   "idx": 183
+   "variantGroup": null,
+   "idx": 195
   },
   {
    "id": "q-183",
@@ -319,7 +325,8 @@
      "expected": "Matrix([[-1], [1]])"
     }
    ],
-   "idx": 184
+   "variantGroup": null,
+   "idx": 196
   },
   {
    "id": "q-184",
@@ -370,7 +377,8 @@
      "expected": "1"
     }
    ],
-   "idx": 185
+   "variantGroup": null,
+   "idx": 197
   },
   {
    "id": "q-217",
@@ -417,7 +425,8 @@
      "expected": "1"
     }
    ],
-   "idx": 186
+   "variantGroup": null,
+   "idx": 198
   },
   {
    "id": "q-218",
@@ -463,7 +472,8 @@
      "expected": "2"
     }
    ],
-   "idx": 187
+   "variantGroup": null,
+   "idx": 199
   },
   {
    "id": "q-219",
@@ -510,7 +520,8 @@
      "expected": "Matrix([[5, -2], [-7, 3]])"
     }
    ],
-   "idx": 188
+   "variantGroup": null,
+   "idx": 200
   },
   {
    "id": "q-220",
@@ -555,7 +566,8 @@
      "expected": "2"
     }
    ],
-   "idx": 189
+   "variantGroup": null,
+   "idx": 201
   },
   {
    "id": "q-185",
@@ -602,7 +614,8 @@
      "expected": "1"
     }
    ],
-   "idx": 190
+   "variantGroup": null,
+   "idx": 202
   },
   {
    "id": "q-221",
@@ -649,7 +662,8 @@
      "expected": "1"
     }
    ],
-   "idx": 191
+   "variantGroup": null,
+   "idx": 203
   },
   {
    "id": "q-222",
@@ -690,7 +704,54 @@
      "expected": "Matrix([[1, 100], [0, 1]])"
     }
    ],
-   "idx": 192
+   "variantGroup": null,
+   "idx": 204
+  },
+  {
+   "id": "q-511",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 3,
+   "knowledgePoint": "3.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §3.3 线性方程组的解",
+    "kind": "textbook"
+   },
+   "stem": "接上题：当 $a=1$ 时解空间的维数是",
+   "options": [
+    "$0$",
+    "$2$",
+    "$3$",
+    "$1$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$a=1$ 时 $r(A)=r(A|b)=1$，解空间维数 $=n-r=3-1=2$（两个自由变量）。B 正确；\nA 是唯一解情形；D 误以为三个方程里独立的有两个；C 忽略了约束。",
+   "misconception": "⚠️易错点：解空间维数 = 未知数个数 − 秩，不是「方程个数之差」；本题三个方程退化为 1 个有效方程。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "变式族·含参方程组"
+   ],
+   "verify": [
+    {
+     "desc": "a=1 的秩",
+     "code": "M([[1,1,1],[1,1,1],[1,1,1]]).rank()",
+     "expected": "1"
+    },
+    {
+     "desc": "维数 = 3-1",
+     "code": "3-1",
+     "expected": "2"
+    }
+   ],
+   "variantGroup": "vg-paramsys",
+   "idx": 205
   },
   {
    "id": "q-186",
@@ -738,7 +799,8 @@
      "expected": "-1"
     }
    ],
-   "idx": 193
+   "variantGroup": null,
+   "idx": 206
   },
   {
    "id": "q-187",
@@ -786,7 +848,8 @@
      "expected": "2"
     }
    ],
-   "idx": 194
+   "variantGroup": null,
+   "idx": 207
   },
   {
    "id": "q-188",
@@ -823,7 +886,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 195
+   "variantGroup": null,
+   "idx": 208
   },
   {
    "id": "q-189",
@@ -871,7 +935,8 @@
      "expected": "1"
     }
    ],
-   "idx": 196
+   "variantGroup": null,
+   "idx": 209
   },
   {
    "id": "q-223",
@@ -914,7 +979,8 @@
      "expected": "Matrix([[1, 1], [0, 0]])"
     }
    ],
-   "idx": 197
+   "variantGroup": null,
+   "idx": 210
   },
   {
    "id": "q-224",
@@ -961,7 +1027,8 @@
      "expected": "0"
     }
    ],
-   "idx": 198
+   "variantGroup": null,
+   "idx": 211
   },
   {
    "id": "q-225",
@@ -1009,7 +1076,8 @@
      "expected": "1"
     }
    ],
-   "idx": 199
+   "variantGroup": null,
+   "idx": 212
   },
   {
    "id": "q-226",
@@ -1057,7 +1125,8 @@
      "expected": "2"
     }
    ],
-   "idx": 200
+   "variantGroup": null,
+   "idx": 213
   },
   {
    "id": "q-190",
@@ -1105,7 +1174,8 @@
      "expected": "2"
     }
    ],
-   "idx": 201
+   "variantGroup": null,
+   "idx": 214
   },
   {
    "id": "q-227",
@@ -1142,7 +1212,8 @@
     "重点"
    ],
    "verify": [],
-   "idx": 202
+   "variantGroup": null,
+   "idx": 215
   },
   {
    "id": "q-228",
@@ -1190,7 +1261,8 @@
      "expected": "2"
     }
    ],
-   "idx": 203
+   "variantGroup": null,
+   "idx": 216
   },
   {
    "id": "q-229",
@@ -1238,7 +1310,8 @@
      "expected": "1"
     }
    ],
-   "idx": 204
+   "variantGroup": null,
+   "idx": 217
   },
   {
    "id": "q-191",
@@ -1291,7 +1364,8 @@
      "expected": "1"
     }
    ],
-   "idx": 205
+   "variantGroup": null,
+   "idx": 218
   },
   {
    "id": "q-230",
@@ -1340,7 +1414,8 @@
      "expected": "2"
     }
    ],
-   "idx": 206
+   "variantGroup": null,
+   "idx": 219
   },
   {
    "id": "q-192",
@@ -1373,7 +1448,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 207
+   "variantGroup": null,
+   "idx": 220
   },
   {
    "id": "q-193",
@@ -1416,7 +1492,8 @@
      "expected": "2"
     }
    ],
-   "idx": 208
+   "variantGroup": null,
+   "idx": 221
   },
   {
    "id": "q-194",
@@ -1460,7 +1537,8 @@
      "expected": "2"
     }
    ],
-   "idx": 209
+   "variantGroup": null,
+   "idx": 222
   },
   {
    "id": "q-195",
@@ -1504,7 +1582,8 @@
      "expected": "1"
     }
    ],
-   "idx": 210
+   "variantGroup": null,
+   "idx": 223
   },
   {
    "id": "q-231",
@@ -1537,7 +1616,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 211
+   "variantGroup": null,
+   "idx": 224
   },
   {
    "id": "q-232",
@@ -1576,7 +1656,8 @@
      "expected": "2"
     }
    ],
-   "idx": 212
+   "variantGroup": null,
+   "idx": 225
   },
   {
    "id": "q-233",
@@ -1608,7 +1689,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 213
+   "variantGroup": null,
+   "idx": 226
   },
   {
    "id": "q-234",
@@ -1641,7 +1723,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 214
+   "variantGroup": null,
+   "idx": 227
   },
   {
    "id": "q-235",
@@ -1680,7 +1763,8 @@
      "expected": "2"
     }
    ],
-   "idx": 215
+   "variantGroup": null,
+   "idx": 228
   },
   {
    "id": "q-196",
@@ -1729,7 +1813,8 @@
      "expected": "1"
     }
    ],
-   "idx": 216
+   "variantGroup": null,
+   "idx": 229
   },
   {
    "id": "q-236",
@@ -1773,7 +1858,8 @@
      "expected": "2"
     }
    ],
-   "idx": 217
+   "variantGroup": null,
+   "idx": 230
   },
   {
    "id": "q-237",
@@ -1806,7 +1892,8 @@
     "难点"
    ],
    "verify": [],
-   "idx": 218
+   "variantGroup": null,
+   "idx": 231
   },
   {
    "id": "q-197",
@@ -1850,7 +1937,8 @@
      "expected": "0"
     }
    ],
-   "idx": 219
+   "variantGroup": null,
+   "idx": 232
   },
   {
    "id": "q-238",
@@ -1890,7 +1978,8 @@
      "expected": "2"
     }
    ],
-   "idx": 220
+   "variantGroup": null,
+   "idx": 233
   },
   {
    "id": "q-198",
@@ -1929,7 +2018,8 @@
      "expected": "2"
     }
    ],
-   "idx": 221
+   "variantGroup": null,
+   "idx": 234
   },
   {
    "id": "q-199",
@@ -1970,7 +2060,8 @@
      "expected": "2"
     }
    ],
-   "idx": 222
+   "variantGroup": null,
+   "idx": 235
   },
   {
    "id": "q-200",
@@ -2012,7 +2103,8 @@
      "expected": "0"
     }
    ],
-   "idx": 223
+   "variantGroup": null,
+   "idx": 236
   },
   {
    "id": "q-239",
@@ -2046,7 +2138,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 224
+   "variantGroup": null,
+   "idx": 237
   },
   {
    "id": "q-240",
@@ -2085,7 +2178,8 @@
      "expected": "0"
     }
    ],
-   "idx": 225
+   "variantGroup": null,
+   "idx": 238
   },
   {
    "id": "q-241",
@@ -2125,7 +2219,8 @@
      "expected": "1"
     }
    ],
-   "idx": 226
+   "variantGroup": null,
+   "idx": 239
   },
   {
    "id": "q-242",
@@ -2158,7 +2253,8 @@
     "重点"
    ],
    "verify": [],
-   "idx": 227
+   "variantGroup": null,
+   "idx": 240
   },
   {
    "id": "q-201",
@@ -2193,7 +2289,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 228
+   "variantGroup": null,
+   "idx": 241
   },
   {
    "id": "q-202",
@@ -2236,7 +2333,8 @@
      "expected": "0"
     }
    ],
-   "idx": 229
+   "variantGroup": null,
+   "idx": 242
   },
   {
    "id": "q-243",
@@ -2277,7 +2375,8 @@
      "expected": "Matrix([[1, 0], [0, 1]])"
     }
    ],
-   "idx": 230
+   "variantGroup": null,
+   "idx": 243
   },
   {
    "id": "q-244",
@@ -2320,7 +2419,8 @@
      "expected": "2"
     }
    ],
-   "idx": 231
+   "variantGroup": null,
+   "idx": 244
   },
   {
    "id": "q-245",
@@ -2363,7 +2463,8 @@
      "expected": "2"
     }
    ],
-   "idx": 232
+   "variantGroup": null,
+   "idx": 245
   },
   {
    "id": "q-203",
@@ -2418,7 +2519,8 @@
      "expected": "1"
     }
    ],
-   "idx": 233
+   "variantGroup": null,
+   "idx": 246
   },
   {
    "id": "q-246",
@@ -2463,7 +2565,8 @@
      "expected": "2"
     }
    ],
-   "idx": 234
+   "variantGroup": null,
+   "idx": 247
   },
   {
    "id": "q-204",
@@ -2505,7 +2608,8 @@
      "expected": "2"
     }
    ],
-   "idx": 235
+   "variantGroup": null,
+   "idx": 248
   },
   {
    "id": "q-205",
@@ -2541,7 +2645,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 236
+   "variantGroup": null,
+   "idx": 249
   },
   {
    "id": "q-247",
@@ -2582,7 +2687,8 @@
     "重点"
    ],
    "verify": [],
-   "idx": 237
+   "variantGroup": null,
+   "idx": 250
   },
   {
    "id": "q-248",
@@ -2623,7 +2729,8 @@
     "方法"
    ],
    "verify": [],
-   "idx": 238
+   "variantGroup": null,
+   "idx": 251
   },
   {
    "id": "q-249",
@@ -2665,7 +2772,8 @@
     "跨章"
    ],
    "verify": [],
-   "idx": 239
+   "variantGroup": null,
+   "idx": 252
   },
   {
    "id": "q-250",
@@ -2706,7 +2814,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 240
+   "variantGroup": null,
+   "idx": 253
   },
   {
    "id": "q-206",
@@ -2747,7 +2856,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 241
+   "variantGroup": null,
+   "idx": 254
   },
   {
    "id": "q-207",
@@ -2788,7 +2898,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 242
+   "variantGroup": null,
+   "idx": 255
   },
   {
    "id": "q-208",
@@ -2829,7 +2940,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 243
+   "variantGroup": null,
+   "idx": 256
   },
   {
    "id": "q-251",
@@ -2870,7 +2982,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 244
+   "variantGroup": null,
+   "idx": 257
   },
   {
    "id": "q-252",
@@ -2918,7 +3031,8 @@
      "expected": "2"
     }
    ],
-   "idx": 245
+   "variantGroup": null,
+   "idx": 258
   },
   {
    "id": "q-209",
@@ -2976,7 +3090,8 @@
      "expected": "3"
     }
    ],
-   "idx": 246
+   "variantGroup": null,
+   "idx": 259
   },
   {
    "id": "q-253",
@@ -3019,7 +3134,8 @@
     "真题改编"
    ],
    "verify": [],
-   "idx": 247
+   "variantGroup": null,
+   "idx": 260
   },
   {
    "id": "q-254",
@@ -3061,7 +3177,50 @@
     "真题改编"
    ],
    "verify": [],
-   "idx": 248
+   "variantGroup": null,
+   "idx": 261
+  },
+  {
+   "id": "q-512",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 3,
+   "knowledgePoint": "3.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §3.3 线性方程组的解",
+    "kind": "textbook"
+   },
+   "stem": "（创新·几何视角）设 $a\\neq1$。从「三个平面」的几何位置关系解释方程组$\\begin{cases}x_1+x_2+x_3=1\\\\a x_1+x_2+x_3=a\\\\x_1+x_2+a x_3=a\\end{cases}$为何有唯一解，并说明参数 $a$ 如何控制解集的「维度」。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "三个平面的法向量分别为 $n_1=(1,1,1)$、$n_2=(a,1,1)$、$n_3=(1,1,a)$。$a\\neq1$ 时 $|A(a)|\\neq0$，三个法向量线性无关，三平面交于**唯一点** $(1,-a,1)$。\n$a\\to1$ 时三个法向量趋于同一个 $(1,1,1)$；$a=1$ 时三平面**重合**为同一平面（三个方程同为 $x_1+x_2+x_3=1$），解集从点升维成整个平面（二维解集）。\n**参数的角色**：$|A(a)|=-(a-1)^{2}$ 的零点是二重的——几何上对应「三平面同时塌缩重合」这一最退化形态，比「两个独立临界值」更极端。\n**创新点**：行列式的代数零点 ↔ 几何退化形态，可以双向翻译。",
+   "points": [
+    {
+     "text": "指出三个法向量及 $|A|\\neq0$ 的几何含义（交于一点）",
+     "partial": 2
+    },
+    {
+     "text": "说明 $a\\to1$ 时法向量汇聚、三平面重合",
+     "partial": 2
+    },
+    {
+     "text": "把 $|A|$ 的二重零点与解集升维对应",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§3.3 解的存在性 + 行列式的几何意义（法向量张成的平行六面体体积）。\n**考点出处**：同济《线性代数》第六版 §3.3；题型改编自：创新题（代数—几何双向翻译）。",
+   "misconception": "⚠️易错点：「法向量线性无关」对应「三平面交于一点」，不是「三平面互相垂直」；本族参数下不会出现「三棱柱（无公共点）」的形态——因为右端项恰好相容。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "几何",
+    "变式族·含参方程组"
+   ],
+   "verify": [],
+   "variantGroup": "vg-paramsys",
+   "idx": 262
   },
   {
    "id": "q-210",
@@ -3117,7 +3276,8 @@
      "expected": "2"
     }
    ],
-   "idx": 249
+   "variantGroup": null,
+   "idx": 263
   },
   {
    "id": "q-255",
@@ -3173,7 +3333,8 @@
      "expected": "3"
     }
    ],
-   "idx": 250
+   "variantGroup": null,
+   "idx": 264
   },
   {
    "id": "q-256",
@@ -3229,7 +3390,8 @@
      "expected": "4"
     }
    ],
-   "idx": 251
+   "variantGroup": null,
+   "idx": 265
   },
   {
    "id": "q-257",
@@ -3286,7 +3448,8 @@
      "expected": "Matrix([[1, 0, 0, 1], [0, 1, 0, 2], [0, 0, 1, 3]])"
     }
    ],
-   "idx": 252
+   "variantGroup": null,
+   "idx": 266
   },
   {
    "id": "q-258",
@@ -3342,7 +3505,8 @@
      "expected": "Matrix([[6073, 8098], [3, 4]])"
     }
    ],
-   "idx": 253
+   "variantGroup": null,
+   "idx": 267
   },
   {
    "id": "q-259",
@@ -3399,7 +3563,8 @@
      "expected": "Matrix([[0], [0]])"
     }
    ],
-   "idx": 254
+   "variantGroup": null,
+   "idx": 268
   },
   {
    "id": "q-211",
@@ -3455,7 +3620,8 @@
      "expected": "1"
     }
    ],
-   "idx": 255
+   "variantGroup": null,
+   "idx": 269
   },
   {
    "id": "q-212",
@@ -3512,7 +3678,8 @@
      "expected": "1"
     }
    ],
-   "idx": 256
+   "variantGroup": null,
+   "idx": 270
   },
   {
    "id": "q-260",
@@ -3569,7 +3736,64 @@
      "expected": "Matrix([[1, 0, -1, -1], [0, 1, 1, 2], [0, 0, 0, 0]])"
     }
    ],
-   "idx": 257
+   "variantGroup": null,
+   "idx": 271
+  },
+  {
+   "id": "q-510",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §3.3 线性方程组的解",
+    "kind": "textbook"
+   },
+   "stem": "讨论参数 $a$ 取何值时，方程组\n$$\\begin{cases}x_1+x_2+x_3=1\\\\a x_1+x_2+x_3=a\\\\x_1+x_2+a x_3=a\\end{cases}$$\n有唯一解或无穷多解，并在有解时求出解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "系数行列式 $|A(a)|=-(a-1)^{2}$。\n**① $a\\neq1$**：唯一解。式 2 − 式 1 得 $(a-1)x_1=a-1\\Rightarrow x_1=1$；式 3 − 式 1 得 $x_3=1$；代回式 1 得 $x_2=1-x_1-x_3=-1$——解 $(1,-1,1)^{T}$ 竟与 $a$ 无关（$a$ 只出现在被消去的方程里）。\n**② $a=1$**：三个方程同为 $x_1+x_2+x_3=1$，$r(A)=r(A|b)=1<3$，无穷多解：\n$$x=(1,0,0)^{T}+k_1(-1,1,0)^{T}+k_2(-1,0,1)^{T}.$$\n无解情形不存在（$a=1$ 时增广矩阵同样相容）。",
+   "points": [
+    {
+     "text": "算出 $|A(a)|=-(a-1)^{2}$，临界值 $a=1$",
+     "partial": 2
+    },
+    {
+     "text": "$a\\neq1$ 时给出唯一解 $(1,-a,1)$",
+     "partial": 2
+    },
+    {
+     "text": "$a=1$ 时判定 $r(A)=r(A|b)=1<3$，无穷多解",
+     "partial": 2
+    },
+    {
+     "text": "写出通解（特解 + 基础解系）",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§3.3 判别定理 + 逐式相减消元。\n**考点出处**：同济《线性代数》第六版 §3.3；题型改编自：高校期末卷经典模型（含参讨论）。",
+   "misconception": "⚠️易错点：$a=1$ 时三个方程退化为同一个——是「无穷多解」而不是「无解」；与圆系数型（出现无解分支）相反，判据要重算不能背结论。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "变式族·含参方程组"
+   ],
+   "verify": [
+    {
+     "desc": "|A(a)|",
+     "code": "a=symbols('a'); sp.factor(M([[1,1,1],[a,1,1],[1,1,a]]).det())",
+     "expected": "-(a - 1)**2"
+    },
+    {
+     "desc": "a=2 唯一解",
+     "code": "M([[1,1,1],[2,1,1],[1,1,2]]).LUsolve(M([[1],[2],[2]]))",
+     "expected": "Matrix([[1], [-1], [1]])"
+    }
+   ],
+   "variantGroup": "vg-paramsys",
+   "idx": 272
   },
   {
    "id": "q-213",
@@ -3652,7 +3876,8 @@
      "expected": "Matrix([[1/2], [1/2], [1/2]])"
     }
    ],
-   "idx": 258
+   "variantGroup": null,
+   "idx": 273
   },
   {
    "id": "q-214",
@@ -3740,7 +3965,8 @@
      "expected": "Matrix([[1], [1], [1]])"
     }
    ],
-   "idx": 259
+   "variantGroup": null,
+   "idx": 274
   },
   {
    "id": "q-261",
@@ -3818,7 +4044,8 @@
      "expected": "Matrix([[1], [-2/3], [2/3]])"
     }
    ],
-   "idx": 260
+   "variantGroup": null,
+   "idx": 275
   },
   {
    "id": "q-262",
@@ -3880,7 +4107,8 @@
      "expected": "Matrix([[1], [2], [3]])"
     }
    ],
-   "idx": 261
+   "variantGroup": null,
+   "idx": 276
   }
  ]
 }

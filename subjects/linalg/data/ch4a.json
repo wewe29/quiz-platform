@@ -39,7 +39,8 @@
      "expected": "[2, -1, 2]"
     }
    ],
-   "idx": 262
+   "variantGroup": null,
+   "idx": 277
   },
   {
    "id": "q-264",
@@ -79,7 +80,8 @@
      "expected": "2"
     }
    ],
-   "idx": 263
+   "variantGroup": null,
+   "idx": 278
   },
   {
    "id": "q-299",
@@ -124,7 +126,8 @@
      "expected": "2"
     }
    ],
-   "idx": 264
+   "variantGroup": null,
+   "idx": 279
   },
   {
    "id": "q-300",
@@ -158,7 +161,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 265
+   "variantGroup": null,
+   "idx": 280
   },
   {
    "id": "q-301",
@@ -198,7 +202,8 @@
      "expected": "2"
     }
    ],
-   "idx": 266
+   "variantGroup": null,
+   "idx": 281
   },
   {
    "id": "q-302",
@@ -239,7 +244,8 @@
      "expected": "1"
     }
    ],
-   "idx": 267
+   "variantGroup": null,
+   "idx": 282
   },
   {
    "id": "q-265",
@@ -279,7 +285,8 @@
      "expected": "3"
     }
    ],
-   "idx": 268
+   "variantGroup": null,
+   "idx": 283
   },
   {
    "id": "q-266",
@@ -324,7 +331,8 @@
      "expected": "1"
     }
    ],
-   "idx": 269
+   "variantGroup": null,
+   "idx": 284
   },
   {
    "id": "q-303",
@@ -369,7 +377,8 @@
      "expected": "[2, 3, 5]"
     }
    ],
-   "idx": 270
+   "variantGroup": null,
+   "idx": 285
   },
   {
    "id": "q-304",
@@ -403,7 +412,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 271
+   "variantGroup": null,
+   "idx": 286
   },
   {
    "id": "q-305",
@@ -449,7 +459,8 @@
      "expected": "2"
     }
    ],
-   "idx": 272
+   "variantGroup": null,
+   "idx": 287
   },
   {
    "id": "q-306",
@@ -484,7 +495,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 273
+   "variantGroup": null,
+   "idx": 288
   },
   {
    "id": "q-267",
@@ -535,7 +547,8 @@
      "expected": "[1, 1, 0]"
     }
    ],
-   "idx": 274
+   "variantGroup": null,
+   "idx": 289
   },
   {
    "id": "q-307",
@@ -581,7 +594,8 @@
      "expected": "3"
     }
    ],
-   "idx": 275
+   "variantGroup": null,
+   "idx": 290
   },
   {
    "id": "q-308",
@@ -622,7 +636,8 @@
      "expected": "4"
     }
    ],
-   "idx": 276
+   "variantGroup": null,
+   "idx": 291
   },
   {
    "id": "q-268",
@@ -657,7 +672,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 277
+   "variantGroup": null,
+   "idx": 292
   },
   {
    "id": "q-309",
@@ -693,7 +709,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 278
+   "variantGroup": null,
+   "idx": 293
   },
   {
    "id": "q-310",
@@ -741,7 +758,8 @@
      "expected": "-1"
     }
    ],
-   "idx": 279
+   "variantGroup": null,
+   "idx": 294
   },
   {
    "id": "q-311",
@@ -783,7 +801,8 @@
      "expected": "3"
     }
    ],
-   "idx": 280
+   "variantGroup": null,
+   "idx": 295
   },
   {
    "id": "q-312",
@@ -819,7 +838,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 281
+   "variantGroup": null,
+   "idx": 296
   },
   {
    "id": "q-269",
@@ -855,7 +875,8 @@
     "重点"
    ],
    "verify": [],
-   "idx": 282
+   "variantGroup": null,
+   "idx": 297
   },
   {
    "id": "q-271",
@@ -898,7 +919,8 @@
      "expected": "2"
     }
    ],
-   "idx": 283
+   "variantGroup": null,
+   "idx": 298
   },
   {
    "id": "q-272",
@@ -945,7 +967,8 @@
      "expected": "1"
     }
    ],
-   "idx": 284
+   "variantGroup": null,
+   "idx": 299
   },
   {
    "id": "q-273",
@@ -993,7 +1016,8 @@
      "expected": "2"
     }
    ],
-   "idx": 285
+   "variantGroup": null,
+   "idx": 300
   },
   {
    "id": "q-313",
@@ -1030,7 +1054,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 286
+   "variantGroup": null,
+   "idx": 301
   },
   {
    "id": "q-314",
@@ -1067,7 +1092,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 287
+   "variantGroup": null,
+   "idx": 302
   },
   {
    "id": "q-315",
@@ -1104,7 +1130,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 288
+   "variantGroup": null,
+   "idx": 303
   },
   {
    "id": "q-316",
@@ -1140,7 +1167,8 @@
     "重点"
    ],
    "verify": [],
-   "idx": 289
+   "variantGroup": null,
+   "idx": 304
   },
   {
    "id": "q-270",
@@ -1198,7 +1226,8 @@
      "expected": "1"
     }
    ],
-   "idx": 290
+   "variantGroup": null,
+   "idx": 305
   },
   {
    "id": "q-317",
@@ -1235,7 +1264,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 291
+   "variantGroup": null,
+   "idx": 306
   },
   {
    "id": "q-318",
@@ -1272,7 +1302,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 292
+   "variantGroup": null,
+   "idx": 307
   },
   {
    "id": "q-274",
@@ -1310,7 +1341,8 @@
      "expected": "Matrix([[0], [0], [0]])"
     }
    ],
-   "idx": 293
+   "variantGroup": null,
+   "idx": 308
   },
   {
    "id": "q-275",
@@ -1348,7 +1380,8 @@
      "expected": "1"
     }
    ],
-   "idx": 294
+   "variantGroup": null,
+   "idx": 309
   },
   {
    "id": "q-276",
@@ -1386,7 +1419,8 @@
      "expected": "2"
     }
    ],
-   "idx": 295
+   "variantGroup": null,
+   "idx": 310
   },
   {
    "id": "q-319",
@@ -1418,7 +1452,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 296
+   "variantGroup": null,
+   "idx": 311
   },
   {
    "id": "q-320",
@@ -1456,7 +1491,8 @@
      "expected": "1"
     }
    ],
-   "idx": 297
+   "variantGroup": null,
+   "idx": 312
   },
   {
    "id": "q-321",
@@ -1488,7 +1524,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 298
+   "variantGroup": null,
+   "idx": 313
   },
   {
    "id": "q-322",
@@ -1521,7 +1558,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 299
+   "variantGroup": null,
+   "idx": 314
   },
   {
    "id": "q-323",
@@ -1553,7 +1591,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 300
+   "variantGroup": null,
+   "idx": 315
   },
   {
    "id": "q-277",
@@ -1591,7 +1630,8 @@
      "expected": "Matrix([[0], [0]])"
     }
    ],
-   "idx": 301
+   "variantGroup": null,
+   "idx": 316
   },
   {
    "id": "q-278",
@@ -1630,7 +1670,8 @@
      "expected": "2"
     }
    ],
-   "idx": 302
+   "variantGroup": null,
+   "idx": 317
   },
   {
    "id": "q-324",
@@ -1662,7 +1703,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 303
+   "variantGroup": null,
+   "idx": 318
   },
   {
    "id": "q-325",
@@ -1694,7 +1736,8 @@
     "重点"
    ],
    "verify": [],
-   "idx": 304
+   "variantGroup": null,
+   "idx": 319
   },
   {
    "id": "q-326",
@@ -1727,7 +1770,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 305
+   "variantGroup": null,
+   "idx": 320
   },
   {
    "id": "q-279",
@@ -1771,7 +1815,8 @@
      "expected": "2"
     }
    ],
-   "idx": 306
+   "variantGroup": null,
+   "idx": 321
   },
   {
    "id": "q-327",
@@ -1803,7 +1848,8 @@
     "重点"
    ],
    "verify": [],
-   "idx": 307
+   "variantGroup": null,
+   "idx": 322
   },
   {
    "id": "q-328",
@@ -1841,7 +1887,8 @@
      "expected": "2"
     }
    ],
-   "idx": 308
+   "variantGroup": null,
+   "idx": 323
   },
   {
    "id": "q-280",
@@ -1882,7 +1929,8 @@
      "expected": "[4, 5, -9]"
     }
    ],
-   "idx": 309
+   "variantGroup": null,
+   "idx": 324
   }
  ]
 }

@@ -806,8 +806,48 @@
       q.tags.forEach(function (t) { h += '<span class="tag">' + esc(t) + '</span>'; });
       h += '</div>';
     }
+    // 举一反三：同变式族优先，否则同章同知识点同题型
+    var sibs = variantSiblingsOf(q);
+    if (sibs.length) {
+      h += '<div class="variants-row"><button type="button" class="btn btn-sm variants-btn" ' +
+        'data-role="variants" data-qid="' + q.id + '">🔁 举一反三 · ' + sibs.length +
+        ' 道同类题（生成变式练习集）</button></div>';
+    }
     h += '</div>';
     return h;
+  }
+
+  /** 同类题：同 variantGroup 优先；无族则回退到「同章 + 同知识点 + 同题型」。 */
+  function variantSiblingsOf(q) {
+    var sibs = [];
+    if (q.variantGroup) {
+      QUESTIONS.forEach(function (o) {
+        if (o.id !== q.id && o.variantGroup === q.variantGroup) sibs.push(o);
+      });
+    }
+    if (!sibs.length) {
+      QUESTIONS.forEach(function (o) {
+        if (o.id !== q.id && o.chapter === q.chapter &&
+            o.knowledgePoint === q.knowledgePoint && o.type === q.type) sibs.push(o);
+      });
+    }
+    return sibs;
+  }
+
+  /** 生成「举一反三」固定练习集：原型在前，变式随后。 */
+  function startVariants(qid) {
+    var q = qById[qid];
+    var sibs = variantSiblingsOf(q);
+    var order = [qid].concat(sibs.map(function (o) { return o.id; }));
+    session.pinnedOrder = true;
+    session.order = order;
+    session.cursor = 0;
+    session.builderLabel = '举一反三 ' + order.length + ' 题';
+    session.updatedAt = now();
+    saveMerged();
+    render();
+    showToast('已组「举一反三」练习：' + order.length + ' 题（原型在前）', 'ok');
+    scrollToCard(qid);
   }
 
   /* ---------- 事件绑定 ---------- */
@@ -867,6 +907,8 @@
             gotoIdx(idxOf(qid) + 1);
           } else if (role === 'next-unanswered') {
             gotoUnanswered(idxOf(qid));
+          } else if (role === 'variants') {
+            startVariants(btn.getAttribute('data-qid'));
           }
         });
       });

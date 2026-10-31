@@ -33,7 +33,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 464
+   "variantGroup": null,
+   "idx": 492
   },
   {
    "id": "q-471",
@@ -67,7 +68,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 465
+   "variantGroup": null,
+   "idx": 493
   },
   {
    "id": "q-472",
@@ -101,7 +103,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 466
+   "variantGroup": null,
+   "idx": 494
   },
   {
    "id": "q-473",
@@ -135,7 +138,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 467
+   "variantGroup": null,
+   "idx": 495
   },
   {
    "id": "q-474",
@@ -169,7 +173,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 468
+   "variantGroup": null,
+   "idx": 496
   },
   {
    "id": "q-475",
@@ -203,7 +208,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 469
+   "variantGroup": null,
+   "idx": 497
   },
   {
    "id": "q-476",
@@ -239,7 +245,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 470
+   "variantGroup": null,
+   "idx": 498
   },
   {
    "id": "q-477",
@@ -275,7 +282,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 471
+   "variantGroup": null,
+   "idx": 499
   },
   {
    "id": "q-478",
@@ -311,7 +319,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 472
+   "variantGroup": null,
+   "idx": 500
   },
   {
    "id": "q-466",
@@ -347,7 +356,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 473
+   "variantGroup": null,
+   "idx": 501
   },
   {
    "id": "q-479",
@@ -384,7 +394,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 474
+   "variantGroup": null,
+   "idx": 502
   },
   {
    "id": "q-480",
@@ -420,7 +431,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 475
+   "variantGroup": null,
+   "idx": 503
   },
   {
    "id": "q-467",
@@ -452,7 +464,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 476
+   "variantGroup": null,
+   "idx": 504
   },
   {
    "id": "q-481",
@@ -484,7 +497,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 477
+   "variantGroup": null,
+   "idx": 505
   },
   {
    "id": "q-482",
@@ -516,7 +530,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 478
+   "variantGroup": null,
+   "idx": 506
   },
   {
    "id": "q-483",
@@ -547,7 +562,8 @@
     "基础"
    ],
    "verify": [],
-   "idx": 479
+   "variantGroup": null,
+   "idx": 507
   },
   {
    "id": "q-484",
@@ -579,7 +595,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 480
+   "variantGroup": null,
+   "idx": 508
   },
   {
    "id": "q-485",
@@ -611,7 +628,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 481
+   "variantGroup": null,
+   "idx": 509
   },
   {
    "id": "q-468",
@@ -650,7 +668,8 @@
     "概念"
    ],
    "verify": [],
-   "idx": 482
+   "variantGroup": null,
+   "idx": 510
   },
   {
    "id": "q-486",
@@ -682,7 +701,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 483
+   "variantGroup": null,
+   "idx": 511
   },
   {
    "id": "q-487",
@@ -713,7 +733,8 @@
     "基础"
    ],
    "verify": [],
-   "idx": 484
+   "variantGroup": null,
+   "idx": 512
   },
   {
    "id": "q-488",
@@ -745,7 +766,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 485
+   "variantGroup": null,
+   "idx": 513
   },
   {
    "id": "q-489",
@@ -777,7 +799,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 486
+   "variantGroup": null,
+   "idx": 514
   },
   {
    "id": "q-490",
@@ -815,7 +838,8 @@
      "expected": "1"
     }
    ],
-   "idx": 487
+   "variantGroup": null,
+   "idx": 515
   },
   {
    "id": "q-491",
@@ -855,7 +879,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 488
+   "variantGroup": null,
+   "idx": 516
   },
   {
    "id": "q-492",
@@ -895,7 +920,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 489
+   "variantGroup": null,
+   "idx": 517
   },
   {
    "id": "q-469",
@@ -935,7 +961,8 @@
     "重点"
    ],
    "verify": [],
-   "idx": 490
+   "variantGroup": null,
+   "idx": 518
   },
   {
    "id": "q-493",
@@ -975,7 +1002,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 491
+   "variantGroup": null,
+   "idx": 519
   },
   {
    "id": "q-494",
@@ -1015,7 +1043,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 492
+   "variantGroup": null,
+   "idx": 520
   },
   {
    "id": "q-495",
@@ -1055,7 +1084,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 493
+   "variantGroup": null,
+   "idx": 521
   },
   {
    "id": "q-496",
@@ -1105,7 +1135,8 @@
      "expected": "2"
     }
    ],
-   "idx": 494
+   "variantGroup": null,
+   "idx": 522
   },
   {
    "id": "q-497",
@@ -1155,7 +1186,8 @@
      "expected": "1"
     }
    ],
-   "idx": 495
+   "variantGroup": null,
+   "idx": 523
   },
   {
    "id": "q-498",
@@ -1205,7 +1237,8 @@
      "expected": "2"
     }
    ],
-   "idx": 496
+   "variantGroup": null,
+   "idx": 524
   },
   {
    "id": "q-499",
@@ -1255,7 +1288,8 @@
      "expected": "2"
     }
    ],
-   "idx": 497
+   "variantGroup": null,
+   "idx": 525
   },
   {
    "id": "q-470",
@@ -1316,7 +1350,8 @@
      "expected": "Matrix([[-1, 1, -1], [1, -1, -2], [-1, -2, 2]])"
     }
    ],
-   "idx": 498
+   "variantGroup": null,
+   "idx": 526
   },
   {
    "id": "q-500",
@@ -1372,7 +1407,8 @@
      "expected": "[1, 1, 2]"
     }
    ],
-   "idx": 499
+   "variantGroup": null,
+   "idx": 527
   }
  ]
 }

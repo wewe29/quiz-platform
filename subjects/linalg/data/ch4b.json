@@ -39,7 +39,8 @@
      "expected": "2"
     }
    ],
-   "idx": 310
+   "variantGroup": null,
+   "idx": 325
   },
   {
    "id": "q-282",
@@ -79,7 +80,8 @@
      "expected": "2"
     }
    ],
-   "idx": 311
+   "variantGroup": null,
+   "idx": 326
   },
   {
    "id": "q-283",
@@ -121,7 +123,8 @@
      "expected": "1"
     }
    ],
-   "idx": 312
+   "variantGroup": null,
+   "idx": 327
   },
   {
    "id": "q-329",
@@ -162,7 +165,8 @@
      "expected": "[1, -7, 4, -2]"
     }
    ],
-   "idx": 313
+   "variantGroup": null,
+   "idx": 328
   },
   {
    "id": "q-330",
@@ -199,7 +203,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 314
+   "variantGroup": null,
+   "idx": 329
   },
   {
    "id": "q-331",
@@ -233,7 +238,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 315
+   "variantGroup": null,
+   "idx": 330
   },
   {
    "id": "q-332",
@@ -269,7 +275,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 316
+   "variantGroup": null,
+   "idx": 331
   },
   {
    "id": "q-333",
@@ -305,7 +312,8 @@
     "跨章"
    ],
    "verify": [],
-   "idx": 317
+   "variantGroup": null,
+   "idx": 332
   },
   {
    "id": "q-284",
@@ -347,7 +355,8 @@
      "expected": "0"
     }
    ],
-   "idx": 318
+   "variantGroup": null,
+   "idx": 333
   },
   {
    "id": "q-334",
@@ -382,7 +391,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 319
+   "variantGroup": null,
+   "idx": 334
   },
   {
    "id": "q-335",
@@ -418,7 +428,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 320
+   "variantGroup": null,
+   "idx": 335
   },
   {
    "id": "q-336",
@@ -454,7 +465,8 @@
     "跨章"
    ],
    "verify": [],
-   "idx": 321
+   "variantGroup": null,
+   "idx": 336
   },
   {
    "id": "q-285",
@@ -500,7 +512,8 @@
      "expected": "-1"
     }
    ],
-   "idx": 322
+   "variantGroup": null,
+   "idx": 337
   },
   {
    "id": "q-337",
@@ -541,7 +554,8 @@
      "expected": "4"
     }
    ],
-   "idx": 323
+   "variantGroup": null,
+   "idx": 338
   },
   {
    "id": "q-338",
@@ -582,7 +596,8 @@
      "expected": "4"
     }
    ],
-   "idx": 324
+   "variantGroup": null,
+   "idx": 339
   },
   {
    "id": "q-286",
@@ -625,7 +640,8 @@
      "expected": "2"
     }
    ],
-   "idx": 325
+   "variantGroup": null,
+   "idx": 340
   },
   {
    "id": "q-287",
@@ -667,7 +683,8 @@
      "expected": "3"
     }
    ],
-   "idx": 326
+   "variantGroup": null,
+   "idx": 341
   },
   {
    "id": "q-288",
@@ -718,7 +735,8 @@
      "expected": "2"
     }
    ],
-   "idx": 327
+   "variantGroup": null,
+   "idx": 342
   },
   {
    "id": "q-339",
@@ -758,7 +776,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 328
+   "variantGroup": null,
+   "idx": 343
   },
   {
    "id": "q-340",
@@ -799,7 +818,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 329
+   "variantGroup": null,
+   "idx": 344
   },
   {
    "id": "q-341",
@@ -840,7 +860,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 330
+   "variantGroup": null,
+   "idx": 345
   },
   {
    "id": "q-342",
@@ -881,7 +902,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 331
+   "variantGroup": null,
+   "idx": 346
   },
   {
    "id": "q-343",
@@ -921,7 +943,8 @@
     "真题改编"
    ],
    "verify": [],
-   "idx": 332
+   "variantGroup": null,
+   "idx": 347
   },
   {
    "id": "q-289",
@@ -972,7 +995,8 @@
      "expected": "[1, -2, 1]"
     }
    ],
-   "idx": 333
+   "variantGroup": null,
+   "idx": 348
   },
   {
    "id": "q-290",
@@ -1029,7 +1053,8 @@
      "expected": "[1, 2]"
     }
    ],
-   "idx": 334
+   "variantGroup": null,
+   "idx": 349
   },
   {
    "id": "q-344",
@@ -1069,7 +1094,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 335
+   "variantGroup": null,
+   "idx": 350
   },
   {
    "id": "q-345",
@@ -1110,7 +1136,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 336
+   "variantGroup": null,
+   "idx": 351
   },
   {
    "id": "q-346",
@@ -1151,7 +1178,8 @@
     "方法"
    ],
    "verify": [],
-   "idx": 337
+   "variantGroup": null,
+   "idx": 352
   },
   {
    "id": "q-291",
@@ -1198,7 +1226,8 @@
      "expected": "[2, 0, 0]"
     }
    ],
-   "idx": 338
+   "variantGroup": null,
+   "idx": 353
   },
   {
    "id": "q-347",
@@ -1246,7 +1275,8 @@
      "expected": "16"
     }
    ],
-   "idx": 339
+   "variantGroup": null,
+   "idx": 354
   },
   {
    "id": "q-348",
@@ -1287,7 +1317,61 @@
     "重点"
    ],
    "verify": [],
-   "idx": 340
+   "variantGroup": null,
+   "idx": 355
+  },
+  {
+   "id": "q-527",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §4.2 向量组的线性相关性",
+    "kind": "textbook"
+   },
+   "stem": "（创新·n 的奇偶效应）设向量组 $\\alpha_1,\\alpha_2,\\alpha_3$ 线性无关。证明 $\\beta_1=\\alpha_1+\\alpha_2,\\ \\beta_2=\\alpha_2+\\alpha_3,\\ \\beta_3=\\alpha_3+\\alpha_1$ 线性无关；再把问题改成 $4$ 个向量的循环和 $\\gamma_1=\\alpha_1+\\alpha_2,\\ \\gamma_2=\\alpha_2+\\alpha_3,\\ \\gamma_3=\\alpha_3+\\alpha_4,\\ \\gamma_4=\\alpha_4+\\alpha_1$（$\\alpha_1,\\dots,\\alpha_4$ 线性无关），判断 $\\gamma_1,\\dots,\\gamma_4$ 的线性相关性并说明「$n$ 的奇偶」在其中扮演的角色。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**三向量情形**：过渡矩阵 $C=\\begin{pmatrix}1&0&1\\\\1&1&0\\\\0&1&1\\end{pmatrix}$（列 = $\\beta_j$ 的坐标），$|C|=1+1=2\\neq0$，故 $\\beta_1,\\beta_2,\\beta_3$ 线性无关。\n**四向量情形**：$C_4=\\begin{pmatrix}1&0&0&1\\\\1&1&0&0\\\\0&1&1&0\\\\0&0&1&1\\end{pmatrix}$，$|C_4|=1-1=0$（按第一行展开后两个行列式相消）——**线性相关**！\n相关关系：$\\gamma_1-\\gamma_2+\\gamma_3-\\gamma_4=0$（系数 $1,-1,1,-1$ 交替）。\n**$n$ 的奇偶效应**：循环和矩阵的行列式 $=1+(-1)^{n+1}$——$n$ 为奇数时 $=2\\neq0$（无关），$n$ 为偶数时 $=0$（相关）。本质：偶数个循环和存在交替求和的零组合。\n**创新点**：同一种「相邻相加」结构，$n$ 从 3 变 4 结论翻转——「结构相同、结论相反」的经典陷阱。",
+   "points": [
+    {
+     "text": "三向量：写出过渡矩阵并算 $|C|=2\\neq0$",
+     "partial": 2
+    },
+    {
+     "text": "四向量：算出 $|C_4|=0$ 并给出交替求和的零组合",
+     "partial": 2
+    },
+    {
+     "text": "总结 $n$ 奇偶效应（$1+(-1)^{n+1}$）",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.2 线性相关性判定 = 过渡矩阵行列式；§1.4 行列式计算。\n**考点出处**：同济《线性代数》第六版 §4.2；题型改编自：创新题（n 的奇偶效应）。",
+   "misconception": "⚠️易错点：把三向量情形的结论盲推到四向量；$|C_4|$ 的计算注意第 4 列的 1 在第 1 行（循环结构）。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "证明",
+    "线性相关性"
+   ],
+   "verify": [
+    {
+     "desc": "|C3|",
+     "code": "M([[1,0,1],[1,1,0],[0,1,1]]).det()",
+     "expected": "2"
+    },
+    {
+     "desc": "|C4|",
+     "code": "M([[1,0,0,1],[1,1,0,0],[0,1,1,0],[0,0,1,1]]).det()",
+     "expected": "0"
+    }
+   ],
+   "variantGroup": null,
+   "idx": 356
   },
   {
    "id": "q-292",
@@ -1343,7 +1427,8 @@
      "expected": "Matrix([[0], [0], [0]])"
     }
    ],
-   "idx": 341
+   "variantGroup": null,
+   "idx": 357
   },
   {
    "id": "q-293",
@@ -1399,7 +1484,8 @@
      "expected": "1"
     }
    ],
-   "idx": 342
+   "variantGroup": null,
+   "idx": 358
   },
   {
    "id": "q-294",
@@ -1449,7 +1535,8 @@
      "expected": "Matrix([[1], [2], [3]])"
     }
    ],
-   "idx": 343
+   "variantGroup": null,
+   "idx": 359
   },
   {
    "id": "q-349",
@@ -1505,7 +1592,8 @@
      "expected": "3"
     }
    ],
-   "idx": 344
+   "variantGroup": null,
+   "idx": 360
   },
   {
    "id": "q-350",
@@ -1567,7 +1655,8 @@
      "expected": "3"
     }
    ],
-   "idx": 345
+   "variantGroup": null,
+   "idx": 361
   },
   {
    "id": "q-351",
@@ -1628,7 +1717,8 @@
      "expected": "Matrix([[3], [1], [1]])"
     }
    ],
-   "idx": 346
+   "variantGroup": null,
+   "idx": 362
   },
   {
    "id": "q-352",
@@ -1695,7 +1785,8 @@
      "expected": "2"
     }
    ],
-   "idx": 347
+   "variantGroup": null,
+   "idx": 363
   },
   {
    "id": "q-353",
@@ -1751,7 +1842,8 @@
      "expected": "1"
     }
    ],
-   "idx": 348
+   "variantGroup": null,
+   "idx": 364
   },
   {
    "id": "q-295",
@@ -1807,7 +1899,8 @@
      "expected": "[1, -2, 1]"
     }
    ],
-   "idx": 349
+   "variantGroup": null,
+   "idx": 365
   },
   {
    "id": "q-296",
@@ -1868,7 +1961,8 @@
      "expected": "[1, -2, 1]"
     }
    ],
-   "idx": 350
+   "variantGroup": null,
+   "idx": 366
   },
   {
    "id": "q-297",
@@ -1924,7 +2018,8 @@
      "expected": "1"
     }
    ],
-   "idx": 351
+   "variantGroup": null,
+   "idx": 367
   },
   {
    "id": "q-354",
@@ -1980,7 +2075,8 @@
      "expected": "Matrix([[0], [1], [0]])"
     }
    ],
-   "idx": 352
+   "variantGroup": null,
+   "idx": 368
   },
   {
    "id": "q-355",
@@ -2036,7 +2132,8 @@
      "expected": "[4, 3]"
     }
    ],
-   "idx": 353
+   "variantGroup": null,
+   "idx": 369
   },
   {
    "id": "q-356",
@@ -2092,7 +2189,8 @@
      "expected": "0"
     }
    ],
-   "idx": 354
+   "variantGroup": null,
+   "idx": 370
   },
   {
    "id": "q-298",
@@ -2163,7 +2261,8 @@
      "expected": "1"
     }
    ],
-   "idx": 355
+   "variantGroup": null,
+   "idx": 371
   },
   {
    "id": "q-357",
@@ -2225,7 +2324,8 @@
      "expected": "[1]"
     }
    ],
-   "idx": 356
+   "variantGroup": null,
+   "idx": 372
   },
   {
    "id": "q-358",
@@ -2287,7 +2387,8 @@
      "expected": "2"
     }
    ],
-   "idx": 357
+   "variantGroup": null,
+   "idx": 373
   }
  ]
 }

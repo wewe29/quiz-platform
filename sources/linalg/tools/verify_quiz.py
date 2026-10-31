@@ -144,6 +144,7 @@ def run_sympy_checks(questions, err, quiet):
     # 题库代码里用 M(...) 表示矩阵（与 ch1 既有写法一致）
     ns = {k: getattr(sympy, k) for k in dir(sympy) if not k.startswith("_")}
     ns["M"] = sympy.Matrix
+    ns["sp"] = sympy
     total = 0
     for q in questions:
         for item in (q.get("verify") or []):
@@ -178,7 +179,7 @@ def main():
         chaps = [a for a in args if a.startswith("ch")]
     if not chaps:
         chaps = ["ch1", "ch1b", "ch2", "ch2b", "ch3", "ch3b",
-                 "ch4", "ch4b", "ch5", "ch5b", "ch6", "ch6b"]
+                 "ch4", "ch4b", "ch5", "ch5b", "ch6", "ch6b", "chx"]
 
     allq = []
     for name in chaps:

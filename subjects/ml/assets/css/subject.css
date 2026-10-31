@@ -164,6 +164,12 @@
 .b-mode{font-family:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--rule);border-radius:6px;background:var(--panel-bg);color:var(--ink);}
 .builder-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:12px 0 4px;}
 
+/* ---------- 举一反三 ---------- */
+.variants-row{margin-top:10px;}
+.variants-btn{border-color:var(--accent);color:var(--accent);}
+
+[data-theme="dark"] .variants-btn{background:var(--accent-soft);color:#b9c8ff;}
+
 /* ---------- 数据自主权（导出/导入）+ toast + SW 横幅 ---------- */
 .data-row{display:flex;gap:6px;padding:6px 0 2px;}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:60;display:flex;align-items:center;justify-content:center;padding:16px;}

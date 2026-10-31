@@ -50,7 +50,8 @@
      "expected": "-3"
     }
    ],
-   "idx": 82
+   "variantGroup": null,
+   "idx": 88
   },
   {
    "id": "q-084",
@@ -85,7 +86,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 83
+   "variantGroup": null,
+   "idx": 89
   },
   {
    "id": "q-085",
@@ -130,7 +132,8 @@
      "expected": "Matrix([[3, 4], [1, 2]])"
     }
    ],
-   "idx": 84
+   "variantGroup": null,
+   "idx": 90
   },
   {
    "id": "q-086",
@@ -176,7 +179,8 @@
      "expected": "1"
     }
    ],
-   "idx": 85
+   "variantGroup": null,
+   "idx": 91
   },
   {
    "id": "q-087",
@@ -222,7 +226,8 @@
      "expected": "Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])"
     }
    ],
-   "idx": 86
+   "variantGroup": null,
+   "idx": 92
   },
   {
    "id": "q-119",
@@ -262,7 +267,8 @@
      "expected": "Matrix([[3, 7], [8, 12]])"
     }
    ],
-   "idx": 87
+   "variantGroup": null,
+   "idx": 93
   },
   {
    "id": "q-120",
@@ -296,7 +302,8 @@
     "基础"
    ],
    "verify": [],
-   "idx": 88
+   "variantGroup": null,
+   "idx": 94
   },
   {
    "id": "q-123",
@@ -330,7 +337,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 89
+   "variantGroup": null,
+   "idx": 95
   },
   {
    "id": "q-088",
@@ -381,7 +389,8 @@
      "expected": "-1"
     }
    ],
-   "idx": 90
+   "variantGroup": null,
+   "idx": 96
   },
   {
    "id": "q-089",
@@ -416,7 +425,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 91
+   "variantGroup": null,
+   "idx": 97
   },
   {
    "id": "q-121",
@@ -457,7 +467,8 @@
      "expected": "Matrix([[3/2, -1/2], [-2, 1]])"
     }
    ],
-   "idx": 92
+   "variantGroup": null,
+   "idx": 98
   },
   {
    "id": "q-122",
@@ -497,7 +508,8 @@
      "expected": "Matrix([[0, 0], [0, 0]])"
     }
    ],
-   "idx": 93
+   "variantGroup": null,
+   "idx": 99
   },
   {
    "id": "q-124",
@@ -548,7 +560,8 @@
      "expected": "3"
     }
    ],
-   "idx": 94
+   "variantGroup": null,
+   "idx": 100
   },
   {
    "id": "q-125",
@@ -589,7 +602,8 @@
      "expected": "Matrix([[0, 0], [0, 0]])"
     }
    ],
-   "idx": 95
+   "variantGroup": null,
+   "idx": 101
   },
   {
    "id": "q-126",
@@ -630,7 +644,8 @@
      "expected": "12"
     }
    ],
-   "idx": 96
+   "variantGroup": null,
+   "idx": 102
   },
   {
    "id": "q-127",
@@ -676,7 +691,8 @@
      "expected": "576"
     }
    ],
-   "idx": 97
+   "variantGroup": null,
+   "idx": 103
   },
   {
    "id": "q-128",
@@ -717,7 +733,8 @@
      "expected": "Matrix([[1, -5], [0, 1]])"
     }
    ],
-   "idx": 98
+   "variantGroup": null,
+   "idx": 104
   },
   {
    "id": "q-090",
@@ -753,7 +770,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 99
+   "variantGroup": null,
+   "idx": 105
   },
   {
    "id": "q-091",
@@ -801,7 +819,8 @@
      "expected": "Matrix([[0, 0], [0, 0]])"
     }
    ],
-   "idx": 100
+   "variantGroup": null,
+   "idx": 106
   },
   {
    "id": "q-092",
@@ -837,7 +856,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 101
+   "variantGroup": null,
+   "idx": 107
   },
   {
    "id": "q-093",
@@ -874,7 +894,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 102
+   "variantGroup": null,
+   "idx": 108
   },
   {
    "id": "q-094",
@@ -910,7 +931,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 103
+   "variantGroup": null,
+   "idx": 109
   },
   {
    "id": "q-129",
@@ -947,7 +969,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 104
+   "variantGroup": null,
+   "idx": 110
   },
   {
    "id": "q-130",
@@ -990,7 +1013,8 @@
      "expected": "Matrix([[-2, 0], [0, -2]])"
     }
    ],
-   "idx": 105
+   "variantGroup": null,
+   "idx": 111
   },
   {
    "id": "q-131",
@@ -1026,7 +1050,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 106
+   "variantGroup": null,
+   "idx": 112
   },
   {
    "id": "q-132",
@@ -1063,7 +1088,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 107
+   "variantGroup": null,
+   "idx": 113
   },
   {
    "id": "q-133",
@@ -1099,7 +1125,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 108
+   "variantGroup": null,
+   "idx": 114
   },
   {
    "id": "q-134",
@@ -1135,7 +1162,8 @@
     "基础"
    ],
    "verify": [],
-   "idx": 109
+   "variantGroup": null,
+   "idx": 115
   },
   {
    "id": "q-095",
@@ -1183,7 +1211,8 @@
      "expected": "Matrix([[1, 0], [-1, 0]])"
     }
    ],
-   "idx": 110
+   "variantGroup": null,
+   "idx": 116
   },
   {
    "id": "q-135",
@@ -1220,7 +1249,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 111
+   "variantGroup": null,
+   "idx": 117
   },
   {
    "id": "q-136",
@@ -1257,7 +1287,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 112
+   "variantGroup": null,
+   "idx": 118
   },
   {
    "id": "q-137",
@@ -1294,7 +1325,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 113
+   "variantGroup": null,
+   "idx": 119
   },
   {
    "id": "q-138",
@@ -1337,7 +1369,8 @@
      "expected": "Matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])"
     }
    ],
-   "idx": 114
+   "variantGroup": null,
+   "idx": 120
   },
   {
    "id": "q-096",
@@ -1370,7 +1403,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 115
+   "variantGroup": null,
+   "idx": 121
   },
   {
    "id": "q-097",
@@ -1402,7 +1436,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 116
+   "variantGroup": null,
+   "idx": 122
   },
   {
    "id": "q-098",
@@ -1446,7 +1481,8 @@
      "expected": "Matrix([[0, 1], [0, 0]])"
     }
    ],
-   "idx": 117
+   "variantGroup": null,
+   "idx": 123
   },
   {
    "id": "q-099",
@@ -1478,7 +1514,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 118
+   "variantGroup": null,
+   "idx": 124
   },
   {
    "id": "q-100",
@@ -1510,7 +1547,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 119
+   "variantGroup": null,
+   "idx": 125
   },
   {
    "id": "q-139",
@@ -1542,7 +1580,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 120
+   "variantGroup": null,
+   "idx": 126
   },
   {
    "id": "q-140",
@@ -1575,7 +1614,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 121
+   "variantGroup": null,
+   "idx": 127
   },
   {
    "id": "q-141",
@@ -1608,7 +1648,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 122
+   "variantGroup": null,
+   "idx": 128
   },
   {
    "id": "q-142",
@@ -1640,7 +1681,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 123
+   "variantGroup": null,
+   "idx": 129
   },
   {
    "id": "q-143",
@@ -1672,7 +1714,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 124
+   "variantGroup": null,
+   "idx": 130
   },
   {
    "id": "q-144",
@@ -1704,7 +1747,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 125
+   "variantGroup": null,
+   "idx": 131
   },
   {
    "id": "q-101",
@@ -1743,7 +1787,8 @@
      "expected": "Matrix([[1, 1], [0, 0]])"
     }
    ],
-   "idx": 126
+   "variantGroup": null,
+   "idx": 132
   },
   {
    "id": "q-145",
@@ -1776,7 +1821,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 127
+   "variantGroup": null,
+   "idx": 133
   },
   {
    "id": "q-146",
@@ -1808,7 +1854,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 128
+   "variantGroup": null,
+   "idx": 134
   },
   {
    "id": "q-147",
@@ -1841,7 +1888,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 129
+   "variantGroup": null,
+   "idx": 135
   },
   {
    "id": "q-102",
@@ -1885,7 +1933,8 @@
      "expected": "1"
     }
    ],
-   "idx": 130
+   "variantGroup": null,
+   "idx": 136
   },
   {
    "id": "q-148",
@@ -1918,7 +1967,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 131
+   "variantGroup": null,
+   "idx": 137
   },
   {
    "id": "q-103",
@@ -1959,7 +2009,8 @@
      "expected": "Matrix([[2, 4], [1, 7]])"
     }
    ],
-   "idx": 132
+   "variantGroup": null,
+   "idx": 138
   },
   {
    "id": "q-104",
@@ -2009,7 +2060,8 @@
      "expected": "-1/2"
     }
    ],
-   "idx": 133
+   "variantGroup": null,
+   "idx": 139
   },
   {
    "id": "q-105",
@@ -2051,7 +2103,8 @@
      "expected": "(3, 2)"
     }
    ],
-   "idx": 134
+   "variantGroup": null,
+   "idx": 140
   },
   {
    "id": "q-106",
@@ -2100,7 +2153,8 @@
      "expected": "-3"
     }
    ],
-   "idx": 135
+   "variantGroup": null,
+   "idx": 141
   },
   {
    "id": "q-149",
@@ -2138,7 +2192,8 @@
      "expected": "4"
     }
    ],
-   "idx": 136
+   "variantGroup": null,
+   "idx": 142
   },
   {
    "id": "q-150",
@@ -2181,7 +2236,8 @@
      "expected": "(3, 2)"
     }
    ],
-   "idx": 137
+   "variantGroup": null,
+   "idx": 143
   },
   {
    "id": "q-151",
@@ -2224,7 +2280,8 @@
      "expected": "Matrix([[-2, 0], [0, -2]])"
     }
    ],
-   "idx": 138
+   "variantGroup": null,
+   "idx": 144
   },
   {
    "id": "q-152",
@@ -2263,7 +2320,8 @@
      "expected": "Matrix([[1], [2]])"
     }
    ],
-   "idx": 139
+   "variantGroup": null,
+   "idx": 145
   },
   {
    "id": "q-153",
@@ -2306,7 +2364,8 @@
      "expected": "Matrix([[0, 0], [0, 0]])"
     }
    ],
-   "idx": 140
+   "variantGroup": null,
+   "idx": 146
   },
   {
    "id": "q-154",
@@ -2345,7 +2404,8 @@
      "expected": "Matrix([[2, 5], [5, 8]])"
     }
    ],
-   "idx": 141
+   "variantGroup": null,
+   "idx": 147
   },
   {
    "id": "q-107",
@@ -2393,7 +2453,8 @@
      "expected": "Matrix([[9], [11]])"
     }
    ],
-   "idx": 142
+   "variantGroup": null,
+   "idx": 148
   },
   {
    "id": "q-155",
@@ -2436,7 +2497,8 @@
      "expected": "Matrix([[0, 0], [0, 0]])"
     }
    ],
-   "idx": 143
+   "variantGroup": null,
+   "idx": 149
   },
   {
    "id": "q-156",
@@ -2475,7 +2537,8 @@
      "expected": "-12"
     }
    ],
-   "idx": 144
+   "variantGroup": null,
+   "idx": 150
   },
   {
    "id": "q-157",
@@ -2512,7 +2575,8 @@
     "计算"
    ],
    "verify": [],
-   "idx": 145
+   "variantGroup": null,
+   "idx": 151
   },
   {
    "id": "q-108",
@@ -2562,7 +2626,8 @@
      "expected": "Matrix([[0, 1], [-1, -1]])"
     }
    ],
-   "idx": 146
+   "variantGroup": null,
+   "idx": 152
   },
   {
    "id": "q-158",
@@ -2606,7 +2671,8 @@
      "expected": "Matrix([[-1/2, -1], [-3/2, -2]])"
     }
    ],
-   "idx": 147
+   "variantGroup": null,
+   "idx": 153
   },
   {
    "id": "q-109",
@@ -2643,7 +2709,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 148
+   "variantGroup": null,
+   "idx": 154
   },
   {
    "id": "q-110",
@@ -2680,7 +2747,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 149
+   "variantGroup": null,
+   "idx": 155
   },
   {
    "id": "q-159",
@@ -2720,7 +2788,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 150
+   "variantGroup": null,
+   "idx": 156
   },
   {
    "id": "q-160",
@@ -2761,7 +2830,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 151
+   "variantGroup": null,
+   "idx": 157
   },
   {
    "id": "q-161",
@@ -2802,7 +2872,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 152
+   "variantGroup": null,
+   "idx": 158
   },
   {
    "id": "q-162",
@@ -2843,7 +2914,8 @@
     "对比"
    ],
    "verify": [],
-   "idx": 153
+   "variantGroup": null,
+   "idx": 159
   },
   {
    "id": "q-163",
@@ -2883,7 +2955,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 154
+   "variantGroup": null,
+   "idx": 160
   },
   {
    "id": "q-111",
@@ -2935,7 +3008,8 @@
      "expected": "Matrix([[0, 0], [0, 0]])"
     }
    ],
-   "idx": 155
+   "variantGroup": null,
+   "idx": 161
   },
   {
    "id": "q-112",
@@ -2977,7 +3051,8 @@
     "跨章"
    ],
    "verify": [],
-   "idx": 156
+   "variantGroup": null,
+   "idx": 162
   },
   {
    "id": "q-164",
@@ -3018,7 +3093,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 157
+   "variantGroup": null,
+   "idx": 163
   },
   {
    "id": "q-165",
@@ -3059,7 +3135,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 158
+   "variantGroup": null,
+   "idx": 164
   },
   {
    "id": "q-166",
@@ -3101,7 +3178,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 159
+   "variantGroup": null,
+   "idx": 165
   },
   {
    "id": "q-167",
@@ -3142,7 +3220,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 160
+   "variantGroup": null,
+   "idx": 166
   },
   {
    "id": "q-113",
@@ -3194,7 +3273,8 @@
      "expected": "Matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])"
     }
    ],
-   "idx": 161
+   "variantGroup": null,
+   "idx": 167
   },
   {
    "id": "q-168",
@@ -3236,7 +3316,109 @@
     "必背"
    ],
    "verify": [],
-   "idx": 162
+   "variantGroup": null,
+   "idx": 168
+  },
+  {
+   "id": "q-509",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 2,
+   "knowledgePoint": "2.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §2.3 逆矩阵",
+    "kind": "textbook"
+   },
+   "stem": "命题：「若 $(A-E)X=A^{2}-E$，则必有 $X=A+E$。」该命题为假——当 $A-E$ 不可逆时解不唯一。以 $A=\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ 为例给出异于 $A+E$ 的解，并说明消去律失效的确切原因。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "此时 $A-E=\\begin{pmatrix}0&1\\\\0&0\\end{pmatrix}$ 不可逆（秩 1，$|A-E|=0$）。\n取 $N=\\begin{pmatrix}1&1\\\\0&0\\end{pmatrix}$，则 $(A-E)N=\\begin{pmatrix}0&1\\\\0&0\\end{pmatrix}\\begin{pmatrix}1&1\\\\0&0\\end{pmatrix}=O$（$N$ 的列都是齐次方程 $(A-E)y=0$ 的解）。\n令 $X=(A+E)+N=\\begin{pmatrix}3&2\\\\0&2\\end{pmatrix}$，则\n$(A-E)X=(A-E)(A+E)+(A-E)N=(A-E)(A+E)=A^{2}-E$，\n但 $X\\neq A+E$——命题为假。\n**失效原因**：消去律的准确表述是「$P$ 可逆时 $PQ=PR\\Rightarrow Q=R$」。本题 $P=A-E$ 不可逆，齐次方程 $(A-E)N=O$ 有非零解，解不唯一。",
+   "points": [
+    {
+     "text": "构造 $|A-E|=0$ 的具体 $A$ 并说明不可逆",
+     "partial": 2
+    },
+    {
+     "text": "给出非零 $N$ 使 $(A-E)N=O$",
+     "partial": 2
+    },
+    {
+     "text": "验证 $X=(A+E)+N$ 是异于 $A+E$ 的解",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§2.3 消去律前提（$P$ 可逆）+ §3.1 齐次方程有非零解 ⇔ 矩阵不满秩。\n**考点出处**：同济《线性代数》第六版 §2.3；题型改编自：中科大《线性代数》历年考题（消去律辨析）。",
+   "misconception": "⚠️易错点：消去律失效不等于「$X$ 任意」——解仍有结构（特解 + 齐次通解）；反例必须给出具体的 $N$ 并验证。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "辨析",
+    "变式族·矩阵方程"
+   ],
+   "verify": [
+    {
+     "desc": "(A-E)N=O",
+     "code": "A=M([[1,1],[0,1]]); N=M([[1,1],[0,0]]); (A-eye(2))*N==zeros(2,2)",
+     "expected": "True"
+    },
+    {
+     "desc": "|A-E|=0",
+     "code": "(A-eye(2)).det()",
+     "expected": "0"
+    }
+   ],
+   "variantGroup": "vg-matrixeq",
+   "idx": 169
+  },
+  {
+   "id": "q-523",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 2,
+   "knowledgePoint": "2.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §2.3 逆矩阵",
+    "kind": "textbook"
+   },
+   "stem": "（创新·反例探究）「若 $A^{2}=A$，则 $A=E$ 或 $A=O$。」这个说法对吗？给出反例或证明，并进一步说明这类矩阵（幂等矩阵）的实际身份。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**说法错误**。反例：$A=\\begin{pmatrix}1&0\\\\0&0\\end{pmatrix}$，$A^{2}=A$，但 $A\\neq E$ 且 $A\\neq O$。\n**这类矩阵的身份**：幂等矩阵是**投影矩阵**——把整个空间投影到自己的列空间上、沿核空间压扁。上例就是把 $\\mathbb{R}^{2}$ 投影到 $x$ 轴。特征值为 $1$（列空间方向，被保留）与 $0$（核方向，被压扁）。\n**为什么容易误判**：实数里 $a^{2}=a\\Rightarrow a\\in\\{0,1\\}$ 只有两个解，直觉迁移到矩阵就误以为只有 $E,O$——矩阵的「平方等于自身」是一族无穷多的投影。",
+   "points": [
+    {
+     "text": "给出具体反例并验证 $A^{2}=A$",
+     "partial": 2
+    },
+    {
+     "text": "说明幂等矩阵 = 投影矩阵（保留列空间、压扁核空间）",
+     "partial": 2
+    },
+    {
+     "text": "指出实数直觉迁移到矩阵失效的原因",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§2.2 矩阵乘法 + 特征值视角（$A^{2}=A\\Rightarrow$ 特征值 $\\in\\{0,1\\}$）。\n**考点出处**：同济《线性代数》第六版 §2.2；题型改编自：创新题（反例探究）。",
+   "misconception": "⚠️易错点：反例必须**验证** $A^{2}=A$；只写 $A\\neq E,O$ 不构成反例。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "反例",
+    "投影"
+   ],
+   "verify": [
+    {
+     "desc": "反例验证",
+     "code": "A=M([[1,0],[0,0]]); A*A==A",
+     "expected": "True"
+    }
+   ],
+   "variantGroup": null,
+   "idx": 170
   },
   {
    "id": "q-114",
@@ -3286,7 +3468,8 @@
      "expected": "Matrix([[3, -1], [6, 8]])"
     }
    ],
-   "idx": 163
+   "variantGroup": null,
+   "idx": 171
   },
   {
    "id": "q-169",
@@ -3337,7 +3520,8 @@
      "expected": "Matrix([[1, 8], [0, 9]])"
     }
    ],
-   "idx": 164
+   "variantGroup": null,
+   "idx": 172
   },
   {
    "id": "q-170",
@@ -3393,7 +3577,8 @@
      "expected": "Matrix([[1, -1], [-1, 2]])"
     }
    ],
-   "idx": 165
+   "variantGroup": null,
+   "idx": 173
   },
   {
    "id": "q-171",
@@ -3449,7 +3634,8 @@
      "expected": "Matrix([[5, 5], [6, 13]])"
     }
    ],
-   "idx": 166
+   "variantGroup": null,
+   "idx": 174
   },
   {
    "id": "q-172",
@@ -3505,7 +3691,8 @@
      "expected": "Matrix([[1/2], [3/2], [5/2]])"
     }
    ],
-   "idx": 167
+   "variantGroup": null,
+   "idx": 175
   },
   {
    "id": "q-115",
@@ -3567,7 +3754,8 @@
      "expected": "Matrix([[2, -2], [6, -2]])"
     }
    ],
-   "idx": 168
+   "variantGroup": null,
+   "idx": 176
   },
   {
    "id": "q-116",
@@ -3628,7 +3816,8 @@
      "expected": "Matrix([[1, 0], [0, 1]])"
     }
    ],
-   "idx": 169
+   "variantGroup": null,
+   "idx": 177
   },
   {
    "id": "q-117",
@@ -3694,7 +3883,8 @@
      "expected": "Matrix([[1/2], [1/2], [1/2]])"
     }
    ],
-   "idx": 170
+   "variantGroup": null,
+   "idx": 178
   },
   {
    "id": "q-173",
@@ -3751,7 +3941,8 @@
      "expected": "Matrix([[3/2, -1/2, -1/2], [-1/2, 3/2, -1/2], [-1/2, -1/2, 3/2]])"
     }
    ],
-   "idx": 171
+   "variantGroup": null,
+   "idx": 179
   },
   {
    "id": "q-174",
@@ -3807,7 +3998,8 @@
      "expected": "Matrix([[3/2], [1/2], [5/2]])"
     }
    ],
-   "idx": 172
+   "variantGroup": null,
+   "idx": 180
   },
   {
    "id": "q-175",
@@ -3864,7 +4056,65 @@
      "expected": "Matrix([[0, 0, 1/3, 0], [0, 0, -1/3, 1], [1, -2, 0, 0], [0, 1, 0, 0]])"
     }
    ],
-   "idx": 173
+   "variantGroup": null,
+   "idx": 181
+  },
+  {
+   "id": "q-507",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §2.2 矩阵的运算",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=\\begin{pmatrix}2&1\\\\1&1\\end{pmatrix}$。验证 $X=A+E=\\begin{pmatrix}3&1\\\\1&2\\end{pmatrix}$ **不满足**方程 $AX-XA=A+E$，并解释这类「交换子方程」为何不能移项求解。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**验证**：$AX=XA=\\begin{pmatrix}7&4\\\\4&3\\end{pmatrix}$（$A$ 与 $A+E$ 可交换），故 $AX-XA=O\\neq A+E$——该 $X$ 不是解，且方程**无解**。\n**为什么不能移项**：$AX-XA\\neq(A-A)X$——矩阵乘法不交换，$A$ 在左与在右是两个不同的积；正确的不变量是 $\\mathrm{tr}(AX-XA)=0$（迹的循环性），而 $\\mathrm{tr}(A+E)=5\\neq0$，故方程无解。",
+   "points": [
+    {
+     "text": "算出 $AX=XA$，交换子为零矩阵",
+     "partial": 2
+    },
+    {
+     "text": "指出 $O\\neq A+E$，方程无解",
+     "partial": 2
+    },
+    {
+     "text": "说明移项 $(A-A)X$ 非法的原因（乘法不交换）",
+     "partial": 2
+    },
+    {
+     "text": "给出交换子可解的必要条件 $\\mathrm{tr}\\,C=0$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§2.2 矩阵乘法不交换 + 迹的循环不变性 $\\mathrm{tr}(AB)=\\mathrm{tr}(BA)$。\n**考点出处**：同济《线性代数》第六版 §2.2；题型改编自：中科大《线性代数》历年考题（交换子辨析）。",
+   "misconception": "⚠️易错点：把 $AX-XA=A+E$ 错误移项成 $O\\cdot X=A+E$ 再下「无解」结论——理由错了但答案碰巧对；正确理由是交换子的迹恒为零。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "辨析",
+    "变式族·矩阵方程"
+   ],
+   "verify": [
+    {
+     "desc": "交换子为零",
+     "code": "A=M([[2,1],[1,1]]); X=A+eye(2); (A*X-X*A)==zeros(2,2)",
+     "expected": "True"
+    },
+    {
+     "desc": "tr(A+E)",
+     "code": "(A+eye(2)).trace()",
+     "expected": "5"
+    }
+   ],
+   "variantGroup": "vg-matrixeq",
+   "idx": 182
   },
   {
    "id": "q-118",
@@ -3920,7 +4170,8 @@
      "expected": "Matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])"
     }
    ],
-   "idx": 174
+   "variantGroup": null,
+   "idx": 183
   },
   {
    "id": "q-176",
@@ -3977,7 +4228,8 @@
      "expected": "2"
     }
    ],
-   "idx": 175
+   "variantGroup": null,
+   "idx": 184
   },
   {
    "id": "q-177",
@@ -4040,7 +4292,8 @@
      "expected": "a**2 - 1"
     }
    ],
-   "idx": 176
+   "variantGroup": null,
+   "idx": 185
   },
   {
    "id": "q-178",
@@ -4098,7 +4351,169 @@
      "expected": "Matrix([[25, 50], [50, 100]])"
     }
    ],
-   "idx": 177
+   "variantGroup": null,
+   "idx": 186
+  },
+  {
+   "id": "q-508",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 2,
+   "knowledgePoint": "2.3",
+   "source": {
+    "text": "同济《线性代数》第六版 §2.3 逆矩阵",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=\\begin{pmatrix}2&1\\\\1&1\\end{pmatrix}$，解矩阵方程 $(A-E)X=A^{2}-E$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "因式分解：$A^{2}-E=(A-E)(A+E)$，方程即 $(A-E)X=(A-E)(A+E)$。\n$A-E=\\begin{pmatrix}1&1\\\\1&0\\end{pmatrix}$ 可逆（$|A-E|=-1$），左乘 $(A-E)^{-1}$：\n$$X=A+E=\\begin{pmatrix}3&1\\\\1&2\\end{pmatrix}.$$\n**验证**：$(A-E)X=\\begin{pmatrix}1&1\\\\1&0\\end{pmatrix}\\begin{pmatrix}3&1\\\\1&2\\end{pmatrix}=\\begin{pmatrix}4&3\\\\3&1\\end{pmatrix}=(A-E)(A+E)$ ✓。\n**举一反三**：这类题的通用武器是「把 $E$ 写成 $BB^{-1}$ 再因式分解」——先分解出公共因子，再用可逆性消去。",
+   "points": [
+    {
+     "text": "把 $A^{2}-E$ 因式分解为 $(A-E)(A+E)$",
+     "partial": 2
+    },
+    {
+     "text": "判断 $A-E$ 可逆（$|A-E|=-1$）",
+     "partial": 2
+    },
+    {
+     "text": "左乘 $(A-E)^{-1}$ 得 $X=A+E$",
+     "partial": 2
+    },
+    {
+     "text": "回代验证",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§2.2 分配律 + §2.3 消去律（左乘左逆）。\n**考点出处**：同济《线性代数》第六版 §2.2、§2.3；题型改编自：中科大《线性代数》历年考题（矩阵方程原型）。",
+   "misconception": "⚠️易错点：消去律要求**左乘左逆**——$(A-E)$ 在方程左边必须左乘其逆；方向搞反是本章最高频错误。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编",
+    "变式族·矩阵方程"
+   ],
+   "verify": [
+    {
+     "desc": "X=A+E",
+     "code": "A=M([[2,1],[1,1]]); X=A+eye(2); ((A-eye(2))*X - (A*A-eye(2)))==zeros(2,2)",
+     "expected": "True"
+    }
+   ],
+   "variantGroup": "vg-matrixeq",
+   "idx": 187
+  },
+  {
+   "id": "q-520",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §2.2 矩阵的运算",
+    "kind": "textbook"
+   },
+   "stem": "（创新·建模块）三支水平相当的球队进行多轮循环赛，每场必分胜负。第 $k$ 轮后处于状态 $i$ 的球队在第 $k+1$ 轮的状态转移由矩阵 $P=\\begin{pmatrix}0&\\frac12&\\frac12\\\\\\frac12&0&\\frac12\\\\\\frac12&\\frac12&0\\end{pmatrix}$ 描述（$p_{ij}$ 为「上轮状态 $i$、下轮状态 $j$」的概率）。求 $P^{2}$，并解释 $(1,1)$ 元 $\\frac12$ 的含义。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$P^{2}=\\begin{pmatrix}\\frac12&\\frac14&\\frac14\\\\\\frac14&\\frac12&\\frac14\\\\\\frac14&\\frac14&\\frac12\\end{pmatrix}$。\n$(P^{2})_{11}=p_{11}p_{11}+p_{12}p_{21}+p_{13}p_{31}=0+\\frac14+\\frac14=\\frac12$——含义：一支球队**连续两轮**处于同一状态的概率为 $\\frac12$（第一轮必换状态，第二轮再换回）。\n**创新点**：矩阵乘法的第 $(i,j)$ 元天然是「两步转移概率」——线性代数描述马尔可夫链的基石；$P$ 的每行和为 1（行随机），$P^{2}$ 亦然，可作自检。",
+   "points": [
+    {
+     "text": "正确计算 $P^{2}$（矩阵乘法逐项求和）",
+     "partial": 2
+    },
+    {
+     "text": "指出 $P$ 的行和为 1（行随机矩阵）可用于自检",
+     "partial": 2
+    },
+    {
+     "text": "解释 $(1,1)=\\frac12$ 的概率含义（两步回到原状态）",
+     "partial": 2
+    },
+    {
+     "text": "指出 $P$ 零对角结构对结果的影响",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§2.2 矩阵乘法逐项求和；概率解释基于全概率公式。\n**考点出处**：同济《线性代数》第六版 §2.2；题型改编自：创新题（转移矩阵建模）。",
+   "misconception": "⚠️易错点：把 $(1,1)$ 算成 0 是忘了「两条路径」的求和；行和为 1 可自检乘法有没有算错。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "建模",
+    "矩阵乘法"
+   ],
+   "verify": [
+    {
+     "desc": "P^2",
+     "code": "P=M([[0,Rational(1,2),Rational(1,2)],[Rational(1,2),0,Rational(1,2)],[Rational(1,2),Rational(1,2),0]]); P*P",
+     "expected": "Matrix([[1/2, 1/4, 1/4], [1/4, 1/2, 1/4], [1/4, 1/4, 1/2]])"
+    }
+   ],
+   "variantGroup": null,
+   "idx": 188
+  },
+  {
+   "id": "q-526",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 2,
+   "knowledgePoint": "2.2",
+   "source": {
+    "text": "同济《线性代数》第六版 §2.2 矩阵的运算",
+    "kind": "textbook"
+   },
+   "stem": "（创新·数列建模）斐波那契数列 $F_1=F_2=1,\\ F_{n+1}=F_n+F_{n-1}$。令 $v_n=\\begin{pmatrix}F_{n+1}\\\\F_n\\end{pmatrix}$，则 $v_n=Av_{n-1}$，其中 $A=\\begin{pmatrix}1&1\\\\1&0\\end{pmatrix}$。用 $A^{9}$ 求 $F_{10}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$v_9=A^{9}v_0$，其中 $v_0=\\begin{pmatrix}F_2\\\\F_1\\end{pmatrix}=\\begin{pmatrix}1\\\\1\\end{pmatrix}$。$A^{9}=\\begin{pmatrix}55&34\\\\34&21\\end{pmatrix}$，\n$F_{10}=(A^{9})_{11}\\cdot F_2+(A^{9})_{12}\\cdot F_1=55+34=89$。\n**创新点**：递推数列的通项问题 = 矩阵幂问题；$A$ 可对角化后可得比奈公式$F_n=\\dfrac{\\varphi^{n}-\\psi^{n}}{\\sqrt5}$（$\\varphi=\\frac{1+\\sqrt5}{2}$）。",
+   "points": [
+    {
+     "text": "建立 $v_n=Av_{n-1}$ 的矩阵递推",
+     "partial": 2
+    },
+    {
+     "text": "计算 $A^{9}$",
+     "partial": 2
+    },
+    {
+     "text": "得到 $F_{10}=89$",
+     "partial": 2
+    },
+    {
+     "text": "指出可对角化后可得比奈闭式",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§2.2 矩阵乘法与矩阵幂；递推的矩阵化是线代最重要的建模套路之一。\n**考点出处**：同济《线性代数》第六版 §2.2；题型改编自：创新题（数列建模）。",
+   "misconception": "⚠️易错点：下标约定前后要一致（$A^{9}$ 还是 $A^{10}$ 取决于 $v_0$ 的定义）；可用 $F_3=2,F_4=3$ 先小规模校验矩阵幂。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "建模",
+    "矩阵幂"
+   ],
+   "verify": [
+    {
+     "desc": "A^9",
+     "code": "(M([[1,1],[1,0]])**9)[0,0]",
+     "expected": "55"
+    },
+    {
+     "desc": "F10=89",
+     "code": "A=M([[1,1],[1,0]]); (A**9)[0,0]+(A**9)[0,1]",
+     "expected": "89"
+    }
+   ],
+   "variantGroup": null,
+   "idx": 189
   }
  ]
 }

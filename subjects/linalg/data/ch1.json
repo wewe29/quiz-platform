@@ -38,6 +38,7 @@
      "expected": "-3"
     }
    ],
+   "variantGroup": null,
    "idx": 0
   },
   {
@@ -71,6 +72,7 @@
     "性质"
    ],
    "verify": [],
+   "variantGroup": null,
    "idx": 1
   },
   {
@@ -105,6 +107,7 @@
     "高频"
    ],
    "verify": [],
+   "variantGroup": null,
    "idx": 2
   },
   {
@@ -144,6 +147,7 @@
      "expected": "-22"
     }
    ],
+   "variantGroup": null,
    "idx": 3
   },
   {
@@ -178,6 +182,7 @@
     "高频"
    ],
    "verify": [],
+   "variantGroup": null,
    "idx": 4
   },
   {
@@ -212,6 +217,7 @@
     "计算"
    ],
    "verify": [],
+   "variantGroup": null,
    "idx": 5
   },
   {
@@ -245,6 +251,7 @@
     "易错"
    ],
    "verify": [],
+   "variantGroup": null,
    "idx": 6
   },
   {
@@ -285,6 +292,7 @@
      "expected": "-2"
     }
    ],
+   "variantGroup": null,
    "idx": 7
   },
   {
@@ -319,6 +327,7 @@
     "真题改编"
    ],
    "verify": [],
+   "variantGroup": null,
    "idx": 8
   },
   {
@@ -353,6 +362,7 @@
     "公式"
    ],
    "verify": [],
+   "variantGroup": null,
    "idx": 9
   },
   {
@@ -393,6 +403,7 @@
      "expected": "8"
     }
    ],
+   "variantGroup": null,
    "idx": 10
   },
   {
@@ -428,6 +439,7 @@
     "真题改编"
    ],
    "verify": [],
+   "variantGroup": null,
    "idx": 11
   },
   {
@@ -479,6 +491,7 @@
      "expected": "4*x**3 - 12*x + 8"
     }
    ],
+   "variantGroup": null,
    "idx": 12
   },
   {
@@ -525,7 +538,91 @@
      "expected": "-16/3"
     }
    ],
+   "variantGroup": null,
    "idx": 13
+  },
+  {
+   "id": "q-503",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $J$ 为 $4$ 阶全 $1$ 矩阵（所有元素为 $1$），则行列式 $|3E+J|=$",
+   "options": [
+    "$3^{4}$",
+    "$3^{3}\\cdot7$",
+    "$3^{3}\\cdot6$",
+    "$7^{4}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$J$ 的特征值为 $4,0,0,0$（行和 $4$ 是一个特征值，其余为 $0$），故 $3E+J$ 的特征值为 $7,3,3,3$，行列式 $=3^{3}\\cdot7=189$。B 正确；\nA 错在 $3^{4}=|3E|$；C 把非零特征值当成了 6；D 无依据。",
+   "misconception": "⚠️易错点：$J$ 的非零特征值是 $n=4$，不是 1——它对应「全 1 列向量」。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "特征值",
+    "变式族·行和型"
+   ],
+   "verify": [
+    {
+     "desc": "det(3E+J)",
+     "code": "(3*eye(4)+M([[1]*4]*4)).det()",
+     "expected": "189"
+    }
+   ],
+   "variantGroup": "vg-circulant",
+   "idx": 14
+  },
+  {
+   "id": "q-506",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "接上两题：在相同矩阵 $A$ 下，$A_{11}+A_{12}+A_{13}+A_{14}$ 与 $A_{21}+A_{22}+A_{23}+A_{24}$ 分别记为 $S_1, S_2$，则 $S_1\\cdot S_2=$",
+   "options": [
+    "$20$",
+    "$10$",
+    "$0$",
+    "$2$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：由前两题 $S_1=2,\\ S_2=0$，故 $S_1S_2=0$。C 正确。\nA 错在把 $|A|=10$ 与 $S_1$ 相乘；B 取了 $S_1$ 的值；D 无依据。\n**举一反三**：这一族题的通用武器只有一个——「组合系数构造替换行列式」，行/列由下标第一字决定。",
+   "misconception": "⚠️易错点：把 $S_2=0$ 误算成非零（漏看两行成比例），或把乘积错当 $|A|$ 的幂。",
+   "extension": null,
+   "tags": [
+    "创新题",
+    "变式族·余子式组合"
+   ],
+   "verify": [
+    {
+     "desc": "S1*S2",
+     "code": "2*0",
+     "expected": "0"
+    }
+   ],
+   "variantGroup": "vg-cofactor",
+   "idx": 15
   },
   {
    "id": "q-006",
@@ -561,7 +658,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 14
+   "variantGroup": null,
+   "idx": 16
   },
   {
    "id": "q-007",
@@ -596,7 +694,8 @@
     "展开定理"
    ],
    "verify": [],
-   "idx": 15
+   "variantGroup": null,
+   "idx": 17
   },
   {
    "id": "q-008",
@@ -632,7 +731,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 16
+   "variantGroup": null,
+   "idx": 18
   },
   {
    "id": "q-040",
@@ -668,7 +768,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 17
+   "variantGroup": null,
+   "idx": 19
   },
   {
    "id": "q-041",
@@ -715,7 +816,8 @@
      "expected": "2"
     }
    ],
-   "idx": 18
+   "variantGroup": null,
+   "idx": 20
   },
   {
    "id": "q-042",
@@ -750,7 +852,8 @@
     "定义"
    ],
    "verify": [],
-   "idx": 19
+   "variantGroup": null,
+   "idx": 21
   },
   {
    "id": "q-043",
@@ -786,7 +889,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 20
+   "variantGroup": null,
+   "idx": 22
   },
   {
    "id": "q-044",
@@ -822,7 +926,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 21
+   "variantGroup": null,
+   "idx": 23
   },
   {
    "id": "q-009",
@@ -864,7 +969,8 @@
      "expected": "-1/2"
     }
    ],
-   "idx": 22
+   "variantGroup": null,
+   "idx": 24
   },
   {
    "id": "q-045",
@@ -911,7 +1017,8 @@
      "expected": "1"
     }
    ],
-   "idx": 23
+   "variantGroup": null,
+   "idx": 25
   },
   {
    "id": "q-046",
@@ -947,7 +1054,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 24
+   "variantGroup": null,
+   "idx": 26
   },
   {
    "id": "q-047",
@@ -982,7 +1090,8 @@
     "排列与对换"
    ],
    "verify": [],
-   "idx": 25
+   "variantGroup": null,
+   "idx": 27
   },
   {
    "id": "q-010",
@@ -1019,7 +1128,8 @@
     "跨章"
    ],
    "verify": [],
-   "idx": 26
+   "variantGroup": null,
+   "idx": 28
   },
   {
    "id": "q-048",
@@ -1062,7 +1172,8 @@
      "expected": "12"
     }
    ],
-   "idx": 27
+   "variantGroup": null,
+   "idx": 29
   },
   {
    "id": "q-011",
@@ -1093,7 +1204,8 @@
     "性质"
    ],
    "verify": [],
-   "idx": 28
+   "variantGroup": null,
+   "idx": 30
   },
   {
    "id": "q-012",
@@ -1125,7 +1237,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 29
+   "variantGroup": null,
+   "idx": 31
   },
   {
    "id": "q-013",
@@ -1156,7 +1269,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 30
+   "variantGroup": null,
+   "idx": 32
   },
   {
    "id": "q-014",
@@ -1187,7 +1301,8 @@
     "定义"
    ],
    "verify": [],
-   "idx": 31
+   "variantGroup": null,
+   "idx": 33
   },
   {
    "id": "q-049",
@@ -1218,7 +1333,8 @@
     "计算"
    ],
    "verify": [],
-   "idx": 32
+   "variantGroup": null,
+   "idx": 34
   },
   {
    "id": "q-050",
@@ -1250,7 +1366,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 33
+   "variantGroup": null,
+   "idx": 35
   },
   {
    "id": "q-051",
@@ -1281,7 +1398,8 @@
     "展开定理"
    ],
    "verify": [],
-   "idx": 34
+   "variantGroup": null,
+   "idx": 36
   },
   {
    "id": "q-052",
@@ -1312,7 +1430,8 @@
     "排列与对换"
    ],
    "verify": [],
-   "idx": 35
+   "variantGroup": null,
+   "idx": 37
   },
   {
    "id": "q-053",
@@ -1350,7 +1469,8 @@
      "expected": "2"
     }
    ],
-   "idx": 36
+   "variantGroup": null,
+   "idx": 38
   },
   {
    "id": "q-015",
@@ -1382,7 +1502,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 37
+   "variantGroup": null,
+   "idx": 39
   },
   {
    "id": "q-016",
@@ -1425,7 +1546,8 @@
      "expected": "Matrix([[1, -1], [-1, 1]])"
     }
    ],
-   "idx": 38
+   "variantGroup": null,
+   "idx": 40
   },
   {
    "id": "q-054",
@@ -1457,7 +1579,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 39
+   "variantGroup": null,
+   "idx": 41
   },
   {
    "id": "q-055",
@@ -1488,7 +1611,8 @@
     "性质"
    ],
    "verify": [],
-   "idx": 40
+   "variantGroup": null,
+   "idx": 42
   },
   {
    "id": "q-056",
@@ -1519,7 +1643,8 @@
     "定义"
    ],
    "verify": [],
-   "idx": 41
+   "variantGroup": null,
+   "idx": 43
   },
   {
    "id": "q-057",
@@ -1552,7 +1677,8 @@
     "跨章"
    ],
    "verify": [],
-   "idx": 42
+   "variantGroup": null,
+   "idx": 44
   },
   {
    "id": "q-017",
@@ -1583,7 +1709,8 @@
     "性质"
    ],
    "verify": [],
-   "idx": 43
+   "variantGroup": null,
+   "idx": 45
   },
   {
    "id": "q-018",
@@ -1619,7 +1746,8 @@
      "expected": "5"
     }
    ],
-   "idx": 44
+   "variantGroup": null,
+   "idx": 46
   },
   {
    "id": "q-058",
@@ -1656,7 +1784,8 @@
      "expected": "11"
     }
    ],
-   "idx": 45
+   "variantGroup": null,
+   "idx": 47
   },
   {
    "id": "q-059",
@@ -1687,7 +1816,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 46
+   "variantGroup": null,
+   "idx": 48
   },
   {
    "id": "q-060",
@@ -1717,7 +1847,8 @@
     "逆序数"
    ],
    "verify": [],
-   "idx": 47
+   "variantGroup": null,
+   "idx": 49
   },
   {
    "id": "q-061",
@@ -1753,7 +1884,8 @@
      "expected": "24"
     }
    ],
-   "idx": 48
+   "variantGroup": null,
+   "idx": 50
   },
   {
    "id": "q-064",
@@ -1784,7 +1916,8 @@
     "逆序数"
    ],
    "verify": [],
-   "idx": 49
+   "variantGroup": null,
+   "idx": 51
   },
   {
    "id": "q-019",
@@ -1820,7 +1953,8 @@
      "expected": "6"
     }
    ],
-   "idx": 50
+   "variantGroup": null,
+   "idx": 52
   },
   {
    "id": "q-020",
@@ -1857,7 +1991,8 @@
     "易错"
    ],
    "verify": [],
-   "idx": 51
+   "variantGroup": null,
+   "idx": 53
   },
   {
    "id": "q-021",
@@ -1889,7 +2024,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 52
+   "variantGroup": null,
+   "idx": 54
   },
   {
    "id": "q-062",
@@ -1920,7 +2056,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 53
+   "variantGroup": null,
+   "idx": 55
   },
   {
    "id": "q-063",
@@ -1952,7 +2089,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 54
+   "variantGroup": null,
+   "idx": 56
   },
   {
    "id": "q-065",
@@ -1989,7 +2127,8 @@
      "expected": "6"
     }
    ],
-   "idx": 55
+   "variantGroup": null,
+   "idx": 57
   },
   {
    "id": "q-066",
@@ -2021,7 +2160,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 56
+   "variantGroup": null,
+   "idx": 58
   },
   {
    "id": "q-022",
@@ -2056,7 +2196,8 @@
     "名词解释"
    ],
    "verify": [],
-   "idx": 57
+   "variantGroup": null,
+   "idx": 59
   },
   {
    "id": "q-067",
@@ -2091,7 +2232,8 @@
     "名词解释"
    ],
    "verify": [],
-   "idx": 58
+   "variantGroup": null,
+   "idx": 60
   },
   {
    "id": "q-068",
@@ -2126,7 +2268,8 @@
     "名词解释"
    ],
    "verify": [],
-   "idx": 59
+   "variantGroup": null,
+   "idx": 61
   },
   {
    "id": "q-023",
@@ -2166,7 +2309,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 60
+   "variantGroup": null,
+   "idx": 62
   },
   {
    "id": "q-024",
@@ -2205,7 +2349,8 @@
     "重点"
    ],
    "verify": [],
-   "idx": 61
+   "variantGroup": null,
+   "idx": 63
   },
   {
    "id": "q-069",
@@ -2245,7 +2390,8 @@
     "必背"
    ],
    "verify": [],
-   "idx": 62
+   "variantGroup": null,
+   "idx": 64
   },
   {
    "id": "q-072",
@@ -2285,7 +2431,8 @@
     "基础"
    ],
    "verify": [],
-   "idx": 63
+   "variantGroup": null,
+   "idx": 65
   },
   {
    "id": "q-025",
@@ -2325,7 +2472,8 @@
     "证明"
    ],
    "verify": [],
-   "idx": 64
+   "variantGroup": null,
+   "idx": 66
   },
   {
    "id": "q-071",
@@ -2365,7 +2513,8 @@
     "高频"
    ],
    "verify": [],
-   "idx": 65
+   "variantGroup": null,
+   "idx": 67
   },
   {
    "id": "q-073",
@@ -2405,7 +2554,8 @@
     "经典"
    ],
    "verify": [],
-   "idx": 66
+   "variantGroup": null,
+   "idx": 68
   },
   {
    "id": "q-026",
@@ -2453,7 +2603,8 @@
      "expected": "Matrix([[0, 0], [0, 0]])"
     }
    ],
-   "idx": 67
+   "variantGroup": null,
+   "idx": 69
   },
   {
    "id": "q-070",
@@ -2494,7 +2645,8 @@
     "难点"
    ],
    "verify": [],
-   "idx": 68
+   "variantGroup": null,
+   "idx": 70
   },
   {
    "id": "q-074",
@@ -2546,7 +2698,8 @@
      "expected": "1"
     }
    ],
-   "idx": 69
+   "variantGroup": null,
+   "idx": 71
   },
   {
    "id": "q-027",
@@ -2595,7 +2748,8 @@
      "expected": "1"
     }
    ],
-   "idx": 70
+   "variantGroup": null,
+   "idx": 72
   },
   {
    "id": "q-028",
@@ -2645,7 +2799,8 @@
      "expected": "0"
     }
    ],
-   "idx": 71
+   "variantGroup": null,
+   "idx": 73
   },
   {
    "id": "q-075",
@@ -2694,7 +2849,8 @@
      "expected": "-9"
     }
    ],
-   "idx": 72
+   "variantGroup": null,
+   "idx": 74
   },
   {
    "id": "q-076",
@@ -2745,7 +2901,8 @@
      "expected": "2"
     }
    ],
-   "idx": 73
+   "variantGroup": null,
+   "idx": 75
   },
   {
    "id": "q-077",
@@ -2795,7 +2952,8 @@
      "expected": "-10"
     }
    ],
-   "idx": 74
+   "variantGroup": null,
+   "idx": 76
   },
   {
    "id": "q-078",
@@ -2844,7 +3002,8 @@
      "expected": "120"
     }
    ],
-   "idx": 75
+   "variantGroup": null,
+   "idx": 77
   },
   {
    "id": "q-029",
@@ -2905,7 +3064,8 @@
      "expected": "0"
     }
    ],
-   "idx": 76
+   "variantGroup": null,
+   "idx": 78
   },
   {
    "id": "q-079",
@@ -2956,7 +3116,8 @@
      "expected": "-18"
     }
    ],
-   "idx": 77
+   "variantGroup": null,
+   "idx": 79
   },
   {
    "id": "q-080",
@@ -3012,7 +3173,117 @@
      "expected": "4"
     }
    ],
-   "idx": 78
+   "variantGroup": null,
+   "idx": 80
+  },
+  {
+   "id": "q-501",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "计算 $D=\\begin{vmatrix}3&1&1&1\\\\1&3&1&1\\\\1&1&3&1\\\\1&1&1&3\\end{vmatrix}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "各行元素之和均为 $6$。把第 $2,3,4$ 列加到第 $1$ 列并提出 $6$：\n$$D=6\\begin{vmatrix}1&1&1&1\\\\1&3&1&1\\\\1&1&3&1\\\\1&1&1&3\\end{vmatrix},$$\n作 $r_2-r_1,\\ r_3-r_1,\\ r_4-r_1$ 后按第 $1$ 列展开：\n$$D=6\\begin{vmatrix}2&0&0\\\\2&2&0\\\\2&2&2\\end{vmatrix}=6\\times2^{3}=48.$$\n**特征值视角（举一反三）**：该行列式的矩阵 $=2E+J$（$J$ 为全 $1$ 矩阵，特征值 $4,0,0,0$），故 $2E+J$ 的特征值为 $6,2,2,2$，行列式 $=6\\times2^{3}=48$，与消元法一致。",
+   "points": [
+    {
+     "text": "指出各行和相等（均为 6），把各列加到第 1 列并提出 6",
+     "partial": 2
+    },
+    {
+     "text": "倍加消元降为上三角，算出 $2^{3}$",
+     "partial": 2
+    },
+    {
+     "text": "得到 $D=48$",
+     "partial": 2
+    },
+    {
+     "text": "（加分）特征值视角：$2E+J$ 的特征值 $6,2,2,2$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 倍加不变 + 数乘提取；行和相等型是「各列加到第 1 列」的标准模型。\n**考点出处**：同济《线性代数》第六版 §1.4；题型改编自：中科大《线性代数》历年考题（行和相等原型）。",
+   "misconception": "⚠️易错点：提出 6 之后剩下的行列式仍是 4 阶的，别顺手丢掉一行；特征值视角里 $J$ 的特征值是 $n,0,\\dots,0$（本题 $4,0,0,0$），不要把行和 6 当成所有特征值。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编",
+    "变式族·行和型"
+   ],
+   "verify": [
+    {
+     "desc": "det",
+     "code": "M([[3,1,1,1],[1,3,1,1],[1,1,3,1],[1,1,1,3]]).det()",
+     "expected": "48"
+    }
+   ],
+   "variantGroup": "vg-circulant",
+   "idx": 81
+  },
+  {
+   "id": "q-504",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "设 $A=\\begin{pmatrix}1&2&1&1\\\\0&1&2&0\\\\2&1&1&1\\\\1&0&2&2\\end{pmatrix}$，$|A|=10$。求 $A_{11}+A_{12}+A_{13}+A_{14}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "代数余子式线性组合 = 用组合系数构造替换行列式：把 $A$ 的**第 1 列**替换为 $(1,1,1,1)^{T}$，按第 1 列展开恰好就是所求组合：\n$$A_{11}+A_{12}+A_{13}+A_{14}=\\begin{vmatrix}1&2&1&1\\\\1&1&2&0\\\\1&1&1&1\\\\1&0&2&2\\end{vmatrix}=2.$$\n（替换的是**列**——组合系数 $1,1,1,1$ 正是按第 1 列展开时各元素的系数。）",
+   "points": [
+    {
+     "text": "识别「代数余子式线性组合 = 替换列/行后按该列（行）展开」",
+     "partial": 2
+    },
+    {
+     "text": "正确替换第 1 列为全 1 向量",
+     "partial": 2
+    },
+    {
+     "text": "算出新行列式 = 2",
+     "partial": 2
+    },
+    {
+     "text": "说明替换后与原 $|A|=10$ 无关的原因",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.5 展开定理——$\\sum_k a_{k1}A_{k1}$ 中让 $a_{k1}$ 全取 1 即为所求。\n**考点出处**：同济《线性代数》第六版 §1.5；题型改编自：考研数学真题经典模型（代数余子式组合）。",
+   "misconception": "⚠️易错点：组合系数 1,1,1,1 替换的是第 1 **列**（不是第 1 行）；替换后原 $|A|=10$ 与新行列式无关。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编",
+    "变式族·余子式组合"
+   ],
+   "verify": [
+    {
+     "desc": "|A|",
+     "code": "M([[1,2,1,1],[0,1,2,0],[2,1,1,1],[1,0,2,2]]).det()",
+     "expected": "10"
+    },
+    {
+     "desc": "替换第1列全1",
+     "code": "A=M([[1,2,1,1],[0,1,2,0],[2,1,1,1],[1,0,2,2]]); B=A.copy(); B[:,0]=M([[1],[1],[1],[1]]); B.det()",
+     "expected": "2"
+    }
+   ],
+   "variantGroup": "vg-cofactor",
+   "idx": 82
   },
   {
    "id": "q-030",
@@ -3063,7 +3334,8 @@
      "expected": "-1"
     }
    ],
-   "idx": 79
+   "variantGroup": null,
+   "idx": 83
   },
   {
    "id": "q-081",
@@ -3114,7 +3386,8 @@
      "expected": "160"
     }
    ],
-   "idx": 80
+   "variantGroup": null,
+   "idx": 84
   },
   {
    "id": "q-082",
@@ -3171,7 +3444,117 @@
      "expected": "-4"
     }
    ],
-   "idx": 81
+   "variantGroup": null,
+   "idx": 85
+  },
+  {
+   "id": "q-502",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.4",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.4 行列式的性质",
+    "kind": "textbook"
+   },
+   "stem": "设 $a,b,c$ 不全为零，计算四阶行列式\n$$D=\\begin{vmatrix}0&a&b&c\\\\a&0&c&b\\\\b&c&0&a\\\\c&b&a&0\\end{vmatrix}.$$",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "各行元素之和均为 $a+b+c$，把第 $2,3,4$ 列加到第 $1$ 列并提出 $(a+b+c)$；再利用对称性逐步消元，分解为四个因式：\n$$D=(a+b+c)(a+b-c)(a-b+c)(a-b-c).$$\n四个因式恰是「四条边能否构成三角形」的四种组合。**自检**：取 $a=b=c=1$，$D=(3)(1)(1)(-1)=-3$，与直接展开一致。",
+   "points": [
+    {
+     "text": "识别各行和均为 $a+b+c$，加列提出公因式",
+     "partial": 2
+    },
+    {
+     "text": "利用对称结构逐步消元，得到三因式分解",
+     "partial": 2
+    },
+    {
+     "text": "完整结果 $(a+b+c)(a+b-c)(a-b+c)(a-b-c)$",
+     "partial": 2
+    },
+    {
+     "text": "用特殊值 $a=b=c=1$ 自检 $-3$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.4 性质（倍加、提取）+ 对称结构观察。\n**考点出处**：同济《线性代数》第六版 §1.4；题型改编自：中科大《线性代数》历年考题（零对角对称型）。",
+   "misconception": "⚠️易错点：四个因式的符号极易写错——务必用特殊值回检；$a+b+c=0$ 时 $D=0$ 正是第一因式的作用。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编",
+    "变式族·行和型"
+   ],
+   "verify": [
+    {
+     "desc": "a=b=c=1",
+     "code": "M([[0,1,1,1],[1,0,1,1],[1,1,0,1],[1,1,1,0]]).det()",
+     "expected": "-3"
+    },
+    {
+     "desc": "因式分解",
+     "code": "a,b,c=symbols('a b c'); sp.factor(M([[0,a,b,c],[a,0,c,b],[b,c,0,a],[c,b,a,0]]).det())",
+     "expected": "(a - b - c)*(a - b + c)*(a + b - c)*(a + b + c)"
+    }
+   ],
+   "variantGroup": "vg-circulant",
+   "idx": 86
+  },
+  {
+   "id": "q-505",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 1,
+   "knowledgePoint": "1.5",
+   "source": {
+    "text": "同济《线性代数》第六版 §1.5 行列式按行(列)展开",
+    "kind": "textbook"
+   },
+   "stem": "同上矩阵 $A$（$|A|=10$），求 $A_{21}+A_{22}+A_{23}+A_{24}$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "组合 $A_{21}+A_{22}+A_{23}+A_{24}$ 的下标第一字都是 $2$——按**第 2 行**展开时它们对应$a_{21},a_{22},a_{23},a_{24}$ 的位置，故把 $A$ 的**第 2 行**替换为 $(1,1,1,1)$：\n$$A_{21}+A_{22}+A_{23}+A_{24}=\\begin{vmatrix}1&2&1&1\\\\1&1&1&1\\\\2&1&1&1\\\\1&0&2&2\\end{vmatrix}.$$\n作 $r_3-r_2$：第 3 行变为 $(1,0,0,0)$，按第 3 行展开再消元得 $\\boxed{0}$。\n**为什么是 0**：替换后的第 2 行 $(1,1,1,1)$ 与第 3 行 $(2,1,1,1)$ 恰好线性相关（相差常数倍），行列式必为 0。",
+   "points": [
+    {
+     "text": "识别下标第一字为 2 → 替换的是第 2 行",
+     "partial": 2
+    },
+    {
+     "text": "构造替换后的行列式",
+     "partial": 2
+    },
+    {
+     "text": "化简得到 0",
+     "partial": 2
+    },
+    {
+     "text": "说明两行线性相关导致行列式为零的原因",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§1.5 展开定理的「反向用法」。\n**考点出处**：同济《线性代数》第六版 §1.5；题型改编自：考研数学真题经典模型（代数余子式组合）。",
+   "misconception": "⚠️易错点：惯性照抄上一题「替换第 1 列」——本题下标 $A_{2j}$ 要替换**行**；答案为 0 不是巧合：替换行恰好使两行成比例。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "真题改编",
+    "变式族·余子式组合"
+   ],
+   "verify": [
+    {
+     "desc": "替换第2行全1",
+     "code": "A=M([[1,2,1,1],[0,1,2,0],[2,1,1,1],[1,0,2,2]]); B=A.copy(); B[1,:]=M([[1,1,1,1]]); B.det()",
+     "expected": "0"
+    }
+   ],
+   "variantGroup": "vg-cofactor",
+   "idx": 87
   }
  ]
 }
