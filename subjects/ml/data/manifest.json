@@ -1,0 +1,126 @@
+{
+ "schema": "quiz-platform-subject-v1",
+ "subject": {
+  "id": "ml",
+  "name": "机器学习",
+  "textbook": "《机器学习》课程课件（001–006）· 7 章体系",
+  "bankId": "ml-course-v1",
+  "chapters": 8,
+  "chapterLabels": {
+   "1": "第1章 人工智能与机器学习导论",
+   "2": "第2章 机器学习概述与背景知识",
+   "3": "第3章 回归",
+   "4": "第4章 逻辑回归",
+   "5": "第5章 朴素贝叶斯",
+   "6": "第6章 机器学习实践",
+   "7": "第7章 Scikit-learn 机器学习库",
+   "8": "综合测试卷（5 套）"
+  },
+  "chapterShortLabels": {
+   "8": "综合卷"
+  }
+ },
+ "sections": {
+  "1": "人工智能与机器学习导论",
+  "2": "机器学习概述与背景知识",
+  "3": "回归",
+  "4": "逻辑回归",
+  "5": "朴素贝叶斯",
+  "6": "机器学习实践",
+  "7": "Scikit-learn 机器学习库",
+  "8": "套）"
+ },
+ "caliber": {
+  "total": 244,
+  "byType": {
+   "single": 119,
+   "multi": 42,
+   "judge": 0,
+   "blank": 25,
+   "short": 58
+  },
+  "byDifficulty": {
+   "basic": 70,
+   "medium": 112,
+   "hard": 62
+  },
+  "byChapter": {
+   "1": 20,
+   "2": 20,
+   "3": 20,
+   "4": 20,
+   "5": 20,
+   "6": 20,
+   "7": 20,
+   "8": 104
+  },
+  "limits": {
+   "singleMin": 0,
+   "singleMax": 9999,
+   "multiRange": 9999
+  }
+ },
+ "summary": {
+  "sub": "7 章体系 + 综合卷 · 244 题 · 含考研级综合测试",
+  "desc": "机器学习 244 题刷题子站：章节小测 A/B 卷 + 5 套综合卷，逐题解析与课件出处，进度保存在本地。",
+  "aboutHtml": "<p><b>内容来源</b>：《机器学习》课程课件（001–006）体系；章节小测 14 套（A 卷基础巩固、B 卷理解运用）+ 综合测试卷 5 套（难度递增），共 <b>244</b> 题，逐题配解析/答案要点。</p><p><b>题型说明</b>：单选 119 · 多选 42 · 填空 25 · 简答与论述 58；综合卷归入「综合卷」章节。</p><p><b>判分口径</b>：客观题自动判分（多选少选、错选均 0 分）；简答与论述题<b>按采分点自评</b>，主观题满分 = 采分点分值之和（与原卷每题满分一致）。</p><p><b>自托管说明</b>：全站资源自托管，无任何第三方依赖；进度数据保存在浏览器本地。</p>",
+  "footerHtml": "<p>题库共 <b>244</b> 题：单选 119 · 多选 42 · 填空 25 · 简答与论述 58；综合卷 104 题归入「综合卷」章节。</p>",
+  "realExamTagged": 0
+ },
+ "shards": [
+  {
+   "file": "ch1.json",
+   "chapter": 1,
+   "count": 20,
+   "sha256": "D78B232DECA7C2C2FFF0AB79C0081D3AA44958CC473A9DC15B6B6B4F3C01E1D9"
+  },
+  {
+   "file": "ch2.json",
+   "chapter": 2,
+   "count": 20,
+   "sha256": "2B1908A83B08CC042EFB669E1E40224CCD4B67938DCDFB0DA7CCB6BA65F2F4DB"
+  },
+  {
+   "file": "ch3.json",
+   "chapter": 3,
+   "count": 20,
+   "sha256": "C32BFFB226AE38F03AE5599F428340B9F998DC3E4A1FFBE88FDE2E8F3B5089D5"
+  },
+  {
+   "file": "ch4.json",
+   "chapter": 4,
+   "count": 20,
+   "sha256": "51E4C02955A36ED3330949EDDD6A1FFC1F46091A5961E5587A0A6AC76713FEAF"
+  },
+  {
+   "file": "ch5.json",
+   "chapter": 5,
+   "count": 20,
+   "sha256": "CD1267936B9DE20C1949A1448E06E0F36D33D322F772F3557E3C4F878EA2ECC5"
+  },
+  {
+   "file": "ch6.json",
+   "chapter": 6,
+   "count": 20,
+   "sha256": "77403E7E8412D99FD22A9B62F8C852F16439106F5CFEB7A9469E0C55F0CD8B42"
+  },
+  {
+   "file": "ch7.json",
+   "chapter": 7,
+   "count": 20,
+   "sha256": "799A8D0EF0773F38CA0B57F1387DBCA456123642ACED155434D0B966246762FB"
+  },
+  {
+   "file": "ch8a.json",
+   "chapter": 8,
+   "count": 52,
+   "sha256": "0712A2FCA19E8BDDA8B4DA22C4DC5E34E3473FF3DA7FF494A8B772ED44606AF3"
+  },
+  {
+   "file": "ch8b.json",
+   "chapter": 8,
+   "count": 52,
+   "sha256": "6B872E758BE4D3255B5BA33FB21C8299C15826DFC6B5FFD9BEA583821DADB5D1"
+  }
+ ]
+}

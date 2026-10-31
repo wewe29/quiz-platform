@@ -1,0 +1,701 @@
+{
+ "chapter": 4,
+ "questions": [
+  {
+   "id": "ml-c4A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 A卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件中代表逻辑函数（logistic function）、形状为 S 形的函数定义为（　）（03 P8）",
+   "options": [
+    "$\\sigma(z)=g(z)=\\frac{1}{1+e^{-z}}$",
+    "$\\sigma(z)=g(z)=\\frac{1}{1+e^{z}}$",
+    "$\\sigma(z)=g(z)=\\frac{z}{1+e^{-z}}$",
+    "$\\sigma(z)=g(z)=1-e^{-z}$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件定义 $\\sigma(z)=g(z)=\\frac{1}{1+e^{-z}}$，为 S 形函数（Sigmoid function）（03 P8）。B 指数符号错，$\\frac{1}{1+e^{z}}$ 在 $z\\to+\\infty$ 时趋于 0，是一条**递减**曲线，形状与判决规则都对不上；C 把 $z$ 放到了分子上，$z\\to-\\infty$ 时会发散成负数，根本不是概率；D 是另一种函数，取值可以为负。\n**易踩的坑**：$\\sigma(z)=g(z)$ 两个记号在课件中完全等价，答题时任写其一即可。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 A卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "若某个样本算得 $\\sigma(z)=0.8$，按课件的判决规则应当预测（　）（03 P8）",
+   "options": [
+    "$y=0$，因为 0.8 仍小于 1",
+    "$y=0$，因为 $z$ 一定为负",
+    "$y=1$，因为 $\\sigma(z)$ 大于等于 0.5",
+    "无法判断，必须先知道 $z$ 的具体数值"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件判决规则是「当 $\\sigma(z)$ 大于等于 0.5 时预测 $y=1$，小于 0.5 时预测 $y=0$」（03 P8），0.8 显然满足前者。A 用 1 而不是 0.5 当阈值；B 与判决规则无关——判决只看 $\\sigma(z)$ 不看 $z$ 的符号（虽然二者同向，但规则不是这么写的）；D 错在 $\\sigma(z)$ 已经把 $z$ 的信息完全包含了，不需要额外知道 $z$。\n**易踩的坑**：$z$ 与 $h(x)=\\sigma(z)$ 是两个不同的量——$z$ 是**线性部分**，可以取任意实数；判决用的是过了 Sigmoid 的概率值。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 A卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "若一个分类问题共有 5 类数据，按 One-vs-All（一对多／一对余）的做法，需要训练的二分类器个数是（　）（03 P6）",
+   "options": [
+    "5 个",
+    "20 个",
+    "1 个",
+    "4 个"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件做法是「先定义其中一类为类型 1（正类），其余数据为负类（rest）；接下来**去掉类型 1 数据**，剩余部分再次进行二分类……如果有 $n$ 类，那就需要分类 $n-1$ 次」（03 P6）。5 类即 $n-1=4$ 次，最后剩下的那一类充当了「rest」。A 错在多算了一个；C 错在一锅端；B 错在把「逐轮二分类」误当成两两配对。\n**易踩的坑**：$n$ 类需要训练 $n-1$ 个二分类器，**不是 $n$ 个，也不是 1 个**；课件该页只画了「① → ② → ③ → ……」的步骤示意、没有给具体 $n$ 的例子（课件此处存疑）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 A卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "逻辑回归的单样本损失函数为（　）（03 P13）",
+   "options": [
+    "$L\\left(y,h(x)\\right)=-y\\log\\left(h(x)\\right)-\\left(1-y\\right)\\log\\left(1-h(x)\\right)$",
+    "$L\\left(y,h(x)\\right)=\\left(h(x)-y\\right)^{2}$",
+    "$L\\left(y,h(x)\\right)=y\\log\\left(h(x)\\right)+\\left(1-y\\right)\\log\\left(1-h(x)\\right)$",
+    "$L\\left(y,h(x)\\right)=\\left|h(x)-y\\right|$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件给出的损失函数为 $L\\left(y,h(x)\\right)=-y\\log\\left(h(x)\\right)-\\left(1-y\\right)\\log\\left(1-h(x)\\right)$，其中 $h(x)$ 表示预测值、$y$ 表示真实值（03 P13）。B 是第 3 章的平方和损失，D 是 MAE，二者都不是本章的代价口径；C 漏掉了最关键的负号——那样求的是对数似然，要**最大化**而不是最小化。\n⚠️易错点：**课件该式在 Word 转 LaTeX 时，两处预测值都被误写成 `\\hat{y}`**，导致公式中 $y$ 同时代表真实值和预测值；阅读与答题时一律按 $L\\left(y,h(x)\\right)$ 理解（课件此处存疑）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 A卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "把似然函数两边取对数得到对数似然 $l(w)=logL(w)$ 之后，代价函数是（　）（03 P14）",
+   "options": [
+    "$J(w)=\\frac{1}{m}l(w)$",
+    "$J(w)=\\frac{1}{m}e^{l(w)}$",
+    "$J(w)=-\\frac{1}{m}l(w)$",
+    "$J(w)=m\\cdot l(w)$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件第三步给出 $J(w)=-\\frac{1}{m}l(w)$，即在取对数得到的对数似然前加一个负号、并除以样本数 $m$（03 P14）。A 漏了负号，会把「最小化」变成「最大化」；B 是毫无依据的指数变换；D 是把求平均写成了求累加。\n**易踩的坑**：**「似然 → 取对数 → 加负号」三个动作符号不能错**；对数似然 $l(w)$ 要最大化，代价函数 $J(w)$ 要最小化，所以差一个负号。且 $l(w)$ 中两项之间是**加号**，取负号展开后才变成 $L\\left(y,h(x)\\right)$ 形式的**减号**——不要在 $l(w)$ 里直接写减号。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4A-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 A卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于 Sigmoid 函数，下列说法正确的有（　）",
+   "options": [
+    "课件中 $\\sigma(z)$ 与 $g(z)$ 是同一个函数的两个记号",
+    "Sigmoid 的导数满足 $g'(z)=g(z)\\left(1-g(z)\\right)$",
+    "因为 $g(z)\\in(0,1)$，所以 $g'(z)\\leqslant\\frac{1}{4}$",
+    "Sigmoid 的导数就是 $1-g(z)$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "A、B、C 均与课件一致（03 P8、P10）：$\\sigma(z)$ 与 $g(z)$ 等价；求导得 $g'(z)=\\frac{e^{-z}}{(1+e^{-z})^{2}}=\\frac{1}{1+e^{-z}}\\left(1-\\frac{1}{1+e^{-z}}\\right)=g(z)\\left(1-g(z)\\right)$；因 $g(z)\\in(0,1)$，故 $g'(z)\\leqslant\\frac{1}{4}$。D 把导数与 $1-g(z)$ 混为一谈——$1-g(z)=\\frac{e^{-z}}{1+e^{-z}}$ 并不是导数。\n**易踩的坑**：$g'(z)$ 的最大值只有 0.25，且在两端（$z\\to\\pm\\infty$）趋于 0——这是深层网络用 Sigmoid 出现梯度消失的直接后果（该推论课件未展开，只是性质的直接结果）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4A-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 A卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于逻辑回归模型的概率表达，下列表述正确的有（　）（03 P12）",
+   "options": [
+    "$p(y\\mid x;w)=\\left(h(x)\\right)^{y}+\\left(1-h(x)\\right)^{1-y}$",
+    "$p(y=0\\mid x;w)=1-h(x)$",
+    "$p(y\\mid x;w)=\\left(h(x)\\right)^{y}\\left(1-h(x)\\right)^{1-y}$",
+    "$p(y=1\\mid x;w)=h(x)$"
+   ],
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "D、B、C 直接来自课件的二分类模型假设与合并式（03 P12）。A 把**连乘**写成了连加——当 $y=1$ 时正确结果应为 $\\left(h(x)\\right)^{1}\\cdot\\left(1-h(x)\\right)^{0}=h(x)$，而按 A 式会得到 $h(x)+1$，概率大于 1。\n📖必背：$\\left(h(x)\\right)^{y}\\left(1-h(x)\\right)^{1-y}$ 的巧妙之处——**$y=1$ 时第二项指数为 0 自动消失，$y=0$ 时第一项指数为 0 自动消失**，所以同一个式子同时表达了两种情形。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4A-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 A卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于最小二乘法与逻辑回归的关系，下列表述正确的有（　）（02 P18、03 P18）",
+   "options": [
+    "最小二乘法只适用于线性模型，不适合逻辑回归等其他模型",
+    "梯度下降适用于各种类型的模型",
+    "逻辑回归的参数可以由 $w=\\left(X^{T}X\\right)^{-1}X^{T}Y$ 一步解出",
+    "特征数量 $n$ 大时，梯度下降也能较好适用"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "A、B、D 均出自课件的对比说明（02 P18）：最小二乘法「只适用于线性模型，不适合逻辑回归模型等其他模型」，梯度下降「适用于各种类型的模型」且「特征数量 $n$ 大时也能较好适用」。C 恰恰是被排除的做法——**逻辑回归不是最小二乘法的解**，不要把第 3 章的 $w=\\left(X^{T}X\\right)^{-1}X^{T}Y$ 套到逻辑回归上。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 A卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "（要求：写出完整推导链）已知某事件发生的概率为 $p$，请从「事件的发生比 odds」出发，推导出 Sigmoid 函数 $\\sigma(z)=\\frac{1}{1+e^{-z}}$，并说明课件中「先线性、再取 Sigmoid」的模型假设是怎么来的。",
+   "options": null,
+   "answer": [],
+   "answerText": "事件的发生比 odds 是**事件发生与事件不发生的概率之比**：$\\frac{p}{1-p}$，其中 $p$ 为随机事件发生的概率，$p$ 的范围为 $[0,1]$；\n取对数并令它等于线性输出：$log\\frac{p}{1-p}=w^{T}x=z$；\n求解 $p$：$p=\\frac{1}{1+e^{-w^{T}x}}=\\frac{1}{1+e^{-z}}$；\n于是模型假设为 $z=w^{T}x+b$，$h(x)=\\sigma(z)=\\sigma(w^{T}x)$，即把 $\\log\\frac{p}{1-p}$ 直接赋成 $w^{T}x$。\n评分要点：odds 定义 1 分、取对数并赋值 3 分、解出 $p$ 3 分、写出模型假设 2 分。\n⚠️易错点：$p$ 的范围是 $[0,1]$，而 $z=w^{T}x$ 的范围是 $(-\\infty,+\\infty)$——**两者不是同一个东西**，$p=\\sigma(z)$ 才是从后者到前者的映射。引入 Sigmoid 的理由也在这里：线性回归的 $h(x)=z=w^{T}x$ 范围是 $(-\\infty,+\\infty)$，而分类预测结果需要得到 $[0,1]$ 的概率值。",
+   "points": [
+    {
+     "text": "事件的发生比 odds 是**事件发生与事件不发生的概率之比**：$\\frac{p}{1-p}$，其中 $p$ 为随机事件发生的概率，$p$ 的范围为 $[0,1]$；",
+     "partial": 3
+    },
+    {
+     "text": "取对数并令它等于线性输出：$log\\frac{p}{1-p}=w^{T}x=z$；",
+     "partial": 3
+    },
+    {
+     "text": "求解 $p$：$p=\\frac{1}{1+e^{-w^{T}x}}=\\frac{1}{1+e^{-z}}$；",
+     "partial": 3
+    },
+    {
+     "text": "于是模型假设为 $z=w^{T}x+b$，$h(x)=\\sigma(z)=\\sigma(w^{T}x)$，即把 $\\log\\frac{p}{1-p}$ 直接赋成 $w^{T}x$。\n评分要点：odds 定义 1 分、取对数并赋值 3 分、解出 $p$ 3 分、写出模型假设 2 分。\n⚠️易错点：$p$ 的范围是 $[0,1]$，而 $z=w^{T}x$ 的范围是 $(-\\infty,+\\infty)$——**两者不是同一个东西**，$p=\\sigma(z)$ 才是从后者到前者的映射。引入 Sigmoid 的理由也在这里：线性回归的 $h(x)=z=w^{T}x$ 范围是 $(-\\infty,+\\infty)$，而分类预测结果需要得到 $[0,1]$ 的概率值。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 A卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "（要求：写出公式并解释）写出逻辑回归的假设函数 $h(x)$、单样本损失函数 $L\\left(y,h(x)\\right)$ 与代价函数 $J(w)$；并解释概率表达式 $\\left(h(x)\\right)^{y}\\left(1-h(x)\\right)^{1-y}$ 巧妙在什么地方。",
+   "options": null,
+   "answer": [],
+   "answerText": "假设函数：$h(x)=g\\left(w^{T}x\\right)=g(z)$，$z=w^{T}x$；若写 $h(x)=z=w_0+w_1x_1+\\cdots+w_nx_n+b=w^{T}x+b$，则 $b$ 可以融入到 $w_0$，即 $z=w^{T}x$。\n损失函数：$L\\left(y,h(x)\\right)=-y\\log\\left(h(x)\\right)-\\left(1-y\\right)\\log\\left(1-h(x)\\right)$。\n代价函数：\n$$\nJ(w)=-\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}\\log\\left(h(x^{(i)})\\right)+\\left(1-y^{(i)}\\right)\\log\\left(1-h(x^{(i)})\\right)\\right)\n$$\n巧妙之处：该式是二分类模型假设 $p(y=1\\mid x;w)=h(x)$、$p(y=0\\mid x;w)=1-h(x)$ 合并后的写法——$y=1$ 时 $\\left(1-h(x)\\right)^{0}=1$ 自动消失，$y=0$ 时 $\\left(h(x)\\right)^{0}=1$ 自动消失，**同一个式子同时表达了两种情形**，不必分情况写两条式子。\n评分要点：三个公式各 2 分，巧妙之处的解释 3 分。\n⚠️易错点：课件 P13 的损失函数在 Word 转 LaTeX 时两处预测值都被误写成 `\\hat{y}`（课件此处存疑），答题一律写成 $h(x)$；另外这个 $J(w)$ 就是**交叉熵代价函数（对数损失）**，与第 3 章的平方和损失相对照记忆——P22 把负号放在求和号前、P23 把负号分配到每一项内部，两种写法不等价之外的差异只是记法，含义相同。\n---",
+   "points": [
+    {
+     "text": "假设函数：$h(x)=g\\left(w^{T}x\\right)=g(z)$，$z=w^{T}x$；若写 $h(x)=z=w_0+w_1x_1+\\cdots+w_nx_n+b=w^{T}x+b$，则 $b$ 可以融入到 $w_0$，即 $z=w^{T}x$。",
+     "partial": 3
+    },
+    {
+     "text": "损失函数：$L\\left(y,h(x)\\right)=-y\\log\\left(h(x)\\right)-\\left(1-y\\right)\\log\\left(1-h(x)\\right)$。",
+     "partial": 3
+    },
+    {
+     "text": "代价函数：\n$$\nJ(w)=-\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}\\log\\left(h(x^{(i)})\\right)+\\left(1-y^{(i)}\\right)\\log\\left(1-h(x^{(i)})\\right)\\right)\n$$",
+     "partial": 3
+    },
+    {
+     "text": "巧妙之处：该式是二分类模型假设 $p(y=1\\mid x;w)=h(x)$、$p(y=0\\mid x;w)=1-h(x)$ 合并后的写法——$y=1$ 时 $\\left(1-h(x)\\right)^{0}=1$ 自动消失，$y=0$ 时 $\\left(h(x)\\right)^{0}=1$ 自动消失，**同一个式子同时表达了两种情形**，不必分情况写两条式子。\n评分要点：三个公式各 2 分，巧妙之处的解释 3 分。\n⚠️易错点：课件 P13 的损失函数在 Word 转 LaTeX 时两处预测值都被误写成 `\\hat{y}`（课件此处存疑），答题一律写成 $h(x)$；另外这个 $J(w)$ 就是**交叉熵代价函数（对数损失）**，与第 3 章的平方和损失相对照记忆——P22 把负号放在求和号前、P23 把负号分配到每一项内部，两种写法不等价之外的差异只是记法，含义相同。\n---",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 B卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "逻辑回归代价函数求导时，课件中那一堆含 $e^{-w^{T}x^{(i)}}$ 的指数分式之所以能塌缩成 $\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$，关键用到的性质是（　）（03 P16–P17）",
+   "options": [
+    "$g(z)=\\frac{1}{1+e^{-z}}$",
+    "$p=\\frac{1}{1+e^{-w^{T}x}}$",
+    "$z=w^{T}x$ 的取值范围是 $(-\\infty,+\\infty)$",
+    "$g'(z)=g(z)\\left(1-g(z)\\right)$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "第二步求导会得到一堆形如 $\\frac{-x_j^{(i)}e^{-w^{T}x^{(i)}}}{1+e^{-w^{T}x^{(i)}}}$ 的指数分式，第三步代入 $h(x^{(i)})=\\frac{1}{1+e^{-w^{T}x^{(i)}}}$ 才能合并成 $\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$，而这一塌缩靠的就是 $g'(z)=g(z)\\left(1-g(z)\\right)$（03 P10、P16–P17）。A 只是 Sigmoid 的定义、B 只是解出的 $p$ 的表达式，它们本身不含导数信息；C 是取值范围，与化简无关。\n📖必背：**第二步里那一堆指数分式之所以能塌缩成一个 $h(x^{(i)})-y^{(i)}$，关键就是 $g'(z)=g(z)(1-g(z))$——这是 Sigmoid 求导性质在逻辑回归里的唯一用途。**",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 B卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "把判决规则「$\\sigma(z)$ 大于等于 0.5 时预测 $y=1$」与模型假设 $z=w^{T}x$ 代进去，得到的判决边界是（　）（03 P8）",
+   "options": [
+    "$w^{T}x=1$",
+    "$w^{T}x$ 等于某个与学习率 $\\alpha$ 有关的正数",
+    "$w^{T}x=0$",
+    "无法化成 $w$ 的形式，因为 $\\sigma$ 与 $z$ 不可分离"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "令判决阈值处的 $\\sigma(z)=0.5$，即 $\\frac{1}{1+e^{-z}}=\\frac{1}{2}$，交叉相乘得 $e^{-z}=1$，所以 $z=0$；再代入模型假设 $z=w^{T}x$ 得判决边界为 $w^{T}x=0$（03 P8）。A 把阈值算成了 1；B 纯属编造——判决边界只由模型参数决定，与梯度下降的学习率 $\\alpha$ 无关；D 错在 $\\sigma$ 是单调递增的一元函数，只要把它与线性式 $z=w^{T}x$ 复合，判决边界必然是一条线性超平面。\n📖必背：**Sigmoid 只做「搬运」不做「判决」——0.5 这个阈值经它反解回去恰好是线性输出的 0。**\n**易踩的坑**：别把 $z$ 与 $h(x)$ 混为一谈。$z$ 是线性部分、可取任意实数；$h(x)=\\sigma(z)$ 才是 $(0,1)$ 内的概率，判决看的是后者、边界画在 $z$ 上。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 B卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "已知 $z=w^{T}x=2$，则 $\\sigma(z)=\\frac{1}{1+e^{-z}}$ 的值最接近（　）（03 P8）",
+   "options": [
+    "$0.12$",
+    "$2.00$",
+    "$1.88$",
+    "$0.88$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "$e^{-2}\\approx 0.135$，故 $\\sigma(2)=\\frac{1}{1+0.135}\\approx 0.88$（03 P8），大于 0.5，按判决规则预测 $y=1$。A 是 $1-\\sigma(2)\\approx 0.12$，对应把指数符号写反（$\\frac{1}{1+e^{2}}$）的结果；C 把 $z$ 直接当成了 $e^{-z}$ 的位置，算出 $1+0.88$；B 是直接把 $z=2$ 当输出——$z$ 与 $h(x)=\\sigma(z)$ 是两个不同的量。\n**易踩的坑**：$z$ 可以取任意实数，$h(x)=\\sigma(z)$ 才落在 $(0,1)$；试卷中凡出现「$h(x)$ 等于某个大于 1 的数」的选项都可以先排除。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 B卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "用梯度下降更新逻辑回归参数时，若 $m=1$、$\\alpha=0.1$、$h(x^{(1)})=0.9$、$y^{(1)}=1$、$x_j^{(1)}=2$，则按 $w_j:=w_j-\\alpha\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$ 更新后，$w_j$ 的变化是（　）（03 P15）",
+   "options": [
+    "保持不变",
+    "减小 0.02",
+    "增大 0.2",
+    "增大 0.02"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "$w_j:=w_j-0.1\\times\\frac{1}{1}\\times\\left(0.9-1\\right)\\times2=w_j-0.1\\times(-0.1)\\times2=w_j+0.02$，即**增大 0.02**（03 P15）。B 是把括号里的两项顺序颠倒、符号搞反；C 漏掉了 $\\frac{1}{m}$（本题 $m=1$ 故数值不变）或漏乘了 $x_j^{(1)}$ 导致少一位有效数字的常见笔误——注意 $\\frac{1}{m}$ 这一项不能丢；A 错在梯度不为 0 时 $w_j$ 一定变化。\n**易踩的坑**：① 这里是减号，梯度为负（预测 0.9 小于真实值 1）时参数会**增大**，这与「预测不足就加大权重」的方向一致，可用来快速自检符号；② 逻辑回归的更新式与第 3 章 BGD 完全一样，**只是代价函数不同**，别把平方和的偏导套上来。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 B卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件指出，逻辑回归的梯度下降更新式与线性回归的批量梯度下降更新式「长得一模一样」。对这一现象的正确理解是（　）（03 P15、02 P8）",
+   "options": [
+    "说明逻辑回归用的代价函数就是平方和损失，与线性回归完全相同",
+    "说明逻辑回归也可以用最小二乘法的闭式解一步求解",
+    "说明两者代价函数对 $w_j$ 求得的偏导形式相同，区别在于代价函数本身不同：前者是交叉熵（对数损失），后者是平方和损失",
+    "说明两者的 $h(x)$ 都由同一个线性式 $w^{T}x$ 算出，所以更新式必然相同"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "两者的偏导都是「$\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$」，所以更新式相同；但代价函数一个是平方和损失、一个是交叉熵（对数）损失（03 P15、02 P8）。A、B、D 都把「更新式相同」误读成「代价函数相同」或「预测模型相同」——课件明确说最小二乘法**不适合逻辑回归等其他模型**。\n⚠️易错点：**只是更新式相同，代价函数不同**——第 3 章是平方和损失，本章是对数（交叉熵）损失；混淆这两者是最常见的错误。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4B-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 B卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于「似然函数 → 对数似然 → 代价函数」这条求解链，下列表述正确的有（　）（03 P14）",
+   "options": [
+    "似然函数为 $L(w)=\\prod_{i=1}^{m}\\left(h(x^{(i)})\\right)^{y^{(i)}}\\left(1-h(x^{(i)})\\right)^{1-y^{(i)}}$",
+    "$l(w)=logL(w)$ 中两项之间是减号",
+    "代价函数 $J(w)=-\\frac{1}{m}l(w)$，即对数似然要最大化、代价函数要最小化",
+    "两边取对数后，**连乘号变成了连加号**"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "A 是课件给出的似然函数连乘式，D 是取对数的作用，C 是第三步「因为要最小化所以加负号」的结论（03 P14）。B 错在 $l(w)$ 中两项之间是**加号**：\n$$\nl(w)=logL(w)=\\sum_{i=1}^{m}\\left(y^{(i)}\\log\\left(h(x^{(i)})\\right)+\\left(1-y^{(i)}\\right)\\log\\left(1-h(x^{(i)})\\right)\\right)\n$$\n只有在 $J(w)=-\\frac{1}{m}l(w)$ 取负号展开之后，才变成 $L\\left(y,h(x)\\right)$ 形式的**减号**——不要在 $l(w)$ 里直接写减号。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4B-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 B卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件为什么要在线性模型之后引入 Sigmoid 函数？下列说法正确的有（　）（03 P9）",
+   "options": [
+    "Sigmoid 把线性输出的取值范围进一步扩展到了 $(-\\infty,+\\infty)$",
+    "而分类预测的结果需要得到 $[0,1]$ 的概率值",
+    "因此需要把线性输出压缩到概率空间，这正是引入 Sigmoid 的原因",
+    "线性回归的函数 $h(x)=z=w^{T}x$，取值范围是 $(-\\infty,+\\infty)$"
+   ],
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件原文是「线性回归的函数 $h(x)=z=w^{T}x$，范围是 $(-\\infty,+\\infty)$。而分类预测结果需要得到 $[0,1]$ 的概率值——这正是引入 Sigmoid 的原因」（03 P9）。A 方向完全说反：Sigmoid 是把无界区间**压缩**到 $(0,1)$，不是扩展。\n**易踩的坑**：这条是「为什么需要 Sigmoid」的根据，务必能默写；$z$ 与 $p$ 的范围差异（$(-\\infty,+\\infty)$ vs $[0,1]$）也是常见辨析点。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4B-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 B卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于逻辑回归加入正则化后的代价函数，下列表述正确的有（　）（03 P18）",
+   "options": [
+    "未加正则化时，$J(w)=-\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}\\log\\left(h(x^{(i)})\\right)+\\left(1-y^{(i)}\\right)\\log\\left(1-h(x^{(i)})\\right)\\right)$",
+    "加入正则化后为 $J(w)=\\frac{1}{m}\\sum_{i=1}^{m}\\left[-y^{(i)}\\log\\left(h(x^{(i)})\\right)-\\left(1-y^{(i)}\\right)\\log\\left(1-h(x^{(i)})\\right)\\right]+\\frac{\\lambda}{2m}\\sum_{j=1}^{n}w_{j}^{2}$",
+    "加正则项的目的是提高模型的训练准确率",
+    "当 $\\lambda$ 的值开始上升时，降低了方差"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "A 是未正则化的交叉熵代价函数，B 是加上 $\\frac{\\lambda}{2m}\\sum_{j=1}^{n}w_j^{2}$ 后的完整形式，D 是课件对 $\\lambda$ 的结论「当 $\\lambda$ 的值开始上升时，降低了方差」（03 P18）。C 错在目的——**正则化的目的是为了防止过拟合**，不是提高训练准确率；加大 $\\lambda$ 通常反而会牺牲一点训练精度去换泛化能力。\n⚠️易错点：正则项的系数是 $\\frac{\\lambda}{2m}$，其中的 $\\frac{1}{m}$ 与第 3 章 L2 正则化「$\\frac{1}{2}$ 乘平方和」的口径不同，但**作用一致**，都是对 $w_j^2$ 求导后系数化为 1。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 B卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "（要求：写出三步推导）写出逻辑回归代价函数 $J(w)$ 对 $w_j$ 求偏导的完整三步推导过程；并说明 Sigmoid 的导数性质在其中扮演的角色。",
+   "options": null,
+   "answer": [],
+   "answerText": "代价函数 $J(w)=-\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}\\log\\left(h(x^{(i)})\\right)+\\left(1-y^{(i)}\\right)\\log\\left(1-h(x^{(i)})\\right)\\right)$。\n**第一步**（把 $h(x^{(i)})$ 用 Sigmoid 表达式代入并化简）：\n$$\ny^{(i)}\\log\\left(\\frac{1}{1+e^{-w^{T}x^{(i)}}}\\right)+\\left(1-y^{(i)}\\right)\\log\\left(1-\\frac{1}{1+e^{-w^{T}x^{(i)}}}\\right)=-y^{(i)}\\log\\left(1+e^{-w^{T}x^{(i)}}\\right)-\\left(1-y^{(i)}\\right)\\log\\left(1+e^{w^{T}x^{(i)}}\\right)\n$$\n**第二步**（代入代价函数并对 $w_j$ 求导）：\n$$\n\\frac{\\partial}{\\partial w_j}J(w)=-\\frac{1}{m}\\sum_{i=1}^{m}\\left(-y^{(i)}\\frac{-x_j^{(i)}e^{-w^{T}x^{(i)}}}{1+e^{-w^{T}x^{(i)}}}-(1-y^{(i)})\\frac{x_j^{(i)}e^{w^{T}x^{(i)}}}{1+e^{w^{T}x^{(i)}}}\\right)\n$$\n**第三步**（代入 $h(x^{(i)})=\\frac{1}{1+e^{-w^{T}x^{(i)}}}$ 合并同类项）：\n$$\n=-\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}-h(x^{(i)})\\right)x_j^{(i)}=\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}\n$$\n**Sigmoid 导数性质的角色**：第二步到第三步之所以能把指数分式塌缩成 $\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$，关键就是把每个指数分式认成 $g'(z)=g(z)\\left(1-g(z)\\right)$ 的形式；$g'(z)$ 就是 $\\frac{e^{-z}}{(1+e^{-z})^{2}}$。这是该性质在逻辑回归中唯一的用途。\n评分要点：第一步化简 2 分、第二步求导式 3 分、第三步结果 2 分、Sigmoid 导数性质的作用 2 分。",
+   "points": [
+    {
+     "text": "代价函数 $J(w)=-\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}\\log\\left(h(x^{(i)})\\right)+\\left(1-y^{(i)}\\right)\\log\\left(1-h(x^{(i)})\\right)\\right)$。\n**第一步**（把 $h(x^{(i)})$ 用 Sigmoid 表达式代入并化简）：\n$$\ny^{(i)}\\log\\left(\\frac{1}{1+e^{-w^{T}x^{(i)}}}\\right)+\\left(1-y^{(i)}\\right)\\log\\left(1-\\frac{1}{1+e^{-w^{T}x^{(i)}}}\\right)=-y^{(i)}\\log\\left(1+e^{-w^{T}x^{(i)}}\\right)-\\left(1-y^{(i)}\\right)\\log\\left(1+e^{w^{T}x^{(i)}}\\right)\n$$\n**第二步**（代入代价函数并对 $w_j$ 求导）：\n$$\n\\frac{\\partial}{\\partial w_j}J(w)=-\\frac{1}{m}\\sum_{i=1}^{m}\\left(-y^{(i)}\\frac{-x_j^{(i)}e^{-w^{T}x^{(i)}}}{1+e^{-w^{T}x^{(i)}}}-(1-y^{(i)})\\frac{x_j^{(i)}e^{w^{T}x^{(i)}}}{1+e^{w^{T}x^{(i)}}}\\right)\n$$\n**第三步**（代入 $h(x^{(i)})=\\frac{1}{1+e^{-w^{T}x^{(i)}}}$ 合并同类项）：\n$$\n=-\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}-h(x^{(i)})\\right)x_j^{(i)}=\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}\n$$\n**Sigmoid 导数性质的角色**：第二步到第三步之所以能把指数分式塌缩成 $\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$，关键就是把每个指数分式认成 $g'(z)=g(z)\\left(1-g(z)\\right)$ 的形式；$g'(z)$ 就是 $\\frac{e^{-z}}{(1+e^{-z})^{2}}$。这是该性质在逻辑回归中唯一的用途。\n评分要点：第一步化简 2 分、第二步求导式 3 分、第三步结果 2 分、Sigmoid 导数性质的作用 2 分。",
+     "partial": 9
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c4B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《机器学习》章节小测 第4章 B卷（依据课程课件 004 系列）",
+    "kind": "textbook"
+   },
+   "stem": "（要求：写出公式并给出依据）请说明逻辑回归为什么**不能**用最小二乘法求解；再写出加入正则化后的代价函数，并说明 $\\lambda$ 取值与模型拟合状态（过拟合／欠拟合）之间的关系。",
+   "options": null,
+   "answer": [],
+   "answerText": "**为什么不能用最小二乘法**：课件明确给出（02 P18）最小二乘法「**只适用于线性模型，不适合逻辑回归模型等其他模型**」——逻辑回归虽然形式上是「线性模型 + Sigmoid」，但它的代价函数是交叉熵，$w=\\left(X^{T}X\\right)^{-1}X^{T}Y$ 这个闭式解是对平方和损失求导得来的，对交叉熵并不成立；而梯度下降「适用于各种类型的模型」，特征数量 $n$ 大时也能较好适用，所以逻辑回归只能用梯度下降求解。⚠️易错点：**逻辑回归不是最小二乘法的解**。\n加入正则化后的代价函数（03 P18）：\n$$\nJ(w)=\\frac{1}{m}\\sum_{i=1}^{m}\\left[-y^{(i)}\\log\\left(h(x^{(i)})\\right)-\\left(1-y^{(i)}\\right)\\log\\left(1-h(x^{(i)})\\right)\\right]+\\frac{\\lambda}{2m}\\sum_{j=1}^{n}w_{j}^{2}\n$$\n后一项为正则化项。\n$\\lambda$ 与拟合状态的关系（03 P18 三图对比）：**没有正则化 → 过拟合；正则化过度 → 欠拟合；适当的正则化 → 目标状态**；并且课件指出「**当 $\\lambda$ 的值开始上升时，降低了方差**」。所以 $\\lambda$ 不是越大越好，要调到「适当」为止。\n评分要点：① 原因 3 分（含「只适用于线性模型」这一依据 1 分）；② 公式 3 分（交叉熵部分 2 分、正则项 $\\frac{\\lambda}{2m}\\sum w_j^2$ 1 分）；③ 三种状态对应 3 分。\n⚠️易错点：课件三个正则化公式中的求和都是 $\\sum_{j=1}^{n}$，即不含偏置项 $w_0$，课件未说明是有意约定还是笔误（**课件此处存疑，答题按课件口径写即可，不必争论**）。\n# 第5章 朴素贝叶斯\n> 本章小测共 2 套：A 卷基础巩固、B 卷理解运用，每套满分 45 分。\n> 题型：单选 5 题（每题 3 分）、多选 3 题（每题 4 分）、简答 2 题（每题 9 分）。\n> 多选、少选、错选均不得分。建议先独立作答，再对照解析。",
+   "points": [
+    {
+     "text": "**为什么不能用最小二乘法**：课件明确给出（02 P18）最小二乘法「**只适用于线性模型，不适合逻辑回归模型等其他模型**」——逻辑回归虽然形式上是「线性模型 + Sigmoid」，但它的代价函数是交叉熵，$w=\\left(X^{T}X\\right)^{-1}X^{T}Y$ 这个闭式解是对平方和损失求导得来的，对交叉熵并不成立；而梯度下降「适用于各种类型的模型」，特征数量 $n$ 大时也能较好适用，所以逻辑回归只能用梯度下降求解。⚠️易错点：**逻辑回归不是最小二乘法的解**。",
+     "partial": 3
+    },
+    {
+     "text": "加入正则化后的代价函数（03 P18）：\n$$\nJ(w)=\\frac{1}{m}\\sum_{i=1}^{m}\\left[-y^{(i)}\\log\\left(h(x^{(i)})\\right)-\\left(1-y^{(i)}\\right)\\log\\left(1-h(x^{(i)})\\right)\\right]+\\frac{\\lambda}{2m}\\sum_{j=1}^{n}w_{j}^{2}\n$$\n后一项为正则化项。",
+     "partial": 3
+    },
+    {
+     "text": "$\\lambda$ 与拟合状态的关系（03 P18 三图对比）：**没有正则化 → 过拟合；正则化过度 → 欠拟合；适当的正则化 → 目标状态**；并且课件指出「**当 $\\lambda$ 的值开始上升时，降低了方差**」。所以 $\\lambda$ 不是越大越好，要调到「适当」为止。\n评分要点：① 原因 3 分（含「只适用于线性模型」这一依据 1 分）；② 公式 3 分（交叉熵部分 2 分、正则项 $\\frac{\\lambda}{2m}\\sum w_j^2$ 1 分）；③ 三种状态对应 3 分。\n⚠️易错点：课件三个正则化公式中的求和都是 $\\sum_{j=1}^{n}$，即不含偏置项 $w_0$，课件未说明是有意约定还是笔误（**课件此处存疑，答题按课件口径写即可，不必争论**）。\n# 第5章 朴素贝叶斯\n> 本章小测共 2 套：A 卷基础巩固、B 卷理解运用，每套满分 45 分。\n> 题型：单选 5 题（每题 3 分）、多选 3 题（每题 4 分）、简答 2 题（每题 9 分）。\n> 多选、少选、错选均不得分。建议先独立作答，再对照解析。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

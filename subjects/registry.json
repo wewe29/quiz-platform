@@ -18,6 +18,15 @@
    "total": 500,
    "chapters": 6,
    "realExamTagged": 50
+  },
+  {
+   "id": "ml",
+   "name": "机器学习",
+   "textbook": "《机器学习》课程课件（001–006）· 7 章体系",
+   "url": "subjects/ml/",
+   "total": 244,
+   "chapters": 8,
+   "realExamTagged": 0
   }
  ]
 }

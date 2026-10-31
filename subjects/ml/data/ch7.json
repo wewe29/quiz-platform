@@ -1,0 +1,741 @@
+{
+ "chapter": 7,
+ "questions": [
+  {
+   "id": "ml-c7A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 A卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "下列代码执行后，`iris.data` 与 `iris.target` 分别对应（　）（06 P7、P9）",
+   "options": [
+    "`iris.data` 是标签 $y$，`iris.target` 是特征矩阵 $X$",
+    "`iris.data` 是特征矩阵 $X$，`iris.target` 是标签 $y$",
+    "两者都是标签",
+    "两者都是划分后的训练集"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P9 给出 `iris = load_iris()` 后 `X = iris.data`（特征矩阵）、`y = iris.target`（标签）；这正是 06 P7 符号标记约定的由来——**特征矩阵是大写 $X$、标签是小写 $y$**。**易错点**：大小写写反（`X = iris.target`）是初学者最常见的低级错误，且不会报错、只会静默地得到无意义的结果。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 A卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "`train_test_split(X, y, random_state=12, stratify=y, test_size=0.3)` 中，`random_state=12` 的作用是（　）（06 P10）",
+   "options": [
+    "把数据随机打乱 12 次",
+    "设定随机种子、固定划分结果",
+    "指定测试集有 12 条样本",
+    "指定类别数为 12"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P10 的参数说明表中，`random_state=12` 是**设定随机种子（固定划分结果）**。A 错，打乱由 `shuffle=True` 控制且不是「打乱 12 次」；C 错，测试集大小由 `test_size=0.3` 控制；D 错，类别数由数据本身决定，课件该函数没有这一参数。**作用**：固定随机种子使实验可复现，同一份数据每次得到相同的划分，便于对比不同模型。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 A卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "`fs.RFECV(estimator, scoring=\"r2\")` 属于（　）（06 P13）",
+   "options": [
+    "过滤式（Filter）",
+    "封装式（Wrapper）：结合交叉验证的递归特征消除法，自动选择最优特征个数",
+    "嵌入式（Embedded）",
+    "数据预处理"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P13 把三类特征选择器并列给出：`fs.SelectKBest(score_func, k)` 是**过滤式（Filter）**、保留得分排名前 k 的特征；`fs.RFECV(estimator, scoring=\"r2\")` 是**封装式（Wrapper）**、结合交叉验证的递归特征消除法、自动选择最优特征个数；`fs.SelectFromModel(estimator)` 是**嵌入式（Embedded）**、从模型中自动选择特征。D 错，特征选择器不属于预处理工具。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 A卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "使用 `PCA(n_components=3)` 后，`pca.explained_variance_ratio_` 表示（　）（06 P19）",
+   "options": [
+    "投影后各个特征维度的**方差比例**",
+    "投影后的特征维度的方差",
+    "原始数据的样本条数",
+    "主成分的系数矩阵"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P19 的 PCA 代码中，`print(pca.explained_variance_ratio_)` 注释为「投影后各个特征维度的**方差比例**」，`print(pca.explained_variance_)` 注释为「投影后的特征维度的**方差**」。`n_components` 代表主成分数量。**易错点**：二者只差一个 `ratio_`，但含义不同——方差比例可加总，用于判断保留多少主成分；方差是绝对量纲，不可直接加总。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 A卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于无监督聚类的 `kmeans.fit(X_train)`，下列说法正确的是（　）（06 P18）",
+   "options": [
+    "`n_clusters` 表示特征的个数",
+    "必须同时传入 `y_train` 才能拟合",
+    "`fit` 之后可以直接调用依赖标签的 `score(X_test, y_test)`",
+    "无监督学习没有 $y$，`fit` 只传特征矩阵"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P18 的 KMeans 代码是 `kmeans.fit(X_train)`，只传特征矩阵。**易错点**：无监督学习**没有 $y$**，所以 `fit` 不传标签，也没有 `score(X_test, y_test)` 这类依赖标签的评分（06 P18、P20）。C 错；A 错，`n_clusters` 表示聚类数即簇的个数，不是特征数。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7A-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 A卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于 sklearn 的三类特征选择方法，下列说法正确的有（　）（06 P13）",
+   "options": [
+    "`fs.RFECV(estimator, scoring=\"r2\")` 是过滤式（Filter）",
+    "`fs.SelectKBest(score_func, k)` 是过滤式（Filter），保留得分排名前 k 的特征",
+    "`fs.SelectFromModel(estimator)` 是嵌入式（Embedded），从模型中自动选择特征",
+    "三类方法的划分依据是**是否用到模型**：Filter 不用模型、Wrapper 用模型反复训练、Embedded 直接用模型自身的权重或重要性"
+   ],
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P13 的三类方法及其划分依据为——**Filter 不用模型**（`SelectKBest` 按得分取 top k）、**Wrapper 用模型反复训练**（`RFECV` 递归特征消除并结合交叉验证自动确定最优特征个数）、**Embedded 直接用模型自身的权重或重要性**（`SelectFromModel`）。A 错，`RFECV` 是封装式而非过滤式。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7A-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 A卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于 sklearn 的分类算法及其类路径，下列对应正确的有（　）（06 P15–P16）",
+   "options": [
+    "逻辑回归 → `linear_model.LogisticRegression`",
+    "支持向量机 → `svm.SVC`",
+    "朴素贝叶斯 → `naive_bayes.GaussianNB`",
+    "K 近邻 → `neighbors.KMeans`"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P15–P16 给出分类算法与类路径的对应：逻辑回归 → `linear_model.LogisticRegression`；支持向量机 → `svm.SVC`；朴素贝叶斯 → `naive_bayes.GaussianNB`；K 近邻 → `neighbors.NearestNeighbors`；决策树分类 → `tree.DecisionTreeClassifier`。D 错，K 近邻在 `neighbors` 模块中是 `NearestNeighbors`，而 `KMeans` 是**聚类**算法（属于 `cluster` 模块）。\n📖命名规律（可迁移）：带 `Classifier` 后缀的是分类器，带 `Regressor` 后缀的是回归器（06 P17）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7A-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 A卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于 sklearn 的模块划分与内容，下列说法正确的有（　）（06 P4、P17、P18、P19）",
+   "options": [
+    "`sklearn.ensemble` 包含了一系列基于集成思想的分类、回归和离群值检测方法",
+    "`sklearn.model_selection` 只提供数据划分，不提供交叉验证",
+    "`sklearn.decomposition` 包含了一系列无监督降维算法",
+    "`sklearn.cluster` 包含了一系列无监督聚类算法"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P4 指出 sklearn 包含特征提取、数据处理和模型评估三大模块；06 P17 的 `sklearn.ensemble` 包含基于集成思想的分类、回归和离群值检测方法；06 P18 的 `sklearn.cluster` 包含无监督聚类算法（KMeans、DBSCAN、层次聚类、谱聚类）；06 P19 的 `sklearn.decomposition` 包含无监督降维算法（PCA）。B 错，`model_selection` 不止数据划分，还提供 `cross_val_score`、`GridSearchCV`、`RandomizedSearchCV`（06 P10、P25–P27）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 A卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "写出 sklearn 的**统一 API 三段式**完整流程，并说明模型类（estimator）与转换器（transformer）在方法上的差别。（要求：按「导入类 → 构建实例（可传参数）→ fit 训练 → predict/transform 输出」四步写全；举一个模型类与一个转换器为例；说明转换器多一个 `fit_transform`）",
+   "options": null,
+   "answer": [],
+   "answerText": "**统一 API 四步**（06 P8、P11、P14、P16 归纳）：`from 对应模块 import 类` → 构建模型/转换器实例（可传参数）→ `fit` 训练 → `predict` / `transform` 输出。\n**模型类示例**（06 P14）：\n```python\nfrom sklearn.linear_model import LinearRegression\nlr = LinearRegression(normalize=True)   # 构建模型实例\nlr.fit(X_train, y_train)                # 训练模型\ny_pred = lr.predict(X_test)             # 作出预测\n```\n**转换器示例**（06 P11）：\n```python\nfrom sklearn.preprocessing import StandardScaler\nscaler = StandardScaler()          # 构建转换器实例\nscaler.fit_transform(X_train)      # 拟合及转换\n```\n**方法上的差别**：两者都是 `fit` 开始；模型类用 `predict` 输出**预测类别标签或预测值**（分类器还可用 `predict_proba` 输出属于各类的**概率**，用于画 ROC/PR 曲线、调分类阈值、与其他模型比较）；转换器不预测，而是用 `transform` 输出**变换后的数据**，并且提供 `fit_transform` 一步完成拟合与转换。\n**迁移价值**：模型类换名字、方法名不变，本主线可迁移到全部 API（06 P8、P11、P14、P16）。",
+   "points": [
+    {
+     "text": "**统一 API 四步**（06 P8、P11、P14、P16 归纳）：`from 对应模块 import 类` → 构建模型/转换器实例（可传参数）→ `fit` 训练 → `predict` / `transform` 输出。",
+     "partial": 3
+    },
+    {
+     "text": "**模型类示例**（06 P14）：\n```python\nfrom sklearn.linear_model import LinearRegression\nlr = LinearRegression(normalize=True)   # 构建模型实例\nlr.fit(X_train, y_train)                # 训练模型\ny_pred = lr.predict(X_test)             # 作出预测\n```",
+     "partial": 3
+    },
+    {
+     "text": "**转换器示例**（06 P11）：\n```python\nfrom sklearn.preprocessing import StandardScaler\nscaler = StandardScaler()          # 构建转换器实例\nscaler.fit_transform(X_train)      # 拟合及转换\n```",
+     "partial": 3
+    },
+    {
+     "text": "**方法上的差别**：两者都是 `fit` 开始；模型类用 `predict` 输出**预测类别标签或预测值**（分类器还可用 `predict_proba` 输出属于各类的**概率**，用于画 ROC/PR 曲线、调分类阈值、与其他模型比较）；转换器不预测，而是用 `transform` 输出**变换后的数据**，并且提供 `fit_transform` 一步完成拟合与转换。",
+     "partial": 3
+    },
+    {
+     "text": "**迁移价值**：模型类换名字、方法名不变，本主线可迁移到全部 API（06 P8、P11、P14、P16）。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 A卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "`train_test_split` 只切出训练集与测试集两半，那么第 6 章的「训练集 / 验证集 / 测试集」三分法在 sklearn 中靠什么实现？另外 `stratify=y` 在不平衡数据上有什么作用？（要求：说明 `test_size=0.3` 对应的划分比例；写出三分法在 sklearn 中的实现途径；说明分层策略的含义）",
+   "options": null,
+   "answer": [],
+   "answerText": "`train_test_split` 的划分（06 P10）：`test_size=0.3` 表示把完整数据集的 **70% 作为训练集、30% 作为测试集**，`shuffle=True` 可提前打乱数据。\n**三分法在 sklearn 中的实现途径**：**交叉验证**（如 `cross_val_score(clf, X_train, y_train, cv=5, scoring='f1_weighted')`）或**超参数搜索**（如 `GridSearchCV(svc, params, cv=5)`）——它们在**训练集内部**完成模型选择与调参，承担了第 6 章「验证集」的角色，`train_test_split` 并不负责三分法。\n**与第 6 章的对应**：验证集用于**模型选择/调超参数**（可选），测试集用于**最终评估**；sklearn 的做法正是把这两件事分开，避免用测试集反复调参造成的信息泄漏。\n`stratify=y` 的作用（06 P10）：**分层策略**，使训练集与测试集中各类别数据的比例与原始数据集比例一致；在不平衡数据上，可避免少数类样本被集中或稀释到某一半，保证评估结果有代表性。\n---",
+   "points": [
+    {
+     "text": "`train_test_split` 的划分（06 P10）：`test_size=0.3` 表示把完整数据集的 **70% 作为训练集、30% 作为测试集**，`shuffle=True` 可提前打乱数据。",
+     "partial": 3
+    },
+    {
+     "text": "**三分法在 sklearn 中的实现途径**：**交叉验证**（如 `cross_val_score(clf, X_train, y_train, cv=5, scoring='f1_weighted')`）或**超参数搜索**（如 `GridSearchCV(svc, params, cv=5)`）——它们在**训练集内部**完成模型选择与调参，承担了第 6 章「验证集」的角色，`train_test_split` 并不负责三分法。",
+     "partial": 3
+    },
+    {
+     "text": "**与第 6 章的对应**：验证集用于**模型选择/调超参数**（可选），测试集用于**最终评估**；sklearn 的做法正是把这两件事分开，避免用测试集反复调参造成的信息泄漏。",
+     "partial": 3
+    },
+    {
+     "text": "`stratify=y` 的作用（06 P10）：**分层策略**，使训练集与测试集中各类别数据的比例与原始数据集比例一致；在不平衡数据上，可避免少数类样本被集中或稀释到某一半，保证评估结果有代表性。\n---",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 B卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "`cross_val_score(clf, X_train, y_train, cv=5, scoring='f1_weighted')` 中，`scoring='f1_weighted'` 的含义是（　）（06 P25）",
+   "options": [
+    "只保留得分靠前的 5 条样本",
+    "把数据分成 5 份，其中一份权重较高",
+    "把模型的特征权重设为 F1",
+    "评分函数指定为 F1 值"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P25 指出该代码使用 **5 折交叉验证**对决策树模型进行评估，使用的**评分函数为 F1 值**；`cv=5` 才是折数设置。B、A 错，`scoring` 与折数无关；C 错，`scoring` 指定的是评分函数，不是特征权重。\n📖跨章联动（06 P24）：F1 值在 `sklearn.metrics` 中对应 `metrics.f1_score()`，与第 6 章 6.2 的 F1 定义一一对应。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 B卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "当决策树模型超参数较多、在意搜索耗时，且希望找到参数空间中的局部最优时，按课件表述更应选用的搜索方式是（　）（06 P26、P27）",
+   "options": [
+    "`GridSearchCV`，因为穷举一定能找到全局最优",
+    "Early stopping",
+    "手工逐个设置参数并反复训练",
+    "`RandomizedSearchCV`，因为它在参数子空间中随机采样、时间耗费较少、更容易找到局部最优"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P26、P27 给出两种搜索方式的对比——网格搜索在参数网格上**穷举**，方法简单但**搜索速度慢**（超参数较多时）且**不容易找到参数空间中的局部最优**；随机搜索在参数子空间中**随机采样**，**时间耗费较少、更容易找到局部最优**。A 错在前提：正因为超参数多，穷举才慢；C、B 不是本题所问的两种搜索方式（且 Early stopping 属第 6 章 6.3.9 的训练技巧）。\n**易错点**：**网格搜索是穷举、随机搜索是采样**，这是本章最常见的概念混淆；两者接口一致（都是 `.fit()` → `.best_params_`），替换类名即可切换。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 B卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "sklearn 还提供了部分自带交叉验证功能的模型类，例如（　）（06 P25）",
+   "options": [
+    "`LassoCV`、`LogisticRegressionCV`，它们**包含 `cv` 参数**",
+    "`LinearRegression`、`DecisionTreeClassifier`",
+    "`KMeans`、`PCA`",
+    "`StandardScaler`、`MinMaxScaler`"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P25 指出 sklearn 提供了部分**带交叉验证功能的模型类**，如 `LassoCV`、`LogisticRegressionCV` 等，这些类**包含 `cv` 参数**。B、C 中的类都不带 `cv`（`LinearRegression`、`DecisionTreeClassifier` 是普通模型类，`KMeans`、`PCA` 是无监督算法）；D 是转换器（预处理），不参与交叉验证。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 B卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "对测试集计算正确率时，`accuracy_score(y_true, y_pred)` 中的 `y_true` 应传入（　）（06 P21）",
+   "options": [
+    "`y_train`",
+    "`y_pred`",
+    "`X_test`",
+    "`y_test`"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P21 指出 `sklearn.metrics` 的评分函数大部分都必须包含真实值 `y_true` 和预测值 `y_pred`，且**对于测试集而言，`y_test` 即是 `y_true`**。A 错，传 `y_train` 就变成在训练集上算正确率，失去评估意义；C 错，`X_test` 是特征矩阵；B 错，`y_pred` 是模型给出的预测值，把它当真实值等于自我评估、正确率恒为 1。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 B卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "分类器上 `predict_proba(X_test)` 的返回值最适合用于下列哪一用途（　）（06 P15–P16）",
+   "options": [
+    "计算各特征的权重",
+    "直接作为 0/1 类别标签提交",
+    "训练模型参数",
+    "画 ROC/PR 曲线、调分类阈值、与其他模型比较"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P15–P16 给出 `predict` 与 `predict_proba` 的分工：`predict(X_test)` 返回每个样本的**预测类别标签**、`predict_proba(X_test)` 返回每个样本属于各类的**概率**，后者用于**画 ROC/PR 曲线、调分类阈值、与其他模型比较**。B 错，概率不等于 0/1 标签（`y_pred` 才是标签）；C 错，训练靠 `fit`；A 错，特征权重/重要性不是 `predict_proba` 的作用。\n⚠️**易错点**：只有**支持输出概率**的分类器才有 `predict_proba`；绘图取阈值时用的是 `y_prob`，不是 `y_pred`。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7B-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 B卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于 sklearn 的统一 API 惯例，下列说法正确的有（　）（06 P8、P11、P14、P16）",
+   "options": [
+    "基本流程是导入类 → 构建模型/转换器实例（可传参数）→ `fit` 训练 → `predict`/`transform` 输出",
+    "模型类换名字、方法名不变，这条主线可以迁移使用",
+    "转换器（如 `StandardScaler`）可以用 `fit_transform` 一次完成拟合与转换",
+    "所有 sklearn 组件都必须用 `predict` 输出结果"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "统一 API 是本章的主线（06 P8、P11、P14、P16）：`from` 对应模块导入类 → 构建模型/转换器实例（可传参数）→ `fit` 训练 → `predict`/`transform` 输出；模型类换名字、方法名不变，可迁移使用；转换器（如 `StandardScaler`）多一步 `fit_transform`，一次完成拟合与转换。D 错在「都必须」——转换器（如 `StandardScaler`、`PCA`、`SelectKBest`）输出的是 `transform` 后的数据，没有 `predict`；无监督聚类 `kmeans` 虽有 `predict`，但其含义是「把新样本分到已有簇」，也不是普遍成立的规则。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7B-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 B卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于特征选择中 `estimator` 参数的传入要求，下列说法正确的有（　）（06 P13）",
+   "options": [
+    "任意模型（包括聚类模型）都可以作为 `estimator` 参数传入",
+    "只有暴露了 `feature_importances_` 属性的模型才能作为 `estimator` 参数传入",
+    "**任何具有 `coef_` 或者 `feature_importances_` 的基模型**都可以作为 `estimator` 参数传入",
+    "只有暴露了 `coef_` 属性的模型才能作为 `estimator` 参数传入"
+   ],
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P13 对嵌入式特征选择的说明是「从模型中自动选择特征，**任何具有 `coef_` 或者 `feature_importances_` 的基模型都可以作为 estimator 参数传入**」，`RFECV` 的 `estimator` 参数同样有此要求。D、B 单独看都只是**必要条件之一**，必须写成 D **或** B，缺一不可——只有 C 是完整准确的表述。A 错，聚类模型没有 `coef_`/`feature_importances_`，不能传入。\n**采分提示**：这类题最爱在「且 / 或」上设陷阱，正确项必须完整覆盖课件原话的「`coef_` **或者** `feature_importances_`」。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7B-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 B卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于 sklearn 中的正则化回归与降维，下列说法正确的有（　）（06 P14、P19）",
+   "options": [
+    "LASSO 对应 `linear_model.Lasso`，与 $L_1$ 正则化相对应",
+    "`pca.explained_variance_ratio_` 表示投影后各特征维度的方差（而非比例）",
+    "`pca.explained_variance_` 表示投影后各特征维度的方差",
+    "Ridge 对应 `linear_model.Ridge`，与 $L_2$ 正则化相对应"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "06 P14 列出回归算法类——`linear_model.Lasso`（LASSO）、`linear_model.Ridge`（Ridge）、`linear_model.ElasticNet`、`tree.DecisionTreeRegressor`；06 P7 的跨章提示指出 **LASSO 对应 $L_1$、Ridge 对应 $L_2$**（见第 6 章 6.3.7：$L_1$ → 权重稀疏、$L_2$ → 权重平滑），**名字与正则化类型的对应是常考点**。06 P19 中 `explained_variance_` 是方差、`explained_variance_ratio_` 是方差比例。B 错在把「比例」写成了「方差」。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 B卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "写出 `cross_val_score` 与 `GridSearchCV` 的调用代码，并说明 `cv`、`scoring`、`best_params_` 的含义；再说明 `train_test_split`、`cross_val_score`、`GridSearchCV` 三者在「选模型」这件事上如何分工。（要求：写出两段调用代码；说明三个属性/参数；写清三者分工：划分／评估／调参）",
+   "options": null,
+   "answer": [],
+   "answerText": "**交叉验证代码**（06 P25）：\n```python\nfrom sklearn.model_selection import cross_val_score\nclf = DecisionTreeClassifier(max_depth=5)\nscores = cross_val_score(clf, X_train, y_train, cv=5, scoring='f1_weighted')\n```\n`cv=5` 表示**使用 5 折交叉验证**；`scoring='f1_weighted'` 指定**评分函数为 F1 值**；返回值 `scores` 是各折的评分。\n**网格搜索代码**（06 P26）：\n```python\nfrom sklearn.model_selection import GridSearchCV\nfrom sklearn import svm\nsvc = svm.SVC()\nparams = {'kernel': ['linear', 'rbf'], 'C': [1, 10]}\ngrid_search = GridSearchCV(svc, params, cv=5)\ngrid_search.fit(X_train, y_train)\ngrid_search.best_params_\n```\n`best_params_` 是搜索得到的最优超参数组合；`cv=5` 表示用 5 折交叉验证为每组参数打分。\n**三者分工**（跨章联动）：\n- `train_test_split`：只负责**数据划分**——按 `test_size=0.3` 切出 70% 训练集与 30% 测试集；注意它只有两半。\n- `cross_val_score`：负责**模型评估**——在训练集内部做 $k$ 折交叉验证，给出模型在「未见过数据」上的平均表现，承担了第 6 章**验证集**的角色。\n- `GridSearchCV`：负责**调参/模型选择**——在参数网格上穷举、每组参数用 `cv` 交叉验证打分，取 `best_params_`；它是「选模型」的自动化实现。\n**总原则**：先用 `train_test_split` 把**测试集隔离**，所有评估与调参都只在训练集内部进行，测试集只在最后用一次；否则就会用测试集反复调参造成信息泄漏。\n**补充（可加分）**：若超参数较多，可用 `RandomizedSearchCV` 在参数子空间中随机采样（06 P27），时间耗费较少、更容易找到局部最优。\n⚠️**课件存疑提示**：06 P27 正文称随机搜索「选取空间中的 **100 个点**」，而同页代码写的是 `n_iter=10`，两处数值不一致、课件未说明（本章存疑点第 3 条）。答题时按「随机采样若干点」表述最稳妥。",
+   "points": [
+    {
+     "text": "**交叉验证代码**（06 P25）：\n```python\nfrom sklearn.model_selection import cross_val_score\nclf = DecisionTreeClassifier(max_depth=5)\nscores = cross_val_score(clf, X_train, y_train, cv=5, scoring='f1_weighted')\n```\n`cv=5` 表示**使用 5 折交叉验证**；`scoring='f1_weighted'` 指定**评分函数为 F1 值**；返回值 `scores` 是各折的评分。",
+     "partial": 3
+    },
+    {
+     "text": "**网格搜索代码**（06 P26）：\n```python\nfrom sklearn.model_selection import GridSearchCV\nfrom sklearn import svm\nsvc = svm.SVC()\nparams = {'kernel': ['linear', 'rbf'], 'C': [1, 10]}\ngrid_search = GridSearchCV(svc, params, cv=5)\ngrid_search.fit(X_train, y_train)\ngrid_search.best_params_\n```\n`best_params_` 是搜索得到的最优超参数组合；`cv=5` 表示用 5 折交叉验证为每组参数打分。",
+     "partial": 3
+    },
+    {
+     "text": "**三者分工**（跨章联动）：\n- `train_test_split`：只负责**数据划分**——按 `test_size=0.3` 切出 70% 训练集与 30% 测试集；注意它只有两半。\n- `cross_val_score`：负责**模型评估**——在训练集内部做 $k$ 折交叉验证，给出模型在「未见过数据」上的平均表现，承担了第 6 章**验证集**的角色。\n- `GridSearchCV`：负责**调参/模型选择**——在参数网格上穷举、每组参数用 `cv` 交叉验证打分，取 `best_params_`；它是「选模型」的自动化实现。",
+     "partial": 3
+    },
+    {
+     "text": "**总原则**：先用 `train_test_split` 把**测试集隔离**，所有评估与调参都只在训练集内部进行，测试集只在最后用一次；否则就会用测试集反复调参造成信息泄漏。",
+     "partial": 3
+    },
+    {
+     "text": "**补充（可加分）**：若超参数较多，可用 `RandomizedSearchCV` 在参数子空间中随机采样（06 P27），时间耗费较少、更容易找到局部最优。\n⚠️**课件存疑提示**：06 P27 正文称随机搜索「选取空间中的 **100 个点**」，而同页代码写的是 `n_iter=10`，两处数值不一致、课件未说明（本章存疑点第 3 条）。答题时按「随机采样若干点」表述最稳妥。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c7B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《机器学习》章节小测 第7章 B卷（依据课程课件 007 系列）",
+    "kind": "textbook"
+   },
+   "stem": "结合本章内容，写出「预处理 → 建模 → 评价」的完整调用顺序（以鸢尾花数据为例），并标明每一步用到的模块与类名。（要求：导入；加载数据取 `X`、`y`；`train_test_split` 划分；`StandardScaler` 标准化；构建分类器 → `fit` → `predict`/`predict_proba`；交叉验证或超参数搜索；`metrics` 评价）",
+   "options": null,
+   "answer": [],
+   "answerText": "**导入工具包**（06 P8）：\n```python\nfrom sklearn import datasets, preprocessing\nfrom sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV\nfrom sklearn.linear_model import LogisticRegression   # 或 tree.DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score, f1_score\n```\n**加载数据、取特征矩阵与标签**（06 P9）：\n```python\niris = datasets.load_iris()\nX, y = iris.data, iris.target\n```\n**数据划分（分层）**（06 P10）：\n```python\nX_train, X_test, y_train, y_test = train_test_split(\nX, y, random_state=12, stratify=y, test_size=0.3)\n```\n**数据预处理（标准化）**（06 P11）：\n```python\nscaler = preprocessing.StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\n```\n处理后数据**均值为 0、方差为 1**。\n**构建模型实例 → 训练 → 预测**（06 P15–P16）：\n```python\nclf = DecisionTreeClassifier(max_depth=5)\nclf.fit(X_train_scaled, y_train)\ny_pred = clf.predict(X_test)\ny_prob = clf.predict_proba(X_test)\n```\n**交叉验证 / 超参数调优**（06 P25–P27）：\n```python\nscores = cross_val_score(clf, X_train_scaled, y_train, cv=5, scoring='f1_weighted')\ngrid_search = GridSearchCV(svc, params, cv=5); grid_search.fit(X_train_scaled, y_train)\n```\n**评价**（06 P21、P23–P24）：\n```python\naccuracy_score(y_test, y_pred)   # 对测试集而言 y_test 即 y_true\nf1_score(y_test, y_pred)\n```\n**主线总结（采分点）**：全流程始终是「导入 → 构建实例 → `fit` → `predict`/`transform`」，每换一类工具（预处理、建模、调参、评价）只需更换 `from` 的模块与类名，方法名保持不变。",
+   "points": [
+    {
+     "text": "**导入工具包**（06 P8）：\n```python\nfrom sklearn import datasets, preprocessing\nfrom sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV\nfrom sklearn.linear_model import LogisticRegression   # 或 tree.DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score, f1_score\n```",
+     "partial": 3
+    },
+    {
+     "text": "**加载数据、取特征矩阵与标签**（06 P9）：\n```python\niris = datasets.load_iris()\nX, y = iris.data, iris.target\n```",
+     "partial": 3
+    },
+    {
+     "text": "**数据划分（分层）**（06 P10）：\n```python\nX_train, X_test, y_train, y_test = train_test_split(\nX, y, random_state=12, stratify=y, test_size=0.3)\n```",
+     "partial": 3
+    },
+    {
+     "text": "**数据预处理（标准化）**（06 P11）：\n```python\nscaler = preprocessing.StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\n```\n处理后数据**均值为 0、方差为 1**。",
+     "partial": 3
+    },
+    {
+     "text": "**构建模型实例 → 训练 → 预测**（06 P15–P16）：\n```python\nclf = DecisionTreeClassifier(max_depth=5)\nclf.fit(X_train_scaled, y_train)\ny_pred = clf.predict(X_test)\ny_prob = clf.predict_proba(X_test)\n```",
+     "partial": 3
+    },
+    {
+     "text": "**交叉验证 / 超参数调优**（06 P25–P27）：\n```python\nscores = cross_val_score(clf, X_train_scaled, y_train, cv=5, scoring='f1_weighted')\ngrid_search = GridSearchCV(svc, params, cv=5); grid_search.fit(X_train_scaled, y_train)\n```",
+     "partial": 3
+    },
+    {
+     "text": "**评价**（06 P21、P23–P24）：\n```python\naccuracy_score(y_test, y_pred)   # 对测试集而言 y_test 即 y_true\nf1_score(y_test, y_pred)\n```",
+     "partial": 3
+    },
+    {
+     "text": "**主线总结（采分点）**：全流程始终是「导入 → 构建实例 → `fit` → `predict`/`transform`」，每换一类工具（预处理、建模、调参、评价）只需更换 `from` 的模块与类名，方法名保持不变。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

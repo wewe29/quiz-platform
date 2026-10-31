@@ -1,0 +1,725 @@
+{
+ "chapter": 5,
+ "questions": [
+  {
+   "id": "ml-c5A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 A卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "贝叶斯公式 $P(Y|X)=\\frac{P(X,Y)}{P(X)}=\\frac{P(X|Y)P(Y)}{P(X)}$ 中，$P(X)$ 的名称是（　）（04 P6）",
+   "options": [
+    "先验概率",
+    "似然度",
+    "边际似然度",
+    "后验概率"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件 04 P6 图注给出四个量的对应关系——$P(Y|X)$ 后验概率、$P(X|Y)$ 似然度、$P(Y)$ 先验概率、$P(X)$ **边际似然度**，它是与类别无关的证据项。A 错，$P(Y)$ 才是先验概率；B 错，似然度是 $P(X|Y)$；D 错，后验概率是 $P(Y|X)$。**易错点**：$P(X)$ 与 $P(X|Y)$ 用词极为相近（前者叫「边际似然度」、后者叫「似然度」），只差一个条件位置，含义却完全不同——课件此处术语用词相近，复习时务必看清竖线在哪一侧。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 A卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于联合概率，下列说法正确的是（　）（04 P5）",
+   "options": [
+    "$P(X<5,Y<0)$ 表示 $X<5$、$Y<0$ 两个条件**同时成立**的概率",
+    "$P(X<5,Y<0)$ 表示 $X<5$、$Y<0$ 中**只要有一个**成立的概率",
+    "联合概率必须先除以 $P(Y)$ 才能称为概率",
+    "联合概率只能用于分类任务"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P5 明确举例：假设 $X$ 和 $Y$ 都服从正态分布，$P(X<5,Y<0)$ 就是一个联合概率，表示 $X<5$、$Y<0$ **两个条件同时成立**的概率，即两个事件共同发生的概率。B 错，那是「或」事件（并集）；C 错，联合概率本身就是概率；D 错，联合概率是通用概念，不限于分类任务。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 A卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "生成模型（Generative Model）的基本思想是（　）（04 P8、P9）",
+   "options": [
+    "由数据直接学习决策函数 $Y=f(X)$，不考虑样本的产生模型",
+    "只估计先验概率 $P(Y)$，不使用任何条件概率",
+    "由训练数据学习联合概率分布 $P(X,Y)$，然后求得后验概率分布 $P(Y|X)$",
+    "在有限样本条件下直接研究预测模型"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P8 指出生成方法「由训练数据学习联合概率分布 $P(X,Y)$，然后求得后验概率分布 $P(Y|X)$」；具体做法是估计 $P(X|Y)$ 和 $P(Y)$，得到 $P(X,Y)=P(Y)P(X|Y)$，再用于分类。A、D 描述的都是**判别方法**（直接学习 $Y=f(X)$ 或直接估计 $P(Y|X)$）；B 不完整——只估先验无法完成分类。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 A卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件中 GaussianNB 所假设的特征条件概率分布服从（　）（04 P27）",
+   "options": [
+    "多项式分布",
+    "二项分布",
+    "高斯分布（正态分布）",
+    "多值伯努利事件模型"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P27 列出三种贝叶斯分类器：GaussianNB 假设特征条件概率分布服从**高斯分布（正态分布）**，MultinomialNB 服从多项式分布，BernoulliNB 服从二项分布。A、B 被张冠李戴；D「多值伯努利事件模型」是 04 P12 对**文本分类模型**的命名，不在三种 scikit-learn 实现之列。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 A卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "案例中 $P(game|Sports)=\\frac{2}{11}$，其中分母 11 的含义是（　）（04 P22）",
+   "options": [
+    "训练集全部 5 句话的总单词数",
+    "Sports 类中出现的不同单词的种数",
+    "词表中 14 个不同单词的数量",
+    "标签为 Sports 的 3 句话的总单词数（3+3+5）"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P22 计算 $P(game|Sports)$ 的方法是：「game」在 Sports 样本中出现次数 ÷ Sports 为标签的文本的单词总数。Sports 三句分别是 3、3、5 个词，合计 $3+3+5=11$；「game」在 “A great game” 和 “A clean but forgettable game” 中各出现一次，共 2 次，故为 $\\frac{2}{11}$。A 错，5 句共 20 个词是算 $P(a)$ 这类**无条件**概率时的除数；C 错，14 是词表大小，只在**拉普拉斯平滑**时才加到分母上；B 错，11 是总词数而非单词种数。**易错点**：无条件概率与条件概率是两套数，分母完全不同，不可混用。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5A-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 A卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于贝叶斯公式中四个量，下列说法正确的有（　）（04 P6）",
+   "options": [
+    "$P(Y|X)$ 是后验概率，表示看到 $X$ 后 $Y$ 成立的置信度",
+    "$P(X)$ 是先验概率，是各类别共用的初始概率",
+    "$P(Y)$ 是先验概率，是没有训练数据前 $Y$ 拥有的初始概率",
+    "$P(X|Y)$ 是似然度，表示在 $Y$ 成立的前提下观测到 $X$ 的概率"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P6 给出四量对应——$P(Y|X)$ 后验概率（看到 $X$ 后 $Y$ 成立的置信度）、$P(X|Y)$ 似然度（在 $Y$ 成立前提下观测到 $X$ 的概率）、$P(Y)$ 先验概率（无训练数据前 $Y$ 的初始概率）、$P(X)$ 边际似然度（与类别无关的证据项）。B 错在两处：$P(X)$ 不是先验概率，且它恰恰是**与类别无关**的，正是因为无关才能在比较后验大小时被约去。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5A-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 A卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于朴素贝叶斯的条件独立性假设，下列说法正确的有（　）（04 P10、P15）",
+   "options": [
+    "朴素贝叶斯法对条件概率分布作了条件独立性的假设",
+    "施加该假设后，模型所含条件概率的数量会**增多**，从而学习与预测更复杂",
+    "施加该假设后，联合概率可展开为各特征条件概率的连乘",
+    "这是一个**较强**的假设"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P10、P15 指出：朴素贝叶斯法对条件概率分布作了条件独立性的假设，形式化为 $P(X=x,Y=c_k)=\\prod_{j=1}^{n}P(X^{(j)}=x^{(j)}|Y=c_k)$；这是一个**较强的假设**，正是由于它，模型包含的条件概率数量大为减少，学习与预测大为简化。B 与原文方向完全相反——条件独立假设的效果是**减少**条件概率数量、使学习与预测更简化，这也是朴素贝叶斯「高效且易于实现」的原因。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5A-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 A卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于拉普拉斯平滑，下列说法正确的有（　）（04 P23、P24）",
+   "options": [
+    "为每个计数加 1，因此它永远不会为零",
+    "平滑后的一般形式中，$K$ 表示**特征中不同值的数量**",
+    "为了平衡加 1 的影响，将可能单词的数量添加到除数中，因此计算结果永远不会大于 1",
+    "平滑公式中通常取 $\\lambda=1$"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P23 指出拉普拉斯平滑的两个配套操作：每个计数加 1（永不为零）、把可能单词的数量加到除数中（结果永远不会大于 1）；04 P24 给出一般形式，其中 $K$ 表示**类别数量**、$A$ 表示 $a_j$ 中**不同值的数量**，通常 $\\lambda=1$。B 错在张冠李戴：$A$ 才是不同值数量，$K$ 是类别数量。**易错点**：分母必须同步加上「词表大小（14）」，只加分子会把概率算到大于 1。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 A卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "写出贝叶斯公式，并说明式中 $P(X|Y)$ 与 $P(Y|X)$ 的区别；再说明朴素贝叶斯法为什么属于生成学习方法。（要求：写出公式；辨析似然度与后验概率的方向；写出联合分布式 $P(X,Y)=P(X|Y)P(Y)$；说明其估计路径为先估 $P(X|Y)$ 与 $P(Y)$）",
+   "options": null,
+   "answer": [],
+   "answerText": "**写出贝叶斯公式**：\n$$\nP(Y|X)=\\frac{P(X,Y)}{P(X)}=\\frac{P(X|Y)P(Y)}{P(X)}\n$$\n即**后验概率 =（似然度 × 先验概率）/ 边际似然度**（04 P6）。\n**辨析方向**：$P(X|Y)$ 是似然度，竖线右边是 $Y$（假设），含义是「在 $Y$ 成立的前提下观测到 $X$」；$P(Y|X)$ 是后验概率，竖线右边是 $X$（证据），含义是「在看到 $X$ 之后 $Y$ 成立的置信度」。**二者方向相反、不是同一件事**，这是本章最典型的符号陷阱。\n**联合分布式**：生成模型由 $P(X|Y)$ 与 $P(Y)$ 合成 $P(X,Y)=P(X|Y)P(Y)=P(Y)P(X|Y)$（04 P6、P9）。\n**归为生成方法的理由**：朴素贝叶斯先估计 $P(X|Y)$ 和 $P(Y)$，得到联合概率分布，再由它求后验并分类，属于「学联合分布再求后验」的路径；而线性回归、逻辑回归、决策树、支持向量机等是直接学习 $Y=f(X)$ 或直接估计 $P(Y|X)$ 的判别方法（04 P8）。",
+   "points": [
+    {
+     "text": "**写出贝叶斯公式**：\n$$\nP(Y|X)=\\frac{P(X,Y)}{P(X)}=\\frac{P(X|Y)P(Y)}{P(X)}\n$$\n即**后验概率 =（似然度 × 先验概率）/ 边际似然度**（04 P6）。",
+     "partial": 3
+    },
+    {
+     "text": "**辨析方向**：$P(X|Y)$ 是似然度，竖线右边是 $Y$（假设），含义是「在 $Y$ 成立的前提下观测到 $X$」；$P(Y|X)$ 是后验概率，竖线右边是 $X$（证据），含义是「在看到 $X$ 之后 $Y$ 成立的置信度」。**二者方向相反、不是同一件事**，这是本章最典型的符号陷阱。",
+     "partial": 3
+    },
+    {
+     "text": "**联合分布式**：生成模型由 $P(X|Y)$ 与 $P(Y)$ 合成 $P(X,Y)=P(X|Y)P(Y)=P(Y)P(X|Y)$（04 P6、P9）。",
+     "partial": 3
+    },
+    {
+     "text": "**归为生成方法的理由**：朴素贝叶斯先估计 $P(X|Y)$ 和 $P(Y)$，得到联合概率分布，再由它求后验并分类，属于「学联合分布再求后验」的路径；而线性回归、逻辑回归、决策树、支持向量机等是直接学习 $Y=f(X)$ 或直接估计 $P(Y|X)$ 的判别方法（04 P8）。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 A卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件把用于文本分类的朴素贝叶斯模型称作「多值伯努利事件模型」，请写出施加朴素贝叶斯假设前后的两种连乘形式，并说明这一假设带来的收益与代价。（要求：写出链式法则形式；写出假设后的连乘形式；说明连乘规模由指数级降到线性级；说明代价是分类性能不一定很高）",
+   "options": null,
+   "answer": [],
+   "answerText": "**施加假设前（链式法则）**：每项都依赖前面的词：\n$$\np(x^{(1)},\\ldots,x^{(50000)}|y)=p(x^{(1)}|y)\\,p(x^{(2)}|y,x^{(1)})\\,p(x^{(3)}|y,x^{(1)},x^{(2)})\\cdots\n$$\n**施加朴素贝叶斯假设后（各词只依赖 $y$）**：\n$$\np(x^{(1)},\\ldots,x^{(50000)}|y)=p(x^{(1)}|y)\\,p(x^{(2)}|y)\\cdots p(x^{(50000)}|y)=\\prod_{i=1}^{m}p(x^{(i)}|y)\n$$\n**收益**：连乘规模从**指数级降到线性级**，模型包含的条件概率数量大为减少，学习与预测大为简化，因而朴素贝叶斯**高效且易于实现**（04 P10）。\n**代价**：由于这是一个较强的假设（现实中词语之间常共现、相互关联），朴素贝叶斯法的缺点是**分类的性能不一定很高**（04 P10）。\n**补充（可加分）**：课件 04 P12 第三行连乘上限写作 $m$，而前两行按 50000 个单词展开，课件未说明 $m$ 与 50000 的关系（课件此处存疑，按「非词表词全展开、词表内逐词连乘」理解即可）。\n---",
+   "points": [
+    {
+     "text": "**施加假设前（链式法则）**：每项都依赖前面的词：\n$$\np(x^{(1)},\\ldots,x^{(50000)}|y)=p(x^{(1)}|y)\\,p(x^{(2)}|y,x^{(1)})\\,p(x^{(3)}|y,x^{(1)},x^{(2)})\\cdots\n$$",
+     "partial": 3
+    },
+    {
+     "text": "**施加朴素贝叶斯假设后（各词只依赖 $y$）**：\n$$\np(x^{(1)},\\ldots,x^{(50000)}|y)=p(x^{(1)}|y)\\,p(x^{(2)}|y)\\cdots p(x^{(50000)}|y)=\\prod_{i=1}^{m}p(x^{(i)}|y)\n$$",
+     "partial": 3
+    },
+    {
+     "text": "**收益**：连乘规模从**指数级降到线性级**，模型包含的条件概率数量大为减少，学习与预测大为简化，因而朴素贝叶斯**高效且易于实现**（04 P10）。",
+     "partial": 3
+    },
+    {
+     "text": "**代价**：由于这是一个较强的假设（现实中词语之间常共现、相互关联），朴素贝叶斯法的缺点是**分类的性能不一定很高**（04 P10）。",
+     "partial": 3
+    },
+    {
+     "text": "**补充（可加分）**：课件 04 P12 第三行连乘上限写作 $m$，而前两行按 50000 个单词展开，课件未说明 $m$ 与 50000 的关系（课件此处存疑，按「非词表词全展开、词表内逐词连乘」理解即可）。\n---",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 B卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "分类器式 $y=f(x)=\\arg\\max_{c_k}\\prod_{j=1}^{n}P(X^{(j)}=x^{(j)}|Y=c_k)P(Y=c_k)$ 能够把后验概率的分母整体约去，理由是（　）（04 P16、P17）",
+   "options": [
+    "分母对每一个候选类都相同、与当前比较的类别无关，因此取 $\\arg\\max$ 时可整体约去",
+    "分母恒等于 1，约不约去都一样",
+    "分母就是训练集样本总数，是已知常量",
+    "分母就是先验概率 $P(Y=c_k)$，可以约掉"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P16 的式(2) 分母是 $\\sum_{k=1}^{K}P(X=x,Y=c_k)P(Y=c_k)$，即**对所有类别求和**得到的整体归一化项；由于它与当前正在比较的那个类无关，取 $\\arg\\max$ 时可以整体约去，于是得到 04 P17 的分类器式。**易错点**：分母不是「每个类都一样」的逐项常数，而是先求和再作整体归一化——但正因为它与所比较的类别无关，约去才成立。B 错，分母并非恒为 1；C 错，分母是概率之和而非样本数；D 错，先验概率是**分子**中的一项，不是分母。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 B卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "判别准则 $y=\\arg\\max_{c_k}P(Y=c_k)\\prod_{j=1}^{n}P(X_j=x^{(j)}|Y=c_k)$ 的含义是（　）（04 P13）",
+   "options": [
+    "使准确率最大",
+    "使召回率最大",
+    "后验概率最大，等价于 **0-1 损失函数时的期望风险最小化**",
+    "使 F1 值最大"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P13 指出在独立性假设下把输入分到后验概率最大的类，**后验概率最大等价于 0-1 损失函数时的期望风险最小化**；该式与 04 P17 的分类器式只是先验项与连乘项的书写顺序不同，二者完全等价。A、B 错，这三个指标是第 6 章的评价指标，不是本章的判别准则；D 错，判别准则是学习得到的模型，与「训练集/测试集」无关。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 B卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "若对案例**不**施加拉普拉斯平滑，由于 $P(close|Sports)=0$，将直接导致（　）（04 P22）",
+   "options": [
+    "Sports 类的连乘结果归零，从而可能把句子误判为 Not Sports",
+    "Sports 类的连乘结果变为最大，预测为 Sports",
+    "两类概率都变为 1，无法比较",
+    "先验概率失效，但条件概率不受影响"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P22 中「close」未出现在任何 Sports 样本里，故 $P(close|Sports)=0$；由于后验要对各词条件概率连乘，只要有一个词的概率为 0，整个连乘就为 0，Sports 与 Not Sports 会「同归于尽」（Not Sports 的结果不为 0），从而把 “A very close game” 误判为 Not Sports。这正是需要拉普拉斯平滑的直接原因。B、C、D 与零概率的连乘性质矛盾。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 B卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "高斯条件概率 $P(X^{(j)}|y=c_k)=\\frac{1}{\\sqrt{2\\pi\\sigma_k^{2}}}\\exp\\left(-\\frac{\\left(X^{(j)}-\\mu_k\\right)^{2}}{2\\sigma_k^{2}}\\right)$ 中，$\\mu_k$、$\\sigma_k^{2}$ 带类别下标 $k$ 的含义是（　）（04 P27）",
+   "options": [
+    "$k$ 表示训练轮数，每轮重新估计一次",
+    "$\\mu_k$ 是均值，$\\sigma_k^{2}$ 是标准差而非方差",
+    "$k$ 表示第 $k$ 个特征，所有类别共用同一组参数",
+    "每个类别各有自己的均值与方差，这是 GaussianNB 与其余两类的本质区别"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P27 的高斯条件概率式中 $\\mu_k$、$\\sigma_k^{2}$ 均带**类别下标 $k$**，即每类有各自的均值 $\\mu_k$ 与方差 $\\sigma_k^{2}$（其中 $\\sigma^{2}=\\frac{\\sum(X-\\mu)^{2}}{N}$），这是 GaussianNB 与 MultinomialNB、BernoulliNB 最本质的区别——后两者只需按类计数统计频数。A、C 错在曲解下标含义；B 错，$\\sigma^{2}$ 是方差而非标准差（标准差是 $\\sigma$）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 B卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于 GaussianNB、MultinomialNB、BernoulliNB 三种贝叶斯分类器，下列说法正确的是（　）（04 P27）",
+   "options": [
+    "三者的区别只在于「对哪个分布建模」，训练与预测的流程完全一样",
+    "GaussianNB 是文本词频估计案例中专门用于计算 $P(word|Sports)$ 的实现",
+    "三者依次对应二项分布、多项式分布、高斯分布",
+    "MultinomialNB 是课件所说「最常用的贝叶斯分类器」"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P27 列出三种分类器及其假设分布（GaussianNB→高斯、MultinomialNB→多项式、BernoulliNB→二项），并说明三者的区别只在于「对哪个分布建模」，训练与预测流程完全一样。B 错，案例的词频估计属于多项式/伯努利类模型的做法；C 错，次序被颠倒；D 错，课件明确指出 **GaussianNB 是最常用的贝叶斯分类器**。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5B-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 B卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于条件独立性的形式化定义，下列说法正确的有（　）（04 P11）",
+   "options": [
+    "若给定 $Z$ 的情况下 $X$ 和 $Y$ 条件独立，可写作 $P(X|Z)=P(X|Y,Z)$",
+    "等价写法为 $P(X,Y|Z)=P(X|Z)P(Y|Z)$",
+    "直接写成无条件独立 $P(X,Y)=P(X)P(Y)$ 也是正确的",
+    "必须写成 $P(X|Z)=P(X|Y,Z)$ 的形式，即在给定第三个变量后条件才成立"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P11 给出条件独立的形式化定义 $P(X|Z)=P(X|Y,Z)$，等价写法 $P(X,Y|Z)=P(X|Z)P(Y|Z)$。**易错点**：条件独立必须写成「给定第三个变量 $Z$ 后才成立」的形式，写成无条件独立 $P(X,Y)=P(X)P(Y)$ 是错的，C 正是这一典型错误。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5B-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 B卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于案例训练数据（5 句话：3 句 Sports、2 句 Not Sports），下列统计正确的有（　）（04 P19、P22）",
+   "options": [
+    "Sports 类共 3 句、总单词数 11",
+    "Not Sports 类共 2 句、总单词数 9",
+    "先验概率 $P(Sports)=\\frac{3}{5}$、$P(Not\\ Sports)=\\frac{2}{5}$",
+    "「game」在 Not Sports 类中出现了 2 次"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P19 的训练数据为 3 句 Sports（3、3、5 个词，共 11 个词）与 2 句 Not Sports（4、5 个词，共 9 个词）；04 P22 由此得 $P(Sports)=\\frac{3}{5}$、$P(Not\\ Sports)=\\frac{2}{5}$。D 错：「game」在 Not Sports 两句（“The election was over”、“It was a close election”）中一次也没有出现，故 $P(game|Not\\ Sports)=0$，平滑表中该行为 $(0+1)\\div(9+14)$；出现 2 次的是 Sports 类的 “game”。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5B-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 B卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件 04 P29 给出的 Numpy 实现代码中，包含下列哪些函数及其作用（　）（04 P29）",
+   "options": [
+    "`train_test_split`：把数据按 70/30 切成训练集与测试集",
+    "`fit`：用训练数据估计各类的 $\\mu_k$、$\\sigma_k$",
+    "`predict`：用分类器式输出类别",
+    "`gaussian_pdf`：计算高斯（正态）分布下的条件概率"
+   ],
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "04 P29 的 Numpy 实现包含 `gaussian_pdf`（高斯条件概率）、`fit`（估计各类的 $\\mu_k$、$\\sigma_k$）、`predict`（按分类器式输出类别）、`_score`（给出评分）四个函数。A 错，`train_test_split` 是数据划分工具，既不属于本案例，也不是「手写高斯公式」的一部分。\n⚠️**课件存疑提示**：关于「GaussianNB 是谁的实现」，04 P28 称是 **scikit-learn 实现**，04 P29 称是 **Numpy 实现**，两页并列且互相矛盾、课件未裁决（本章存疑点第 2 条）。本题只考 P29 代码中的函数与作用，不对「归属」下结论；复习时按「思路是手写高斯公式，工程上用 sklearn 的 GaussianNB」掌握即可。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 B卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "请按课件的推导链条，从贝叶斯公式写出朴素贝叶斯分类器，逐步说明每一步做了什么、为什么可以这样做。（要求：写出式(2) 的后验概率形式；说明式(1) 如何把分子拆成连乘；说明分母为何可约去，并给出最终分类器式）",
+   "options": null,
+   "answer": [],
+   "answerText": "**第一步：用贝叶斯定理写出后验概率（04 P16，式(2)）**：\n$$\nP(Y=c_k|X=x)=\\frac{P(X=x,Y=c_k)\\,P(Y=c_k)}{\\displaystyle\\sum_{k=1}^{K}P(X=x,Y=c_k)\\,P(Y=c_k)}\n$$\n即：已知输入 $x$，分别算每个候选类的「似然 × 先验」，再用全体求和归一化成真正的后验概率。\n**第二步：把条件独立假设式(1) 代入式(2) 的分子（04 P15、P17）**：\n$$\nP(X=x,Y=c_k)=\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)\n$$\n这一步把「难以估计的联合分布」拆成 $n$ 个「容易逐特征估计的条件概率」，是全章最关键的化简。\n**第三步：约去分母，得分类器式（04 P17）**：\n$$\ny=f(x)=\\arg\\max_{c_k}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)\n$$\n分母是对所有类求和的整体归一化项，与当前比较的类别无关，取 $\\arg\\max$ 时可以整体约去；因此**只需比较各类「先验 × 各特征条件概率连乘」的大小**。\n**链条总结（可加分）**：贝叶斯公式给出式(2) → 条件独立假设把分子拆成连乘 → 分母与类别无关可约 → 三步叠加才得到分类器。只背最后一个式子而不理解来源，是本章最常见的复习失误。",
+   "points": [
+    {
+     "text": "**第一步：用贝叶斯定理写出后验概率（04 P16，式(2)）**：\n$$\nP(Y=c_k|X=x)=\\frac{P(X=x,Y=c_k)\\,P(Y=c_k)}{\\displaystyle\\sum_{k=1}^{K}P(X=x,Y=c_k)\\,P(Y=c_k)}\n$$\n即：已知输入 $x$，分别算每个候选类的「似然 × 先验」，再用全体求和归一化成真正的后验概率。",
+     "partial": 3
+    },
+    {
+     "text": "**第二步：把条件独立假设式(1) 代入式(2) 的分子（04 P15、P17）**：\n$$\nP(X=x,Y=c_k)=\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)\n$$\n这一步把「难以估计的联合分布」拆成 $n$ 个「容易逐特征估计的条件概率」，是全章最关键的化简。",
+     "partial": 3
+    },
+    {
+     "text": "**第三步：约去分母，得分类器式（04 P17）**：\n$$\ny=f(x)=\\arg\\max_{c_k}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)\n$$\n分母是对所有类求和的整体归一化项，与当前比较的类别无关，取 $\\arg\\max$ 时可以整体约去；因此**只需比较各类「先验 × 各特征条件概率连乘」的大小**。",
+     "partial": 3
+    },
+    {
+     "text": "**链条总结（可加分）**：贝叶斯公式给出式(2) → 条件独立假设把分子拆成连乘 → 分母与类别无关可约 → 三步叠加才得到分类器。只背最后一个式子而不理解来源，是本章最常见的复习失误。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c5B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《机器学习》章节小测 第5章 B卷（依据课程课件 005 系列）",
+    "kind": "textbook"
+   },
+   "stem": "拉普拉斯平滑如何解决案例中的零概率问题？请写出平滑前后该条件概率的具体数值，并说明加入平滑后同时保证了哪三条性质。（要求：写出未平滑时的 $P(close|Sports)$；写出平滑后的分式与数值；写出分子加 $\\lambda$、分母加词表大小的结构；答出三条性质）",
+   "options": null,
+   "answer": [],
+   "answerText": "**零概率现象**：04 P22 中「close」未出现在任何 Sports 样本中，故 $P(close|Sports)=0$；若不平滑，连乘结果为 0，Sports 类被「同归于尽」，会把 “D very close game” 误判为 Not Sports。\n**平滑前的数值**：$P(close|Sports)=\\frac{0}{11}=0$。\n**平滑后的数值**（04 P23）：词表共 **14** 个不同单词，\n$$\nP(game|sports)=\\frac{2+1}{11+14}\n$$\n同理 $P(close|Sports)=\\frac{0+1}{11+14}=\\frac{1}{25}$。即**分子加 1、分母加词表大小 14**，两个操作必须同时进行。\n**三条性质（04 P24）**：避免了出现概率为 0 的情况；保证每个值都在 0 到 1 的范围内；保证最终和为 1 的概率性质。\n**一般形式（可加分）**：$P_\\lambda(C_k)=\\frac{\\sum_{i=1}^{N}I(y_i=C_k)+\\lambda}{N+K\\lambda}$，$P_\\lambda(x_i=a_j|y=C_k)=\\frac{\\sum_{i=1}^{N}I(x_i=a_j,y_i=C_k)+\\lambda}{\\sum_{i=1}^{N}I(y_i=C_k)+D\\lambda}$，其中 $I(\\cdot)$ 为示性函数、$K$ 为类别数量、$D$ 为不同值数量、$\\lambda$ 通常取 1。**易错点**：类别先验分母加 $K\\lambda$，特征条件概率分母加 $D\\lambda$，两者不可互换。\n---\n# 第6章 机器学习实践\n> 本章小测共 2 套：A 卷基础巩固、B 卷理解运用，每套满分 45 分。\n> 题型：单选 5 题（每题 3 分）、多选 3 题（每题 4 分）、简答 2 题（每题 9 分）。\n> 多选、少选、错选均不得分。建议先独立作答，再对照解析。",
+   "points": [
+    {
+     "text": "**零概率现象**：04 P22 中「close」未出现在任何 Sports 样本中，故 $P(close|Sports)=0$；若不平滑，连乘结果为 0，Sports 类被「同归于尽」，会把 “D very close game” 误判为 Not Sports。",
+     "partial": 3
+    },
+    {
+     "text": "**平滑前的数值**：$P(close|Sports)=\\frac{0}{11}=0$。",
+     "partial": 3
+    },
+    {
+     "text": "**平滑后的数值**（04 P23）：词表共 **14** 个不同单词，\n$$\nP(game|sports)=\\frac{2+1}{11+14}\n$$\n同理 $P(close|Sports)=\\frac{0+1}{11+14}=\\frac{1}{25}$。即**分子加 1、分母加词表大小 14**，两个操作必须同时进行。",
+     "partial": 3
+    },
+    {
+     "text": "**三条性质（04 P24）**：避免了出现概率为 0 的情况；保证每个值都在 0 到 1 的范围内；保证最终和为 1 的概率性质。",
+     "partial": 3
+    },
+    {
+     "text": "**一般形式（可加分）**：$P_\\lambda(C_k)=\\frac{\\sum_{i=1}^{N}I(y_i=C_k)+\\lambda}{N+K\\lambda}$，$P_\\lambda(x_i=a_j|y=C_k)=\\frac{\\sum_{i=1}^{N}I(x_i=a_j,y_i=C_k)+\\lambda}{\\sum_{i=1}^{N}I(y_i=C_k)+D\\lambda}$，其中 $I(\\cdot)$ 为示性函数、$K$ 为类别数量、$D$ 为不同值数量、$\\lambda$ 通常取 1。**易错点**：类别先验分母加 $K\\lambda$，特征条件概率分母加 $D\\lambda$，两者不可互换。\n---\n# 第6章 机器学习实践\n> 本章小测共 2 套：A 卷基础巩固、B 卷理解运用，每套满分 45 分。\n> 题型：单选 5 题（每题 3 分）、多选 3 题（每题 4 分）、简答 2 题（每题 9 分）。\n> 多选、少选、错选均不得分。建议先独立作答，再对照解析。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

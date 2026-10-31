@@ -1,0 +1,699 @@
+{
+ "chapter": 1,
+ "questions": [
+  {
+   "id": "ml-c1A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 A卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件把「学习能力」与「迁移能力」在智能中分别定位为（001 P2、P4）",
+   "options": [
+    "学习的路径 / 学习的结果",
+    "进化的翅膀 / 认知的基石",
+    "数据的养料 / 算力的引擎",
+    "认知的基石 / 进化的翅膀"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件原话是「学习能力：认知的基石——从海量数据中提炼规律，构建对世界的底层认知框架」；「迁移能力：进化的翅膀——将习得的经验灵活应用于全新的未知场景，实现举一反三」（001 P2）。B 把两个比喻对调了，这是本章最容易记反的一处，记忆口诀是「先学后迁，先基石后翅膀」；C、A 说的是数据与算力、算法与模型的关系（001 P8、002 P10），与智能的两要素无关。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 A卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件引用的 Arthur Samuel（1959）对机器学习的定义，意思是（001 P7）",
+   "options": [
+    "让计算机在没有被显式编程的情况下获得学习能力",
+    "让计算机严格按照工程师事先写好的逻辑规则运行",
+    "让计算机具备与人类一样的跨领域知识迁移能力",
+    "让计算机的运算速度全面超过人类"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件原句为 \"Machine learning is the field of study that gives computers the ability to learn without being explicitly programmed.\" —— Arthur Samuel (1959)（001 P7）。拆开看有两个关键限定：**learn without being explicitly programmed（无需显式编程）** 与 **learn（从数据中学习）**。B 恰恰是课件批判的「规则驱动（符号主义）」路线；C 描述的是 AGI 的目标而非机器学习当前的定义；D 属于「暴力计算」的比喻层面，不是该定义的落点。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 A卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件指出，AI 三大阶段中「01 机器学习阶段」的主要局限是（001 P11）",
+   "options": [
+    "缺少足够数量的数据",
+    "算力不足，无法支撑模型规模",
+    "专用智能，缺乏跨任务的推理与迁移能力",
+    "依赖人工特征工程，难以突破经验边界"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件给出的三大阶段局限是一一对应的：机器学习阶段「依赖人工特征工程，难以突破经验边界」；深度学习阶段「专用智能，缺乏跨任务的推理与迁移能力」（001 P11）。本题的坑就在 C——它是**深度学习阶段**的局限，答 C 就等于把两个阶段的局限张冠李戴。B、A 均无课件依据；算力不足恰恰是早期路线失败之外的因素，课件强调的是「规则写不完」而非算力不够。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 A卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "在最简单的一元线性回归模型 $\\hat{y} = wx + b$ 中，权重 $w$ 的物理含义是（003 P1）",
+   "options": [
+    "面积为 0 时的理论基准房价",
+    "面积每增加 1㎡ 时，房价的变化量",
+    "模型给出的预测房价本身",
+    "预测值与真实值之间的偏差"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件定义 $w$ 为「权重 (weight，斜率)——面积每增加 1㎡，房价变化多少」（003 P1），即**边际变化量**；$b$ 为「偏置 (bias，截距)——当面积为 0 时的理论基准值」。A 是 $b$ 的含义、C 是预测值 $\\hat{y}$、D 是误差 $\\hat{y} - y$。易错点：把 $w$ 理解成「房价」而不是「房价的变化率」，后面讲梯度下降更新参数时就会全线错位。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 A卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件给出的均方误差（MSE）表达式是（003 P1）",
+   "options": [
+    "$MSE = \\frac{1}{n} \\sum (\\hat{y} - y)$",
+    "$MSE = \\frac{1}{n} \\sum |\\hat{y} - y|$",
+    "$MSE = \\frac{1}{n} \\sum (\\hat{y} - y)^2$",
+    "$MSE = \\sum_{i} \\frac{\\hat{y} - y}{n - 1}$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "$MSE = \\frac{1}{n} \\sum (\\hat{y} - y)^2$，三步是「逐样本算误差 → 取平方 → 求平均」（003 P1）。A 是平方误差之和（未平方、未平均）；B 是绝对损失函数的形式（见 01 P23）；D 既无课件依据，形式也不成立。考点陷阱是「平方」和「平均」两个动作缺一不可。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1A-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 A卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于 AI 爆发的两大基石，课件中的说法正确的有（001 P8）",
+   "options": [
+    "海量数据为 AI 提供训练所需的「养料」，没有足够样本模型便学不会理解与生成",
+    "超强算力为 AI 提供计算的「引擎」，二者如同车之两轮、鸟之双翼，缺一不可",
+    "深度神经网络训练涉及海量矩阵运算，GPU 与 TPU 等专用芯片的突破让高负载计算变得高效可行",
+    "早期符号主义路线失败的主要原因是当时的算力不够"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件明确列出「01 海量数据 (Data)」与「02 超强算力 (Compute)」，并以「数据为 AI 提供『养料』，算力为 AI 提供『引擎』……缺一不可」作结（001 P8），A、B、C 均是该页原文的展开。D 错在因果：早期规则驱动（符号主义）的困境是**规则写不完、现实充满变数、难以泛化**（001 P7），而不是算力不足；恰恰相反，课件认为算力是 AI 最近才补齐的拼图之一。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1A-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 A卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件给出「使用均方误差 MSE」的理由包括（003 P1）",
+   "options": [
+    "保证模型一定不会过拟合",
+    "放大误差便于优化，例如误差 3 与 0.4 平方后变为 9 与 0.16，差异更明显",
+    "使损失函数的值与样本数量无关",
+    "消除正负号的影响，防止求和之后正负误差互相抵消"
+   ],
+   "answer": [
+    "B",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件给出的两个好处是「消除正负号的影响——让误差绝对值化，防止求和之后正负误差互相抵消」与「放大误差便于优化」（003 P1），故 D、B 正确。C 无依据：MSE 前面带 $\\frac{1}{n}$，本身就依赖样本量；A 也无依据，且与第 2 章「样本不足会过拟合、需正则化」的结论方向相反——MSE 本身并不能防止过拟合。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1A-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 A卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于多特征线性回归 $\\hat{y} = w_1 x_1 + w_2 x_2 + \\cdots + w_d x_d + b$，课件给出的含义解释正确的有（003 P1）",
+   "options": [
+    "面积对应的权重为正，含义是面积越大、房价越高",
+    "楼层对应的权重为正，含义是中高楼层通常更贵",
+    "距地铁距离对应的权重为正，含义是离地铁越远、房价越高",
+    "偏置 $b$ 是面积为 0 时的理论基准值"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件逐一给出四个权重的符号直觉：$w_1$（面积）➕ 正、$w_2$（楼层）➕ 正、$w_3$（距地铁）➖ 负、$w_4$（房龄）➖ 负（003 P1）；$b$ 是「面积为 0 时的理论基准值」。C 错在符号与语义同时反了——离地铁越远房价越**低**，权重应为负。记忆技巧：与「资产价值正相关」的特征（面积、楼层）权重为正，与「房屋折损正相关」的特征（距地铁、房龄）权重为负。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 A卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "简述「智能 = 学习能力 + 迁移能力」中两个要素各自的含义，并解释课件为什么把「泛化 (Generalization)」视为智能的核心。（要求：写出两个要素的定义性描述各一句，说明泛化的定义，并举出课件给出的「举一反三」现象。）",
+   "options": null,
+   "answer": [],
+   "answerText": "**学习能力 = 认知的基石**——从海量数据中提炼规律，构建对世界的底层认知框架，是智能产生的源泉；**迁移能力 = 进化的翅膀**——将习得的经验灵活应用于全新的未知场景，实现举一反三，是智能进阶的关键（001 P2）。二者合成课件给出的**智能的本质公式：智能 = 学习能力 + 迁移能力**（001 P4、P15）。\n**泛化的定义**——从具体案例中抽取共性规律，将过往经验迁移到全新的、未见过的情境中，做出正确判断的能力；课件把它称为智能的「核心」（001 P4）。\n**「举一反三」现象**——孩子被开水烫过一次后，不仅会避开那个杯子，还会警惕所有冒热气的物体；无需亲自尝试所有危险，便能从有限经验中总结规律、对未知场景做出预判（001 P4）。\n**评分提示与易错提醒**：只写公式不给两个要素的含义，最多得一半分；把「泛化」写成「记住更多样本」或「死记硬背」即为反向理解——泛化恰恰强调**未见过的新情境**。",
+   "points": [
+    {
+     "text": "**学习能力 = 认知的基石**——从海量数据中提炼规律，构建对世界的底层认知框架，是智能产生的源泉；**迁移能力 = 进化的翅膀**——将习得的经验灵活应用于全新的未知场景，实现举一反三，是智能进阶的关键（001 P2）。二者合成课件给出的**智能的本质公式：智能 = 学习能力 + 迁移能力**（001 P4、P15）。",
+     "partial": 3
+    },
+    {
+     "text": "**泛化的定义**——从具体案例中抽取共性规律，将过往经验迁移到全新的、未见过的情境中，做出正确判断的能力；课件把它称为智能的「核心」（001 P4）。",
+     "partial": 3
+    },
+    {
+     "text": "**「举一反三」现象**——孩子被开水烫过一次后，不仅会避开那个杯子，还会警惕所有冒热气的物体；无需亲自尝试所有危险，便能从有限经验中总结规律、对未知场景做出预判（001 P4）。\n**评分提示与易错提醒**：只写公式不给两个要素的含义，最多得一半分；把「泛化」写成「记住更多样本」或「死记硬背」即为反向理解——泛化恰恰强调**未见过的新情境**。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 A卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "写出均方误差 MSE 的定义式，说明使用它的两个理由；再写出课件给出的「训练流程五步」。（要求：公式准确，理由与五步顺序均不得颠倒或遗漏。）",
+   "options": null,
+   "answer": [],
+   "answerText": "**MSE 定义式**（003 P1）：\n$$\nMSE = \\frac{1}{n} \\sum (\\hat{y} - y)^2\n$$\n**两个理由**——**消除正负号的影响**（让误差绝对值化，防止求和后正负误差互相抵消）；**放大误差便于优化**（误差 3 与 0.4 平方后变为 9 与 0.16，差异更明显）。\n**训练流程五步**（003 P1）——**输入数据 → 计算预测 → 计算损失 → 计算梯度 → 更新参数**。每完成一轮循环参数就更接近一点，多轮迭代后模型逐渐收敛到最优解。\n**评分提示与易错提醒**：五步的顺序不可颠倒（先预测、再算损失、再算梯度、最后更新参数）；「求平均」这个 $n$ 常被漏写，写成 $\\sum$ 不扣分但写全更稳妥；MSE 与第 2 章的「平方损失函数 $L(Y,f(X))=(Y-f(X))^2$」是同一思想在不同粒度上的表述，本题只要求写出课件的 MSE 形式。\n---",
+   "points": [
+    {
+     "text": "**MSE 定义式**（003 P1）：\n$$\nMSE = \\frac{1}{n} \\sum (\\hat{y} - y)^2\n$$",
+     "partial": 3
+    },
+    {
+     "text": "**两个理由**——**消除正负号的影响**（让误差绝对值化，防止求和后正负误差互相抵消）；**放大误差便于优化**（误差 3 与 0.4 平方后变为 9 与 0.16，差异更明显）。",
+     "partial": 3
+    },
+    {
+     "text": "**训练流程五步**（003 P1）——**输入数据 → 计算预测 → 计算损失 → 计算梯度 → 更新参数**。每完成一轮循环参数就更接近一点，多轮迭代后模型逐渐收敛到最优解。\n**评分提示与易错提醒**：五步的顺序不可颠倒（先预测、再算损失、再算梯度、最后更新参数）；「求平均」这个 $n$ 常被漏写，写成 $\\sum$ 不扣分但写全更稳妥；MSE 与第 2 章的「平方损失函数 $L(Y,f(X))=(Y-f(X))^2$」是同一思想在不同粒度上的表述，本题只要求写出课件的 MSE 形式。\n---",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 B卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "用课件给出的趋势线 $\\text{房价} = 2.2 \\times \\text{面积} + 10$ 去预测一套 100 ㎡ 的房子，总价约为（003 P1）",
+   "options": [
+    "203 万",
+    "230 万",
+    "255 万",
+    "303 万"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "直接代入课件的趋势线，$2.2 \\times 100 + 10 = 230$（万元）（003 P1）。A 的 203 与 C 的 255 是数据集里 90 ㎡ 与 110 ㎡ 两行的真实价格，课件用它们给出「100 ㎡ 合理猜测应落在 203～255 万之间」的**区间直觉**；D 的 303 是 130 ㎡ 的真实价格。把「区间直觉」与「趋势线外推」混为一谈是本题最主要的坑。另外要注意：课件只是用「如果这条直线画得足够好」引出该式，并未把它说成最小二乘拟合结果，故不宜自行替换成其它直线方程。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 B卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件专门强调「线性 ≠ 直线」，其数学依据是（003 P1）",
+   "options": [
+    "只要在平面上画出来是直线，就属于线性",
+    "满足齐次性 $f(ax) = a \\cdot f(x)$ 与可加性 $f(x+y) = f(x) + f(y)$",
+    "输入只能是一维的变量",
+    "直线必须经过坐标原点"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件对「线性」的数学定义是两条**映射性质**——齐次性 $f(ax) = a \\cdot f(x)$、可加性 $f(x+y) = f(x) + f(y)$，几何上在一维表现为直线、在高维表现为平面或超平面（003 P1）。A 正是课件点名要打破的直觉；C、D 均无依据——输入可以是多维的，含偏置项 $b$ 的直线也不过原点。**这是本章埋得最深的一个陷阱**：复习时若只记「线性 = 直线」，后面遇到「多项式回归算不算线性」就会全线崩溃。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 B卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "某封邮件同时命中三类特征：含「免费」等敏感词（+50 分）、邮件体积 20KB（+30 分）、发送时间异常（+30 分）。按课件的总得分判定式，系统会（002 P14）",
+   "options": [
+    "总得分 110 分，超过 60 分，判定为垃圾邮件并拦截",
+    "总得分 80 分，超过 60 分，判定为垃圾邮件并拦截",
+    "总得分 110 分，超过 100 分，判定为垃圾邮件并拦截",
+    "总得分 60 分，未超过阈值，不判定为垃圾邮件"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "总得分 $= 50 + 30 + 30 = 110$ 分；课件的最终判定逻辑是「当所有特征加权后的总得分 **> 60 分**时，系统自动判定该邮件为垃圾邮件并拦截」（002 P14）。B 错在只累加了两类特征（把体积与时间当成同一项）；C 错在阈值记成 100 分；D 错在两处——得分应是 110 而非 60，且阈值判定是「**超过** 60 分」而不是「大于等于」，60 分本身落在阈值内。计算这类题务必先算术、再比阈值，两步分开写。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 B卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "「随机梯度下降」在课件的概念体系中属于（002 P10）",
+   "options": [
+    "算法，即「学习的方法」",
+    "模型，即「学习的结果」",
+    "特征",
+    "损失函数"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件对二者的区分是——**算法 =「学习的方法」**，指解决问题或执行计算的一套明确逻辑步骤，指导计算机如何观测数据、提取特征并找出规律；**模型 =「学习的结果」**，指算法学习海量数据后自主总结出的规则与参数集合（002 P10）。随机梯度下降描述的是「怎么学」，属于算法；模型则是学完之后的那组参数。C、D 是另外两个层次的词汇，与本题的辨析无关。**易错点**：算法与模型不可互换——说「梯度下降法是一个模型」即为错答。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 B卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "多特征线性回归展开写成 $\\hat{y} = w_1 x_1 + \\cdots + w_d x_d + b$ 后，其向量简化表达是（003 P1）",
+   "options": [
+    "$\\hat{y} = \\boldsymbol{w}^{\\top} \\boldsymbol{x} + b$",
+    "$\\hat{y} = \\boldsymbol{w} \\boldsymbol{x} + b$",
+    "$\\hat{y} = \\boldsymbol{w}^{\\top} \\boldsymbol{x} \\cdot b$",
+    "$\\hat{y} = \\boldsymbol{w} + \\boldsymbol{x} + b$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件给出的向量简写是 $\\hat{y} = \\boldsymbol{w}^{\\top} \\boldsymbol{x} + b$，其中 $\\boldsymbol{x} = [x_1, x_2, \\cdots, x_d]^{\\top}$、$\\boldsymbol{w} = [w_1, w_2, \\cdots, w_d]^{\\top}$（003 P1）。B 漏掉了转置，内积必须是一行乘一列才能得到标量；C 把偏置错误地乘了进去（$b$ 是直接相加，不是相乘）；D 完全没有内积，把「加权求和」退化成了「向量相加」。本题的价值在于：这一行式子是后续神经网络「权重矩阵」的记号雏形，转置符写错，后面所有深度学习公式都会跟着歪。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1B-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 B卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于线性回归的两个延伸方向，课件中的说法正确的有（003 P1）",
+   "options": [
+    "深度学习是许多个逻辑回归的简单并联，各分支独立出结果后投票，没有隐藏层",
+    "逻辑回归 = 线性回归 + 激活函数，用于解决分类问题并输出概率",
+    "深度学习 = 多层逻辑回归的叠加，核心思想是模型自动学习并提取抽象特征",
+    "多项式回归中，当 $d=2$ 时拟合出的是一条抛物线，阶数越高曲线越灵活"
+   ],
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件把线性回归的延伸分为两支（003 P1）：一支是**多项式回归**（当直线不够用时，$\\hat{y} = w_1 x + w_2 x^2 + \\cdots + w_d x^d + b$，$d=2$ 时拟合抛物线、阶数越高越灵活）；另一支是**逻辑回归与深度学习**（逻辑回归 = 线性回归 + 激活函数，$P(y=1 \\mid x) = \\sigma(wx+b) = \\frac{1}{1+e^{-(wx+b)}}$，用于分类并输出概率；深度学习 = 多层逻辑回归的叠加，逐层「线性+激活」构成隐藏层）。A 与课件的图示直接矛盾：课件画的是 `输入 → 隐藏层₁ → 隐藏层₂ → … → 输出` 的**逐层堆叠**，不是并联投票，也不存在「没有隐藏层」的说法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1B-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 B卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "机器学习定义中的两个关键限定，体现在下列哪些说法里（002 P3）",
+   "options": [
+    "学到的规律只能复用于训练数据本身，无法用于未知场景的预测与决策",
+    "通过对海量数据的分析，自动学习出规律",
+    "必须依赖人工事先编写的固定规则，机器才能给出判断",
+    "无需显式编程——不必把每一步判断都写成代码交给机器"
+   ],
+   "answer": [
+    "B",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件的核心定义是「机器学习是人工智能的核心分支，研究如何让计算机在**无需显式编程**的情况下，通过对海量数据的分析**自动学习规律**，并利用这些规律对未知场景进行**预测与决策**」（002 P3）。D、B 正是这两个关键限定；第三个限定「用于未知场景的预测与决策」也否定了 A。C 与「无需显式编程」「非人工编写固定规则」正面冲突，属于规则驱动（符号主义）的做法。**易错提醒**：答题时若只写「机器学习就是让机器学习」，既没有「无需显式编程」，也没有「数据」，属于最常见的失分点。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1B-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 B卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于多特征线性回归的记号，课件中的说法正确的有（003 P1）",
+   "options": [
+    "偏置 $b$ 是面积为 0 时的理论基准值",
+    "$\\boldsymbol{x} = [x_1, x_2, \\cdots, x_d]^{\\top}$ 是由 $d$ 个特征组成的列向量",
+    "$\\boldsymbol{w}^{\\top} \\boldsymbol{x}$ 相当于把各特征与其对应权重逐项相乘后求和",
+    "距地铁距离对应的权重为正，说明离地铁越远房价越高"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "A、B、C 与课件一致：$b$ 是面积为 0 时的理论基准值；$\\boldsymbol{x}$ 是 $d$ 维特征列向量；$\\boldsymbol{w}^{\\top}\\boldsymbol{x}$ 就是把各特征与对应权重逐项相乘再求和（即展开式 $w_1x_1 + \\cdots + w_dx_d$ 的紧凑写法）。D 错在权重符号：距地铁越远房价越低，课件给出的权重方向是负的。D 考的正是 A 卷多选第 3 题的同一个易错点——**权重符号必须与直觉方向一致**，这是多特征线性回归里最容易凭空翻转的一项。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 B卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "说明课件所说「线性 ≠ 直线」的含义（写出两条性质），并写出多特征线性回归的向量简化表达，逐个说明 $\\hat{y}$、$\\boldsymbol{x}$、$\\boldsymbol{w}$、$b$ 各代表什么。",
+   "options": null,
+   "answer": [],
+   "answerText": "**「线性 ≠ 直线」的两条性质**（003 P1）——**齐次性**：$f(ax) = a \\cdot f(x)$；**可加性**：$f(x+y) = f(x) + f(y)$。这是对**映射性质**的定义：几何上一维时表现为直线，高维时表现为平面或超平面。\n**向量简化表达**（003 P1）：\n$$\n\\hat{y} = \\boldsymbol{w}^{\\top} \\boldsymbol{x} + b, \\quad \\boldsymbol{x} = [x_1, x_2, \\cdots, x_d]^{\\top}, \\quad \\boldsymbol{w} = [w_1, w_2, \\cdots, w_d]^{\\top}\n$$\n**各符号含义**——$\\hat{y}$：模型的预测值（如预测房价）；$\\boldsymbol{x}$：由 $d$ 个特征组成的输入列向量（面积、楼层、距地铁、房龄……）；$\\boldsymbol{w}$：与每个特征一一对应的权重向量；$b$：偏置（截距），面积为 0 时的理论基准值。\n**评分提示与易错提醒**：只答「线性就是一条直线」不得分——课件特意点出这是错的；漏掉 $\\top$（转置）要扣分，因为内积必须「行乘列」才得到标量；本题的延伸价值在于：$\\hat{y} = \\boldsymbol{w}^{\\top}\\boldsymbol{x} + b$ 正是神经网络「权重矩阵」的记号雏形，后面复习逻辑回归与深度学习时会直接复用。",
+   "points": [
+    {
+     "text": "**「线性 ≠ 直线」的两条性质**（003 P1）——**齐次性**：$f(ax) = a \\cdot f(x)$；**可加性**：$f(x+y) = f(x) + f(y)$。这是对**映射性质**的定义：几何上一维时表现为直线，高维时表现为平面或超平面。",
+     "partial": 3
+    },
+    {
+     "text": "**向量简化表达**（003 P1）：\n$$\n\\hat{y} = \\boldsymbol{w}^{\\top} \\boldsymbol{x} + b, \\quad \\boldsymbol{x} = [x_1, x_2, \\cdots, x_d]^{\\top}, \\quad \\boldsymbol{w} = [w_1, w_2, \\cdots, w_d]^{\\top}\n$$",
+     "partial": 3
+    },
+    {
+     "text": "**各符号含义**——$\\hat{y}$：模型的预测值（如预测房价）；$\\boldsymbol{x}$：由 $d$ 个特征组成的输入列向量（面积、楼层、距地铁、房龄……）；$\\boldsymbol{w}$：与每个特征一一对应的权重向量；$b$：偏置（截距），面积为 0 时的理论基准值。\n**评分提示与易错提醒**：只答「线性就是一条直线」不得分——课件特意点出这是错的；漏掉 $\\top$（转置）要扣分，因为内积必须「行乘列」才得到标量；本题的延伸价值在于：$\\hat{y} = \\boldsymbol{w}^{\\top}\\boldsymbol{x} + b$ 正是神经网络「权重矩阵」的记号雏形，后面复习逻辑回归与深度学习时会直接复用。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c1B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《机器学习》章节小测 第1章 B卷（依据课程课件 001 系列）",
+    "kind": "textbook"
+   },
+   "stem": "垃圾邮件分类案例中，模型 1.0、模型 2.0、模型 3.0 各自利用了什么信息？每一步解决了上一步的什么问题、又暴露出什么新问题？（要求：按 1.0 → 2.0 → 3.0 顺序作答，每一步都要点出「增加了哪个特征 / 信息」与「暴露了什么缺陷」。）",
+   "options": null,
+   "answer": [],
+   "answerText": "**模型 1.0（概率盲猜）**（002 P11）——**信息**：只看历史频率。最近 10 封邮件中 6 封垃圾、4 封正常，得出垃圾邮件概率 60%，直接判定为垃圾邮件。**暴露的缺陷**：完全没有使用邮件本身的任何特征，60% 的准确率来自先验统计，一旦比例变化即失效。\n**模型 2.0（寻找单一特征规律）**（002 P12）——**新增信息**：发送时间。判定规则为「工作日发送 = 正常邮件，周末发送 = 垃圾邮件」。**解决的问题**：从「纯猜」变成「有依据地猜」，利用了办公节奏这一相关性。**暴露的缺陷**：仅靠「时间」一个特征过于绝对，会把朋友周末发来的 3KB 徒步通知误杀。\n**模型 3.0（多维特征组合）**（002 P13）——**新增信息**：文件大小（正常邮件 1~7KB / 3KB，垃圾邮件 16KB+ / 20~35KB）。**判定规则**：「周末发送」+「文件大小 > 10KB」两个条件**同时满足**才判定为垃圾邮件（缺一不可）。**效果**：精准拦截周末群发的大附件营销邮件，同时避免误伤好友周末的 3KB 通知，鲁棒性明显提升。\n**评分提示与易错提醒**：三步的演进主线是「单一特征 → 多维特征组合」，答题时不能把模型 2.0 当成最终答案；若能补一句「多特征组合 + 逻辑与（缺一不可）带来鲁棒性」，属于加分项。\n---\n# 第2章 机器学习概述与背景知识\n> 本章小测共 2 套：A 卷基础巩固、B 卷理解运用，每套满分 45 分。\n> 建议先独立作答，再对照解析。\n> 本章命题范围：00机器学习-课程简介.pptx、01机器学习-引言.pptx。",
+   "points": [
+    {
+     "text": "**模型 1.0（概率盲猜）**（002 P11）——**信息**：只看历史频率。最近 10 封邮件中 6 封垃圾、4 封正常，得出垃圾邮件概率 60%，直接判定为垃圾邮件。**暴露的缺陷**：完全没有使用邮件本身的任何特征，60% 的准确率来自先验统计，一旦比例变化即失效。",
+     "partial": 3
+    },
+    {
+     "text": "**模型 2.0（寻找单一特征规律）**（002 P12）——**新增信息**：发送时间。判定规则为「工作日发送 = 正常邮件，周末发送 = 垃圾邮件」。**解决的问题**：从「纯猜」变成「有依据地猜」，利用了办公节奏这一相关性。**暴露的缺陷**：仅靠「时间」一个特征过于绝对，会把朋友周末发来的 3KB 徒步通知误杀。",
+     "partial": 3
+    },
+    {
+     "text": "**模型 3.0（多维特征组合）**（002 P13）——**新增信息**：文件大小（正常邮件 1~7KB / 3KB，垃圾邮件 16KB+ / 20~35KB）。**判定规则**：「周末发送」+「文件大小 > 10KB」两个条件**同时满足**才判定为垃圾邮件（缺一不可）。**效果**：精准拦截周末群发的大附件营销邮件，同时避免误伤好友周末的 3KB 通知，鲁棒性明显提升。\n**评分提示与易错提醒**：三步的演进主线是「单一特征 → 多维特征组合」，答题时不能把模型 2.0 当成最终答案；若能补一句「多特征组合 + 逻辑与（缺一不可）带来鲁棒性」，属于加分项。\n---\n# 第2章 机器学习概述与背景知识\n> 本章小测共 2 套：A 卷基础巩固、B 卷理解运用，每套满分 45 分。\n> 建议先独立作答，再对照解析。\n> 本章命题范围：00机器学习-课程简介.pptx、01机器学习-引言.pptx。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

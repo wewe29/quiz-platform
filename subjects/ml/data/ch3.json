@@ -1,0 +1,688 @@
+{
+ "chapter": 3,
+ "questions": [
+  {
+   "id": "ml-c3A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 A卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "线性回归模型式写作 $h(x)=w_0+w_1x_1+w_2x_2+\\cdots+w_nx_n$。要把它写成纯线性组合的形式 $h(x)=w^{T}x$，必须补上的设定是（　）（02 P7）",
+   "options": [
+    "令 $x_0=1$，于是 $w_0x_0$ 恰好就是常数项 $w_0$",
+    "令 $x_0=0$，把常数项从模型式中删去",
+    "令 $x_n=1$，把最后一个特征替换为常数",
+    "令 $y_0=1$，在标签一侧补一个常数"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件的标准做法是「吸收常数项」——设 $x_0=1$，模型式即可写成 $h(x)=w_0x_0+w_1x_1+\\cdots+w_nx_n=w^{T}x$（02 P7）。B 错在令 $x_0=0$ 会让常数项 $w_0$ 直接消失，等于强行让决策面过原点；C 错在 $x_n$ 是真实特征的取值位置，不能占用；D 错在 $y$ 是标签，与模型式能否写成向量内积无关。**易踩的坑**：写模型式时把 $b$ 单独留在外面，说不出「$b$ 可融入 $w_0$」这句话。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 A卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "在最小二乘法的矩阵形式 $J(w)=\\frac{1}{2}(Xw-Y)^{T}(Xw-Y)$ 中，设计矩阵 $X$ 的形状是（　）（02 P9）",
+   "options": [
+    "$m$ 行 $n$ 列",
+    "$m$ 行 $n+1$ 列",
+    "$n+1$ 行 $m$ 列",
+    "$m+1$ 行 $n$ 列"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "$X$ 为 $m$ 行 $n+1$ 列，$w$ 为 $n+1$ 行 1 列（含 $w_0$），$Y$ 为 $m$ 行 1 列（02 P9）。A 少算了一列——漏掉了人为加入的 $x_0=1$；C 把行列弄反了，$X$ 的行数永远是样本数 $m$；D 是把「行加一列」和「列加一行」搞混。**易踩的坑**：以为 $X$ 只有 $n$ 列，从而在矩阵维度上和 $w$ 的维度对不上。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 A卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "对某特征做 Z-Score 标准化 $x^{*}=\\frac{x-\\mu}{\\sigma}$ 后，处理后的数据满足（　）（02 P20）",
+   "options": [
+    "全部落在 $[0,1]$ 区间内",
+    "均值为 0、方差与原来相同",
+    "均值为 0、方差为 1",
+    "最小值为 0、最大值为 1"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "Z-Score 标准化后「处理后的数据均值为 0、方差为 1」（02 P20）。A 是归一化（最大-最小规范化）的结果，不是标准化的；B 把两者的结论凑到了一起——方差也变成了 1；D 混淆了两种方法：归一化映射到 $[0,1]$，标准化的结果不落在固定区间上。**易踩的坑**：用「[0,1]」去判断标准化、用「均值0方差1」去判断归一化。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 A卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件对「过拟合」的描述，其本质是（　）（02 P23）",
+   "options": [
+    "模型过于强调拟合原始数据，把训练集背了下来，却丢掉了算法的本质——预测新数据",
+    "模型过于简单，学习能力不足，连训练集都适应不好",
+    "各个特征的取值范围差异过大，导致模型偏向数值大的特征",
+    "学习率设置过大，代价函数在最小值点附近振荡"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件对过拟合的定义性描述是「过于强调拟合原始数据，而丢失了算法的本质：预测新数据」——虽然能非常好地适应训练集，但在新输入变量上预测时可能效果不好（02 P23）。B 是欠拟合；C 是特征尺度悬殊、需要归一化/标准化的问题；D 是学习率设置不当导致的优化问题。**易踩的坑**：把「训练集表现」当成判断依据。欠拟合与过拟合在测试集上都可能变差，区别在于**训练集上欠拟合也差、过拟合很好**。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 A卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于均方根误差与均方误差的关系，下列表述正确的是（　）（02 P30）",
+   "options": [
+    "RMSE 是 MSE 的倒数，二者互为逆运算",
+    "$RMSE=MSE^{2}$，即 RMSE 是 MSE 再平方一次",
+    "RMSE 的取值一定小于 MSE",
+    "$RMSE=\\sqrt{MSE}$，两者衡量的东西完全相同，RMSE 只是把误差拉回到与 $y$ 同量纲的单位"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件把 RMSE 定义为 $\\sqrt{\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}}$，而 MSE 是 $\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}$，所以 $RMSE=\\sqrt{MSE}$（02 P30）。B、A 都是编造的关系；C 也不对——MSE 大于 1 时 $\\sqrt{MSE}<MSE$，MSE 小于 1 时反而 $\\sqrt{MSE}>MSE$，不能一概而论。**易踩的坑**：忽视 RMSE 的唯一价值是**量纲**——RMSE 与 $y$ 同单位，能直接说「平均差了多少元」，MSE 是平方单位。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3A-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 A卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于最小二乘法（LSM）的性质，下列表述正确的有（　）",
+   "options": [
+    "其闭式解为 $w=\\left(X^{T}X\\right)^{-1}X^{T}Y$，一次计算即可得到最优 $w$",
+    "必须像梯度下降那样迭代多次才能收敛",
+    "不需要选择学习率 $\\alpha$",
+    "需要计算矩阵逆 $\\left(X^{T}X\\right)^{-1}$"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "最小二乘法的闭式解 $w=\\left(X^{T}X\\right)^{-1}X^{T}Y$ **一次计算直接得到**最优 $w$，不需要学习率、不需要迭代（A、C、D），但必须真的去算矩阵逆 $\\left(X^{T}X\\right)^{-1}$（D）。B 错在把梯度下降的「多次迭代」套到了最小二乘法上——这正是两者的核心差别之一。**易踩的坑**：误以为最小二乘法也是迭代算法，因而非要给它设一个学习率；课件明确指出矩阵逆的时间复杂度为 $O(n^3)$，一般 $n<10000$ 时才可接受（02 P18）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3A-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 A卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于梯度下降的三种形式，下列表述正确的有（　）",
+   "options": [
+    "批量梯度下降（BGD）的每一步都用到了所有的训练样本",
+    "随机梯度下降（SGD）的每一步只用一个样本，每计算一次便更新一次参数，而不需要先把所有训练样本求和",
+    "小批量梯度下降（MBGD）的更新式中，梯度前面的平均分母是批大小 $b$，即 $\\frac{1}{b}$",
+    "三者都可以对 $w_j$ 逐个更新，即先算出新的 $w_0$，再用这个新的 $w_0$ 去算 $w_1$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "A、B、C 都与课件定义一致（02 P13–P17）。D 错在三处页面都反复标注了「同步更新 $w_j$（$j=0,1,\\ldots,n$）」：所有 $w_j$ 都必须用**更新前**的同一组数据算出梯度，再一起更新，不能边算边改。**易踩的坑**：写代码或推公式时把 $w_j$ 的更新放在一个循环里边算边赋，导致实际梯度与公式不一致。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3A-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 A卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于数据归一化与 Z-Score 标准化，下列表述正确的有（　）",
+   "options": [
+    "归一化（最大-最小规范化）把数据映射到 $[0,1]$ 区间",
+    "归一化会将特征数据进行伸缩变化，因此会改变特征数据的分布",
+    "Z-Score 标准化使处理后的数据均值为 0、方差为 1",
+    "Z-Score 标准化会改变特征数据的分布"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件明确区分了两者——归一化 $x^{*}=\\frac{x-x_{min}}{x_{max}-x_{min}}$ 映射到 $[0,1]$，且**会改变**特征数据分布（A、B）；Z-Score 标准化 $x^{*}=\\frac{x-\\mu}{\\sigma}$ 使均值为 0、方差为 1，其目的是让不同特征具备可比性，分布**没有发生改变**（C）。D 与课件原文相反。**易踩的坑**：只记结论不记目的。目的不同——归一化是让各特征对目标变量的影响一致，标准化是让不同特征之间具备可比性。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 A卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "（要求：写出公式）写出线性回归的模型式与平方和代价函数；并说明两点：① 模型式中的常数项 $b$ 是如何融入 $w_0$ 的；② 在最小二乘法的矩阵形式中，设计矩阵 $X$ 的第 1 列为什么全是 1。",
+   "options": null,
+   "answer": [],
+   "answerText": "模型式：$h(x)=w_0+w_1x_1+w_2x_2+\\cdots+w_nx_n$（02 P7）；令 $x_0=1$ 后可写成 $h(x)=w_0x_0+w_1x_1+\\cdots+w_nx_n=w^{T}x$。\n代价函数（平方和损失）：$J(w)=\\frac{1}{2}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)^{2}$（02 P8）；对应单样本损失函数 $l(x^{(i)})=\\frac{1}{2}\\left(h(x^{(i)})-y^{(i)}\\right)^{2}$。\n融入 $w_0$：若表达式写成 $h(x)=w_0+w_1x_1+\\cdots+w_nx_n+b$，则 $b$ 可以融入到 $w_0$，这样模型才能写成纯线性组合的向量内积形式。\n第 1 列全为 1：$X$ 是 $m$ 行 **$n+1$** 列，第 1 列不是原始特征，而是为了承载 $w_0$ 而人为加入的 $x_0=1$；因此 $w$ 是 $n+1$ 维，才能让 $Xw$ 与 $Y$ 维度一致（02 P9）。\n评分要点：模型式与代价函数各 2 分；$b$ 融入 $w_0$ 与 $x_0=1$ 的关系 2 分；第 1 列的含义及 $n+1$ 维 3 分。**注意**：课件把单样本向量形式写作 $w^{T}X$、整体矩阵形式写作 $Xw$，两种记号并存（课件此处存疑）；答题时写「单样本 $w^{T}x$，整体 $Xw$」即可。",
+   "points": [
+    {
+     "text": "模型式：$h(x)=w_0+w_1x_1+w_2x_2+\\cdots+w_nx_n$（02 P7）；令 $x_0=1$ 后可写成 $h(x)=w_0x_0+w_1x_1+\\cdots+w_nx_n=w^{T}x$。",
+     "partial": 3
+    },
+    {
+     "text": "代价函数（平方和损失）：$J(w)=\\frac{1}{2}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)^{2}$（02 P8）；对应单样本损失函数 $l(x^{(i)})=\\frac{1}{2}\\left(h(x^{(i)})-y^{(i)}\\right)^{2}$。",
+     "partial": 3
+    },
+    {
+     "text": "融入 $w_0$：若表达式写成 $h(x)=w_0+w_1x_1+\\cdots+w_nx_n+b$，则 $b$ 可以融入到 $w_0$，这样模型才能写成纯线性组合的向量内积形式。",
+     "partial": 3
+    },
+    {
+     "text": "第 1 列全为 1：$X$ 是 $m$ 行 **$n+1$** 列，第 1 列不是原始特征，而是为了承载 $w_0$ 而人为加入的 $x_0=1$；因此 $w$ 是 $n+1$ 维，才能让 $Xw$ 与 $Y$ 维度一致（02 P9）。\n评分要点：模型式与代价函数各 2 分；$b$ 融入 $w_0$ 与 $x_0=1$ 的关系 2 分；第 1 列的含义及 $n+1$ 维 3 分。**注意**：课件把单样本向量形式写作 $w^{T}X$、整体矩阵形式写作 $Xw$，两种记号并存（课件此处存疑）；答题时写「单样本 $w^{T}x$，整体 $Xw$」即可。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 A卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "（要求：写出全部四个公式）写出均方误差 MSE、均方根误差 RMSE、平均绝对误差 MAE 与决定系数 $R^2$ 的定义式；并说明 $R^2$ 与 MSE 这两个指标的取值方向各是什么。",
+   "options": null,
+   "answer": [],
+   "answerText": "$$\nMSE=\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}\n$$\n$$\nRMSE(y,\\hat{y})=\\sqrt{\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}}\n$$\n$$\nMAE(y,\\hat{y})=\\frac{1}{m}\\sum_{i=1}^{m}\\left|y^{(i)}-\\hat{y}^{(i)}\\right|\n$$\n$$\nR^{2}(y,\\hat{y})=1-\\frac{\\sum_{i=1}^{m}\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}}{\\sum_{i=1}^{m}\\left(y^{(i)}-\\overline{y}\\right)^{2}}=\\frac{SSR}{SST}=1-\\frac{SSE}{SST}\n$$\n课件还给出等价写法 $R^{2}=1-\\frac{MSE}{Var}$。\n取值方向：**MSE、RMSE、MAE 都是越小越好**；**$R^2$ 越接近于 1 说明模型拟合得越好**（不是越接近 0 越好）。\n评分要点：四个公式各 1.5 分（共 6 分），取值方向 3 分。**易踩的坑**：① $R^2$ 与 $MSE$ 方向相反——$R^2$ 越大越好而 $MSE$ 越小越好，根源就在 $R^2=1-\\frac{MSE}{Var}$；② 三个误差指标都要**除以 $m$**，而 P8 的代价函数 $J(w)=\\frac{1}{2}\\sum(\\cdot)^2$ 是平方和、**不除 $m$**，两者只差一个常数倍 $\\frac{1}{2m}$，不要在同一个式子里混用。\n---",
+   "points": [
+    {
+     "text": "$$\nMSE=\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}\n$$\n$$\nRMSE(y,\\hat{y})=\\sqrt{\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}}\n$$\n$$\nMAE(y,\\hat{y})=\\frac{1}{m}\\sum_{i=1}^{m}\\left|y^{(i)}-\\hat{y}^{(i)}\\right|\n$$\n$$\nR^{2}(y,\\hat{y})=1-\\frac{\\sum_{i=1}^{m}\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}}{\\sum_{i=1}^{m}\\left(y^{(i)}-\\overline{y}\\right)^{2}}=\\frac{SSR}{SST}=1-\\frac{SSE}{SST}\n$$\n课件还给出等价写法 $R^{2}=1-\\frac{MSE}{Var}$。\n取值方向：**MSE、RMSE、MAE 都是越小越好**；**$R^2$ 越接近于 1 说明模型拟合得越好**（不是越接近 0 越好）。\n评分要点：四个公式各 1.5 分（共 6 分），取值方向 3 分。**易踩的坑**：① $R^2$ 与 $MSE$ 方向相反——$R^2$ 越大越好而 $MSE$ 越小越好，根源就在 $R^2=1-\\frac{MSE}{Var}$；② 三个误差指标都要**除以 $m$**，而 P8 的代价函数 $J(w)=\\frac{1}{2}\\sum(\\cdot)^2$ 是平方和、**不除 $m$**，两者只差一个常数倍 $\\frac{1}{2m}$，不要在同一个式子里混用。\n---",
+     "partial": 9
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 B卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "已知 $w_j=1.5$、$h(x^{(i)})=4$、$y^{(i)}=2$、$x_j^{(i)}=3$、学习率 $\\alpha=0.1$，按随机梯度下降的更新式 $w_j:=w_j-\\alpha\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$ 走一步后，$w_j$ 的值是（　）（02 P16）",
+   "options": [
+    "$0.9$",
+    "$2.1$",
+    "$1.3$",
+    "$-4.5$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "$w_j:=1.5-0.1\\times(4-2)\\times3=1.5-0.6=0.9$。B 错在把误差项写成 $y^{(i)}-h(x^{(i)})=-(4-2)$，或把减号误写成加号，方向完全相反；C 错在漏乘了特征 $x_j^{(i)}$，得 $1.5-0.1\\times2=1.3$；D 错在漏掉了学习率 $\\alpha$，得 $1.5-2\\times3=-4.5$。**易踩的坑**：① 更新式中是**减号**（沿负梯度方向才使代价函数下降），写成加号是最常见的错误；② 这里的 $w_j$ 是与所有 $w_j$（$j=0,1,\\ldots,n$）**同步更新**的，更新时 $h(x^{(i)})$ 用的是更新前的那组 $w$。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 B卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "某回归任务有 10 万个特征。课件指出矩阵逆的计算时间复杂度为 $O(n^3)$，通常 $n$ 小于 10000 时才可以接受。在这一维度下更合适的选择及其理由是（　）（02 P18）",
+   "options": [
+    "最小二乘法，因为一次计算即可得出结果，不必关心特征数量",
+    "梯度下降，虽然需要选择学习率并多次迭代，但特征数量 $n$ 大时也能较好适用",
+    "最小二乘法，因为最小二乘法适用于各种类型的模型",
+    "两者都不适用，必须先做降维才能求解"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "梯度下降虽然需要选择学习率、需要多次迭代，但特征数量 $n$ 大时也能较好适用；最小二乘法需要计算矩阵逆 $\\left(X^{T}X\\right)^{-1}$，时间复杂度为 $O(n^3)$，$n$ 较大时运算代价大（02 P18）。A、C 都把最小二乘法的优点/适用范围张冠李戴——课件明确写它「**只适用于线性模型，不适合逻辑回归模型等其他模型**」；D 编造了课件没有的结论，降本是课件 P24 列出的过拟合处理手段，但并非「必须」。\n📖必背：**梯度下降用「算得快、需调参」换取「通用」；最小二乘法用「一步到位」换来「只限线性模型 + 高维代价爆炸」。**",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 B卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "只从**计算机求解梯度的复杂度**这一角度考虑，关于 MSE 与 MAE 的选择，课件的观点是（　）（02 P30）",
+   "options": [
+    "MSE 优于 MAE，而且梯度也是动态变化的，能较快准确达到收敛",
+    "MAE 优于 MSE，因为绝对值函数在每一点都光滑可导",
+    "两者求解梯度的复杂度完全相同，无法区分优劣",
+    "MAE 的梯度是动态变化的，因此比 MSE 收敛得更快"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件演讲者备注原文是「从计算机求解梯度的复杂度来说，MSE 要优于 MAE，而且梯度也是动态变化的，能较快准确达到收敛」（02 P30）。B 理由讲反了——绝对值函数在 0 处不可导，这正是 MAE 求导不如 MSE 干净的原因；C 否定了课件结论；D 把「动态梯度」这项优势安到了 MAE 头上。\n**易踩的坑**：这一问只谈梯度复杂度，与离群点无关；离群点那条是另一条独立结论（见第 2 题）。两条结论常被混着记：**梯度好算选 MSE，怕离群点选 MAE。**",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 B卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "弹性网络（Elastic Net）的正则项为 $\\lambda\\left(\\rho\\cdot\\sum_{j=1}^{n}|w_{j}|+(1-\\rho)\\cdot\\sum_{j=1}^{n}w_{j}^{2}\\right)$。当比例系数 $\\rho=1$ 时，正则项退化为（　）（02 P27）",
+   "options": [
+    "$\\sum_{j=1}^{n}w_{j}^{2}$，即 L2 正则化（岭回归）",
+    "$\\sum_{j=1}^{n}w_{j}$，即一次项正则",
+    "$\\sum_{j=1}^{n}|w_{j}|$，即 L1 正则化（Lasso 回归）",
+    "$0$，相当于没有加入正则化"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "代入 $\\rho=1$ 得 $\\lambda\\left(1\\cdot\\sum_{j=1}^{n}|w_{j}|+(1-1)\\cdot\\sum_{j=1}^{n}w_{j}^{2}\\right)=\\lambda\\sum_{j=1}^{n}|w_{j}|$，即 L1 正则化（Lasso 回归）（02 P27）。A 是 $\\rho=0$ 的情形（L2/岭回归）；B 一次项正则在本课件中没有出现；D 无论 $\\rho$ 取何值，$|w_j|$ 项都保留，只有 $\\rho=0$ 时才只剩 L2 项，所以不可能退化为 0。\n**易踩的坑**：$\\rho$ 是「调整 L1 正则化与 L2 正则化的比例」的比例系数，且 $1\\geq\\rho\\geq 0$；$\\rho=1$ 偏 L1（求稀疏），$\\rho=0$ 偏 L2（求平滑）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 B卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "决定系数可写成 $R^{2}=1-\\frac{MSE}{Var}$。在同一批数据上（$Var$ 固定不变），若模型改进使 $MSE$ 减小，则 $R^2$ 的变化是（　）（02 P31）",
+   "options": [
+    "$R^2$ 增大，说明模型拟合得更好",
+    "$R^2$ 减小，说明模型拟合得更好",
+    "$R^2$ 不变，因为它只由数据本身的 $Var$ 决定",
+    "$R^2$ 必然变成负数，说明模型已无法拟合"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "由 $R^{2}=1-\\frac{MSE}{Var}$，在 $Var$ 固定时 $MSE$ 减小必然使被减数变小、结果增大，即 $R^2$ 增大、拟合变好（02 P31）。B 把方向说反；C 错在 $\\frac{MSE}{Var}$ 这一项里本来就含模型信息，$R^2$ 并非只由 $Var$ 决定；D 错在课件明确「越接近于 1，说明模型拟合得越好」，$R^2$ 变成负数只说明模型比「直接用均值预测」还差。\n**易踩的坑**：把 $R^2$ 当成「越小越好」的误差类指标。**$R^2$ 与 MSE 方向相反**——这是同一批数据下 $R^2=1-\\frac{MSE}{Var}$ 的直接结果。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3B-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 B卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于过拟合与欠拟合的处理方式，下列表述正确的有（　）",
+   "options": [
+    "获得更多的训练数据是解决过拟合问题最有效的手段",
+    "欠拟合时可以通过增加模型复杂度来解决，例如在线性模型中添加高次项",
+    "欠拟合时应当增大正则化系数 $\\lambda$ 以压低模型复杂度",
+    "过拟合时可以通过降维来解决，例如使用 PCA 丢弃对预测没有帮助的特征"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "A（02 P24：使用更多的训练数据是解决过拟合问题最有效的手段）、B（02 P26：增加模型复杂度，例如在线性模型中添加高次项）、D（02 P24：降维，如使用 PCA 帮忙选择特征）均正确。C 方向反了——正则化是用来**防止过拟合**的，出现欠拟合时应当**减小**正则化系数；「增大 $\\lambda$ 治过拟合，减小 $\\lambda$ 治欠拟合」。\n**易踩的坑**：把「模型更简单」一律当成好事。复杂度不足是欠拟合、复杂度过头是过拟合，二者的处方正好相反。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3B-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 B卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件为什么要做数据归一化／标准化？下列理由正确的有（　）（02 P19）",
+   "options": [
+    "提升模型精度：不同维度之间的特征在数值上有一定比较性，可以大大提高分类器的准确性",
+    "改变特征数据的分布，把所有特征强行映射到 $[0,1]$",
+    "消除数据中的离群点，把所有特征都压到同一取值区间",
+    "加速模型收敛：最优解的寻优过程明显会变得平缓，更容易正确地收敛到最优解"
+   ],
+   "answer": [
+    "A",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件给出的两条理由就是「提升模型精度」与「加速模型收敛」（02 P19）。C 编造了课件没有的作用——归一化/标准化不做异常值处理；B 也编造了：标准化的目的恰恰是让特征**具备可比性**而**不改变分布**，强行映射到 $[0,1]$ 是归一化而非标准化，且归一化也不是「改变分布」这一目的本身。\n**易踩的坑**：把「归一化会改变分布」误当成它的**目的**——课件写得很清楚：归一化的目的是让各特征对目标变量的影响一致，改变分布是它顺带发生的**结果**。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3B-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 B卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "下列关于梯度下降参数更新式的书写，正确的有（　）（02 P14、P16、P17）",
+   "options": [
+    "$w_j:=w_j-\\alpha\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$",
+    "$w_j:=w_j-\\alpha\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$",
+    "$w_j:=w_j-\\alpha\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}-h(x^{(i)})x_j^{(i)}\\right)$",
+    "$w_j:=w_j-\\alpha\\frac{1}{b}\\sum_{k=i}^{i+b-1}\\left(h(x^{(k)})-y^{(k)}\\right)x_j^{(k)}$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "A 是 BGD 更新式、B 是 SGD 更新式、D 是 MBGD 更新式，三者结构完全一致，只有「求和项」与「平均分母」不同（02 P14、P16、P17）。C 错在括号位置：$x_j^{(i)}$ 被写进了 $h(x^{(i)})$ 的括号内部，等于把「误差 × 特征」变成了「$y^{(i)}$ 减去被 $x_j^{(i)}$ 缩放过的预测值」，梯度里凭空多出一项 $h(x^{(i)})x_j^{(i)}$。\n**易踩的坑**：三种形式可以统一记成「误差 × 特征」，其中 $(\\cdot)$ 恒为误差 $h(x^{(i)})-y^{(i)}$；配套的还有 $b=1\\to$ SGD、$b=m\\to$ BGD、$b=batch\\_size$（常为 2 的指数倍，如 32、64、128）$\\to$ MBGD。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 B卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "（要求：写出推导链条）写出最小二乘法从矩阵形式到闭式解的四步推导链条；并回答：当特征数量 $n$ 很大时，为什么课件建议改用梯度下降？请从「学习率、迭代次数、中间计算量、适用范围、$n$ 的大小」五个角度对比梯度下降与最小二乘法。",
+   "options": null,
+   "answer": [],
+   "answerText": "四步链条（02 P9–P10）：\n$$\nJ(w)=\\frac{1}{2}(Xw-Y)^{T}(Xw-Y)\n\\ \\longrightarrow\\ \\frac{\\partial J(w)}{\\partial w}=X^{T}Xw-X^{T}Y\n\\ \\longrightarrow\\ X^{T}Xw=X^{T}Y\n\\ \\longrightarrow\\ w=(X^{T}X)^{-1}X^{T}Y\n$$\n五角度对比（02 P18）：\n| 比较项 | 梯度下降 | 最小二乘法 |\n|---|---|---|\n| 是否需要选择学习率 $\\alpha$ | 需要 | 不需要 |\n| 迭代次数 | 需要多次迭代 | 一次计算得出 |\n| 需要计算的中间量 | 梯度 | 矩阵逆 $\\left(X^{T}X\\right)^{-1}$ |\n| 特征数量 $n$ 大时 | 也能较好适用 | 运算代价大（$O(n^{3})$，一般 $n<10000$ 可接受） |\n| 适用范围 | 适用于各种类型的模型 | 只适用于线性模型，不适合逻辑回归等其他模型 |\n评分要点：推导链条 4 分（每行 1 分），五角度对比 5 分（每角度 1 分）。**易踩的坑**：① 展开平方项后 $w^{T}X^{T}Y$ 与 $Y^{T}Xw$ 互为转置、要合并成 $-2w^{T}X^{T}Y$，漏掉系数 2 会导致最后结果差一倍；② 课件 P10 上这四条公式的排版顺序是乱的（先出现结果式再出现推导式），考试按上面的合理顺序写即可（课件此处存疑）。",
+   "points": [
+    {
+     "text": "四步链条（02 P9–P10）：\n$$\nJ(w)=\\frac{1}{2}(Xw-Y)^{T}(Xw-Y)\n\\ \\longrightarrow\\ \\frac{\\partial J(w)}{\\partial w}=X^{T}Xw-X^{T}Y\n\\ \\longrightarrow\\ X^{T}Xw=X^{T}Y\n\\ \\longrightarrow\\ w=(X^{T}X)^{-1}X^{T}Y\n$$",
+     "partial": 3
+    },
+    {
+     "text": "五角度对比（02 P18）：\n| 比较项 | 梯度下降 | 最小二乘法 |\n|---|---|---|\n| 是否需要选择学习率 $\\alpha$ | 需要 | 不需要 |\n| 迭代次数 | 需要多次迭代 | 一次计算得出 |\n| 需要计算的中间量 | 梯度 | 矩阵逆 $\\left(X^{T}X\\right)^{-1}$ |\n| 特征数量 $n$ 大时 | 也能较好适用 | 运算代价大（$O(n^{3})$，一般 $n<10000$ 可接受） |\n| 适用范围 | 适用于各种类型的模型 | 只适用于线性模型，不适合逻辑回归等其他模型 |\n评分要点：推导链条 4 分（每行 1 分），五角度对比 5 分（每角度 1 分）。**易踩的坑**：① 展开平方项后 $w^{T}X^{T}Y$ 与 $Y^{T}Xw$ 互为转置、要合并成 $-2w^{T}X^{T}Y$，漏掉系数 2 会导致最后结果差一倍；② 课件 P10 上这四条公式的排版顺序是乱的（先出现结果式再出现推导式），考试按上面的合理顺序写即可（课件此处存疑）。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c3B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《机器学习》章节小测 第3章 B卷（依据课程课件 003 系列）",
+    "kind": "textbook"
+   },
+   "stem": "（要求：写出公式并给出取舍依据）从「求解梯度的复杂度」和「离群点性质」两个角度，说明 MSE 与 MAE 各应在什么情况下选用；并解释 $R^2$ 与 MSE 的取值方向为什么相反。",
+   "options": null,
+   "answer": [],
+   "answerText": "两个角度的取舍（02 P30 演讲者备注）：\n- **求解梯度的复杂度**：应该用 **MSE**——MSE 优于 MAE，而且梯度也是动态变化的，能较快准确达到收敛；\n- **离群点的性质**：若离群点是**实际数据或重要数据、且是应该被检测到的异常值**，用 **MSE**；若离群点仅代表**数据损坏或错误采样、无须给予过多关注**，用 **MAE**。\n方向相反的原因：由课件给出的等价写法 $R^{2}=1-\\frac{MSE}{Var}$（02 P31），在同一批数据上 $Var$ 固定，故 $MSE$ 与 $R^{2}$ 呈反向变动——MSE 越小则 $\\frac{MSE}{Var}$ 越小，$1-$ 它就越大，因此 **$R^2$ 越大越好**、而 **MSE 越小越好**。\n评分要点：两个角度各 2.5 分（角内还要答出「为什么」，各 0.5 分），$R^2$ 与 MSE 的方向 2 分，$R^2=1-\\frac{MSE}{Var}$ 的推导说明 1.5 分。**易踩的坑**：① 不要只答「MSE 对离群点敏感」而不交代离群点**属于该被检测的异常值还是数据损坏**——课件的条件是后者才选 MAE；② $R^2$ 的方向必须结合 $1-\\frac{MSE}{Var}$ 来说，不能只背结论。\n---\n# 第4章 逻辑回归\n> 本章小测共 2 套：A 卷基础巩固、B 卷理解运用，每套满分 45 分。\n> 建议先独立作答，再对照解析。",
+   "points": [
+    {
+     "text": "两个角度的取舍（02 P30 演讲者备注）：\n- **求解梯度的复杂度**：应该用 **MSE**——MSE 优于 MAE，而且梯度也是动态变化的，能较快准确达到收敛；\n- **离群点的性质**：若离群点是**实际数据或重要数据、且是应该被检测到的异常值**，用 **MSE**；若离群点仅代表**数据损坏或错误采样、无须给予过多关注**，用 **MAE**。",
+     "partial": 3
+    },
+    {
+     "text": "方向相反的原因：由课件给出的等价写法 $R^{2}=1-\\frac{MSE}{Var}$（02 P31），在同一批数据上 $Var$ 固定，故 $MSE$ 与 $R^{2}$ 呈反向变动——MSE 越小则 $\\frac{MSE}{Var}$ 越小，$1-$ 它就越大，因此 **$R^2$ 越大越好**、而 **MSE 越小越好**。\n评分要点：两个角度各 2.5 分（角内还要答出「为什么」，各 0.5 分），$R^2$ 与 MSE 的方向 2 分，$R^2=1-\\frac{MSE}{Var}$ 的推导说明 1.5 分。**易踩的坑**：① 不要只答「MSE 对离群点敏感」而不交代离群点**属于该被检测的异常值还是数据损坏**——课件的条件是后者才选 MAE；② $R^2$ 的方向必须结合 $1-\\frac{MSE}{Var}$ 来说，不能只背结论。\n---\n# 第4章 逻辑回归\n> 本章小测共 2 套：A 卷基础巩固、B 卷理解运用，每套满分 45 分。\n> 建议先独立作答，再对照解析。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

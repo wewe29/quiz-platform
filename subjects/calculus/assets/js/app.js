@@ -547,7 +547,11 @@
     });
     chipRow($('#f-types'), TYPE_GROUPS.map(function (t) { return { key: t.key, label: t.label, count: cntType[t.key] || 0 }; }), f.types, 'types');
     chipRow($('#f-diffs'), DIFFS.map(function (d) { return { key: d.key, label: d.label, count: cntDiff[d.key] || 0 }; }), f.diffs, 'diffs');
-    chipRow($('#f-chapters'), CHAPTERS.map(function (c) { return { key: c.n, label: '第' + c.n + '章', count: cntCh[c.n] || 0 }; }), f.chapters, 'chapters');
+    // 章节短标签：非教材章（如 ML 的「综合测试卷」）由 manifest.subject.chapterShortLabels 提供
+    var chapterShort = (META && META.subject && META.subject.chapterShortLabels) || {};
+    chipRow($('#f-chapters'), CHAPTERS.map(function (c) {
+      return { key: c.n, label: chapterShort[c.n] || ('第' + c.n + '章'), count: cntCh[c.n] || 0 };
+    }), f.chapters, 'chapters');
 
     $('#f-order').value = state.settings.order;
     $('#f-mode').value = state.settings.mode || 'single';

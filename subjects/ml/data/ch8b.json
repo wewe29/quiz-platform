@@ -1,0 +1,1931 @@
+{
+ "chapter": 8,
+ "questions": [
+  {
+   "id": "ml-s3-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第3套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "全概率公式 $P(A)=\\sum_{i=1}^{n}P(A|B_i)P(B_i)$ 的适用条件是：$B_i$ 之间 ______ 且并集为全集 $\\Delta$。（01 P46）",
+   "options": null,
+   "answer": [
+    "两两互斥（$B_iB_j=\\emptyset$，$i\\neq j$）"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "全概率公式 $P(A)=\\sum_{i=1}^{n}P(A|B_i)P(B_i)$ 成立的适用条件是 $B_iB_j=\\emptyset\\ (i\\neq j)$ 且 $\\bigcup_{i=1}^{n}B_i=\\Delta$——即 $B_i$ 两两互斥且并集为全集。（01 P46）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "两两互斥（$B_iB_j=\\emptyset$，$i\\neq j$）",
+    "两两互斥"
+   ]
+  },
+  {
+   "id": "ml-s3-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第3套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "批量梯度下降的更新式中，$\\alpha$ 称为 ______，也称为步长。（02 P12）",
+   "options": null,
+   "answer": [
+    "学习率"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "$w=w-\\alpha\\frac{\\partial J(w)}{\\partial w}$，其中 $\\alpha$ 为**学习率**，也称为**步长**。⚠️易错点：更新式中是**减号**，因为沿负梯度方向才使代价函数下降；$\\alpha$ 太大会在最小值点附近振荡无法收敛，太小则收敛过慢。（02 P12）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "学习率"
+   ]
+  },
+  {
+   "id": "ml-s3-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第3套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "从 $p=\\frac{1}{1+e^{-w^{T}x}}$ 反推回去，课件的做法是把 $log\\dfrac{p}{1-p}$ 直接赋成 ______。（03 P9）",
+   "options": null,
+   "answer": [
+    "$w^{T}x$（即 $z$）"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "推导链为：先写几率 odds $=\\frac{p}{1-p}$，取对数并令它等于线性输出 $log\\frac{p}{1-p}=w^{T}x=z$，再求解 $p$ 得 $p=\\frac{1}{1+e^{-w^{T}x}}$。必背：**「先线性、再取 Sigmoid」的来源就是把 $log\\frac{p}{1-p}$ 直接赋成 $w^{T}x$**。⚠️易错点：$p$ 的范围是 $[0,1]$、$z$ 的范围是 $(-\\infty,+\\infty)$，两者不是同一个东西。（03 P9）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "$w^{T}x$（即 $z$）",
+    "$w^{T}x$"
+   ]
+  },
+  {
+   "id": "ml-s3-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第3套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "贝叶斯分类器把后验概率最大的类作为输出，是因为后验概率最大等价于 ______ 损失函数时的期望风险最小化。（04 P13）",
+   "options": null,
+   "answer": [
+    "0-1"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "在独立性假设下，将输入 $x$ 分到后验概率最大的类 $y$，**后验概率最大等价于 0-1 损失函数时的期望风险最小化**。对应的 $0-1$ 损失为 $L(Y,f(X))=1$（$Y\\neq f(X)$）、$0$（$Y=f(X)$）。（04 P13；01 P23）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "0-1"
+   ]
+  },
+  {
+   "id": "ml-s3-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第3套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "课件给出的 $R^{2}$ 的等价写法是 $R^{2}=1-\\dfrac{MSE}{Var}$，其中 $Var$ 指 ______。（05 P11；02 P31）",
+   "options": null,
+   "answer": [
+    "真实值对其均值的方差"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件给出的另一种等价写法为 $R^{2}(y,\\hat{y})=1-\\frac{\\sum_{i=1}^{m}\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}/m}{\\sum_{i=1}^{m}\\left(y^{(i)}-\\overline{y}\\right)^{2}/m}=1-\\frac{MSE}{Var}$，其中 $Var=\\frac{1}{m}\\sum_{i=1}^{m}\\left(y^{(i)}-\\bar{y}\\right)^{2}$ 是真实值对其均值的方差，$MSE=\\frac{1}{m}\\sum\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}$。⚠️易错点：$R^{2}$ **越接近 1 越好**（与越小越好的 $MSE$ 方向相反）。（05 P11；02 P31）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "真实值对其均值的方差"
+   ]
+  },
+  {
+   "id": "ml-s3-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第3套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "写出线性回归的完整训练流程五步，并把「蒙眼下山」比喻中的四个动作与机器学习概念一一对应。（003 P1）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：任何机器学习方法都可拆成四个部件，缺一不可：模型、损失函数、优化算法、模型评估指标（01 P20）。\n分述①模型：机器学习首先要考虑使用**什么样的模型**。模型类别大致有两种：**概率模型**与**非概率模型**。在监督学习中概率模型写作 $P(y|x)$、非概率模型写作 $y=f(x)$；在无监督学习中分别为 $P(z|x)$ 与 $z=f(x)$（注意输出的记号是 $z$）。按是否建模概率划分，概率模型的典型算法有决策树、朴素贝叶斯、隐马尔科夫模型、高斯混合模型；非概率模型有感知机、支持向量机、KNN、AdaBoost、K-means、神经网络，并可再按判别函数线性与否分为线性模型（感知机、线性 SVM、KNN、K-means）与非线性模型（核 SVM、AdaBoost、神经网络）。\n分述②损失函数：损失函数值越小，模型性能越好。课件给出四种常见损失函数：$0-1$ 损失、平方损失、绝对损失、对数损失。给定一个数据集，将**训练数据集的平均损失**称为**经验风险**，据此可构建全局损失函数 $\\underset{f}{\\min}\\ \\frac{1}{N}\\sum_{n=1}^{N}L(y_n,f(x_n))$；当样本数量不足时，单纯最小化经验风险会导致**过拟合**，为此加上控制模型复杂度的**正则项 $J(f)$**，得到结构风险最小化准则 $\\underset{f}{\\min}\\ \\frac{1}{N}\\sum_{n=1}^{N}L(y_n,f(x_n))+\\lambda J(f)$。\n分述③优化算法：算法指模型学习中的**具体计算方法**；基于参数模型构建的统计学习问题都是最优化问题，它们都具有**显式的解析解**。现有优化方法主要有梯度下降法、牛顿法、拟牛顿法、ADAM 等等，本课程以**梯度下降法**作为主要的优化算法。\n分述④模型评估指标与「为什么不能只看训练误差」：当损失函数给定时，将基于模型**训练数据的误差 (Training Error)** 和**测试数据的误差 (Testing Error)** 作为模型评估的标准，测试误差定义为 $E_{test}=\\frac{1}{N'}\\sum_{n=1}^{N'}L(y_n,\\hat{f}(x_n))$（$N'$ 为测试数据数量，$y_n$ 为真实标签、$\\hat{f}(x_n)$ 为预测标签）。**一般来说，若我们模型学习的效果好，则训练误差和测试误差接近一致**——因此评估模型好坏要看**训练误差与测试误差是否接近一致**，而不是训练误差越小越好。若只看训练误差，会把「把训练集背下来、丢掉预测新数据能力」的**过拟合**模型误判为最优模型。",
+   "points": [
+    {
+     "text": "总起：任何机器学习方法都可拆成四个部件，缺一不可：模型、损失函数、优化算法、模型评估指标（01 P20）。",
+     "partial": 3
+    },
+    {
+     "text": "分述①模型：机器学习首先要考虑使用**什么样的模型**。模型类别大致有两种：**概率模型**与**非概率模型**。在监督学习中概率模型写作 $P(y|x)$、非概率模型写作 $y=f(x)$；在无监督学习中分别为 $P(z|x)$ 与 $z=f(x)$（注意输出的记号是 $z$）。按是否建模概率划分，概率模型的典型算法有决策树、朴素贝叶斯、隐马尔科夫模型、高斯混合模型；非概率模型有感知机、支持向量机、KNN、AdaBoost、K-means、神经网络，并可再按判别函数线性与否分为线性模型（感知机、线性 SVM、KNN、K-means）与非线性模型（核 SVM、AdaBoost、神经网络）。",
+     "partial": 3
+    },
+    {
+     "text": "分述②损失函数：损失函数值越小，模型性能越好。课件给出四种常见损失函数：$0-1$ 损失、平方损失、绝对损失、对数损失。给定一个数据集，将**训练数据集的平均损失**称为**经验风险**，据此可构建全局损失函数 $\\underset{f}{\\min}\\ \\frac{1}{N}\\sum_{n=1}^{N}L(y_n,f(x_n))$；当样本数量不足时，单纯最小化经验风险会导致**过拟合**，为此加上控制模型复杂度的**正则项 $J(f)$**，得到结构风险最小化准则 $\\underset{f}{\\min}\\ \\frac{1}{N}\\sum_{n=1}^{N}L(y_n,f(x_n))+\\lambda J(f)$。",
+     "partial": 3
+    },
+    {
+     "text": "分述③优化算法：算法指模型学习中的**具体计算方法**；基于参数模型构建的统计学习问题都是最优化问题，它们都具有**显式的解析解**。现有优化方法主要有梯度下降法、牛顿法、拟牛顿法、ADAM 等等，本课程以**梯度下降法**作为主要的优化算法。",
+     "partial": 3
+    },
+    {
+     "text": "分述④模型评估指标与「为什么不能只看训练误差」：当损失函数给定时，将基于模型**训练数据的误差 (Training Error)** 和**测试数据的误差 (Testing Error)** 作为模型评估的标准，测试误差定义为 $E_{test}=\\frac{1}{N'}\\sum_{n=1}^{N'}L(y_n,\\hat{f}(x_n))$（$N'$ 为测试数据数量，$y_n$ 为真实标签、$\\hat{f}(x_n)$ 为预测标签）。**一般来说，若我们模型学习的效果好，则训练误差和测试误差接近一致**——因此评估模型好坏要看**训练误差与测试误差是否接近一致**，而不是训练误差越小越好。若只看训练误差，会把「把训练集背下来、丢掉预测新数据能力」的**过拟合**模型误判为最优模型。",
+     "partial": 6
+    }
+   ],
+   "explanation": "",
+   "misconception": "分述①②③各 3 分、④为重难点 6 分；漏掉「训练误差与测试误差接近一致」这一判据扣 2 分。（01 P20–P27）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s3-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第3套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "写出随机梯度下降中 $\\frac{\\partial}{\\partial w_j}J(w)$ 的三步推导，说明每一步用到什么数学工具，并给出 SGD 的参数更新式。（02 P15–P16）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：推导由「贝叶斯定理」与「条件独立假设」两个动作叠加而成，再利用分母与类别无关把后验比较化为连乘比较。\n分述①符号约定：训练数据集 $T=\\{(x_1,y_1),(x_2,y_2),\\ldots,(x_n,y_n)\\}$，由 $P(X,Y)$ 独立同分布产生；其中 $X=\\{x_1,x_2,\\ldots,x_n\\}$ 为 $n$ 维向量的集合，$Y=\\{c_1,c_2,\\ldots,c_k\\}$，$K$ 为类别数。\n分述②式(2)：贝叶斯定理给出后验：对给定的输入 $x$，计算后验概率分布并将后验概率最大的类作为输出：\n$$\nP(Y=c_k|X=x)=\\frac{P(X=x,Y=c_k)\\,P(Y=c_k)}{\\displaystyle\\sum_{k=1}^{K}P(X=x,Y=c_k)\\,P(Y=c_k)}\n$$\n分述③式(1)：施加条件独立假设：朴素贝叶斯假设给定类别时各特征条件独立，即 $P(X=x,Y=c_k)=\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)$，代入式(2) 得\n$$\nP(Y=c_k|X=x)=\\frac{\\displaystyle\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)}{\\displaystyle\\sum_{k=1}^{K}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)}\n$$\n分述④分母可约与分类器式：分母是对**所有类求和后**得到的整体归一化项（它不是「每个类都一样」的逐项常数），但正因为它与当前比较的类别无关，取 $\\arg\\max$ 时仍然可以整体约去，于是**贝叶斯分类器**可以表示为\n$$\ny=f(x)=\\arg\\max_{c_k}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)\n$$\n等价的判别准则写法是 $y=\\arg\\max_{c_k}P(Y=c_k)\\prod_{j=1}^{n}P\\left(X_j=x^{(j)}|Y=c_k\\right)$（只是先验项与连乘项的书写顺序不同）；**后验概率最大等价于 0-1 损失函数时的期望风险最小化**，这为该判别准则提供了理论依据。\n---",
+   "points": [
+    {
+     "text": "总起：推导由「贝叶斯定理」与「条件独立假设」两个动作叠加而成，再利用分母与类别无关把后验比较化为连乘比较。",
+     "partial": 2
+    },
+    {
+     "text": "分述①符号约定：训练数据集 $T=\\{(x_1,y_1),(x_2,y_2),\\ldots,(x_n,y_n)\\}$，由 $P(X,Y)$ 独立同分布产生；其中 $X=\\{x_1,x_2,\\ldots,x_n\\}$ 为 $n$ 维向量的集合，$Y=\\{c_1,c_2,\\ldots,c_k\\}$，$K$ 为类别数。",
+     "partial": 2
+    },
+    {
+     "text": "分述②式(2)：贝叶斯定理给出后验：对给定的输入 $x$，计算后验概率分布并将后验概率最大的类作为输出：\n$$\nP(Y=c_k|X=x)=\\frac{P(X=x,Y=c_k)\\,P(Y=c_k)}{\\displaystyle\\sum_{k=1}^{K}P(X=x,Y=c_k)\\,P(Y=c_k)}\n$$",
+     "partial": 3
+    },
+    {
+     "text": "分述③式(1)：施加条件独立假设：朴素贝叶斯假设给定类别时各特征条件独立，即 $P(X=x,Y=c_k)=\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)$，代入式(2) 得\n$$\nP(Y=c_k|X=x)=\\frac{\\displaystyle\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)}{\\displaystyle\\sum_{k=1}^{K}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)}\n$$",
+     "partial": 3
+    },
+    {
+     "text": "分述④分母可约与分类器式：分母是对**所有类求和后**得到的整体归一化项（它不是「每个类都一样」的逐项常数），但正因为它与当前比较的类别无关，取 $\\arg\\max$ 时仍然可以整体约去，于是**贝叶斯分类器**可以表示为\n$$\ny=f(x)=\\arg\\max_{c_k}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)\n$$\n等价的判别准则写法是 $y=\\arg\\max_{c_k}P(Y=c_k)\\prod_{j=1}^{n}P\\left(X_j=x^{(j)}|Y=c_k\\right)$（只是先验项与连乘项的书写顺序不同）；**后验概率最大等价于 0-1 损失函数时的期望风险最小化**，这为该判别准则提供了理论依据。\n---",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": "四部分各占分值；④若未说明「分母是整体归一化项但与类别无关」扣 1 分。（04 P13–P17）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s3-short-3",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第3套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "写出逻辑回归代价函数对 $w_j$ 求导的完整三步推导，并说明第二步那一堆指数分式之所以能塌缩成 $\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$ 的关键是什么。（03 P16–P17）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：推导共三步，关键在第三步的同类项合并。\n分述①第一步：把 $h(x^{(i)})$ 用 Sigmoid 的表达式代入并化简：$y^{(i)}\\log\\left(\\frac{1}{1+e^{-w^{T}x^{(i)}}}\\right)+\\left(1-y^{(i)}\\right)\\log\\left(1-\\frac{1}{1+e^{-w^{T}x^{(i)}}}\\right)=-y^{(i)}\\log\\left(1+e^{-w^{T}x^{(i)}}\\right)-\\left(1-y^{(i)}\\right)\\log\\left(1+e^{w^{T}x^{(i)}}\\right)$。\n分述②第二步：代入代价函数并对 $w_j$ 求导，得 $-\\frac{1}{m}\\sum_{i=1}^{m}\\left(-y^{(i)}\\frac{-x_j^{(i)}e^{-w^{T}x^{(i)}}}{1+e^{-w^{T}x^{(i)}}}-(1-y^{(i)})\\frac{x_j^{(i)}e^{w^{T}x^{(i)}}}{1+e^{w^{T}x^{(i)}}}\\right)$。\n分述③第三步与关键：再代入 $h(x^{(i)})=\\frac{1}{1+e^{-w^{T}x^{(i)}}}$ 合并同类项，得 $\\frac{\\partial}{\\partial w_j}J(w)=\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$。**关键就是 $g'(z)=g(z)(1-g(z))$**——第二步那一堆指数分式之所以能塌缩成一个 $\\left(h(x^{(i)})-y^{(i)}\\right)$，正是这条 Sigmoid 求导性质的直接后果，也是它在逻辑回归里的唯一用途。",
+   "points": [
+    {
+     "text": "总起：推导共三步，关键在第三步的同类项合并。",
+     "partial": 1
+    },
+    {
+     "text": "分述①第一步：把 $h(x^{(i)})$ 用 Sigmoid 的表达式代入并化简：$y^{(i)}\\log\\left(\\frac{1}{1+e^{-w^{T}x^{(i)}}}\\right)+\\left(1-y^{(i)}\\right)\\log\\left(1-\\frac{1}{1+e^{-w^{T}x^{(i)}}}\\right)=-y^{(i)}\\log\\left(1+e^{-w^{T}x^{(i)}}\\right)-\\left(1-y^{(i)}\\right)\\log\\left(1+e^{w^{T}x^{(i)}}\\right)$。",
+     "partial": 4
+    },
+    {
+     "text": "分述②第二步：代入代价函数并对 $w_j$ 求导，得 $-\\frac{1}{m}\\sum_{i=1}^{m}\\left(-y^{(i)}\\frac{-x_j^{(i)}e^{-w^{T}x^{(i)}}}{1+e^{-w^{T}x^{(i)}}}-(1-y^{(i)})\\frac{x_j^{(i)}e^{w^{T}x^{(i)}}}{1+e^{w^{T}x^{(i)}}}\\right)$。",
+     "partial": 4
+    },
+    {
+     "text": "分述③第三步与关键：再代入 $h(x^{(i)})=\\frac{1}{1+e^{-w^{T}x^{(i)}}}$ 合并同类项，得 $\\frac{\\partial}{\\partial w_j}J(w)=\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$。**关键就是 $g'(z)=g(z)(1-g(z))$**——第二步那一堆指数分式之所以能塌缩成一个 $\\left(h(x^{(i)})-y^{(i)}\\right)$，正是这条 Sigmoid 求导性质的直接后果，也是它在逻辑回归里的唯一用途。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": "三步各占分值；不点明 $g'(z)=g(z)(1-g(z))$ 这一关键扣 2 分。（03 P16–P17；03 P10）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s3-short-4",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第3套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "说明 sklearn 中 `cross_val_score` 与 `GridSearchCV` 各自的作用与调用方式，并解释二者在接口上的共同点。（06 P25–P26）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：二者都依赖「用多折数据反复评估」，但一个比较模型、一个比较参数组合。\n分述①`cross_val_score` 的作用与调用：`from sklearn.model_selection import cross_val_score`，`scores = cross_val_score(clf, X_train, y_train, cv=5, scoring='f1_weighted')`——使用 5 折交叉验证对模型进行评估，评分函数为 F1 值，返回的是模型在各折上的得分。\n分述②`GridSearchCV` 的作用与调用：`from sklearn.model_selection import GridSearchCV`，`grid_search = GridSearchCV(svc, params, cv=5)`，`grid_search.fit(X_train, y_train)`，结果取 `grid_search.best_params_`——在参数网格上进行**穷举搜索**，方法简单但搜索速度慢，且不容易找到参数空间中的局部最优。\n分述③共同点：二者都接受 `cv` 参数、都以交叉验证作为比较依据、接口都是 `.fit()` 后读取结果，替换类名即可在「评估一个模型」与「搜索一组超参数」之间切换。补充：sklearn 还提供了带交叉验证功能的模型类，如 `LassoCV`、`LogisticRegressionCV`，这些类同样包含 `cv` 参数。",
+   "points": [
+    {
+     "text": "总起：二者都依赖「用多折数据反复评估」，但一个比较模型、一个比较参数组合。",
+     "partial": 2
+    },
+    {
+     "text": "分述①`cross_val_score` 的作用与调用：`from sklearn.model_selection import cross_val_score`，`scores = cross_val_score(clf, X_train, y_train, cv=5, scoring='f1_weighted')`——使用 5 折交叉验证对模型进行评估，评分函数为 F1 值，返回的是模型在各折上的得分。",
+     "partial": 3
+    },
+    {
+     "text": "分述②`GridSearchCV` 的作用与调用：`from sklearn.model_selection import GridSearchCV`，`grid_search = GridSearchCV(svc, params, cv=5)`，`grid_search.fit(X_train, y_train)`，结果取 `grid_search.best_params_`——在参数网格上进行**穷举搜索**，方法简单但搜索速度慢，且不容易找到参数空间中的局部最优。",
+     "partial": 3
+    },
+    {
+     "text": "分述③共同点：二者都接受 `cv` 参数、都以交叉验证作为比较依据、接口都是 `.fit()` 后读取结果，替换类名即可在「评估一个模型」与「搜索一组超参数」之间切换。补充：sklearn 还提供了带交叉验证功能的模型类，如 `LassoCV`、`LogisticRegressionCV`，这些类同样包含 `cv` 参数。",
+     "partial": 2
+    }
+   ],
+   "explanation": "",
+   "misconception": "三部分各占分值；须写明 `cv=5` 是 5 折交叉验证。（06 P25–P26）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s3-essay-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第3套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "论述机器学习方法的四大要素——模型、损失函数、优化算法、模型评估指标——各自的职能与相互关系；并结合测试误差的定义说明「模型效果好不好」最终是如何被度量的，以及为什么不能只看训练误差。（01 P20–P27）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：任何机器学习方法都可拆成四个部件，缺一不可：模型、损失函数、优化算法、模型评估指标（01 P20）。\n分述①模型：机器学习首先要考虑使用**什么样的模型**。模型类别大致有两种：**概率模型**与**非概率模型**。在监督学习中概率模型写作 $P(y|x)$、非概率模型写作 $y=f(x)$；在无监督学习中分别为 $P(z|x)$ 与 $z=f(x)$（注意输出的记号是 $z$）。按是否建模概率划分，概率模型的典型算法有决策树、朴素贝叶斯、隐马尔科夫模型、高斯混合模型；非概率模型有感知机、支持向量机、KNN、AdaBoost、K-means、神经网络，并可再按判别函数线性与否分为线性模型（感知机、线性 SVM、KNN、K-means）与非线性模型（核 SVM、AdaBoost、神经网络）。\n分述②损失函数：损失函数值越小，模型性能越好。课件给出四种常见损失函数：$0-1$ 损失、平方损失、绝对损失、对数损失。给定一个数据集，将**训练数据集的平均损失**称为**经验风险**，据此可构建全局损失函数 $\\underset{f}{\\min}\\ \\frac{1}{N}\\sum_{n=1}^{N}L(y_n,f(x_n))$；当样本数量不足时，单纯最小化经验风险会导致**过拟合**，为此加上控制模型复杂度的**正则项 $J(f)$**，得到结构风险最小化准则 $\\underset{f}{\\min}\\ \\frac{1}{N}\\sum_{n=1}^{N}L(y_n,f(x_n))+\\lambda J(f)$。\n分述③优化算法：算法指模型学习中的**具体计算方法**；基于参数模型构建的统计学习问题都是最优化问题，它们都具有**显式的解析解**。现有优化方法主要有梯度下降法、牛顿法、拟牛顿法、ADAM 等等，本课程以**梯度下降法**作为主要的优化算法。\n分述④模型评估指标与「为什么不能只看训练误差」：当损失函数给定时，将基于模型**训练数据的误差 (Training Error)** 和**测试数据的误差 (Testing Error)** 作为模型评估的标准，测试误差定义为 $E_{test}=\\frac{1}{N'}\\sum_{n=1}^{N'}L(y_n,\\hat{f}(x_n))$（$N'$ 为测试数据数量，$y_n$ 为真实标签、$\\hat{f}(x_n)$ 为预测标签）。**一般来说，若我们模型学习的效果好，则训练误差和测试误差接近一致**——因此评估模型好坏要看**训练误差与测试误差是否接近一致**，而不是训练误差越小越好。若只看训练误差，会把「把训练集背下来、丢掉预测新数据能力」的**过拟合**模型误判为最优模型。",
+   "points": [
+    {
+     "text": "总起：任何机器学习方法都可拆成四个部件，缺一不可：模型、损失函数、优化算法、模型评估指标（01 P20）。",
+     "partial": 3
+    },
+    {
+     "text": "分述①模型：机器学习首先要考虑使用**什么样的模型**。模型类别大致有两种：**概率模型**与**非概率模型**。在监督学习中概率模型写作 $P(y|x)$、非概率模型写作 $y=f(x)$；在无监督学习中分别为 $P(z|x)$ 与 $z=f(x)$（注意输出的记号是 $z$）。按是否建模概率划分，概率模型的典型算法有决策树、朴素贝叶斯、隐马尔科夫模型、高斯混合模型；非概率模型有感知机、支持向量机、KNN、AdaBoost、K-means、神经网络，并可再按判别函数线性与否分为线性模型（感知机、线性 SVM、KNN、K-means）与非线性模型（核 SVM、AdaBoost、神经网络）。",
+     "partial": 3
+    },
+    {
+     "text": "分述②损失函数：损失函数值越小，模型性能越好。课件给出四种常见损失函数：$0-1$ 损失、平方损失、绝对损失、对数损失。给定一个数据集，将**训练数据集的平均损失**称为**经验风险**，据此可构建全局损失函数 $\\underset{f}{\\min}\\ \\frac{1}{N}\\sum_{n=1}^{N}L(y_n,f(x_n))$；当样本数量不足时，单纯最小化经验风险会导致**过拟合**，为此加上控制模型复杂度的**正则项 $J(f)$**，得到结构风险最小化准则 $\\underset{f}{\\min}\\ \\frac{1}{N}\\sum_{n=1}^{N}L(y_n,f(x_n))+\\lambda J(f)$。",
+     "partial": 3
+    },
+    {
+     "text": "分述③优化算法：算法指模型学习中的**具体计算方法**；基于参数模型构建的统计学习问题都是最优化问题，它们都具有**显式的解析解**。现有优化方法主要有梯度下降法、牛顿法、拟牛顿法、ADAM 等等，本课程以**梯度下降法**作为主要的优化算法。",
+     "partial": 3
+    },
+    {
+     "text": "分述④模型评估指标与「为什么不能只看训练误差」：当损失函数给定时，将基于模型**训练数据的误差 (Training Error)** 和**测试数据的误差 (Testing Error)** 作为模型评估的标准，测试误差定义为 $E_{test}=\\frac{1}{N'}\\sum_{n=1}^{N'}L(y_n,\\hat{f}(x_n))$（$N'$ 为测试数据数量，$y_n$ 为真实标签、$\\hat{f}(x_n)$ 为预测标签）。**一般来说，若我们模型学习的效果好，则训练误差和测试误差接近一致**——因此评估模型好坏要看**训练误差与测试误差是否接近一致**，而不是训练误差越小越好。若只看训练误差，会把「把训练集背下来、丢掉预测新数据能力」的**过拟合**模型误判为最优模型。",
+     "partial": 6
+    }
+   ],
+   "explanation": "",
+   "misconception": "分述①②③各 3 分、④为重难点 6 分；漏掉「训练误差与测试误差接近一致」这一判据扣 2 分。（01 P20–P27）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s3-essay-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第3套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "完整推导朴素贝叶斯分类器：从训练数据集与符号约定出发，写出贝叶斯定理给出的后验概率式、施加条件独立假设后的连乘形式、以及最终的分类器式，并说明分母为什么可以约去。（04 P14–P17）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：推导由「贝叶斯定理」与「条件独立假设」两个动作叠加而成，再利用分母与类别无关把后验比较化为连乘比较。\n分述①符号约定：训练数据集 $T=\\{(x_1,y_1),(x_2,y_2),\\ldots,(x_n,y_n)\\}$，由 $P(X,Y)$ 独立同分布产生；其中 $X=\\{x_1,x_2,\\ldots,x_n\\}$ 为 $n$ 维向量的集合，$Y=\\{c_1,c_2,\\ldots,c_k\\}$，$K$ 为类别数。\n分述②式(2)：贝叶斯定理给出后验：对给定的输入 $x$，计算后验概率分布并将后验概率最大的类作为输出：\n$$\nP(Y=c_k|X=x)=\\frac{P(X=x,Y=c_k)\\,P(Y=c_k)}{\\displaystyle\\sum_{k=1}^{K}P(X=x,Y=c_k)\\,P(Y=c_k)}\n$$\n分述③式(1)：施加条件独立假设：朴素贝叶斯假设给定类别时各特征条件独立，即 $P(X=x,Y=c_k)=\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)$，代入式(2) 得\n$$\nP(Y=c_k|X=x)=\\frac{\\displaystyle\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)}{\\displaystyle\\sum_{k=1}^{K}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)}\n$$\n分述④分母可约与分类器式：分母是对**所有类求和后**得到的整体归一化项（它不是「每个类都一样」的逐项常数），但正因为它与当前比较的类别无关，取 $\\arg\\max$ 时仍然可以整体约去，于是**贝叶斯分类器**可以表示为\n$$\ny=f(x)=\\arg\\max_{c_k}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)\n$$\n等价的判别准则写法是 $y=\\arg\\max_{c_k}P(Y=c_k)\\prod_{j=1}^{n}P\\left(X_j=x^{(j)}|Y=c_k\\right)$（只是先验项与连乘项的书写顺序不同）；**后验概率最大等价于 0-1 损失函数时的期望风险最小化**，这为该判别准则提供了理论依据。\n---",
+   "points": [
+    {
+     "text": "总起：推导由「贝叶斯定理」与「条件独立假设」两个动作叠加而成，再利用分母与类别无关把后验比较化为连乘比较。",
+     "partial": 2
+    },
+    {
+     "text": "分述①符号约定：训练数据集 $T=\\{(x_1,y_1),(x_2,y_2),\\ldots,(x_n,y_n)\\}$，由 $P(X,Y)$ 独立同分布产生；其中 $X=\\{x_1,x_2,\\ldots,x_n\\}$ 为 $n$ 维向量的集合，$Y=\\{c_1,c_2,\\ldots,c_k\\}$，$K$ 为类别数。",
+     "partial": 2
+    },
+    {
+     "text": "分述②式(2)：贝叶斯定理给出后验：对给定的输入 $x$，计算后验概率分布并将后验概率最大的类作为输出：\n$$\nP(Y=c_k|X=x)=\\frac{P(X=x,Y=c_k)\\,P(Y=c_k)}{\\displaystyle\\sum_{k=1}^{K}P(X=x,Y=c_k)\\,P(Y=c_k)}\n$$",
+     "partial": 3
+    },
+    {
+     "text": "分述③式(1)：施加条件独立假设：朴素贝叶斯假设给定类别时各特征条件独立，即 $P(X=x,Y=c_k)=\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)$，代入式(2) 得\n$$\nP(Y=c_k|X=x)=\\frac{\\displaystyle\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)}{\\displaystyle\\sum_{k=1}^{K}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)}\n$$",
+     "partial": 3
+    },
+    {
+     "text": "分述④分母可约与分类器式：分母是对**所有类求和后**得到的整体归一化项（它不是「每个类都一样」的逐项常数），但正因为它与当前比较的类别无关，取 $\\arg\\max$ 时仍然可以整体约去，于是**贝叶斯分类器**可以表示为\n$$\ny=f(x)=\\arg\\max_{c_k}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)\n$$\n等价的判别准则写法是 $y=\\arg\\max_{c_k}P(Y=c_k)\\prod_{j=1}^{n}P\\left(X_j=x^{(j)}|Y=c_k\\right)$（只是先验项与连乘项的书写顺序不同）；**后验概率最大等价于 0-1 损失函数时的期望风险最小化**，这为该判别准则提供了理论依据。\n---",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": "四部分各占分值；④若未说明「分母是整体归一化项但与类别无关」扣 1 分。（04 P13–P17）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "人类从未死记硬背苹果的「标准答案」——能瞬间识别红苹果、青苹果与抽象符号，却说不出精确的直径或曲率公式，这说明智能的核心不在「存储答案」，而在（001 P5）",
+   "options": [
+    "存储信息的精确程度",
+    "数据的规模",
+    "计算的速度",
+    "提取规律"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "面对真实的红苹果、青涩的青苹果、抽象的苹果符号，人类都能瞬间识别，却背不出苹果的直径、曲率或体积的精确数学公式，说不出红苹果 RGB 值的确定范围——这说明智能的核心不在「存储答案」而在「**提取规律**」。A 项与事实相反；C、B 均属算力与数据层面的条件，不是认知机制层面的结论。（001 P5）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "关于决定系数 $R^{2}$ 与均方误差 $MSE$，正确的说法是（02 P31）",
+   "options": [
+    "二者都是越小越好",
+    "二者都是越大越好",
+    "$R^{2}$ 越接近 1 说明拟合越好，而 $MSE$ 是越小越好",
+    "$R^{2}$ 越小越好，而 $MSE$ 越大越好"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "$R^{2}(y,\\hat{y})=1-\\frac{\\sum\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}}{\\sum\\left(y^{(i)}-\\bar{y}\\right)^{2}}=\\frac{SSR}{SST}=1-\\frac{SSE}{SST}$，**$R^{2}$ 越接近于 1，说明模型拟合得越好**；而 $MSE=\\frac{1}{m}\\sum\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}$ 是越小越好。⚠️易错点：$R^{2}$ 与 $MSE$ 在同一批数据下满足 $R^{2}=1-\\frac{MSE}{Var}$，因此两者方向相反，不要记混。（02 P31）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "在逻辑回归中，当正则化系数 $\\lambda$ 的值开始上升时（03 P18；05 P31）",
+   "options": [
+    "方差降低",
+    "偏差降低",
+    "噪声增大",
+    "经验风险与泛化误差一定同时变差"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件在 03 P18 明确给出「**当 $\\lambda$ 的值开始上升时，降低了方差**」；05 P31 的模型复杂度—误差关系图也显示：随着模型复杂度增加，方差逐渐增大、偏差逐渐减小，在虚线处（最恰当的复杂度）二者都适度，才能「适度拟合」。⚠️易错点：$\\lambda$ 不是越大越好——正则化**过度**会导致欠拟合；D 项把「训练侧的限制」误当成泛化结论。（03 P18；05 P31）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "贝叶斯分类器中，把后验概率表达式里的分母处理掉的正确理由是（04 P17）",
+   "options": [
+    "分母对每个候选类都不同，必须逐类计算",
+    "分母就等于先验概率，应单独计入",
+    "分母必须保留，否则各类概率之和不再等于 1",
+    "分母只是归一化常数，与当前比较的类别无关，取 $\\arg\\max$ 时可整体约去"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "式(2) 的分母是对**所有类求和后**得到的整体归一化项，它不是「每个类都一样」的逐项常数；但正因为它与当前比较的类别无关，取 $\\arg\\max$ 时仍然可以整体约去，从而得到贝叶斯分类器 $y=f(x)=\\arg\\max_{c_k}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)$。A 项与事实相反；C 项把「分类时的比较」与「概率的归一化要求」混为一谈——分类只需比较，不需要输出归一化后的概率；B 项把分母误认为先验。（04 P17）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "某风控任务共 1000 条样本，正类（违约）100 条。某模型对违约样本判对 80 条（漏判 20 条），把正常样本误判为违约 5 条。该模型仅看 Accuracy 会（05 P12–P14）",
+   "options": [
+    "高估了模型对少数类的识别能力，应同时看 Precision 与 Recall",
+    "低估了模型的实际性能",
+    "与 Precision、Recall 反映的信息完全等价",
+    "无法计算，因为正负样本比例悬殊"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "由 $TP=80$、$FN=20$、$FP=5$、$TN=895$ 得 $Accuracy=\\frac{TP+TN}{TP+TN+FP+FN}=\\frac{80+895}{1000}=0.975$；而 $Recall=\\frac{TP}{TP+FN}=\\frac{80}{100}=0.8$、$Precision=\\frac{TP}{TP+FP}=\\frac{80}{85}\\approx 0.941$。Accuracy 的分母含全部样本，少数类（违约）的错误被大量多数类样本「淹没」，因此 0.975 的高分**高估了模型对少数类的识别能力**，必须同时看 Precision 与 Recall。D 项的混淆矩阵数据齐全，Accuracy 可以计算。（05 P12–P14）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-single-6",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "逻辑回归输出概率后，若把判决阈值由 0.5 提高到 0.7，则在混淆矩阵中通常会（03 P8；05 P15）",
+   "options": [
+    "$FP$ 减少、$FN$ 增加",
+    "$FP$ 增加、$FN$ 减少",
+    "$FP$ 与 $FN$ 同时减少",
+    "$TP$ 与 $TN$ 同时增加"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "判决规则是「$\\sigma(z)\\ge 0.5$ 预测 $y=1$，小于 $0.5$ 预测 $y=0$」。阈值提高意味着需要更高的置信度才判为正例，于是**判为正例的更少**：误报（$FP$，把负例判成正例）减少，而漏报（$FN$，把正例判成负例）增加。课件指出 ROC 与 PR 曲线都是通过**改变分类阈值**得到的一族点连成的曲线，混淆矩阵对应阈值取定后的某一个点——这正是不平衡任务中「按业务代价调阈值」的依据。（03 P8；05 P15）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-single-7",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "某模型的训练误差为 0.02，交叉验证集误差为 0.35。按学习曲线诊断规则，应当（05 P35、P36）",
+   "options": [
+    "判为高偏差，应尝试增加正则化程度 $\\lambda$",
+    "判为高方差，应尝试减少特征数量或增大 $\\lambda$",
+    "判为高偏差，应尝试减少特征数量",
+    "判为高方差，应尝试增加多项式特征"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "交叉验证集误差（0.35）**远大于**训练集误差（0.02），对应**方差／过拟合**；治高方差的三条处方是获得更多的训练实例、尝试减少特征的数量、尝试增加正则化程度 $\\lambda$。A、C 项方向相反（$\\lambda$ 增大治方差、减小治偏差；更多特征与多项式特征治偏差）；D 项「增加多项式特征」解决的是高偏差。（05 P35、P36）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-single-9",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "某业务场景中「漏掉一个正例的代价远大于误判一个负例」，按第 6 章的定义，最应重点关注的是（05 P12–P14）",
+   "options": [
+    "$FN$ 尽可能小（即 $Recall=\\frac{TP}{TP+FN}$ 尽可能大）",
+    "$FP$ 尽可能小",
+    "$TN$ 尽可能大",
+    "$Accuracy$ 尽可能大"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "$Recall=\\frac{TP}{TP+FN}$，分母是**实际为正例**的数量，因此「不漏掉正例」正对应 $FN$ 尽可能小、$Recall$ 尽可能大。B 项对应的是精确率诉求（$FP$ 最小）；C 项 $TN$ 属于负例侧的信息；D 项在不平衡场景下会被多数类淹没（见第 5 题）。在 sklearn 中可通过 `metrics.confusion_matrix` 取得混淆矩阵，结合 `metrics.precision_score`、`metrics.f1_score` 等一起评估。（05 P12–P14；06 P23–P24）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-single-10",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "下列 sklearn 评价函数与指标的对应中，**错误**的一项是（06 P22–P24）",
+   "options": [
+    "`metrics.r2_score()` 对应决定系数 $R^{2}$",
+    "`metrics.mean_squared_error()` 对应均方误差 MSE",
+    "`metrics.accuracy_score()` 对应召回率 Recall",
+    "`metrics.f1_score()` 对应 F1 值"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "分类模型评价的对应关系为：`metrics.accuracy_score()` → **正确率 Accuracy**、`metrics.precision_score()` → 各类精确率、`metrics.f1_score()` → F1 值、`metrics.log_loss()` → 对数损失或交叉熵损失、`metrics.confusion_matrix` → 混淆矩阵、`metrics.classification_report` → 含多种评价的分类报告；回归模型评价为 `metrics.mean_absolute_error()` → MAE、`metrics.mean_squared_error()` → MSE、`metrics.r2_score()` → $R^{2}$。因此把 `accuracy_score` 说成对应 Recall 是错误的。（06 P22–P24）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "在评估模型好坏时，课件强调应关注训练误差与测试误差是否 ______。（01 P27）",
+   "options": null,
+   "answer": [
+    "接近一致"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "一般来说，若我们模型学习的效果好，则**训练误差和测试误差接近一致**。⚠️易错点：评估模型好坏要看训练误差与测试误差是否接近一致，而不是训练误差越小越好。（01 P27）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "接近一致"
+   ]
+  },
+  {
+   "id": "ml-s4-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "$R^{2}=1-\\dfrac{SSE}{SST}$ 中，$SSE$ 表示 ______。（02 P31）",
+   "options": null,
+   "answer": [
+    "误差平方和（真实值与预测值之差的平方和）"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "$SSE=\\sum_{i=1}^{m}\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^{2}$；与之配套的还有 $SSR=\\sum_{i=1}^{m}\\left(\\hat{y}^{(i)}-\\bar{y}\\right)^{2}$（回归平方和）与 $SST=\\sum_{i=1}^{m}\\left(y^{(i)}-\\bar{y}\\right)^{2}$（总平方和），满足 $R^{2}=\\frac{SSR}{SST}=1-\\frac{SSE}{SST}$。（02 P31）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "误差平方和（真实值与预测值之差的平方和）",
+    "误差平方和"
+   ]
+  },
+  {
+   "id": "ml-s4-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "逻辑回归中正则化项的系数为 $\\dfrac{\\lambda}{2m}$，其目的是防止 ______。（03 P18）",
+   "options": null,
+   "answer": [
+    "过拟合"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "正则化的目的是为了防止过拟合，课件给出的逻辑回归正则化代价函数为 $J(w)=\\frac{1}{m}\\sum_{i=1}^{m}\\left[\\cdots\\right]+\\frac{\\lambda}{2m}\\sum_{j=1}^{n}w_j^{2}$；三种正则化强度下的模型状态为：没有正则化→**过拟合**，正则化过度→**欠拟合**，适当的正则化→目标状态。（03 P18）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "过拟合"
+   ]
+  },
+  {
+   "id": "ml-s4-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "随机搜索 `RandomizedSearchCV` 在参数子空间中随机采样，其优势是时间耗费较少、______。（06 P27）",
+   "options": null,
+   "answer": [
+    "更容易找到参数空间中的局部最优"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "网格搜索在参数网格上**穷举**，方法简单但搜索速度慢（超参数较多时），且**不容易**找到参数空间中的局部最优；随机搜索在参数子空间中**进行随机搜索**，时间耗费较少、**更容易找到局部最优**，并可从 `scipy.stats` 的常见分布（如正态分布 `norm`、均匀分布 `uniform`）中随机采样。（06 P26、P27）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "更容易找到参数空间中的局部最优"
+   ]
+  },
+  {
+   "id": "ml-s4-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "sklearn 中输出每个样本属于各类概率的方法是 ______，它在画 ROC/PR 曲线、调分类阈值时使用。（06 P16）",
+   "options": null,
+   "answer": [
+    "`predict_proba`"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "`predict(X_test)` 返回每个样本的**预测类别标签**；`predict_proba(X_test)` 返回每个样本属于各类的**概率**，用于画 ROC/PR 曲线、调分类阈值、与其他模型比较。⚠️易错点：只有**支持输出概率**的分类器才有 `predict_proba`；`y_pred` 是标签、`y_prob` 才是概率。（06 P16）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "`predict_proba`"
+   ]
+  },
+  {
+   "id": "ml-s4-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "说明机器学习「能解决」与「不能解决」的问题各是什么，并写出「可以解决」情形的三个环节。（01 P11）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：逻辑回归 = 线性模型 + Sigmoid，是可解释性最强的二分类器，其工作链条完整而闭合。\n分述①为什么需要 Sigmoid：线性回归的函数 $h(x)=z=w^{T}x$ 范围是 $(-\\infty,+\\infty)$，而**分类预测结果需要得到 $[0,1]$ 的概率值**——这正是引入 Sigmoid 的原因。若写为 $h(x)=z=w_0+w_1x_1+\\cdots+w_nx_n+b=w^{T}x+b$，则 $b$ 可以融入 $w_0$，写成 $z=w^{T}x$。\n分述②从 odds 推出 Sigmoid：在二分类模型中，事件的几率 odds 是事件发生与不发生的概率之比 $\\frac{p}{1-p}$（其中 $p\\in[0,1]$）。取对数并令它等于线性输出：$log\\frac{p}{1-p}=w^{T}x=z$；求解 $p$ 得 $p=\\frac{1}{1+e^{-w^{T}x}}=\\frac{1}{1+e^{-z}}$。必背：**「先线性、再取 Sigmoid」的来源就是把 $log\\frac{p}{1-p}$ 直接赋成 $w^{T}x$**。同时记 $g'(z)=g(z)(1-g(z))$，它是后续求导能塌缩的关键。\n分述③判决规则与代价函数来源：判决规则：$\\sigma(z)\\ge 0.5$ 预测 $y=1$，小于 $0.5$ 预测 $y=0$。代价函数由似然出发：似然函数 → 两边取对数（连乘号变连加号）得对数似然 $l(w)$ → 取负号并除以 $m$ 得 $J(w)=-\\frac{1}{m}l(w)$，即交叉熵（对数损失）代价函数。⚠️易错点：对数似然要最大化、代价函数要最小化，所以差一个负号；$l(w)$ 中两项之间是加号，取负号展开后才变成 $L(y,h(x))$ 形式的减号。\n分述④梯度更新式及其与线性回归的联系：代价函数对 $w_j$ 求导得 $\\frac{\\partial}{\\partial w_j}J(w)=\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$，故更新式为 $w_j:=w_j-\\alpha\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$——**与线性回归的批量梯度下降更新式长得一模一样**。但⚠️易错点：**更新式相同、代价函数不同**（一个是平方和损失、一个是对数损失）；且逻辑回归**不能**用最小二乘法求解，因为最小二乘法只适用于线性模型。联系在于「线性部分 $w^{T}x$ 与梯度形式」，区别在于「输出经 Sigmoid 压成概率」与「用交叉熵而非平方和度量误差」。\n分述⑤「输出概率、阈值可调」的实际价值：因为输出的是每个样本的**概率分数**，可以很容易地按阈值划分（大于某阈值是一类，小于某阈值是另一类）。这带来三方面实际价值：① 可按业务对两类错误的不同代价灵活调阈值（代价敏感场景）；② 可画出 ROC/PR 曲线横向比较模型；③ 可与上游风控/推荐系统按风险等级分档对接——这是逻辑回归区别于硬分类模型的地方。",
+   "points": [
+    {
+     "text": "总起：逻辑回归 = 线性模型 + Sigmoid，是可解释性最强的二分类器，其工作链条完整而闭合。",
+     "partial": 3
+    },
+    {
+     "text": "分述①为什么需要 Sigmoid：线性回归的函数 $h(x)=z=w^{T}x$ 范围是 $(-\\infty,+\\infty)$，而**分类预测结果需要得到 $[0,1]$ 的概率值**——这正是引入 Sigmoid 的原因。若写为 $h(x)=z=w_0+w_1x_1+\\cdots+w_nx_n+b=w^{T}x+b$，则 $b$ 可以融入 $w_0$，写成 $z=w^{T}x$。",
+     "partial": 3
+    },
+    {
+     "text": "分述②从 odds 推出 Sigmoid：在二分类模型中，事件的几率 odds 是事件发生与不发生的概率之比 $\\frac{p}{1-p}$（其中 $p\\in[0,1]$）。取对数并令它等于线性输出：$log\\frac{p}{1-p}=w^{T}x=z$；求解 $p$ 得 $p=\\frac{1}{1+e^{-w^{T}x}}=\\frac{1}{1+e^{-z}}$。必背：**「先线性、再取 Sigmoid」的来源就是把 $log\\frac{p}{1-p}$ 直接赋成 $w^{T}x$**。同时记 $g'(z)=g(z)(1-g(z))$，它是后续求导能塌缩的关键。",
+     "partial": 4
+    },
+    {
+     "text": "分述③判决规则与代价函数来源：判决规则：$\\sigma(z)\\ge 0.5$ 预测 $y=1$，小于 $0.5$ 预测 $y=0$。代价函数由似然出发：似然函数 → 两边取对数（连乘号变连加号）得对数似然 $l(w)$ → 取负号并除以 $m$ 得 $J(w)=-\\frac{1}{m}l(w)$，即交叉熵（对数损失）代价函数。⚠️易错点：对数似然要最大化、代价函数要最小化，所以差一个负号；$l(w)$ 中两项之间是加号，取负号展开后才变成 $L(y,h(x))$ 形式的减号。",
+     "partial": 4
+    },
+    {
+     "text": "分述④梯度更新式及其与线性回归的联系：代价函数对 $w_j$ 求导得 $\\frac{\\partial}{\\partial w_j}J(w)=\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$，故更新式为 $w_j:=w_j-\\alpha\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$——**与线性回归的批量梯度下降更新式长得一模一样**。但⚠️易错点：**更新式相同、代价函数不同**（一个是平方和损失、一个是对数损失）；且逻辑回归**不能**用最小二乘法求解，因为最小二乘法只适用于线性模型。联系在于「线性部分 $w^{T}x$ 与梯度形式」，区别在于「输出经 Sigmoid 压成概率」与「用交叉熵而非平方和度量误差」。",
+     "partial": 3
+    },
+    {
+     "text": "分述⑤「输出概率、阈值可调」的实际价值：因为输出的是每个样本的**概率分数**，可以很容易地按阈值划分（大于某阈值是一类，小于某阈值是另一类）。这带来三方面实际价值：① 可按业务对两类错误的不同代价灵活调阈值（代价敏感场景）；② 可画出 ROC/PR 曲线横向比较模型；③ 可与上游风控/推荐系统按风险等级分档对接——这是逻辑回归区别于硬分类模型的地方。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": "五部分各占分值；④⑤为易错与得分点。（03 P8–P19；02 P14、P15）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "写出 L1、L2 与弹性网络三种正则化的完整形式，并说明其中 $\\lambda$ 与 $\\rho$ 各自的作用方向。（02 P27、P28）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：类别不平衡的分类任务，评价与调优必须围绕「少数类是否被识别」来组织。\n分述①数据划分：按训练／验证／测试集划分：训练集确定拟合曲线参数；验证集（开发集）做模型选择与训练超参数，**可选**；测试集测试已训练好模型的精确度。比例：机器学习常用 60%/20%/20% 或 70%/10%/20%；深度学习 98%/1%/1% 的前提是**百万级数据**，小数据集照搬会导致验证集过小。数据量不足时更依赖**交叉验证**（训练 $k$ 个模型 → 算交叉验证误差 → 选取代价函数值最小的模型 → 算测试集上的推广误差），注意交叉验证误差用于选模型、推广误差是对测试集算的，两者不要混称。\n分述②指标选择：$Accuracy=\\frac{TP+TN}{TP+TN+FP+FN}$ 的分母是全部样本，在正负比例悬殊时少数类的错误会被淹没，从而**高估**模型；必须配合 $Precision=\\frac{TP}{TP+FP}$（分母为「预测为正例」的数量）、$Recall=\\frac{TP}{TP+FN}$（分母为「实际为正例」的数量）与 $F1=\\frac{2\\times Precision\\times Recall}{Precision+Recall}$。选择取决于业务代价：漏掉正例代价高（如风控）就以 Recall 为主并牺牲部分 Precision；误报代价高则以 Precision 为主。混淆矩阵行是实际值、列是预测值，看反行会把 FP 当成 FN。\n分述③不平衡的处理方法及其代价：**采样**（分欠采样、过采样和综合采样）——其中 **SMOTE** 是过采样中比较常用的一种，思想是**合成新的少数类样本，而不是简单地复制样本**；**代价敏感学习**——为不同类别的样本提供不同的权重，让模型更专注于少类样本，代价是**提高对少类样本分类的查全率、但降低查准率**（会把很多多类样本分类为少类样本），两者存在权衡。\n分述④定位问题并对症下药：用学习曲线诊断：训练误差与交叉验证误差**近似** → 高偏差/欠拟合 → 获取更多特征、增加多项式特征、减小 $\\lambda$；交叉验证误差**远大于**训练误差 → 高方差/过拟合 → 获得更多训练实例、减少特征数量、增大 $\\lambda$。其理论依据是泛化误差的分解 $E(f;D)=bias^{2}(x)+var(x)+\\varepsilon^{2}$：随着模型复杂度增加，方差逐渐增大、偏差逐渐减小，在「适度拟合」处取得平衡。若要进一步压缩方差，还可叠加 Dropout（功能类似于 $L_2$ 正则化，**训练阶段使用、测试阶段不使用**，keep-prob=0.5 为常用取值）与 Early stopping（提早停止训练，无需尝试 $L_2$ 超参数 $\\lambda$ 的很多值）。\n---",
+   "points": [
+    {
+     "text": "总起：类别不平衡的分类任务，评价与调优必须围绕「少数类是否被识别」来组织。",
+     "partial": 3
+    },
+    {
+     "text": "分述①数据划分：按训练／验证／测试集划分：训练集确定拟合曲线参数；验证集（开发集）做模型选择与训练超参数，**可选**；测试集测试已训练好模型的精确度。比例：机器学习常用 60%/20%/20% 或 70%/10%/20%；深度学习 98%/1%/1% 的前提是**百万级数据**，小数据集照搬会导致验证集过小。数据量不足时更依赖**交叉验证**（训练 $k$ 个模型 → 算交叉验证误差 → 选取代价函数值最小的模型 → 算测试集上的推广误差），注意交叉验证误差用于选模型、推广误差是对测试集算的，两者不要混称。",
+     "partial": 3
+    },
+    {
+     "text": "分述②指标选择：$Accuracy=\\frac{TP+TN}{TP+TN+FP+FN}$ 的分母是全部样本，在正负比例悬殊时少数类的错误会被淹没，从而**高估**模型；必须配合 $Precision=\\frac{TP}{TP+FP}$（分母为「预测为正例」的数量）、$Recall=\\frac{TP}{TP+FN}$（分母为「实际为正例」的数量）与 $F1=\\frac{2\\times Precision\\times Recall}{Precision+Recall}$。选择取决于业务代价：漏掉正例代价高（如风控）就以 Recall 为主并牺牲部分 Precision；误报代价高则以 Precision 为主。混淆矩阵行是实际值、列是预测值，看反行会把 FP 当成 FN。",
+     "partial": 4
+    },
+    {
+     "text": "分述③不平衡的处理方法及其代价：**采样**（分欠采样、过采样和综合采样）——其中 **SMOTE** 是过采样中比较常用的一种，思想是**合成新的少数类样本，而不是简单地复制样本**；**代价敏感学习**——为不同类别的样本提供不同的权重，让模型更专注于少类样本，代价是**提高对少类样本分类的查全率、但降低查准率**（会把很多多类样本分类为少类样本），两者存在权衡。",
+     "partial": 4
+    },
+    {
+     "text": "分述④定位问题并对症下药：用学习曲线诊断：训练误差与交叉验证误差**近似** → 高偏差/欠拟合 → 获取更多特征、增加多项式特征、减小 $\\lambda$；交叉验证误差**远大于**训练误差 → 高方差/过拟合 → 获得更多训练实例、减少特征数量、增大 $\\lambda$。其理论依据是泛化误差的分解 $E(f;D)=bias^{2}(x)+var(x)+\\varepsilon^{2}$：随着模型复杂度增加，方差逐渐增大、偏差逐渐减小，在「适度拟合」处取得平衡。若要进一步压缩方差，还可叠加 Dropout（功能类似于 $L_2$ 正则化，**训练阶段使用、测试阶段不使用**，keep-prob=0.5 为常用取值）与 Early stopping（提早停止训练，无需尝试 $L_2$ 超参数 $\\lambda$ 的很多值）。\n---",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": "四部分各占分值；②中「Accuracy 会高估」与③中「加权少类→查全率↑、查准率↓」是两处关键得分点。（05 P4–P8、P12–P14、P32–P36；06 P10）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-short-3",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "说明朴素贝叶斯的三种分类器各自假设特征条件概率分布服从什么分布，并指出 GaussianNB 最本质的特点以及它需要估计的参数。（04 P27）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：三种分类器的区别只在于「对哪个分布建模」，训练与预测的流程完全一样（04 P27）。\n分述①三种分类器及其分布假设：`GaussianNB` 假设特征条件概率分布服从**高斯分布（正态分布）**，是最常用的贝叶斯分类器；`MultinomialNB` 假设服从**多项式分布**；`BernoulliNB` 假设服从**二项分布**。\n分述②GaussianNB 的公式与最本质特点：高斯条件概率为\n$$\nP\\left(X^{(j)}|y=c_k\\right)=\\frac{1}{\\sqrt{2\\pi\\sigma_k^{2}}}\\exp\\left(-\\frac{\\left(X^{(j)}-\\mu_k\\right)^{2}}{2\\sigma_k^{2}}\\right)\n$$\n最本质的区别在于 $\\mu_k$、$\\sigma_k^{2}$ 带**类别下标 $k$**，即**每类有各自的均值与方差**。\n分述③需要估计的参数：由 `fit` 用训练数据估计各类的 $\\mu_k$、$\\sigma_k$，其中方差为 $\\sigma^{2}=\\frac{\\sum(X-\\mu)^{2}}{N}$；随后 `predict` 用分类器式输出类别、`_score` 给出评分。",
+   "points": [
+    {
+     "text": "总起：三种分类器的区别只在于「对哪个分布建模」，训练与预测的流程完全一样（04 P27）。",
+     "partial": 2
+    },
+    {
+     "text": "分述①三种分类器及其分布假设：`GaussianNB` 假设特征条件概率分布服从**高斯分布（正态分布）**，是最常用的贝叶斯分类器；`MultinomialNB` 假设服从**多项式分布**；`BernoulliNB` 假设服从**二项分布**。",
+     "partial": 4
+    },
+    {
+     "text": "分述②GaussianNB 的公式与最本质特点：高斯条件概率为\n$$\nP\\left(X^{(j)}|y=c_k\\right)=\\frac{1}{\\sqrt{2\\pi\\sigma_k^{2}}}\\exp\\left(-\\frac{\\left(X^{(j)}-\\mu_k\\right)^{2}}{2\\sigma_k^{2}}\\right)\n$$\n最本质的区别在于 $\\mu_k$、$\\sigma_k^{2}$ 带**类别下标 $k$**，即**每类有各自的均值与方差**。",
+     "partial": 4
+    },
+    {
+     "text": "分述③需要估计的参数：由 `fit` 用训练数据估计各类的 $\\mu_k$、$\\sigma_k$，其中方差为 $\\sigma^{2}=\\frac{\\sum(X-\\mu)^{2}}{N}$；随后 `predict` 用分类器式输出类别、`_score` 给出评分。",
+     "partial": 2
+    }
+   ],
+   "explanation": "",
+   "misconception": "分布假设 4 分、公式与下标 4 分、参数估计 2 分。（04 P27、P29）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-short-4",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "说明学习曲线的两种诊断情形及对应结论，并从课件给出的 6 条处方中分别指出治高方差与高偏差的各三条。（05 P35、P36）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：诊断看训练误差与验证误差的**相对关系**，处方则按诊断结论对症下药。\n分述①诊断规则：训练集误差和交叉验证集误差**近似**时 → **偏差／欠拟合 (Underfitting)**；交叉验证集误差**远大于**训练集误差时 → **方差／过拟合 (Overfitting)**。课件图中三者标注为 Underfitting / Good fit / Overfitting。\n分述②治高方差的三条：获得更多的训练实例；尝试减少特征的数量；尝试**增加**正则化程度 $\\lambda$。\n分述③治高偏差的三条：尝试获得更多的特征；尝试增加多项式特征；尝试**减少**正则化程度 $\\lambda$。\n分述④$\\lambda$ 方向提醒：$\\lambda$ **增大治方差、减小治偏差**；与「正则化总是防过拟合」结合时要特别想清方向。补充理解：随着模型复杂度增加，方差逐渐增大、偏差逐渐减小，在虚线处（最恰当的复杂度）二者都适度，才能「适度拟合」。",
+   "points": [
+    {
+     "text": "总起：诊断看训练误差与验证误差的**相对关系**，处方则按诊断结论对症下药。",
+     "partial": 2
+    },
+    {
+     "text": "分述①诊断规则：训练集误差和交叉验证集误差**近似**时 → **偏差／欠拟合 (Underfitting)**；交叉验证集误差**远大于**训练集误差时 → **方差／过拟合 (Overfitting)**。课件图中三者标注为 Underfitting / Good fit / Overfitting。",
+     "partial": 4
+    },
+    {
+     "text": "分述②治高方差的三条：获得更多的训练实例；尝试减少特征的数量；尝试**增加**正则化程度 $\\lambda$。",
+     "partial": 3
+    },
+    {
+     "text": "分述③治高偏差的三条：尝试获得更多的特征；尝试增加多项式特征；尝试**减少**正则化程度 $\\lambda$。",
+     "partial": 3
+    },
+    {
+     "text": "分述④$\\lambda$ 方向提醒：$\\lambda$ **增大治方差、减小治偏差**；与「正则化总是防过拟合」结合时要特别想清方向。补充理解：随着模型复杂度增加，方差逐渐增大、偏差逐渐减小，在虚线处（最恰当的复杂度）二者都适度，才能「适度拟合」。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": "诊断 4 分、处方各 3 分、方向提醒 3 分。（05 P35、P36）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-essay-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "论述逻辑回归作为二分类方法的完整工作方式：为什么需要 Sigmoid、从 odds 推出 Sigmoid 的推导、判决规则、代价函数的来源、梯度更新式；并说明「输出概率、阈值可调」这一优点带来的实际价值，以及它与线性回归的联系与区别。（03 P8–P18；02 P15）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：逻辑回归 = 线性模型 + Sigmoid，是可解释性最强的二分类器，其工作链条完整而闭合。\n分述①为什么需要 Sigmoid：线性回归的函数 $h(x)=z=w^{T}x$ 范围是 $(-\\infty,+\\infty)$，而**分类预测结果需要得到 $[0,1]$ 的概率值**——这正是引入 Sigmoid 的原因。若写为 $h(x)=z=w_0+w_1x_1+\\cdots+w_nx_n+b=w^{T}x+b$，则 $b$ 可以融入 $w_0$，写成 $z=w^{T}x$。\n分述②从 odds 推出 Sigmoid：在二分类模型中，事件的几率 odds 是事件发生与不发生的概率之比 $\\frac{p}{1-p}$（其中 $p\\in[0,1]$）。取对数并令它等于线性输出：$log\\frac{p}{1-p}=w^{T}x=z$；求解 $p$ 得 $p=\\frac{1}{1+e^{-w^{T}x}}=\\frac{1}{1+e^{-z}}$。必背：**「先线性、再取 Sigmoid」的来源就是把 $log\\frac{p}{1-p}$ 直接赋成 $w^{T}x$**。同时记 $g'(z)=g(z)(1-g(z))$，它是后续求导能塌缩的关键。\n分述③判决规则与代价函数来源：判决规则：$\\sigma(z)\\ge 0.5$ 预测 $y=1$，小于 $0.5$ 预测 $y=0$。代价函数由似然出发：似然函数 → 两边取对数（连乘号变连加号）得对数似然 $l(w)$ → 取负号并除以 $m$ 得 $J(w)=-\\frac{1}{m}l(w)$，即交叉熵（对数损失）代价函数。⚠️易错点：对数似然要最大化、代价函数要最小化，所以差一个负号；$l(w)$ 中两项之间是加号，取负号展开后才变成 $L(y,h(x))$ 形式的减号。\n分述④梯度更新式及其与线性回归的联系：代价函数对 $w_j$ 求导得 $\\frac{\\partial}{\\partial w_j}J(w)=\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$，故更新式为 $w_j:=w_j-\\alpha\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$——**与线性回归的批量梯度下降更新式长得一模一样**。但⚠️易错点：**更新式相同、代价函数不同**（一个是平方和损失、一个是对数损失）；且逻辑回归**不能**用最小二乘法求解，因为最小二乘法只适用于线性模型。联系在于「线性部分 $w^{T}x$ 与梯度形式」，区别在于「输出经 Sigmoid 压成概率」与「用交叉熵而非平方和度量误差」。\n分述⑤「输出概率、阈值可调」的实际价值：因为输出的是每个样本的**概率分数**，可以很容易地按阈值划分（大于某阈值是一类，小于某阈值是另一类）。这带来三方面实际价值：① 可按业务对两类错误的不同代价灵活调阈值（代价敏感场景）；② 可画出 ROC/PR 曲线横向比较模型；③ 可与上游风控/推荐系统按风险等级分档对接——这是逻辑回归区别于硬分类模型的地方。",
+   "points": [
+    {
+     "text": "总起：逻辑回归 = 线性模型 + Sigmoid，是可解释性最强的二分类器，其工作链条完整而闭合。",
+     "partial": 3
+    },
+    {
+     "text": "分述①为什么需要 Sigmoid：线性回归的函数 $h(x)=z=w^{T}x$ 范围是 $(-\\infty,+\\infty)$，而**分类预测结果需要得到 $[0,1]$ 的概率值**——这正是引入 Sigmoid 的原因。若写为 $h(x)=z=w_0+w_1x_1+\\cdots+w_nx_n+b=w^{T}x+b$，则 $b$ 可以融入 $w_0$，写成 $z=w^{T}x$。",
+     "partial": 3
+    },
+    {
+     "text": "分述②从 odds 推出 Sigmoid：在二分类模型中，事件的几率 odds 是事件发生与不发生的概率之比 $\\frac{p}{1-p}$（其中 $p\\in[0,1]$）。取对数并令它等于线性输出：$log\\frac{p}{1-p}=w^{T}x=z$；求解 $p$ 得 $p=\\frac{1}{1+e^{-w^{T}x}}=\\frac{1}{1+e^{-z}}$。必背：**「先线性、再取 Sigmoid」的来源就是把 $log\\frac{p}{1-p}$ 直接赋成 $w^{T}x$**。同时记 $g'(z)=g(z)(1-g(z))$，它是后续求导能塌缩的关键。",
+     "partial": 4
+    },
+    {
+     "text": "分述③判决规则与代价函数来源：判决规则：$\\sigma(z)\\ge 0.5$ 预测 $y=1$，小于 $0.5$ 预测 $y=0$。代价函数由似然出发：似然函数 → 两边取对数（连乘号变连加号）得对数似然 $l(w)$ → 取负号并除以 $m$ 得 $J(w)=-\\frac{1}{m}l(w)$，即交叉熵（对数损失）代价函数。⚠️易错点：对数似然要最大化、代价函数要最小化，所以差一个负号；$l(w)$ 中两项之间是加号，取负号展开后才变成 $L(y,h(x))$ 形式的减号。",
+     "partial": 4
+    },
+    {
+     "text": "分述④梯度更新式及其与线性回归的联系：代价函数对 $w_j$ 求导得 $\\frac{\\partial}{\\partial w_j}J(w)=\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$，故更新式为 $w_j:=w_j-\\alpha\\frac{1}{m}\\sum_{i=1}^{m}\\left(h(x^{(i)})-y^{(i)}\\right)x_j^{(i)}$——**与线性回归的批量梯度下降更新式长得一模一样**。但⚠️易错点：**更新式相同、代价函数不同**（一个是平方和损失、一个是对数损失）；且逻辑回归**不能**用最小二乘法求解，因为最小二乘法只适用于线性模型。联系在于「线性部分 $w^{T}x$ 与梯度形式」，区别在于「输出经 Sigmoid 压成概率」与「用交叉熵而非平方和度量误差」。",
+     "partial": 3
+    },
+    {
+     "text": "分述⑤「输出概率、阈值可调」的实际价值：因为输出的是每个样本的**概率分数**，可以很容易地按阈值划分（大于某阈值是一类，小于某阈值是另一类）。这带来三方面实际价值：① 可按业务对两类错误的不同代价灵活调阈值（代价敏感场景）；② 可画出 ROC/PR 曲线横向比较模型；③ 可与上游风控/推荐系统按风险等级分档对接——这是逻辑回归区别于硬分类模型的地方。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": "五部分各占分值；④⑤为易错与得分点。（03 P8–P19；02 P14、P15）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s4-essay-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第4套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "论述在一个类别不平衡的实际二分类任务中应如何设计评价与调优方案：数据划分、指标选择、不平衡的处理方法及其代价，以及当模型表现不佳时如何用学习曲线定位问题并对症下药。（05 P4–P8、P12–P14、P35–P36）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：类别不平衡的分类任务，评价与调优必须围绕「少数类是否被识别」来组织。\n分述①数据划分：按训练／验证／测试集划分：训练集确定拟合曲线参数；验证集（开发集）做模型选择与训练超参数，**可选**；测试集测试已训练好模型的精确度。比例：机器学习常用 60%/20%/20% 或 70%/10%/20%；深度学习 98%/1%/1% 的前提是**百万级数据**，小数据集照搬会导致验证集过小。数据量不足时更依赖**交叉验证**（训练 $k$ 个模型 → 算交叉验证误差 → 选取代价函数值最小的模型 → 算测试集上的推广误差），注意交叉验证误差用于选模型、推广误差是对测试集算的，两者不要混称。\n分述②指标选择：$Accuracy=\\frac{TP+TN}{TP+TN+FP+FN}$ 的分母是全部样本，在正负比例悬殊时少数类的错误会被淹没，从而**高估**模型；必须配合 $Precision=\\frac{TP}{TP+FP}$（分母为「预测为正例」的数量）、$Recall=\\frac{TP}{TP+FN}$（分母为「实际为正例」的数量）与 $F1=\\frac{2\\times Precision\\times Recall}{Precision+Recall}$。选择取决于业务代价：漏掉正例代价高（如风控）就以 Recall 为主并牺牲部分 Precision；误报代价高则以 Precision 为主。混淆矩阵行是实际值、列是预测值，看反行会把 FP 当成 FN。\n分述③不平衡的处理方法及其代价：**采样**（分欠采样、过采样和综合采样）——其中 **SMOTE** 是过采样中比较常用的一种，思想是**合成新的少数类样本，而不是简单地复制样本**；**代价敏感学习**——为不同类别的样本提供不同的权重，让模型更专注于少类样本，代价是**提高对少类样本分类的查全率、但降低查准率**（会把很多多类样本分类为少类样本），两者存在权衡。\n分述④定位问题并对症下药：用学习曲线诊断：训练误差与交叉验证误差**近似** → 高偏差/欠拟合 → 获取更多特征、增加多项式特征、减小 $\\lambda$；交叉验证误差**远大于**训练误差 → 高方差/过拟合 → 获得更多训练实例、减少特征数量、增大 $\\lambda$。其理论依据是泛化误差的分解 $E(f;D)=bias^{2}(x)+var(x)+\\varepsilon^{2}$：随着模型复杂度增加，方差逐渐增大、偏差逐渐减小，在「适度拟合」处取得平衡。若要进一步压缩方差，还可叠加 Dropout（功能类似于 $L_2$ 正则化，**训练阶段使用、测试阶段不使用**，keep-prob=0.5 为常用取值）与 Early stopping（提早停止训练，无需尝试 $L_2$ 超参数 $\\lambda$ 的很多值）。\n---",
+   "points": [
+    {
+     "text": "总起：类别不平衡的分类任务，评价与调优必须围绕「少数类是否被识别」来组织。",
+     "partial": 3
+    },
+    {
+     "text": "分述①数据划分：按训练／验证／测试集划分：训练集确定拟合曲线参数；验证集（开发集）做模型选择与训练超参数，**可选**；测试集测试已训练好模型的精确度。比例：机器学习常用 60%/20%/20% 或 70%/10%/20%；深度学习 98%/1%/1% 的前提是**百万级数据**，小数据集照搬会导致验证集过小。数据量不足时更依赖**交叉验证**（训练 $k$ 个模型 → 算交叉验证误差 → 选取代价函数值最小的模型 → 算测试集上的推广误差），注意交叉验证误差用于选模型、推广误差是对测试集算的，两者不要混称。",
+     "partial": 3
+    },
+    {
+     "text": "分述②指标选择：$Accuracy=\\frac{TP+TN}{TP+TN+FP+FN}$ 的分母是全部样本，在正负比例悬殊时少数类的错误会被淹没，从而**高估**模型；必须配合 $Precision=\\frac{TP}{TP+FP}$（分母为「预测为正例」的数量）、$Recall=\\frac{TP}{TP+FN}$（分母为「实际为正例」的数量）与 $F1=\\frac{2\\times Precision\\times Recall}{Precision+Recall}$。选择取决于业务代价：漏掉正例代价高（如风控）就以 Recall 为主并牺牲部分 Precision；误报代价高则以 Precision 为主。混淆矩阵行是实际值、列是预测值，看反行会把 FP 当成 FN。",
+     "partial": 4
+    },
+    {
+     "text": "分述③不平衡的处理方法及其代价：**采样**（分欠采样、过采样和综合采样）——其中 **SMOTE** 是过采样中比较常用的一种，思想是**合成新的少数类样本，而不是简单地复制样本**；**代价敏感学习**——为不同类别的样本提供不同的权重，让模型更专注于少类样本，代价是**提高对少类样本分类的查全率、但降低查准率**（会把很多多类样本分类为少类样本），两者存在权衡。",
+     "partial": 4
+    },
+    {
+     "text": "分述④定位问题并对症下药：用学习曲线诊断：训练误差与交叉验证误差**近似** → 高偏差/欠拟合 → 获取更多特征、增加多项式特征、减小 $\\lambda$；交叉验证误差**远大于**训练误差 → 高方差/过拟合 → 获得更多训练实例、减少特征数量、增大 $\\lambda$。其理论依据是泛化误差的分解 $E(f;D)=bias^{2}(x)+var(x)+\\varepsilon^{2}$：随着模型复杂度增加，方差逐渐增大、偏差逐渐减小，在「适度拟合」处取得平衡。若要进一步压缩方差，还可叠加 Dropout（功能类似于 $L_2$ 正则化，**训练阶段使用、测试阶段不使用**，keep-prob=0.5 为常用取值）与 Early stopping（提早停止训练，无需尝试 $L_2$ 超参数 $\\lambda$ 的很多值）。\n---",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": "四部分各占分值；②中「Accuracy 会高估」与③中「加权少类→查全率↑、查准率↓」是两处关键得分点。（05 P4–P8、P12–P14、P32–P36；06 P10）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "「学习驱动（联结主义）」路线的成功关键是（001 P7）",
+   "options": [
+    "工程师以「上帝视角」编写更严谨的逻辑规则",
+    "更强的专用算力",
+    "数据驱动与自主归纳",
+    "更深的逻辑规则树"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "「学习驱动（联结主义）」放弃人工编写规则，让机器像人类一样去「看」、去「学」，通过从海量数据中自主归纳特征而非依赖预设逻辑，其**成功关键是数据驱动与自主归纳**——不再依赖人类的「上帝视角」，机器从数据中自我进化，具备处理模糊、复杂现实信息的能力。A 项描述的正是与之对立的「规则驱动（符号主义）」路线；B 项把「算力」误当成该路线的成功关键（算力是 AI 爆发的两块基石之一，但不是「两条路线的分野」所在）；D 项是规则驱动路线的失败尝试。（001 P7）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "在多特征房价线性回归中，若「距地铁」这一特征的权重为负号，其物理含义是（003 P1）",
+   "options": [
+    "房子越老，房价越低",
+    "离地铁越远，房价越低",
+    "楼层越高，房价越低",
+    "面积越大，房价越低"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "多特征线性回归中 $w_3$（距地铁）取负号，表示**离地铁越远，房价越低**。四个权重的符号含义为：$w_1$（面积）正——面积越大房价越高；$w_2$（楼层）正——中高楼层通常更贵；$w_3$（距地铁）负；$w_4$（房龄）负——房子越老房价越低。A 项是 $w_4$ 的含义；C、D 项符号与课件相反。（003 P1）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "课件中「数据决定一切」这一结论的直接依据是（01 P77；02 P25；05 P23）",
+   "options": [
+    "不同算法在不同数据量下的准确率完全相同",
+    "数据量越大，所用的算法一定越复杂",
+    "各种不同算法在输入的数据量达到一定级数后，都有相近的高准确度",
+    "最好的算法反而需要最少的数据"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件通过「数据大小—准确率」图指出，**各种不同算法在输入的数据量达到一定级数后，都有相近的高准确度**，于是诞生了机器学习界的名言：「成功的机器学习应用不是拥有最好的算法，而是拥有最多的数据！」。A 项「完全相同」过于绝对且与图不符；B 项把数据量与算法复杂度混为一谈；D 项与名言相反。（01 P77；02 P25；05 P23）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "当模型是线性模型、且特征数量 $n$ 很大时，课件给出的取舍建议是（02 P18）",
+   "options": [
+    "优先用最小二乘法，因为一次计算就能得出最优解",
+    "必须改用逻辑回归",
+    "两者不可互换，因为它们的代价函数不同",
+    "优先用梯度下降，因为最小二乘法需要计算矩阵逆 $\\left(X^{T}X\\right)^{-1}$、运算代价为 $O(n^{3})$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件对比表明确：最小二乘法在「特征数量 $n$ 大时」**运算代价大**（需要计算的中间量是矩阵逆 $\\left(X^{T}X\\right)^{-1}$，其计算时间复杂度为 $O(n^{3})$，通常 $n<10000$ 时还是可以接受的）；而梯度下降在「特征数量 $n$ 大时也能较好适用」，且「适用于各种类型的模型」。A 项忽略了 $O(n^{3})$ 的代价；C 项错在两者代价函数相同（都是平方和损失）、只是求解方式不同；B 项逻辑回归是分类问题，此处模型已给定为线性回归模型。（02 P18）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "线性回归引入多项式回归的原因是（003 P1）",
+   "options": [
+    "标签由连续变成了离散",
+    "现实中的数据并不总是沿一条直线分布，直线无法很好地拟合",
+    "需要输出每个样本的概率",
+    "为了减少所需的样本量"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "多项式回归的引入理由是**现实中的数据并不总是沿一条直线分布**——例如当房价随面积的增长先慢后快时，直线就无法很好地拟合，此时可引入 $\\hat{y}=w_1x+w_2x^2+\\cdots+w_dx^d+b$；当 $d=1$ 时就是普通线性回归，$d=2$ 时拟合出的是一条抛物线，阶数越高曲线越灵活。A 项把「回归」与「分类」的界搞反；C 项输出概率是逻辑回归/深度学习的特征；D 项与课件无关。（003 P1）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-single-6",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "由 Sigmoid 的导数性质 $g'(z)=g(z)\\left(1-g(z)\\right)$ 可直接推出的结论是（03 P10）",
+   "options": [
+    "因 $g(z)\\in(0,1)$，故 $g'(z)\\leqslant \\frac{1}{4}$",
+    "因 $g(z)>1$，故 $g'(z)>1$",
+    "$g'(z)$ 在 $z=0$ 处取到最大值 1",
+    "$g'(z)$ 在 $z\\to\\pm\\infty$ 时达到最大"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "$g'(z)=g(z)\\left(1-g(z)\\right)$，由于 $g(z)\\in(0,1)$，故 $g'(z)\\leqslant \\frac{1}{4}$，且在两端（$z\\to\\pm\\infty$）趋于 0；由 AM-GM 可知等号在 $g(z)=\\frac{1}{2}$（即 $z=0$）时成立，此时导数最大为 $\\frac{1}{4}$，而非 1。C 项把最大值说成 1；D 项方向相反。补充：这一性质是**深层网络用 Sigmoid 会出现梯度消失**的直接后果（该推论课件未展开）。（03 P10）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-single-7",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "在用于文本分类的多值伯努利事件模型中，施加朴素贝叶斯假设后，连乘规模的变化是（04 P12）",
+   "options": [
+    "从常数级升到指数级",
+    "保持指数级不变",
+    "从指数级降到线性级",
+    "从线性级降到常数级"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "多值伯努利事件模型中，未施加假设时按链式法则为 $p(x^{(1)}|y)p(x^{(2)}|y,x^{(1)})p(x^{(3)}|y,x^{(1)},x^{(2)})\\cdots p\\left(x^{(50000)}|y,x^{(1)},\\ldots,x^{(49999)})\\right)$，规模为指数级；施加朴素贝叶斯假设（各词只依赖 $y$）后为 $p(x^{(1)}|y)p(x^{(2)}|y)p(x^{(3)}|y)\\cdots p(x^{(50000)}|y)=\\prod_{i=1}^{m}p(x^{(i)}|y)$，**连乘规模从指数级降到线性级**。这正是「朴素」假设带来的效率收益。（04 P12）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-single-8",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "若在贝叶斯公式 $P(Y|X)=\\frac{P(X|Y)P(Y)}{P(X)}$ 中，边际似然度 $P(X)$ 恰为 0，则直接代入该公式会出现的情况是（04 P6；01 P47）",
+   "options": [
+    "后验概率为 1",
+    "后验概率为 0",
+    "公式成为 $0/0$ 而无法计算",
+    "后验概率等于先验概率"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "贝叶斯公式 $P(Y|X)=\\frac{P(X,Y)}{P(X)}=\\frac{P(X|Y)P(Y)}{P(X)}$ 中，$P(X)$ 作为分母是「所有类共同的分母」；若它为 0，则分子也必然为 0，公式成为 $0/0$ 而无法计算。这也正是分类时**舍弃分母**这一做法的原因：由于分母对当前比较的类别无影响、约去后只剩相对大小关系，从而绕开了直接求 $P(X)$ 的困难与数值不稳定。（04 P6、P17）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-single-9",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "若所用模型对特征取值大小并不敏感（如决策树类模型与朴素贝叶斯），则（05 P20）",
+   "options": [
+    "必须先做归一化，否则无法训练",
+    "必须做 Z-Score 标准化，否则一定会过拟合",
+    "一般不需要做归一化／标准化",
+    "归一化与标准化必须同时使用"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件明确列出——**不需要做**归一化/标准化的模型有：决策树、基于决策树的 Boosting 和 Bagging 等集成学习模型（树模型）以及**朴素贝叶斯**，以上这些模型**对特征取值大小并不敏感**，一般不需要做。判据是「模型是否依赖特征的绝对尺度」——按阈值分裂、统计概率的模型不需要。A、B、D 三项把「不需要」的模型误当作「必须预处理」。⚠️易错点：树模型与朴素贝叶斯**不需要**归一化/标准化，这是「一刀切全做归一化」的常见反例。（05 P20；02 P21）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-single-10",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "sklearn 中 `StandardScaler` 与 `LinearRegression` 调用方式的不同之处在于（06 P11、P14）",
+   "options": [
+    "两者都必须先 `fit_transform` 才能使用",
+    "`StandardScaler` 没有 `fit` 方法",
+    "`LinearRegression` 不支持 `predict`",
+    "`StandardScaler` 用 `fit_transform` 一步完成拟合与转换；`LinearRegression` 需先 `fit` 再 `predict`"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "sklearn 的统一 API 是「构建实例 → `fit` → `predict`/`transform`」；转换器（如 `StandardScaler`）多一步 `fit_transform`，一次完成拟合与转换：`scaler = StandardScaler()` 后 `scaler.fit_transform(X_train)`；而模型类如 `LinearRegression` 是 `lr = LinearRegression(normalize=True)` → `lr.fit(X_train, y_train)` → `lr.predict(X_test)`。B 项错误（`StandardScaler` 有 `fit`）；C 项错误（`LinearRegression` 支持 `predict`）；A 项错误（模型不需 `fit_transform`）。（06 P11、P14）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "确定每一个特征权重的三个步骤是：数据驱动基石 → ______ → 锁定最优权重。（002 P15）",
+   "options": null,
+   "answer": [
+    "自动迭代优化"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "确定特征权重的三步为：① **数据驱动基石**——基于海量真实场景的历史数据构建模型训练的样本池；② **自动迭代优化**——算法自动调整参数权重，无需人工干预，通过反复迭代计算不断修正偏差、持续逼近目标函数的最优解；③ **锁定最优权重**——最终收敛至全局最优权重组合，精准量化每个特征的价值。（002 P15）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "自动迭代优化"
+   ]
+  },
+  {
+   "id": "ml-s5-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "由于机器学习不是基于编程形成的结果，因此它的处理过程不是因果的逻辑，而是通过归纳思想得出的 ______ 结论。（00 P3；01 P74）",
+   "options": null,
+   "answer": [
+    "相关性"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "由于机器学习不是基于编程形成的结果，因此它的处理过程**不是因果的逻辑，而是通过归纳思想得出的相关性结论**。⚠️易错点：这是课件反复强调的限定语，不要把相关当因果。（00 P3；01 P74）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "相关性"
+   ]
+  },
+  {
+   "id": "ml-s5-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "逻辑回归「方便输出结果调整」这一优点成立的原因是：它输出每个样本的 ______ 分数，因而可以很容易地对这些分数划分阈值。（03 P19）",
+   "options": null,
+   "answer": [
+    "概率"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "逻辑回归的第四条优点是「方便输出结果调整」——因为输出的是**每个样本的概率分数**，可以很容易地对这些概率分数进行划分阈值（大于某个阈值的是一类，小于某个阈值的是一类）。这直接对应第 4 章 03 P8 的判决规则：逻辑回归天然输出概率，所以阈值可调，这是它区别于硬分类模型的地方。（03 P19）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "概率"
+   ]
+  },
+  {
+   "id": "ml-s5-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "拉普拉斯平滑的一般形式 $P_\\lambda(x_i=a_j|y=C_k)=\\frac{\\sum_{i=1}^{N}I(x_i=a_j,y_i=C_k)+\\lambda}{\\sum_{i=1}^{N}I(y_i=C_k)+A\\lambda}$ 中，$I(\\cdot)$ 是 ______ 函数。（04 P24）",
+   "options": null,
+   "answer": [
+    "示性"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "$I(\\cdot)$ 为示性函数（成立取 1，否则取 0）。公式中 $K$ 表示**类别数量**、$D$ 表示 $a_j$ 中**不同值的数量**，通常 $\\lambda=1$；类别先验的分母加 $K\\lambda$，特征条件概率的分母加 $D\\lambda$。加入平滑之后避免了概率为 0 的情况，又保证每个值都在 0 到 1 范围内、最终和为 1。（04 P24）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "示性"
+   ]
+  },
+  {
+   "id": "ml-s5-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "sklearn 的特征选择按是否用到模型分为三类：过滤式（Filter）、封装式（Wrapper）和 ______（Embedded）。（06 P13）",
+   "options": null,
+   "answer": [
+    "嵌入式"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "按是否用到模型划分：过滤式（Filter，`SelectKBest(score_func, k)`，保留得分排名前 $k$ 的特征）**不用模型**；封装式（Wrapper，`RFECV(estimator, scoring=\"r2\")`，结合交叉验证的递归特征消除法）**用模型反复训练**；嵌入式（Embedded，`SelectFromModel(estimator)`）**直接用模型自身的权重或重要性**——任何具有 `coef_` 或者 `feature_importances_` 的基模型都可作为 estimator 传入。（06 P13）",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "嵌入式"
+   ]
+  },
+  {
+   "id": "ml-s5-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "说明线性回归模型式中各符号的含义，并解释为什么可以设 $x_0=1$ 把常数项 $b$ 吸收进 $w_0$；同时指出设计矩阵 $X$ 的形状、$w$ 的维数，以及 $x^{(i)}$ 与 $x_j^{(i)}$ 的区别。（02 P6、P7、P9）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：该主张混淆了「规则的来源」与「规律的承载形式」，在四个层面上都不成立。\n分述①两条路线的对比：早期 AI 走 **01 规则驱动（符号主义）**路线，工程师以「上帝视角」编写代码，试图用严谨的逻辑规则定义世界的一切（如「如果 圆 且 红 且 有柄 → 苹果」）；**02 学习驱动（联结主义）**路线则放弃人工编写规则，让机器像人类一样去「看」、去「学」，通过从海量数据中自主归纳特征，而非依赖预设逻辑——其**成功关键是数据驱动与自主归纳**，不再依赖人类的「上帝视角」，机器从数据中自我进化，具备处理模糊、复杂现实信息的能力。\n分述②「规则写不完」的困境：符号主义路线的核心困境是**规则写不完**——现实世界充满变数，被咬一口、烂了一半或逆光下的苹果都需要重新编写规则，系统**难以泛化**。⚠️易错点：早期符号主义的失败原因不是「不够聪明」，而是要落到**「泛化」**二字上。人类自身也印证了这一点：我们从未死记硬背苹果的「标准答案」，智能的核心不在「存储答案」而在「**提取规律**」。\n分述③数据与算力是前提：机器模拟智能本质上是一场依赖「暴力计算」的模拟游戏，直到最近才集齐两块关键拼图：**01 海量数据 (Data)**——数据是智能学习的基石，没有足够的样本，模型便无法学会理解与生成；**02 超强算力 (Compute)**——GPU 与 TPU 等专用 AI 芯片让海量矩阵运算高效可行。数据为 AI 提供「养料」，算力为 AI 提供「引擎」，二者如同车之两轮、鸟之双翼，**缺一不可**。手工写规则既绕不开数据的缺失，也绕不开规则爆炸带来的算力与人力成本。\n分述④模型／算法／权重三者的关系：**算法 =「学习的方法」**，是构建模型的「设计师」，负责规划学习的路径；**模型 =「学习的结果」**，是算法的产出物，承载着学习到的规律用于预测。判定式为 $\\text{总得分}=(W_1\\times 特征_1)+\\cdots+(W_n\\times 特征_n)$，而**机器学习的训练过程，本质上就是不断调整这些权重参数，让模型的预测结果无限逼近真实情况的过程**。因此「谁定规则」的答案是算法与数据，而不是人。\n分述⑤可行的替代路线：把「人工枚举规则」换成「人工设计框架 + 数据自动确定参数」：用训练数据拟合模型式（如 $h(x)=w_0+w_1x_1+\\cdots+w_nx_n$，或更一般地 $P(y|x)$、$y=f(x)$），用损失函数度量误差、用优化算法迭代求参、用评估指标检验泛化效果；遇到过拟合则按「获得更多训练数据 → 降维 → 正则化 → 集成学习」的顺序处理。以垃圾邮件模型 1.0→3.0 为例，正是从「60% 概率盲猜」到「工作日/周末单一特征」再到「周末发送 + 文件大小 > 10KB」的**多维特征组合**（缺一不可），规则条数没有爆炸，判别能力却持续提升。",
+   "points": [
+    {
+     "text": "总起：该主张混淆了「规则的来源」与「规律的承载形式」，在四个层面上都不成立。",
+     "partial": 3
+    },
+    {
+     "text": "分述①两条路线的对比：早期 AI 走 **01 规则驱动（符号主义）**路线，工程师以「上帝视角」编写代码，试图用严谨的逻辑规则定义世界的一切（如「如果 圆 且 红 且 有柄 → 苹果」）；**02 学习驱动（联结主义）**路线则放弃人工编写规则，让机器像人类一样去「看」、去「学」，通过从海量数据中自主归纳特征，而非依赖预设逻辑——其**成功关键是数据驱动与自主归纳**，不再依赖人类的「上帝视角」，机器从数据中自我进化，具备处理模糊、复杂现实信息的能力。",
+     "partial": 4
+    },
+    {
+     "text": "分述②「规则写不完」的困境：符号主义路线的核心困境是**规则写不完**——现实世界充满变数，被咬一口、烂了一半或逆光下的苹果都需要重新编写规则，系统**难以泛化**。⚠️易错点：早期符号主义的失败原因不是「不够聪明」，而是要落到**「泛化」**二字上。人类自身也印证了这一点：我们从未死记硬背苹果的「标准答案」，智能的核心不在「存储答案」而在「**提取规律**」。",
+     "partial": 4
+    },
+    {
+     "text": "分述③数据与算力是前提：机器模拟智能本质上是一场依赖「暴力计算」的模拟游戏，直到最近才集齐两块关键拼图：**01 海量数据 (Data)**——数据是智能学习的基石，没有足够的样本，模型便无法学会理解与生成；**02 超强算力 (Compute)**——GPU 与 TPU 等专用 AI 芯片让海量矩阵运算高效可行。数据为 AI 提供「养料」，算力为 AI 提供「引擎」，二者如同车之两轮、鸟之双翼，**缺一不可**。手工写规则既绕不开数据的缺失，也绕不开规则爆炸带来的算力与人力成本。",
+     "partial": 4
+    },
+    {
+     "text": "分述④模型／算法／权重三者的关系：**算法 =「学习的方法」**，是构建模型的「设计师」，负责规划学习的路径；**模型 =「学习的结果」**，是算法的产出物，承载着学习到的规律用于预测。判定式为 $\\text{总得分}=(W_1\\times 特征_1)+\\cdots+(W_n\\times 特征_n)$，而**机器学习的训练过程，本质上就是不断调整这些权重参数，让模型的预测结果无限逼近真实情况的过程**。因此「谁定规则」的答案是算法与数据，而不是人。",
+     "partial": 2
+    },
+    {
+     "text": "分述⑤可行的替代路线：把「人工枚举规则」换成「人工设计框架 + 数据自动确定参数」：用训练数据拟合模型式（如 $h(x)=w_0+w_1x_1+\\cdots+w_nx_n$，或更一般地 $P(y|x)$、$y=f(x)$），用损失函数度量误差、用优化算法迭代求参、用评估指标检验泛化效果；遇到过拟合则按「获得更多训练数据 → 降维 → 正则化 → 集成学习」的顺序处理。以垃圾邮件模型 1.0→3.0 为例，正是从「60% 概率盲猜」到「工作日/周末单一特征」再到「周末发送 + 文件大小 > 10KB」的**多维特征组合**（缺一不可），规则条数没有爆炸，判别能力却持续提升。",
+     "partial": 2
+    }
+   ],
+   "explanation": "",
+   "misconception": "五部分各占分值；②与④是关键得分点。（001 P5、P7–P9、P15；002 P10、P11–P14）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "说明多分类的一对多（One-vs-All / One-vs-Rest）做法：如何逐步划分数据、$n$ 类需要训练多少个二分类器、为什么最后一类充当「rest」，并与二分类的划分方式作对比。（03 P5、P6）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：本场景的三个硬约束——不平衡 99:1、50 万条数据、要求输出概率供分档——共同决定了方案。\n分述①完整调用链：\n- **加载数据**：`iris = datasets.load_iris()` 一类方式或从 Pandas 读入；sklearn 接受 NumPy arrays、Pandas 对象、SciPy 稀疏矩阵等，前提是**数据必须是数值型的**。记 `X` 为特征矩阵、`y` 为标签。\n- **数据划分**：`X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=12, stratify=y, test_size=0.3)`——70% 训练／30% 测试；`stratify=y` 分层保证各集合类别比例与原始一致，**对不平衡数据尤为必要**；`random_state=12` 固定划分以保证可复现。若要调超参数，用 `cross_val_score(clf, X_train, y_train, cv=5, scoring='f1_weighted')` 做 5 折交叉验证承担验证集角色。\n- **预处理**：特征尺度差异大时先标准化——`scaler = StandardScaler()` 后 `scaler.fit_transform(X_train)`（Z-Score，处理后均值 0、方差 1）；线性模型（含逻辑回归）**需要**做，朴素贝叶斯**不需要**。\n- **模型**：`lr = LogisticRegression()`，然后 `lr.fit(X_train_scaled, y_train)`。\n- **预测**：`y_pred = lr.predict(X_test)` 得到标签；`y_prob = lr.predict_proba(X_test)` **得到概率分数**——这正是本题「供风控系统按风险等级设阈值」的硬要求。\n- **评价**：`from sklearn.metrics import ...`，分类侧用 `accuracy_score`、`precision_score`、`f1_score`、`confusion_matrix`、`classification_report`；回归侧（本场景不适用但需知道对应关系）用 `mean_absolute_error`、`mean_squared_error`、`r2_score`。\n- **超参数搜索**：`GridSearchCV(svc, params, cv=5)` 在参数网格上穷举（慢、不易找局部最优），或 `RandomizedSearchCV(svc, param_dist, n_iter=10)` 随机采样（时间耗费较少、**更容易找到局部最优**，分布可从 `scipy.stats` 如 `randint(1,20)` 采样）；结果取 `.best_params_`。\n分述②指标选择：不选 Accuracy 的理由是其分母为**全部样本**，在 99:1 的比例下把绝大多数样本判为「不违约」即可得到约 0.99 的高分，少数类（违约）错误被彻底淹没，**高估**模型。应改用 $Precision=\\frac{TP}{TP+FP}$、$Recall=\\frac{TP}{TP+FN}$ 与 $F1=\\frac{2\\times Precision\\times Recall}{Precision+Recall}$，并用 `confusion_matrix` 检查四个计数。进一步可考虑不平衡处理：SMOTE（**过采样**，合成新的少数类样本而非简单复制）或**代价敏感学习**（给少类更高权重，代价是查全率↑、查准率↓）。\n分述③正则化设置与 $\\lambda$ 方向：50 万条数据、特征多为 ID 类的场景容易高维稀疏、模型易过拟合，因此应**加入正则化** $J(w)=\\frac{1}{m}\\sum_{i=1}^{m}[\\cdots]+\\frac{\\lambda}{2m}\\sum_{j=1}^{n}w_j^{2}$。课件明确：**当 $\\lambda$ 的值开始上升时，降低了方差**——即 $\\lambda$ 增大治高方差（过拟合）、$\\lambda$ 减小治高偏差（欠拟合）。目标状态是「适当的正则化」：没有正则化会过拟合，正则化过度会欠拟合，$\\lambda$ 不是越大越好；具体取值应通过交叉验证 + 搜索确定，而非凭经验拍定。\n分述④选逻辑回归而非朴素贝叶斯的理由：两者的根本差别在于**建模对象**——逻辑回归是**判别模型**，直接学习决策函数 $Y=f(X)$ 或 $P(Y|X)$，不考虑样本的产生模型；朴素贝叶斯是**生成模型**，须估计 $P(X|Y)$ 和 $P(Y)$ 得到联合分布 $P(X,Y)=P(Y)P(X|Y)$ 再求后验。结合三条课件结论：① 逻辑回归在**表达能力**上虽弱（不能自动做特征交叉），但本场景特征以 ID 类为主，线性加权恰恰适合——其优点第 2 条正是「训练时便于并行化、预测时只需线性加权，**适合处理海量 ID 类特征**」，对头部资源有更细致的描述且防止信息损失；② 本场景**明确要求输出概率供分档**，逻辑回归天然输出概率分数、可灵活划分阈值，而朴素贝叶斯要拿到概率还需额外计算归一化分母；③ 逻辑回归还可解释（从特征权重可见各特征影响）、资源占用小，契合风控的合规与内存约束。反过来讲，朴素贝叶斯的强项（高效、易实现、无需归一化）在 50 万条数据上并非瓶颈。\n---\n## 附：五套卷考点覆盖简表\n| 套次 | 难度定位 | 核心考查方式 | 章节侧重 |\n|---|---|---|---|\n| 第1套 | 基础覆盖 | 只考 ⭐ 重点档的定义与识记，覆盖全部 7 章 | 各章均分（每章 3 题） |\n| 第2套 | 概念辨析 | 易混点对：MSE vs MAE、L1 vs L2、生成 vs 判别、精确率 vs 召回率、偏差 vs 方差、三集合分工、条件独立 vs 无条件独立 | 第2/5章各 4 题，第1/6章各 2 题 |\n| 第3套 | 模型与算法应用 | 公式推导与数值计算：最小二乘链条、SGD 推导、Sigmoid 求值、贝叶斯全概率、归一化/标准化、R² 计算 | 第3/4/6章各 4 题，第7章 1 题 |\n| 第4套 | 评价与调优 | 指标选择、数据划分、偏差方差、过拟合处理，要求在具体场景下选方法并说明理由 | 第6章 5 题、第4章与第7章各 4 题 |\n| 第5套 | 综合进阶 | 跨章综合与设计性论证：业务场景建模流程、跨模型对比与取舍论证 | 第1章 5 题、第5章 4 题 |",
+   "points": [
+    {
+     "text": "总起：本场景的三个硬约束——不平衡 99:1、50 万条数据、要求输出概率供分档——共同决定了方案。",
+     "partial": 2
+    },
+    {
+     "text": "分述①完整调用链：\n- **加载数据**：`iris = datasets.load_iris()` 一类方式或从 Pandas 读入；sklearn 接受 NumPy arrays、Pandas 对象、SciPy 稀疏矩阵等，前提是**数据必须是数值型的**。记 `X` 为特征矩阵、`y` 为标签。\n- **数据划分**：`X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=12, stratify=y, test_size=0.3)`——70% 训练／30% 测试；`stratify=y` 分层保证各集合类别比例与原始一致，**对不平衡数据尤为必要**；`random_state=12` 固定划分以保证可复现。若要调超参数，用 `cross_val_score(clf, X_train, y_train, cv=5, scoring='f1_weighted')` 做 5 折交叉验证承担验证集角色。\n- **预处理**：特征尺度差异大时先标准化——`scaler = StandardScaler()` 后 `scaler.fit_transform(X_train)`（Z-Score，处理后均值 0、方差 1）；线性模型（含逻辑回归）**需要**做，朴素贝叶斯**不需要**。\n- **模型**：`lr = LogisticRegression()`，然后 `lr.fit(X_train_scaled, y_train)`。\n- **预测**：`y_pred = lr.predict(X_test)` 得到标签；`y_prob = lr.predict_proba(X_test)` **得到概率分数**——这正是本题「供风控系统按风险等级设阈值」的硬要求。\n- **评价**：`from sklearn.metrics import ...`，分类侧用 `accuracy_score`、`precision_score`、`f1_score`、`confusion_matrix`、`classification_report`；回归侧（本场景不适用但需知道对应关系）用 `mean_absolute_error`、`mean_squared_error`、`r2_score`。\n- **超参数搜索**：`GridSearchCV(svc, params, cv=5)` 在参数网格上穷举（慢、不易找局部最优），或 `RandomizedSearchCV(svc, param_dist, n_iter=10)` 随机采样（时间耗费较少、**更容易找到局部最优**，分布可从 `scipy.stats` 如 `randint(1,20)` 采样）；结果取 `.best_params_`。",
+     "partial": 6
+    },
+    {
+     "text": "分述②指标选择：不选 Accuracy 的理由是其分母为**全部样本**，在 99:1 的比例下把绝大多数样本判为「不违约」即可得到约 0.99 的高分，少数类（违约）错误被彻底淹没，**高估**模型。应改用 $Precision=\\frac{TP}{TP+FP}$、$Recall=\\frac{TP}{TP+FN}$ 与 $F1=\\frac{2\\times Precision\\times Recall}{Precision+Recall}$，并用 `confusion_matrix` 检查四个计数。进一步可考虑不平衡处理：SMOTE（**过采样**，合成新的少数类样本而非简单复制）或**代价敏感学习**（给少类更高权重，代价是查全率↑、查准率↓）。",
+     "partial": 4
+    },
+    {
+     "text": "分述③正则化设置与 $\\lambda$ 方向：50 万条数据、特征多为 ID 类的场景容易高维稀疏、模型易过拟合，因此应**加入正则化** $J(w)=\\frac{1}{m}\\sum_{i=1}^{m}[\\cdots]+\\frac{\\lambda}{2m}\\sum_{j=1}^{n}w_j^{2}$。课件明确：**当 $\\lambda$ 的值开始上升时，降低了方差**——即 $\\lambda$ 增大治高方差（过拟合）、$\\lambda$ 减小治高偏差（欠拟合）。目标状态是「适当的正则化」：没有正则化会过拟合，正则化过度会欠拟合，$\\lambda$ 不是越大越好；具体取值应通过交叉验证 + 搜索确定，而非凭经验拍定。",
+     "partial": 3
+    },
+    {
+     "text": "分述④选逻辑回归而非朴素贝叶斯的理由：两者的根本差别在于**建模对象**——逻辑回归是**判别模型**，直接学习决策函数 $Y=f(X)$ 或 $P(Y|X)$，不考虑样本的产生模型；朴素贝叶斯是**生成模型**，须估计 $P(X|Y)$ 和 $P(Y)$ 得到联合分布 $P(X,Y)=P(Y)P(X|Y)$ 再求后验。结合三条课件结论：① 逻辑回归在**表达能力**上虽弱（不能自动做特征交叉），但本场景特征以 ID 类为主，线性加权恰恰适合——其优点第 2 条正是「训练时便于并行化、预测时只需线性加权，**适合处理海量 ID 类特征**」，对头部资源有更细致的描述且防止信息损失；② 本场景**明确要求输出概率供分档**，逻辑回归天然输出概率分数、可灵活划分阈值，而朴素贝叶斯要拿到概率还需额外计算归一化分母；③ 逻辑回归还可解释（从特征权重可见各特征影响）、资源占用小，契合风控的合规与内存约束。反过来讲，朴素贝叶斯的强项（高效、易实现、无需归一化）在 50 万条数据上并非瓶颈。\n---\n## 附：五套卷考点覆盖简表\n| 套次 | 难度定位 | 核心考查方式 | 章节侧重 |\n|---|---|---|---|\n| 第1套 | 基础覆盖 | 只考 ⭐ 重点档的定义与识记，覆盖全部 7 章 | 各章均分（每章 3 题） |\n| 第2套 | 概念辨析 | 易混点对：MSE vs MAE、L1 vs L2、生成 vs 判别、精确率 vs 召回率、偏差 vs 方差、三集合分工、条件独立 vs 无条件独立 | 第2/5章各 4 题，第1/6章各 2 题 |\n| 第3套 | 模型与算法应用 | 公式推导与数值计算：最小二乘链条、SGD 推导、Sigmoid 求值、贝叶斯全概率、归一化/标准化、R² 计算 | 第3/4/6章各 4 题，第7章 1 题 |\n| 第4套 | 评价与调优 | 指标选择、数据划分、偏差方差、过拟合处理，要求在具体场景下选方法并说明理由 | 第6章 5 题、第4章与第7章各 4 题 |\n| 第5套 | 综合进阶 | 跨章综合与设计性论证：业务场景建模流程、跨模型对比与取舍论证 | 第1章 5 题、第5章 4 题 |",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": "四部分各占分值；①调用链须覆盖划分、预处理、模型、概率输出、评价、搜索六环；④须落到「判别 vs 生成的建模对象」。（05 P12、P20、P35；06 P10、P14、P16、P23–P26；03 P19；04 P8）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-short-3",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "说明贝叶斯公式中后验概率、似然度、先验概率、边际似然度四项各自的含义与方向；并解释为什么比较各类后验大小时边际似然度可以被整体约去，由此说明生成模型与判别模型在建模对象上的差别。（04 P6、P8、P17）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：四个概率项各自回答不同的问题，方向不能混淆。\n分述①四项含义与方向：$P(Y|X)$ 是**后验概率**——看到 $X$ 后 $Y$ 成立的置信度；$P(X|Y)$ 是**似然度**——在 $Y$ 成立的前提下观测到 $X$ 的概率；$P(Y)$ 是**先验概率**——没有训练数据前 $Y$ 的初始概率；$P(X)$ 是**边际似然度**——与类别无关的证据项。⚠️易错点：$P(X|Y)$（似然度）与 $P(Y|X)$（后验概率）**方向相反，不是同一件事**，写公式时极易把条件符号搞反。记忆口诀：后验概率 =（似然度 × 先验概率）/ 边际似然度。\n分述②分母可约：在比较各类后验大小时，$P(X)$ 是对**所有类求和后**得到的整体归一化项，与当前比较的类别无关，取 $\\arg\\max$ 时可整体约去，于是得到 $y=f(x)=\\arg\\max_{c_k}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)$。案例中对应的一步是「舍弃除数」，只比较 $P(X|Sports)\\times P(Sports)$ 与 $P(X|Not\\ Sports)\\times P(Not\\ Sports)$。\n分述③生成 vs 判别的建模对象差别：**判别模型**由数据直接学习决策函数 $Y=f(X)$ 或条件概率分布 $P(Y|X)$，有限样本条件下建立判别函数，**不考虑样本的产生模型**，代表算法有线性回归、逻辑回归、感知机、决策树、支持向量机等；**生成模型**由训练数据学习**联合概率分布 $P(X,Y)$** 再求得 $P(Y|X)$，即估计 $P(X|Y)$ 和 $P(Y)$ 得到 $P(X,Y)=P(Y)P(X|Y)$ 再用于分类，代表算法是朴素贝叶斯、HMM、深度信念网络（DBN）。因此二者的差别不在「先验还是后验」，而在**建模对象是 $P(Y|X)$ 还是 $P(X,Y)$**。",
+   "points": [
+    {
+     "text": "总起：四个概率项各自回答不同的问题，方向不能混淆。",
+     "partial": 2
+    },
+    {
+     "text": "分述①四项含义与方向：$P(Y|X)$ 是**后验概率**——看到 $X$ 后 $Y$ 成立的置信度；$P(X|Y)$ 是**似然度**——在 $Y$ 成立的前提下观测到 $X$ 的概率；$P(Y)$ 是**先验概率**——没有训练数据前 $Y$ 的初始概率；$P(X)$ 是**边际似然度**——与类别无关的证据项。⚠️易错点：$P(X|Y)$（似然度）与 $P(Y|X)$（后验概率）**方向相反，不是同一件事**，写公式时极易把条件符号搞反。记忆口诀：后验概率 =（似然度 × 先验概率）/ 边际似然度。",
+     "partial": 4
+    },
+    {
+     "text": "分述②分母可约：在比较各类后验大小时，$P(X)$ 是对**所有类求和后**得到的整体归一化项，与当前比较的类别无关，取 $\\arg\\max$ 时可整体约去，于是得到 $y=f(x)=\\arg\\max_{c_k}\\prod_{j=1}^{n}P\\left(X^{(j)}=x^{(j)}|Y=c_k\\right)P(Y=c_k)$。案例中对应的一步是「舍弃除数」，只比较 $P(X|Sports)\\times P(Sports)$ 与 $P(X|Not\\ Sports)\\times P(Not\\ Sports)$。",
+     "partial": 4
+    },
+    {
+     "text": "分述③生成 vs 判别的建模对象差别：**判别模型**由数据直接学习决策函数 $Y=f(X)$ 或条件概率分布 $P(Y|X)$，有限样本条件下建立判别函数，**不考虑样本的产生模型**，代表算法有线性回归、逻辑回归、感知机、决策树、支持向量机等；**生成模型**由训练数据学习**联合概率分布 $P(X,Y)$** 再求得 $P(Y|X)$，即估计 $P(X|Y)$ 和 $P(Y)$ 得到 $P(X,Y)=P(Y)P(X|Y)$ 再用于分类，代表算法是朴素贝叶斯、HMM、深度信念网络（DBN）。因此二者的差别不在「先验还是后验」，而在**建模对象是 $P(Y|X)$ 还是 $P(X,Y)$**。",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": "三部分各占分值；③若未点出「建模对象」这一根本差别扣 2 分。（04 P6、P8、P17）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-short-4",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "说明训练集、验证集、测试集各自的职责与常见划分比例，解释「验证集用于模型选择、测试集用于最终评估」这一分工的必要性；并说明深度学习 98/1/1 比例的前提条件，以及 `train_test_split` 只切两半与三分法之间的关系。（05 P4；06 P10）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：三集合的分工是把「调模型」与「评模型」在数据上物理隔开。\n分述①各自职责：**训练集 (Training Set)** 帮助我们训练模型，简单说就是通过训练集的数据让我们确定拟合曲线的参数；**验证集 (Validation Set，也叫开发集 Dev Set)** 用来做**模型选择 (model selection)**，即做模型的最终优化及确定的，用来辅助我们模型的构建，即**训练超参数**，**可选**；**测试集 (Test Set)** 为了测试已经训练好的模型的精确度。\n分述②比例：机器学习：60%/20%/20% 或 70%/10%/20%；深度学习：98%/1%/1%（假设百万条数据）。\n分述③分工的必要性：如果拿测试集去选超参数、反复用它评估不同方案，测试集的信息就「泄漏」进了模型选择过程，最终报出的精度会偏乐观而失去参考价值。因此验证集可被反复使用（用于调参），而测试集只在最后使用一次。⚠️易错点：验证集用于**模型选择/调超参数**（可选），测试集用于**最终评估**，二者不可互换。\n分述④两个前提条件：① 深度学习 98/1/1 的前提是**百万条数据**——小数据集照搬会导致验证集过小；② `train_test_split` **只切出训练集与测试集两半**（如 70%/30%），不产生验证集，第 6 章的「训练/验证/测试」三分法在 sklearn 中靠**交叉验证或超参数搜索**实现——交叉验证把训练集内部再轮流切出验证部分、承担了验证集的角色。",
+   "points": [
+    {
+     "text": "总起：三集合的分工是把「调模型」与「评模型」在数据上物理隔开。",
+     "partial": 2
+    },
+    {
+     "text": "分述①各自职责：**训练集 (Training Set)** 帮助我们训练模型，简单说就是通过训练集的数据让我们确定拟合曲线的参数；**验证集 (Validation Set，也叫开发集 Dev Set)** 用来做**模型选择 (model selection)**，即做模型的最终优化及确定的，用来辅助我们模型的构建，即**训练超参数**，**可选**；**测试集 (Test Set)** 为了测试已经训练好的模型的精确度。",
+     "partial": 3
+    },
+    {
+     "text": "分述②比例：机器学习：60%/20%/20% 或 70%/10%/20%；深度学习：98%/1%/1%（假设百万条数据）。",
+     "partial": 2
+    },
+    {
+     "text": "分述③分工的必要性：如果拿测试集去选超参数、反复用它评估不同方案，测试集的信息就「泄漏」进了模型选择过程，最终报出的精度会偏乐观而失去参考价值。因此验证集可被反复使用（用于调参），而测试集只在最后使用一次。⚠️易错点：验证集用于**模型选择/调超参数**（可选），测试集用于**最终评估**，二者不可互换。",
+     "partial": 3
+    },
+    {
+     "text": "分述④两个前提条件：① 深度学习 98/1/1 的前提是**百万条数据**——小数据集照搬会导致验证集过小；② `train_test_split` **只切出训练集与测试集两半**（如 70%/30%），不产生验证集，第 6 章的「训练/验证/测试」三分法在 sklearn 中靠**交叉验证或超参数搜索**实现——交叉验证把训练集内部再轮流切出验证部分、承担了验证集的角色。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": "四部分各占分值；④两项各 1.5 分。（05 P4；06 P10）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-essay-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "有人主张「为每一个业务场景手工编写规则即可，不需要机器学习」。请结合「规则驱动 vs 学习驱动」的对比、早期符号主义「规则写不完」的困境、数据与算力这两块基石，以及模型／算法／权重三者的关系，论证这一主张为什么不成立，并给出一条可行的替代路线。（001 P7–P9、P15；002 P10、P14–P15）",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：该主张混淆了「规则的来源」与「规律的承载形式」，在四个层面上都不成立。\n分述①两条路线的对比：早期 AI 走 **01 规则驱动（符号主义）**路线，工程师以「上帝视角」编写代码，试图用严谨的逻辑规则定义世界的一切（如「如果 圆 且 红 且 有柄 → 苹果」）；**02 学习驱动（联结主义）**路线则放弃人工编写规则，让机器像人类一样去「看」、去「学」，通过从海量数据中自主归纳特征，而非依赖预设逻辑——其**成功关键是数据驱动与自主归纳**，不再依赖人类的「上帝视角」，机器从数据中自我进化，具备处理模糊、复杂现实信息的能力。\n分述②「规则写不完」的困境：符号主义路线的核心困境是**规则写不完**——现实世界充满变数，被咬一口、烂了一半或逆光下的苹果都需要重新编写规则，系统**难以泛化**。⚠️易错点：早期符号主义的失败原因不是「不够聪明」，而是要落到**「泛化」**二字上。人类自身也印证了这一点：我们从未死记硬背苹果的「标准答案」，智能的核心不在「存储答案」而在「**提取规律**」。\n分述③数据与算力是前提：机器模拟智能本质上是一场依赖「暴力计算」的模拟游戏，直到最近才集齐两块关键拼图：**01 海量数据 (Data)**——数据是智能学习的基石，没有足够的样本，模型便无法学会理解与生成；**02 超强算力 (Compute)**——GPU 与 TPU 等专用 AI 芯片让海量矩阵运算高效可行。数据为 AI 提供「养料」，算力为 AI 提供「引擎」，二者如同车之两轮、鸟之双翼，**缺一不可**。手工写规则既绕不开数据的缺失，也绕不开规则爆炸带来的算力与人力成本。\n分述④模型／算法／权重三者的关系：**算法 =「学习的方法」**，是构建模型的「设计师」，负责规划学习的路径；**模型 =「学习的结果」**，是算法的产出物，承载着学习到的规律用于预测。判定式为 $\\text{总得分}=(W_1\\times 特征_1)+\\cdots+(W_n\\times 特征_n)$，而**机器学习的训练过程，本质上就是不断调整这些权重参数，让模型的预测结果无限逼近真实情况的过程**。因此「谁定规则」的答案是算法与数据，而不是人。\n分述⑤可行的替代路线：把「人工枚举规则」换成「人工设计框架 + 数据自动确定参数」：用训练数据拟合模型式（如 $h(x)=w_0+w_1x_1+\\cdots+w_nx_n$，或更一般地 $P(y|x)$、$y=f(x)$），用损失函数度量误差、用优化算法迭代求参、用评估指标检验泛化效果；遇到过拟合则按「获得更多训练数据 → 降维 → 正则化 → 集成学习」的顺序处理。以垃圾邮件模型 1.0→3.0 为例，正是从「60% 概率盲猜」到「工作日/周末单一特征」再到「周末发送 + 文件大小 > 10KB」的**多维特征组合**（缺一不可），规则条数没有爆炸，判别能力却持续提升。",
+   "points": [
+    {
+     "text": "总起：该主张混淆了「规则的来源」与「规律的承载形式」，在四个层面上都不成立。",
+     "partial": 3
+    },
+    {
+     "text": "分述①两条路线的对比：早期 AI 走 **01 规则驱动（符号主义）**路线，工程师以「上帝视角」编写代码，试图用严谨的逻辑规则定义世界的一切（如「如果 圆 且 红 且 有柄 → 苹果」）；**02 学习驱动（联结主义）**路线则放弃人工编写规则，让机器像人类一样去「看」、去「学」，通过从海量数据中自主归纳特征，而非依赖预设逻辑——其**成功关键是数据驱动与自主归纳**，不再依赖人类的「上帝视角」，机器从数据中自我进化，具备处理模糊、复杂现实信息的能力。",
+     "partial": 4
+    },
+    {
+     "text": "分述②「规则写不完」的困境：符号主义路线的核心困境是**规则写不完**——现实世界充满变数，被咬一口、烂了一半或逆光下的苹果都需要重新编写规则，系统**难以泛化**。⚠️易错点：早期符号主义的失败原因不是「不够聪明」，而是要落到**「泛化」**二字上。人类自身也印证了这一点：我们从未死记硬背苹果的「标准答案」，智能的核心不在「存储答案」而在「**提取规律**」。",
+     "partial": 4
+    },
+    {
+     "text": "分述③数据与算力是前提：机器模拟智能本质上是一场依赖「暴力计算」的模拟游戏，直到最近才集齐两块关键拼图：**01 海量数据 (Data)**——数据是智能学习的基石，没有足够的样本，模型便无法学会理解与生成；**02 超强算力 (Compute)**——GPU 与 TPU 等专用 AI 芯片让海量矩阵运算高效可行。数据为 AI 提供「养料」，算力为 AI 提供「引擎」，二者如同车之两轮、鸟之双翼，**缺一不可**。手工写规则既绕不开数据的缺失，也绕不开规则爆炸带来的算力与人力成本。",
+     "partial": 4
+    },
+    {
+     "text": "分述④模型／算法／权重三者的关系：**算法 =「学习的方法」**，是构建模型的「设计师」，负责规划学习的路径；**模型 =「学习的结果」**，是算法的产出物，承载着学习到的规律用于预测。判定式为 $\\text{总得分}=(W_1\\times 特征_1)+\\cdots+(W_n\\times 特征_n)$，而**机器学习的训练过程，本质上就是不断调整这些权重参数，让模型的预测结果无限逼近真实情况的过程**。因此「谁定规则」的答案是算法与数据，而不是人。",
+     "partial": 2
+    },
+    {
+     "text": "分述⑤可行的替代路线：把「人工枚举规则」换成「人工设计框架 + 数据自动确定参数」：用训练数据拟合模型式（如 $h(x)=w_0+w_1x_1+\\cdots+w_nx_n$，或更一般地 $P(y|x)$、$y=f(x)$），用损失函数度量误差、用优化算法迭代求参、用评估指标检验泛化效果；遇到过拟合则按「获得更多训练数据 → 降维 → 正则化 → 集成学习」的顺序处理。以垃圾邮件模型 1.0→3.0 为例，正是从「60% 概率盲猜」到「工作日/周末单一特征」再到「周末发送 + 文件大小 > 10KB」的**多维特征组合**（缺一不可），规则条数没有爆炸，判别能力却持续提升。",
+     "partial": 2
+    }
+   ],
+   "explanation": "",
+   "misconception": "五部分各占分值；②与④是关键得分点。（001 P5、P7–P9、P15；002 P10、P11–P14）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-s5-essay-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8",
+   "source": {
+    "text": "《机器学习》综合测试卷 第5套（难度递增，满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "场景：某电商平台要为「用户是否会违约」建立二分类模型，数据量 50 万条，正负样本比约 99:1，且要求模型输出概率分数供风控系统按不同风险等级设置阈值。",
+   "options": null,
+   "answer": [],
+   "answerText": "总起：本场景的三个硬约束——不平衡 99:1、50 万条数据、要求输出概率供分档——共同决定了方案。\n分述①完整调用链：\n- **加载数据**：`iris = datasets.load_iris()` 一类方式或从 Pandas 读入；sklearn 接受 NumPy arrays、Pandas 对象、SciPy 稀疏矩阵等，前提是**数据必须是数值型的**。记 `X` 为特征矩阵、`y` 为标签。\n- **数据划分**：`X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=12, stratify=y, test_size=0.3)`——70% 训练／30% 测试；`stratify=y` 分层保证各集合类别比例与原始一致，**对不平衡数据尤为必要**；`random_state=12` 固定划分以保证可复现。若要调超参数，用 `cross_val_score(clf, X_train, y_train, cv=5, scoring='f1_weighted')` 做 5 折交叉验证承担验证集角色。\n- **预处理**：特征尺度差异大时先标准化——`scaler = StandardScaler()` 后 `scaler.fit_transform(X_train)`（Z-Score，处理后均值 0、方差 1）；线性模型（含逻辑回归）**需要**做，朴素贝叶斯**不需要**。\n- **模型**：`lr = LogisticRegression()`，然后 `lr.fit(X_train_scaled, y_train)`。\n- **预测**：`y_pred = lr.predict(X_test)` 得到标签；`y_prob = lr.predict_proba(X_test)` **得到概率分数**——这正是本题「供风控系统按风险等级设阈值」的硬要求。\n- **评价**：`from sklearn.metrics import ...`，分类侧用 `accuracy_score`、`precision_score`、`f1_score`、`confusion_matrix`、`classification_report`；回归侧（本场景不适用但需知道对应关系）用 `mean_absolute_error`、`mean_squared_error`、`r2_score`。\n- **超参数搜索**：`GridSearchCV(svc, params, cv=5)` 在参数网格上穷举（慢、不易找局部最优），或 `RandomizedSearchCV(svc, param_dist, n_iter=10)` 随机采样（时间耗费较少、**更容易找到局部最优**，分布可从 `scipy.stats` 如 `randint(1,20)` 采样）；结果取 `.best_params_`。\n分述②指标选择：不选 Accuracy 的理由是其分母为**全部样本**，在 99:1 的比例下把绝大多数样本判为「不违约」即可得到约 0.99 的高分，少数类（违约）错误被彻底淹没，**高估**模型。应改用 $Precision=\\frac{TP}{TP+FP}$、$Recall=\\frac{TP}{TP+FN}$ 与 $F1=\\frac{2\\times Precision\\times Recall}{Precision+Recall}$，并用 `confusion_matrix` 检查四个计数。进一步可考虑不平衡处理：SMOTE（**过采样**，合成新的少数类样本而非简单复制）或**代价敏感学习**（给少类更高权重，代价是查全率↑、查准率↓）。\n分述③正则化设置与 $\\lambda$ 方向：50 万条数据、特征多为 ID 类的场景容易高维稀疏、模型易过拟合，因此应**加入正则化** $J(w)=\\frac{1}{m}\\sum_{i=1}^{m}[\\cdots]+\\frac{\\lambda}{2m}\\sum_{j=1}^{n}w_j^{2}$。课件明确：**当 $\\lambda$ 的值开始上升时，降低了方差**——即 $\\lambda$ 增大治高方差（过拟合）、$\\lambda$ 减小治高偏差（欠拟合）。目标状态是「适当的正则化」：没有正则化会过拟合，正则化过度会欠拟合，$\\lambda$ 不是越大越好；具体取值应通过交叉验证 + 搜索确定，而非凭经验拍定。\n分述④选逻辑回归而非朴素贝叶斯的理由：两者的根本差别在于**建模对象**——逻辑回归是**判别模型**，直接学习决策函数 $Y=f(X)$ 或 $P(Y|X)$，不考虑样本的产生模型；朴素贝叶斯是**生成模型**，须估计 $P(X|Y)$ 和 $P(Y)$ 得到联合分布 $P(X,Y)=P(Y)P(X|Y)$ 再求后验。结合三条课件结论：① 逻辑回归在**表达能力**上虽弱（不能自动做特征交叉），但本场景特征以 ID 类为主，线性加权恰恰适合——其优点第 2 条正是「训练时便于并行化、预测时只需线性加权，**适合处理海量 ID 类特征**」，对头部资源有更细致的描述且防止信息损失；② 本场景**明确要求输出概率供分档**，逻辑回归天然输出概率分数、可灵活划分阈值，而朴素贝叶斯要拿到概率还需额外计算归一化分母；③ 逻辑回归还可解释（从特征权重可见各特征影响）、资源占用小，契合风控的合规与内存约束。反过来讲，朴素贝叶斯的强项（高效、易实现、无需归一化）在 50 万条数据上并非瓶颈。\n---\n## 附：五套卷考点覆盖简表\n| 套次 | 难度定位 | 核心考查方式 | 章节侧重 |\n|---|---|---|---|\n| 第1套 | 基础覆盖 | 只考 ⭐ 重点档的定义与识记，覆盖全部 7 章 | 各章均分（每章 3 题） |\n| 第2套 | 概念辨析 | 易混点对：MSE vs MAE、L1 vs L2、生成 vs 判别、精确率 vs 召回率、偏差 vs 方差、三集合分工、条件独立 vs 无条件独立 | 第2/5章各 4 题，第1/6章各 2 题 |\n| 第3套 | 模型与算法应用 | 公式推导与数值计算：最小二乘链条、SGD 推导、Sigmoid 求值、贝叶斯全概率、归一化/标准化、R² 计算 | 第3/4/6章各 4 题，第7章 1 题 |\n| 第4套 | 评价与调优 | 指标选择、数据划分、偏差方差、过拟合处理，要求在具体场景下选方法并说明理由 | 第6章 5 题、第4章与第7章各 4 题 |\n| 第5套 | 综合进阶 | 跨章综合与设计性论证：业务场景建模流程、跨模型对比与取舍论证 | 第1章 5 题、第5章 4 题 |",
+   "points": [
+    {
+     "text": "总起：本场景的三个硬约束——不平衡 99:1、50 万条数据、要求输出概率供分档——共同决定了方案。",
+     "partial": 2
+    },
+    {
+     "text": "分述①完整调用链：\n- **加载数据**：`iris = datasets.load_iris()` 一类方式或从 Pandas 读入；sklearn 接受 NumPy arrays、Pandas 对象、SciPy 稀疏矩阵等，前提是**数据必须是数值型的**。记 `X` 为特征矩阵、`y` 为标签。\n- **数据划分**：`X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=12, stratify=y, test_size=0.3)`——70% 训练／30% 测试；`stratify=y` 分层保证各集合类别比例与原始一致，**对不平衡数据尤为必要**；`random_state=12` 固定划分以保证可复现。若要调超参数，用 `cross_val_score(clf, X_train, y_train, cv=5, scoring='f1_weighted')` 做 5 折交叉验证承担验证集角色。\n- **预处理**：特征尺度差异大时先标准化——`scaler = StandardScaler()` 后 `scaler.fit_transform(X_train)`（Z-Score，处理后均值 0、方差 1）；线性模型（含逻辑回归）**需要**做，朴素贝叶斯**不需要**。\n- **模型**：`lr = LogisticRegression()`，然后 `lr.fit(X_train_scaled, y_train)`。\n- **预测**：`y_pred = lr.predict(X_test)` 得到标签；`y_prob = lr.predict_proba(X_test)` **得到概率分数**——这正是本题「供风控系统按风险等级设阈值」的硬要求。\n- **评价**：`from sklearn.metrics import ...`，分类侧用 `accuracy_score`、`precision_score`、`f1_score`、`confusion_matrix`、`classification_report`；回归侧（本场景不适用但需知道对应关系）用 `mean_absolute_error`、`mean_squared_error`、`r2_score`。\n- **超参数搜索**：`GridSearchCV(svc, params, cv=5)` 在参数网格上穷举（慢、不易找局部最优），或 `RandomizedSearchCV(svc, param_dist, n_iter=10)` 随机采样（时间耗费较少、**更容易找到局部最优**，分布可从 `scipy.stats` 如 `randint(1,20)` 采样）；结果取 `.best_params_`。",
+     "partial": 6
+    },
+    {
+     "text": "分述②指标选择：不选 Accuracy 的理由是其分母为**全部样本**，在 99:1 的比例下把绝大多数样本判为「不违约」即可得到约 0.99 的高分，少数类（违约）错误被彻底淹没，**高估**模型。应改用 $Precision=\\frac{TP}{TP+FP}$、$Recall=\\frac{TP}{TP+FN}$ 与 $F1=\\frac{2\\times Precision\\times Recall}{Precision+Recall}$，并用 `confusion_matrix` 检查四个计数。进一步可考虑不平衡处理：SMOTE（**过采样**，合成新的少数类样本而非简单复制）或**代价敏感学习**（给少类更高权重，代价是查全率↑、查准率↓）。",
+     "partial": 4
+    },
+    {
+     "text": "分述③正则化设置与 $\\lambda$ 方向：50 万条数据、特征多为 ID 类的场景容易高维稀疏、模型易过拟合，因此应**加入正则化** $J(w)=\\frac{1}{m}\\sum_{i=1}^{m}[\\cdots]+\\frac{\\lambda}{2m}\\sum_{j=1}^{n}w_j^{2}$。课件明确：**当 $\\lambda$ 的值开始上升时，降低了方差**——即 $\\lambda$ 增大治高方差（过拟合）、$\\lambda$ 减小治高偏差（欠拟合）。目标状态是「适当的正则化」：没有正则化会过拟合，正则化过度会欠拟合，$\\lambda$ 不是越大越好；具体取值应通过交叉验证 + 搜索确定，而非凭经验拍定。",
+     "partial": 3
+    },
+    {
+     "text": "分述④选逻辑回归而非朴素贝叶斯的理由：两者的根本差别在于**建模对象**——逻辑回归是**判别模型**，直接学习决策函数 $Y=f(X)$ 或 $P(Y|X)$，不考虑样本的产生模型；朴素贝叶斯是**生成模型**，须估计 $P(X|Y)$ 和 $P(Y)$ 得到联合分布 $P(X,Y)=P(Y)P(X|Y)$ 再求后验。结合三条课件结论：① 逻辑回归在**表达能力**上虽弱（不能自动做特征交叉），但本场景特征以 ID 类为主，线性加权恰恰适合——其优点第 2 条正是「训练时便于并行化、预测时只需线性加权，**适合处理海量 ID 类特征**」，对头部资源有更细致的描述且防止信息损失；② 本场景**明确要求输出概率供分档**，逻辑回归天然输出概率分数、可灵活划分阈值，而朴素贝叶斯要拿到概率还需额外计算归一化分母；③ 逻辑回归还可解释（从特征权重可见各特征影响）、资源占用小，契合风控的合规与内存约束。反过来讲，朴素贝叶斯的强项（高效、易实现、无需归一化）在 50 万条数据上并非瓶颈。\n---\n## 附：五套卷考点覆盖简表\n| 套次 | 难度定位 | 核心考查方式 | 章节侧重 |\n|---|---|---|---|\n| 第1套 | 基础覆盖 | 只考 ⭐ 重点档的定义与识记，覆盖全部 7 章 | 各章均分（每章 3 题） |\n| 第2套 | 概念辨析 | 易混点对：MSE vs MAE、L1 vs L2、生成 vs 判别、精确率 vs 召回率、偏差 vs 方差、三集合分工、条件独立 vs 无条件独立 | 第2/5章各 4 题，第1/6章各 2 题 |\n| 第3套 | 模型与算法应用 | 公式推导与数值计算：最小二乘链条、SGD 推导、Sigmoid 求值、贝叶斯全概率、归一化/标准化、R² 计算 | 第3/4/6章各 4 题，第7章 1 题 |\n| 第4套 | 评价与调优 | 指标选择、数据划分、偏差方差、过拟合处理，要求在具体场景下选方法并说明理由 | 第6章 5 题、第4章与第7章各 4 题 |\n| 第5套 | 综合进阶 | 跨章综合与设计性论证：业务场景建模流程、跨模型对比与取舍论证 | 第1章 5 题、第5章 4 题 |",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": "四部分各占分值；①调用链须覆盖划分、预处理、模型、概率输出、评价、搜索六环；④须落到「判别 vs 生成的建模对象」。（05 P12、P20、P35；06 P10、P14、P16、P23–P26；03 P19；04 P8）",
+   "extension": null,
+   "tags": [
+    "第8章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

@@ -1,0 +1,708 @@
+{
+ "chapter": 2,
+ "questions": [
+  {
+   "id": "ml-c2A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 A卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件对「深度学习」的定位是（01 P4）",
+   "options": [
+    "一种与机器学习平级、彼此独立的学科",
+    "实现机器学习的一种技术",
+    "一种通用的编程语言",
+    "一种数据库查询优化技术"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件的三句定位原文是——「人工智能：机器展现的人类智能」「机器学习：计算机利用已有的数据(经验)，得出了某种模型，并利用此模型预测未来的一种方法」「深度学习：实现机器学习的一种技术」（01 P4）。A 错在「平级独立」：课件强调三者层层包含，深度学习属于机器学习的技术分支，其技术清单是 CNN、Transformer、RNN、LSTM。C、D 把深度学习误当成语言工具或数据技术，属张冠李戴。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 A卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "「如何将教室里的学生按爱好、身高划分为 5 类？」属于（01 P18）",
+   "options": [
+    "分类，即标签离散的监督学习",
+    "聚类，即无标签情况下的无监督学习",
+    "回归，即标签连续的监督学习",
+    "强化学习，即与环境交互达成回报最大化"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件在「无监督学习——对于输入数据 $X$ 能发现什么」之下给出聚类与降维，本题正是聚类的原始例子（01 P18）。A 错在**层次**：分类属监督学习，要求有标签；而「按爱好、身高分 5 类」并没有任何现成标签，是算法自己划出来的组。C 回归要求标签连续，本题输出的是组别。D 强化学习的标志是智能体与环境的交互、序列决策与回报最大化，本题没有交互与回报。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 A卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件给出的四种常见损失函数中，**平方损失函数**的表达式是（01 P23）",
+   "options": [
+    "$L(Y, f(X)) = |Y - f(X)|$",
+    "$L(Y, f(X)) = (Y - f(X))^2$",
+    "$L(Y, f(X)) = 1\\ (Y \\neq f(X));\\ 0\\ (Y = f(X))$",
+    "$L(Y, P(Y, X)) = -\\log P(Y, X)$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件同页列出四种损失函数（01 P23）：0-1 损失 $L(Y,f(X)) = 1$（预测错）/ $0$（预测对）；**平方损失** $L(Y,f(X)) = (Y - f(X))^2$；绝对损失 $L(Y,f(X)) = |Y - f(X)|$；对数损失 $L(Y,P(Y,X)) = -\\log P(Y,X)$。本题的坑是「名称 ↔ 表达式」的对应：A 是绝对损失，C 是 0-1 损失，D 是对数损失。特别提醒 D 的自变量写的是 $P(Y,X)$ 而不是 $f(X)$——因为对数损失作用在概率上，这一点常被抄错。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 A卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "按课件的模型评估标准，判断模型「学习效果好」的依据是（01 P27）",
+   "options": [
+    "训练误差越小越好",
+    "测试误差越小越好",
+    "训练误差和测试误差接近一致",
+    "训练误差等于 0"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件原句「一般来说，若我们模型学习的效果好，则**训练误差和测试误差接近一致**」（01 P27）。A、B 都只盯住单一误差，是课件明确要避免的误判；D 的「训练误差为 0」恰恰是过拟合的典型表现。**易错点**：评估模型不能只看训练误差——训练误差小只能说明模型把训练数据背下来了。学完第 2.3.4 节应形成条件反射：谈模型好坏，先比训练与测试误差是否接近。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 A卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "「语音识别」与机器学习的关系，课件给出的等式是（01 P10）",
+   "options": [
+    "语音识别 = 图像处理 + 机器学习",
+    "语音识别 = 语音处理 + 机器学习",
+    "语音识别 = 机器学习 + 数据库",
+    "语音识别 = 模式识别 + 统计学习"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件给出的五个等式中，「语音识别 = 语音处理 + 机器学习」——音频处理技术与机器学习的结合，一般还会结合自然语言处理的相关技术（如苹果的语音助手 siri）（01 P10）。A 把「图像处理」安到了语音识别上，那是计算机视觉的配方（计算机视觉 = 图像处理 + 机器学习）；C 是数据挖掘的配方；D 是把两个「近似 / 相关学科」硬凑成一个等式，课件没有这种表述。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2A-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 A卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件列出的机器学习方法「四大要素」包括（01 P20）",
+   "options": [
+    "模型",
+    "损失函数",
+    "优化算法",
+    "交叉验证"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件「机器学习方法」页明确列出四大要素——**模型、损失函数、优化算法、模型评估指标**（01 P20），A、B、C 正确，D「交叉验证」不在其中。把这四个要素背熟，就能搭出后面所有章节的骨架：先选模型（概率 / 非概率），再定损失函数（0-1 / 平方 / 绝对 / 对数），再挑优化算法（梯度下降等），最后用训练误差与测试误差评估。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2A-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 A卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于「经验风险」与「正则化」，正确的有（01 P24、P25）",
+   "options": [
+    "经验风险就是训练数据集的平均损失",
+    "当样本数量不足时，单单利用经验风险最小化可能导致过拟合",
+    "$J(f)$ 代表对模型复杂度的惩罚，模型越复杂 $J(f)$ 越小",
+    "正则项只在样本数量足够大时才有必要加入"
+   ],
+   "answer": [
+    "A",
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "A 正确——「给定一个数据集，我们将**训练数据集的平均损失**称为**经验风险**」（01 P24）。B 正确——「当样本数量足够大时，根据大数定理，经验风险会近似于模型的期望风险……然而，当**样本数量不足**时，单单利用经验风险最小化可能会导致『过拟合』的问题」（01 P25）。C 正好说反了：课件原话是「模型越复杂，$J(f)$ **越大**；模型越简单，$J(f)$ 就越小」——**$J(f)$ 是复杂度惩罚，不是复杂度奖励**，这是本节最典型的记反点。D 也错：正则项恰恰是为**样本不足**的情形引入的，样本足够大时靠大数定理即可保证性能。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2A-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 A卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于 Pandas，正确的有（01 P63、P64、P67）",
+   "options": [
+    "它是基于 NumPy 的一种工具，为解决数据分析任务而创建",
+    "Series 是一维结构，包含行索引和数据两个部分",
+    "DataFrame 是二维结构，包含带索引的多列数据，各列数据类型可能不同",
+    "`pd.concat` 是类数据库的表连接操作，且内连接为默认方式"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件写明 Pandas「基于 NumPy 的一种工具，为了解决数据分析任务而创建」（01 P63）；Series 一维、包含行索引和数据两部分，DataFrame 二维、包含带索引的多列数据且各列数据类型可能不同（01 P64），故 A、B、C 正确。D 错在张冠李戴：`pd.concat([df1, df2])` 是**轴向连接**多个 DataFrame；类数据库的表融合是 `pd.merge(left, right)`，且它默认内连接（01 P66、P67）。**记忆锚点**：merge = 按键「对表」，concat = 按轴「拼表」。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 A卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件提出「数据决定一切」，其观察依据是什么？由此诞生了哪句名言？对工程实践有什么启示？（要求：写出依据、名言原句，启示不少于两条。）",
+   "options": null,
+   "answer": [],
+   "answerText": "**观察依据**（00 P6；01 P77）——课件给出的「数据大小—准确率」图显示：**各种不同算法在输入的数据量达到一定级数后，都有相近的高准确度**。\n**名言原句**——**「成功的机器学习应用不是拥有最好的算法，而是拥有最多的数据！」**\n**实践启示**——① 在算法差距不大的情形下，**优先投入数据规模与质量**的收益高于盲目换算法；② 既然不同算法在数据量足够时准确率相近，说明**数据的量与质量是主要的竞争壁垒**；③ 该结论是相对的、针对「数据量达到一定级数」这一前提，不能反过来推出「算法不重要」或「任何算法都一样」。\n**评分提示与易错提醒**：名言必须原句写出才能得满分分；只答「数据很重要」而无观察依据，最多得一半分；把结论绝对化（「算法完全没用」）是常见的过度引申。",
+   "points": [
+    {
+     "text": "**观察依据**（00 P6；01 P77）——课件给出的「数据大小—准确率」图显示：**各种不同算法在输入的数据量达到一定级数后，都有相近的高准确度**。",
+     "partial": 3
+    },
+    {
+     "text": "**名言原句**——**「成功的机器学习应用不是拥有最好的算法，而是拥有最多的数据！」**",
+     "partial": 3
+    },
+    {
+     "text": "**实践启示**——① 在算法差距不大的情形下，**优先投入数据规模与质量**的收益高于盲目换算法；② 既然不同算法在数据量足够时准确率相近，说明**数据的量与质量是主要的竞争壁垒**；③ 该结论是相对的、针对「数据量达到一定级数」这一前提，不能反过来推出「算法不重要」或「任何算法都一样」。\n**评分提示与易错提醒**：名言必须原句写出才能得满分分；只答「数据很重要」而无观察依据，最多得一半分；把结论绝对化（「算法完全没用」）是常见的过度引申。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 A卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "简述 Python 四种核心数据结构 list、tuple、set、dict 各自的记号与主要特点。（要求：四种都要写到，并至少点明「可修改 / 只读」「键值 / 位置」两类关键差异。）",
+   "options": null,
+   "answer": [],
+   "answerText": "**列表 (list)**——记号 `[ ]`，用来存储一连串元素的容器，**元素的类型可不相同**，且**元素的值可以修改**。\n**元组 (tuple)**——记号 `( )`，类似列表、元素同样进行索引计算，但**元素的值不能修改，只能读取**。\n**集合 (set)**——记号 `set( )`，主要有两个功能：**进行集合操作**、**消除重复元素**；括号内可以是列表、字典或字符串（字符串以列表形式存储）。\n**字典 (dict)**——记号 `{ }`，也叫关联数组（其他语言中称 map），使用**键-值 (key-value) 存储**，查找速度极快，**key 不能重复**。\n**两类关键差异小结**——「**可修改 / 只读**」：list 可改、tuple 只读；「**按值位置 / 按键值**」：list、tuple 走索引位置，dict 走 key 查找。\n**评分提示与易错提醒**：只对比 list 与 tuple 最多得一半分，四种结构都要交代；「key 不能重复」与「dict 靠 key 查找」是两个独立得分点，容易漏写后者。\n---",
+   "points": [
+    {
+     "text": "**列表 (list)**——记号 `[ ]`，用来存储一连串元素的容器，**元素的类型可不相同**，且**元素的值可以修改**。",
+     "partial": 3
+    },
+    {
+     "text": "**元组 (tuple)**——记号 `( )`，类似列表、元素同样进行索引计算，但**元素的值不能修改，只能读取**。",
+     "partial": 3
+    },
+    {
+     "text": "**集合 (set)**——记号 `set( )`，主要有两个功能：**进行集合操作**、**消除重复元素**；括号内可以是列表、字典或字符串（字符串以列表形式存储）。",
+     "partial": 3
+    },
+    {
+     "text": "**字典 (dict)**——记号 `{ }`，也叫关联数组（其他语言中称 map），使用**键-值 (key-value) 存储**，查找速度极快，**key 不能重复**。",
+     "partial": 3
+    },
+    {
+     "text": "**两类关键差异小结**——「**可修改 / 只读**」：list 可改、tuple 只读；「**按值位置 / 按键值**」：list、tuple 走索引位置，dict 走 key 查找。\n**评分提示与易错提醒**：只对比 list 与 tuple 最多得一半分，四种结构都要交代；「key 不能重复」与「dict 靠 key 查找」是两个独立得分点，容易漏写后者。\n---",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 B卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "在测试误差的定义式 $E_{test} = \\frac{1}{N'} \\sum_{n=1}^{N'} L(y_n, \\hat{f}(x_n))$ 中，$N'$ 表示（01 P27）",
+   "options": [
+    "训练数据的数量",
+    "输入特征的维度",
+    "模型的参数个数",
+    "测试数据的数量"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件逐一交代了式中各符号——$N^{\\prime}$ 为**测试数据数量**，$L(y_n, \\hat{f}(x_n))$ 是损失函数，$y_n$ 代表**真实标签**，$\\hat{f}(x_n)$ 代表**预测标签**（01 P27）。A 错在没有区分训练集与测试集——这正是评测泛化能力的全部意义所在；C、B 是模型内部量，与误差的统计口径无关。**易错点**：$y_n$ 与 $\\hat{f}(x_n)$ 一为真值、一为预测值，顺序不能颠倒，否则损失的非负性就无从谈起。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 B卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于数学期望的性质，正确的说法是（01 P50）",
+   "options": [
+    "若 $X$ 和 $Y$ 独立，则 $E(XY) = E(X)E(Y)$",
+    "无论 $X$ 与 $Y$ 是否独立，都有 $E(XY) = E(X) + E(Y)$",
+    "期望的线性性质 $E(C_1X + C_2Y) = C_1E(X) + C_2E(Y)$ 需要 $X$ 与 $Y$ 独立才成立",
+    "恒有 $[E(XY)]^2 \\ge E(X^2)E(Y^2)$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件列出四条期望性质（01 P50），其中 (3) 明确写作「若 $X$ 和 $Y$ **独立**，则 $E(XY) = E(X)E(Y)$」，故 A 正确。B 错在把「乘积」换成了「和」，两个随机变量之积的期望绝不会自动等于期望之和。C 恰好把独立性用反了——线性性质 $E(C_1X + C_2Y) = C_1E(X) + C_2E(Y)$ 是**恒成立**的，不需要任何独立性假设。D 把不等号方向搞反：课件写的是 $[E(XY)]^2 \\le E(X^2)E(Y^2)$（柯西不等式形式）。**本章难点就在这里**：期望「可加不可乘」，可乘必须额外加上独立条件。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 B卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于 Poisson 分布 $p(\\lambda)$，正确的说法是（01 P48、P49）",
+   "options": [
+    "它的期望和方差都等于参数 $\\lambda$",
+    "它的期望等于 $\\lambda$，方差等于 $\\sqrt{\\lambda}$",
+    "它的期望和方差都等于 $np$",
+    "它只能用来描述连续型随机变量"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件在常见分布页给出 Poisson 分布 $p(\\lambda)$（$\\lambda > 0$，$k = 0, 1, 2, \\cdots$，$P(X=k) = \\frac{\\lambda^{k}}{k!} e^{-\\lambda}$），并特别标注「Poisson 分布的**期望和方差都等于参数 $\\lambda$**」（01 P48、P49）。B 把方差写成了标准差的量级；C 的 $np$ 是二项分布 $B(n,p)$ 的形式；D 错在类型——Poisson 描述的是计数型（整数值）随机变量，不是连续型。**易错点**：最容易与二项分布混记，记住二项是「$n$ 次独立试验中成功次数」，Poisson 是「稀有事件在单位时间内的发生次数」。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 B卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "已知 $\\frac{d x^{\\top} A x}{dx} = (A + A^{\\top}) x$，若矩阵 $A$ 为对称阵，则该式可化简为（01 P41）",
+   "options": [
+    "$Ax$",
+    "$2A^{\\top} x$",
+    "$2Ax$",
+    "$0$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件的矩阵求导页先给 $\\frac{d x^{\\top} A x}{dx} = (A + A^{\\top}) x$，紧接着给出「$\\frac{d x^{\\top} A x}{dx} = 2Ax$（**如果 $A$ 为对称阵**）」（01 P41）。因为对称阵满足 $A^{\\top} = A$，于是 $A + A^{\\top} = 2A$，故 C 正确。A 漏掉了转置与求和的完整形式；B 在对称阵前提下 $2A^{\\top}x$ 与 $2Ax$ 数值相同，看似也对，但它没有利用「对称」这一关键条件，写成非对称阵时就错了——**只有在明确给定 $A$ 对称时才允许这样化简**。D 错在二次型求导不可能恒为 0。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 B卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "某模型在训练数据上的误差接近 0，而在测试数据上的误差明显偏大。按课件的评估标准，应判断为（01 P27）",
+   "options": [
+    "学习效果好，因为训练误差几乎为 0",
+    "无法判断，必须先增加优化算法的种类才能下结论",
+    "学习效果不好，因为只有测试误差严格大于训练误差时模型才算有问题",
+    "学习效果不好，因为训练误差与测试误差没有接近一致"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件的评估标准是「基于模型训练数据的误差 (Training Error) 和测试数据的误差 (Testing Error)……一般来说，若我们模型学习的效果好，则训练误差和测试误差**接近一致**」（01 P27）。训练误差接近 0 而测试误差明显偏大，说明模型把训练数据记住了却没学到规律，即典型的过拟合，二者差距悬殊，按标准应判为学习效果不好，故 D 正确、A 错误。C 是对标准的曲解——关键不在于「谁大谁小」，而在于**是否接近一致**；B 无依据，评估靠的是误差对比，不是换优化算法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2B-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 B卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于模型的分类，正确的有（01 P21、P22）",
+   "options": [
+    "决策树、朴素贝叶斯、隐马尔科夫模型、高斯混合模型属于概率模型",
+    "非概率模型还要再按判别函数线性与否，分为线性模型与非线性模型",
+    "感知机、KNN、K-means 属于非线性模型",
+    "核支持向量机、AdaBoost、神经网络属于非线性模型"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件的分类表是**两个嵌套维度**（01 P22）：先按是否建模概率分成**概率模型**（决策树、朴素贝叶斯、隐马尔科夫模型、高斯混合模型）与**非概率模型**（感知机、支持向量机、KNN、AdaBoost、K-means、神经网络）；再在**非概率模型内部**按判别函数线性与否分成**线性模型**（感知机、线性支持向量机、KNN、K-means）与**非线性模型**（核支持向量机、AdaBoost、神经网络）。故 A、B、D 正确。C 把 KNN、K-means 归到非线性，与课件表述相反。**易错点**：不要把「线性 / 非线性」与「概率 / 非概率」画成并列的四格——前者只在后者内部再分一次。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2B-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 B卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于矩阵与二次型，正确的有（01 P40、P41、P42）",
+   "options": [
+    "$c_{ij} = \\sum_{k=1}^{n} a_{ik} b_{kj}$，即矩阵乘法按「行乘列再求和」计算",
+    "矩阵乘法满足交换律，即 $AB = BA$",
+    "若方阵 $A$ 满足 $A^{\\top} A = I = AA^{\\top}$，则称 $A$ 为正交阵",
+    "若对任意 $w$ 都有 $w^{\\top} A w > 0$，则称 $A$ 为正定矩阵"
+   ],
+   "answer": [
+    "A",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "A 正确——课件给出 $c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \\cdots + a_{in}b_{nj} = \\sum_{k=1}^{n} a_{ik} b_{kj}$，即「行乘列再求和」（01 P40）。B 错误——课件的三条性质第一条就是 $AB \\neq BA$，矩阵乘法**只有**结合律 $(AB)C = A(BC)$ 与分配律 $A(B+C) = AB + AC$ 成立。C 正确——方阵的列向量两两正交且 $\\ell_2$ 范数为 1 时为正交阵，数学描述即 $A^{\\top}A = I = AA^{\\top}$（01 P42）。D 正确——$w^{\\top}Aw > 0$（对任意 $w$）为正定矩阵，$w^{\\top}Aw \\ge 0$ 为半正定矩阵（01 P42）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2B-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 B卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于机器学习的三种类型，正确的有（01 P16–P19）",
+   "options": [
+    "监督学习是有标签的——对于输入数据 $X$ 能预测 $Y$",
+    "分类与回归同属监督学习，区别在于标签是离散还是连续",
+    "强化学习就是无标签学习的另一种叫法",
+    "强化学习的核心是智能体与环境的交互，通过学习策略达成回报最大化"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "课件给出的三型判别依据是——监督学习**有标签**，对于输入数据 $X$ 能预测 $Y$；无监督学习**无标签**，对于输入数据 $X$ 能发现什么；强化学习是**序列决策问题**（01 P16–P19）。A 正确；B 正确——分类与回归同属监督学习，分类标签离散（如判断肿瘤良恶性）、回归标签连续（如预测上海浦东的房价），**这一层不要与「有标签 / 无标签」混淆**；D 正确——强化学习的定义就是智能体在与环境的交互过程中通过学习策略达成回报最大化。C 错误，强化学习不是「无标签学习」的另一种叫法，它的标志是**交互、序列决策与回报最大化**，与「有没有标签」无关。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 B卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "为什么样本数量不足时，单单依靠经验风险最小化会导致过拟合？引入正则项后，结构风险最小化准则中 $J(f)$ 与 $\\lambda$ 分别承担什么角色？（要求：写出结构风险最小化准则的表达式，并说明两个符号各自的职责。）",
+   "options": null,
+   "answer": [],
+   "answerText": "**经验风险的定义**——给定一个数据集，将**训练数据集的平均损失**称为经验风险；据此可写出全局损失函数：\n$$\n\\underset{f}{\\min}\\; \\frac{1}{N} \\sum_{n=1}^{N} L(y_n, f(x_n))\n$$\n**为什么样本不足会过拟合**——样本数量足够大时，根据**大数定理**，经验风险近似于模型的期望风险，此时经验风险最小化能确保有好的学习性能；但当**样本数量不足**时，模型有充分自由度去「迁就」有限样本，单单利用经验风险最小化就可能把噪声也当成规律，即产生**过拟合**。\n**结构风险最小化准则**——在经验风险上加上控制模型复杂度的**正则项 (Regularizer)**：\n$$\n\\underset{f}{\\min}\\; \\frac{1}{N} \\sum_{n=1}^{N} L(y_n, f(x_n)) + \\lambda J(f)\n$$\n**两个符号的职责**——$J(f)$：对**模型复杂度**的惩罚，**模型越复杂 $J(f)$ 越大，模型越简单 $J(f)$ 越小**；$\\lambda$：一个正的常数，叫**正则化系数**，用于**平衡经验风险和模型复杂度**。\n**评分提示与易错提醒**：$J(f)$ 的单调方向是本节最大的记反点（**越复杂越大**）；把 $\\lambda$ 的作用说成「控制模型复杂度」而不提「平衡二者」，只能算半对；结构风险小的模型需要**经验风险与模型复杂度同时小**，因此对训练数据和测试数据都能有较好的拟合——这句话是理解正则化动机的关键，答到即为加分项。",
+   "points": [
+    {
+     "text": "**经验风险的定义**——给定一个数据集，将**训练数据集的平均损失**称为经验风险；据此可写出全局损失函数：\n$$\n\\underset{f}{\\min}\\; \\frac{1}{N} \\sum_{n=1}^{N} L(y_n, f(x_n))\n$$",
+     "partial": 3
+    },
+    {
+     "text": "**为什么样本不足会过拟合**——样本数量足够大时，根据**大数定理**，经验风险近似于模型的期望风险，此时经验风险最小化能确保有好的学习性能；但当**样本数量不足**时，模型有充分自由度去「迁就」有限样本，单单利用经验风险最小化就可能把噪声也当成规律，即产生**过拟合**。",
+     "partial": 3
+    },
+    {
+     "text": "**结构风险最小化准则**——在经验风险上加上控制模型复杂度的**正则项 (Regularizer)**：\n$$\n\\underset{f}{\\min}\\; \\frac{1}{N} \\sum_{n=1}^{N} L(y_n, f(x_n)) + \\lambda J(f)\n$$",
+     "partial": 3
+    },
+    {
+     "text": "**两个符号的职责**——$J(f)$：对**模型复杂度**的惩罚，**模型越复杂 $J(f)$ 越大，模型越简单 $J(f)$ 越小**；$\\lambda$：一个正的常数，叫**正则化系数**，用于**平衡经验风险和模型复杂度**。\n**评分提示与易错提醒**：$J(f)$ 的单调方向是本节最大的记反点（**越复杂越大**）；把 $\\lambda$ 的作用说成「控制模型复杂度」而不提「平衡二者」，只能算半对；结构风险小的模型需要**经验风险与模型复杂度同时小**，因此对训练数据和测试数据都能有较好的拟合——这句话是理解正则化动机的关键，答到即为加分项。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c2B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《机器学习》章节小测 第2章 B卷（依据课程课件 002 系列）",
+    "kind": "textbook"
+   },
+   "stem": "简述课件给出的 Python 五大模块 NumPy、Pandas、SciPy、Matplotlib、Scikit-learn 各自的功能定位；并说明 Pandas 中 `.loc` 与 `.iloc` 选取数据的区别。（要求：五个模块各一句，`.loc` / `.iloc` 的判别依据要写清楚。）",
+   "options": null,
+   "answer": [],
+   "answerText": "**五大模块定位**——**NumPy**：用 Python 实现的科学计算扩展程序库，提供强大的 N 维数组对象、成熟的广播函数库、整合 C/C++ 与 Fortran 的工具包，以及线性代数、傅里叶变换与随机数生成函数；**Pandas**：基于 NumPy 的工具，为解决数据分析任务而创建，核心结构是 Series 与 DataFrame；**SciPy**：构建在 NumPy 基础之上、专为科学与工程设计的工具包，含统计、优化、积分、线性代数、信号与图像处理等模块；**Matplotlib**：Python 的 **2D 绘图库**，可生成出版质量级别的图形（绘图框 → 子图 → 元素三层结构）；**Scikit-learn**：用于快速构建经典模型的机器学习库。\n**`.loc` 与 `.iloc` 的区别**——`df.loc[row_label, col_label]` 通过**标签**选取行 / 列；`df.iloc[row_loc, col_loc]` 通过**位置（自然数）**选取行 / 列。判别依据是：**参数是「名字」还是「第几个」**。另外 `df[5:10]` 是通过切片方式选取多行，`df[col_label]` 或 `df.col_label` 是选取列。\n**评分提示与易错提醒**：五个模块各占一分左右，只写 NumPy 与 Pandas 最多得一半分；`.loc` 用标签、`.iloc` 用位置不可记反，也不要把 `df[5:10]` 当成选列——它是切片选**多行**，选列要用 `df[col_label]`。\n# 第3章 回归\n> 本章小测共 2 套：A 卷基础巩固、B 卷理解运用，每套满分 45 分。\n> 建议先独立作答，再对照解析。",
+   "points": [
+    {
+     "text": "**五大模块定位**——**NumPy**：用 Python 实现的科学计算扩展程序库，提供强大的 N 维数组对象、成熟的广播函数库、整合 C/C++ 与 Fortran 的工具包，以及线性代数、傅里叶变换与随机数生成函数；**Pandas**：基于 NumPy 的工具，为解决数据分析任务而创建，核心结构是 Series 与 DataFrame；**SciPy**：构建在 NumPy 基础之上、专为科学与工程设计的工具包，含统计、优化、积分、线性代数、信号与图像处理等模块；**Matplotlib**：Python 的 **2D 绘图库**，可生成出版质量级别的图形（绘图框 → 子图 → 元素三层结构）；**Scikit-learn**：用于快速构建经典模型的机器学习库。",
+     "partial": 3
+    },
+    {
+     "text": "**`.loc` 与 `.iloc` 的区别**——`df.loc[row_label, col_label]` 通过**标签**选取行 / 列；`df.iloc[row_loc, col_loc]` 通过**位置（自然数）**选取行 / 列。判别依据是：**参数是「名字」还是「第几个」**。另外 `df[5:10]` 是通过切片方式选取多行，`df[col_label]` 或 `df.col_label` 是选取列。\n**评分提示与易错提醒**：五个模块各占一分左右，只写 NumPy 与 Pandas 最多得一半分；`.loc` 用标签、`.iloc` 用位置不可记反，也不要把 `df[5:10]` 当成选列——它是切片选**多行**，选列要用 `df[col_label]`。\n# 第3章 回归\n> 本章小测共 2 套：A 卷基础巩固、B 卷理解运用，每套满分 45 分。\n> 建议先独立作答，再对照解析。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

@@ -1,0 +1,728 @@
+{
+ "chapter": 6,
+ "questions": [
+  {
+   "id": "ml-c6A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 A卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "测试集（Test Set）的作用是（　）（05 P4）",
+   "options": [
+    "帮助我们训练模型、确定拟合曲线的参数",
+    "用来做模型选择、训练超参数",
+    "为了测试已经训练好的模型的精确度",
+    "用于增加训练数据的数量"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P4 给出三者分工——**训练集**帮助我们训练模型、通过训练数据确定拟合曲线的参数；**验证集**（开发集 Dev Set）用来做模型选择（model selection）、做模型的最终优化及确定、训练超参数，且是**可选**的；**测试集**为了测试已经训练好的模型的精确度。A、B 分别属于训练集与验证集的作用，看反行就会把「调参」和「评估」混为一谈。\n⚠️**易错点**：验证集是可选的、测试集不是；深度学习 98%/1%/1% 的前提是**百万级数据**，小数据集照搬会导致验证集过小。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 A卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "混淆矩阵中，行与列分别代表（　）（05 P12）",
+   "options": [
+    "行是预测值，列是实际值",
+    "行是实际值，列是预测值",
+    "行与列都是实际值",
+    "行与列都是预测值"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P12 的混淆矩阵以「实际值」为行、「预测值」为列：左上是 TP（实际正、预测正），右上角是 FN（实际正、预测负），左下角是 FP（实际负、预测正），右下角是 TN（实际负、预测负）。**易错点**：行是实际值、列是预测值，**看反行就会把 FP 当成 FN**，而 FP 与 FN 恰好是 Precision 与 Recall 各自的分母项，混淆后两个指标全错。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 A卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "下列四个分类评价指标中，**分母为「实际为正的数量 $TP+FN$」**的是（　）（05 P12）",
+   "options": [
+    "精确率（Precision）",
+    "F1 score",
+    "准确率（Accuracy）",
+    "召回率（Recall）"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P12 给出 $Precision=\\frac{TP}{TP+FP}$、$Recall=\\frac{TP}{TP+FN}$。Recall 的分母 $TP+FN$ 即「实际总正例数量」，含义是**实际为正**的样本数；Precision 的分母 $TP+FP$ 是「预测为正」的数量；Accuracy 的分母是全部样本；F1 是 Precision 与 Recall 的调和平均，不直接对应「正例数量」这一分母。**易错点**：Precision 与 Recall 分母含义不同，是本章最经典的易错点。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 A卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "采用 Z-Score 标准化处理数据之后，数据的特点是（　）（05 P19）",
+   "options": [
+    "全部被映射到 [0,1] 区间",
+    "均值为 0、方差为 1",
+    "均值为 1、方差为 0",
+    "一定变成正态分布"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P19 给出 Z-Score 标准化 $x^{*}=\\frac{x-\\mu}{\\sigma}$，其中 $\\sigma^{2}=\\frac{1}{m}\\sum_{i=1}^{m}(x^{(i)}-\\mu)^{2}$、$\\mu=\\frac{1}{m}\\sum_{i=1}^{m}x^{(i)}$，处理后数据**均值为 0、方差为 1**。A 描述的是归一化（最大-最小规范化）映射到 [0,1] 区间；C 错；D 错，标准化并不改变数据的分布形态为正态分布。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 A卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "下列模型中，按课件表述「一般不需要」做归一化/标准化的是（　）（05 P20）",
+   "options": [
+    "KNN（K 近邻）",
+    "SVM",
+    "决策树",
+    "K-means 聚类"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P20 列出**不需要做**的模型：决策树、基于决策树的 Boosting 和 Bagging 等集成学习模型（树模型）以及**朴素贝叶斯**——它们对特征取值大小并不敏感。A、B、D 均属于**需要做**的一类：基于距离度量的模型（KNN、K-means）、感知机、SVM、神经网络，线性回归类模型一般也需要做。**易错点**：树模型与朴素贝叶斯不需要归一化/标准化，这是「一刀切全做归一化」的常见反例。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6A-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 A卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于 $L_1$ 与 $L_2$ 正则化，下列说法正确的有（　）（05 P25、P26）",
+   "options": [
+    "$L_1$ 在损失函数中加入权值向量 $w$ 的**绝对值之和**",
+    "$L_1$ 能产生**稀疏模型**",
+    "$L_2$ 在损失函数中加入权值向量 $w$ 的**平方和**",
+    "$L_2$ 使最优解更加靠近坐标轴、其它轴为 0"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P25 给出 $L_1$ 的正则项为 $\\frac{\\lambda}{2m}\\sum_{j=1}^{n}|w_j|$（绝对值之和）、$L_2$ 为 $\\frac{\\lambda}{2m}\\sum_{j=1}^{n}w_j^{2}$（平方和）；05 P26 的几何解释是：$L_1$ 能产生**稀疏模型**，最优解 $w^*$ 使解更加靠近某些轴、其它轴为 0；$L_2$ 能降低参数范数的总和，最优解使解更加靠近原点。D 把 $L_1$ 的直观表现安到了 $L_2$ 头上。**必背：$L_1$ → 权重稀疏；$L_2$ → 权重平滑。**",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6A-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 A卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "下列模型中，按课件表述「需要做」归一化/标准化的有（　）（05 P20）",
+   "options": [
+    "基于距离度量的模型，如 KNN（K 近邻）、K-means 聚类",
+    "感知机和 SVM",
+    "决策树以及基于决策树的 Boosting、Bagging 等树模型",
+    "神经网络"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P20 的「需要做」一栏包含：线性模型，如基于距离度量的 KNN（K 近邻）、K-means 聚类、感知机和 SVM、神经网络，另外线性回归类的几个模型一般情况下也需要做。C 全是树模型与树模型集成，属于「不需要做」的一栏。**易错点**：判断标准是「模型是否依赖特征量纲」——依赖距离/尺度的要做，按阈值分裂的树模型不用做。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6A-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 A卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于数据不平衡的处理方法，下列说法正确的有（　）（05 P6、P7）",
+   "options": [
+    "数据不平衡指数据集中各类样本数量不均衡的情况",
+    "常用不平衡处理方法有**采样**和**代价敏感学习**",
+    "采样又分欠采样、过采样和综合采样",
+    "SMOTE 的核心思想是把少数类样本**简单复制**若干份"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P6 指出数据不平衡指数据集中各类样本数量不均衡，常用处理方法有采样和代价敏感学习，采样又分欠采样、过采样和综合采样。D 错：05 P7 的 SMOTE 是**过采样**中比较常用的一种，其思想是**合成新的少数类样本，而不是简单地复制样本**，这正是 SMOTE 与「直接复制少数类样本」的区别所在。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 A卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "写出混淆矩阵四个指标 Accuracy、Precision、Recall、F1 的定义式，并说明它们各自的**分母**含义。（要求：写出四个公式；指明各自分母是「全部样本」「预测为正」还是「实际为正」）",
+   "options": null,
+   "answer": [],
+   "answerText": "**四个公式**（05 P12）：\n$$\nAccuracy=\\frac{TP+TN}{TP+TN+FP+FN}\n$$\n$$\nPrecision=\\frac{TP}{TP+FP}\\qquad Recall=\\frac{TP}{TP+FN}\\qquad F1=\\frac{2\\times Precision\\times Recall}{Precision+Recall}\n$$\n**分母含义**（这是本题的采分重点）：\n- Accuracy 分母 = $TP+TN+FP+FN$，即**全部样本**；\n- Precision 分母 = $TP+FP$，即**「预测为正」的数量**（识别出的正例）；\n- Recall 分母 = $TP+FN$，即**「实际为正」的数量**（实际总正例数）；\n- F1 无独立的样本分母，是 Precision 与 Recall 的调和平均，因此二者**必须同时看**，任何一项偏低都会拉低 F1。\n**四个符号**（配套记忆）：TP 预测为真实际为真、TN 预测为假实际为假、FP 预测为真实际为假（错误肯定）、FN 预测为假实际为真（错误否定）。\n**补充示例（可加分）**：猫狗算例 100 张（猫 60、狗 40）中 $TP=40$、$FN=20$、$FP=10$、$TN=30$，则 $Accuracy=70/100=0.7$、$Precision=40/50=0.8$、$Recall=40/60\\approx0.67$；注意本例 Precision 的分母 50 恰好等于负例数纯属巧合，不要当成规律。",
+   "points": [
+    {
+     "text": "**四个公式**（05 P12）：\n$$\nAccuracy=\\frac{TP+TN}{TP+TN+FP+FN}\n$$\n$$\nPrecision=\\frac{TP}{TP+FP}\\qquad Recall=\\frac{TP}{TP+FN}\\qquad F1=\\frac{2\\times Precision\\times Recall}{Precision+Recall}\n$$",
+     "partial": 3
+    },
+    {
+     "text": "**分母含义**（这是本题的采分重点）：\n- Accuracy 分母 = $TP+TN+FP+FN$，即**全部样本**；\n- Precision 分母 = $TP+FP$，即**「预测为正」的数量**（识别出的正例）；\n- Recall 分母 = $TP+FN$，即**「实际为正」的数量**（实际总正例数）；\n- F1 无独立的样本分母，是 Precision 与 Recall 的调和平均，因此二者**必须同时看**，任何一项偏低都会拉低 F1。",
+     "partial": 3
+    },
+    {
+     "text": "**四个符号**（配套记忆）：TP 预测为真实际为真、TN 预测为假实际为假、FP 预测为真实际为假（错误肯定）、FN 预测为假实际为真（错误否定）。",
+     "partial": 3
+    },
+    {
+     "text": "**补充示例（可加分）**：猫狗算例 100 张（猫 60、狗 40）中 $TP=40$、$FN=20$、$FP=10$、$TN=30$，则 $Accuracy=70/100=0.7$、$Precision=40/50=0.8$、$Recall=40/60\\approx0.67$；注意本例 Precision 的分母 50 恰好等于负例数纯属巧合，不要当成规律。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 A卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "写出「归一化（最大-最小规范化）」与「Z-Score 标准化」的处理公式，并说明各自处理后的数据特点与适用条件。（要求：写出两个公式；写出各自结果区间/均值方差特征；写出适用条件）",
+   "options": null,
+   "answer": [],
+   "answerText": "**归一化（最大-最小规范化）**（05 P19）：\n$$\nx^{*}=\\frac{x-x_{min}}{x_{max}-x_{min}}\n$$\n处理后数据被映射到 **[0,1] 区间**。\n**Z-Score 标准化**（05 P19）：\n$$\nx^{*}=\\frac{x-\\mu}{\\sigma},\\qquad \\sigma^{2}=\\frac{1}{m}\\sum_{i=1}^{m}\\left(x^{(i)}-\\mu\\right)^{2},\\qquad \\mu=\\frac{1}{m}\\sum_{i=1}^{m}x^{(i)}\n$$\n处理后数据**均值为 0、方差为 1**。\n**目的与适用条件**：归一化的目的是使各特征对目标变量的影响一致；标准化的目的是让不同特征之间具备可比性，**当数据特征取值范围或单位差异较大时，最好做一下标准化处理**。\n**为什么值得做**（05 P17、P19 演讲者备注）：一是提升模型精度，二是加速模型收敛——若一个特征取值范围是 5000~10000、另一个只有 0.1~1，无论什么模型第一个特征对结果的影响都会大于第二个，这样的模型很难有效做出准确预测；标准化后寻优过程明显变平缓，更容易正确收敛到最优解。\n⚠️**课件存疑提示**：关于「归一化会改变分布、标准化不改变分布」的表述，05 P19 正文与演讲者备注均如此表述，但课件未加条件说明（本章存疑点第 1 条），答题按课件原文表述即可。\n---",
+   "points": [
+    {
+     "text": "**归一化（最大-最小规范化）**（05 P19）：\n$$\nx^{*}=\\frac{x-x_{min}}{x_{max}-x_{min}}\n$$\n处理后数据被映射到 **[0,1] 区间**。",
+     "partial": 3
+    },
+    {
+     "text": "**Z-Score 标准化**（05 P19）：\n$$\nx^{*}=\\frac{x-\\mu}{\\sigma},\\qquad \\sigma^{2}=\\frac{1}{m}\\sum_{i=1}^{m}\\left(x^{(i)}-\\mu\\right)^{2},\\qquad \\mu=\\frac{1}{m}\\sum_{i=1}^{m}x^{(i)}\n$$\n处理后数据**均值为 0、方差为 1**。",
+     "partial": 3
+    },
+    {
+     "text": "**目的与适用条件**：归一化的目的是使各特征对目标变量的影响一致；标准化的目的是让不同特征之间具备可比性，**当数据特征取值范围或单位差异较大时，最好做一下标准化处理**。",
+     "partial": 3
+    },
+    {
+     "text": "**为什么值得做**（05 P17、P19 演讲者备注）：一是提升模型精度，二是加速模型收敛——若一个特征取值范围是 5000~10000、另一个只有 0.1~1，无论什么模型第一个特征对结果的影响都会大于第二个，这样的模型很难有效做出准确预测；标准化后寻优过程明显变平缓，更容易正确收敛到最优解。\n⚠️**课件存疑提示**：关于「归一化会改变分布、标准化不改变分布」的表述，05 P19 正文与演讲者备注均如此表述，但课件未加条件说明（本章存疑点第 1 条），答题按课件原文表述即可。\n---",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 B卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "交叉验证四步中，第 4 步所说的「推广误差」是对哪一部分数据计算的代价函数值（　）（05 P5）",
+   "options": [
+    "对**全部数据**计算得出",
+    "用第 1 步训练出的第 1 个模型对**交叉验证集**计算得出",
+    "对**训练集**计算得出",
+    "用第 3 步选出的模型对**测试集**计算得出"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P5 的交叉验证四步是——①用训练集训练出 $k$ 个模型；②用 $k$ 个模型分别对交叉验证集计算得出**交叉验证误差**；③选取代价函数值**最小**的模型；④用第 3 步选出的模型对**测试集**计算得出**推广误差**。**易错点**：交叉验证误差用于第 3 步选模型，推广误差是第 4 步对测试集算的，两个「误差」的对象不同，不要混称、更不要互换。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 B卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "泛化误差分解式 $E(f;D)=bias^{2}(x)+var(x)+\\varepsilon^{2}$ 能够成立的关键假设是（　）（05 P33、P34）",
+   "options": [
+    "噪声的期望为零，即 $E_D[(y-y_D)]=0$",
+    "所有训练集 $D$ 完全相同",
+    "样本数趋于无穷大",
+    "类别数必须是有限的"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P33 的推导在展开平方后产生交叉项 $2E_D[(f(x;D)-\\overline{f}(x))(\\overline{f}(x)-y_D)]$ 与 $2E_D[(\\overline{f}(x)-y)(y-y_D)]$；课件 05 P34 的解析指出，由于 $\\overline{f}(x)$ 与 $y$ 均为常量，且**假设噪声的期望为零**（$E_D[(y-y_D)]=0$），交叉项才能化为 0，分解式才能成立。**易错点**：「噪声期望为零」是分解成立的前提，跳过它就得不到三项分解。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 B卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "某回归任务的离群点代表**实际存在、且应该被检测出来的异常值**，按课件口径应选用的损失函数是（　）（05 P10）",
+   "options": [
+    "MSE（均方误差）",
+    "MAE（平均绝对误差）",
+    "决定系数 $R^2$",
+    "0-1 损失"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P10 演讲者备注给出的取舍标准是：若离群点是**实际数据或重要数据**、而且是应该被检测到的异常值，则应使用 **MSE**；反过来，若离群点仅代表数据损坏或错误采样、无须过多关注，则选 **MAE**。此外从求解梯度角度，MSE 优于 MAE，梯度动态变化、较快准确收敛。C 的 $R^2$ 是评价指标而非损失；D 的 0-1 损失用于分类。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 B卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "在猫狗算例中（$TP=40$、$FN=20$、$FP=10$），若调整阈值使得预测为猫的数量增加，即 $FP$ 由 10 增加到 20 而 $TP$、$FN$ 均不变，则两个指标的变化是（　）（05 P12、P13）",
+   "options": [
+    "Precision 上升，Recall 上升",
+    "Precision 下降，Recall 不变",
+    "Precision 不变，Recall 下降",
+    "Precision 与 Recall 均不变"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "$Precision=\\frac{TP}{TP+FP}$，$TP$ 不变而 $FP$ 由 10 增至 20，分母由 50 增至 60，Precision 由 $40/50=0.8$ 降至 $40/60\\approx0.667$，即**下降**；$Recall=\\frac{TP}{TP+FN}$，由于实际总正例数固定为 60（$TP+FN$ 不变），Recall 仍为 $40/60\\approx0.67$，**保持不变**。这与课件 05 P8 的结论方向一致：让模型更偏向少类的做法（如代价敏感学习中提高少类权重）会**提高查全率、降低查准率**。**易错点**：必须先分清哪个分母会变，再下结论。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 B卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于 Early stopping（提早停止训练），其优点是（　）（05 P28）",
+   "options": [
+    "只运行一次梯度下降，就能找出 $w$ 的较小值、中间值和较大值，而无需尝试 $L_2$ 正则化超参数 $\\lambda$ 的很多值",
+    "可以保证模型一定不会欠拟合",
+    "可以完全替代训练集/验证集/测试集的划分",
+    "必须先给定 $\\lambda$ 的取值才能使用"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P28 指出 Early stopping 的优点是：只运行一次梯度下降，可以找出 $w$ 的较小值、中间值和较大值，**而无需尝试 $L_2$ 正则化超参数 $\\lambda$ 的很多值**。B 错，早停与欠拟合无必然关系；C 错，训练/验证/测试集的划分是前提；D 错，恰是不需要反复试 $\\lambda$ 才是它的优点。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6B-multi-1",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 B卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于交叉验证中的两个「误差」，下列说法正确的有（　）（05 P5）",
+   "options": [
+    "推广误差用于从 $k$ 个模型中选出最优模型",
+    "第 4 步算出的是**推广误差**，是用第 3 步选出的模型对测试集计算的",
+    "交叉验证误差就是对测试集计算出来的误差",
+    "第 2 步算出的是**交叉验证误差**，用于第 3 步从 $k$ 个模型中选出代价函数值最小的模型"
+   ],
+   "answer": [
+    "B",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P5 的四步中，第 2 步的**交叉验证误差**服务于第 3 步的选模型，第 4 步的**推广误差**是对测试集计算的最终评估值。C 错，交叉验证误差是对交叉验证集算的；A 错，用交叉验证误差选模型，而不是推广误差。**易错点**：把这两个「误差」叫混或对调，是本章反复出现的失分点。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6B-multi-2",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 B卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "课件给出的「解决过拟合」的四条措施，正确的有（　）（05 P22）",
+   "options": [
+    "获得更多的训练数据",
+    "降维，即丢弃一些不能帮助正确预测的特征",
+    "正则化，保留所有特征但减少参数的大小（magnitude）",
+    "增加模型复杂度，如在线性模型中添加高次项"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P22 给出解决过拟合的四法：①获得更多的训练数据（最有效的手段，更多的样本能让模型学到更多更有效的特征、减小噪声影响）；②降维（丢弃不能帮助正确预测的特征，可用 PCA 等）；③正则化（**保留所有特征，但减少参数的大小**）；④集成学习（把多个模型集成在一起，降低单一模型的过拟合风险）。D 错：**增加模型复杂度治的是欠拟合**，方向相反。\n📖补充（05 P23）：各种不同算法在输入数据量达到一定级数后都有相近的高准确度，由此诞生名言——**成功的机器学习应用不是拥有最好的算法，而是拥有最多的数据！**",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6B-multi-3",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 B卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "关于偏差与方差，下列说法正确的有（　）（05 P30、P31、P32）",
+   "options": [
+    "完整的期望泛化误差分解中**不含**噪声项 $\\varepsilon^{2}$",
+    "方差描述的是预测值的变化范围、离散程度，也就是离其期望值的距离",
+    "课件 05 P31 图注给出的形式是「总体误差 = 偏差² + 方差」",
+    "偏差描述的是预测值（估计值）的期望与真实值之间的差距，偏差越大越偏离真实数据"
+   ],
+   "answer": [
+    "B",
+    "C",
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "05 P30 定义——方差描述预测值的变化范围、离散程度，离其期望值越远则分布越分散；偏差描述预测值（估计值）的期望与真实值之间的差距。05 P31 图注给出「总体误差 = 偏差² + 方差」两项形式，并指出随模型复杂度增加，**方差逐渐增大、偏差逐渐减小**，虚线处偏差与方差都适度，才是「适度拟合」。A 错：05 P32 的完整分解为\n$$\nE(f;A)=bias^{2}(x)+var(x)+\\varepsilon^{2}\n$$\n**含噪声项**。\n⚠️**课件存疑提示**：05 P31 图注写「总体误差 = 偏差² + 方差」（两项），05 P32 写完整分解为三项（多噪声项），课件未说明「总体误差」是否指忽略噪声后的情形（本章存疑点第 2 条）。按理「两项式」是「三项式在忽略噪声时的简化写法」，答题时应把两种写法都写出并点明这一关系。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 B卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "写出期望泛化误差的偏差-方差-噪声分解式及其中 $bias^{2}(x)$、$var(x)$、$\\varepsilon^{2}$ 的定义式，并说明课件图注「总体误差 = 偏差² + 方差」与该分解式的关系。（要求：写出 $E(f;D)$ 分解式；写出学习算法的期望预测 $\\overline{f}(x)=E_D[f(x;D)]$；写出三项定义；说明两项式与三项式的关系）",
+   "options": null,
+   "answer": [],
+   "answerText": "**期望泛化误差的分解式**（05 P32）：\n$$\nE(f;A)=bias^{2}(x)+var(x)+\\varepsilon^{2}\n$$\n**学习算法的期望预测**（05 P32）：\n$$\n\\overline{f}(x)=E_A\\left[f(x;A)\\right]\n$$\n**三项定义式**：\n$$\nbias^{2}(x)=\\left(\\overline{f}(x)-y\\right)^{2}\n$$\n$$\nvar(x)=E_A\\left[\\left(f(x;A)-\\overline{f}(x)\\right)^{2}\\right]\n$$\n$$\n\\varepsilon^{2}=E_A\\left[\\left(y_A-y\\right)^{2}\\right]\n$$\n其中 $y$ 为 $x$ 在数据集中的标记、$y_A$ 为 $x$ 的真实标记、$f(x;A)$ 为训练集 $A$ 上学得模型 $f$ 在 $x$ 上的预测输出。\n**推导中用到的关键假设**（05 P33、P34）：因为 $\\overline{f}(x)$ 和 $y$ 均为常量，且**噪声期望为零** $E_A[(y-y_A)]=0$，故交叉项 $2E_A[(\\overline{f}(x)-y)(y-y_A)]=0$，分解才成立。\n**两项式与三项式的关系（采分点）**：课件 05 P31 图注的「**总体误差 = 偏差² + 方差**」是上述三项分解在**忽略噪声项**时的简化形式；课件未明确说明二者关系（课件此处存疑），答题时按「两项式是三项式丢掉噪声后的写法」表述最稳妥。\n**模型复杂度的含义（可加分）**：随模型复杂度增加，方差逐渐增大、偏差逐渐减小，总体误差呈 U 形；虚线处是模型复杂度的最恰当选择，其「偏差」和「方差」也都适度，才能「适度拟合」。",
+   "points": [
+    {
+     "text": "**期望泛化误差的分解式**（05 P32）：\n$$\nE(f;A)=bias^{2}(x)+var(x)+\\varepsilon^{2}\n$$",
+     "partial": 3
+    },
+    {
+     "text": "**学习算法的期望预测**（05 P32）：\n$$\n\\overline{f}(x)=E_A\\left[f(x;A)\\right]\n$$",
+     "partial": 3
+    },
+    {
+     "text": "**三项定义式**：\n$$\nbias^{2}(x)=\\left(\\overline{f}(x)-y\\right)^{2}\n$$\n$$\nvar(x)=E_A\\left[\\left(f(x;A)-\\overline{f}(x)\\right)^{2}\\right]\n$$\n$$\n\\varepsilon^{2}=E_A\\left[\\left(y_A-y\\right)^{2}\\right]\n$$\n其中 $y$ 为 $x$ 在数据集中的标记、$y_A$ 为 $x$ 的真实标记、$f(x;A)$ 为训练集 $A$ 上学得模型 $f$ 在 $x$ 上的预测输出。",
+     "partial": 3
+    },
+    {
+     "text": "**推导中用到的关键假设**（05 P33、P34）：因为 $\\overline{f}(x)$ 和 $y$ 均为常量，且**噪声期望为零** $E_A[(y-y_A)]=0$，故交叉项 $2E_A[(\\overline{f}(x)-y)(y-y_A)]=0$，分解才成立。",
+     "partial": 3
+    },
+    {
+     "text": "**两项式与三项式的关系（采分点）**：课件 05 P31 图注的「**总体误差 = 偏差² + 方差**」是上述三项分解在**忽略噪声项**时的简化形式；课件未明确说明二者关系（课件此处存疑），答题时按「两项式是三项式丢掉噪声后的写法」表述最稳妥。",
+     "partial": 3
+    },
+    {
+     "text": "**模型复杂度的含义（可加分）**：随模型复杂度增加，方差逐渐增大、偏差逐渐减小，总体误差呈 U 形；虚线处是模型复杂度的最恰当选择，其「偏差」和「方差」也都适度，才能「适度拟合」。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "ml-c6B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《机器学习》章节小测 第6章 B卷（依据课程课件 006 系列）",
+    "kind": "textbook"
+   },
+   "stem": "某模型的训练集误差很小，而交叉验证集误差**远大于**训练集误差。请按课件的诊断规则给出结论（属于偏差还是方差、欠拟合还是过拟合），写出三条对应的处方；若现象反过来变成「两者近似」，结论与处方方向应如何变化？（要求：写出两条诊断规则；答出高方差的三条处方；答出高偏差的三条处方；注意 $\\lambda$ 的作用方向）",
+   "options": null,
+   "answer": [],
+   "answerText": "**两条诊断规则**（05 P35）：\n$$\n\\text{训练集误差} \\approx \\text{交叉验证集误差} \\Longrightarrow \\text{偏差 / 欠拟合（Underfitting）}\n$$\n$$\n\\text{交叉验证集误差} \\gg \\text{训练集误差} \\Longrightarrow \\text{方差 / 过拟合（Overfitting）}\n$$\n**本题情形（远大于）**：结论为**高方差 / 过拟合**；处方三条（05 P36 第 1、2、6 条）：获得更多的训练实例；尝试减少特征的数量；尝试**增加**正则化程度 $\\lambda$。\n**反向情形（近似）**：结论为**高偏差 / 欠拟合**；处方三条（05 P36 第 3、4、5 条）：尝试获得更多的特征；尝试增加多项式特征；尝试**减少**正则化程度 $\\lambda$。\n**$\\lambda$ 方向（易错点）**：**减小 $\\lambda$ 治高偏差、增大 $\\lambda$ 治高方差**；「更多数据／减少特征／增大 $\\lambda$」治高方差，「更多特征／多项式特征／减小 $\\lambda$」治高偏差，处方与症状的对应关系勿反。\n**补充（可加分）**：同一方向在 05 P22 与 05 P24 还有另一套表述——过拟合四法（更多数据、降维、正则化、集成学习）、欠拟合三法（添加新特征、增加模型复杂度、减小正则化系数），与上面的六条处方方向完全一致，可互相印证记忆。\n---\n# 第7章 Scikit-learn 机器学习库\n> 本章小测共 2 套：A 卷基础巩固、B 卷理解运用，每套满分 45 分。\n> 题型：单选 5 题（每题 3 分）、多选 3 题（每题 4 分）、简答 2 题（每题 9 分）。\n> 多选、少选、错选均不得分。建议先独立作答，再对照解析。",
+   "points": [
+    {
+     "text": "**两条诊断规则**（05 P35）：\n$$\n\\text{训练集误差} \\approx \\text{交叉验证集误差} \\Longrightarrow \\text{偏差 / 欠拟合（Underfitting）}\n$$\n$$\n\\text{交叉验证集误差} \\gg \\text{训练集误差} \\Longrightarrow \\text{方差 / 过拟合（Overfitting）}\n$$",
+     "partial": 3
+    },
+    {
+     "text": "**本题情形（远大于）**：结论为**高方差 / 过拟合**；处方三条（05 P36 第 1、2、6 条）：获得更多的训练实例；尝试减少特征的数量；尝试**增加**正则化程度 $\\lambda$。",
+     "partial": 3
+    },
+    {
+     "text": "**反向情形（近似）**：结论为**高偏差 / 欠拟合**；处方三条（05 P36 第 3、4、5 条）：尝试获得更多的特征；尝试增加多项式特征；尝试**减少**正则化程度 $\\lambda$。",
+     "partial": 3
+    },
+    {
+     "text": "**$\\lambda$ 方向（易错点）**：**减小 $\\lambda$ 治高偏差、增大 $\\lambda$ 治高方差**；「更多数据／减少特征／增大 $\\lambda$」治高方差，「更多特征／多项式特征／减小 $\\lambda$」治高偏差，处方与症状的对应关系勿反。",
+     "partial": 3
+    },
+    {
+     "text": "**补充（可加分）**：同一方向在 05 P22 与 05 P24 还有另一套表述——过拟合四法（更多数据、降维、正则化、集成学习）、欠拟合三法（添加新特征、增加模型复杂度、减小正则化系数），与上面的六条处方方向完全一致，可互相印证记忆。\n---\n# 第7章 Scikit-learn 机器学习库\n> 本章小测共 2 套：A 卷基础巩固、B 卷理解运用，每套满分 45 分。\n> 题型：单选 5 题（每题 3 分）、多选 3 题（每题 4 分）、简答 2 题（每题 9 分）。\n> 多选、少选、错选均不得分。建议先独立作答，再对照解析。",
+     "partial": 3
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}
