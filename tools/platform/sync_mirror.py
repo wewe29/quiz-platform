@@ -17,6 +17,12 @@
     · _cache             —— 外部抓取缓存（高数 research/_cache 实测 156 MB，非源码）
     · _drops*.jsonl      —— 丢弃记录日志（2 MB，非源码）
 
+换行符：仓内由 .gitattributes 统一成 LF（D21），而正本是裸目录、换行符不统一
+（实测 4 个 v1 遗留文件在正本是 CRLF，仓内 blob 是 LF）。所以比对**按内容**判定：
+把两侧的 CRLF 归一成 LF 再比，并分三档如实报告——
+    逐字节相同 / 仅换行符差异 / 真差异。
+只有「缺文件」与「真差异」算漂移（--check 退出 1）；「仅换行符差异」不算。
+
 注意：
     ① bash 的硬安全策略会拦「工作区外写」的字面路径，所以同步放在脚本内部做；
     ② 本脚本**只覆盖同名文件、不删除多余文件**——删除要走可恢复删除另行处理；
@@ -47,12 +53,21 @@ SUBJECTS = {
 }
 
 
-def sha256(path):
+def _digest(path, normalize_eol=False):
     h = hashlib.sha256()
     with open(path, "rb") as f:
         for chunk in iter(lambda: f.read(1 << 20), b""):
-            h.update(chunk)
+            h.update(chunk.replace(b"\r\n", b"\n") if normalize_eol else chunk)
     return h.hexdigest()
+
+
+def sha256(path):
+    return _digest(path)
+
+
+def sha256_norm(path):
+    """换行归一后的摘要：CRLF → LF，用于跨仓比较（.gitattributes 会把仓内统一成 LF）。"""
+    return _digest(path, normalize_eol=True)
 
 
 def walk(root, exclude_dirs, exclude_files):
@@ -66,6 +81,20 @@ def walk(root, exclude_dirs, exclude_files):
             p = os.path.join(r, fn)
             out[os.path.relpath(p, root).replace("\\", "/")] = p
     return out
+
+
+def compare(src_map, dst_map):
+    """分三档：identical（逐字节相同）/ eol_only（仅换行符差异）/ changed（真差异）。"""
+    identical, eol_only, changed = [], [], []
+    for rel in sorted(set(src_map) & set(dst_map)):
+        s, d = src_map[rel], dst_map[rel]
+        if sha256(s) == sha256(d):
+            identical.append(rel)
+        elif sha256_norm(s) == sha256_norm(d):
+            eol_only.append(rel)
+        else:
+            changed.append(rel)
+    return identical, eol_only, changed
 
 
 def main(argv=None):
@@ -97,38 +126,38 @@ def main(argv=None):
     dst_map = walk(dst_root, exclude_dirs, exclude_files) if os.path.isdir(dst_root) else {}
 
     missing = sorted(set(src_map) - set(dst_map))
-    changed = []
-    for rel in sorted(set(src_map) & set(dst_map)):
-        if sha256(src_map[rel]) != sha256(dst_map[rel]):
-            changed.append(rel)
+    identical, eol_only, changed = compare(src_map, dst_map)
     extra = sorted(set(dst_map) - set(src_map))
 
     print("[subject] 正本 %s" % src_root)
     print("[subject] 镜像 %s" % dst_root)
     print("[subject] 排除规则：目录 %s；文件 %s" % (sorted(exclude_dirs), exclude_files))
     print("[subject] 正本 %d 文件 / 镜像 %d 文件" % (len(src_map), len(dst_map)))
-    print("[subject] 镜像缺 %d 个，内容不同 %d 个，镜像多出 %d 个"
-          % (len(missing), len(changed), len(extra)))
+    print("[subject] 镜像缺 %d 个；逐字节相同 %d 个；仅换行符差异 %d 个；真差异 %d 个；镜像多出 %d 个"
+          % (len(missing), len(identical), len(eol_only), len(changed), len(extra)))
 
     if args.check:
         for rel in missing:
             print("   MISS  %s" % rel)
         for rel in changed:
             print("   DIFF  %s" % rel)
+        for rel in eol_only:
+            print("   EOL   %s（仓内按 .gitattributes 统一 LF，内容一致）" % rel)
         if missing or changed:
-            print("[FAIL] 镜像与正本不一致（缺 %d / 异 %d）" % (len(missing), len(changed)))
+            print("[FAIL] 镜像与正本不一致（缺 %d / 真差异 %d）" % (len(missing), len(changed)))
             return 1
-        print("[OK ] 镜像与正本逐字节一致")
+        print("[OK ] 镜像与正本一致（无缺失、无内容差异）")
         return 0
 
-    for rel in missing + changed:
+    to_copy = missing + changed + eol_only
+    for rel in to_copy:
         dst = os.path.join(dst_root, rel.replace("/", os.sep))
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         shutil.copy2(src_map[rel], dst)
 
     # 不轻信 copy2 的返回：拷贝后逐文件回读比对
     bad = []
-    for rel in missing + changed:
+    for rel in to_copy:
         dst = os.path.join(dst_root, rel.replace("/", os.sep))
         if not os.path.isfile(dst) or sha256(src_map[rel]) != sha256(dst):
             bad.append(rel)
@@ -145,8 +174,8 @@ def main(argv=None):
         if len(extra) > 8:
             print("   ... 其余 %d 个" % (len(extra) - 8))
 
-    print("[OK ] 同步完成：新增 %d 个、更新 %d 个，回读逐字节校验通过"
-          % (len(missing), len(changed)))
+    print("[OK ] 同步完成：新增 %d 个、更新 %d 个、换行对齐 %d 个，回读逐字节校验通过"
+          % (len(missing), len(changed), len(eol_only)))
     return 0
 
 
