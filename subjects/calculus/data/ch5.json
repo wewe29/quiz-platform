@@ -53,7 +53,7 @@
      "expected": "0"
     }
    ],
-   "idx": 362
+   "idx": 367
   },
   {
    "id": "q-187",
@@ -108,7 +108,117 @@
      "expected": "0"
     }
    ],
-   "idx": 363
+   "idx": 368
+  },
+  {
+   "id": "q-209",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "knowledgePoints": [
+    "5.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.2 微积分基本公式",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int_0^1 x^{2}\\,\\mathrm{d}x=$",
+   "options": [
+    "$1$",
+    "$\\frac{1}{2}$",
+    "$\\frac{1}{3}$",
+    "$\\frac{1}{4}$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\frac{x^3}{3}\\big|_0^1=\\frac13$。C 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础",
+    "定积分"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "v",
+     "code": "integrate(x**2, (x, 0, 1))",
+     "expected": "1/3"
+    }
+   ],
+   "idx": 369
+  },
+  {
+   "id": "q-210",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "knowledgePoints": [
+    "5.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.2 微积分基本公式",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int_0^{\\pi}\\sin x\\,\\mathrm{d}x=$",
+   "options": [
+    "$0$",
+    "$2$",
+    "$1$",
+    "$\\frac{\\pi}{2}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$[-\\cos x]_0^{\\pi}=2$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础",
+    "定积分"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "v",
+     "code": "integrate(sp.sin(x), (x, 0, sp.pi))",
+     "expected": "2"
+    }
+   ],
+   "idx": 370
   },
   {
    "id": "ky2-1993-3-f2899b",
@@ -157,7 +267,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 364
+   "idx": 371
   },
   {
    "id": "c5-s2",
@@ -212,7 +322,7 @@
      "expected": "0"
     }
    ],
-   "idx": 365
+   "idx": 372
   },
   {
    "id": "q-186",
@@ -266,7 +376,111 @@
      "expected": "63*pi/512"
     }
    ],
-   "idx": 366
+   "idx": 373
+  },
+  {
+   "id": "q-211",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.4 反常积分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $F(x)=\\int_0^x t^2\\,\\mathrm{d}t$，则 $F'(x)=$",
+   "options": [
+    "$x^{2}$",
+    "$\\frac{x^{3}}{3}$",
+    "$2x$",
+    "$x$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：变限积分求导定理。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "变限积分"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 374
+  },
+  {
+   "id": "q-212",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.4",
+   "knowledgePoints": [
+    "5.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.4 反常积分",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int_{-1}^{1}x^{3}\\,\\mathrm{d}x=$",
+   "options": [
+    "$0$",
+    "$\\frac{1}{2}$",
+    "$\\frac{1}{4}$",
+    "$1$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：奇函数对称区间积分为 0。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "对称性"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "v",
+     "code": "integrate(x**3, (x, -1, 1))",
+     "expected": "0"
+    }
+   ],
+   "idx": 375
   },
   {
    "id": "ky2-2013-4-2a41b2",
@@ -315,7 +529,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 367
+   "idx": 376
   },
   {
    "id": "ky2-2015-1-a4c2dc",
@@ -364,7 +578,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 368
+   "idx": 377
   },
   {
    "id": "ky2-2018-6-52ac23",
@@ -413,7 +627,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 369
+   "idx": 378
   },
   {
    "id": "ky2-2019-3-ef9ee7",
@@ -462,7 +676,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 370
+   "idx": 379
   },
   {
    "id": "c5-s3",
@@ -517,7 +731,7 @@
      "expected": "-1"
     }
    ],
-   "idx": 371
+   "idx": 380
   },
   {
    "id": "c5-m1",
@@ -574,7 +788,7 @@
      "expected": "1"
     }
    ],
-   "idx": 372
+   "idx": 381
   },
   {
    "id": "c5-m2",
@@ -625,7 +839,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 373
+   "idx": 382
   },
   {
    "id": "c5-j1",
@@ -672,7 +886,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 374
+   "idx": 383
   },
   {
    "id": "c5-j2",
@@ -719,7 +933,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 375
+   "idx": 384
   },
   {
    "id": "c5-j3",
@@ -771,7 +985,7 @@
      "expected": "1"
     }
    ],
-   "idx": 376
+   "idx": 385
   },
   {
    "id": "c5-b1",
@@ -824,7 +1038,7 @@
      "expected": "0"
     }
    ],
-   "idx": 377
+   "idx": 386
   },
   {
    "id": "c5-b2",
@@ -878,7 +1092,7 @@
      "expected": "pi/4"
     }
    ],
-   "idx": 378
+   "idx": 387
   },
   {
    "id": "ky2-1988-5-55cf10",
@@ -922,7 +1136,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 379
+   "idx": 388
   },
   {
    "id": "ky2-1990-3-baa68c",
@@ -966,7 +1180,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 380
+   "idx": 389
   },
   {
    "id": "ky2-1990-4-7ccae1",
@@ -1010,7 +1224,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 381
+   "idx": 390
   },
   {
    "id": "ky2-1992-4-e1722e",
@@ -1054,7 +1268,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 382
+   "idx": 391
   },
   {
    "id": "ky2-1994-3-7581b9",
@@ -1098,7 +1312,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 383
+   "idx": 392
   },
   {
    "id": "ky2-1996-2-5efb10",
@@ -1142,7 +1356,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 384
+   "idx": 393
   },
   {
    "id": "ky2-1997-4-fdb7ab",
@@ -1186,7 +1400,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 385
+   "idx": 394
   },
   {
    "id": "ky2-2001-3-8369d7",
@@ -1230,7 +1444,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 386
+   "idx": 395
   },
   {
    "id": "ky2-2009-10-f889cf",
@@ -1274,7 +1488,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 387
+   "idx": 396
   },
   {
    "id": "ky2-2011-12-fa1d87",
@@ -1318,7 +1532,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 388
+   "idx": 397
   },
   {
    "id": "ky2-2014-9-9d1c29",
@@ -1362,7 +1576,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 389
+   "idx": 398
   },
   {
    "id": "ky2-2014-13-60b4f0",
@@ -1406,7 +1620,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 390
+   "idx": 399
   },
   {
    "id": "ky2-2017-11-8be447",
@@ -1450,7 +1664,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 391
+   "idx": 400
   },
   {
    "id": "ky2-2017-13-b9e584",
@@ -1494,7 +1708,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 392
+   "idx": 401
   },
   {
    "id": "ky-2004-3-63352b",
@@ -1537,7 +1751,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 393
+   "idx": 402
   },
   {
    "id": "ky-2007-11-194e2f",
@@ -1580,7 +1794,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 394
+   "idx": 403
   },
   {
    "id": "ky-2009-11-4d88bf",
@@ -1623,7 +1837,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 395
+   "idx": 404
   },
   {
    "id": "ky-2010-9-bb48b9",
@@ -1666,7 +1880,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 396
+   "idx": 405
   },
   {
    "id": "ky-2012-10-9dcafb",
@@ -1709,7 +1923,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 397
+   "idx": 406
   },
   {
    "id": "ky-2013-12-14e1ae",
@@ -1752,7 +1966,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 398
+   "idx": 407
   },
   {
    "id": "ky-2015-10-15fe15",
@@ -1795,7 +2009,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 399
+   "idx": 408
   },
   {
    "id": "ky-2015-12-0344d2",
@@ -1838,7 +2052,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 400
+   "idx": 409
   },
   {
    "id": "c5-t1",
@@ -1890,7 +2104,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 401
+   "idx": 410
   },
   {
    "id": "c5-t2",
@@ -1946,7 +2160,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 402
+   "idx": 411
   },
   {
    "id": "c5-c1",
@@ -2013,7 +2227,7 @@
      "expected": "1/2"
     }
    ],
-   "idx": 403
+   "idx": 412
   },
   {
    "id": "ky-2010-3-01cfa4",
@@ -2079,7 +2293,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 404
+   "idx": 413
   },
   {
    "id": "c5-c2",
@@ -2146,7 +2360,7 @@
      "expected": "1"
     }
    ],
-   "idx": 405
+   "idx": 414
   },
   {
    "id": "q-184",
@@ -2212,7 +2426,7 @@
      "expected": "16/35"
     }
    ],
-   "idx": 406
+   "idx": 415
   },
   {
    "id": "q-188",
@@ -2277,7 +2491,72 @@
      "expected": "16/15"
     }
    ],
-   "idx": 407
+   "idx": 416
+  },
+  {
+   "id": "q-213",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "knowledgePoints": [
+    "5.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §5.2 微积分基本公式",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "计算 $\\int_0^2|x-1|\\,\\mathrm{d}x$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\int_0^1(1-x)dx+\\int_1^2(x-1)dx=\\frac12+\\frac12=1$。",
+   "points": [
+    {
+     "text": "分段去绝对值",
+     "partial": 2
+    },
+    {
+     "text": "两段各积 $\\frac12$",
+     "partial": 2
+    },
+    {
+     "text": "合计 1",
+     "partial": 2
+    },
+    {
+     "text": "几何意义：三角形面积",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§5.2 分段积分。",
+   "misconception": "⚠️ 含绝对值必须分段。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "中等"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "v",
+     "code": "integrate(sp.Abs(x-1), (x, 0, 2))",
+     "expected": "1"
+    }
+   ],
+   "idx": 417
   },
   {
    "id": "ky-2011-4-1d96a4",
@@ -2343,7 +2622,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 408
+   "idx": 418
   },
   {
    "id": "ky-2012-4-c096d0",
@@ -2405,7 +2684,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 409
+   "idx": 419
   },
   {
    "id": "ky-2016-1-5bd852",
@@ -2463,7 +2742,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 410
+   "idx": 420
   },
   {
    "id": "ky-2018-4-449598",
@@ -2517,7 +2796,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 411
+   "idx": 421
   },
   {
    "id": "c5-c3",
@@ -2585,7 +2864,7 @@
      "expected": "1/2"
     }
    ],
-   "idx": 412
+   "idx": 422
   },
   {
    "id": "q-185",
@@ -2651,7 +2930,7 @@
      "expected": "5*pi/256"
     }
    ],
-   "idx": 413
+   "idx": 423
   },
   {
    "id": "q-203",
@@ -2716,7 +2995,7 @@
      "expected": "2/pi"
     }
    ],
-   "idx": 414
+   "idx": 424
   },
   {
    "id": "ky2-1987-x-4b9484",
@@ -2763,7 +3042,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 415
+   "idx": 425
   },
   {
    "id": "ky2-1987-x-d519ea",
@@ -2810,7 +3089,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 416
+   "idx": 426
   },
   {
    "id": "ky2-1988-x-abec7c",
@@ -2857,7 +3136,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 417
+   "idx": 427
   },
   {
    "id": "ky2-1989-5-1c3a91",
@@ -2904,7 +3183,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 418
+   "idx": 428
   },
   {
    "id": "ky2-1990-x-38e439",
@@ -2951,7 +3230,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 419
+   "idx": 429
   },
   {
    "id": "ky2-1991-2-de8229",
@@ -2998,7 +3277,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 420
+   "idx": 430
   },
   {
    "id": "ky2-1991-x-9f5925",
@@ -3045,7 +3324,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 421
+   "idx": 431
   },
   {
    "id": "ky2-1992-4-bc47b1",
@@ -3092,7 +3371,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 422
+   "idx": 432
   },
   {
    "id": "ky2-1993-3-b6f0e6",
@@ -3139,7 +3418,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 423
+   "idx": 433
   },
   {
    "id": "ky2-1993-4-d84e58",
@@ -3186,7 +3465,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 424
+   "idx": 434
   },
   {
    "id": "ky2-1994-2-397dd1",
@@ -3233,7 +3512,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 425
+   "idx": 435
   },
   {
    "id": "ky2-1996-1-8693f2",
@@ -3280,7 +3559,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 426
+   "idx": 436
   },
   {
    "id": "ky2-1996-x-5e6d47",
@@ -3327,7 +3606,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 427
+   "idx": 437
   },
   {
    "id": "ky2-1998-x-21cf52",
@@ -3374,7 +3653,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 428
+   "idx": 438
   },
   {
    "id": "ky2-1999-x-10c640",
@@ -3421,7 +3700,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 429
+   "idx": 439
   },
   {
    "id": "ky2-2002-x-17331e",
@@ -3468,7 +3747,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 430
+   "idx": 440
   },
   {
    "id": "ky2-2003-x-eb4b59",
@@ -3515,7 +3794,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 431
+   "idx": 441
   },
   {
    "id": "ky2-2004-17-5494f6",
@@ -3574,7 +3853,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 432
+   "idx": 442
   },
   {
    "id": "ky2-2008-17-53de41",
@@ -3621,7 +3900,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 433
+   "idx": 443
   },
   {
    "id": "ky2-2009-16-b92549",
@@ -3668,7 +3947,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 434
+   "idx": 444
   },
   {
    "id": "ky2-2019-16-4b30c5",
@@ -3715,7 +3994,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 435
+   "idx": 445
   },
   {
    "id": "ky-2013-15-23eacd",
@@ -3769,7 +4048,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 436
+   "idx": 446
   },
   {
    "id": "ky-2016-16-6f2a88",
@@ -3835,7 +4114,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 437
+   "idx": 447
   }
  ]
 }

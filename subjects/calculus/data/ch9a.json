@@ -48,7 +48,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 640
+   "idx": 659
   },
   {
    "id": "ky2-1991-3-f81654",
@@ -97,7 +97,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 641
+   "idx": 660
   },
   {
    "id": "ky2-2009-3-bf474d",
@@ -146,7 +146,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 642
+   "idx": 661
   },
   {
    "id": "zk-202210-02",
@@ -194,7 +194,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 643
+   "idx": 662
   },
   {
    "id": "zk-202304-02",
@@ -242,7 +242,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 644
+   "idx": 663
   },
   {
    "id": "zk-202310-02",
@@ -290,7 +290,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 645
+   "idx": 664
   },
   {
    "id": "zk-202404-02",
@@ -338,7 +338,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 646
+   "idx": 665
   },
   {
    "id": "zk-202410-02",
@@ -386,7 +386,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 647
+   "idx": 666
   },
   {
    "id": "zk-202504-02",
@@ -434,7 +434,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 648
+   "idx": 667
   },
   {
    "id": "zk-202510-02",
@@ -482,7 +482,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 649
+   "idx": 668
   },
   {
    "id": "zk-202604-02",
@@ -530,7 +530,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 650
+   "idx": 669
   },
   {
    "id": "c9-s2",
@@ -579,7 +579,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 651
+   "idx": 670
   },
   {
    "id": "q-196",
@@ -634,7 +634,154 @@
      "expected": "sqrt(2)"
     }
    ],
-   "idx": 652
+   "idx": 671
+  },
+  {
+   "id": "q-223",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.2 偏导数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $z=x^2+y^2$，则 $\\frac{\\partial z}{\\partial x}=$",
+   "options": [
+    "$2x$",
+    "$2y$",
+    "$x^2$",
+    "$2x+2y$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：对 $x$ 求偏导时 $y$ 视为常数。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "偏导数"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 672
+  },
+  {
+   "id": "q-224",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.2 偏导数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $z=x^2+y^2$，则全微分 $\\mathrm{d}z=$",
+   "options": [
+    "$2x\\,\\mathrm{d}x$",
+    "$2x\\,\\mathrm{d}x+2y\\,\\mathrm{d}y$",
+    "$2y\\,\\mathrm{d}y$",
+    "$(x+y)\\,\\mathrm{d}x$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\mathrm{d}z=\\frac{\\partial z}{\\partial x}dx+\\frac{\\partial z}{\\partial y}dy$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "全微分"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 673
+  },
+  {
+   "id": "q-225",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.4",
+   "knowledgePoints": [
+    "9.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §9.4 多元复合函数的求导法则",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$z=f(x,y)$ 在 $(x_0,y_0)$ 处偏导数存在是 $f$ 在该点可微的",
+   "options": [
+    "充分条件",
+    "必要条件",
+    "充要条件",
+    "无关条件"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：可微⇒偏导存在（必要性），偏导存在不能保证可微。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "可微"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 674
   },
   {
    "id": "ky2-2011-3-8434c7",
@@ -683,7 +830,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 653
+   "idx": 675
   },
   {
    "id": "ky2-2013-5-4c80b8",
@@ -732,7 +879,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 654
+   "idx": 676
   },
   {
    "id": "ky2-2015-5-4a56fa",
@@ -781,7 +928,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 655
+   "idx": 677
   },
   {
    "id": "ky2-2017-5-edc9a9",
@@ -830,7 +977,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 656
+   "idx": 678
   },
   {
    "id": "zk-202210-07",
@@ -878,7 +1025,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 657
+   "idx": 679
   },
   {
    "id": "zk-202304-07",
@@ -926,7 +1073,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 658
+   "idx": 680
   },
   {
    "id": "zk-202310-07",
@@ -974,7 +1121,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 659
+   "idx": 681
   },
   {
    "id": "zk-202404-07",
@@ -1022,7 +1169,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 660
+   "idx": 682
   },
   {
    "id": "zk-202410-07",
@@ -1070,7 +1217,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 661
+   "idx": 683
   },
   {
    "id": "zk-202504-07",
@@ -1118,7 +1265,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 662
+   "idx": 684
   },
   {
    "id": "zk-202510-07",
@@ -1166,7 +1313,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 663
+   "idx": 685
   },
   {
    "id": "zk-202604-07",
@@ -1214,7 +1361,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 664
+   "idx": 686
   },
   {
    "id": "c9-s3",
@@ -1265,7 +1412,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 665
+   "idx": 687
   },
   {
    "id": "c9-m1",
@@ -1317,7 +1464,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 666
+   "idx": 688
   },
   {
    "id": "c9-m2",
@@ -1370,7 +1517,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 667
+   "idx": 689
   },
   {
    "id": "c9-j1",
@@ -1417,7 +1564,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 668
+   "idx": 690
   },
   {
    "id": "c9-j2",
@@ -1464,7 +1611,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 669
+   "idx": 691
   },
   {
    "id": "c9-j3",
@@ -1510,7 +1657,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 670
+   "idx": 692
   },
   {
    "id": "c9-b1",
@@ -1558,7 +1705,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 671
+   "idx": 693
   },
   {
    "id": "c9-b2",
@@ -1604,7 +1751,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 672
+   "idx": 694
   },
   {
    "id": "ky2-2015-13-0121b4",
@@ -1648,7 +1795,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 673
+   "idx": 695
   },
   {
    "id": "ky-2007-12-9d06b6",
@@ -1691,93 +1838,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 674
-  },
-  {
-   "id": "ky-2011-11-8fe32a",
-   "type": "blank",
-   "typeGroup": "blank",
-   "difficulty": "medium",
-   "chapter": 9,
-   "knowledgePoint": "9.2",
-   "knowledgePoints": [
-    "9.2"
-   ],
-   "source": {
-    "text": "2011 年考研数学（一）第 11 题",
-    "kind": "exam-original",
-    "year": 2011,
-    "region": "全国",
-    "paper": "2011 年考研数学（一）",
-    "number": "11",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md"
-   },
-   "provenance": {
-    "level": "original",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md",
-    "verifiedAt": "2026-10-28",
-    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2011年解析/2011年解析.md"
-   },
-   "stem": "设函数 $F(x, y) = \\int_{0}^{xy} \\frac{\\sin t}{1 + t^2} \\mathrm{d}t$ ，则 $\\left. \\frac{\\partial^2 F}{\\partial x^2} \\right|_{\\substack{x = 0 \\\\ y = 2}} =$ ________.",
-   "options": null,
-   "answer": [
-    "4"
-   ],
-   "accept": null,
-   "answerText": null,
-   "points": null,
-   "explanation": "**答案依据**：4\n【解】 $\\frac{\\partial F}{\\partial x} = \\frac{y \\sin xy}{1 + (xy)^2}, \\quad \\frac{\\partial^2 F}{\\partial x^2} = y \\cdot \\frac{y(1 + x^2y^2) \\cos xy - 2xy^2 \\sin xy}{(1 + x^2y^2)^2},$\n\n则 $\\frac{\\partial^2F}{\\partial x^2}\\Big|_{\\substack{x = 0\\\\ y = 2}} = 4.$",
-   "misconception": null,
-   "extension": null,
-   "tags": [
-    "考研真题"
-   ],
-   "variantGroup": null,
-   "verify": [],
-   "idx": 675
-  },
-  {
-   "id": "ky-2015-11-9f4776",
-   "type": "blank",
-   "typeGroup": "blank",
-   "difficulty": "medium",
-   "chapter": 9,
-   "knowledgePoint": "9.2",
-   "knowledgePoints": [
-    "9.2"
-   ],
-   "source": {
-    "text": "2015 年考研数学（一）第 11 题",
-    "kind": "exam-original",
-    "year": 2015,
-    "region": "全国",
-    "paper": "2015 年考研数学（一）",
-    "number": "11",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md"
-   },
-   "provenance": {
-    "level": "original",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md",
-    "verifiedAt": "2026-10-28",
-    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2015年解析/2015年解析.md"
-   },
-   "stem": "若函数 $z = z(x, y)$ 由方程 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 确定，则 $\\left. \\mathrm{d}z \\right|_{(0,1)} =$ ________.",
-   "options": null,
-   "answer": [
-    "$-\\mathrm{d}x$"
-   ],
-   "accept": null,
-   "answerText": null,
-   "points": null,
-   "explanation": "**答案依据**：$-\\mathrm{d}x$\n【解】方法一 将 $x = 0, y = 1$ 代入 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 中，得 $z = 0, \\mathrm{e}^z + xyz + x + \\cos x = 2$ 两边分别对 $x, y$ 求偏导得\n\n$$\n\\mathrm {e} ^ {z} \\cdot \\frac {\\partial z}{\\partial x} + y (z + x \\frac {\\partial z}{\\partial x}) + 1 - \\sin x = 0, \\quad \\mathrm {e} ^ {z} \\cdot \\frac {\\partial z}{\\partial y} + x (z + y \\frac {\\partial z}{\\partial y}) = 0,\n$$\n\n代入得 $\\left.\\frac{\\partial z}{\\partial x}\\right|_{(0,1)} = -1,\\left.\\frac{\\partial z}{\\partial y}\\right|_{(0,1)} = 0,$\n\n故 $\\mathrm{d}z\\Big|_{(0,1)} = \\frac{\\partial z}{\\partial x}\\Big|_{(0,1)}\\mathrm{d}x + \\frac{\\partial z}{\\partial y}\\Big|_{(0,1)}\\mathrm{d}y = -\\mathrm{d}x.$\n\n方法二 将 $x = 0, y = 1$ 代入 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 中得 $z = 0$ .\n\n$\\mathrm{e}^z + xyz + x + \\cos x = 2$ 两边求全微分得\n\n$$\n\\mathrm {e} ^ {z} \\mathrm {d} z + y z \\mathrm {d} x + x z \\mathrm {d} y + x y \\mathrm {d} z + \\mathrm {d} x - \\sin x \\mathrm {d} x = 0,\n$$\n\n将 $x = 0, y = 1, z = 0$ 代入得 $\\mathrm{d}z|_{(0,1)} = -\\mathrm{d}x$",
-   "misconception": null,
-   "extension": null,
-   "tags": [
-    "考研真题"
-   ],
-   "variantGroup": null,
-   "verify": [],
-   "idx": 676
+   "idx": 696
   }
  ]
 }

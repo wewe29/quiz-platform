@@ -2,6 +2,92 @@
  "chapter": 9,
  "questions": [
   {
+   "id": "ky-2011-11-8fe32a",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2011 年考研数学（一）第 11 题",
+    "kind": "exam-original",
+    "year": 2011,
+    "region": "全国",
+    "paper": "2011 年考研数学（一）",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2011年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2011年解析/2011年解析.md"
+   },
+   "stem": "设函数 $F(x, y) = \\int_{0}^{xy} \\frac{\\sin t}{1 + t^2} \\mathrm{d}t$ ，则 $\\left. \\frac{\\partial^2 F}{\\partial x^2} \\right|_{\\substack{x = 0 \\\\ y = 2}} =$ ________.",
+   "options": null,
+   "answer": [
+    "4"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：4\n【解】 $\\frac{\\partial F}{\\partial x} = \\frac{y \\sin xy}{1 + (xy)^2}, \\quad \\frac{\\partial^2 F}{\\partial x^2} = y \\cdot \\frac{y(1 + x^2y^2) \\cos xy - 2xy^2 \\sin xy}{(1 + x^2y^2)^2},$\n\n则 $\\frac{\\partial^2F}{\\partial x^2}\\Big|_{\\substack{x = 0\\\\ y = 2}} = 4.$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 697
+  },
+  {
+   "id": "ky-2015-11-9f4776",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9.2",
+   "knowledgePoints": [
+    "9.2"
+   ],
+   "source": {
+    "text": "2015 年考研数学（一）第 11 题",
+    "kind": "exam-original",
+    "year": 2015,
+    "region": "全国",
+    "paper": "2015 年考研数学（一）",
+    "number": "11",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2015年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2015年解析/2015年解析.md"
+   },
+   "stem": "若函数 $z = z(x, y)$ 由方程 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 确定，则 $\\left. \\mathrm{d}z \\right|_{(0,1)} =$ ________.",
+   "options": null,
+   "answer": [
+    "$-\\mathrm{d}x$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$-\\mathrm{d}x$\n【解】方法一 将 $x = 0, y = 1$ 代入 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 中，得 $z = 0, \\mathrm{e}^z + xyz + x + \\cos x = 2$ 两边分别对 $x, y$ 求偏导得\n\n$$\n\\mathrm {e} ^ {z} \\cdot \\frac {\\partial z}{\\partial x} + y (z + x \\frac {\\partial z}{\\partial x}) + 1 - \\sin x = 0, \\quad \\mathrm {e} ^ {z} \\cdot \\frac {\\partial z}{\\partial y} + x (z + y \\frac {\\partial z}{\\partial y}) = 0,\n$$\n\n代入得 $\\left.\\frac{\\partial z}{\\partial x}\\right|_{(0,1)} = -1,\\left.\\frac{\\partial z}{\\partial y}\\right|_{(0,1)} = 0,$\n\n故 $\\mathrm{d}z\\Big|_{(0,1)} = \\frac{\\partial z}{\\partial x}\\Big|_{(0,1)}\\mathrm{d}x + \\frac{\\partial z}{\\partial y}\\Big|_{(0,1)}\\mathrm{d}y = -\\mathrm{d}x.$\n\n方法二 将 $x = 0, y = 1$ 代入 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 中得 $z = 0$ .\n\n$\\mathrm{e}^z + xyz + x + \\cos x = 2$ 两边求全微分得\n\n$$\n\\mathrm {e} ^ {z} \\mathrm {d} z + y z \\mathrm {d} x + x z \\mathrm {d} y + x y \\mathrm {d} z + \\mathrm {d} x - \\sin x \\mathrm {d} x = 0,\n$$\n\n将 $x = 0, y = 1, z = 0$ 代入得 $\\mathrm{d}z|_{(0,1)} = -\\mathrm{d}x$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 698
+  },
+  {
    "id": "ky-2016-11-f88627",
    "type": "blank",
    "typeGroup": "blank",
@@ -42,7 +128,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 677
+   "idx": 699
   },
   {
    "id": "ky-2017-11-f95aa5",
@@ -85,7 +171,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 678
+   "idx": 700
   },
   {
    "id": "c9-t1",
@@ -137,7 +223,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 679
+   "idx": 701
   },
   {
    "id": "c9-t2",
@@ -193,7 +279,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 680
+   "idx": 702
   },
   {
    "id": "c9-c1",
@@ -260,7 +346,7 @@
      "expected": "0"
     }
    ],
-   "idx": 681
+   "idx": 703
   },
   {
    "id": "ky-2007-6-006337",
@@ -318,7 +404,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 682
+   "idx": 704
   },
   {
    "id": "ky-2008-2-e73f31",
@@ -368,7 +454,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 683
+   "idx": 705
   },
   {
    "id": "ky-2010-2-64e227",
@@ -434,7 +520,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 684
+   "idx": 706
   },
   {
    "id": "c9-c2",
@@ -501,7 +587,7 @@
      "expected": "0"
     }
    ],
-   "idx": 685
+   "idx": 707
   },
   {
    "id": "q-197",
@@ -567,7 +653,7 @@
      "expected": "0"
     }
    ],
-   "idx": 686
+   "idx": 708
   },
   {
    "id": "ky-2013-2-6e5a11",
@@ -625,7 +711,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 687
+   "idx": 709
   },
   {
    "id": "ky-2018-2-cfc6be",
@@ -683,7 +769,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 688
+   "idx": 710
   },
   {
    "id": "zk-202210-14",
@@ -749,7 +835,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 689
+   "idx": 711
   },
   {
    "id": "zk-202210-15",
@@ -815,7 +901,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 690
+   "idx": 712
   },
   {
    "id": "zk-202304-14",
@@ -881,7 +967,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 691
+   "idx": 713
   },
   {
    "id": "zk-202304-15",
@@ -947,7 +1033,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 692
+   "idx": 714
   },
   {
    "id": "zk-202310-13",
@@ -1013,7 +1099,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 693
+   "idx": 715
   },
   {
    "id": "zk-202310-14",
@@ -1079,7 +1165,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 694
+   "idx": 716
   },
   {
    "id": "zk-202310-15",
@@ -1145,7 +1231,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 695
+   "idx": 717
   },
   {
    "id": "zk-202404-14",
@@ -1211,7 +1297,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 696
+   "idx": 718
   },
   {
    "id": "zk-202404-15",
@@ -1277,7 +1363,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 697
+   "idx": 719
   },
   {
    "id": "zk-202410-13",
@@ -1343,7 +1429,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 698
+   "idx": 720
   },
   {
    "id": "zk-202410-15",
@@ -1409,7 +1495,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 699
+   "idx": 721
   },
   {
    "id": "zk-202504-15",
@@ -1475,7 +1561,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 700
+   "idx": 722
   },
   {
    "id": "zk-202510-13",
@@ -1541,7 +1627,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 701
+   "idx": 723
   },
   {
    "id": "zk-202510-15",
@@ -1607,7 +1693,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 702
+   "idx": 724
   },
   {
    "id": "zk-202604-14",
@@ -1673,7 +1759,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 703
+   "idx": 725
   },
   {
    "id": "zk-202604-15",
@@ -1739,7 +1825,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 704
+   "idx": 726
   },
   {
    "id": "c9-c3",
@@ -1812,7 +1898,7 @@
      "expected": "[-5, 31]"
     }
    ],
-   "idx": 705
+   "idx": 727
   },
   {
    "id": "q-195",
@@ -1878,7 +1964,7 @@
      "expected": "((1, 1), 27)"
     }
    ],
-   "idx": 706
+   "idx": 728
   },
   {
    "id": "ky2-1996-x-54434b",
@@ -1925,7 +2011,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 707
+   "idx": 729
   },
   {
    "id": "ky2-2004-21-acfeb2",
@@ -1972,7 +2058,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 708
+   "idx": 730
   },
   {
    "id": "ky2-2007-22-a1a85e",
@@ -2019,7 +2105,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 709
+   "idx": 731
   },
   {
    "id": "ky2-2009-17-fa5908",
@@ -2066,7 +2152,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 710
+   "idx": 732
   },
   {
    "id": "ky2-2010-19-f58a5f",
@@ -2113,7 +2199,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 711
+   "idx": 733
   },
   {
    "id": "ky2-2019-20-07a557",
@@ -2160,7 +2246,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 712
+   "idx": 734
   },
   {
    "id": "ky-2011-19-d4e7c7",
@@ -2226,7 +2312,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 713
+   "idx": 735
   }
  ]
 }

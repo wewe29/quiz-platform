@@ -2,6 +2,59 @@
  "chapter": 12,
  "questions": [
   {
+   "id": "c12-t1",
+   "type": "term",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 12,
+   "knowledgePoint": "12.3",
+   "knowledgePoints": [
+    "12.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "名词解释：绝对收敛与条件收敛。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "对级数 $\\sum a_n$：若 $\\sum|a_n|$ 收敛，则称 $\\sum a_n$ **绝对收敛**；若 $\\sum a_n$ 收敛而 $\\sum|a_n|$ 发散，则称 $\\sum a_n$ **条件收敛**。绝对收敛级数必收敛，且具有可交换性（改变求和次序和不变）；条件收敛级数不具备此性质。",
+   "points": [
+    {
+     "text": "定义：$\\sum|a_n|$ 收敛称绝对收敛；$\\sum a_n$ 收敛但 $\\sum|a_n|$ 发散称条件收敛。",
+     "partial": 2
+    },
+    {
+     "text": "关系与意义：绝对收敛 $\\Rightarrow$ 收敛（反之不然）；条件收敛级数的正项与负项子级数各自发散，改变次序可使和任意改变（黎曼重排现象）。",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：绝对收敛、条件收敛的定义与绝对收敛定理见 §12.3。\n**考点出处**：同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛。",
+   "misconception": "⚠️易错点：判别流程先看正负——同号级数直接用正项级数审敛法；变号级数先取绝对值判绝对收敛，失效再用莱布尼茨。",
+   "extension": null,
+   "tags": [
+    "绝对收敛",
+    "条件收敛",
+    "概念",
+    "必背"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 869
+  },
+  {
    "id": "c12-t2",
    "type": "short",
    "typeGroup": "short",
@@ -55,7 +108,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 845
+   "idx": 870
   },
   {
    "id": "c12-c1",
@@ -123,7 +176,7 @@
      "expected": "1"
     }
    ],
-   "idx": 846
+   "idx": 871
   },
   {
    "id": "ky-2004-9-b6961c",
@@ -185,7 +238,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 847
+   "idx": 872
   },
   {
    "id": "ky-2006-9-8deaff",
@@ -251,7 +304,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 848
+   "idx": 873
   },
   {
    "id": "c12-c2",
@@ -319,7 +372,73 @@
      "expected": "True"
     }
    ],
-   "idx": 849
+   "idx": 874
+  },
+  {
+   "id": "q-229",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.4",
+   "knowledgePoints": [
+    "12.4"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.4 幂级数",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "将 $f(x)=\\frac{1}{1-x}$ 展开为 $x$ 的幂级数。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$\\frac{1}{1-x}=\\sum_{n=0}^{\\infty}x^n=1+x+x^2+\\cdots$（$|x|<1$）。",
+   "points": [
+    {
+     "text": "识别为等比级数",
+     "partial": 2
+    },
+    {
+     "text": "首项 1、公比 $x$",
+     "partial": 2
+    },
+    {
+     "text": "和 $=\\frac{1}{1-x}$",
+     "partial": 2
+    },
+    {
+     "text": "收敛域 $|x|<1$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§12.3 等比级数展开。",
+   "misconception": "⚠️ 收敛域 $|x|<1$。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "基础",
+    "幂级数"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "求导还原",
+     "code": "sp.diff(-sp.log(1-x), x)-1/(1-x)",
+     "expected": "0"
+    }
+   ],
+   "idx": 875
   },
   {
    "id": "ky-2011-2-73a967",
@@ -377,7 +496,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 850
+   "idx": 876
   },
   {
    "id": "ky-2013-3-472921",
@@ -431,7 +550,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 851
+   "idx": 877
   },
   {
    "id": "ky-2015-3-7c3e22",
@@ -497,7 +616,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 852
+   "idx": 878
   },
   {
    "id": "c12-c3",
@@ -566,7 +685,7 @@
      "expected": "0"
     }
    ],
-   "idx": 853
+   "idx": 879
   },
   {
    "id": "q-199",
@@ -632,7 +751,7 @@
      "expected": "0"
     }
    ],
-   "idx": 854
+   "idx": 880
   },
   {
    "id": "ky-2004-18-e5c035",
@@ -694,7 +813,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 855
+   "idx": 881
   },
   {
    "id": "ky-2005-16-cf6a9f",
@@ -760,7 +879,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 856
+   "idx": 882
   },
   {
    "id": "ky-2006-17-20097f",
@@ -814,7 +933,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 857
+   "idx": 883
   },
   {
    "id": "ky-2007-20-94f298",
@@ -880,7 +999,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 858
+   "idx": 884
   },
   {
    "id": "ky-2008-19-7ca028",
@@ -938,7 +1057,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 859
+   "idx": 885
   },
   {
    "id": "ky-2010-18-9c9d20",
@@ -1004,7 +1123,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 860
+   "idx": 886
   },
   {
    "id": "ky-2013-16-7d6e62",
@@ -1070,7 +1189,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 861
+   "idx": 887
   },
   {
    "id": "ky-2014-19-924fc6",
@@ -1136,7 +1255,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 862
+   "idx": 888
   },
   {
    "id": "ky-2020-17-8b84b5",
@@ -1202,7 +1321,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 863
+   "idx": 889
   },
   {
    "id": "ky-2021-18-c231a2",
@@ -1268,7 +1387,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 864
+   "idx": 890
   },
   {
    "id": "zk-202210-19",
@@ -1334,7 +1453,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 865
+   "idx": 891
   },
   {
    "id": "zk-202210-21",
@@ -1400,7 +1519,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 866
+   "idx": 892
   },
   {
    "id": "zk-202310-19",
@@ -1466,7 +1585,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 867
+   "idx": 893
   },
   {
    "id": "zk-202310-21",
@@ -1532,7 +1651,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 868
+   "idx": 894
   },
   {
    "id": "zk-202404-19",
@@ -1598,7 +1717,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 869
+   "idx": 895
   },
   {
    "id": "zk-202404-21",
@@ -1664,7 +1783,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 870
+   "idx": 896
   },
   {
    "id": "zk-202410-19",
@@ -1726,7 +1845,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 871
+   "idx": 897
   },
   {
    "id": "zk-202410-21",
@@ -1792,7 +1911,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 872
+   "idx": 898
   },
   {
    "id": "zk-202504-19",
@@ -1858,7 +1977,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 873
+   "idx": 899
   },
   {
    "id": "zk-202504-21",
@@ -1924,7 +2043,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 874
+   "idx": 900
   },
   {
    "id": "zk-202510-19",
@@ -1990,7 +2109,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 875
+   "idx": 901
   },
   {
    "id": "zk-202510-21",
@@ -2056,7 +2175,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 876
+   "idx": 902
   },
   {
    "id": "zk-202604-19",
@@ -2122,7 +2241,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 877
+   "idx": 903
   },
   {
    "id": "zk-202604-21",
@@ -2188,7 +2307,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 878
+   "idx": 904
   }
  ]
 }

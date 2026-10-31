@@ -2,6 +2,92 @@
  "chapter": 7,
  "questions": [
   {
+   "id": "ky-2017-10-585590",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "2017 年考研数学（一）第 10 题",
+    "kind": "exam-original",
+    "year": 2017,
+    "region": "全国",
+    "paper": "2017 年考研数学（一）",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2017年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2017年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2017年解析/2017年解析.md"
+   },
+   "stem": "微分方程 $y'' + 2y' + 3y = 0$ 的通解为 $y = \\_$",
+   "options": null,
+   "answer": [
+    "$\\mathrm{e}^{-x}(C_1\\cos \\sqrt{2} x + C_2\\sin \\sqrt{2} x)(C_1,C_2$ 为任意常数)"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\mathrm{e}^{-x}(C_1\\cos \\sqrt{2} x + C_2\\sin \\sqrt{2} x)(C_1,C_2$ 为任意常数)\n【解】 特征方程为 $\\lambda^2 + 2\\lambda + 3 = 0$ ，特征值为 $\\lambda_{1,2} = -1 \\pm \\sqrt{2}\\mathrm{i}$ ，\n\n通解为 $y = \\mathrm{e}^{-x}(C_1\\cos \\sqrt{2} x + C_2\\sin \\sqrt{2} x)(C_1,C_2$ 为任意常数).",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 545
+  },
+  {
+   "id": "ky-2019-10-b59962",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.7",
+   "knowledgePoints": [
+    "7.7"
+   ],
+   "source": {
+    "text": "2019 年考研数学（一）第 10 题",
+    "kind": "exam-original",
+    "year": 2019,
+    "region": "全国",
+    "paper": "2019 年考研数学（一）",
+    "number": "10",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2019年考研数学(一)真题.md"
+   },
+   "provenance": {
+    "level": "original",
+    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2019年考研数学(一)真题.md",
+    "verifiedAt": "2026-10-28",
+    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2019年解析/2019年解析.md"
+   },
+   "stem": "微分方程 $2yy' - y^2 - 2 = 0$ 满足条件 $y(0) = 1$ 的特解 $y = \\_$",
+   "options": null,
+   "answer": [
+    "$\\sqrt{3\\mathrm{e}^x - 2}$"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\sqrt{3\\mathrm{e}^x - 2}$\n【解】方法一 由 $2yy' - y^2 - 2 = 0$ 得 $\\frac{2y\\mathrm{d}y}{y^2 + 2} = \\mathrm{d}x$\n\n积分得 $\\ln (y^2 + 2) = x + C$\n\n再由 $y(0) = 1$ 得 $C = \\ln 3$ ，即 $\\ln (y^2 +2) = \\ln (3\\mathrm{e}^x)$\n\n从而 $y^{2} + 2 = 3\\mathrm{e}^{x}$ ，故 $y = \\sqrt{3\\mathrm{e}^x - 2}$\n\n方法二 令 $y^{2} = u$ ，则原方程化为 $\\frac{\\mathrm{d}u}{\\mathrm{d}x} - u = 2$\n\n解得 $u = \\left(\\int 2\\mathrm{e}^{\\int -\\mathrm{d}x}\\mathrm{d}x + C\\right)\\mathrm{e}^{-\\int -\\mathrm{d}x} = (-2\\mathrm{e}^{-x} + C)\\mathrm{e}^{x},$\n\n即 $y^{2} = (-2\\mathrm{e}^{-x} + C)\\mathrm{e}^{x} = Ce^{x} - 2$\n\n由 $y(0) = 1$ 得 $C = 3$ ，故 $y = \\sqrt{3\\mathrm{e}^x - 2}$",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "考研真题"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 546
+  },
+  {
    "id": "c7-t1",
    "type": "term",
    "typeGroup": "short",
@@ -51,7 +137,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 531
+   "idx": 547
   },
   {
    "id": "c7-t2",
@@ -107,7 +193,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 532
+   "idx": 548
   },
   {
    "id": "c7-c1",
@@ -174,7 +260,7 @@
      "expected": "0"
     }
    ],
-   "idx": 533
+   "idx": 549
   },
   {
    "id": "ky-2008-3-b7108b",
@@ -228,7 +314,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 534
+   "idx": 550
   },
   {
    "id": "c7-c2",
@@ -295,7 +381,7 @@
      "expected": "0"
     }
    ],
-   "idx": 535
+   "idx": 551
   },
   {
    "id": "q-189",
@@ -361,7 +447,7 @@
      "expected": "[1, 2]"
     }
    ],
-   "idx": 536
+   "idx": 552
   },
   {
    "id": "ky-2016-3-63d5a1",
@@ -419,7 +505,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 537
+   "idx": 553
   },
   {
    "id": "c7-c3",
@@ -492,7 +578,7 @@
      "expected": "0"
     }
    ],
-   "idx": 538
+   "idx": 554
   },
   {
    "id": "q-190",
@@ -558,7 +644,7 @@
      "expected": "True"
     }
    ],
-   "idx": 539
+   "idx": 555
   },
   {
    "id": "ky2-1987-1-601144",
@@ -605,7 +691,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 540
+   "idx": 556
   },
   {
    "id": "ky2-1987-2-1bd341",
@@ -652,7 +738,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 541
+   "idx": 557
   },
   {
    "id": "ky2-1988-3-96377b",
@@ -699,7 +785,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 542
+   "idx": 558
   },
   {
    "id": "ky2-1989-x-8ae23f",
@@ -746,7 +832,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 543
+   "idx": 559
   },
   {
    "id": "ky2-1990-x-f7b438",
@@ -793,7 +879,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 544
+   "idx": 560
   },
   {
    "id": "ky2-1991-5-bada6c",
@@ -840,7 +926,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 545
+   "idx": 561
   },
   {
    "id": "ky2-1991-x-9af4d3",
@@ -887,7 +973,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 546
+   "idx": 562
   },
   {
    "id": "ky2-1992-5-47a7ad",
@@ -934,7 +1020,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 547
+   "idx": 563
   },
   {
    "id": "ky2-1993-5-8a821b",
@@ -981,7 +1067,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 548
+   "idx": 564
   },
   {
    "id": "ky2-1993-x-c54f99",
@@ -1028,7 +1114,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 549
+   "idx": 565
   },
   {
    "id": "ky2-1994-x-eb7634",
@@ -1075,7 +1161,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 550
+   "idx": 566
   },
   {
    "id": "ky2-1996-5-65d2b6",
@@ -1122,7 +1208,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 551
+   "idx": 567
   },
   {
    "id": "ky2-1997-4-213719",
@@ -1169,7 +1255,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 552
+   "idx": 568
   },
   {
    "id": "ky2-1997-5-51c887",
@@ -1216,7 +1302,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 553
+   "idx": 569
   },
   {
    "id": "ky2-1997-x-a9feba",
@@ -1263,7 +1349,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 554
+   "idx": 570
   },
   {
    "id": "ky2-1998-x-eb7634",
@@ -1310,7 +1396,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 555
+   "idx": 571
   },
   {
    "id": "ky2-1999-x-637be5",
@@ -1357,7 +1443,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 556
+   "idx": 572
   },
   {
    "id": "ky2-2001-x-e42116",
@@ -1404,7 +1490,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 557
+   "idx": 573
   },
   {
    "id": "ky2-2002-x-e4a93f",
@@ -1451,7 +1537,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 558
+   "idx": 574
   },
   {
    "id": "ky2-2005-18-38fde3",
@@ -1506,7 +1592,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 559
+   "idx": 575
   },
   {
    "id": "ky2-2007-19-fdb7ab",
@@ -1557,7 +1643,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 560
+   "idx": 576
   },
   {
    "id": "ky2-2009-18-fbcd65",
@@ -1604,7 +1690,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 561
+   "idx": 577
   },
   {
    "id": "ky2-2009-20-45eb60",
@@ -1671,7 +1757,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 562
+   "idx": 578
   },
   {
    "id": "ky2-2014-16-22340e",
@@ -1722,7 +1808,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 563
+   "idx": 579
   },
   {
    "id": "ky2-2016-19-9b0529",
@@ -1773,7 +1859,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 564
+   "idx": 580
   },
   {
    "id": "ky2-2019-17-dcaec1",
@@ -1820,7 +1906,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 565
+   "idx": 581
   },
   {
    "id": "ky-2018-18-eff411",
@@ -1886,7 +1972,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 566
+   "idx": 582
   },
   {
    "id": "zk-202210-20",
@@ -1952,7 +2038,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 567
+   "idx": 583
   },
   {
    "id": "zk-202310-20",
@@ -2018,7 +2104,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 568
+   "idx": 584
   },
   {
    "id": "zk-202404-20",
@@ -2084,7 +2170,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 569
+   "idx": 585
   },
   {
    "id": "zk-202410-20",
@@ -2150,7 +2236,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 570
+   "idx": 586
   },
   {
    "id": "zk-202504-20",
@@ -2216,7 +2302,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 571
+   "idx": 587
   },
   {
    "id": "zk-202510-20",
@@ -2282,7 +2368,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 572
+   "idx": 588
   },
   {
    "id": "zk-202604-20",
@@ -2348,7 +2434,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 573
+   "idx": 589
   }
  ]
 }

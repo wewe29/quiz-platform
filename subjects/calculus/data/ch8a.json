@@ -54,7 +54,62 @@
      "expected": "Matrix([[5], [5], [-5]])"
     }
    ],
-   "idx": 574
+   "idx": 590
+  },
+  {
+   "id": "q-220",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.1 向量及其线性运算",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $\\boldsymbol{a}=(1,2,2)$，则 $|\\boldsymbol{a}|=$",
+   "options": [
+    "$3$",
+    "$5$",
+    "$3$",
+    "$9$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\sqrt{1+4+4}=3$。C 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础",
+    "向量"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "v",
+     "code": "sp.sqrt(1+4+4)",
+     "expected": "3"
+    }
+   ],
+   "idx": 591
   },
   {
    "id": "ky2-1989-5-01a5ae",
@@ -103,7 +158,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 575
+   "idx": 592
   },
   {
    "id": "ky2-2010-3-4a0f6b",
@@ -152,7 +207,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 576
+   "idx": 593
   },
   {
    "id": "zk-202210-01",
@@ -200,7 +255,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 577
+   "idx": 594
   },
   {
    "id": "zk-202304-01",
@@ -248,7 +303,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 578
+   "idx": 595
   },
   {
    "id": "zk-202310-01",
@@ -296,7 +351,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 579
+   "idx": 596
   },
   {
    "id": "zk-202404-01",
@@ -344,7 +399,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 580
+   "idx": 597
   },
   {
    "id": "zk-202410-01",
@@ -392,7 +447,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 581
+   "idx": 598
   },
   {
    "id": "zk-202504-01",
@@ -440,7 +495,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 582
+   "idx": 599
   },
   {
    "id": "zk-202510-01",
@@ -488,7 +543,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 583
+   "idx": 600
   },
   {
    "id": "zk-202604-01",
@@ -536,7 +591,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 584
+   "idx": 601
   },
   {
    "id": "c8-s2",
@@ -585,7 +640,105 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 585
+   "idx": 602
+  },
+  {
+   "id": "q-221",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "knowledgePoints": [
+    "8.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.1 向量及其线性运算",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "设 $\\boldsymbol{a}=(1,2,2)$，$\\boldsymbol{b}=(2,1,-2)$，则 $\\boldsymbol{a}\\cdot\\boldsymbol{b}=$",
+   "options": [
+    "$0$",
+    "$2$",
+    "$4$",
+    "$-1$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$2+2-4=0$。A 正确。点积为 0⇒垂直。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "数量积"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 603
+  },
+  {
+   "id": "q-222",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.3",
+   "knowledgePoints": [
+    "8.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §8.3 平面及其方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "过点 $(1,0,0)$ 且法向量为 $(1,1,1)$ 的平面方程是",
+   "options": [
+    "$x+y+z=0$",
+    "$x+y+z=1$",
+    "$x+y+z=3$",
+    "$x=1$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：点法式 $1(x-1)+1(y-0)+1(z-0)=0$，即 $x+y+z=1$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "平面方程"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 604
   },
   {
    "id": "zk-202210-06",
@@ -633,7 +786,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 586
+   "idx": 605
   },
   {
    "id": "zk-202304-06",
@@ -681,7 +834,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 587
+   "idx": 606
   },
   {
    "id": "zk-202310-06",
@@ -729,7 +882,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 588
+   "idx": 607
   },
   {
    "id": "zk-202404-06",
@@ -777,7 +930,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 589
+   "idx": 608
   },
   {
    "id": "zk-202410-06",
@@ -825,7 +978,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 590
+   "idx": 609
   },
   {
    "id": "zk-202504-06",
@@ -873,7 +1026,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 591
+   "idx": 610
   },
   {
    "id": "zk-202510-06",
@@ -921,7 +1074,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 592
+   "idx": 611
   },
   {
    "id": "zk-202604-06",
@@ -969,7 +1122,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 593
+   "idx": 612
   },
   {
    "id": "c8-s3",
@@ -1024,7 +1177,7 @@
      "expected": "0"
     }
    ],
-   "idx": 594
+   "idx": 613
   },
   {
    "id": "c8-m1",
@@ -1076,7 +1229,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 595
+   "idx": 614
   },
   {
    "id": "c8-m2",
@@ -1138,7 +1291,7 @@
      "expected": "0"
     }
    ],
-   "idx": 596
+   "idx": 615
   },
   {
    "id": "c8-j1",
@@ -1185,7 +1338,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 597
+   "idx": 616
   },
   {
    "id": "c8-j2",
@@ -1233,7 +1386,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 598
+   "idx": 617
   },
   {
    "id": "c8-j3",
@@ -1281,7 +1434,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 599
+   "idx": 618
   },
   {
    "id": "c8-b1",
@@ -1332,7 +1485,7 @@
      "expected": "3"
     }
    ],
-   "idx": 600
+   "idx": 619
   },
   {
    "id": "c8-b2",
@@ -1386,7 +1539,7 @@
      "expected": "Matrix([[1], [-1], [1]])"
     }
    ],
-   "idx": 601
+   "idx": 620
   },
   {
    "id": "ky-2005-3-a5291c",
@@ -1429,7 +1582,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 602
+   "idx": 621
   },
   {
    "id": "ky-2005-4-5a07c9",
@@ -1472,7 +1625,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 603
+   "idx": 622
   },
   {
    "id": "ky-2006-3-f0942e",
@@ -1515,93 +1668,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 604
-  },
-  {
-   "id": "ky-2006-4-f9e734",
-   "type": "blank",
-   "typeGroup": "blank",
-   "difficulty": "medium",
-   "chapter": 8,
-   "knowledgePoint": "8.3",
-   "knowledgePoints": [
-    "8.3"
-   ],
-   "source": {
-    "text": "2006 年考研数学（一）第 4 题",
-    "kind": "exam-original",
-    "year": 2006,
-    "region": "全国",
-    "paper": "2006 年考研数学（一）",
-    "number": "4",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2006年考研数学(一)真题.md"
-   },
-   "provenance": {
-    "level": "original",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2006年考研数学(一)真题.md",
-    "verifiedAt": "2026-10-28",
-    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2006年解析/2006年解析.md"
-   },
-   "stem": "点 $(2,1,0)$ 到平面 $3x + 4y + 5z = 0$ 的距离 $d = \\_$",
-   "options": null,
-   "answer": [
-    "$\\sqrt{2}$"
-   ],
-   "accept": null,
-   "answerText": null,
-   "points": null,
-   "explanation": "**答案依据**：$\\sqrt{2}$\n【解】点（2，1，0）到平面 $3x + 4y + 5z = 0$ 的距离为 $d = \\frac{|3\\times 2 + 4\\times 1|}{\\sqrt{3^2 + 4^2 + 5^2}} = \\sqrt{2}.$\n\n方法点评：本题考查点到平面的距离.\n\n空间解析几何部分需要掌握如下几个距离公式：\n\n（1）两点之间的距离：设 $A(x_{1},y_{1},z_{1}),B(x_{2},y_{2},z_{2})$ ，则两点之间的距离公式为\n\n$$\nd = \\sqrt {\\left(x _ {2} - x _ {1}\\right) ^ {2} + \\left(y _ {2} - y _ {1}\\right) ^ {2} + \\left(z _ {2} - z _ {1}\\right) ^ {2}};\n$$\n\n（2）点到平面的距离：设平面 $\\pi :Ax + By + Cz + D = 0$ ，点 $M_0(x_0,y_0,z_0)\\notin D$ ，则 $M_0$ 到 $\\pi$ 的距离为\n\n$$\nd = \\frac {\\left| A x _ {0} + B y _ {0} + C z _ {0} + D \\right|}{\\sqrt {A ^ {2} + B ^ {2} + C ^ {2}}};\n$$\n\n（3）点到直线的距离：设 $L:\\frac{x - x_0}{m} = \\frac{y - y_0}{n} = \\frac{z - z_0}{p},M_1(x_1,y_1,z_1)\\notin L,$\n\n令 $M_0(x_0, y_0, z_0), s = \\{m, n, p\\}$ ，则点 $M_1$ 到直线 $L$ 的距离为\n\n$$\nd = \\frac {\\left| \\overrightarrow {M _ {0} M _ {1}} \\times s \\right|}{\\left| s \\right|}.\n$$",
-   "misconception": null,
-   "extension": null,
-   "tags": [
-    "考研真题"
-   ],
-   "variantGroup": null,
-   "verify": [],
-   "idx": 605
-  },
-  {
-   "id": "ky-2010-13-ddf9f2",
-   "type": "blank",
-   "typeGroup": "blank",
-   "difficulty": "medium",
-   "chapter": 8,
-   "knowledgePoint": "8.1",
-   "knowledgePoints": [
-    "8.1"
-   ],
-   "source": {
-    "text": "2010 年考研数学（一）第 13 题",
-    "kind": "exam-original",
-    "year": 2010,
-    "region": "全国",
-    "paper": "2010 年考研数学（一）",
-    "number": "13",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md"
-   },
-   "provenance": {
-    "level": "original",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2010年考研数学(一)真题.md",
-    "verifiedAt": "2026-10-28",
-    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2010年解析/2010年解析.md"
-   },
-   "stem": "设 $\\pmb{\\alpha}_{1} = (1,2, - 1,0)^{\\mathrm{T}},\\pmb{\\alpha}_{2} = (1,1,0,2)^{\\mathrm{T}},\\pmb{\\alpha}_{3} = (2,1,1,a)^{\\mathrm{T}}$ 若由 $\\pmb{\\alpha}_{1},\\pmb{\\alpha}_{2},\\pmb{\\alpha}_{3}$ 生成的向量空间的维数为2，则 $a =$",
-   "options": null,
-   "answer": [
-    "6"
-   ],
-   "accept": null,
-   "answerText": null,
-   "points": null,
-   "explanation": "**答案依据**：6\n【解】 $(\\pmb{\\alpha}_{1},\\pmb{\\alpha}_{2},\\pmb{\\alpha}_{3}) = \\begin{bmatrix} 1 & 1 & 2\\\\ 2 & 1 & 1\\\\ -1 & 0 & 1\\\\ 0 & 2 & a \\end{bmatrix} \\rightarrow \\begin{bmatrix} 1 & 1 & 2\\\\ 0 & -1 & -3\\\\ 0 & 1 & 3\\\\ 0 & 2 & a \\end{bmatrix} \\rightarrow \\begin{bmatrix} 1 & 1 & 2\\\\ 0 & 1 & 3\\\\ 0 & 0 & 0\\\\ 0 & 0 & a - 6 \\end{bmatrix}$\n\n因为由 $\\alpha_{1},\\alpha_{2},\\alpha_{3}$ 组成的向量组的秩为2，所以 $a = 6$\n\n方法点评：向量组的秩与向量组所构成的矩阵的秩相等，因为向量组 $\\alpha_{1},\\alpha_{2},\\alpha_{3}$ 的秩为2，所以其构成的矩阵的秩为2，经过初等行变换阶梯化后应为2个非零行，故可求出 $a$",
-   "misconception": null,
-   "extension": null,
-   "tags": [
-    "考研真题"
-   ],
-   "variantGroup": null,
-   "verify": [],
-   "idx": 606
+   "idx": 623
   }
  ]
 }

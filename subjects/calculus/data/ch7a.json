@@ -54,7 +54,56 @@
      "expected": "0"
     }
    ],
-   "idx": 488
+   "idx": 501
+  },
+  {
+   "id": "q-217",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7.2",
+   "knowledgePoints": [
+    "7.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §7.2 可分离变量的微分方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "方程 $y'=2x$ 的通解是",
+   "options": [
+    "$y=x^2$",
+    "$y=2x+C$",
+    "$y=x^2+C$",
+    "$y=\\frac{x^2}{2}+C$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：直接积分 $y=\\int 2x\\,dx=x^2+C$。C 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础",
+    "可分离变量"
+   ],
+   "variantGroup": "vg-ode-first",
+   "verify": [],
+   "idx": 502
   },
   {
    "id": "ky2-2000-5-f63628",
@@ -103,7 +152,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 489
+   "idx": 503
   },
   {
    "id": "ky2-2003-3-03a24b",
@@ -152,7 +201,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 490
+   "idx": 504
   },
   {
    "id": "ky2-2006-10-427998",
@@ -201,7 +250,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 491
+   "idx": 505
   },
   {
    "id": "ky2-2010-2-02dd25",
@@ -250,7 +299,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 492
+   "idx": 506
   },
   {
    "id": "zk-202210-03",
@@ -298,7 +347,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 493
+   "idx": 507
   },
   {
    "id": "zk-202310-03",
@@ -346,7 +395,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 494
+   "idx": 508
   },
   {
    "id": "zk-202504-03",
@@ -394,7 +443,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 495
+   "idx": 509
   },
   {
    "id": "zk-202510-03",
@@ -442,7 +491,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 496
+   "idx": 510
   },
   {
    "id": "zk-202604-03",
@@ -490,7 +539,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 497
+   "idx": 511
   },
   {
    "id": "c7-s2",
@@ -545,7 +594,7 @@
      "expected": "0"
     }
    ],
-   "idx": 498
+   "idx": 512
   },
   {
    "id": "q-191",
@@ -600,7 +649,111 @@
      "expected": "True"
     }
    ],
-   "idx": 499
+   "idx": 513
+  },
+  {
+   "id": "q-218",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.3",
+   "knowledgePoints": [
+    "7.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §7.3 齐次方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "方程 $y'+y=0$ 的通解是",
+   "options": [
+    "$y=Cx$",
+    "$y=C\\mathrm{e}^{-x}$",
+    "$y=C\\mathrm{e}^{x}$",
+    "$y=C\\cos x$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$y=C\\mathrm{e}^{-\\int P(x)dx}=C\\mathrm{e}^{-x}$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "一阶线性"
+   ],
+   "variantGroup": "vg-ode-first",
+   "verify": [
+    {
+     "desc": "v",
+     "code": "sp.diff(sp.Symbol('C')*sp.exp(-x), x)+sp.Symbol('C')*sp.exp(-x)",
+     "expected": "0"
+    }
+   ],
+   "idx": 514
+  },
+  {
+   "id": "q-219",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.5",
+   "knowledgePoints": [
+    "7.5"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §7.5 可降阶的高阶微分方程",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "方程 $y''+y=0$ 的通解是",
+   "options": [
+    "$y=C_1\\mathrm{e}^{x}+C_2\\mathrm{e}^{-x}$",
+    "$y=(C_1+C_2x)\\mathrm{e}^{x}$",
+    "$y=C_1x+C_2$",
+    "$y=C_1\\cos x+C_2\\sin x$"
+   ],
+   "answer": [
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：特征方程 $r^2+1=0$，$r=\\pm i$，通解为三角函数。D 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "二阶常系数"
+   ],
+   "variantGroup": "vg-ode-second",
+   "verify": [],
+   "idx": 515
   },
   {
    "id": "ky2-2011-4-f65c56",
@@ -649,7 +802,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 500
+   "idx": 516
   },
   {
    "id": "ky2-2019-4-2ac6b3",
@@ -698,7 +851,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 501
+   "idx": 517
   },
   {
    "id": "zk-202210-10",
@@ -746,7 +899,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 502
+   "idx": 518
   },
   {
    "id": "zk-202304-10",
@@ -794,7 +947,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 503
+   "idx": 519
   },
   {
    "id": "zk-202310-10",
@@ -842,7 +995,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 504
+   "idx": 520
   },
   {
    "id": "zk-202404-10",
@@ -890,7 +1043,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 505
+   "idx": 521
   },
   {
    "id": "zk-202410-10",
@@ -938,7 +1091,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 506
+   "idx": 522
   },
   {
    "id": "zk-202504-10",
@@ -986,7 +1139,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 507
+   "idx": 523
   },
   {
    "id": "zk-202510-10",
@@ -1034,7 +1187,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 508
+   "idx": 524
   },
   {
    "id": "zk-202604-10",
@@ -1082,7 +1235,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 509
+   "idx": 525
   },
   {
    "id": "c7-s3",
@@ -1139,7 +1292,7 @@
      "expected": "[1]"
     }
    ],
-   "idx": 510
+   "idx": 526
   },
   {
    "id": "c7-m1",
@@ -1190,7 +1343,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 511
+   "idx": 527
   },
   {
    "id": "c7-m2",
@@ -1242,7 +1395,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 512
+   "idx": 528
   },
   {
    "id": "c7-j1",
@@ -1289,7 +1442,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 513
+   "idx": 529
   },
   {
    "id": "c7-j2",
@@ -1335,7 +1488,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 514
+   "idx": 530
   },
   {
    "id": "c7-j3",
@@ -1383,7 +1536,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 515
+   "idx": 531
   },
   {
    "id": "c7-b1",
@@ -1432,7 +1585,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 516
+   "idx": 532
   },
   {
    "id": "c7-b2",
@@ -1484,7 +1637,7 @@
      "expected": "[-2]"
     }
    ],
-   "idx": 517
+   "idx": 533
   },
   {
    "id": "ky2-1994-5-212973",
@@ -1528,7 +1681,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 518
+   "idx": 534
   },
   {
    "id": "ky2-1995-2-03b54a",
@@ -1572,7 +1725,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 519
+   "idx": 535
   },
   {
    "id": "ky-2004-4-b989af",
@@ -1615,7 +1768,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 520
+   "idx": 536
   },
   {
    "id": "ky-2005-2-9bb9ca",
@@ -1658,7 +1811,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 521
+   "idx": 537
   },
   {
    "id": "ky-2006-2-5eda39",
@@ -1701,7 +1854,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 522
+   "idx": 538
   },
   {
    "id": "ky-2007-13-27985a",
@@ -1744,7 +1897,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 523
+   "idx": 539
   },
   {
    "id": "ky-2008-9-9e7044",
@@ -1787,7 +1940,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 524
+   "idx": 540
   },
   {
    "id": "ky-2011-10-59d6ca",
@@ -1830,7 +1983,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 525
+   "idx": 541
   },
   {
    "id": "ky-2012-9-76f4b2",
@@ -1873,7 +2026,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 526
+   "idx": 542
   },
   {
    "id": "ky-2013-10-dc1948",
@@ -1916,7 +2069,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 527
+   "idx": 543
   },
   {
    "id": "ky-2014-11-d20245",
@@ -1959,93 +2112,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 528
-  },
-  {
-   "id": "ky-2017-10-585590",
-   "type": "blank",
-   "typeGroup": "blank",
-   "difficulty": "medium",
-   "chapter": 7,
-   "knowledgePoint": "7.7",
-   "knowledgePoints": [
-    "7.7"
-   ],
-   "source": {
-    "text": "2017 年考研数学（一）第 10 题",
-    "kind": "exam-original",
-    "year": 2017,
-    "region": "全国",
-    "paper": "2017 年考研数学（一）",
-    "number": "10",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2017年考研数学(一)真题.md"
-   },
-   "provenance": {
-    "level": "original",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2017年考研数学(一)真题.md",
-    "verifiedAt": "2026-10-28",
-    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2017年解析/2017年解析.md"
-   },
-   "stem": "微分方程 $y'' + 2y' + 3y = 0$ 的通解为 $y = \\_$",
-   "options": null,
-   "answer": [
-    "$\\mathrm{e}^{-x}(C_1\\cos \\sqrt{2} x + C_2\\sin \\sqrt{2} x)(C_1,C_2$ 为任意常数)"
-   ],
-   "accept": null,
-   "answerText": null,
-   "points": null,
-   "explanation": "**答案依据**：$\\mathrm{e}^{-x}(C_1\\cos \\sqrt{2} x + C_2\\sin \\sqrt{2} x)(C_1,C_2$ 为任意常数)\n【解】 特征方程为 $\\lambda^2 + 2\\lambda + 3 = 0$ ，特征值为 $\\lambda_{1,2} = -1 \\pm \\sqrt{2}\\mathrm{i}$ ，\n\n通解为 $y = \\mathrm{e}^{-x}(C_1\\cos \\sqrt{2} x + C_2\\sin \\sqrt{2} x)(C_1,C_2$ 为任意常数).",
-   "misconception": null,
-   "extension": null,
-   "tags": [
-    "考研真题"
-   ],
-   "variantGroup": null,
-   "verify": [],
-   "idx": 529
-  },
-  {
-   "id": "ky-2019-10-b59962",
-   "type": "blank",
-   "typeGroup": "blank",
-   "difficulty": "medium",
-   "chapter": 7,
-   "knowledgePoint": "7.7",
-   "knowledgePoints": [
-    "7.7"
-   ],
-   "source": {
-    "text": "2019 年考研数学（一）第 10 题",
-    "kind": "exam-original",
-    "year": 2019,
-    "region": "全国",
-    "paper": "2019 年考研数学（一）",
-    "number": "10",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2019年考研数学(一)真题.md"
-   },
-   "provenance": {
-    "level": "original",
-    "url": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/papers/2019年考研数学(一)真题.md",
-    "verifiedAt": "2026-10-28",
-    "note": "题干、选项、答案与解析取自源卷面 Markdown 文件；答案解析文件：https://github.com/TsekaLuk/Kaoyan-Math1-Papers/blob/main/solutions/2019年解析/2019年解析.md"
-   },
-   "stem": "微分方程 $2yy' - y^2 - 2 = 0$ 满足条件 $y(0) = 1$ 的特解 $y = \\_$",
-   "options": null,
-   "answer": [
-    "$\\sqrt{3\\mathrm{e}^x - 2}$"
-   ],
-   "accept": null,
-   "answerText": null,
-   "points": null,
-   "explanation": "**答案依据**：$\\sqrt{3\\mathrm{e}^x - 2}$\n【解】方法一 由 $2yy' - y^2 - 2 = 0$ 得 $\\frac{2y\\mathrm{d}y}{y^2 + 2} = \\mathrm{d}x$\n\n积分得 $\\ln (y^2 + 2) = x + C$\n\n再由 $y(0) = 1$ 得 $C = \\ln 3$ ，即 $\\ln (y^2 +2) = \\ln (3\\mathrm{e}^x)$\n\n从而 $y^{2} + 2 = 3\\mathrm{e}^{x}$ ，故 $y = \\sqrt{3\\mathrm{e}^x - 2}$\n\n方法二 令 $y^{2} = u$ ，则原方程化为 $\\frac{\\mathrm{d}u}{\\mathrm{d}x} - u = 2$\n\n解得 $u = \\left(\\int 2\\mathrm{e}^{\\int -\\mathrm{d}x}\\mathrm{d}x + C\\right)\\mathrm{e}^{-\\int -\\mathrm{d}x} = (-2\\mathrm{e}^{-x} + C)\\mathrm{e}^{x},$\n\n即 $y^{2} = (-2\\mathrm{e}^{-x} + C)\\mathrm{e}^{x} = Ce^{x} - 2$\n\n由 $y(0) = 1$ 得 $C = 3$ ，故 $y = \\sqrt{3\\mathrm{e}^x - 2}$",
-   "misconception": null,
-   "extension": null,
-   "tags": [
-    "考研真题"
-   ],
-   "variantGroup": null,
-   "verify": [],
-   "idx": 530
+   "idx": 544
   }
  ]
 }

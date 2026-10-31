@@ -54,7 +54,7 @@
      "expected": "1"
     }
    ],
-   "idx": 811
+   "idx": 833
   },
   {
    "id": "zk-202210-04",
@@ -102,7 +102,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 812
+   "idx": 834
   },
   {
    "id": "zk-202304-04",
@@ -150,7 +150,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 813
+   "idx": 835
   },
   {
    "id": "zk-202310-04",
@@ -198,7 +198,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 814
+   "idx": 836
   },
   {
    "id": "zk-202404-04",
@@ -246,7 +246,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 815
+   "idx": 837
   },
   {
    "id": "zk-202410-04",
@@ -294,7 +294,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 816
+   "idx": 838
   },
   {
    "id": "zk-202504-04",
@@ -342,7 +342,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 817
+   "idx": 839
   },
   {
    "id": "zk-202510-04",
@@ -390,7 +390,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 818
+   "idx": 840
   },
   {
    "id": "zk-202604-04",
@@ -438,7 +438,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 819
+   "idx": 841
   },
   {
    "id": "c12-s2",
@@ -488,7 +488,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 820
+   "idx": 842
   },
   {
    "id": "q-198",
@@ -543,7 +543,7 @@
      "expected": "pi**2/6"
     }
    ],
-   "idx": 821
+   "idx": 843
   },
   {
    "id": "q-201",
@@ -598,7 +598,154 @@
      "expected": "oo"
     }
    ],
-   "idx": 822
+   "idx": 844
+  },
+  {
+   "id": "q-226",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.2",
+   "knowledgePoints": [
+    "12.2"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.2 常数项级数的审敛法",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "级数 $\\sum\\frac{1}{n^p}$ 当 $p$ 满足什么条件时收敛？",
+   "options": [
+    "$p>1$",
+    "$p\\ge1$",
+    "$p<1$",
+    "$p\\neq0$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$p$-级数判别法。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "p级数"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 845
+  },
+  {
+   "id": "q-227",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.3",
+   "knowledgePoints": [
+    "12.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "幂级数 $\\sum\\frac{x^n}{n}$ 的收敛域是",
+   "options": [
+    "$(-1,1)$",
+    "$[-1,1)$",
+    "$[-1,1]$",
+    "$(-\\infty,+\\infty)$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$R=1$，$x=1$ 调和级数发散，$x=-1$ 交错级数收敛。C 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "收敛域"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 846
+  },
+  {
+   "id": "q-228",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 12,
+   "knowledgePoint": "12.3",
+   "knowledgePoints": [
+    "12.3"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "幂级数 $\\sum\\frac{x^n}{2^n}$ 的收敛半径是",
+   "options": [
+    "$1$",
+    "$2$",
+    "$\\frac{1}{2}$",
+    "$+\\infty$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\rho=\\frac12$，$R=2$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "收敛半径"
+   ],
+   "variantGroup": null,
+   "verify": [],
+   "idx": 847
   },
   {
    "id": "ky2-2016-3-208208",
@@ -647,7 +794,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 823
+   "idx": 848
   },
   {
    "id": "zk-202210-09",
@@ -695,7 +842,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 824
+   "idx": 849
   },
   {
    "id": "zk-202304-09",
@@ -743,7 +890,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 825
+   "idx": 850
   },
   {
    "id": "zk-202310-09",
@@ -791,7 +938,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 826
+   "idx": 851
   },
   {
    "id": "zk-202404-09",
@@ -839,7 +986,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 827
+   "idx": 852
   },
   {
    "id": "zk-202410-09",
@@ -887,7 +1034,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 828
+   "idx": 853
   },
   {
    "id": "zk-202504-09",
@@ -935,7 +1082,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 829
+   "idx": 854
   },
   {
    "id": "zk-202510-09",
@@ -983,7 +1130,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 830
+   "idx": 855
   },
   {
    "id": "zk-202604-09",
@@ -1031,7 +1178,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 831
+   "idx": 856
   },
   {
    "id": "c12-s3",
@@ -1081,7 +1228,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 832
+   "idx": 857
   },
   {
    "id": "q-200",
@@ -1136,7 +1283,7 @@
      "expected": "exp(x)"
     }
    ],
-   "idx": 833
+   "idx": 858
   },
   {
    "id": "c12-m1",
@@ -1188,7 +1335,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 834
+   "idx": 859
   },
   {
    "id": "c12-m2",
@@ -1240,7 +1387,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 835
+   "idx": 860
   },
   {
    "id": "c12-j1",
@@ -1288,7 +1435,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 836
+   "idx": 861
   },
   {
    "id": "c12-j2",
@@ -1335,7 +1482,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 837
+   "idx": 862
   },
   {
    "id": "c12-j3",
@@ -1383,7 +1530,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 838
+   "idx": 863
   },
   {
    "id": "c12-b1",
@@ -1435,7 +1582,7 @@
      "expected": "2/3"
     }
    ],
-   "idx": 839
+   "idx": 864
   },
   {
    "id": "c12-b2",
@@ -1485,7 +1632,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 840
+   "idx": 865
   },
   {
    "id": "ky-2008-11-99256e",
@@ -1528,7 +1675,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 841
+   "idx": 866
   },
   {
    "id": "ky-2017-12-bf8a05",
@@ -1571,7 +1718,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 842
+   "idx": 867
   },
   {
    "id": "ky-2019-11-376d4d",
@@ -1614,60 +1761,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 843
-  },
-  {
-   "id": "c12-t1",
-   "type": "term",
-   "typeGroup": "short",
-   "difficulty": "basic",
-   "chapter": 12,
-   "knowledgePoint": "12.3",
-   "knowledgePoints": [
-    "12.3"
-   ],
-   "source": {
-    "text": "同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛",
-    "kind": "textbook",
-    "year": null,
-    "region": null,
-    "paper": null,
-    "number": null,
-    "url": null
-   },
-   "provenance": {
-    "level": null,
-    "url": null,
-    "verifiedAt": null,
-    "note": ""
-   },
-   "stem": "名词解释：绝对收敛与条件收敛。",
-   "options": null,
-   "answer": [],
-   "accept": null,
-   "answerText": "对级数 $\\sum a_n$：若 $\\sum|a_n|$ 收敛，则称 $\\sum a_n$ **绝对收敛**；若 $\\sum a_n$ 收敛而 $\\sum|a_n|$ 发散，则称 $\\sum a_n$ **条件收敛**。绝对收敛级数必收敛，且具有可交换性（改变求和次序和不变）；条件收敛级数不具备此性质。",
-   "points": [
-    {
-     "text": "定义：$\\sum|a_n|$ 收敛称绝对收敛；$\\sum a_n$ 收敛但 $\\sum|a_n|$ 发散称条件收敛。",
-     "partial": 2
-    },
-    {
-     "text": "关系与意义：绝对收敛 $\\Rightarrow$ 收敛（反之不然）；条件收敛级数的正项与负项子级数各自发散，改变次序可使和任意改变（黎曼重排现象）。",
-     "partial": 2
-    }
-   ],
-   "explanation": "**答案依据**：绝对收敛、条件收敛的定义与绝对收敛定理见 §12.3。\n**考点出处**：同济《高等数学》第七版 §12.3 交错级数及其审敛法 绝对收敛与条件收敛。",
-   "misconception": "⚠️易错点：判别流程先看正负——同号级数直接用正项级数审敛法；变号级数先取绝对值判绝对收敛，失效再用莱布尼茨。",
-   "extension": null,
-   "tags": [
-    "绝对收敛",
-    "条件收敛",
-    "概念",
-    "必背"
-   ],
-   "variantGroup": null,
-   "verify": [],
-   "idx": 844
+   "idx": 868
   }
  ]
 }

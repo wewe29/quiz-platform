@@ -51,6 +51,169 @@
    "idx": 333
   },
   {
+   "id": "q-204",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.1 不定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int x^{2}\\,\\mathrm{d}x=$",
+   "options": [
+    "$\\frac{x^{3}}{3}+C$",
+    "$x^{3}+C$",
+    "$\\frac{x^{3}}{2}+C$",
+    "$3x^{2}+C$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\int x^{n}dx=\\frac{x^{n+1}}{n+1}+C$。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础",
+    "基本积分公式"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "v",
+     "code": "sp.diff(x**3/3, x)-x**2",
+     "expected": "0"
+    }
+   ],
+   "idx": 334
+  },
+  {
+   "id": "q-205",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.1 不定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int\\cos x\\,\\mathrm{d}x=$",
+   "options": [
+    "$-\\sin x+C$",
+    "$\\sin x+C$",
+    "$\\cos x+C$",
+    "$\\tan x+C$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：基本积分公式。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "v",
+     "code": "sp.diff(sp.sin(x), x)-sp.cos(x)",
+     "expected": "0"
+    }
+   ],
+   "idx": 335
+  },
+  {
+   "id": "q-207",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.1 不定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int\\frac{1}{1+x^{2}}\\,\\mathrm{d}x=$",
+   "options": [
+    "$\\ln(1+x^{2})+C$",
+    "$\\arctan x+C$",
+    "$\\arcsin x+C$",
+    "$\\frac{1}{2}\\ln(1+x^{2})+C$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：基本积分公式。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "v",
+     "code": "sp.diff(sp.atan(x), x)-1/(1+x**2)",
+     "expected": "0"
+    }
+   ],
+   "idx": 336
+  },
+  {
    "id": "ky2-1992-5-3e7b69",
    "type": "single",
    "typeGroup": "single",
@@ -97,7 +260,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 334
+   "idx": 337
   },
   {
    "id": "c4-s2",
@@ -152,7 +315,117 @@
      "expected": "0"
     }
    ],
-   "idx": 335
+   "idx": 338
+  },
+  {
+   "id": "q-206",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.1 不定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int x\\,\\mathrm{e}^{x}\\,\\mathrm{d}x=$",
+   "options": [
+    "$x\\mathrm{e}^{x}+C$",
+    "$\\mathrm{e}^{x}+C$",
+    "$(x-1)\\mathrm{e}^{x}+C$",
+    "$\\frac{x^{2}}{2}\\mathrm{e}^{x}+C$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：分部积分。C 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "分部积分"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "v",
+     "code": "sp.diff((x-1)*sp.exp(x), x)-x*sp.exp(x)",
+     "expected": "0"
+    }
+   ],
+   "idx": 339
+  },
+  {
+   "id": "q-208",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "knowledgePoints": [
+    "4.1"
+   ],
+   "source": {
+    "text": "同济《高等数学》第七版 §4.1 不定积分的概念与性质",
+    "kind": "textbook",
+    "year": null,
+    "region": null,
+    "paper": null,
+    "number": null,
+    "url": null
+   },
+   "provenance": {
+    "level": null,
+    "url": null,
+    "verifiedAt": null,
+    "note": ""
+   },
+   "stem": "$\\int\\frac{2x}{1+x^{2}}\\,\\mathrm{d}x=$",
+   "options": [
+    "$\\ln(1+x^{2})+C$",
+    "$\\arctan x+C$",
+    "$2\\arctan x+C$",
+    "$\\frac{1}{1+x^{2}}+C$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：凑微分 $2x\\,dx=\\mathrm{d}(1+x^{2})$。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "凑微分"
+   ],
+   "variantGroup": null,
+   "verify": [
+    {
+     "desc": "v",
+     "code": "sp.diff(sp.log(1+x**2), x)-2*x/(1+x**2)",
+     "expected": "0"
+    }
+   ],
+   "idx": 340
   },
   {
    "id": "c4-s3",
@@ -207,7 +480,7 @@
      "expected": "0"
     }
    ],
-   "idx": 336
+   "idx": 341
   },
   {
    "id": "c4-m1",
@@ -257,7 +530,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 337
+   "idx": 342
   },
   {
    "id": "c4-m2",
@@ -315,7 +588,7 @@
      "expected": "0"
     }
    ],
-   "idx": 338
+   "idx": 343
   },
   {
    "id": "c4-j1",
@@ -362,7 +635,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 339
+   "idx": 344
   },
   {
    "id": "c4-j2",
@@ -409,7 +682,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 340
+   "idx": 345
   },
   {
    "id": "c4-j3",
@@ -456,7 +729,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 341
+   "idx": 346
   },
   {
    "id": "c4-b1",
@@ -505,7 +778,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 342
+   "idx": 347
   },
   {
    "id": "c4-b2",
@@ -560,7 +833,7 @@
      "expected": "0"
     }
    ],
-   "idx": 343
+   "idx": 348
   },
   {
    "id": "ky2-1994-4-9dba10",
@@ -604,7 +877,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 344
+   "idx": 349
   },
   {
    "id": "ky2-1997-3-70bde9",
@@ -648,7 +921,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 345
+   "idx": 350
   },
   {
    "id": "c4-t1",
@@ -700,7 +973,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 346
+   "idx": 351
   },
   {
    "id": "c4-t2",
@@ -756,7 +1029,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 347
+   "idx": 352
   },
   {
    "id": "c4-c1",
@@ -823,7 +1096,7 @@
      "expected": "sin(x**2)/2"
     }
    ],
-   "idx": 348
+   "idx": 353
   },
   {
    "id": "c4-c2",
@@ -890,7 +1163,7 @@
      "expected": "x**2*log(x)/2 - x**2/4"
     }
    ],
-   "idx": 349
+   "idx": 354
   },
   {
    "id": "c4-c3",
@@ -963,7 +1236,7 @@
      "expected": "0"
     }
    ],
-   "idx": 350
+   "idx": 355
   },
   {
    "id": "ky2-1989-2-e66af2",
@@ -1010,7 +1283,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 351
+   "idx": 356
   },
   {
    "id": "ky2-1990-4-7185cb",
@@ -1057,7 +1330,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 352
+   "idx": 357
   },
   {
    "id": "ky2-1991-4-240556",
@@ -1104,7 +1377,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 353
+   "idx": 358
   },
   {
    "id": "ky2-1992-3-382eba",
@@ -1151,7 +1424,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 354
+   "idx": 359
   },
   {
    "id": "ky2-1995-3-5641db",
@@ -1198,7 +1471,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 355
+   "idx": 360
   },
   {
    "id": "ky2-1996-2-0acbdc",
@@ -1245,7 +1518,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 356
+   "idx": 361
   },
   {
    "id": "ky2-1997-3-d8f1a4",
@@ -1292,7 +1565,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 357
+   "idx": 362
   },
   {
    "id": "ky2-2000-x-9c5df4",
@@ -1339,7 +1612,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 358
+   "idx": 363
   },
   {
    "id": "ky2-2001-x-be6727",
@@ -1386,7 +1659,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 359
+   "idx": 364
   },
   {
    "id": "ky2-2006-16-fdd8ec",
@@ -1433,7 +1706,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 360
+   "idx": 365
   },
   {
    "id": "ky2-2016-21-8260a1",
@@ -1496,7 +1769,7 @@
    ],
    "variantGroup": null,
    "verify": [],
-   "idx": 361
+   "idx": 366
   }
  ]
 }
