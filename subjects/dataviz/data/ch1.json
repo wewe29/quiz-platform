@@ -1,0 +1,779 @@
+{
+ "chapter": 1,
+ "questions": [
+  {
+   "id": "dv-c1A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 A卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "数据可视化最早可以追溯至（　）。",
+   "options": [
+    "10世纪",
+    "14世纪",
+    "18世纪",
+    "19世纪"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.1 什么是数据可视化：1.1.1 数据可视化的发展历史 ⭐重点 📖必背\n\n数据可视化有着非常久远的历史，最早可以追溯至10世纪，至今已经应用和发展了数百年。／英国人民开始研究人口统计学，开启数据可视化研究的大门。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 A卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "在数据可视化发展历史中，被称作“黄金时期”的是（　）。",
+   "options": [
+    "10世纪",
+    "14-17世纪",
+    "18世纪",
+    "19世纪"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.1 什么是数据可视化：1.1.1 数据可视化的发展历史 ⭐重点 📖必背\n\n数据可视化有着非常久远的历史，最早可以追溯至10世纪，至今已经应用和发展了数百年。／英国人民开始研究人口统计学，开启数据可视化研究的大门。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 A卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "数据可视化的过程被理解为（　）。",
+   "options": [
+    "从图形空间到数据空间的映射",
+    "从数据空间到图形空间的映射",
+    "数据的分类汇总",
+    "数据的存储与管理"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.4 数据可视化的未来：通过对本章的学习，希望读者可以理解可视化的过程和方式，能够独立搭建开发环境，并对matplotlib开发有一个初步的认识，为后续的学习做好铺垫。／1.4.2 数据可视化的发展方向 ⭐重点 📖必背\n\n数据可视化技术的发展方向可分为以下三个方面：\n\n1. 与数据挖掘结合：揭示潜在规律，提升挖掘效率。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 A卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "下列不属于数据可视化目的的是（　）。",
+   "options": [
+    "模式",
+    "关系",
+    "异常",
+    "存储"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.1 什么是数据可视化：⭐重点 📌考点\n\n 1.1.4 数据可视化目的 ⭐重点 📖必背\n\n数据可视化是为了从数据中寻找三个方面的信息：模式、关系和异常。／1.1.1 数据可视化的发展历史 ⭐重点 📖必背\n\n数据可视化有着非常久远的历史，最早可以追溯至10世纪，至今已经应用和发展了数百年。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 A卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "被称为“众多Python数据可视化库的鼻祖”的是（　）。",
+   "options": [
+    "seaborn",
+    "bokeh",
+    "matplotlib",
+    "pyecharts"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.4 数据可视化的未来：本章小结（原文）：本章主要为大家介绍了数据可视化和matplotlib的入门知识，包括什么是数据可视化、数据可视化的作用、python常用工具、数据可视化的未来。／1.4.1 数据可视化面临的挑战 ⭐重点 📖必背\n\n1. 数据规模大，已超越单机、外存模型甚至小型计算集群处理能力的极限，而当前软件和工具运行效率不高，需探索全新思路解决该问题。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1A-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 A卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "数据可视化的作用包括______、分析推理、信息传播与协同等。",
+   "options": null,
+   "answer": [
+    "记录信息"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.2 数据可视化的作用：数据可视化的作用包括记录信息、分析推理、信息传播与协同等。／图1-8　古老图形记录示例（解剖、植物、月相图）（来源：第1章 1.2，幻灯片第13页）\n\n\n- 分析推理：数据可视化极大地降低了数据理解的复杂度，有效地提升了信息认知的效率，从而有助于人们更快地分析和推理出有效信息；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "记录信息"
+   ]
+  },
+  {
+   "id": "dv-c1A-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 A卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "最常用的数据可视化库是 matplotlib、seaborn、bokeh 和______。",
+   "options": null,
+   "answer": [
+    "pyecharts"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.1 什么是数据可视化：1.1.1 数据可视化的发展历史 ⭐重点 📖必背\n\n数据可视化有着非常久远的历史，最早可以追溯至10世纪，至今已经应用和发展了数百年。／英国人民开始研究人口统计学，开启数据可视化研究的大门。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "pyecharts"
+   ]
+  },
+  {
+   "id": "dv-c1A-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 A卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "matplotlib 官网提供了三种 API：pyplot API、object-oriented API 和______。",
+   "options": null,
+   "answer": [
+    "pylab API"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.3 Python常用工具：生成的Echarts图表凭借良好的交互性、精巧的设计得到了众多开发者的认可 |\n\n\n图1-12　数据可视化作品示例：食品分类与营养成分关系图（来源：第1章 1.3.1，幻灯片第17页）\n\n\n\n图1-13　matplotlib 库标志（来源：第1章 1.3.1，幻灯片第18页）\n\n\n\n 1.3.2 matplotlib概述 ⭐重点 📌考点\n\nmatplotlib官网提供了三种API：pyplot API、object-oriented A",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "pylab API"
+   ]
+  },
+  {
+   "id": "dv-c1A-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 A卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "数据可视化面临的挑战包括：数据规模大、______、数据快速动态变化、面临复杂的高维数据、来源数据的类型和结构各异。",
+   "options": null,
+   "answer": [
+    "在数据获取与分析处理过程中易产生数据质量问题，需特别关注数据的不确定性"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.4 数据可视化的未来：2. 在数据获取与分析处理过程中，易产生数据质量问题，需特别关注数据的不确定性。／1.4.1 数据可视化面临的挑战 ⭐重点 📖必背\n\n1. 数据规模大，已超越单机、外存模型甚至小型计算集群处理能力的极限，而当前软件和工具运行效率不高，需探索全新思路解决该问题。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "在数据获取与分析处理过程中易产生数据质量问题，需特别关注数据的不确定性"
+   ]
+  },
+  {
+   "id": "dv-c1A-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 A卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "Anaconda 发行版中，基于 Web 网页的交互计算应用程序是______。",
+   "options": null,
+   "answer": [
+    "Jupyter Notebook"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.3 Python常用工具：图1-17　Jupyter Notebook 中验证 matplotlib 安装成功（关键截图）（来源：第1章 1.3.3，幻灯片第37页）\n\n\n- Anaconda 发行版主要组件：\n\n| 组件 | 说明 |\n| --- | --- |\n| Navigator | Anaconda发行版中包含的图形用户界面，允许用户在不使用命令的情况下启动程序并轻松管理包 |\n| Jupyter Notebook | 基于Web网页的交互计算的应用程",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "Jupyter Notebook"
+   ]
+  },
+  {
+   "id": "dv-c1A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 A卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述数据可视化发展历史的五个阶段。",
+   "options": null,
+   "answer": [],
+   "answerText": "五阶段：10世纪图表萌芽；14-17世纪开启可视化研究大门；18世纪重视数据价值；19世纪黄金时期；20-21世纪计算机绘制可视化图（各阶段要点见知识文档）。",
+   "points": [
+    {
+     "text": "五阶段：10世纪图表萌芽",
+     "partial": 2
+    },
+    {
+     "text": "14-17世纪开启可视化研究大门",
+     "partial": 2
+    },
+    {
+     "text": "18世纪重视数据价值",
+     "partial": 2
+    },
+    {
+     "text": "19世纪黄金时期",
+     "partial": 2
+    },
+    {
+     "text": "20-21世纪计算机绘制可视化图（各阶段要点见知识文档）。",
+     "partial": 2
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 A卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述 pyplot API 绘制图表的基本思路。",
+   "options": null,
+   "answer": [],
+   "answerText": "导入pyplot模块→调用绘图函数绘制图表→展示图表。",
+   "points": [
+    {
+     "text": "导入pyplot模块→调用绘图函数绘制图表→展示图表。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 B卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "“开启可视化研究大门”的时代背景是（　）。",
+   "options": [
+    "宗教影响",
+    "文艺复兴",
+    "工业革命",
+    "信息时代"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.1 什么是数据可视化：图1-2　太阳、月亮和行星全年位置变化图（10世纪图表萌芽时期代表作）（来源：第1章 1.1.1，幻灯片第4页）\n\n\n- （2）14-17世纪：开启可视化研究大门——欧洲进入文艺复兴时期，出现很多现代科学家和艺术家，如笛卡尔、哲学家帕斯卡；／英国人民开始研究人口统计学，开启数据可视化研究的大门。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 B卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "18世纪出现的基本图表不包括（　）。",
+   "options": [
+    "折线图",
+    "条形图",
+    "饼图",
+    "箱形图"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.1 什么是数据可视化：- （3）18世纪：重视数据价值——出现微积分、物理和数学等，人们开始重视数据的价值，出现基本图表，如折线图、条形图、饼图等。／图1-3　《统计摘要》中的饼图（来源：第1章 1.1.1，幻灯片第5页）\n\n\n- （4）19世纪：黄金时期——出现基本图表（散点图、直方图、坐标图等）及大量经典可视化作品（南丁格尔玫瑰图，拿破仑远征图等）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 B卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "数据间的关系大多可分为三类，下列不属于的是（　）。",
+   "options": [
+    "数据间的比较",
+    "数据的构成",
+    "数据的分布或联系",
+    "数据的存储"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.1 什么是数据可视化：图1-5　交通流量图（来源：第1章 1.1.4，幻灯片第9页）\n\n\n- 关系，指数据间的相关性，数据间的关系大多可分为三类：数据间的比较、数据的构成，以及数据的分布或联系。／——第1章 1.1.2\n\n 1.1.3 数据可视化过程\n\n可视化其实是一个抽象的过程，它可以简单地理解为将一个不易描述的事物形成一个可感知画面的过程，也就是从数据空间到图形空间的映射。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 B卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "通过 object-oriented API 绘图时，创建画布使用的是（　）的对象。",
+   "options": [
+    "Axes类",
+    "Figure类",
+    "Canvas类",
+    "Plot类"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.3 Python常用工具：python\nimport numpy as np\nimport matplotlib.pyplot as plt\ndata = np.array(1, 2, 3, 4, 5)     准备数据，y值\n 在当前画布的绘图区域中绘制图表\nplt.plot(data)\nplt.show()                                    展示图表\n\n\n\n\n图1-14　pyplot API 绘图结果（来源：第1章 1.3",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 B卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "数据可视化技术的发展方向不包括（　）。",
+   "options": [
+    "与数据挖掘结合",
+    "与人机交互结合",
+    "与大规模、高维度、非结构化数据结合",
+    "与文字编辑结合"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.4 数据可视化的未来：1.4.2 数据可视化的发展方向 ⭐重点 📖必背\n\n数据可视化技术的发展方向可分为以下三个方面：\n\n1. 与数据挖掘结合：揭示潜在规律，提升挖掘效率。／1.4.1 数据可视化面临的挑战 ⭐重点 📖必背\n\n1. 数据规模大，已超越单机、外存模型甚至小型计算集群处理能力的极限，而当前软件和工具运行效率不高，需探索全新思路解决该问题。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1B-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 B卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "异常的数据不一定都是______的数据（有些可能是设备出错或人为错误输入，有些可能就是正确的数据）。",
+   "options": null,
+   "answer": [
+    "错误"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.1 什么是数据可视化：异常的数据不一定都是错误的数据，有些异常数据可能是设备出错或者人为错误输入，有些可能就是正确的数据。／图1-6　收入水平与幸福感关系图（来源：第1章 1.1.4，幻灯片第10页）\n\n\n- 异常，指有问题的数据。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "错误"
+   ]
+  },
+  {
+   "id": "dv-c1B-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 B卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "数据可视化旨在借助______的手段，将一组数据以图形的形式表示。",
+   "options": null,
+   "answer": [
+    "图形化"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.1 什么是数据可视化：1.1.2 数据可视化定义 ⭐重点 📖必背\n\n 数据可视化旨在借助图形化的手段，将一组数据以图形的形式表示，并利用数据分析和开发工具发现其中未知信息的处理过程。／——第1章 1.1.2\n\n 1.1.3 数据可视化过程\n\n可视化其实是一个抽象的过程，它可以简单地理解为将一个不易描述的事物形成一个可感知画面的过程，也就是从数据空间到图形空间的映射。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "图形化"
+   ]
+  },
+  {
+   "id": "dv-c1B-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 B卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "pyecharts 生成的 Echarts 图表凭借良好的______、精巧的设计得到了众多开发者的认可。",
+   "options": null,
+   "answer": [
+    "交互性"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.3 Python常用工具：生成的Echarts图表凭借良好的交互性、精巧的设计得到了众多开发者的认可 |\n\n\n图1-12　数据可视化作品示例：食品分类与营养成分关系图（来源：第1章 1.3.1，幻灯片第17页）\n\n\n\n图1-13　matplotlib 库标志（来源：第1章 1.3.1，幻灯片第18页）\n\n\n\n 1.3.2 matplotlib概述 ⭐重点 📌考点\n\nmatplotlib官网提供了三种API：pyplot API、object-oriented A",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "交互性"
+   ]
+  },
+  {
+   "id": "dv-c1B-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 B卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "seaborn 是基于______进行高级封装的可视化库。",
+   "options": null,
+   "answer": [
+    "matplotlib"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.3 Python常用工具：包含多种类型的API，可以采用多种方式绘制图表并对图表进行定制 |\n| seaborn | 基于matplotlib进行高级封装的可视化库；／最常用的数据可视化库是 matplotlib、seaborn、bokeh、pyecharts。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "matplotlib"
+   ]
+  },
+  {
+   "id": "dv-c1B-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 B卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "Anaconda 发行版中，允许用户使用 conda 命令管理包的命令行工具是______。",
+   "options": null,
+   "answer": [
+    "Prompt"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.3 Python常用工具：图1-17　Jupyter Notebook 中验证 matplotlib 安装成功（关键截图）（来源：第1章 1.3.3，幻灯片第37页）\n\n\n- Anaconda 发行版主要组件：\n\n| 组件 | 说明 |\n| --- | --- |\n| Navigator | Anaconda发行版中包含的图形用户界面，允许用户在不使用命令的情况下启动程序并轻松管理包 |\n| Jupyter Notebook | 基于Web网页的交互计算的应用程",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "Prompt"
+   ]
+  },
+  {
+   "id": "dv-c1B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 B卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "数据可视化的目的是从数据中寻找哪三个方面的信息？请结合原文各作简要说明。",
+   "options": null,
+   "answer": [],
+   "answerText": "模式（数据中的规律，如交通流量）、关系（数据间的相关性：比较、构成、分布或联系）、异常（有问题的数据，不一定错误）。",
+   "points": [
+    {
+     "text": "模式（数据中的规律，如交通流量）、关系（数据间的相关性：比较、构成、分布或联系）、异常（有问题的数据，不一定错误）。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c1B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 1,
+   "knowledgePoint": "1",
+   "source": {
+    "text": "《数据可视化》章节小测 第1章 B卷（依据第1章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述 Anaconda 的主要特点，以及验证 matplotlib 是否安装成功的步骤。",
+   "options": null,
+   "answer": [],
+   "answerText": "Anaconda特点：开源Python发行版本，含conda、Python环境及180多个科学计算包，可安装不同版本、切换环境，适合初学者；验证步骤见知识文档1.3.3。",
+   "points": [
+    {
+     "text": "Anaconda特点：开源Python发行版本，含conda、Python环境及180多个科学计算包，可安装不同版本、切换环境，适合初学者",
+     "partial": 5
+    },
+    {
+     "text": "验证步骤见知识文档1.3.3。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第1章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

@@ -1,0 +1,129 @@
+{
+ "schema": "quiz-platform-subject-v1",
+ "subject": {
+  "id": "dataviz",
+  "name": "数据可视化",
+  "textbook": "《数据可视化》课程课件（第 1–8 章，共 490 页）",
+  "bankId": "dataviz-course-v1",
+  "chapters": 9,
+  "chapterLabels": {
+   "1": "第1章 数据可视化概述",
+   "2": "第2章 数据可视化基础（数据预处理）",
+   "3": "第3章 数据可视化（图表类型与绘制）",
+   "4": "第4章 时间数据可视化",
+   "5": "第5章 比例数据可视化",
+   "6": "第6章 关系数据可视化",
+   "7": "第7章 文本与高维数据可视化",
+   "8": "第8章 数据可视化中的交互",
+   "9": "综合测试卷（5 套）"
+  },
+  "chapterShortLabels": {
+   "9": "综合卷"
+  }
+ },
+ "sections": {
+  "1": "数据可视化概述",
+  "2": "数据可视化基础（数据预处理）",
+  "3": "数据可视化（图表类型与绘制）",
+  "4": "时间数据可视化",
+  "5": "比例数据可视化",
+  "6": "关系数据可视化",
+  "7": "文本与高维数据可视化",
+  "8": "数据可视化中的交互",
+  "9": "套）"
+ },
+ "caliber": {
+  "total": 283,
+  "byType": {
+   "single": 124,
+   "multi": 0,
+   "judge": 0,
+   "blank": 99,
+   "short": 60
+  },
+  "byDifficulty": {
+   "basic": 96,
+   "medium": 127,
+   "hard": 60
+  },
+  "byChapter": {
+   "1": 24,
+   "2": 24,
+   "3": 24,
+   "4": 24,
+   "5": 24,
+   "6": 24,
+   "7": 24,
+   "8": 24,
+   "9": 91
+  },
+  "limits": {
+   "singleMin": 0,
+   "singleMax": 9999,
+   "multiRange": 9999
+  }
+ },
+ "summary": {
+  "sub": "8 章体系 + 综合卷 · 283 题 · 章节小测 A/B + 综合测试",
+  "desc": "数据可视化 283 题刷题子站：章节小测 A/B 卷 + 5 套综合卷，逐题解析（依据课件整理的知识文档）与考点出处。",
+  "aboutHtml": "<p><b>内容来源</b>：《数据可视化》课程课件（第 1–8 章，490 页）体系；章节小测 16 套（A/B 卷）+ 综合测试卷 5 套，共 <b>283</b> 题。</p><p><b>解析说明</b>：源材料仅提供答案键，本站解析由《复习知识文档》（课件忠实整理版）按知识点匹配生成——每题标注依据小节，学习时请对照原文。</p><p><b>判分口径</b>：客观题自动判分；简答与论述题<b>按采分点自评</b>，主观题满分 = 采分点分值之和（与原卷每题满分一致）。</p><p><b>自托管说明</b>：全站资源自托管，无任何第三方依赖；进度数据保存在浏览器本地。</p>",
+  "footerHtml": "<p>题库共 <b>283</b> 题：选择 124 · 填空 99 · 简答与论述 60；综合卷 91 题归入「综合卷」章节。</p>",
+  "realExamTagged": 0
+ },
+ "shards": [
+  {
+   "file": "ch1.json",
+   "chapter": 1,
+   "count": 24,
+   "sha256": "96283628E24BE506AA4F360B8DB44E12039CA1C13E4806DD9E1E84E36C1A1034"
+  },
+  {
+   "file": "ch2.json",
+   "chapter": 2,
+   "count": 24,
+   "sha256": "22BE97662E8BB918A1E9D74783EF9BD0AB8ED8E1F70CED7D699D93BCCE29AC9A"
+  },
+  {
+   "file": "ch3.json",
+   "chapter": 3,
+   "count": 24,
+   "sha256": "1359FF15F9B5E79E16A9C769699C2265F525C85351C1980628B19C6A841B5992"
+  },
+  {
+   "file": "ch4.json",
+   "chapter": 4,
+   "count": 24,
+   "sha256": "4DD3E4E8DEECCB07FFB1AD1251DE00A7B2C0484C9BBE6316A57CEF8008473B56"
+  },
+  {
+   "file": "ch5.json",
+   "chapter": 5,
+   "count": 24,
+   "sha256": "F59E183E48905FC54000F01B801E936BBE84D2B438B5DEB5430B81B8DEAA4F39"
+  },
+  {
+   "file": "ch6.json",
+   "chapter": 6,
+   "count": 24,
+   "sha256": "2CA8E82E35340E98C5E69A4F35F7034CFFFA3D5FD9C2BA6573DCA0921CB9B0D7"
+  },
+  {
+   "file": "ch7.json",
+   "chapter": 7,
+   "count": 24,
+   "sha256": "2732D76C66C325C1FB8AD47DE0283BD5BF5D70EB21340516C060D1FDDF494BCF"
+  },
+  {
+   "file": "ch8.json",
+   "chapter": 8,
+   "count": 24,
+   "sha256": "DBD0606E6D34E150272AC880A783FEBC61F8CC115225F7631FF7029DA738DD63"
+  },
+  {
+   "file": "ch9.json",
+   "chapter": 9,
+   "count": 91,
+   "sha256": "8A215EA0356DCC04183B4C4E00E855903AD2A8E189C614A257BDA847E54A1D52"
+  }
+ ]
+}

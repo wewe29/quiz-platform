@@ -1,0 +1,775 @@
+{
+ "chapter": 5,
+ "questions": [
+  {
+   "id": "dv-c5A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 A卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "比例数据是根据（　）来进行划分的。",
+   "options": [
+    "时间",
+    "类别、子类别和群体",
+    "空间位置",
+    "数值大小"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.1 比例数据在大数据中的应用：- 比例数据是根据类别、子类别和群体来进行划分的。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 A卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "饼图中所有扇形所占百分比的总和应等于（　）。",
+   "options": [
+    "50%",
+    "100%",
+    "不确定",
+    "由数据量决定"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.2 整体与部分：5.2.1 饼图 ⭐重点 📖必背\n\n饼图以环状方式呈现各分量在整体中的比例：圆代表整体，将圆切成扇形，每个扇形代表整体中的一部分，所有扇形所占百分比的总和应等于 100%，若不等，表明出现错误。／autopct='%1.1f%%' 显示百分比（保留1位小数）；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 A卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "环形图与饼图相比，外表上的区别是中间（　）。",
+   "options": [
+    "多一个洞",
+    "少一个洞",
+    "完全相同",
+    "无法比较"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.2 整体与部分：图5-4　感兴趣的数据领域（饼图结果）（来源：第5章 5.2.1，幻灯片第18页）\n\n\n\n图5-5　pyecharts 饼图效果（来源：第5章 5.2.1，幻灯片第23页）\n\n\n\n图5-6　pyecharts 饼图页面效果（来源：第5章 5.2.1，幻灯片第23页）\n\n\n\n 5.2.2 环形图 ⭐重点 📌考点\n\n环形图与饼图外表相似（环形图比饼图中间多一个洞）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 A卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "矩形树图是一种基于（　）的可视化方式。",
+   "options": [
+    "面积",
+    "长度",
+    "角度",
+    "体积"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.3 数据不准确性可视化：7.3.2 不确定性的可视化方法 ⭐重点 📖必背\n\n目前不确定性可视化方法可大致分为四类：图标法、几何体表达法、视觉元素编码法和动画表达法。／图7-22　不确定性可视化方法的优缺点（对比表）（来源：第7章 7.3.2，幻灯片第87页）\n\n\n- ① 图标法：常见的可视化图表有误差条、盒须图等。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 A卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "堆叠面积图的垂直轴数值范围为（　）。",
+   "options": [
+    "0-50%",
+    "0-100%",
+    "0-1",
+    "无限制"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.3 时空比例：假设存在多个时间序列图表，现在将它们从下往上堆叠，填满空白的区域，最终得到一个堆叠面积图，水平轴表示时间，垂直轴的数值范围为0—100%。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5A-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 A卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "比例数据是衡量______关系的重要指标。",
+   "options": null,
+   "answer": [
+    "部分与整体"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.1 比例数据在大数据中的应用：- 比例数据是衡量部分与整体关系的重要指标，广泛存在于社会的各个领域：医疗健康领域（临床诊断中的白细胞分类计数、某种手术的术后感染率、特定药品在治疗方案中的使用频率）、工业生产与质量控制（生产线的良品率、原材料的利用率、项目预算中人力资源成本所占的比重）、社会统计（人口普查中的城乡人口比例、青少年网民在总体网民中的占比、某项公共政策的公众支持率）等。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "部分与整体"
+   ]
+  },
+  {
+   "id": "dv-c5A-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 A卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "绘制饼图录入数据时，票数从大到小依次写入，并且以______类别结尾。",
+   "options": null,
+   "answer": [
+    "“其他”"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.2 整体与部分：⚠️易错点\n\n\n图5-2　饼图的基本框架（来源：第5章 5.2.1，幻灯片第12页）\n\n\n录入数据时，票数从大到小依次写入，并且以\"其他\"类别结尾，数据排序可以让饼图的可阅读性和观赏性更高。／比例型数据可视化图表：饼图、环形图、堆叠柱形图、堆叠面积图、矩形树图。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "“其他”"
+   ]
+  },
+  {
+   "id": "dv-c5A-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 A卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "环形图不再通过角度衡量各部分比例大小，而是通过各个______的长度来衡量。",
+   "options": null,
+   "answer": [
+    "弧形"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.2 整体与部分：此时，不再通过角度衡量各部分比例大小，而是通过各个弧形的长度来衡量。／比例型数据可视化图表：饼图、环形图、堆叠柱形图、堆叠面积图、矩形树图。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "弧形"
+   ]
+  },
+  {
+   "id": "dv-c5A-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 A卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "矩形树图中，外部矩形代表______，内部矩形代表子类别。",
+   "options": null,
+   "answer": [
+    "父类别"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.2 整体与部分：外部矩形代表父类别，内部矩形代表子类别。／比例型数据可视化图表：饼图、环形图、堆叠柱形图、堆叠面积图、矩形树图。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "父类别"
+   ]
+  },
+  {
+   "id": "dv-c5A-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 A卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "第4章堆叠柱形图强调随时间变化的时域特性，第5章堆叠强调______。",
+   "options": null,
+   "answer": [
+    "各个子类间的对比"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.2 整体与部分：⚠️易错点：第四章中强调随时间变化的时域特性，本章不再局限于时间方面，强调各个子类间的对比。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "各个子类间的对比"
+   ]
+  },
+  {
+   "id": "dv-c5A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 A卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述饼图的构成规则，以及绘制饼图时对数据排序的要求。",
+   "options": null,
+   "answer": [],
+   "answerText": "圆代表整体，扇形代表一部分，百分比总和应等于100%（不等则错误）；数据从大到小录入并以“其他”结尾以提高可读性。",
+   "points": [
+    {
+     "text": "圆代表整体，扇形代表一部分，百分比总和应等于100%（不等则错误）",
+     "partial": 5
+    },
+    {
+     "text": "数据从大到小录入并以“其他”结尾以提高可读性。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 A卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "什么是矩形树图？它与常规树图相比有什么优势？",
+   "options": null,
+   "answer": [],
+   "answerText": "矩形树图是基于面积的可视化方式，外部矩形代表父类别、内部矩形代表子类别；相比常规树图能呈现相同等级间的数值比较与占比，并解决子节点过多图表过大的问题。",
+   "points": [
+    {
+     "text": "矩形树图是基于面积的可视化方式，外部矩形代表父类别、内部矩形代表子类别",
+     "partial": 5
+    },
+    {
+     "text": "相比常规树图能呈现相同等级间的数值比较与占比，并解决子节点过多图表过大的问题。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 B卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "比例数据中的“群体”代表着各种可能的选择和产出，也就是（　）。",
+   "options": [
+    "样本空间（SampleSpace）",
+    "数据集",
+    "数据库",
+    "总体"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.1 比例数据在大数据中的应用：这里的群体不单单指的是人类群体，它代表着各种可能的选择和产出，也就是样本空间（SampleSpace）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 B卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "通过 matplotlib 创建环形图，是在利用 pie() 创建饼图的基础上再创建一个（　）。",
+   "options": [
+    "白色实心圆",
+    "黑色圆环",
+    "透明圆",
+    "矩形"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.2 整体与部分：通过matplotlib创建环形图，其实就是在利用 pie() 函数创建一个饼图的基础上再创建一个白色实心圆。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 B卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "通过堆叠柱形图体现比例数据时，强调的是（　）。",
+   "options": [
+    "时域特性",
+    "各个子类间的对比",
+    "数据排序",
+    "异常检测"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.1 比例数据在大数据中的应用：- 比例数据是衡量部分与整体关系的重要指标，广泛存在于社会的各个领域：医疗健康领域（临床诊断中的白细胞分类计数、某种手术的术后感染率、特定药品在治疗方案中的使用频率）、工业生产与质量控制（生产线的良品率、原材料的利用率、项目预算中人力资源成本所占的比重）、社会统计（人口普查中的城乡人口比例、青少年网民在总体网民中的占比、某项公共政策的公众支持率）等。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 B卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "pyecharts 中绘制矩形树图使用的类是（　）。",
+   "options": [
+    "Tree",
+    "TreeMap",
+    "Map",
+    "Bar"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.2 整体与部分：子节点过多会带来图表过大不便绘制的问题，此时可使用矩形树图（板块层级图）解决。／比例型数据可视化图表：饼图、环形图、堆叠柱形图、堆叠面积图、矩形树图。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 B卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "堆叠面积图的水平轴表示（　）。",
+   "options": [
+    "类别",
+    "时间",
+    "数值",
+    "频率"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.3 时空比例：假设存在多个时间序列图表，现在将它们从下往上堆叠，填满空白的区域，最终得到一个堆叠面积图，水平轴表示时间，垂直轴的数值范围为0—100%。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5B-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 B卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "对于比例，通常想要得到最大值、最小值和______。",
+   "options": null,
+   "answer": [
+    "总体分布"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.1 比例数据在大数据中的应用：- 对于比例，通常想要得到最大值、最小值和总体分布。／对于最小值和最大值没有必要用图表展现，真正所感兴趣的应该是比例的分配。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "总体分布"
+   ]
+  },
+  {
+   "id": "dv-c5B-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 B卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "比例数据广泛存在于医疗健康领域、工业生产与质量控制和______等。",
+   "options": null,
+   "answer": [
+    "社会统计"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.1 比例数据在大数据中的应用：- 比例数据是衡量部分与整体关系的重要指标，广泛存在于社会的各个领域：医疗健康领域（临床诊断中的白细胞分类计数、某种手术的术后感染率、特定药品在治疗方案中的使用频率）、工业生产与质量控制（生产线的良品率、原材料的利用率、项目预算中人力资源成本所占的比重）、社会统计（人口普查中的城乡人口比例、青少年网民在总体网民中的占比、某项公共政策的公众支持率）等。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "社会统计"
+   ]
+  },
+  {
+   "id": "dv-c5B-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 B卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "多个时间序列图表从下往上堆叠、填满空白区域，最终得到一个______。",
+   "options": null,
+   "answer": [
+    "堆叠面积图"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.3 时空比例：假设存在多个时间序列图表，现在将它们从下往上堆叠，填满空白的区域，最终得到一个堆叠面积图，水平轴表示时间，垂直轴的数值范围为0—100%。／堆叠面积图能呈现比例数据随时间的变化情况，不仅可以看到整体变化趋势，也可看到其中每一类的变化情况。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "堆叠面积图"
+   ]
+  },
+  {
+   "id": "dv-c5B-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 B卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "pyecharts 中，相同______名称的系列会堆叠在一起。",
+   "options": null,
+   "answer": [
+    "stack"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.3 时空比例：图5-17　堆叠面积图的基本框架（来源：第5章 5.3，幻灯片第51页）\n\n\npython\nfor s in series:\n    line3.add_yaxis(\n        series_name=s\"name\",\n        y_axis=year_population_ages\"column\".tolist(),\n        stack=\"总量\",    堆叠，相同的堆叠组会堆在一起\n        areasty",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "stack"
+   ]
+  },
+  {
+   "id": "dv-c5B-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 B卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "原文结论：随着年代的增长，人口老龄化呈______趋势，而新生人口呈下降趋势。",
+   "options": null,
+   "answer": [
+    "增长"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.3 时空比例：图5-17　堆叠面积图的基本框架（来源：第5章 5.3，幻灯片第51页）\n\n\npython\nfor s in series:\n    line3.add_yaxis(\n        series_name=s\"name\",\n        y_axis=year_population_ages\"column\".tolist(),\n        stack=\"总量\",    堆叠，相同的堆叠组会堆在一起\n        areasty",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "增长"
+   ]
+  },
+  {
+   "id": "dv-c5B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 B卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述时空比例数据的含义，以及堆叠面积图的作用。",
+   "options": null,
+   "answer": [],
+   "answerText": "带时间属性的比例数据；堆叠面积图既看整体变化趋势又看每一类变化情况。",
+   "points": [
+    {
+     "text": "带时间属性的比例数据",
+     "partial": 5
+    },
+    {
+     "text": "堆叠面积图既看整体变化趋势又看每一类变化情况。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c5B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5",
+   "source": {
+    "text": "《数据可视化》章节小测 第5章 B卷（依据第5章课件）",
+    "kind": "textbook"
+   },
+   "stem": "饼图和环形图在衡量各部分比例的方式上有什么不同？",
+   "options": null,
+   "answer": [],
+   "answerText": "饼图通过扇形角度（百分比）衡量比例；环形图通过各个弧形的长度衡量比例。",
+   "points": [
+    {
+     "text": "饼图通过扇形角度（百分比）衡量比例",
+     "partial": 5
+    },
+    {
+     "text": "环形图通过各个弧形的长度衡量比例。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第5章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

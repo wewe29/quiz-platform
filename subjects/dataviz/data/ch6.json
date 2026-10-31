@@ -1,0 +1,791 @@
+{
+ "chapter": 6,
+ "questions": [
+  {
+   "id": "dv-c6A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 A卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "大数据场景下，更应聚焦事物的（　）。",
+   "options": [
+    "因果关系",
+    "相关关系",
+    "逻辑关系",
+    "包含关系"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.1 关系数据在大数据中的应用：图6-1　关联性示意（来源：第6章 6.2，幻灯片第11页）\n\n\n- 人们解决问题时，通常倾向于探寻事物的因果关系，而在大数据场景下，更应聚焦事物的相关关系，无需执着于难以界定的因果逻辑。／相关关系虽无法解释事物的成因，却能精准提示事物的发生态势。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 A卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "散点图中横轴数据和纵轴数据变化趋势相同，属于（　）。",
+   "options": [
+    "正相关",
+    "负相关",
+    "不相关",
+    "完全相关"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：正相关时，横轴数据和纵轴数据变化趋势相同；／负相关时，横轴数据和纵轴数据变化趋势相反；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 A卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "气泡图中，气泡的大小用于表示（　）。",
+   "options": [
+    "第一个变量",
+    "第二个变量",
+    "第三个变量",
+    "第四个变量"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：6.2.3 气泡图 ⭐重点 📌考点\n\n气泡图在散点图的基础上增加了一个数据维度，将散点图中固定大小的数据点扩展为具有不同大小的圆形气泡，气泡的大小可用于表示第三个变量的数值。／散点图、散点图矩阵与气泡图是探索和展示数据间关联性的常用可视化方法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 A卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "散点图矩阵中，从左上角到右下角空出的部分通常绘制（　）。",
+   "options": [
+    "散点图",
+    "密度曲线或直方图",
+    "气泡图",
+    "饼图"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：散点图矩阵通常是方格网布局，水平轴上的每一行和垂直轴上的每一列都代表一个变量，从左上角到右下角空出的部分可绘制密度曲线或直方图。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 A卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "茎叶图中，变化不大或不变的数位作为（　）。",
+   "options": [
+    "叶",
+    "茎",
+    "根",
+    "枝"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.3 数据的分布性：6.3.1 茎叶图 ⭐重点 📌考点\n\n茎叶图的基本思想：将数组或序列中变化不大或不变的数位作为茎(主干)，将变化大的数作为叶(分枝) 排在茎的后面，读者就可以直观地看到茎后面有多少叶，并且每个数的数值是多少。／②茎叶图中的数据可随时记录和添加，方便用户使用。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6A-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 A卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "相关关系的特点是______、立即行动、驱动决策。",
+   "options": null,
+   "answer": [
+    "快速发现"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.1 关系数据在大数据中的应用：- 相关关系（What?）：快速发现、立即行动、驱动决策。／图6-1　关联性示意（来源：第6章 6.2，幻灯片第11页）\n\n\n- 人们解决问题时，通常倾向于探寻事物的因果关系，而在大数据场景下，更应聚焦事物的相关关系，无需执着于难以界定的因果逻辑。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "快速发现"
+   ]
+  },
+  {
+   "id": "dv-c6A-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 A卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "数据的关联性，指量化的两个数据间的______。",
+   "options": null,
+   "answer": [
+    "数理关系"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：数据的关联性，指量化的两个数据间的数理关系。／图6-2　数据的关联性（来源：第6章 6.2，幻灯片第12页）\n\n\n关联性强，即一个数值变化时，另一数值也会随之发生相应变化；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "数理关系"
+   ]
+  },
+  {
+   "id": "dv-c6A-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 A卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "直方图中柱形高度表示______，柱形宽度是取值区间。",
+   "options": null,
+   "answer": [
+    "数值频率"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.3 数据的分布性：直方图又称质量分布图，图中柱形高度表示数值频率，柱形宽度是取值区间。／若是把每一列的数字改为柱形，则得到了一个直方图。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "数值频率"
+   ]
+  },
+  {
+   "id": "dv-c6A-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 A卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "核密度估计（KDE）曲线下的总面积恒为______。",
+   "options": null,
+   "answer": [
+    "1"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.3 数据的分布性：图6-22　密度图的基本框架（来源：第6章 6.3.3，幻灯片第83页）\n\n\n核密度估计（KDE）是一种用于估计连续型随机变量概率密度函数的非参数方法：通过为每个数据点赋予一个平滑的\"核函数\"，并将所有数据点对应的核函数叠加，最终归一化形成一条平滑的概率密度曲线，该曲线下的总面积恒为1。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "1"
+   ]
+  },
+  {
+   "id": "dv-c6A-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 A卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "探索和展示数据分布性的常用可视化方法有茎叶图、直方图和______。",
+   "options": null,
+   "answer": [
+    "密度图"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.3 数据的分布性：⭐重点 📌考点\n\n茎叶图、直方图与密度图是探索和展示数据分布性的常用可视化方法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "密度图"
+   ]
+  },
+  {
+   "id": "dv-c6A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 A卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述正相关、负相关和不相关三种关系的散点图特征。",
+   "options": null,
+   "answer": [],
+   "answerText": "正相关：两轴数据变化趋势相同；负相关：变化趋势相反；不相关：散点排列杂乱无章。",
+   "points": [
+    {
+     "text": "正相关：两轴数据变化趋势相同",
+     "partial": 3
+    },
+    {
+     "text": "负相关：变化趋势相反",
+     "partial": 3
+    },
+    {
+     "text": "不相关：散点排列杂乱无章。",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 A卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "两个班级平均分相同但分布不同，这说明了什么？茎叶图、直方图、密度图分别适合什么场景？",
+   "options": null,
+   "answer": [],
+   "answerText": "说明平均数等只能提供局部指标，分布形态才描绘数据完整轮廓；茎叶图看具体数值（无损失、可随时添加，但不如图表直观）；直方图反映分布（高度=频率、宽度=区间）；密度图以光滑曲线反映分布密度（KDE，曲线下面积=1）。",
+   "points": [
+    {
+     "text": "说明平均数等只能提供局部指标，分布形态才描绘数据完整轮廓",
+     "partial": 2
+    },
+    {
+     "text": "茎叶图看具体数值（无损失、可随时添加，但不如图表直观）",
+     "partial": 2
+    },
+    {
+     "text": "直方图反映分布（高度=频率、宽度=区间）",
+     "partial": 2
+    },
+    {
+     "text": "密度图以光滑曲线反映分布密度（KDE，曲线下面积=1）。",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 B卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "“大数据的核心价值在于告知‘是什么’，而非‘为什么’”，其中“是什么”指（　）。",
+   "options": [
+    "因果关系",
+    "相关关系",
+    "逻辑关系",
+    "包含关系"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.1 关系数据在大数据中的应用：大数据的核心价值在于告知\"是什么\"，而非\"为什么\"。／图6-1　关联性示意（来源：第6章 6.2，幻灯片第11页）\n\n\n- 人们解决问题时，通常倾向于探寻事物的因果关系，而在大数据场景下，更应聚焦事物的相关关系，无需执着于难以界定的因果逻辑。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 B卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "散点图中散点的排列杂乱无章，属于（　）。",
+   "options": [
+    "正相关",
+    "负相关",
+    "不相关",
+    "线性相关"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：不相关时，散点的排列则是杂乱无章的。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 B卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "通过气泡的（　）可以引入第四个变量数据。",
+   "options": [
+    "位置",
+    "颜色",
+    "大小",
+    "形状"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：此外，还可通过气泡的颜色引入第四个变量数据，从而在同一图表中同时展示四个变量间的关系。／6.2.3 气泡图 ⭐重点 📌考点\n\n气泡图在散点图的基础上增加了一个数据维度，将散点图中固定大小的数据点扩展为具有不同大小的圆形气泡，气泡的大小可用于表示第三个变量的数值。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 B卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "直方图与柱形图的区别不包括（　）。",
+   "options": [
+    "展示数据的分布 vs 比较数据大小",
+    "X轴为定量数据 vs 分类数据",
+    "柱子宽度必须一致 vs 可不一",
+    "颜色不同"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.3 数据的分布性：图6-18　直方图的基本框架（来源：第6章 6.3.2，幻灯片第72页）\n\n\n\n图6-19　柱形图与直方图对比示例（15-18年营业收入/质量级别评定）（来源：第6章 6.3.2，幻灯片第73页）\n\n\n直方图与柱形图的区别（四点）：①直方图展示数据的分布，柱状图比较数据大小；／⭐重点 📌考点\n\n茎叶图、直方图与密度图是探索和展示数据分布性的常用可视化方法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 B卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "关于概率密度与概率，下列说法正确的是（　）。",
+   "options": [
+    "二者相等",
+    "概率密度 ≠ 概率",
+    "概率密度大于概率",
+    "二者无关"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.3 数据的分布性：图6-22　密度图的基本框架（来源：第6章 6.3.3，幻灯片第83页）\n\n\n核密度估计（KDE）是一种用于估计连续型随机变量概率密度函数的非参数方法：通过为每个数据点赋予一个平滑的\"核函数\"，并将所有数据点对应的核函数叠加，最终归一化形成一条平滑的概率密度曲线，该曲线下的总面积恒为1。／⚠️易错点：概率密度 ≠ 概率。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6B-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 B卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "在计算相关系数前，通常依靠______对两个变量的相关性作出初步判断。",
+   "options": null,
+   "answer": [
+    "散点图"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：图6-3　散点图显示关联性（正相关/负相关/不相关）（来源：第6章 6.2.1，幻灯片第13页）\n\n\n在统计学中有更科学的方法（如相关系数）衡量两个变量的相关性，但散点图往往是判断相关性的最简单、直观的方法，在计算相关系数前通常依靠散点图作出初步判断。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "散点图"
+   ]
+  },
+  {
+   "id": "dv-c6B-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 B卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "散点图矩阵通常是______布局。",
+   "options": null,
+   "answer": [
+    "方格网"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：散点图矩阵通常是方格网布局，水平轴上的每一行和垂直轴上的每一列都代表一个变量，从左上角到右下角空出的部分可绘制密度曲线或直方图。／散点图、散点图矩阵与气泡图是探索和展示数据间关联性的常用可视化方法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "方格网"
+   ]
+  },
+  {
+   "id": "dv-c6B-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 B卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "直方图分段放大时，依着直方图画出的折线逐渐变为光滑曲线，这条曲线称为______。",
+   "options": null,
+   "answer": [
+    "总体的密度分布曲线"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.3 数据的分布性：⭐重点 📌考点\n\n\n图6-20　各国出生率的分布直方图（来源：第6章 6.3.2，幻灯片第74页）\n\n\n\n图6-21　各国出生率的分布直方图（ggplot 样式）（来源：第6章 6.3.2，幻灯片第78页）\n\n\n\n 6.3.3 密度图 ⭐重点 📌考点 🧗难点\n\n当直方图分段放大时，分段之间的组距缩短，此时依着直方图画出的折线逐渐变为光滑曲线，这条曲线就称为总体的密度分布曲线。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "总体的密度分布曲线"
+   ]
+  },
+  {
+   "id": "dv-c6B-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 B卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "核密度估计是一种用于估计连续型随机变量______的非参数方法。",
+   "options": null,
+   "answer": [
+    "概率密度函数"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.3 数据的分布性：图6-22　密度图的基本框架（来源：第6章 6.3.3，幻灯片第83页）\n\n\n核密度估计（KDE）是一种用于估计连续型随机变量概率密度函数的非参数方法：通过为每个数据点赋予一个平滑的\"核函数\"，并将所有数据点对应的核函数叠加，最终归一化形成一条平滑的概率密度曲线，该曲线下的总面积恒为1。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "概率密度函数"
+   ]
+  },
+  {
+   "id": "dv-c6B-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 B卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "当数据大多集中在某个区域时，直方图的分段设置应______。",
+   "options": null,
+   "answer": [
+    "增加分段数量"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.3 数据的分布性：分段（bins）设置原则：若绝大多数数据都集中在某个区域内，应多设置几个分段；／图6-18　直方图的基本框架（来源：第6章 6.3.2，幻灯片第72页）\n\n\n\n图6-19　柱形图与直方图对比示例（15-18年营业收入/质量级别评定）（来源：第6章 6.3.2，幻灯片第73页）\n\n\n直方图与柱形图的区别（四点）：①直方图展示数据的分布，柱状图比较数据大小；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "增加分段数量"
+   ]
+  },
+  {
+   "id": "dv-c6B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 B卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述茎叶图的基本思想，以及它的两个优点和一个缺点。",
+   "options": null,
+   "answer": [],
+   "answerText": "基本思想：变化不大/不变的数位作茎，变化大的数作叶排在茎后；优点：无原始数据损失、可随时记录添加；缺点：不如图表直观清晰，现已很少使用。",
+   "points": [
+    {
+     "text": "基本思想：变化不大/不变的数位作茎，变化大的数作叶排在茎后",
+     "partial": 3
+    },
+    {
+     "text": "优点：无原始数据损失、可随时记录添加",
+     "partial": 3
+    },
+    {
+     "text": "缺点：不如图表直观清晰，现已很少使用。",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c6B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6",
+   "source": {
+    "text": "《数据可视化》章节小测 第6章 B卷（依据第6章课件）",
+    "kind": "textbook"
+   },
+   "stem": "什么是核密度估计（KDE）？为什么说“概率密度 ≠ 概率”？",
+   "options": null,
+   "answer": [],
+   "answerText": "KDE为非参数概率密度估计：核函数叠加归一化，曲线下总面积恒为1；连续型随机变量取精确值的概率为0，区间概率=曲线下面积，故概率密度≠概率。",
+   "points": [
+    {
+     "text": "KDE为非参数概率密度估计：核函数叠加归一化，曲线下总面积恒为1",
+     "partial": 5
+    },
+    {
+     "text": "连续型随机变量取精确值的概率为0，区间概率=曲线下面积，故概率密度≠概率。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第6章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

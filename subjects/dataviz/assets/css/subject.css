@@ -1,0 +1,240 @@
+/* 线性代数子站样式 — 组件层。
+   设计令牌与共享原子（:root 变量 / 按钮 / 面板容器）在 ../../assets/css/tokens.css，
+   本文件只写刷题界面组件；[data-theme="dark"] 的令牌覆盖在 tokens，组件覆盖在文件尾。 */
+
+/* ---------- HUD ---------- */
+.hud{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--rule);}
+.hud-inner{max-width:1400px;margin:0 auto;padding:12px 20px 10px;}
+.hud-top{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between;}
+.hud-title h1{font-size:19px;font-weight:700;letter-spacing:-.2px;}
+.hud-sub{margin:2px 0 0;font-size:12.5px;color:var(--ink-3);}
+.hud-title .portal-link{margin-bottom:4px;margin-right:8px;}
+.hud-metrics{display:flex;flex-wrap:wrap;gap:6px 18px;}
+.metric{display:flex;flex-direction:column;line-height:1.25;}
+.metric-k{font-size:11px;color:var(--ink-4);letter-spacing:.4px;}
+.metric-v{font-size:15px;font-weight:650;font-variant-numeric:tabular-nums;}
+.progress{height:6px;background:var(--hairline);border-radius:999px;overflow:hidden;margin-top:10px;}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),#3b82f6);transition:width .25s ease;}
+.hud-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+
+.storage-warn{background:var(--mid-soft);color:var(--mid);border-bottom:1px solid #f0dfae;padding:8px 20px;font-size:13.5px;text-align:center;}
+
+/* ---------- 布局与筛选 ---------- */
+.layout{max-width:1400px;margin:0 auto;padding:20px;display:grid;grid-template-columns:264px minmax(0,1fr);gap:24px;align-items:start;}
+.filters{position:sticky;top:132px;background:var(--panel-bg);border:1px solid var(--rule);border-radius:var(--radius);box-shadow:var(--shadow);padding:6px 14px 12px;}
+.filter-block{border-bottom:1px solid var(--hairline);padding:8px 0;}
+.filter-block:last-child{border-bottom:0;}
+.filter-block>summary{cursor:pointer;font-size:13px;font-weight:650;color:var(--ink-2);list-style:none;padding:4px 0;user-select:none;}
+.filter-block>summary::-webkit-details-marker{display:none;}
+.filter-block>summary::before{content:"▸ ";color:var(--ink-4);}
+.filter-block[open]>summary::before{content:"▾ ";}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:6px 0 2px;}
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;border:1px solid var(--rule);border-radius:999px;padding:3px 10px;cursor:pointer;background:var(--panel-bg);color:var(--ink-2);user-select:none;}
+.chip input{margin:0;accent-color:var(--accent);}
+.chip.is-on{border-color:var(--accent);background:var(--accent-soft);color:#12306f;font-weight:600;}
+.chip .cnt{color:var(--ink-4);font-variant-numeric:tabular-nums;font-size:11.5px;}
+.chip.is-on .cnt{color:#4a6bbf;}
+.field{display:flex;flex-direction:column;gap:4px;padding:6px 0;}
+.field label{font-size:12px;color:var(--ink-3);}
+.field select,.field input[type="search"]{font-family:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--rule);border-radius:6px;background:var(--panel-bg);color:var(--ink);width:100%;}
+.switch{display:flex;align-items:center;gap:8px;font-size:13px;padding:4px 0;cursor:pointer;}
+.switch input{accent-color:var(--accent);margin:0;}
+.hint{font-size:12px;color:var(--ink-3);margin:6px 0 0;}
+.kbd-hint{color:var(--ink-4);}
+.about{font-size:12.5px;color:var(--ink-2);line-height:1.7;}
+.about p{margin:0 0 .5em;}
+.about b{color:var(--ink);}
+
+/* ---------- 题卡 ---------- */
+.quiz{display:flex;flex-direction:column;gap:16px;min-width:0;}
+.qcard{background:var(--panel-bg);border:1px solid var(--rule);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px;scroll-margin-top:calc(var(--hud-h, 132px) + 14px);}
+.qcard.is-answered{border-color:#cdd6f5;}
+.qcard.is-wrong{border-color:#f0c2bd;}
+.qcard.is-partial{border-color:#f0dcae;}
+.q-head{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding-bottom:8px;border-bottom:1px solid var(--hairline);margin-bottom:10px;}
+.q-no{font-size:12.5px;color:var(--ink-4);font-variant-numeric:tabular-nums;}
+.q-tag{font-size:11.5px;border-radius:5px;padding:1.5px 7px;border:1px solid var(--rule);color:var(--ink-3);background:var(--mute);}
+.q-tag.t-type{background:var(--accent-soft);border-color:#d3ddff;color:#12306f;font-weight:600;}
+.q-tag.t-diff-hard{background:var(--bad-soft);border-color:#f3c9c4;color:var(--bad);}
+.q-tag.t-diff-medium{background:var(--mid-soft);border-color:#f0dfae;color:var(--mid);}
+.q-tag.t-diff-basic{background:var(--ok-soft);border-color:#c4e5d5;color:var(--ok);}
+.q-tag.t-ext{background:#f3e8ff;border-color:#e0cdf7;color:#5b21b6;font-weight:600;}
+.q-kp{font-size:11.5px;color:var(--ink-4);margin-left:auto;}
+.q-stem{font-size:16px;line-height:1.75;margin:0 0 12px;}
+.q-stem .katex-display{margin:.6em 0;overflow-x:auto;overflow-y:hidden;padding:2px 0;}
+
+/* 选项 */
+.opts{display:flex;flex-direction:column;gap:6px;}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:8px 11px;border:1px solid var(--rule);border-radius:8px;cursor:pointer;background:var(--panel-bg);transition:border-color .12s,background .12s;}
+.opt:hover{border-color:#c9ccd1;background:#fcfcfd;}
+.opt input{margin-top:5px;accent-color:var(--accent);flex:none;}
+.opt-letter{font-weight:650;color:var(--ink-2);flex:none;min-width:1.2em;}
+.opt-text{min-width:0;word-break:break-word;}
+.opt.is-correct{border-color:#a9d8bf;background:var(--ok-soft);}
+.opt.is-correct .opt-letter{color:var(--ok);}
+.opt.is-wrong{border-color:#f0bdb7;background:var(--bad-soft);}
+.opt.is-wrong .opt-letter{color:var(--bad);}
+.opts.is-locked .opt{cursor:default;}
+
+/* 填空 */
+.fill-in{display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
+.fill-in input{font-family:inherit;font-size:15px;padding:6px 10px;border:1px solid var(--rule);border-radius:7px;min-width:200px;flex:1 1 220px;background:var(--panel-bg);color:var(--ink);}
+.fill-in input.is-correct{border-color:#a9d8bf;background:var(--ok-soft);}
+.fill-in input.is-wrong{border-color:#f0bdb7;background:var(--bad-soft);}
+
+/* 主观题采分点 */
+.selfgrade{margin-top:10px;border:1px solid var(--rule);border-radius:9px;background:var(--mute);padding:10px 12px;}
+.selfgrade-h{font-size:13px;font-weight:650;color:var(--ink-2);margin-bottom:6px;}
+.sg-list{display:flex;flex-direction:column;gap:6px;}
+.sg-item{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;padding:5px 7px;border-radius:6px;background:var(--panel-bg);border:1px solid var(--hairline);}
+.sg-item label{display:flex;gap:7px;align-items:flex-start;cursor:pointer;flex:1;}
+.sg-item input{accent-color:var(--accent);margin-top:5px;}
+.sg-item .sg-mark{font-weight:700;flex:none;}
+.sg-item.hit{border-color:#a9d8bf;}
+.sg-item.miss{border-color:#f0bdb7;}
+.sg-score{margin-top:8px;font-size:13px;color:var(--ink-2);}
+.sg-score b{font-size:15px;}
+
+/* 解析 */
+.answer-box{margin-top:12px;border-radius:9px;padding:11px 14px;font-size:14px;line-height:1.8;border:1px solid var(--rule);background:var(--mute);}
+.answer-box.ok{background:var(--ok-soft);border-color:#c4e5d5;}
+.answer-box.bad{background:var(--bad-soft);border-color:#f3c9c4;}
+.answer-box.mid{background:var(--mid-soft);border-color:#f0dfae;}
+.verdict{display:inline-flex;align-items:center;gap:6px;font-weight:700;margin-bottom:6px;}
+.verdict.ok{color:var(--ok);} .verdict.bad{color:var(--bad);} .verdict.mid{color:var(--mid);}
+.expl{white-space:pre-wrap;}
+.expl h4{margin:10px 0 3px;font-size:13px;color:var(--ink-2);}
+.src{margin-top:8px;font-size:12.5px;color:var(--ink-3);}
+.src code{font-size:12px;}
+.ext{margin-top:8px;padding:7px 10px;border-left:3px solid #c4b5fd;background:#faf5ff;font-size:13px;color:#4c1d95;border-radius:0 6px 6px 0;}
+.mis{margin-top:6px;font-size:13px;color:#8a2f24;}
+.tags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;}
+.tag{font-size:11.5px;padding:1.5px 7px;border-radius:5px;background:var(--mute);color:var(--ink-3);border:1px solid var(--rule);}
+.ref-answer{margin-top:8px;font-size:13.5px;white-space:pre-wrap;}
+.ref-answer b{color:var(--ink);}
+
+/* 操作 */
+.q-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding-top:10px;border-top:1px solid var(--hairline);}
+
+/* ---------- 翻页条 ---------- */
+.pager{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:2px 0 4px;}
+.pager-info{font-size:12.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;padding:0 4px;}
+.pg-num.is-cur{border-color:var(--accent);background:var(--accent-soft);color:#12306f;font-weight:650;}
+
+/* ---------- 答题卡 ---------- */
+.sheet-legend{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:12.5px;color:var(--ink-2);margin-bottom:12px;}
+.lg-item{display:inline-flex;align-items:center;gap:6px;}
+.lg-dot{width:11px;height:11px;border-radius:3px;display:inline-block;border:1px solid var(--rule);}
+.lg-dot.st-none{background:var(--panel-bg);}
+.lg-dot.st-mid{background:var(--mid-soft);border-color:var(--mid);}
+.lg-dot.st-ok{background:var(--ok-soft);border-color:var(--ok);}
+.lg-dot.st-bad{background:var(--bad-soft);border-color:var(--bad);}
+.sheet-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(44px,1fr));gap:5px;}
+.sheet-cell{appearance:none;border:1px solid var(--rule);background:var(--panel-bg);color:var(--ink-2);
+  border-radius:6px;padding:5px 0;font-size:12px;font-family:inherit;font-variant-numeric:tabular-nums;
+  cursor:pointer;text-align:center;transition:border-color .12s,background .12s;}
+.sheet-cell:hover{border-color:var(--accent);}
+.sheet-cell.is-cur{outline:2px solid var(--accent);outline-offset:1px;font-weight:700;}
+.sheet-cell.st-ok{background:var(--ok-soft);border-color:#a9d8bf;color:var(--ok);}
+.sheet-cell.st-bad{background:var(--bad-soft);border-color:#f0bdb7;color:var(--bad);}
+.sheet-cell.st-mid{background:var(--mid-soft);border-color:#f0dfae;color:var(--mid);}
+
+/* ---------- 统计 / 错题本 / 页脚 ---------- */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.stat-box{border:1px solid var(--rule);border-radius:8px;padding:10px 12px;}
+.stat-box h4{margin:0 0 6px;font-size:12.5px;color:var(--ink-3);font-weight:600;}
+.bar-row{display:flex;align-items:center;gap:8px;font-size:12.5px;padding:2px 0;}
+.bar-row .bar-name{min-width:84px;color:var(--ink-2);}
+.bar-row .bar{flex:1;height:8px;background:var(--hairline);border-radius:999px;overflow:hidden;}
+.bar-row .bar i{display:block;height:100%;background:var(--accent);}
+.bar-row .bar-n{font-variant-numeric:tabular-nums;color:var(--ink-3);min-width:64px;text-align:right;}
+.wrong-actions{display:flex;gap:8px;margin-bottom:12px;}
+.wrong-item{border:1px solid var(--rule);border-radius:8px;padding:10px 12px;margin-bottom:8px;}
+.wrong-item.resolved{opacity:.62;}
+.wrong-item .wi-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:4px;}
+.wrong-item .wi-stem{font-size:14px;}
+.foot{max-width:1400px;margin:0 auto;padding:18px 20px 34px;border-top:1px solid var(--rule);color:var(--ink-3);font-size:12.5px;line-height:1.8;}
+.foot a{color:var(--accent);}
+
+/* ---------- 数据自主权（导出/导入）+ toast + SW 横幅 ---------- */
+.data-row{display:flex;gap:6px;padding:6px 0 2px;}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:60;display:flex;align-items:center;justify-content:center;padding:16px;}
+.modal[hidden]{display:none;}
+.modal-box{background:var(--panel-bg);border:1px solid var(--rule);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:16px 18px;max-width:560px;width:100%;}
+.modal-box h3{font-size:15px;margin-bottom:10px;}
+.modal-box textarea{width:100%;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;
+  border:1px solid var(--rule);border-radius:8px;padding:8px;background:var(--mute);color:var(--ink);
+  resize:vertical;box-sizing:border-box;}
+.modal-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+  background:var(--ink);color:var(--panel-bg);padding:9px 16px;border-radius:999px;font-size:13.5px;
+  opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:70;max-width:80vw;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.toast.ok{background:var(--ok);}
+.toast.bad{background:var(--bad);}
+.sw-banner{background:var(--accent-soft);color:#12306f;border-bottom:1px solid var(--rule);
+  padding:8px 20px;font-size:13.5px;text-align:center;}
+.sw-banner[hidden]{display:none;}
+.wrong-agg{border:1px solid var(--rule);border-radius:8px;background:var(--mute);padding:10px 12px;margin-bottom:10px;}
+.wrong-agg .bar-row .bar-name{min-width:64px;}
+
+[data-theme="dark"] .sw-banner{color:#b9c8ff;}
+[data-theme="dark"] .modal-box textarea{background:#1d1f25;}
+[data-theme="dark"] .toast{background:#3a3e46;color:var(--ink);}
+
+/* ---------- 打印错题集：print-wrong 时只输出错题本面板 ---------- */
+@media print{
+  body.print-wrong #panel-wrong{display:block!important;position:static;max-width:none;box-shadow:none;border:0;}
+  body.print-wrong .wrong-actions{display:none!important;}
+  body.print-wrong .wrong-item{break-inside:avoid;}
+  body.print-wrong .foot{display:none!important;}
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1023px){
+  .layout{grid-template-columns:minmax(0,1fr);padding:14px;gap:14px;}
+  .filters{position:static;}
+  .hud-inner{padding:10px 14px 8px;}
+  .hud-title h1{font-size:17px;}
+  .hud-metrics{gap:4px 14px;}
+  .metric-v{font-size:14px;}
+}
+@media (max-width:520px){
+  body{font-size:15px;}
+  .qcard{padding:13px 13px;}
+  .q-stem{font-size:15.5px;}
+  .hud-metrics{gap:2px 12px;}
+}
+@media print{
+  .hud,.filters,.q-actions,.panel,.foot,.skip-link{display:none!important;}
+  body{background:#fff;}
+  .qcard{break-inside:avoid;box-shadow:none;}
+}
+
+/* ---------- 深色组件覆盖（令牌覆盖在 tokens.css） ---------- */
+[data-theme="dark"] .hud{background:rgba(23,24,29,.94);}
+[data-theme="dark"] .opt,[data-theme="dark"] .chip,[data-theme="dark"] .sg-item{background:#1d1f25;}
+[data-theme="dark"] .opt:hover{border-color:#3a3e46;background:#22242b;}
+[data-theme="dark"] .chip.is-on{color:#b9c8ff;}
+[data-theme="dark"] .chip.is-on .cnt{color:#7d92d6;}
+[data-theme="dark"] .qcard.is-answered{border-color:#2f3b66;}
+[data-theme="dark"] .qcard.is-wrong{border-color:#5c2f2a;}
+[data-theme="dark"] .qcard.is-partial{border-color:#5c4a22;}
+[data-theme="dark"] .q-tag.t-type{background:#1d2b55;border-color:#33437a;color:#b9c8ff;}
+[data-theme="dark"] .q-tag.t-ext{background:#2a1e40;border-color:#4c357a;color:#c9b3f5;}
+[data-theme="dark"] .opt.is-correct{border-color:#2e5b43;}
+[data-theme="dark"] .opt.is-wrong{border-color:#6b312c;}
+[data-theme="dark"] .fill-in input.is-correct{border-color:#2e5b43;}
+[data-theme="dark"] .fill-in input.is-wrong{border-color:#6b312c;}
+[data-theme="dark"] .answer-box.ok{border-color:#2e5b43;}
+[data-theme="dark"] .answer-box.bad{border-color:#6b312c;}
+[data-theme="dark"] .answer-box.mid{border-color:#5c4a22;}
+[data-theme="dark"] .ext{background:#241a33;color:#c9b3f5;border-left-color:#4c357a;}
+[data-theme="dark"] .mis{color:#f0a29a;}
+[data-theme="dark"] .tag{background:#22242b;color:var(--ink-3);}
+[data-theme="dark"] .pg-num.is-cur{color:#b9c8ff;}
+[data-theme="dark"] .sheet-cell.st-ok{border-color:#2e5b43;}
+[data-theme="dark"] .sheet-cell.st-bad{border-color:#6b312c;}
+[data-theme="dark"] .sheet-cell.st-mid{border-color:#5c4a22;}
+[data-theme="dark"] .storage-warn{border-bottom-color:#5c4a22;}

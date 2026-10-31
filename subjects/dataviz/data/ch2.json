@@ -1,0 +1,768 @@
+{
+ "chapter": 2,
+ "questions": [
+  {
+   "id": "dv-c2A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 A卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "数据预处理流程的四个步骤不包括（　）。",
+   "options": [
+    "数据清理",
+    "数据集成",
+    "数据归约",
+    "数据可视化"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.1 数据预处理流程：数据预处理步骤如下：\n\n1. 数据清理：指修正数据中的错误、识别脏数据、更正不一致数据的过程。／4. 数据变换：指对数据进行规范化处理。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 A卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "isnull() 检测到缺失值的位置标记为（　）。",
+   "options": [
+    "True",
+    "False",
+    "NaN",
+    "0"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：- isnull()：检测到缺失值的位置标记 True，其他位置标记为 False。／- notnull()：检测到缺失值的位置标记 False，其他位置标记为 True。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 A卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "dropna() 中 how 参数的默认值为（　）。",
+   "options": [
+    "'all'",
+    "'any'",
+    "'first'",
+    "'last'"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：2.2.2 缺失值的处理 ⭐重点 📌考点\n\n删除缺失值——pandas 提供 dropna()，会删除包含缺失值的一行或一列数据，并返回一个删除缺失值后的对象：\n\npython\ndropna(axis=0, how='any', thresh=None, subset=None, inplace=False)\n\n\n- axis：确定删除行或列，0 或 'index' 表示删除包含缺失值的行，1 或 'columns' 表示删除包含缺失值",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 A卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "fillna() 中表示前向填充的 method 取值是（　）。",
+   "options": [
+    "'bfill'",
+    "'backfill'",
+    "'pad' 或 'ffill'",
+    "'fill'"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：图2-1　删除缺失值效果（保留了没有任何缺失值的行）（来源：第2章 2.2.2，幻灯片第6页）\n\n\n填充缺失值——pandas 提供 fillna()，既可以使用指定的值填充，也可以使用缺失值前面或后面的有效值填充：\n\npython\nfillna(value=None, method=None, axis=None, inplace=False, limit=None, downcast=None)\n\n\n- value：用于填充的值，可",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 A卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "pandas 中检测重复值的方法是（　）。",
+   "options": [
+    "drop_duplicates()",
+    "duplicated()",
+    "replace()",
+    "dropna()"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：图2-4　重复值检测结果（True 代表重复值，False 代表非重复值）（来源：第2章 2.2.3，幻灯片第11页）\n\n\n\n 2.2.4 重复值的处理 ⭐重点 📌考点\n\npandas 提供删除重复值的方法 drop_duplicates()：\n\npython\ndrop_duplicates(subset=None, keep='first', inplace=False, ignore_index=False)\n\n\n- inplace",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2A-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 A卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "dropna() 中 axis 取值为 1 或 'columns' 时，表示删除包含缺失值的______。",
+   "options": null,
+   "answer": [
+    "列"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：2.2.2 缺失值的处理 ⭐重点 📌考点\n\n删除缺失值——pandas 提供 dropna()，会删除包含缺失值的一行或一列数据，并返回一个删除缺失值后的对象：\n\npython\ndropna(axis=0, how='any', thresh=None, subset=None, inplace=False)\n\n\n- axis：确定删除行或列，0 或 'index' 表示删除包含缺失值的行，1 或 'columns' 表示删除包含缺失值",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "列"
+   ]
+  },
+  {
+   "id": "dv-c2A-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 A卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "duplicated() 中 keep 参数的默认值为______。",
+   "options": null,
+   "answer": [
+    "'first'"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：图2-4　重复值检测结果（True 代表重复值，False 代表非重复值）（来源：第2章 2.2.3，幻灯片第11页）\n\n\n\n 2.2.4 重复值的处理 ⭐重点 📌考点\n\npandas 提供删除重复值的方法 drop_duplicates()：\n\npython\ndrop_duplicates(subset=None, keep='first', inplace=False, ignore_index=False)\n\n\n- inplace",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "'first'"
+   ]
+  },
+  {
+   "id": "dv-c2A-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 A卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "异常值的检测方式有 3σ 原则和______。",
+   "options": null,
+   "answer": [
+    "箱形图"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：2.2.5 异常值的检测 ⭐重点 📌考点 🧗难点\n\n学习目标（原文）：熟悉异常值的检测方式，能够通过 3σ原则 和 箱形图 检测数据中是否存在异常值。／- 箱形图是一种用于显示一组数据分散情况的统计图，它通过 5个数据节点 描述按照从大到小的顺序排列的一组数据，这5个数据节点分别是 上界、上四分位数、中位数、下四分位数、下界，此外还可以展示异常值。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "箱形图"
+   ]
+  },
+  {
+   "id": "dv-c2A-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 A卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "箱形图通过 5 个数据节点描述数据：上界、上四分位数、中位数、下四分位数和______。",
+   "options": null,
+   "answer": [
+    "下界"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：- 箱形图是一种用于显示一组数据分散情况的统计图，它通过 5个数据节点 描述按照从大到小的顺序排列的一组数据，这5个数据节点分别是 上界、上四分位数、中位数、下四分位数、下界，此外还可以展示异常值。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "下界"
+   ]
+  },
+  {
+   "id": "dv-c2A-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 A卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "pandas 中实现堆叠合并的函数是______。",
+   "options": null,
+   "answer": [
+    "concat()"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.3 数据合并：pandas 提供 concat()：\n\npython\nconcat(objs, axis=0, join='outer', ignore_index=False, keys=None, levels=None,\n       names=None, verify_integrity=False, sort=False, copy=True)\n\n\n- objs：要合并的多个对象，接收包含 Series 或 DataFrame 对象的序列",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "concat()",
+    "concat"
+   ]
+  },
+  {
+   "id": "dv-c2A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 A卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述数据预处理的四个步骤及其各自含义。",
+   "options": null,
+   "answer": [],
+   "answerText": "数据清理、数据集成、数据归约、数据变换（含义见知识文档2.1）。　◆ 数据预处理步骤如下：\n\n1. 数据清理：指修正数据中的错误、识别脏数据、更正不一致数据的过程。／4. 数据变换：指对数据进行规范化处理。",
+   "points": [
+    {
+     "text": "数据清理、数据集成、数据归约、数据变换（含义见知识文档2.1）。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 A卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述 fillna() 方法的功能及主要参数的含义。",
+   "options": null,
+   "answer": [],
+   "answerText": "fillna()功能与参数见知识文档2.2.2。",
+   "points": [
+    {
+     "text": "fillna()功能与参数见知识文档2.2.2。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 B卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "数据归约是指在保证（　）的前提下，最大限度地精简数据得到简化的数据集。",
+   "options": [
+    "数据挖掘结果的准确性",
+    "数据的安全性",
+    "数据的可视化效果",
+    "数据的实时性"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.1 数据预处理流程：3. 数据归约：指在保证数据挖掘结果准确性的前提下，最大限度地精简数据得到简化的数据集。／数据归约技术可以用于得到数据集的归约表示，它虽然小，但会保持原数据的完整性。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 B卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "notnull() 检测到缺失值的位置标记为（　）。",
+   "options": [
+    "True",
+    "False",
+    "-1",
+    "NaN"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：- notnull()：检测到缺失值的位置标记 False，其他位置标记为 True。／- isnull()：检测到缺失值的位置标记 True，其他位置标记为 False。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 B卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "dropna() 中 thresh 参数表示（　）。",
+   "options": [
+    "删除的行数",
+    "保留至少有N个非NaN值的行或列",
+    "填充的值",
+    "检测的列"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：2.2.2 缺失值的处理 ⭐重点 📌考点\n\n删除缺失值——pandas 提供 dropna()，会删除包含缺失值的一行或一列数据，并返回一个删除缺失值后的对象：\n\npython\ndropna(axis=0, how='any', thresh=None, subset=None, inplace=False)\n\n\n- axis：确定删除行或列，0 或 'index' 表示删除包含缺失值的行，1 或 'columns' 表示删除包含缺失值",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 B卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "pandas 中删除重复值的方法是（　）。",
+   "options": [
+    "duplicated()",
+    "drop_duplicates()",
+    "replace()",
+    "fillna()"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：图2-4　重复值检测结果（True 代表重复值，False 代表非重复值）（来源：第2章 2.2.3，幻灯片第11页）\n\n\n\n 2.2.4 重复值的处理 ⭐重点 📌考点\n\npandas 提供删除重复值的方法 drop_duplicates()：\n\npython\ndrop_duplicates(subset=None, keep='first', inplace=False, ignore_index=False)\n\n\n- inplace",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 B卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "用于将数据的列“旋转”为行的方法是（　）。",
+   "options": [
+    "unstack()",
+    "stack()",
+    "concat()",
+    "cut()"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.4 数据重塑：2.4.1 重塑分层索引 ⭐重点 📌考点\n\npandas 中实现重塑分层索引功能的方法有 stack() 和 unstack()：stack() 用于将数据的列\"旋转\"为行；／unstack() 用于将数据的行\"旋转\"为列。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2B-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 B卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "数据变换指对数据进行______处理。",
+   "options": null,
+   "answer": [
+    "规范化"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.1 数据预处理流程：4. 数据变换：指对数据进行规范化处理。／数据预处理步骤如下：\n\n1. 数据清理：指修正数据中的错误、识别脏数据、更正不一致数据的过程。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "规范化"
+   ]
+  },
+  {
+   "id": "dv-c2B-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 B卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "duplicated() 方法默认情况下会对______数据进行检测。",
+   "options": null,
+   "answer": [
+    "所有"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：图2-2　填充常量效果（缺失值所在位置全部变成 66.0）（来源：第2章 2.2.2，幻灯片第8页）\n\n\n\n图2-3　前向填充效果（Num1列缺失值变成2.0，Num4列缺失值变成14.0）（来源：第2章 2.2.2，幻灯片第9页）\n\n\n\n 2.2.3 重复值的检测 ⭐重点 📌考点\n\npandas 提供 duplicated()，默认情况下会对所有数据进行检测，检测标准为：只要一行数据与其他行数据的所有值是完全相同的，就会将其他行数据判",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "所有"
+   ]
+  },
+  {
+   "id": "dv-c2B-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 B卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "replace() 方法中 method 参数支持的取值有 pad、ffill 和______。",
+   "options": null,
+   "answer": [
+    "bfill"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：- 其他参数与 duplicated() 方法中的参数含义相同。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "bfill"
+   ]
+  },
+  {
+   "id": "dv-c2B-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 B卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "面元划分是指连续数据被______处理，按一定的映射关系划分为相应的面元。",
+   "options": null,
+   "answer": [
+    "离散化"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.5 数据转换：2.5.1 面元划分 ⭐重点 📌考点\n\n面元划分是指连续数据被离散化处理，按一定的映射关系划分为相应的面元，这里的面元可以理解为区间，通过 cut() 函数实现。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "离散化"
+   ]
+  },
+  {
+   "id": "dv-c2B-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 B卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "将类别类型的数据转换为数值类型的数据，需要经过“量化”处理，使之转换为______。",
+   "options": null,
+   "answer": [
+    "哑变量"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.5 数据转换：为了将类别类型的数据转换为数值类型的数据，类别类型的数据在被应用之前需要经过\"量化\"处理，使之转换为哑变量，通过 get_dummies() 函数实现。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "哑变量"
+   ]
+  },
+  {
+   "id": "dv-c2B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 B卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "concat() 函数中 axis 和 join 参数分别有哪些取值？含义是什么？",
+   "options": null,
+   "answer": [],
+   "answerText": "axis：0/'index'纵向堆叠，1/'columns'横向堆叠；join：'inner'内连接取交集，'outer'外连接取并集，缺数据填NaN。",
+   "points": [
+    {
+     "text": "axis：0/'index'纵向堆叠，1/'columns'横向堆叠",
+     "partial": 5
+    },
+    {
+     "text": "join：'inner'内连接取交集，'outer'外连接取并集，缺数据填NaN。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c2B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2",
+   "source": {
+    "text": "《数据可视化》章节小测 第2章 B卷（依据第2章课件）",
+    "kind": "textbook"
+   },
+   "stem": "什么是面元划分和哑变量处理？分别使用什么函数实现？",
+   "options": null,
+   "answer": [],
+   "answerText": "面元划分=连续数据离散化，面元即区间，用cut()；哑变量处理=类别型数据经“量化”转为数值型，用get_dummies()。",
+   "points": [
+    {
+     "text": "面元划分=连续数据离散化，面元即区间，用cut()",
+     "partial": 5
+    },
+    {
+     "text": "哑变量处理=类别型数据经“量化”转为数值型，用get_dummies()。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第2章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

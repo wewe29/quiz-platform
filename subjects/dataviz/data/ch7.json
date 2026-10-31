@@ -1,0 +1,779 @@
+{
+ "chapter": 7,
+ "questions": [
+  {
+   "id": "dv-c7A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 A卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "多元数据可视化的三类基本方法不包括（　）。",
+   "options": [
+    "空间映射法",
+    "图标法",
+    "基于像素的可视化方法",
+    "基于文本的可视化方法"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：图7-1　各国国民健康和收入关系散点图（来源：第7章 7.1，幻灯片第11页）\n\n\n多元数据可视化的三类基本方法：空间映射法、图标法和基于像素的可视化方法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 A卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "当数据维度非常高时（如超过（　）维），各类可视方法都无法将所有数据细节清晰地呈现出来。",
+   "options": [
+    "10维",
+    "30维",
+    "50维",
+    "100维"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：⚠️易错点\n\n\n图7-6　平行坐标示例图（来源：第7章 7.1.1，幻灯片第32页）\n\n\n\n图7-7　鸢尾花数据集（来源：第7章 7.1.1，幻灯片第34页）\n\n\n\n图7-8　平行坐标图（iris 数据示例）（来源：第7章 7.1.1，幻灯片第42页）\n\n\n（4）降维：当数据维度非常高时（如超过50维），各类可视方法都无法将所有数据细节清晰地呈现出来。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 A卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "表格透镜（Table Lens）中，数据在每个维度上的值用（　）表示。",
+   "options": [
+    "水平横条或者点",
+    "颜色",
+    "图标",
+    "文字"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：该方法并不直接列出数据在每个维度上的值，而是将这些数值用水平横条或者点表示。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 A卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "雷达图的维度一般多少个最清晰（　）。",
+   "options": [
+    "1-2个",
+    "3-4个",
+    "5-8个",
+    "10个以上"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：❗注意：雷达图的维度不是越多越好，一般5-8个最清晰，最适合用来展示一个对象的整体面貌。／雷达图的基本组成元素：\n\n- 中心点：代表0或最低分；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 A卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "不确定性可视化方法中，适合稀疏不确定性数据的是（　）。",
+   "options": [
+    "图标法",
+    "几何体表达法",
+    "动画表达法",
+    "视觉元素编码法"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.3 数据不准确性可视化：⚠️易错点：大量图标布局会造成严重的遮盖进而导致视觉混乱，故图标法适合稀疏不确定性数据的可视化。／7.3.2 不确定性的可视化方法 ⭐重点 📖必背\n\n目前不确定性可视化方法可大致分为四类：图标法、几何体表达法、视觉元素编码法和动画表达法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7A-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 A卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "高维的核心是“数量”，是一个______的概念；多元的核心是“种类”，是一个定性的概念。",
+   "options": null,
+   "answer": [
+    "定量"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：核心是\"种类\"，关心特征是不是不同的类型、来自不同的角度，是一个定性的概念。／核心是\"数量\"，只关心特征有多少个，是一个定量的概念。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "定量"
+   ]
+  },
+  {
+   "id": "dv-c7A-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 A卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "降维的线性变换包括主元分析（______）等。",
+   "options": null,
+   "answer": [
+    "PCA"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：通过线性（包括主元分析 PCA 等）和非线性变换（局部线性嵌入 LLE 和 Isomap）将多元数据投影或嵌入至低维空间（通常为二维或三维），并保持数据在多元空间中的特征，这种方法被称为降维。／常见方法：对感兴趣的属性交互式地选取进行数据的分析和可视化；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "PCA"
+   ]
+  },
+  {
+   "id": "dv-c7A-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 A卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "平行坐标用______取代垂直坐标，能在二维空间中显示更高维度的数据。",
+   "options": null,
+   "answer": [
+    "平行坐标"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：图7-5　表格透镜示例图（来源：第7章 7.1.1，幻灯片第31页）\n\n\n（3）平行坐标：能在二维空间中显示更高维度的数据，其用平行坐标取代垂直坐标，是一种重要的多元数据可视化分析工具。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "平行坐标"
+   ]
+  },
+  {
+   "id": "dv-c7A-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 A卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "马赛克图（Mosaic Plot）通过______的方法展示多元类型数据的统计信息。",
+   "options": null,
+   "answer": [
+    "空间剖分"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：(3) 马赛克图（Mosaic Plot）——通过空间剖分的方法展示多元类型数据的统计信息。／图7-1　各国国民健康和收入关系散点图（来源：第7章 7.1，幻灯片第11页）\n\n\n多元数据可视化的三类基本方法：空间映射法、图标法和基于像素的可视化方法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "空间剖分"
+   ]
+  },
+  {
+   "id": "dv-c7A-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 A卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "误差条的纵轴通常情况下至少由均值、下限误差值和______组成。",
+   "options": null,
+   "answer": [
+    "上限误差值"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.3 数据不准确性可视化：误差条的横轴一般表示数据实体，纵轴表示每个数据实体的统计特征，通常情况下，纵轴至少由均值、下限误差值和上限误差值组成。／误差条由一系列带标记的线条组成，用来可视化一维不确定性数据；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "上限误差值"
+   ]
+  },
+  {
+   "id": "dv-c7A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 A卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述平行坐标的优点、缺陷及解决方案。",
+   "options": null,
+   "answer": [],
+   "answerText": "优点：揭示每个属性上的分布、描述相邻属性间关系；缺陷：难以同时表现多个维度间关系（非相邻属性表现弱）；解决方案：交互选取高亮、更改坐标轴排列顺序。",
+   "points": [
+    {
+     "text": "优点：揭示每个属性上的分布、描述相邻属性间关系",
+     "partial": 3
+    },
+    {
+     "text": "缺陷：难以同时表现多个维度间关系（非相邻属性表现弱）",
+     "partial": 3
+    },
+    {
+     "text": "解决方案：交互选取高亮、更改坐标轴排列顺序。",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 A卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述雷达图的组成元素及观察分析方法。",
+   "options": null,
+   "answer": [],
+   "answerText": "组成元素：中心点、坐标轴（维度）、刻度、数据点、多边形区域；观察：看面积、找长短、做比较；维度一般5-8个最清晰。",
+   "points": [
+    {
+     "text": "组成元素：中心点、坐标轴（维度）、刻度、数据点、多边形区域",
+     "partial": 3
+    },
+    {
+     "text": "观察：看面积、找长短、做比较",
+     "partial": 3
+    },
+    {
+     "text": "维度一般5-8个最清晰。",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 B卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "只从“财务”一个角度、但用 1 万个指标描述一个人，属于（　）。",
+   "options": [
+    "多元数据",
+    "高维数据",
+    "高维多元数据",
+    "异构数据"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：- 例：只从\"财务\"一个角度但用1万个指标描述 → 是高维数据但不是多元数据；／从人口统计、健康、消费行为、社交网络、地理位置等多个角度、每个角度又用成千上万个指标刻画 → 既是高维也是多元的数据。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 B卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "下列不属于非线性降维方法的是（　）。",
+   "options": [
+    "PCA",
+    "LLE",
+    "Isomap",
+    "以上都是线性方法"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：通过线性（包括主元分析 PCA 等）和非线性变换（局部线性嵌入 LLE 和 Isomap）将多元数据投影或嵌入至低维空间（通常为二维或三维），并保持数据在多元空间中的特征，这种方法被称为降维。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 B卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "基于像素的可视化方法不包括（　）。",
+   "options": [
+    "像素图（PixelChart）",
+    "像素柱状图（Pixel BarChart）",
+    "马赛克图（Mosaic Plot）",
+    "雷达图"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.3 数据不准确性可视化：7.3.2 不确定性的可视化方法 ⭐重点 📖必背\n\n目前不确定性可视化方法可大致分为四类：图标法、几何体表达法、视觉元素编码法和动画表达法。／图7-22　不确定性可视化方法的优缺点（对比表）（来源：第7章 7.3.2，幻灯片第87页）\n\n\n- ① 图标法：常见的可视化图表有误差条、盒须图等。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 B卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "处理大尺度数据的基本技术路线是（　）。",
+   "options": [
+    "单机计算",
+    "大规模计算集群",
+    "人工处理",
+    "文本编辑"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.2 非结构化数据可视化：图7-21　面向高性能计算和可视化的计算集群架构（来源：第7章 7.2.1，幻灯片第80页）\n\n\n全方位显示大尺度数据的所有细节是一个计算密集型的过程，处理大尺度数据的基本技术路线就是大规模计算集群（如美国马里兰州大学构建的GPU和CPU混合式高性能计算和可视化集群）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 B卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "动画表达法的缺点是（　）。",
+   "options": [
+    "无法表达不确定性",
+    "需要用户长时间连续观察，理解曲线更长，且易引起视觉疲劳",
+    "只能显示静态数据",
+    "计算量最大"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.3 数据不准确性可视化：7.3.2 不确定性的可视化方法 ⭐重点 📖必背\n\n目前不确定性可视化方法可大致分为四类：图标法、几何体表达法、视觉元素编码法和动画表达法。／- ④ 动画表达法：一种基于动态信息表达的方法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7B-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 B卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "存在多个不同种类节点和连接的网络被称为______。",
+   "options": null,
+   "answer": [
+    "异构网络"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.2 非结构化数据可视化：异构数据，指在同一个数据集中存在的如结构或属性不同的数据情况，存在多个不同种类节点和连接的网络被称为异构网络。／异构数据常采用网络结构进行表达。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "异构网络"
+   ]
+  },
+  {
+   "id": "dv-c7B-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 B卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "有限分辨率下实现大尺度数据可视化的两种方法：将数据按层次结构重组；将高精度数据采样为______进行预览。",
+   "options": null,
+   "answer": [
+    "低分辨率数据"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.2 非结构化数据可视化：大规模数据的高清可视化需适配相应的显示设备，因专业级高精度大屏非普通用户标配，故通常采用两种方法在有限分辨率下实现大尺度数据的可视化：一是将数据按层次结构重组；／二是将高精度数据采样为低分辨率数据进行预览。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "低分辨率数据"
+   ]
+  },
+  {
+   "id": "dv-c7B-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 B卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "“可视化数据库”的核心任务包括数据划分、视图生成、存储管理和______。",
+   "options": null,
+   "answer": [
+    "交互联动"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.2 非结构化数据可视化：\"可视化数据库\"思想（Cleverland等人）：将多窗口、多页面的可视化结果视为一个集合，借用数据库方法对其进行统一生成、存储、管理与交互。／其核心任务：①数据划分；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "交互联动"
+   ]
+  },
+  {
+   "id": "dv-c7B-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 B卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "在箭头图标表示风场的例子中，箭头宽度表示风向的______。",
+   "options": null,
+   "answer": [
+    "不确定性"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.3 数据不准确性可视化：对于二维确定性向量场，常用箭头等图标表示：箭头表示风向，箭头长度表示风的强度，箭头宽度表示风向的不确定性（纤细的箭头代表不确定性较小，粗壮的箭头则说明不确定性较大）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "不确定性"
+   ]
+  },
+  {
+   "id": "dv-c7B-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 B卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "基本的视觉标量包括位置、形状、亮度、颜色、方向和______等。",
+   "options": null,
+   "answer": [
+    "纹理"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.3 数据不准确性可视化：基本的视觉标量包括位置、形状、亮度、颜色、方向和纹理等，其中颜色是表达不确定性的常用视觉元素之一。／盒须图又名箱线图，五数统计图是一种最基本的盒须图，其包括上下边缘值（即最大和最小值）、上四分位数、中位数和下四分位数。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "纹理"
+   ]
+  },
+  {
+   "id": "dv-c7B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 B卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "什么是异构数据？请用原文的比喻说明异构与同构的区别。",
+   "options": null,
+   "answer": [],
+   "answerText": "异构数据=同一数据集中结构或属性不同的数据；同构如一箱苹果（同一类型、属性相同），异构如水果摊（不同类型、属性不同）。",
+   "points": [
+    {
+     "text": "异构数据=同一数据集中结构或属性不同的数据",
+     "partial": 5
+    },
+    {
+     "text": "同构如一箱苹果（同一类型、属性相同），异构如水果摊（不同类型、属性不同）。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c7B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7",
+   "source": {
+    "text": "《数据可视化》章节小测 第7章 B卷（依据第7章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述数据不准确性（不确定性）可视化的四类方法及各自的优缺点。",
+   "options": null,
+   "answer": [],
+   "answerText": "四类方法及优缺点见知识文档7.3.2。",
+   "points": [
+    {
+     "text": "四类方法及优缺点见知识文档7.3.2。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第7章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

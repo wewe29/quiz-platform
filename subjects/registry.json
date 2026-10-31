@@ -11,6 +11,15 @@
    "realExamTagged": 676
   },
   {
+   "id": "dataviz",
+   "name": "数据可视化",
+   "textbook": "《数据可视化》课程课件（第 1–8 章，共 490 页）",
+   "url": "subjects/dataviz/",
+   "total": 283,
+   "chapters": 9,
+   "realExamTagged": 0
+  },
+  {
    "id": "linalg",
    "name": "线性代数",
    "textbook": "同济大学《工程数学·线性代数》第六版",

@@ -1,0 +1,769 @@
+{
+ "chapter": 3,
+ "questions": [
+  {
+   "id": "dv-c3A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 A卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "由一系列高度不等的矩形条或线段组成，用于反映数据分布和波动情况的图表是（　）。",
+   "options": [
+    "柱形图",
+    "直方图",
+    "箱形图",
+    "散点图"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：直方图又称质量分布图，由一系列高度不等的矩形条或线段组成，用于反映数据分布和波动情况。／图3-1　直方图示例（来源：第3章 3.1.2，幻灯片第2页）\n\n\n柱形图是由一系列宽度相等的纵向矩形条组成的图表，使用矩形条的高度表示数据的多少，以此反映不同分类数据间的差异。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 A卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "又称 X-Y 图，主要用于判断两变量之间是否存在某种关联的图表是（　）。",
+   "options": [
+    "散点图",
+    "折线图",
+    "饼图",
+    "直方图"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：图3-3　折线图示例（来源：第3章 3.1.2，幻灯片第5页）\n\n\n散点图又称X-Y图，是由若干组数据点组成的图表，主要用于判断两变量之间是否存在某种关联，或者总结数据点的分布模式。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 A卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "柱形图与直方图的区别不包括（　）。",
+   "options": [
+    "离散型数据 vs 连续型数据",
+    "矩形条有固定间隙 vs 没有任何间隙",
+    "颜色不同",
+    "用途不同"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：图3-2　柱形图示例（来源：第3章 3.1.2，幻灯片第3页）\n\n\n⚠️易错点 柱形图与直方图的区别（第3章\"注意\"页，两点）：\n\n1. 柱形图用于展示离散型数据的分布，而直方图用于展示连续型数据的分布。／2. 柱形图的各矩形条之间具有固定的间隙，而直方图的各矩形条之间没有任何间隙。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 A卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "matplotlib 中绘制折线图使用的函数是（　）。",
+   "options": [
+    "bar()",
+    "plot()",
+    "scatter()",
+    "hist()"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：3.1.2 常见的图表类型 ⭐重点 📖必背（原文无 3.1.1 小节，待确认）\n\n常见的6种图表：直方图、折线图、柱形图、饼图、散点图、箱形图。／）\n\n折线图是用直线段将各数据点连接起来而组成的图形，以线条的方式显示数据的变化趋势，可以显示随时间变化的连续数据，适用于显示在相等时间间隔下的数据趋势。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 A卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "pyecharts 中将图表渲染到 Jupyter Notebook 工具中的方法是（　）。",
+   "options": [
+    "render()",
+    "render_notebook()",
+    "show()",
+    "display()"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.3 Python常用工具：可使用快速简单的方式将大型数据集转换成高性能的、可交互的、结构简单的图表 |\n| pyecharts | 生成Echarts（Enterprise Charts，商业产品图表）图表的库；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3A-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 A卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "图例一般由图例标识和______组成。",
+   "options": null,
+   "answer": [
+    "图例项"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：一般由 图例标识（标识各组图形的图案）和 图例项（与图例标识对应的名称）组成。／图3-7　坐标轴及其要素（来源：第3章 3.1.3，幻灯片第11页）\n\n\n- 图例：集中在图表一角或一侧的方框，主要作用是标识为图表中的数据系列或分类指定的图案或颜色。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "图例项"
+   ]
+  },
+  {
+   "id": "dv-c3A-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 A卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "每个坐标轴上包括刻度标签、刻度线、轴脊和______这几个要素。",
+   "options": null,
+   "answer": [
+    "坐标轴标签"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：每个坐标轴上包括 刻度标签、刻度线、轴脊和坐标轴标签 这几个要素。／图3-7　坐标轴及其要素（来源：第3章 3.1.3，幻灯片第11页）\n\n\n- 图例：集中在图表一角或一侧的方框，主要作用是标识为图表中的数据系列或分类指定的图案或颜色。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "坐标轴标签"
+   ]
+  },
+  {
+   "id": "dv-c3A-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 A卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "matplotlib 中设置中文字体可以写：plt.rcParams['font.sans-serif'] = ['______']。",
+   "options": null,
+   "answer": [
+    "Microsoft YaHei（或SimHei）"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：图3-8　常用的图表辅助元素（来源：第3章 3.1.3，幻灯片第10页）\n\n\n\n 3.1.4 设置中文字体显示 ⭐重点 📌考点\n\n绘制的图表中含有中文字符，但没有特意设置显示中文字体，写中文的位置会变成方格或者乱码，无法正确显示。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "Microsoft YaHei（或SimHei）",
+    "Microsoft YaHei"
+   ]
+  },
+  {
+   "id": "dv-c3A-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 A卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "pyecharts 绘图思路：创建图表类的对象 → 添加图表用到的数据 → 添加图表配置项 → ______。",
+   "options": null,
+   "answer": [
+    "渲染图表"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.3 使用Pyecharts绘图：3.3.1 Pyecharts简介 ⭐重点 📌考点\n\n绘图思路：①创建图表类的对象 → ②添加图表用到的数据 → ③添加图表配置项 → ④渲染图表。／3.3.2 绘制柱形图\n\n基本思路：创建Bar类的对象 → 使用 add_xaxis() 和 add_yaxis() 方法添加数据 → 添加图表配置项 → 渲染图表。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "渲染图表"
+   ]
+  },
+  {
+   "id": "dv-c3A-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 A卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "气泡图通常用于展示______个变量间的关系（横轴、纵轴各一个，第三个用气泡大小表示）。",
+   "options": null,
+   "answer": [
+    "三"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.3 使用Pyecharts绘图：图3-17　词云图示例（来源：第3章 3.3.3，幻灯片第41页）\n\n\n\n图3-18　词云图效果（shape=SymbolType.DIAMOND）（来源：第3章 3.3.3，幻灯片第45页）\n\n\n\n 3.3.4 绘制气泡图 ⭐重点 📌考点\n\n气泡图是散点图的一种变体，通常用于展示三个变量间的关系，其中两个变量通过横轴和纵轴表示，第三个变量一般通过气泡的大小表示。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "三"
+   ]
+  },
+  {
+   "id": "dv-c3A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 A卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "列举六种常见图表，并说明各自的主要用途。",
+   "options": null,
+   "answer": [],
+   "answerText": "六种图表及用途见知识文档3.1.2。",
+   "points": [
+    {
+     "text": "六种图表及用途见知识文档3.1.2。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 A卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述 pyecharts 中全局配置项与系列配置项的区别及各自的添加方式。",
+   "options": null,
+   "answer": [],
+   "answerText": "全局配置项针对图表通用属性，实例化后传入set_global_opts()（InitOpts除外）；系列配置项针对图表特定元素属性，实例化后传入add()或add_xx()。",
+   "points": [
+    {
+     "text": "全局配置项针对图表通用属性，实例化后传入set_global_opts()（InitOpts除外）",
+     "partial": 5
+    },
+    {
+     "text": "系列配置项针对图表特定元素属性，实例化后传入add()或add_xx()。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 B卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "利用数据中的 5 统计量——最小值、第一四分位数、中位数、第三四分位数和最大值——描述数据的图表是（　）。",
+   "options": [
+    "直方图",
+    "饼图",
+    "箱形图",
+    "折线图"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：图3-5　饼图示例（来源：第3章 3.1.2，幻灯片第7页）\n\n\n箱形图又称盒须图、箱线图，是利用数据中的5个统计量——最小值、第一四分位数、中位数、第三四分位数和最大值——描述数据的一种图表，主要用于反映一组或多组数据的对称性、分布程度等信息，因形状如箱子而得名。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 B卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "使用圆表示数据总量，组成圆的扇面表示数据各项占总量的比例大小的图表是（　）。",
+   "options": [
+    "饼图",
+    "环形图",
+    "柱形图",
+    "箱形图"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：图3-4　散点图示例（来源：第3章 3.1.2，幻灯片第6页）\n\n\n饼图是一种用于了解数据中各分类占比情况的图表，使用圆表示数据总量，组成圆的扇面表示数据各项占总量的比例大小。／图3-1　直方图示例（来源：第3章 3.1.2，幻灯片第2页）\n\n\n柱形图是由一系列宽度相等的纵向矩形条组成的图表，使用矩形条的高度表示数据的多少，以此反映不同分类数据间的差异。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 B卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "下列不属于 pyecharts 图表类的是（　）。",
+   "options": [
+    "Line",
+    "Pie",
+    "Scatter",
+    "hist"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：3.1.2 常见的图表类型 ⭐重点 📖必背（原文无 3.1.1 小节，待确认）\n\n常见的6种图表：直方图、折线图、柱形图、饼图、散点图、箱形图。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 B卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "matplotlib 中保存当前生成的图表使用的函数是（　）。",
+   "options": [
+    "savefig()",
+    "save()",
+    "render()",
+    "export()"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：python\nimport matplotlib.pyplot as plt\nplt.rcParams'font.sans-serif' = 'Microsoft YaHei'\n\n\n若想保存当前生成的图表，可以用 savefig() 函数进行保存：\n\npython\nplt.savefig('各国出生率的分布直方图.png', dpi=200)",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 B卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "词云图中，字号越大说明（　）。",
+   "options": [
+    "关键词越不重要",
+    "关键词越重要",
+    "词频越低",
+    "与重要性无关"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.3 使用Pyecharts绘图：每个词出现的频率代表的是词的重要性，以字号大小表示，字号越大，说明这个关键词越重要。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3B-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 B卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "坐标轴可以细分为单坐标轴和______。",
+   "options": null,
+   "answer": [
+    "双坐标轴"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：可细分为单坐标轴和双坐标轴；／单坐标轴按方向分为横轴和纵轴，其中横轴为x轴，纵轴为y轴。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "双坐标轴"
+   ]
+  },
+  {
+   "id": "dv-c3B-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 B卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "使用 pyplot API 绘制图表的基本思路：导入pyplot模块 → 调用绘图函数绘制图表 → ______。",
+   "options": null,
+   "answer": [
+    "展示图表"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.2 使用Matplotlib绘图：各类图表绘制基本思路一致：①导入pyplot模块 → ②调用绘图函数绘制 → ③完善图表、添加辅助元素 → ④使用show()函数展示图表。／3.2.1 绘制折线图\n\n使用 plot() 函数绘制线条。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "展示图表"
+   ]
+  },
+  {
+   "id": "dv-c3B-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 B卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "seaborn 中默认用于绘制直方图的函数是______。",
+   "options": null,
+   "answer": [
+    "displot()"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.4 使用Seaborn绘图：- displot() 默认绘制直方图；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "displot()",
+    "displot"
+   ]
+  },
+  {
+   "id": "dv-c3B-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 B卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "seaborn 中通过 jointplot() 绘制六边形二维直方图，需要给 kind 参数传入______。",
+   "options": null,
+   "answer": [
+    "'hex'"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.4 使用Seaborn绘图：python\nsns.displot(tips'total_bill', bins=10)                      直方图（默认）\nsns.displot(tips'total_bill', kind='kde')                   核密度估计曲线\nsns.displot(tips'total_bill', kind='kde', rug=True)         显示密度观察条\n\n\n\n\n图3-21",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "'hex'"
+   ]
+  },
+  {
+   "id": "dv-c3B-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 B卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "stripplot() 绘制分类数据散点图的缺点是：______。",
+   "options": null,
+   "answer": [
+    "一些数据点之间互相重叠，不利于观察"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.4 使用Seaborn绘图：缺点是一些数据点之间互相重叠，不利于观察。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "一些数据点之间互相重叠，不利于观察"
+   ]
+  },
+  {
+   "id": "dv-c3B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 B卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述使用 Matplotlib 绘制散点图的基本思路及常用参数（s、c、edgecolors）的含义。",
+   "options": null,
+   "answer": [],
+   "answerText": "思路：导入pyplot模块→scatter()绘制点→完善图表（标题、坐标轴标签、网格线）→show()展示；s散点大小、c散点颜色、edgecolors散点边缘颜色。",
+   "points": [
+    {
+     "text": "思路：导入pyplot模块→scatter()绘制点→完善图表（标题、坐标轴标签、网格线）→show()展示",
+     "partial": 5
+    },
+    {
+     "text": "s散点大小、c散点颜色、edgecolors散点边缘颜色。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c3B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3",
+   "source": {
+    "text": "《数据可视化》章节小测 第3章 B卷（依据第3章课件）",
+    "kind": "textbook"
+   },
+   "stem": "什么是词云图？它如何表示关键词的重要性？",
+   "options": null,
+   "answer": [],
+   "answerText": "词云图定义及“字号越大关键词越重要”见知识文档3.3.3。",
+   "points": [
+    {
+     "text": "词云图定义及“字号越大关键词越重要”见知识文档3.3.3。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第3章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

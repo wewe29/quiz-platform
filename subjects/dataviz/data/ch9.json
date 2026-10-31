@@ -1,0 +1,3000 @@
+{
+ "chapter": 9,
+ "questions": [
+  {
+   "id": "dv-s1-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第1套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "数据可视化是为了从数据中寻找三个方面的信息，不包括（　）。",
+   "options": [
+    "模式",
+    "关系",
+    "异常",
+    "存储"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.1 什么是数据可视化：⭐重点 📌考点\n\n 1.1.4 数据可视化目的 ⭐重点 📖必背\n\n数据可视化是为了从数据中寻找三个方面的信息：模式、关系和异常。／——第1章 1.1.2\n\n 1.1.3 数据可视化过程\n\n可视化其实是一个抽象的过程，它可以简单地理解为将一个不易描述的事物形成一个可感知画面的过程，也就是从数据空间到图形空间的映射。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s1-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第1套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "箱形图通过 5 个数据节点描述数据，下列不属于的是（　）。",
+   "options": [
+    "上界",
+    "上四分位数",
+    "平均值",
+    "下界"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：- 箱形图是一种用于显示一组数据分散情况的统计图，它通过 5个数据节点 描述按照从大到小的顺序排列的一组数据，这5个数据节点分别是 上界、上四分位数、中位数、下四分位数、下界，此外还可以展示异常值。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s1-single-6",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第1套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "关于直方图与柱形图的区别，下列说法正确的是（　）。",
+   "options": [
+    "直方图各矩形条之间有固定间隙",
+    "直方图用于展示连续型数据的分布，柱形图用于展示离散型数据",
+    "直方图X轴为分类数据",
+    "直方图柱子宽度必须一致"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.3 数据的分布性：图6-18　直方图的基本框架（来源：第6章 6.3.2，幻灯片第72页）\n\n\n\n图6-19　柱形图与直方图对比示例（15-18年营业收入/质量级别评定）（来源：第6章 6.3.2，幻灯片第73页）\n\n\n直方图与柱形图的区别（四点）：①直方图展示数据的分布，柱状图比较数据大小；／⭐重点 📌考点\n\n茎叶图、直方图与密度图是探索和展示数据分布性的常用可视化方法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s1-single-7",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第1套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "连续型时间数据常用的可视化图表不包括（　）。",
+   "options": [
+    "阶梯图",
+    "折线图",
+    "堆叠柱形图",
+    "拟合曲线"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.3 数据不准确性可视化：图7-22　不确定性可视化方法的优缺点（对比表）（来源：第7章 7.3.2，幻灯片第87页）\n\n\n- ① 图标法：常见的可视化图表有误差条、盒须图等。／⚠️易错点：大量图标布局会造成严重的遮盖进而导致视觉混乱，故图标法适合稀疏不确定性数据的可视化。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s1-single-10",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第1套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "多元数据可视化的三类基本方法是（　）。",
+   "options": [
+    "空间映射法、图标法和基于像素的可视化方法",
+    "折线图法、柱形图法和饼图法",
+    "分类法、聚类法和回归法",
+    "表格法、图表法和地图法"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.4 数据可视化的未来：1.4.2 数据可视化的发展方向 ⭐重点 📖必背\n\n数据可视化技术的发展方向可分为以下三个方面：\n\n1. 与数据挖掘结合：揭示潜在规律，提升挖掘效率。／本章小结（原文）：本章主要为大家介绍了数据可视化和matplotlib的入门知识，包括什么是数据可视化、数据可视化的作用、python常用工具、数据可视化的未来。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s1-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第1套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "dropna() 中 how 参数的默认值为______。",
+   "options": null,
+   "answer": [
+    "'any'"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：2.2.2 缺失值的处理 ⭐重点 📌考点\n\n删除缺失值——pandas 提供 dropna()，会删除包含缺失值的一行或一列数据，并返回一个删除缺失值后的对象：\n\npython\ndropna(axis=0, how='any', thresh=None, subset=None, inplace=False)\n\n\n- axis：确定删除行或列，0 或 'index' 表示删除包含缺失值的行，1 或 'columns' 表示删除包含缺失值",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "'any'"
+   ]
+  },
+  {
+   "id": "dv-s1-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第1套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "本·施耐德曼将常见的交互操作归纳为：缩放、过滤、关联、记录、提取、______。",
+   "options": null,
+   "answer": [
+    "按需要提供细节及概览"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.2 交互设计原则：图8-1　亲密性原则（来源：第8章 8.2，幻灯片第10页）\n\n\n3. 按交互操作类型分类：本·施耐德曼将常见的交互操作归纳为：缩放、过滤、关联、记录、提取、按需要提供细节及概览。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "按需要提供细节及概览"
+   ]
+  },
+  {
+   "id": "dv-s1-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第1套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "简述数据预处理的四个步骤及其含义。",
+   "options": null,
+   "answer": [],
+   "answerText": "数据清理、数据集成、数据归约、数据变换。",
+   "points": [
+    {
+     "text": "数据清理、数据集成、数据归约、数据变换。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s1-short-3",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第1套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "简述茎叶图的优点和缺点。",
+   "options": null,
+   "answer": [],
+   "answerText": "优点：无原始数据损失、可随时记录添加；缺点：不如图表直观清晰，现已很少使用。",
+   "points": [
+    {
+     "text": "优点：无原始数据损失、可随时记录添加",
+     "partial": 5
+    },
+    {
+     "text": "缺点：不如图表直观清晰，现已很少使用。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s1-essay-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第1套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "比较因果关系与相关关系，并说明为什么大数据场景下更应聚焦相关关系。请结合原文案例论述。",
+   "options": null,
+   "answer": [],
+   "answerText": "五阶段（10世纪萌芽→14-17世纪开启大门→18世纪重视数据价值→19世纪黄金时期→20-21世纪计算机绘制）。",
+   "points": [
+    {
+     "text": "五阶段（10世纪萌芽→14-17世纪开启大门→18世纪重视数据价值→19世纪黄金时期→20-21世纪计算机绘制）。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s1-essay-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第1套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "给定一组带有时间属性的比例数据（如各年龄段人口随年代的变化），应选择何种可视化图表？请说明理由。",
+   "options": null,
+   "answer": [],
+   "answerText": "数据清理、数据集成、数据归约、数据变换。",
+   "points": [
+    {
+     "text": "数据清理、数据集成、数据归约、数据变换。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "关于 isnull() 与 notnull()，下列说法正确的是（　）。",
+   "options": [
+    "isnull() 将缺失值标记为 False",
+    "notnull() 将缺失值标记为 True",
+    "isnull() 将缺失值标记为 True，notnull() 将缺失值标记为 False",
+    "两者都返回与原对象形状不同的对象"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.4 使用Seaborn绘图：目的（模式、关系、异常）（第1章）\n- 数据可视化三大作用：记录信息、分析推理、信息传播与协同（第1章）\n- 四大Python可视化库特点辨析：matplotlib / seaborn / bokeh / pyecharts（第1章）\n- matplotlib 三种API及 pyplot API 与 object-oriented API 的绘图思路（第1章）\n- 数据预处理四步：数据清理、数据集成、数据归约、数据变换（第2章）\n- i",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "fillna() 方法中，method 参数不能与下列哪个参数同时使用？（　）",
+   "options": [
+    "value",
+    "limit",
+    "inplace",
+    "axis"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：⚠️易错点：method 参数不能与 value 参数同时使用。／- 其他参数与 duplicated() 方法中的参数含义相同。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "柱形图与直方图的区别在于（　）。",
+   "options": [
+    "柱形图展示连续型数据，直方图展示离散型数据",
+    "柱形图各矩形条之间有固定间隙，直方图各矩形条之间没有任何间隙",
+    "直方图X轴为分类数据",
+    "两者完全相同"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.4 使用Seaborn绘图：柱形图与直方图的区别（第3章）\n- 坐标轴与图例的构成要素；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "第4章与第5章都使用堆叠柱形图，二者的区别是（　）。",
+   "options": [
+    "没有区别",
+    "第4章强调随时间变化的时域特性，第5章强调各个子类间的对比",
+    "第4章强调子类对比，第5章强调时域特性",
+    "第5章不使用堆叠"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.4 使用Seaborn绘图：模拟数据与真实数据的区别（第8章）\n- Seaborn 各绘图函数适用场景：displot/jointplot/stripplot/swarmplot/boxplot/barplot/pointplot（第3、8章）\n\n ⚠️ 易错点（容易混淆或出错）\n\n- 异常数据不一定都是错误数据（第1章）\n- fillna() 的 method 参数不能与 value 参数同时使用（第2章）\n- 柱形图（离散型、有间隙）vs 直方图（连续型、无间",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "关于数据关联性与因果关系，下列说法正确的是（　）。",
+   "options": [
+    "关联即因果",
+    "关联并不代表存在因果关系",
+    "因果关系容易验证",
+    "相关关系验证成本高"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：数据的关联性，指量化的两个数据间的数理关系。／通过数据关联性，可根据已知的数值变化预测另一数值的变化。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-single-6",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "关于核密度估计（KDE），下列说法正确的是（　）。",
+   "options": [
+    "概率密度等于概率",
+    "KDE曲线下的总面积恒为1，概率密度≠概率",
+    "连续型随机变量取到某一精确值的概率大于0",
+    "KDE是参数方法"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.4 使用Seaborn绘图：kind='kde' 绘制核密度估计曲线；／- 第3章 3.4.1：正文称使用 distplot() 函数绘制核密度估计曲线，但示例代码为 sns.displot(..., kind='kde')，函数名新旧混用（待确认）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-single-7",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "关于高维数据与多元数据，下列说法正确的是（　）。",
+   "options": [
+    "高维是定性概念，多元是定量概念",
+    "高维核心是“数量”（定量），多元核心是“种类”（定性）",
+    "两者完全相同",
+    "多元指特征数量多"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：- 例：只从\"财务\"一个角度但用1万个指标描述 → 是高维数据但不是多元数据；／图7-5　表格透镜示例图（来源：第7章 7.1.1，幻灯片第31页）\n\n\n（3）平行坐标：能在二维空间中显示更高维度的数据，其用平行坐标取代垂直坐标，是一种重要的多元数据可视化分析工具。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-single-8",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "表格透镜（Table Lens）的特点是（　）。",
+   "options": [
+    "直接列出数据在每个维度上的值",
+    "将数值用水平横条或者点表示，允许对行和列进行排序",
+    "只能显示一维数据",
+    "使用图标表示数据"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.4 使用Seaborn绘图：多元数据可视化三类基本方法（第7章）\n- 表格透镜、平行坐标的优缺点与解决方案；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-single-9",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "不确定性可视化方法中，图标法适合（　）。",
+   "options": [
+    "密集不确定性数据",
+    "稀疏不确定性数据",
+    "高维不确定性数据",
+    "所有数据"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.3 数据不准确性可视化：7.3.2 不确定性的可视化方法 ⭐重点 📖必背\n\n目前不确定性可视化方法可大致分为四类：图标法、几何体表达法、视觉元素编码法和动画表达法。／图7-22　不确定性可视化方法的优缺点（对比表）（来源：第7章 7.3.2，幻灯片第87页）\n\n\n- ① 图标法：常见的可视化图表有误差条、盒须图等。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-single-10",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "关于模拟数据与真实数据，下列说法正确的是（　）。",
+   "options": [
+    "两者没有区别",
+    "根据模拟数据设计的图表，一定要用真实数据展现与验证",
+    "模拟数据更可靠",
+    "真实数据无法验证图表"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.4 使用Seaborn绘图：模拟数据与真实数据的区别（第8章）\n- Seaborn 各绘图函数适用场景：displot/jointplot/stripplot/swarmplot/boxplot/barplot/pointplot（第3、8章）\n\n ⚠️ 易错点（容易混淆或出错）\n\n- 异常数据不一定都是错误数据（第1章）\n- fillna() 的 method 参数不能与 value 参数同时使用（第2章）\n- 柱形图（离散型、有间隙）vs 直方图（连续型、无间",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "duplicated() 中 keep='first' 表示保留______出现的行，其余值相同的行被标记为重复值。",
+   "options": null,
+   "answer": [
+    "第一次"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：False 表示值相同的所有行都被标记为重复值。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "第一次"
+   ]
+  },
+  {
+   "id": "dv-s2-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "核密度估计曲线下的总面积恒为______。",
+   "options": null,
+   "answer": [
+    "1"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.4 使用Seaborn绘图：该曲线下的总面积恒为1。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "1"
+   ]
+  },
+  {
+   "id": "dv-s2-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "平行坐标的缺陷是：难以同时表现多个维度间的关系，对______之间关系的表现相对较弱。",
+   "options": null,
+   "answer": [
+    "非相邻属性"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：缺陷：难以同时表现多个维度间的关系（坐标轴顺序排列，非相邻属性之间关系表现较弱）。／描述相邻两个属性间的关系。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "非相邻属性"
+   ]
+  },
+  {
+   "id": "dv-s2-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "雷达图的维度不是越多越好，一般______个最清晰。",
+   "options": null,
+   "answer": [
+    "5-8"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：❗注意：雷达图的维度不是越多越好，一般5-8个最清晰，最适合用来展示一个对象的整体面貌。／雷达图的基本组成元素：\n\n- 中心点：代表0或最低分；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "5-8"
+   ]
+  },
+  {
+   "id": "dv-s2-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "直方图与柱形图有哪些区别？（至少答出四点）",
+   "options": null,
+   "answer": [],
+   "answerText": "四点区别：展示分布vs比较大小；X轴定量vs分类；无间隔vs有间隔；宽度可不一vs必须一致。",
+   "points": [
+    {
+     "text": "四点区别：展示分布vs比较大小",
+     "partial": 2
+    },
+    {
+     "text": "X轴定量vs分类",
+     "partial": 2
+    },
+    {
+     "text": "无间隔vs有间隔",
+     "partial": 2
+    },
+    {
+     "text": "宽度可不一vs必须一致。",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "直方图与茎叶图有什么关系？各自有什么特点？",
+   "options": null,
+   "answer": [],
+   "answerText": "关系：逆时针翻转茎叶图、列改柱形即得直方图；特点各自作答。",
+   "points": [
+    {
+     "text": "关系：逆时针翻转茎叶图、列改柱形即得直方图",
+     "partial": 5
+    },
+    {
+     "text": "特点各自作答。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-short-3",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "简述不确定性可视化的四类方法及各自的优缺点。",
+   "options": null,
+   "answer": [],
+   "answerText": "四类方法及优缺点（图标法-适合稀疏、几何体法-干扰原有结果、视觉元素编码法-与心理感知相关、动画法-理解曲线长易疲劳）。",
+   "points": [
+    {
+     "text": "四类方法及优缺点（图标法-适合稀疏、几何体法-干扰原有结果、视觉元素编码法-与心理感知相关、动画法-理解曲线长易疲劳）。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-short-4",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "简述交互设计原则中“亲密性”与“对比/强调”的含义。",
+   "options": null,
+   "answer": [],
+   "answerText": "亲密性=相关内容靠近、不同内容区隔；对比/强调=强调重点弱化次要、避免所有元素同等重要。",
+   "points": [
+    {
+     "text": "亲密性=相关内容靠近、不同内容区隔",
+     "partial": 5
+    },
+    {
+     "text": "对比/强调=强调重点弱化次要、避免所有元素同等重要。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-essay-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "“异常的数据不一定都是错误的数据”——请结合数据可视化目的中的“异常”对此进行论述。",
+   "options": null,
+   "answer": [],
+   "answerText": "四点区别：展示分布vs比较大小；X轴定量vs分类；无间隔vs有间隔；宽度可不一vs必须一致。",
+   "points": [
+    {
+     "text": "四点区别：展示分布vs比较大小",
+     "partial": 2
+    },
+    {
+     "text": "X轴定量vs分类",
+     "partial": 2
+    },
+    {
+     "text": "无间隔vs有间隔",
+     "partial": 2
+    },
+    {
+     "text": "宽度可不一vs必须一致。",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s2-essay-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第2套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "为什么说过多或过于复杂的视觉编码会降低可视化可读性？请结合高维多元数据的可视化方法进行论述。",
+   "options": null,
+   "answer": [],
+   "answerText": "关系：逆时针翻转茎叶图、列改柱形即得直方图；特点各自作答。",
+   "points": [
+    {
+     "text": "关系：逆时针翻转茎叶图、列改柱形即得直方图",
+     "partial": 5
+    },
+    {
+     "text": "特点各自作答。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "要反映不同分类数据之间的差异，应选择（　）。",
+   "options": [
+    "饼图",
+    "柱形图",
+    "散点图",
+    "箱形图"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.2 数据可视化的作用：以此反映不同分类数据之间的差异。／数据可视化的作用包括记录信息、分析推理、信息传播与协同等。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "要显示随时间变化的连续数据趋势，应选择（　）。",
+   "options": [
+    "柱形图",
+    "饼图",
+    "折线图",
+    "直方图"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.1 时间数据在大数据中的应用：图4-1　2001-2011年大学生就业率变化（来源：第4章 4.1，幻灯片第7页）\n\n\n- 时间型数据是按时间顺序排列的一系列数据值，包含时间属性，不仅要表达数据随时间变化的规律，还需表达数据分布的时间规律。／- 不管是延续性还是暂时性的时间数据，可视化的最终的目的就是从中发现趋势：看到什么已经成为过去，什么仍保持不变？",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "要判断两变量之间是否存在某种关联，应选择（　）。",
+   "options": [
+    "散点图",
+    "饼图",
+    "柱形图",
+    "箱形图"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：图3-3　折线图示例（来源：第3章 3.1.2，幻灯片第5页）\n\n\n散点图又称X-Y图，是由若干组数据点组成的图表，主要用于判断两变量之间是否存在某种关联，或者总结数据点的分布模式。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "要了解数据中各分类占比情况，应选择（　）。",
+   "options": [
+    "直方图",
+    "饼图",
+    "折线图",
+    "散点图"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：图3-4　散点图示例（来源：第3章 3.1.2，幻灯片第6页）\n\n\n饼图是一种用于了解数据中各分类占比情况的图表，使用圆表示数据总量，组成圆的扇面表示数据各项占总量的比例大小。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "在识别异常值方面有一定优越性的图表是（　）。",
+   "options": [
+    "饼图",
+    "折线图",
+    "箱形图",
+    "柱形图"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：图3-6　箱形图示例（来源：第3章 3.1.2，幻灯片第8页）\n\n\n各图表用途归纳（原文\"总结\"页，按版式顺序对应）⭐重点 📌考点：\n\n| 图表 | 用途 |\n| --- | --- |\n| 直方图 | 反映一组或多组数据的分布情况 |\n| 折线图 | 反映一组或多组数据的变化趋势 |\n| 柱形图 | 比较不同分类之间的差异 |\n| 饼图 | 显示一组数据中每个分类的分配（占比）情况 |\n| 散点图 | 判断两变量之间是否存在某种关联 ",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-single-6",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "要反映一组数据的分布和波动情况，应选择（　）。",
+   "options": [
+    "直方图",
+    "饼图",
+    "柱形图",
+    "折线图"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.3 数据的分布性：观察发现，两组数据中的众数、中位数、平均数皆相同，但数据内部的分布情况却天差地别。／而数据的分布形态则像一张全身照，揭示了其是否匀称、何处强健、何处薄弱——它描绘的是数据的完整轮廓。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-single-7",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "银行利率持续数月不变、某日上调，应选择（　）。",
+   "options": [
+    "折线图",
+    "阶梯图",
+    "饼图",
+    "散点图"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.2 连续型数据处理：适用场景：银行利率一般会持续几个月不变，然后某一天出现上调或下调；／实际工作中变量间未必都有线性关系，曲线拟合是指选择适当的曲线类型来拟合观测数据，并用拟合的曲线方程分析两变量间的关系。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-single-8",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "对于类似于树状结构的数据，应选择（　）。",
+   "options": [
+    "饼图",
+    "矩形树图",
+    "折线图",
+    "箱形图"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.2 非结构化数据可视化：异构数据，指在同一个数据集中存在的如结构或属性不同的数据情况，存在多个不同种类节点和连接的网络被称为异构网络。／数据整合为可视化模块，为众多独立和异构的数据源获取数据提供透明且统一的访问接口。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-single-9",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "对于带时空属性的比例数据，可通过（　）来呈现。",
+   "options": [
+    "饼图",
+    "堆叠面积图",
+    "散点图",
+    "茎叶图"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.3 时空比例：对于带时空属性的比例数据，可通过堆叠面积图来呈现。／在数据中往往都会有时间这一属性，故经常遇到带时间属性的比例数据。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-single-10",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "变量不止两个时，要同时绘制多个变量间的散点图，应选择（　）。",
+   "options": [
+    "散点图矩阵",
+    "饼图",
+    "柱形图",
+    "箱形图"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：但很多时候变量不止两个，此时，应利用散点图矩阵来同时绘制多个变量间的散点图。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "连续型时间数据常用的可视化图表有阶梯图、折线图和______。",
+   "options": null,
+   "answer": [
+    "拟合曲线"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.2 连续型数据处理：连续型数据可视化图表：阶梯图、折线图、拟合曲线。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "拟合曲线"
+   ]
+  },
+  {
+   "id": "dv-s3-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "离散型时间数据常用的可视化图表有散点图、柱形图和______。",
+   "options": null,
+   "answer": [
+    "堆叠柱形图"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.3 离散型数据处理：离散型数据可视化图表：散点图、柱形图、堆叠柱形图。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "堆叠柱形图"
+   ]
+  },
+  {
+   "id": "dv-s3-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "比例型数据常用的可视化图表有饼图、环形图、堆叠柱形图/面积图和______。",
+   "options": null,
+   "answer": [
+    "矩形树图"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.3 时空比例：⭐重点 📌考点\n\n 本章小结（原文）：本章主要讲了比例数据的可视化，此类数据常用的可视化图表有饼图、环形图、堆叠柱形图/面积图和矩形树图。／堆叠面积图能呈现比例数据随时间的变化情况，不仅可以看到整体变化趋势，也可看到其中每一类的变化情况。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "矩形树图"
+   ]
+  },
+  {
+   "id": "dv-s3-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "探索和展示数据关联性的常用可视化方法有散点图、散点图矩阵和______。",
+   "options": null,
+   "answer": [
+    "气泡图"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：散点图、散点图矩阵与气泡图是探索和展示数据间关联性的常用可视化方法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "气泡图"
+   ]
+  },
+  {
+   "id": "dv-s3-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "为以下场景分别选择合适的可视化图表并说明理由：①2001-2011年大学生就业率变化；②食物各部分的卡路里含量；③各州谋杀率与入室盗窃率的关联；④城市在文化、科教、经济等六项指标上的对比。",
+   "options": null,
+   "answer": [],
+   "answerText": "①折线图②饼图/环形图③散点图（气泡图引入人口）④雷达图。",
+   "points": [
+    {
+     "text": "①折线图②饼图/环形图③散点图（气泡图引入人口）④雷达图。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "气泡图与散点图有什么关系和区别？",
+   "options": null,
+   "answer": [],
+   "answerText": "气泡图是散点图变体，大小表示第三变量、颜色引入第四变量。",
+   "points": [
+    {
+     "text": "气泡图是散点图变体，大小表示第三变量、颜色引入第四变量。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-short-3",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "平行坐标与雷达图各自适合什么场景？",
+   "options": null,
+   "answer": [],
+   "answerText": "平行坐标适合二维空间显示高维、相邻属性关系；雷达图适合多维度整体评价（看面积、找长短、做比较，5-8维）。",
+   "points": [
+    {
+     "text": "平行坐标适合二维空间显示高维、相邻属性关系",
+     "partial": 5
+    },
+    {
+     "text": "雷达图适合多维度整体评价（看面积、找长短、做比较，5-8维）。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-short-4",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "茎叶图、直方图、密度图各自有什么特点？",
+   "options": null,
+   "answer": [],
+   "answerText": "茎叶图（无损失、可添加、不直观、少用）；直方图（高度=频率、宽度=区间、轴连续）；密度图（KDE光滑曲线、曲线下面积=1）。",
+   "points": [
+    {
+     "text": "茎叶图（无损失、可添加、不直观、少用）",
+     "partial": 3
+    },
+    {
+     "text": "直方图（高度=频率、宽度=区间、轴连续）",
+     "partial": 3
+    },
+    {
+     "text": "密度图（KDE光滑曲线、曲线下面积=1）。",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-essay-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "请从“时间数据、比例数据、关系数据、复杂数据（高维多元）”四类数据出发，论述各类数据的可视化图表选型。",
+   "options": null,
+   "answer": [],
+   "answerText": "①折线图②饼图/环形图③散点图（气泡图引入人口）④雷达图。",
+   "points": [
+    {
+     "text": "①折线图②饼图/环形图③散点图（气泡图引入人口）④雷达图。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s3-essay-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第3套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "堆叠柱形图在第4章（时间数据）与第5章（比例数据）中的应用有什么差异？请分别说明其适用场景。",
+   "options": null,
+   "answer": [],
+   "answerText": "气泡图是散点图变体，大小表示第三变量、颜色引入第四变量。",
+   "points": [
+    {
+     "text": "气泡图是散点图变体，大小表示第三变量、颜色引入第四变量。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "matplotlib 中 plt.plot() 用于绘制（　）。",
+   "options": [
+    "柱形图",
+    "折线图",
+    "散点图",
+    "饼图"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.2 连续型数据处理：以 world-population.csv 数据集创建时间序列折线图：\n\npython\nimport csv\nimport matplotlib.pyplot as plt\nfilename = \"world-population.csv\"\ndatax = \ndatay = \nwith open(filename) as f:\n    reader = csv.reader(f)\n    for datarow in reader:\n",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "plt.scatter() 中参数 s 表示（　）。",
+   "options": [
+    "散点颜色",
+    "散点大小",
+    "散点形状",
+    "透明度"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：2.2.1 缺失值的检测 ⭐重点 📌考点\n\n- isnull() 和 notnull() 函数会接收一个 Series 类或 DataFrame 类的对象，返回一个跟原对象形状相同的新对象，新对象中的数据都是表示检测结果的布尔值。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "plt.hist() 中参数 bins 表示（　）。",
+   "options": [
+    "柱子颜色",
+    "分段（区间）数量",
+    "图例标签",
+    "线宽"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.3 数据的分布性：只需修改 hist() 函数中的 bins 参数即可。／图6-14　茎叶图的基本框架（来源：第6章 6.3.1，幻灯片第52页）\n\n\n表示数据的两个优点：①统计图上没有原始数据信息的损失，所有数据信息都可以从茎叶图中查到；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "pyecharts 中将图表渲染到 HTML 文件的方法是（　）。",
+   "options": [
+    "render_notebook()",
+    "render()",
+    "savefig()",
+    "show()"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.3 使用Pyecharts绘图：- 渲染图表：render() 渲染到HTML文件（默认为程序根目录的 render.html）；／3.3.2 绘制柱形图\n\n基本思路：创建Bar类的对象 → 使用 add_xaxis() 和 add_yaxis() 方法添加数据 → 添加图表配置项 → 渲染图表。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "pyecharts 中 set_global_opts() 方法用于添加（　）。",
+   "options": [
+    "系列配置项",
+    "全局配置项",
+    "数据",
+    "动画"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.3 使用Pyecharts绘图：- 添加数据：每个图表类内部提供了 add() 或 add_xx() 方法；／3.3.2 绘制柱形图\n\n基本思路：创建Bar类的对象 → 使用 add_xaxis() 和 add_yaxis() 方法添加数据 → 添加图表配置项 → 渲染图表。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-single-6",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "sns.pairplot() 用于绘制（　）。",
+   "options": [
+    "散点图矩阵",
+    "词云图",
+    "树状图",
+    "雷达图"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：⭐重点 📌考点\n\n\n图6-4　crimeRatesByState2005.csv 数据集（局部）（来源：第6章 6.2.1，幻灯片第15页）\n\n\n\n图6-5　谋杀案和入室盗窃案的关联性散点图（结果）（来源：第6章 6.2.1，幻灯片第17页）\n\n\n\n图6-6　Pyecharts 绘制关联性散点图（效果）（来源：第6章 6.2.1，幻灯片第22页）\n\n\n\n 6.2.2 散点图矩阵 ⭐重点 📌考点\n\n散点图是由两组数据构成多个坐标点，再通过",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-single-7",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "sns.displot(..., kind='kde') 用于绘制（　）。",
+   "options": [
+    "直方图",
+    "核密度估计曲线",
+    "散点图",
+    "柱形图"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》6.2 数据的关联性：图6-7　散点图矩阵基本框架（来源：第6章 6.2.2，幻灯片第25页）\n\n\npython\ng = sns.pairplot(crime2, diag_kind=\"kde\")    对角线显示核密度估计图\n 不带 diag_kind 参数时，默认对角线显示直方图\n\n\n\n图6-8　美国各州犯罪率的散点图矩阵（diag_kind='kde'）（来源：第6章 6.2.2，幻灯片第27页）\n\n\n\n图6-9　美国各州犯罪率的散点图矩阵（默认对角线",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-single-8",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "np.polyfit(xa, ya, deg=3) 的作用是（　）。",
+   "options": [
+    "计算均值",
+    "对数据进行最高次数为3的多项式拟合并求系数",
+    "生成等间距数值",
+    "绘制折线"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.2 数据可视化的作用：数据可视化的作用包括记录信息、分析推理、信息传播与协同等。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-single-9",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "dropna() 默认删除包含缺失值的（　）。",
+   "options": [
+    "行",
+    "列",
+    "整个表",
+    "不删除"
+   ],
+   "answer": [
+    "A"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：2.2.2 缺失值的处理 ⭐重点 📌考点\n\n删除缺失值——pandas 提供 dropna()，会删除包含缺失值的一行或一列数据，并返回一个删除缺失值后的对象：\n\npython\ndropna(axis=0, how='any', thresh=None, subset=None, inplace=False)\n\n\n- axis：确定删除行或列，0 或 'index' 表示删除包含缺失值的行，1 或 'columns' 表示删除包含缺失值",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-single-10",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "get_dummies() 函数的作用是（　）。",
+   "options": [
+    "删除缺失值",
+    "将类别类型数据转换为哑变量",
+    "检测重复值",
+    "合并数据"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.2 数据可视化的作用：数据可视化的作用包括记录信息、分析推理、信息传播与协同等。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "matplotlib 中设置中文字体：plt.rcParams['font.sans-serif'] = ['______']（黑体）。",
+   "options": null,
+   "answer": [
+    "SimHei（Microsoft YaHei亦可）"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.1 图表基础：图3-8　常用的图表辅助元素（来源：第3章 3.1.3，幻灯片第10页）\n\n\n\n 3.1.4 设置中文字体显示 ⭐重点 📌考点\n\n绘制的图表中含有中文字符，但没有特意设置显示中文字体，写中文的位置会变成方格或者乱码，无法正确显示。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "SimHei（Microsoft YaHei亦可）",
+    "SimHei"
+   ]
+  },
+  {
+   "id": "dv-s4-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "fillna() 中 method 参数取值 'pad' 或 'ffill' 表示______填充。",
+   "options": null,
+   "answer": [
+    "前向"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》2.2 数据清洗：- method：'pad'/'ffill' 前向填充，'backfill'/'bfill' 后向填充。／- method：支持 pad、ffill（向前填充）和 bfill（向后填充）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "前向"
+   ]
+  },
+  {
+   "id": "dv-s4-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "pyecharts 中 add_yaxis() 的______参数控制系列是否堆叠（相同组名的系列堆在一起）。",
+   "options": null,
+   "answer": [
+    "stack"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.4 使用Seaborn绘图：目的（模式、关系、异常）（第1章）\n- 数据可视化三大作用：记录信息、分析推理、信息传播与协同（第1章）\n- 四大Python可视化库特点辨析：matplotlib / seaborn / bokeh / pyecharts（第1章）\n- matplotlib 三种API及 pyplot API 与 object-oriented API 的绘图思路（第1章）\n- 数据预处理四步：数据清理、数据集成、数据归约、数据变换（第2章）\n- i",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "stack"
+   ]
+  },
+  {
+   "id": "dv-s4-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "sns.jointplot(x='total_bill', y='tip', data=tips, kind=\"______\") 绘制六边形二维直方图。",
+   "options": null,
+   "answer": [
+    "hex"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》3.4 使用Seaborn绘图：python\nsns.displot(tips'total_bill', bins=10)                      直方图（默认）\nsns.displot(tips'total_bill', kind='kde')                   核密度估计曲线\nsns.displot(tips'total_bill', kind='kde', rug=True)         显示密度观察条\n\n\n\n\n图3-21",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "hex"
+   ]
+  },
+  {
+   "id": "dv-s4-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "PCA(n_components=______) 表示将数据降维到二维。",
+   "options": null,
+   "answer": [
+    "2"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：⭐重点 📖必背\n\n 7.1.1 空间映射法 ⭐重点 📌考点\n\n（1）散点图及散点图矩阵：散点图的本质是将抽象数据对象映射至二维坐标表示的空间。／通过线性（包括主元分析 PCA 等）和非线性变换（局部线性嵌入 LLE 和 Isomap）将多元数据投影或嵌入至低维空间（通常为二维或三维），并保持数据在多元空间中的特征，这种方法被称为降维。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "2"
+   ]
+  },
+  {
+   "id": "dv-s4-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "写出 pyplot API 绘制折线图的基本思路，并写出包含一条线和包含两条线的示例代码。",
+   "options": null,
+   "answer": [],
+   "answerText": "思路：导入→plot()→完善图表→show()；示例见知识文档3.2.1。",
+   "points": [
+    {
+     "text": "思路：导入→plot()→完善图表→show()",
+     "partial": 5
+    },
+    {
+     "text": "示例见知识文档3.2.1。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "写出使用 pyecharts 绘制柱形图的基本思路及主要代码。",
+   "options": null,
+   "answer": [],
+   "answerText": "思路：创建Bar对象→add_xaxis/add_yaxis→set_global_opts→render()。",
+   "points": [
+    {
+     "text": "思路：创建Bar对象→add_xaxis/add_yaxis→set_global_opts→render()。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-short-3",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "写出使用 pandas 进行缺失值检测与处理的常用方法及关键参数。",
+   "options": null,
+   "answer": [],
+   "answerText": "isnull/notnull检测；dropna（axis/how/thresh）；fillna（value/method/limit，method不能与value同用）。",
+   "points": [
+    {
+     "text": "isnull/notnull检测",
+     "partial": 3
+    },
+    {
+     "text": "dropna（axis/how/thresh）",
+     "partial": 3
+    },
+    {
+     "text": "fillna（value/method/limit，method不能与value同用）。",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-short-4",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "Seaborn 中如何绘制单变量与双变量数据的分布？请写出主要函数与参数。",
+   "options": null,
+   "answer": [],
+   "answerText": "单变量：displot（bins、kind='kde'、rug）；双变量：jointplot（默认散点、kind='hex'、kind='kde'+shade）。",
+   "points": [
+    {
+     "text": "单变量：displot（bins、kind='kde'、rug）",
+     "partial": 5
+    },
+    {
+     "text": "双变量：jointplot（默认散点、kind='hex'、kind='kde'+shade）。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-essay-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "论述 matplotlib 三种 API 的特点与适用场景。",
+   "options": null,
+   "answer": [],
+   "answerText": "思路：导入→plot()→完善图表→show()；示例见知识文档3.2.1。",
+   "points": [
+    {
+     "text": "思路：导入→plot()→完善图表→show()",
+     "partial": 5
+    },
+    {
+     "text": "示例见知识文档3.2.1。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s4-essay-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第4套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "以“从 CSV 数据到时间序列折线图”为例，论述数据预处理与可视化的完整流程及注意事项。",
+   "options": null,
+   "answer": [],
+   "answerText": "思路：创建Bar对象→add_xaxis/add_yaxis→set_global_opts→render()。",
+   "points": [
+    {
+     "text": "思路：创建Bar对象→add_xaxis/add_yaxis→set_global_opts→render()。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "关于“高维”，下列说法正确的是（　）。",
+   "options": [
+    "核心是“种类”，是定性概念",
+    "数据具有多个属性/特征，核心是“数量”，是定量概念",
+    "指观察对象由多个指标共同描述",
+    "与多元相同"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：- 高维：数据具有多个属性/特征。／- 例：只从\"财务\"一个角度但用1万个指标描述 → 是高维数据但不是多元数据；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "关于“多元”，下列说法正确的是（　）。",
+   "options": [
+    "只关心特征数量",
+    "观察对象由多个指标共同描述，核心是“种类”，是定性概念",
+    "是定量概念",
+    "与高维相同"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：- 多元：观察对象由多个指标共同描述。／- 例：只从\"财务\"一个角度但用1万个指标描述 → 是高维数据但不是多元数据；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "关于表格透镜，下列说法错误的是（　）。",
+   "options": [
+    "是传统表格呈现多元数据方法的扩展",
+    "将数值用水平横条或者点表示",
+    "不允许用户对行和列进行排序",
+    "用户可以选择某个数据对象的实际数值"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.4 使用Seaborn绘图：多元数据可视化三类基本方法（第7章）\n- 表格透镜、平行坐标的优缺点与解决方案；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "观察雷达图的分析方法不包括（　）。",
+   "options": [
+    "看面积",
+    "找长短",
+    "做比较",
+    "看颜色"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：图7-10　雷达图的基本组成元素（来源：第7章 7.1.2，幻灯片第46页）\n\n\n\n图7-11　乒乓球运动员能力雷达图（来源：第7章 7.1.2，幻灯片第45页）\n\n\n\n图7-12　乒乓球运动员能力雷达图（对比）（来源：第7章 7.1.2，幻灯片第45页）\n\n\n观察雷达图的分析方法：看面积（封闭面积越大，通常说明综合能力越强）；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-single-6",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "原文用（　）比喻异构数据。",
+   "options": [
+    "一箱苹果",
+    "整个水果摊",
+    "一杯水",
+    "一棵树"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》1.4 数据可视化的未来：5. 来源数据的类型和结构各异，已有方法在非结构化、异构数据方面支持不足。／本章小结（原文）：本章主要为大家介绍了数据可视化和matplotlib的入门知识，包括什么是数据可视化、数据可视化的作用、python常用工具、数据可视化的未来。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-single-7",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "分而治之方法不包括下列哪个层次？（　）",
+   "options": [
+    "统计分析层",
+    "数据挖掘层",
+    "数据可视化层",
+    "数据存储层"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.4 使用Seaborn绘图：哑变量处理的\"量化\"思想（第2章）\n- 多项式拟合：np.polyfit 与 np.polyval（第4章）\n- 堆叠面积图的构造思想（第5章）\n- 因果关系与相关关系的辨析（第6章）\n- 核密度估计（KDE）：核函数叠加归一化、概率密度与概率的区别（第6章）\n- 降维：线性（PCA）与非线性（LLE、Isomap）变换（第7章）\n- 分而治之的三个层次（第7章）\n- 不确定性可视化四类方法的权衡（第7章）\n- 交互设计\"剧本\"隐喻与交",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-single-8",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "“可视化数据库”的核心任务不包括（　）。",
+   "options": [
+    "数据划分",
+    "视图生成",
+    "存储管理",
+    "数据加密"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.2 非结构化数据可视化：\"可视化数据库\"思想（Cleverland等人）：将多窗口、多页面的可视化结果视为一个集合，借用数据库方法对其进行统一生成、存储、管理与交互。／其核心任务：①数据划分；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-single-9",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "下列不属于动画编码不确定性参数的是（　）。",
+   "options": [
+    "速度",
+    "关键帧",
+    "闪烁",
+    "透明度"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.3 数据不准确性可视化：众多动画相关参数皆可用于编码不确定性，如：速度、时间单位、关键帧、闪烁、运动范围等。／7.3.2 不确定性的可视化方法 ⭐重点 📖必背\n\n目前不确定性可视化方法可大致分为四类：图标法、几何体表达法、视觉元素编码法和动画表达法。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-single-10",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "根据所操作的数据类型，交互操作不包括（　）。",
+   "options": [
+    "图形操作",
+    "数据操作",
+    "集合操作",
+    "文本操作"
+   ],
+   "answer": [
+    "D"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.2 交互设计原则：根据所操作的数据类型可将交互操作分为三类：图形操作（对可视化对象进行操作，如对图形等视觉表面层面的操作）、数据操作（对数据对象进行增加、修改和删除等操作）、集合操作（对数据对象组成的集合进行创建和删除等操作）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "比例数据中的“群体”代表着各种可能的选择和产出，也就是______（英文）。",
+   "options": null,
+   "answer": [
+    "SampleSpace"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》5.1 比例数据在大数据中的应用：这里的群体不单单指的是人类群体，它代表着各种可能的选择和产出，也就是样本空间（SampleSpace）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "SampleSpace"
+   ]
+  },
+  {
+   "id": "dv-s5-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "降维通常将多元数据投影或嵌入至低维空间（通常为______）。",
+   "options": null,
+   "answer": [
+    "二维或三维"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：通过线性（包括主元分析 PCA 等）和非线性变换（局部线性嵌入 LLE 和 Isomap）将多元数据投影或嵌入至低维空间（通常为二维或三维），并保持数据在多元空间中的特征，这种方法被称为降维。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "二维或三维"
+   ]
+  },
+  {
+   "id": "dv-s5-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "平行坐标表现非相邻属性关系较弱的解决方案：交互选取部分感兴趣的数据对象并将其______；更改坐标轴的排列顺序。",
+   "options": null,
+   "answer": [
+    "高亮显示"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》7.1 高维多元数据在大数据中的应用：解决方案：交互选取部分感兴趣的数据对象并高亮显示；／缺陷：难以同时表现多个维度间的关系（坐标轴顺序排列，非相邻属性之间关系表现较弱）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "高亮显示"
+   ]
+  },
+  {
+   "id": "dv-s5-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "交互设计流程四步：了解需求、______、指标计算、前端开发。",
+   "options": null,
+   "answer": [
+    "可视化设计"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》8.3 交互设计流程：交互的设计形式有很多种，不同形式的数据可视化流程有所不同，本节主要讲重要且相通的部分，共四步：\n\n1. 了解需求：(1)看什么，即哪些内容需要可视化；／理论上，只要设计出图表，就一定能在前端实现，但可能会受到前端开发人员的技术水平和展现工具的限制，故可视化设计有时候需要寻求一种关于设计与实现间的平衡。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": [
+    "可视化设计"
+   ]
+  },
+  {
+   "id": "dv-s5-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "什么是高维数据和多元数据？请结合原文例子说明。",
+   "options": null,
+   "answer": [],
+   "answerText": "高维=多个属性/特征（定量，“数量”）；多元=多个指标共同描述（定性，“种类”）；财务1万指标例；多角度例。",
+   "points": [
+    {
+     "text": "高维=多个属性/特征（定量，“数量”）",
+     "partial": 2
+    },
+    {
+     "text": "多元=多个指标共同描述（定性，“种类”）",
+     "partial": 2
+    },
+    {
+     "text": "财务1万指标例",
+     "partial": 2
+    },
+    {
+     "text": "多角度例。",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "论述空间映射法包含哪些方法，各自有什么特点。",
+   "options": null,
+   "answer": [],
+   "answerText": "空间映射法：散点图及散点图矩阵（N×N）、表格透镜（横条/点、行列排序）、平行坐标（优点缺陷）、降维（PCA/LLE/Isomap，超50维）。",
+   "points": [
+    {
+     "text": "空间映射法：散点图及散点图矩阵（N×N）、表格透镜（横条/点、行列排序）、平行坐标（优点缺陷）、降维（PCA/LLE/Isomap，超50维）。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-short-3",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "论述大尺度数据（非结构化数据）可视化的技术路线。",
+   "options": null,
+   "answer": [],
+   "answerText": "技术路线：并行高分辨率（异构数据、数据整合、大规模计算集群、层次重组/低分辨率采样、可视化数据库四任务）；分而治之（统计层分而重组、挖掘层分类器融合+强分类器、可视化层多核并行+Hadoop/MapReduce）。",
+   "points": [
+    {
+     "text": "技术路线：并行高分辨率（异构数据、数据整合、大规模计算集群、层次重组/低分辨率采样、可视化数据库四任务）",
+     "partial": 5
+    },
+    {
+     "text": "分而治之（统计层分而重组、挖掘层分类器融合+强分类器、可视化层多核并行+Hadoop/MapReduce）。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-short-4",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "论述数据不准确性的来源及四类可视化方法。",
+   "options": null,
+   "answer": [],
+   "answerText": "来源：收集/处理/可视化过程、测量仪器与人员水平、仿真模型、清洗过滤改变数据；四类方法及优缺点。",
+   "points": [
+    {
+     "text": "来源：收集/处理/可视化过程、测量仪器与人员水平、仿真模型、清洗过滤改变数据",
+     "partial": 5
+    },
+    {
+     "text": "四类方法及优缺点。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-essay-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "结合“考研图书推荐”案例，论述因果关系与相关关系的区别及大数据思维。",
+   "options": null,
+   "answer": [],
+   "answerText": "高维=多个属性/特征（定量，“数量”）；多元=多个指标共同描述（定性，“种类”）；财务1万指标例；多角度例。",
+   "points": [
+    {
+     "text": "高维=多个属性/特征（定量，“数量”）",
+     "partial": 2
+    },
+    {
+     "text": "多元=多个指标共同描述（定性，“种类”）",
+     "partial": 2
+    },
+    {
+     "text": "财务1万指标例",
+     "partial": 2
+    },
+    {
+     "text": "多角度例。",
+     "partial": 4
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-s5-essay-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "hard",
+   "chapter": 9,
+   "knowledgePoint": "9",
+   "source": {
+    "text": "《数据可视化》综合测试卷 第5套（满分 100 分）",
+    "kind": "textbook"
+   },
+   "stem": "论述交互设计原则如何指导可视化作品的制作（请结合六条原则与交互设计流程）。",
+   "options": null,
+   "answer": [],
+   "answerText": "空间映射法：散点图及散点图矩阵（N×N）、表格透镜（横条/点、行列排序）、平行坐标（优点缺陷）、降维（PCA/LLE/Isomap，超50维）。",
+   "points": [
+    {
+     "text": "空间映射法：散点图及散点图矩阵（N×N）、表格透镜（横条/点、行列排序）、平行坐标（优点缺陷）、降维（PCA/LLE/Isomap，超50维）。",
+     "partial": 10
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第9章",
+    "综合卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}

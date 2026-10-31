@@ -1,0 +1,776 @@
+{
+ "chapter": 4,
+ "questions": [
+  {
+   "id": "dv-c4A-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 A卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "时间数据也称时间序列或（　）。",
+   "options": [
+    "静态数据",
+    "动态数据",
+    "分类数据",
+    "比例数据"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.1 时间数据在大数据中的应用：- 时间数据也称时间序列或动态数据，即同一现象或数据在不同时间点或时间段的数据序列。／例如，同一只股票在一天中不同时间点或时间段所反映出来的数据序列，即是时间序列。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4A-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 A卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "连续型数据可视化图表不包括（　）。",
+   "options": [
+    "阶梯图",
+    "折线图",
+    "堆叠柱形图",
+    "拟合曲线"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.2 连续型数据处理：连续型数据可视化图表：阶梯图、折线图、拟合曲线。／连续型数据指任意两个数据点间可以细分出无限多个数值，它表现的是不断变化的现象。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4A-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 A卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "银行利率持续几个月不变、某一天出现上调或下调，这类数据适合使用（　）。",
+   "options": [
+    "折线图",
+    "阶梯图",
+    "饼图",
+    "箱形图"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.2 连续型数据处理：适用场景：银行利率一般会持续几个月不变，然后某一天出现上调或下调；／如：温度是连续型数据，可以测量一天内的任意时刻的温度，股市实时行情也是一种连续型数据。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4A-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 A卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "离散型数据可视化图表不包括（　）。",
+   "options": [
+    "散点图",
+    "柱形图",
+    "拟合曲线",
+    "堆叠柱形图"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.3 离散型数据处理：离散型数据可视化图表：散点图、柱形图、堆叠柱形图。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4A-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 A卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "对 xa、ya 进行最高次数为 3 的多项式拟合，使用的函数是（　）。",
+   "options": [
+    "np.polyval(poly, xa)",
+    "np.polyfit(xa, ya, deg=3)",
+    "plt.plot()",
+    "np.linspace()"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.2 连续型数据处理：图4-7　拟合曲线基本框架（来源：第4章 4.2.3，幻灯片第28页）\n\n\npython\nplt.scatter(xa:, ya:, s=10, c='g', marker='o', alpha=0.5)\npoly = np.polyfit(xa, ya, deg=3)       3是要拟合的多项式的最高次数\nplt.plot(xa, np.polyval(poly, xa))\n\n\n\n图4-8　unemployment-rate-19",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4A-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 A卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "连续型数据指任意两个数据点间可以细分出无限多个______。",
+   "options": null,
+   "answer": [
+    "数值"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.2 连续型数据处理：连续型数据指任意两个数据点间可以细分出无限多个数值，它表现的是不断变化的现象。／如：温度是连续型数据，可以测量一天内的任意时刻的温度，股市实时行情也是一种连续型数据。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "数值"
+   ]
+  },
+  {
+   "id": "dv-c4A-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 A卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "时间型数据可以分为离散型时间数据和______两种。",
+   "options": null,
+   "answer": [
+    "连续型时间数据"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.1 时间数据在大数据中的应用：时间型数据可以分为离散型时间数据和连续型时间数据两种。／图4-1　2001-2011年大学生就业率变化（来源：第4章 4.1，幻灯片第7页）\n\n\n- 时间型数据是按时间顺序排列的一系列数据值，包含时间属性，不仅要表达数据随时间变化的规律，还需表达数据分布的时间规律。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "连续型时间数据"
+   ]
+  },
+  {
+   "id": "dv-c4A-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 A卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "在时间数据中，折线图沿水平轴均匀分布的是______。",
+   "options": null,
+   "answer": [
+    "时间"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.2 连续型数据处理：在时间数据中，折线图沿水平轴均匀分布的是时间，沿垂直轴均匀分布的是所有值数据。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "时间"
+   ]
+  },
+  {
+   "id": "dv-c4A-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 A卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "堆叠柱形图适用于数据存在子分类，并且这些子分类______的情况。",
+   "options": null,
+   "answer": [
+    "相加有意义"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.3 离散型数据处理：特点：如果数据存在子分类，并且这些子分类相加有意义的话，此时就可以使用堆叠柱形图来表示。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "相加有意义"
+   ]
+  },
+  {
+   "id": "dv-c4A-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 A卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "绘制阶梯图使用的函数是______。",
+   "options": null,
+   "answer": [
+    "plt.step()"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.3 离散型数据处理：这2种不同的数据类型决定了图表的表现形式，连续型采用的是阶梯图、折线图、拟合曲线图这三种图表来处理的，而离散型采用的是散点图、柱形图、堆叠柱形图这三种图表处理的。／离散数据又称为不连续数据，这类数据在任何两个数据点之间的个数是有限的。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": [
+    "plt.step()",
+    "plt.step"
+   ]
+  },
+  {
+   "id": "dv-c4A-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 A卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述连续型数据与离散型数据的区别，以及各自常用的可视化图表。",
+   "options": null,
+   "answer": [],
+   "answerText": "连续型：两点间可细分无限多个数值，不断变化的现象（温度、股市实时行情），用阶梯图、折线图、拟合曲线；离散型：两点间个数有限，来自具体时间点或时段（奥运会奖牌数），用散点图、柱形图、堆叠柱形图。",
+   "points": [
+    {
+     "text": "连续型：两点间可细分无限多个数值，不断变化的现象（温度、股市实时行情），用阶梯图、折线图、拟合曲线",
+     "partial": 5
+    },
+    {
+     "text": "离散型：两点间个数有限，来自具体时间点或时段（奥运会奖牌数），用散点图、柱形图、堆叠柱形图。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4A-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 A卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "横轴长度对折线图趋势展现有什么影响？",
+   "options": null,
+   "answer": [],
+   "answerText": "过短拉大数据点间距使波动夸张；过长数据点密集掩盖变化、弱化趋势，需合理设定横轴长度。",
+   "points": [
+    {
+     "text": "过短拉大数据点间距使波动夸张",
+     "partial": 5
+    },
+    {
+     "text": "过长数据点密集掩盖变化、弱化趋势，需合理设定横轴长度。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "A卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4B-single-1",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 B卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "股市实时行情属于（　）。",
+   "options": [
+    "离散型数据",
+    "连续型数据",
+    "分类数据",
+    "比例数据"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.2 连续型数据处理：如：温度是连续型数据，可以测量一天内的任意时刻的温度，股市实时行情也是一种连续型数据。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4B-single-2",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 B卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "奥运会奖牌的总数属于（　）。",
+   "options": [
+    "连续型数据",
+    "离散数据",
+    "高维数据",
+    "非结构化数据"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.3 离散型数据处理：如：奥运会奖牌的总数或者是各个国家金牌数是离散数据。／特点是能直观表现出影响因素和预测对象之间的总体关系趋势；",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4B-single-3",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 B卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "拟合曲线是根据所给定的（　）绘制的曲线。",
+   "options": [
+    "连续数据",
+    "离散数据点",
+    "分类数据",
+    "异常数据"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.2 连续型数据处理：以 world-population.csv 数据集创建时间序列折线图：\n\npython\nimport csv\nimport matplotlib.pyplot as plt\nfilename = \"world-population.csv\"\ndatax = \ndatay = \nwith open(filename) as f:\n    reader = csv.reader(f)\n    for datarow in reader:\n",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4B-single-4",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 B卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "在离散型时间数据中，散点图的水平轴表示（　）。",
+   "options": [
+    "数值",
+    "类别",
+    "时间",
+    "频率"
+   ],
+   "answer": [
+    "C"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.3 离散型数据处理：在离散型时间数据中，数据来自于某个具体的时间点或者时段，可能的数值也是有限的。／在时间数据中，水平轴表示时间，数值则在垂直轴上。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4B-single-5",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 B卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "堆叠柱形图与常规柱形图的几何区别是（　）。",
+   "options": [
+    "数据值为并行排列",
+    "数据值一个个叠加起来",
+    "使用折线连接",
+    "使用角度表示"
+   ],
+   "answer": [
+    "B"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.3 离散型数据处理：图4-14　柱形图的基本框架（来源：第4章 4.3.2，幻灯片第48页）\n\n\n\n图4-15　hot-dog-contest-winners.csv 数据集（来源：第4章 4.3.2，幻灯片第50页）\n\n\n\n图4-16　柱形图绘制结果（来源：第4章 4.3.2，幻灯片第49页）\n\n\n堆叠柱形图的几何形状和常规柱形图很相似：在柱形图中，数据值为并行排列，而在堆叠柱图则是一个个叠加起来的。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4B-blank-1",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 B卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "时间序列数据存在于天文观测数据、气象图像、______等领域。",
+   "options": null,
+   "answer": [
+    "临床诊断记录"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.1 时间数据在大数据中的应用：- 时间序列数据存在于社会的各个领域，如：天文观测数据、气象图像、临床诊断记录（包括病人的每次看病的病情记录以及心电图等扫描仪器的数据记录）等。／- 时间数据也称时间序列或动态数据，即同一现象或数据在不同时间点或时间段的数据序列。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "临床诊断记录"
+   ]
+  },
+  {
+   "id": "dv-c4B-blank-2",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 B卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "阶梯图的形状类似于楼道内的______。",
+   "options": null,
+   "answer": [
+    "楼梯"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.2 连续型数据处理：4.2.1 阶梯图 ⭐重点 📌考点\n\n阶梯图是图形线条保持在同一个值，直到发生变化，直接跳跃到下一个值，形状类似于楼道内的楼梯。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "楼梯"
+   ]
+  },
+  {
+   "id": "dv-c4B-blank-3",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 B卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "曲线拟合是指选择适当的______来拟合观测数据，并用拟合的曲线方程分析两变量间的关系。",
+   "options": null,
+   "answer": [
+    "曲线类型"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.2 连续型数据处理：实际工作中变量间未必都有线性关系，曲线拟合是指选择适当的曲线类型来拟合观测数据，并用拟合的曲线方程分析两变量间的关系。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "曲线类型"
+   ]
+  },
+  {
+   "id": "dv-c4B-blank-4",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 B卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "离散数据在任何两个数据点之间的个数是______。",
+   "options": null,
+   "answer": [
+    "有限的"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.3 离散型数据处理：离散数据又称为不连续数据，这类数据在任何两个数据点之间的个数是有限的。／在离散型时间数据中，数据来自于某个具体的时间点或者时段，可能的数值也是有限的。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "有限的"
+   ]
+  },
+  {
+   "id": "dv-c4B-blank-5",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 B卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "plt.bar() 用于绘制______图。",
+   "options": null,
+   "answer": [
+    "柱形"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "依据《复习知识文档》4.3 离散型数据处理：图4-10　散点图的基本框架（来源：第4章 4.3.1，幻灯片第39页）\n\n\n\n图4-11　flowingdata_subscribers.csv 数据集（来源：第4章 4.3.1，幻灯片第41页）\n\n\n\n图4-12　未设置y轴刻度范围时的默认效果（对比）（来源：第4章 4.3.1，幻灯片第45页）\n\n\n\n图4-13　散点图绘制结果（设置y轴刻度后）（来源：第4章 4.3.1，幻灯片第46页）\n\n\n\n 4.3.2 柱形图与堆叠柱形图 ⭐",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": [
+    "柱形"
+   ]
+  },
+  {
+   "id": "dv-c4B-short-1",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 B卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "什么是时间数据（时间序列）？时间数据可视化的最终目的是什么？",
+   "options": null,
+   "answer": [],
+   "answerText": "时间数据=时间序列=动态数据，即同一现象或数据在不同时间点或时间段的数据序列；可视化最终目的是从中发现趋势（上升还是下降、变化原因、是否存在周期性循环）。",
+   "points": [
+    {
+     "text": "时间数据=时间序列=动态数据，即同一现象或数据在不同时间点或时间段的数据序列",
+     "partial": 5
+    },
+    {
+     "text": "可视化最终目的是从中发现趋势（上升还是下降、变化原因、是否存在周期性循环）。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  },
+  {
+   "id": "dv-c4B-short-2",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4",
+   "source": {
+    "text": "《数据可视化》章节小测 第4章 B卷（依据第4章课件）",
+    "kind": "textbook"
+   },
+   "stem": "简述堆叠柱形图的几何特点与适用场景。",
+   "options": null,
+   "answer": [],
+   "answerText": "几何特点：数据值一个个叠加起来（常规柱形图为并行排列）；适用场景：数据存在子分类且子分类相加有意义时。",
+   "points": [
+    {
+     "text": "几何特点：数据值一个个叠加起来（常规柱形图为并行排列）",
+     "partial": 5
+    },
+    {
+     "text": "适用场景：数据存在子分类且子分类相加有意义时。",
+     "partial": 5
+    }
+   ],
+   "explanation": "",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "第4章",
+    "B卷"
+   ],
+   "verify": [],
+   "accept": null
+  }
+ ]
+}
