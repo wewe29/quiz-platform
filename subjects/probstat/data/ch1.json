@@ -178,7 +178,7 @@
    "accept": null,
    "answerText": null,
    "points": null,
-   "explanation": "**答案依据**：$P(阳)=0.01\\times0.95+0.99\\times0.05=0.059$。$P(病|阳)=\\frac{0.0095}{0.059}=\\frac{19}{118}\\approx16\\%$。A 正确。\n**创新点**：即使检出率 95%，阳性后患病概率也仅 16%——基率谬误。",
+   "explanation": "**答案依据**：$P(\\text{阳})=0.01\\times0.95+0.99\\times0.05=0.059$。$P(\\text{病}\\mid\\text{阳})=\\frac{0.0095}{0.059}=\\frac{19}{118}\\approx16\\%$。A 正确。\n**创新点**：即使检出率 95%，阳性后患病概率也仅 16%——基率谬误。",
    "misconception": "⚠️ 基率谬误：忽略大量健康人的假阳性贡献。",
    "extension": null,
    "tags": [

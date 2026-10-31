@@ -14,8 +14,9 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 PLATFORM = os.path.abspath(os.path.join(HERE, "..", ".."))
 
-sys.path.insert(0, HERE)   # portal_meta 与本脚本同目录
+sys.path.insert(0, HERE)   # portal_meta / katex_lint 与本脚本同目录
 from portal_meta import describe as portal_desc, read_meta  # noqa: E402
+import katex_lint  # noqa: E402
 
 SHARD_BUDGET = 200 * 1024          # 单分片字节上限
 SHELL_BUDGET = 300 * 1024          # 学科壳（html + js + css，不含 vendor/data）上限
@@ -293,6 +294,41 @@ def check_portal_meta(platform, subjects):
             % (want, got))
 
 
+def check_katex_strict(subjects_dir, listed):
+    """KaTeX 严格模式体检：数学模式里不能有裸中文，LaTeX 转义也不能被吃成控制字符。
+
+    2026-10-31 实证过反面：概率论并入时解析里写了 `$P(阳)=...$`，
+    KaTeX 每次渲染都报 `unicodeTextInMathMode` 警告，而**当时全部门禁全绿**——
+    因为没有任何一道门禁看公式内容。子站控制台的验收基线是 0 error / 0 warning，
+    这道门禁就是把它钉住的。
+    """
+    total = 0
+    for sid in sorted(listed):
+        data_dir = os.path.join(subjects_dir, sid, "data")
+        if not os.path.isdir(data_dir):
+            continue
+        for fn in sorted(os.listdir(data_dir)):
+            if not fn.endswith(".json"):
+                continue
+            p = os.path.join(data_dir, fn)
+            try:
+                with open(p, encoding="utf-8") as f:
+                    data = json.load(f)
+            except Exception as exc:
+                err("%s/%s JSON 解析失败：%s" % (sid, fn, exc))
+                continue
+            for path, kind, seg in katex_lint.scan_value(data):
+                total += 1
+                if kind == "cjk_in_math":
+                    err("%s/%s %s 数学模式里有裸中文（KaTeX 会报 unicodeTextInMathMode）：%r\n"
+                        "        改法：用 \\text{...} 包起来，例如 $P(\\text{阳})$"
+                        % (sid, fn, path, seg[:60]))
+                else:
+                    err("%s/%s %s 数学模式里有控制字符（多半是源码里 \\text 少写了一个反斜杠，"
+                        "被 Python 解析成 TAB）：%r" % (sid, fn, path, seg[:60]))
+    print("  [katex] 数学模式裸中文/控制字符：%d 处" % total)
+
+
 def main():
     subjects_dir = os.path.join(PLATFORM, "subjects")
     reg_path = os.path.join(subjects_dir, "registry.json")
@@ -328,6 +364,8 @@ def main():
         print("  [check] 学科 %s" % sid)
         check_subject(subjects_dir, sid)
         check_subject_shell(sid, os.path.join(subjects_dir, sid))
+
+    check_katex_strict(subjects_dir, listed)
 
     check_pwa(PLATFORM)
 

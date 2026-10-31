@@ -160,12 +160,54 @@ def test_portal_meta_roundtrip():
     check("T3 总题数出现在文案里", "744" in desc, desc)
 
 
+def test_katex_strict_gate():
+    """T4：数学模式里的裸中文 / 控制字符必须被拦；干净内容不得误报。
+
+    2026-10-31 实证：概率论并入时解析里写了 `$P(阳)=...$`，KaTeX 每次渲染都报
+    `unicodeTextInMathMode` 警告，**而当时全部门禁全绿**——没有任何一道门禁看公式内容。
+    另外还查出一类更隐蔽的：源码里 `\\text` 少写一个反斜杠 → Python 解析成 TAB；
+    以及概率论题库里残留的 NUL 字符（`\\u0000`）——两者都让公式渲染出乱码。
+    """
+    tmp = tempfile.mkdtemp(prefix="katexgate-")
+    data_dir = os.path.join(tmp, "demo", "data")
+    os.makedirs(data_dir)
+    listed = {"demo": {"id": "demo", "total": 1}}
+
+    def run(payload):
+        with open(os.path.join(data_dir, "ch1.json"), "w", encoding="utf-8") as f:
+            f.write(payload)
+        validate_platform.errors.clear()
+        validate_platform.check_katex_strict(tmp, listed)
+        return list(validate_platform.errors)
+
+    try:
+        errs = run('{"questions":[{"explanation":"$P(\\u0028阳\\u0029)=0.059$"}]}')
+        check("T4 裸中文被门禁拦下", any("裸中文" in e for e in errs), "errors=%r" % errs[:2])
+
+        errs = run('{"questions":[{"explanation":"$P(\\t ext)=1$"}]}')
+        check("T4 控制字符被门禁拦下", any("控制字符" in e for e in errs), "errors=%r" % errs[:2])
+
+        errs = run('{"questions":[{"explanation":"$P(\\\\text{阳})=0.059$"}]}')
+        check("T4 正确写法不误报", not errs, "errors=%r" % errs[:2])
+
+        # 散文夹在两个数学段之间 → 不是数学段，不该被当成裸中文
+        errs = run('{"questions":[{"explanation":"$N$ 的列都是齐次方程 $(A-E)y=0$ 的解"}]}')
+        check("T4 数学段之间的散文不误报", not errs, "errors=%r" % errs[:2])
+
+        # 多行显示公式里的换行是正常写法
+        errs = run('{"questions":[{"explanation":"$$\\\\frac{1}{2}$$"}]}')
+        check("T4 换行不误报", not errs, "errors=%r" % errs[:2])
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
 def main():
     print("[test] 平台自检开始")
     test_dist_fallback_branch()
     test_dist_real_cwd_lock()
     test_portal_meta_gate()
     test_portal_meta_roundtrip()
+    test_katex_strict_gate()
     print("-" * 60)
     if failures:
         print("平台自检 FAIL：%d 项 -> %s" % (len(failures), ", ".join(failures)))
