@@ -1,0 +1,136 @@
+/* tokens.css — 设计系统 token 层
+   主题：错题本的荧光批注。
+   冷调纸面 + 靛蓝主色 + 荧光黄批注色；深色模式是「夜间自习台灯」（不用纯黑）。
+   所有颜色/间距/字号只在这里定义，组件层只引用变量。 */
+
+:root {
+  /* ---------- 色板 · 亮 ---------- */
+  --paper:        #F2F4F7;
+  --paper-grad:   radial-gradient(1200px 600px at 15% -10%, #FFFFFF 0%, #F2F4F7 55%, #EAEEF4 100%);
+  --surface:      #FFFFFF;
+  --surface-2:    #F7F9FB;
+  --surface-3:    #EDF1F6;
+  --ink:          #14181F;
+  --ink-2:        #4A5361;
+  --ink-3:        #7C8695;
+  --line:         #DDE3EA;
+  --line-soft:    #EAEEF3;
+
+  --brand:        #2B4A9B;
+  --brand-ink:    #1D346F;
+  --brand-soft:   rgba(43, 74, 155, 0.09);
+  --brand-line:   rgba(43, 74, 155, 0.28);
+
+  --fluoro:       #FFE45C;   /* 签名色：荧光批注 */
+  --fluoro-ink:   #5A4A00;
+  --fluoro-soft:  rgba(255, 228, 92, 0.38);
+
+  --ok:           #17794A;
+  --ok-soft:      #E2F4EA;
+  --ok-line:      #A8DCC0;
+
+  --bad:          #B3261E;
+  --bad-soft:     #FCEAE8;
+  --bad-line:     #F0BDB8;
+
+  --warn:         #A65F00;
+  --warn-soft:    #FFF3E0;
+
+  --shadow-1: 0 1px 2px rgba(16, 24, 40, .05), 0 1px 3px rgba(16, 24, 40, .06);
+  --shadow-2: 0 4px 12px rgba(16, 24, 40, .07), 0 2px 4px rgba(16, 24, 40, .05);
+  --shadow-3: 0 18px 44px rgba(16, 24, 40, .14), 0 4px 12px rgba(16, 24, 40, .07);
+
+  --focus: 0 0 0 3px rgba(43, 74, 155, .32);
+
+  /* ---------- 间距 ---------- */
+  --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;  --sp-4: 16px;
+  --sp-5: 20px;  --sp-6: 24px;  --sp-7: 32px;  --sp-8: 40px;
+  --sp-9: 56px;
+
+  /* ---------- 圆角 ---------- */
+  --r-xs: 4px; --r-sm: 7px; --r-md: 11px; --r-lg: 16px; --r-xl: 22px; --r-pill: 999px;
+
+  /* ---------- 字号 ---------- */
+  --fs-xs: .75rem;   --fs-sm: .84rem;   --fs-base: .95rem;
+  --fs-md: 1.02rem;  --fs-lg: 1.15rem;  --fs-xl: 1.4rem;
+  --fs-2xl: 1.75rem; --fs-3xl: 2.3rem;
+
+  --lh-tight: 1.3;
+  --lh-body: 1.78;
+
+  /* ---------- 字体 ---------- */
+  --font-sans: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+               "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+  --font-serif: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC",
+                "SimSun", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Consolas", "SFMono-Regular", monospace;
+
+  /* ---------- 动效（只 3 处，且受 prefers-reduced-motion 控制） ---------- */
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 380ms;
+  --ease-out: cubic-bezier(.22, .61, .36, 1);
+
+  /* ---------- 布局 ---------- */
+  --hud-h: 60px;
+  --col-filter: 268px;
+  --col-card: 236px;
+  --max-w: 1440px;
+}
+
+/* ---------- 主题：暗色（夜间自习台灯） ---------- */
+html[data-theme="dark"] {
+  --paper:        #14161B;
+  --paper-grad:   radial-gradient(1200px 600px at 15% -10%, #1D2129 0%, #14161B 58%, #101216 100%);
+  --surface:      #1B1E25;
+  --surface-2:    #20242C;
+  --surface-3:    #272C36;
+  --ink:          #E7EAF0;
+  --ink-2:        #A7B0BF;
+  --ink-3:        #737D8C;
+  --line:         #2C313B;
+  --line-soft:    #242832;
+
+  --brand:        #7B9BFF;
+  --brand-ink:    #A9C0FF;
+  --brand-soft:   rgba(123, 155, 255, .14);
+  --brand-line:   rgba(123, 155, 255, .34);
+
+  --fluoro:       #C8A800;
+  --fluoro-ink:   #14161B;
+  --fluoro-soft:  rgba(200, 168, 0, .26);
+
+  --ok:           #4ED08A;
+  --ok-soft:      rgba(78, 208, 138, .13);
+  --ok-line:      rgba(78, 208, 138, .38);
+
+  --bad:          #FF8074;
+  --bad-soft:     rgba(255, 128, 116, .13);
+  --bad-line:     rgba(255, 128, 116, .36);
+
+  --warn:         #E5A24A;
+  --warn-soft:    rgba(229, 162, 74, .14);
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .40);
+  --shadow-2: 0 6px 16px rgba(0, 0, 0, .46);
+  --shadow-3: 0 22px 50px rgba(0, 0, 0, .60);
+
+  --focus: 0 0 0 3px rgba(123, 155, 255, .38);
+}
+
+/* ---------- 动效降级 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-1: 0ms; --dur-2: 0ms; --dur-3: 0ms; }
+  *, *::before, *::after {
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html[data-motion="off"] *,
+html[data-motion="off"] *::before,
+html[data-motion="off"] *::after {
+  animation-duration: 0ms !important;
+  transition-duration: 0ms !important;
+}

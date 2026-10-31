@@ -117,3 +117,15 @@ Lighthouse 打分留给托管方自测；平台门禁只拦结构性缺失（man
 
 **后果**：本地构建产物与线上 blob 逐字节一致，可用 SHA 直接比对，不用再靠「目测没差别」。
 
+## D22 · 镜像补全为「正本 tools 全量」（2026-10-31）
+
+**决策**：把高数正本 `5-docs\高等数学复习资料\tools` 的**全部源码**同步进镜像 `sources/calculus/tools/`（此前只有 `qa_bank/` + 6 个构建脚本），与线代镜像的形态一致（线代镜像本来就带 `assets/`、`template.html`、`research/`）。同步由常驻脚本 `tools/platform/sync_mirror.py` 执行（新增 `--subject` 登记与 `--check` 漂移模式），默认排除 `__pycache__`、`*.pyc`、`_cache`（高数 `research/_cache` 实测 156 MB 外部抓取缓存）、`_drops*.jsonl`（2 MB 日志）。
+
+**理由**：高数站的前端源码——`assets/js/**`（21 个文件，含刚修完 BUG-12 的 `ui/render.js`）、`build_static.py`、`build_single.py`、`template_v2.html`、三道 JS 门禁（`check_keyboard_contract.js` 等）、`tests/**`、以及 676 道真题的出题脚本 `research/build_kaoyan_bank.py` 等——**只存在于裸目录，任何版本控制里都没有**；`5-docs` 下只有 `quiz-platform` 是 git 仓，线代与高数正本都是裸目录。磁盘一坏，刚验完的 BUG-12 修复和新门禁就永久丢失。D10 已经把「镜像是正本 tools 的拷贝」写成决策，**高数镜像缺的那部分不是设计选择，是漏同步**——所以另立一个仓会直接违反 D10。
+
+**后果**：
+- 高数镜像 88 → **176 文件**，与正本**逐字节一致**（`sync_mirror.py --check` 退出 0）；补进前端 201 KB、出题与审计脚本约 1.3 MB、`tests/` 32 KB。
+- 镜像对 CI **完全惰性**：`build_all.py` 只调用各学科 `build_subject.py`，高数那份只读 `qa_bank/` 与门禁脚本，从不读 `assets/`；`validate_platform.py` 的外链检查显式跳过 `sources/` 与 `tools/`。⇒ 补镜像不改变 `dist/` 与 `subjects/` 的任何字节。
+- `sources/*/tools/research/_cache/` 已进 `.gitignore` 兜底。
+- **判据**：`sync_mirror.py --check` 在镜像漂移时退出 1（本次实测：同步前报「缺 88 个」并退出 1，同步后 0 差异并退出 0）。
+

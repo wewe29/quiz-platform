@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F2F4F7">
+<title>大学《高等数学》题库刷题</title>
+<meta name="description" content="大学高等数学题库刷题：按章节与知识点筛选，计时、即时判题、错题本、收藏、统计与键盘快捷键，零外部依赖。">
+/*__HEAD__*/
+</head>
+<body>
+<a class="skip-link" href="#quiz">跳到题目区</a>
+
+<header class="hud" id="hud">
+  <div class="hud-inner">
+    <div class="hud-top">
+      <div class="hud-title">
+        <h1>大学《高等数学》题库刷题</h1>
+        <p class="hud-sub" id="hud-sub">同济第七版 12 章 · 按章节与知识点筛选 · 支持键盘快捷键</p>
+      </div>
+      <div class="hud-metrics">
+        <div class="metric"><span class="metric-k">进度</span><span class="metric-v" id="m-progress">0 / 0</span></div>
+        <div class="metric"><span class="metric-k">用时</span><span class="metric-v" id="m-time">00:00</span></div>
+        <div class="metric"><span class="metric-k">得分</span><span class="metric-v" id="m-score">0 / 0</span></div>
+        <div class="metric"><span class="metric-k">得分率</span><span class="metric-v" id="m-rate">—</span></div>
+        <div class="metric"><span class="metric-k">客观正确率</span><span class="metric-v" id="m-acc">—</span></div>
+      </div>
+    </div>
+    <div class="progress" role="progressbar" aria-label="答题进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+    <div class="hud-actions">
+      <button type="button" class="btn" id="btn-finish">结束本次并结算</button>
+      <button type="button" class="btn" id="btn-reset">重新开始</button>
+      <button type="button" class="btn btn-ghost" id="btn-stats">统计<span class="kbd-hint">（S）</span></button>
+      <button type="button" class="btn btn-ghost" id="btn-wrong">错题本<span class="kbd-hint">（Shift+B）</span></button>
+      <button type="button" class="btn btn-ghost" id="btn-fav">收藏<span class="kbd-hint">（F）</span></button>
+      <button type="button" class="btn btn-ghost" id="btn-card">答题卡<span class="kbd-hint">（Shift+C）</span></button>
+      <button type="button" class="btn btn-ghost" id="btn-theme">深色<span class="kbd-hint">（Shift+D）</span></button>
+      <button type="button" class="btn btn-ghost" id="btn-keys">快捷键<span class="kbd-hint">（?）</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="banner" id="storage-warn" hidden>当前浏览器无法使用本地存储，本次作答记录关闭后不会保留。</div>
+
+<div class="layout">
+  <aside class="side" id="filters" aria-label="筛选与排序">
+    <details class="filter-block" open>
+      <summary>题型</summary>
+      <div class="filter-body"><div class="chips" id="f-types"></div></div>
+    </details>
+    <details class="filter-block" open>
+      <summary>难度</summary>
+      <div class="filter-body"><div class="chips" id="f-diffs"></div></div>
+    </details>
+    <details class="filter-block" open>
+      <summary>章节</summary>
+      <div class="filter-body"><div class="chips" id="f-chapters"></div></div>
+    </details>
+    <details class="filter-block">
+      <summary>知识点</summary>
+      <div class="filter-body"><div id="f-kp"></div></div>
+    </details>
+    <details class="filter-block">
+      <summary>出处类型</summary>
+      <div class="filter-body"><div class="chips" id="f-kinds"></div></div>
+    </details>
+    <details class="filter-block" open>
+      <summary>练习设置</summary>
+      <div class="filter-body">
+        <div class="field">
+          <label for="f-order">排序</label>
+          <select id="f-order">
+            <option value="difficulty_desc">难度降序（困难 → 基础，默认）</option>
+            <option value="difficulty_asc">难度升序（基础 → 困难）</option>
+            <option value="chapter">按章节顺序</option>
+            <option value="type">按题型顺序</option>
+          </select>
+        </div>
+        <label class="switch"><input type="checkbox" id="f-shuffle"><span>随机乱序</span></label>
+        <label class="switch"><input type="checkbox" id="f-wrongonly"><span>只看错题本</span></label>
+        <label class="switch"><input type="checkbox" id="f-favonly"><span>只看收藏</span></label>
+        <div class="field">
+          <label for="f-kw">关键词</label>
+          <input type="search" id="f-kw" placeholder="题干 / 解析中搜索…">
+        </div>
+        <p class="hint" id="f-count">—</p>
+      </div>
+    </details>
+    <details class="filter-block">
+      <summary>题库说明</summary>
+      <div class="filter-body about">
+        <p><b>内容基准</b>：以同济大学数学系《高等数学》第七版（上、下册，高等教育出版社）章节体系为基准。</p>
+        <p><b>真题来源</b>：考研数学真题与高校期末真题。每题在解析末尾标注<b>出处</b>、<b>年份 / 卷别 / 题号</b>与<b>可点开的来源链接</b>；改编题一律带「真题改编」标记并写明改编依据。</p>
+        <p><b>判分口径</b>：客观题自动判分；简答与计算题<b>由你按采分点自评</b>（得到 / 未得到），不伪装成自动判分。</p>
+        <p><b>多选计分</b>：全对得满分；<b>少选、错选均 0 分</b>。</p>
+        <p><b>零外部依赖</b>：公式渲染库与字体全部内嵌，页面运行时<b>不发任何网络请求</b>，断网亦可使用。</p>
+      </div>
+    </details>
+  </aside>
+
+  <main id="quiz" class="quiz" tabindex="-1"></main>
+
+  <aside class="card-panel" id="card-panel" aria-label="答题卡">
+    <div class="card-head">
+      <span>答题卡</span>
+      <span class="muted" id="card-count">0 题</span>
+    </div>
+    <div class="card-legend">
+      <span><i class="lg-done"></i>答对</span>
+      <span><i class="lg-wrong"></i>答错</span>
+      <span><i class="lg-now"></i>当前</span>
+    </div>
+    <div class="card-grid" id="card-grid"></div>
+  </aside>
+</div>
+
+<div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-label="抽屉">
+  <div class="drawer-head">
+    <h2 id="drawer-title">面板</h2>
+    <button type="button" class="btn btn-icon btn-ghost" id="drawer-close" aria-label="关闭">✕</button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+  <div class="drawer-foot" id="drawer-foot"></div>
+</aside>
+
+<footer class="foot" id="foot"></footer>
+
+<script>/*__BANK_JS__*/</script>
+<script>/*__KATEX_JS__*/</script>
+<script>/*__SCRIPTS__*/</script>
+</body>
+</html>

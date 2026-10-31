@@ -10,3 +10,7 @@ platform-dist/
 # 于是「源码 ↔ 成品逐字段一致」这道门禁长期拿旧成品做比对，形同虚设。
 # 门禁已改为显式传 QUIZ_HTML（见 tools/update_site.py 的 GATES），产物不再入库。
 sources/*/01《线性代数》题库刷题网页.html
+
+# 学科正本里的外部抓取缓存（高数 research/_cache 实测 156 MB）不是源码，
+# 镜像同步脚本默认排除；这里再加一道兜底，防止有人直接 git add 时把它带进仓库。
+sources/*/tools/research/_cache/

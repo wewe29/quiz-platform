@@ -1,0 +1,236 @@
+{
+ "sources": [
+  {
+   "url": "https://kaoyan.xdf.cn/202606/15252944.html",
+   "title": "2020–2025 考研数学（数一 / 数二 / 数三）经典题型完整整合",
+   "items": 10
+  },
+  {
+   "url": "https://kaoyan.xdf.cn/202606/15252931.html",
+   "title": "2020-2025 考研数学经典题型整合（高数 + 线代 + 概率）",
+   "items": 10
+  }
+ ],
+ "items": [
+  {
+   "year": 2021,
+   "paper": "数学二",
+   "label": "真题（2021 数二）",
+   "module": "模块 1 函数极限（选择 / 填空）",
+   "topic": "题型 1 0/0、\\infty/\\infty型极限（泰勒 / 洛必达）【数一 / 二 / 三全考】",
+   "stemRaw": "limx\\to0​x3ex-1-x-2x2​​",
+   "explainRaw": "泰勒展开：ex=1+x+2x2​+6x3​+o(x3) 分子=6x3​+o(x3) 原式=x\\to0lim​x36x3​​=61​",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252944.html",
+   "sourceTitle": "2020–2025 考研数学（数一 / 数二 / 数三）经典题型完整整合"
+  },
+  {
+   "year": 2022,
+   "paper": "数学三",
+   "label": "真题（2022 数三）",
+   "module": "模块 1 函数极限（选择 / 填空）",
+   "topic": "题型 2 1^\\infty幂指函数极限【数一 / 二 / 三】",
+   "stemRaw": "limx\\to\\infty​(1+x3​)2x",
+   "explainRaw": "标准公式 x\\to\\inftylim​(1+xa​)bx=eab 原式=e3\\times2=e6",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252944.html",
+   "sourceTitle": "2020–2025 考研数学（数一 / 数二 / 数三）经典题型完整整合"
+  },
+  {
+   "year": 2020,
+   "paper": "数学一",
+   "label": "真题（2020 数一）",
+   "module": "模块 2 数列极限（单调有界准则，大题高频）【数一 / 二常考，数三偶尔】",
+   "topic": "题型 2 1^\\infty幂指函数极限【数一 / 二 / 三】",
+   "stemRaw": "设 x1​=1,xn+1​=21​(xn​+xn​3​)，证明数列收敛并求极限。",
+   "explainRaw": "",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252944.html",
+   "sourceTitle": "2020–2025 考研数学（数一 / 数二 / 数三）经典题型完整整合"
+  },
+  {
+   "year": 2023,
+   "paper": "数学二",
+   "label": "真题（2023 数二）",
+   "module": "模块 3 导数与微分、中值定理（大题核心）",
+   "topic": "题型 1 隐函数、参数方程求导【数一 / 二，数三常考】",
+   "stemRaw": "y=y(x)由 exy+x2=1 确定，求 y'(0)",
+   "explainRaw": "两边对x求导： exy(y+xy')+2x=0 代入x=0，得e0\\cdoty(0)=1\\text{rArr?}y(0)=0 带回式子：1\\cdot(0+0)+0=0，整理：y'(0)=0",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252944.html",
+   "sourceTitle": "2020–2025 考研数学（数一 / 数二 / 数三）经典题型完整整合"
+  },
+  {
+   "year": 2024,
+   "paper": "数学二",
+   "label": "真题（2024 数二）",
+   "module": "模块 4 一元积分（大题，数二分值最高）",
+   "topic": "题型 1 定积分计算、分段积分",
+   "stemRaw": "\\int0\\pi​∣cosx∣dx",
+   "explainRaw": "分段：； =\\int02\\pi​​cosxdx-\\int2\\pi​\\pi​cosxdx=sinx​02\\pi​​-sinx​2\\pi​\\pi​=1-(0-1)=2",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252944.html",
+   "sourceTitle": "2020–2025 考研数学（数一 / 数二 / 数三）经典题型完整整合"
+  },
+  {
+   "year": 2022,
+   "paper": "数学二",
+   "label": "真题（2022 数二）",
+   "module": "模块 4 一元积分（大题，数二分值最高）",
+   "topic": "题型 2 旋转体体积（数二重中之重，数一考空间旋转，数三考平面经济体积）",
+   "stemRaw": "y=sinx,x\\in[0,\\pi]绕x轴旋转，求体积 公式：V=\\pi\\intab​y2dx V=\\pi\\int0\\pi​sin2xdx=\\pi\\int0\\pi​21-cos2x​dx=2\\pi2​",
+   "explainRaw": "",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252944.html",
+   "sourceTitle": "2020–2025 考研数学（数一 / 数二 / 数三）经典题型完整整合"
+  },
+  {
+   "year": 2024,
+   "paper": "数学一",
+   "label": "真题（2024 数一）",
+   "module": "模块 5 多元函数微分学（全考）",
+   "topic": "题型 条件极值 拉格朗日乘数法【数一 / 三大题，数二常规计算】",
+   "stemRaw": "求 z=x+y 在 x2+y2=1 下的极值 构造 F=x+y+\\lambda(1-x2-y2) 偏导： Fx​=1-2\\lambdax=0,\\text{nbsp?}Fy​=1-2\\lambday=0,\\text{nbsp?}F\\lambda​=1-x2-y2=0 得x=y，解得 x=y=\\text{plusmn?}22​​ 极大值2​，极小值-2​",
+   "explainRaw": "",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252944.html",
+   "sourceTitle": "2020–2025 考研数学（数一 / 数二 / 数三）经典题型完整整合"
+  },
+  {
+   "year": 2020,
+   "paper": "数学一",
+   "label": "真题（2020 数一）",
+   "module": "模块 6 微分方程（三科）",
+   "topic": "题型 二阶常系数非齐次线性微分方程",
+   "stemRaw": "求解 y''-2y'+y=xex",
+   "explainRaw": "",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252944.html",
+   "sourceTitle": "2020–2025 考研数学（数一 / 数二 / 数三）经典题型完整整合"
+  },
+  {
+   "year": 2022,
+   "paper": "数学三",
+   "label": "真题（2022 数三）",
+   "module": "题型 1 矩阵秩、AB=O结论（选择题必出）",
+   "topic": "题型 二阶常系数非齐次线性微分方程",
+   "stemRaw": "A=​123​246​3t9​​，B为 3 阶非零矩阵，AB=O，求t。 核心结论 ：AB=O\\text{rArr?}r(A)+r(B)\\len，B=O\\text{rArr?}r(A)\\text{lt?}3 行变换： A\\to​100​200​3t-60​​ 秩小于 3，则第二行全零，t=6",
+   "explainRaw": "",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252944.html",
+   "sourceTitle": "2020–2025 考研数学（数一 / 数二 / 数三）经典题型完整整合"
+  },
+  {
+   "year": 2023,
+   "paper": "数学二",
+   "label": "真题（2023 数二）",
+   "module": "x_1+x_2-2x_3=1\\\\ 2x_1-x_2-x_3=3\\\\ 3x_1+2x_2+ax_3=4 \\end{cases}$$ 讨论$a$取值，判断解的情况。 增广矩阵行变换： $$\\overline{A}\\to\\begin{pmatrix}1\\text{amp?}1\\text{amp?}-2\\text{amp?}1\\\\0\\text{amp?}-3\\text{amp?}3\\text{amp?}1\\\\0\\text{amp?}0\\text{amp?}a+1\\text{amp?}-2\\end{pmatrix}$$ 1. $a=-1$：$r(A)=2，r(\\overline{A})=3$，**无解** 2. $a\\neq-1$：秩均为3，**解** ## 题型3 特征值、相似对角化、二次型（线代压轴大题） #### 真题（2024数一） $A=\\begin{pmatrix}2\\text{amp?}1\\\\1\\text{amp?}2\\end{pmatrix}$，求特征值、特征向量，判断可否对角化 特征方程：$|\\lambda E-A|=(\\lambda-1)(\\lambda-3)=0$ 特征值$\\lambda_1=1,\\lambda_2=3$，特征值互不相同，**必可对角化** $\\lambda_1=1$特征向量：$k_1\\begin{pmatrix}-1\\\\1\\end{pmatrix}$；$\\lambda_2=3$特征向量：$k_2\\begin{pmatrix}1\\\\1\\end{pmatrix}$ # 第三篇 概率论与数理统计（仅数一、数三考查，数二不考） ## 题型1 全概率公式与贝叶斯公式（选择高频） #### 真题（2025数一） 独立做3次试验，单次成功率$p$，已知至少成功1次，三次全成功的概率为$\\frac{4}{13}$，求$p$。 设$A$：三次全成功，$B$：至少成功一次 $$P(A|B)=\\frac{P(A)}{P(B)}=\\frac{p^3}{1-(1-p)^3}=\\frac{4}{13}$$ 解方程得：$\\boldsymbol{p=\\dfrac{2}{3}}$ #### 例题：袋2白1黑，不放回取两次，第二次取白球概率 全概率公式解得结果：$\\boldsymbol{\\dfrac{2}{3}}$ ## 题型2 数字特征：期望、方差、协方差 #### 真题（2024数三） $X\\sim U(0,1)$，$f_Y(y)=\\begin{cases}2y,0\\text{lt?}y\\text{lt?}1\\\\0,其他\\end{cases}$，$X,Y$相互独立，求$\\mathrm{Cov}(X,Y)$ **结论：独立随机变量协方差一定为0**，答案$\\boldsymbol{0}$ ## 题型3 数理统计（数一+数三） 数一：区间估计、假设检验；数三侧重样本均值、方差、大数定律、中心极限定理。 # 三科题型精简对照表 | 模块 | 数一 | 数二 | 数三 | | ---- | ---- | ---- | ---- | | 极限导数积分 | 全部题型 | 全部（分值最高） | 全部，偏计算 | | 多元积分 | 三重积分、曲面积分 | 二重积分 | 二重积分，无空间积分 | | 无穷级数 | 常数项级数、幂级数、傅里叶级数 | ❌不考 | 幂级数（经济应用） | | 微分方程 | 全类型 | 常微分为主 | 常微分+差分方程 | | 线性代数 | 完整考点 | 完整考点 | 完整考点，二次型考得多 | | 概率论 | 完整（含假设检验） | ❌不考 | 完整，侧重经济概率模型 | # 刷题使用建议 1. 数二考生：直接跳过第三篇概率论，高数重点攻克一元积分、微分方程； 2. 数三考生：不用钻研数一的空间积分、傅里叶级数，多练概率的经济应用题； 3. 数一考生：全覆盖，曲线曲面积分、级数为拉开分差的难点题型。",
+   "topic": "题型 二阶常系数非齐次线性微分方程",
+   "stemRaw": "更多详情，可以持续关注 新东方考研网 ，为你提供甘肃历年考研资讯信息，帮助大家了解更多考研相关信息。",
+   "explainRaw": "",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252944.html",
+   "sourceTitle": "2020–2025 考研数学（数一 / 数二 / 数三）经典题型完整整合"
+  },
+  {
+   "year": 2021,
+   "paper": "数学二",
+   "label": "【2021 数二真题原题】",
+   "module": "第一部分 高等数学（分值占比最高，每年备考）",
+   "topic": "题型 1：0/0 型未定式极限（2021 数二、2024 数一、2025 数三备考）",
+   "stemRaw": "limx\\to0​x3ex-1-x-2x2​​",
+   "explainRaw": "方法 1：泰勒展开（解法） ex=1+x+2!x2​+3!x3​+o(x3)=1+x+2x2​+6x3​+o(x3) 代入分子： ex-1-x-2x2​=6x3​+o(x3) 原式 方法 2：洛必达法则（连续 3 次求导） limx\\to0​3x2ex-1-x​=limx\\to0​6xex-1​=limx\\to0​6ex​=61​",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252931.html",
+   "sourceTitle": "2020-2025 考研数学经典题型整合（高数 + 线代 + 概率）"
+  },
+  {
+   "year": 2020,
+   "paper": "数学一",
+   "label": "【2020 数一真题原题】",
+   "module": "第一部分 高等数学（分值占比最高，每年备考）",
+   "topic": "题型 2：单调有界准则求数列极限（2020 数一、2023 数二大题）",
+   "stemRaw": "设 x1​=1,\\text{nbsp?}xn+1​=21​(xn​+xn​3​)，证明{xn​}收敛，并求n\\to\\inftylim​xn​。",
+   "explainRaw": "",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252931.html",
+   "sourceTitle": "2020-2025 考研数学经典题型整合（高数 + 线代 + 概率）"
+  },
+  {
+   "year": 2022,
+   "paper": "数学二",
+   "label": "【2022 数二真题原题】",
+   "module": "第一部分 高等数学（分值占比最高，每年备考）",
+   "topic": "题型 3：定积分旋转体体积（2022 数二、2025 数二高频大题）",
+   "stemRaw": "曲线 y=sinx,\\text{nbsp?}x\\in[0,\\pi] 绕x轴旋转一周，求旋转体体积。",
+   "explainRaw": "绕 x 轴旋转体积公式：V=\\pi\\intab​y2dx V=\\pi\\int0\\pi​sin2xdx=\\pi\\int0\\pi​21-cos2x​dx =2\\pi​(x-2sin2x​)​0\\pi​=2\\pi2​",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252931.html",
+   "sourceTitle": "2020-2025 考研数学经典题型整合（高数 + 线代 + 概率）"
+  },
+  {
+   "year": 2024,
+   "paper": "数学一",
+   "label": "【2024 数一真题改编原题】",
+   "module": "第一部分 高等数学（分值占比最高，每年备考）",
+   "topic": "题型 4：多元函数条件极值（拉格朗日乘数法，2024 数一、2023 数三）",
+   "stemRaw": "求 z=x+y 在约束条件 x2+y2=1 下的极值。",
+   "explainRaw": "构造拉格朗日函数：F(x,y,\\lambda)=x+y+\\lambda(1-x2-y2) 求偏导联立方程组：",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252931.html",
+   "sourceTitle": "2020-2025 考研数学经典题型整合（高数 + 线代 + 概率）"
+  },
+  {
+   "year": 2020,
+   "paper": "数学一",
+   "label": "【2020 数一真题原题】",
+   "module": "第一部分 高等数学（分值占比最高，每年备考）",
+   "topic": "题型 5：二阶常系数非齐次线性微分方程（2020 数一、2023 数三备考）",
+   "stemRaw": "求微分方程 y''-2y'+y=xex 的通解。",
+   "explainRaw": "",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252931.html",
+   "sourceTitle": "2020-2025 考研数学经典题型整合（高数 + 线代 + 概率）"
+  },
+  {
+   "year": 2022,
+   "paper": "数学三",
+   "label": "【2022 数三真题原题】",
+   "module": "第二部分 线性代数（一二三通用，题型固定套路极强）",
+   "topic": "题型 1：AB=O 型矩阵秩判断（2022 数三、2024 数一选择题）",
+   "stemRaw": "A=​123​246​3t9​​，B为 3 阶非零矩阵，AB=O，求t的值。",
+   "explainRaw": "核心结论：AB=O⟹r(A)+r(B)\\le3；B=O⟹r(B)\\ge1⟹r(A)\\text{lt?}3。 对A初等行变换： A=​100​200​3t-60​​ 若r(A)\\text{lt?}3，第二行必须全零，得t=6。",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252931.html",
+   "sourceTitle": "2020-2025 考研数学经典题型整合（高数 + 线代 + 概率）"
+  },
+  {
+   "year": 2023,
+   "paper": "数学二",
+   "label": "【2023 数二真题原题】",
+   "module": "第二部分 线性代数（一二三通用，题型固定套路极强）",
+   "topic": "题型 2：线性方程组解的判定与通解（每年大题备考，2021、2023、2025）",
+   "stemRaw": "方程组⎩⎨⎧​x1​+x2​-2x3​=12x1​-x2​-x3​=33x1​+2x2​+ax3​=4​，讨论a取何值时无解 / 有无穷多解，并求通解。",
+   "explainRaw": "增广矩阵初等行变换： A=​123​1-12​-2-1a​134​​\\to​100​1-30​-23a+1​11-2​​",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252931.html",
+   "sourceTitle": "2020-2025 考研数学经典题型整合（高数 + 线代 + 概率）"
+  },
+  {
+   "year": 2024,
+   "paper": "数学一",
+   "label": "【2024 数一真题节选】",
+   "module": "第二部分 线性代数（一二三通用，题型固定套路极强）",
+   "topic": "题型 3：特征值与相似对角化（2024 数一、2025 数三大题）",
+   "stemRaw": "求矩阵A=(21​12​)的特征值、特征向量，并判断是否可对角化。",
+   "explainRaw": "",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252931.html",
+   "sourceTitle": "2020-2025 考研数学经典题型整合（高数 + 线代 + 概率）"
+  },
+  {
+   "year": 2024,
+   "paper": "数学三",
+   "label": "【2024 数三真题原题】",
+   "module": "第三部分 概率论与数理统计（数一、数三考，数二不考）",
+   "topic": "题型 1：二维均匀分布协方差计算（2024 数三真题）",
+   "stemRaw": "X,Y相互独立，X\\simU(0,1)，fY​(y)={2y,0,​0\\text{lt?}y\\text{lt?}1其他​，求Cov(X,Y)。",
+   "explainRaw": "独立随机变量性质： 相互独立的随机变量协方差必为 0 ，直接得： Cov(X,Y)=0",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252931.html",
+   "sourceTitle": "2020-2025 考研数学经典题型整合（高数 + 线代 + 概率）"
+  },
+  {
+   "year": 2025,
+   "paper": "数学一",
+   "label": "【2025 数一真题原题】",
+   "module": "第三部分 概率论与数理统计（数一、数三考，数二不考）",
+   "topic": "题型 2：全概率公式（2021 数三、2025 数一选择题）",
+   "stemRaw": "试验每次成功率为p，独立做 3 次重复试验，已知 至少成功 1 次 的条件下，三次全都成功的概率为134​，求p。",
+   "explainRaw": "设A：三次全成功，B：至少成功 1 次。所求条件概率P(A∣B)=P(B)P(AB)​=P(B)P(A)​ P(A)=p3,P(B)=1-(1-p)3 1-(1-p)3p3​=134​ 化简解得：p=32​。",
+   "sourceUrl": "https://kaoyan.xdf.cn/202606/15252931.html",
+   "sourceTitle": "2020-2025 考研数学经典题型整合（高数 + 线代 + 概率）"
+  }
+ ]
+}

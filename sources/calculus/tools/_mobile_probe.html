@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>移动端 390×844 探针（临时）</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #2A2D33; font: 12px/1.7 Consolas, monospace; color: #E8EAED; }
+  iframe { display: block; width: 390px; height: 844px; border: 0; background: #fff; }
+  #diag { padding: 10px 12px; white-space: pre-wrap; background: #16181D; border-bottom: 1px solid #333; }
+  #diag.bad { background: #3A1418; color: #FF9B9B; }
+  #diag.ok  { background: #12261A; color: #8BE9A8; }
+</style>
+</head>
+<body>
+<!-- 临时探针：把站点装进 390×844 的 iframe，让内层文档拿到真实的 390px 视口。
+     同源 ⇒ 父页可直接读内层的 scrollWidth / 元素坐标 / 面板状态，输出到 #diag。
+     验收后删除。 -->
+<div id="diag">诊断中…</div>
+<iframe id="fr" src="index.html" title="390x844"></iframe>
+<script>
+var fr = document.getElementById('fr');
+fr.addEventListener('load', function () {
+  var d = fr.contentDocument, w = fr.contentWindow;
+  var de = d.documentElement, b = d.body;
+  var L = [];
+  function put(k, v, bad) { L.push((bad ? '[X] ' : '[ok] ') + k + '：' + v); }
+
+  // 1) 横向溢出
+  var sw = Math.max(de.scrollWidth, b.scrollWidth), cw = de.clientWidth;
+  put('内层视口', w.innerWidth + '×' + w.innerHeight);
+  put('横向溢出', sw > cw + 1 ? '是（超出 ' + (sw - cw) + 'px）' : '否（scrollWidth=' + sw + ' ≤ clientWidth=' + cw + '）', sw > cw + 1);
+
+  // 2) 最靠右的元素
+  var maxR = 0, worst = '—', all = d.querySelectorAll('*');
+  for (var i = 0; i < all.length; i++) {
+    var r = all[i].getBoundingClientRect();
+    if (!r.width && !r.height) continue;
+    if (r.right > maxR) { maxR = r.right; worst = all[i].tagName + (all[i].id ? '#' + all[i].id : '') + (all[i].className ? '.' + String(all[i].className).split(' ')[0] : ''); }
+  }
+  put('最右元素', 'right=' + Math.round(maxR) + 'px（' + worst + '）', maxR > 390.5);
+
+  // 3) 视觉顺序：题目区必须在筛选区之上
+  var q = d.querySelector('.quiz'), s = d.querySelector('.side');
+  var qt = q.getBoundingClientRect().top + w.scrollY, st = s.getBoundingClientRect().top + w.scrollY;
+  put('题目区 top', Math.round(qt) + 'px');
+  put('筛选区 top', Math.round(st) + 'px');
+  put('题目在筛选之上', qt < st ? '是' : '否', qt >= st);
+
+  // 4) 筛选块默认折叠
+  var blocks = d.querySelectorAll('#filters details.filter-block');
+  var opened = d.querySelectorAll('#filters details.filter-block[open]');
+  put('筛选块默认展开', opened.length + ' / ' + blocks.length, opened.length > 0);
+
+  // 5) HUD 高度
+  var hud = d.querySelector('.hud').getBoundingClientRect().height;
+  put('HUD 高度', Math.round(hud) + 'px', hud > 220);
+
+  // 6) HUD 按钮行横向可滚 + 「答题卡」按钮可达
+  var ha = d.querySelector('.hud-actions');
+  put('HUD 按钮行', 'scrollWidth=' + ha.scrollWidth + ' clientWidth=' + ha.clientWidth + (ha.scrollWidth > ha.clientWidth ? '（可横向滚动）' : '（无需滚动）'));
+  var bc = d.getElementById('btn-card');
+  ha.scrollLeft = ha.scrollWidth;
+  var br = bc.getBoundingClientRect();
+  var inside = br.left >= -0.5 && br.right <= w.innerWidth + 0.5;
+  put('「答题卡」按钮可达', '滚动后 rect=[' + Math.round(br.left) + ',' + Math.round(br.right) + '] 视口宽 ' + w.innerWidth + ' → ' + (inside ? '完整可见' : '不可见'), !inside);
+
+  // 7) 真点一次「答题卡」，看面板是否打开
+  bc.click();
+  setTimeout(function () {
+    var panel = d.getElementById('card-panel');
+    var grid = d.querySelectorAll('#card-grid .card-cell').length;
+    var openedNow = panel.classList.contains('open');
+    put('点击后 card-panel.open', openedNow ? 'true' : 'false', !openedNow);
+    put('答题卡格子数', grid, grid <= 0);
+    var pr = panel.getBoundingClientRect();
+    put('答题卡面板 rect', 'left=' + Math.round(pr.left) + ' right=' + Math.round(pr.right) + '（视口 ' + w.innerWidth + '）', pr.left < -0.5 || pr.right > w.innerWidth + 0.5);
+    var diag = document.getElementById('diag');
+    var bad = L.join('\n').indexOf('[X]') >= 0;
+    diag.textContent = L.join('\n');
+    diag.className = bad ? 'bad' : 'ok';
+  }, 400);
+});
+</script>
+</body>
+</html>
