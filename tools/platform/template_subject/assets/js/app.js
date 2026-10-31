@@ -561,10 +561,14 @@
   }
 
   function refreshOrder() {
-    session.order = computeOrder();
+    // 组卷模式（pinnedOrder）：练习集已固定，筛选面板的变动不影响本卷——
+    // 退出组卷用「恢复全库」按钮或「重新开始」
+    if (!session.pinnedOrder) {
+      session.order = computeOrder();
+      writeHash();   // 筛选状态同步到 URL（可分享/刷新还原）
+    }
     if (session.cursor >= session.order.length) session.cursor = Math.max(0, session.order.length - 1);
     session.updatedAt = now();
-    writeHash();   // 筛选状态同步到 URL（可分享/刷新还原）
   }
 
   /** 恢复的会话顺序可能来自**旧题库**（题库扩容/换版后旧记录仍在）。
@@ -971,7 +975,11 @@
     pb.setAttribute('aria-valuenow', Math.round(pct));
     pb.setAttribute('aria-valuemax', total);
     updateHudTime();
-    $('#f-count').textContent = '当前筛选：' + total + ' 题（题库共 ' + QUESTIONS.length + ' 题）';
+    if (session.pinnedOrder) {
+      $('#f-count').textContent = '📌 组卷练习：' + total + ' 题（退出组卷后恢复全库 ' + QUESTIONS.length + ' 题）';
+    } else {
+      $('#f-count').textContent = '当前筛选：' + total + ' 题（题库共 ' + QUESTIONS.length + ' 题）';
+    }
   }
 
   /* ---------- 统计面板 ---------- */
@@ -1361,6 +1369,106 @@
     }
   }
 
+  /* ---------- 组卷练习（E1：先选范围和数量，生成固定练习集） ---------- */
+  var builder = { chapters: [], types: [], diffs: [], onlyUnanswered: false, count: 10, mode: 'random' };
+
+  function builderPool() {
+    return QUESTIONS.filter(function (q) {
+      if (builder.chapters.length && builder.chapters.indexOf(q.chapter) < 0) return false;
+      if (builder.types.length && builder.types.indexOf(q.type) < 0 &&
+          !(builder.types.indexOf('short') >= 0 && q.typeGroup === 'short')) return false;
+      if (builder.diffs.length && builder.diffs.indexOf(q.difficulty) < 0) return false;
+      if (builder.onlyUnanswered && session.answers[q.id]) return false;
+      return true;
+    });
+  }
+
+  function renderBuilder() {
+    var from = builderPool();
+    $('#b-pool').textContent = '题库池：' + from.length + ' 题（目标 ' + builder.count + ' 题）';
+    var chipRowB = function (container, items, selected, key) {
+      var box = $(container);
+      box.innerHTML = '';
+      items.forEach(function (it) {
+        var lab = document.createElement('label');
+        lab.className = 'chip' + (selected.indexOf(it.key) >= 0 ? ' is-on' : '');
+        var cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.checked = selected.indexOf(it.key) >= 0;
+        cb.addEventListener('change', function () {
+          var arr = builder[key].slice();
+          var i = arr.indexOf(it.key);
+          if (cb.checked && i < 0) arr.push(it.key);
+          if (!cb.checked && i >= 0) arr.splice(i, 1);
+          builder[key] = arr;
+          renderBuilder();
+        });
+        lab.appendChild(cb);
+        lab.appendChild(document.createTextNode(it.label));
+        box.appendChild(lab);
+      });
+    };
+    chipRowB('#b-chapters', CHAPTERS.map(function (c) {
+      var short = ((META.subject.chapterShortLabels || {})[c.n]);
+      return { key: c.n, label: short || ('第' + c.n + '章') };
+    }), builder.chapters, 'chapters');
+    chipRowB('#b-types', TYPE_GROUPS.map(function (t) {
+      return { key: t.key, label: t.label, };
+    }), builder.types, 'types');
+    chipRowB('#b-diffs', DIFFS.map(function (d) { return { key: d.key, label: d.label }; }),
+      builder.diffs, 'diffs');
+    $('#b-count').value = builder.count;
+    $('#b-mode').value = builder.mode;
+    $('#b-unanswered').checked = builder.onlyUnanswered;
+  }
+
+  function generateQuiz() {
+    var pool = builderPool();
+    if (!pool.length) { showToast('当前范围没有题目，请放宽条件', 'bad'); return; }
+    var picked;
+    if (builder.mode === 'random') {
+      picked = pool.slice();
+      for (var i = picked.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = picked[i]; picked[i] = picked[j]; picked[j] = t;
+      }
+      picked = picked.slice(0, Math.min(builder.count, pool.length));
+    } else if (builder.mode === 'unanswered') {
+      var fresh = pool.filter(function (q) { return !session.answers[q.id]; });
+      var rest = pool.filter(function (q) { return session.answers[q.id]; });
+      picked = fresh.concat(rest).slice(0, Math.min(builder.count, pool.length));
+    } else if (builder.mode === 'wrongonly') {
+      picked = pool.filter(function (q) { return state.wrongBook[q.id] && !state.wrongBook[q.id].resolved; });
+      if (!picked.length) { showToast('该范围内没有待订正的错题', 'bad'); return; }
+      picked = picked.slice(0, Math.min(builder.count, picked.length));
+    } else { // asc：难度升序（基础 → 困难）
+      picked = pool.slice().sort(function (a, b) {
+        return DIFF_RANK[a.difficulty] - DIFF_RANK[b.difficulty] || a.chapter - b.chapter;
+      }).slice(0, Math.min(builder.count, pool.length));
+    }
+    // 固定练习集：pinnedOrder 让筛选面板不再改写本卷
+    session.pinnedOrder = true;
+    session.order = picked.map(function (q) { return q.id; });
+    session.cursor = 0;
+    session.builderLabel = '组卷 ' + picked.length + ' 题';
+    session.updatedAt = now();
+    saveMerged();
+    $('#panel-builder').hidden = true;
+    renderFilters(); render();
+    showToast('已生成 ' + picked.length + ' 题练习集，开始作答', 'ok');
+    scrollToCard(session.order[0]);
+  }
+
+  function exitPinned() {
+    if (!session.pinnedOrder) { showToast('当前不是组卷模式', 'bad'); return; }
+    session.pinnedOrder = false;
+    session.builderLabel = null;
+    session.updatedAt = now();
+    saveMerged();
+    refreshOrder(); renderFilters(); render();
+    showToast('已恢复全库练习（组卷集已结束）', 'ok');
+  }
+
   /* ---------- 初始化 ---------- */
   function init() {
     load();
@@ -1442,6 +1550,21 @@
     $('#btn-wrong-clear').addEventListener('click', function () {
       state.wrongBook = {};
       saveMerged(); renderWrong();
+    });
+    $('#btn-builder').addEventListener('click', function () {
+      var p = $('#panel-builder');
+      p.hidden = !p.hidden;
+      if (!p.hidden) { renderBuilder(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    });
+    $('#b-generate').addEventListener('click', generateQuiz);
+    $('#b-exit').addEventListener('click', exitPinned);
+    $('#b-count').addEventListener('input', function (e) {
+      builder.count = Math.max(1, Math.min(200, parseInt(e.target.value, 10) || 10));
+      renderBuilder();
+    });
+    $('#b-mode').addEventListener('change', function (e) { builder.mode = e.target.value; });
+    $('#b-unanswered').addEventListener('change', function (e) {
+      builder.onlyUnanswered = e.target.checked; renderBuilder();
     });
     $('#btn-wrong-print').addEventListener('click', function () {
       document.body.classList.add('print-wrong');

@@ -44,6 +44,7 @@
     </div>
     <div class="hud-actions">
       <button type="button" class="btn" id="btn-finish">结束本次并结算</button>
+      <button type="button" class="btn btn-primary" id="btn-builder">组卷练习</button>
       <button type="button" class="btn" id="btn-reset">重新开始（清空本次）</button>
       <button type="button" class="btn btn-ghost" id="btn-stats">统计面板</button>
       <button type="button" class="btn btn-ghost" id="btn-wrong">错题本</button>
@@ -115,6 +116,31 @@
     <div class="empty" id="boot-hint">题库加载中…</div>
   </main>
 </div>
+
+<section class="panel" id="panel-builder" hidden aria-label="组卷练习">
+  <h2>组卷练习 <span class="muted">先选范围和数量，生成一份固定练习集</span></h2>
+  <div class="builder-row"><span class="builder-k">章节</span><div class="chips" id="b-chapters"></div></div>
+  <div class="builder-row"><span class="builder-k">题型</span><div class="chips" id="b-types"></div></div>
+  <div class="builder-row"><span class="builder-k">难度</span><div class="chips" id="b-diffs"></div></div>
+  <div class="builder-row">
+    <span class="builder-k">数量</span>
+    <input type="number" id="b-count" min="1" max="200" value="10" class="b-count">
+    <span class="builder-k">抽取</span>
+    <select id="b-mode" class="b-mode">
+      <option value="random">随机抽题</option>
+      <option value="unanswered">优先未作答</option>
+      <option value="wrongonly">只抽待订正错题</option>
+      <option value="asc">难度升序（基础 → 困难）</option>
+    </select>
+    <label class="switch"><input type="checkbox" id="b-unanswered"><span>仅未作答</span></label>
+  </div>
+  <div class="builder-actions">
+    <button type="button" class="btn btn-primary" id="b-generate">生成并开始练习</button>
+    <button type="button" class="btn btn-ghost" id="b-exit">退出组卷（恢复全库）</button>
+    <span class="hint" id="b-pool">—</span>
+  </div>
+  <p class="hint">组卷后的练习集固定不变：左侧筛选与题库浏览不会改写本卷；「重新开始」或「退出组卷」恢复全库练习。</p>
+</section>
 
 <section class="panel" id="panel-stats" hidden aria-label="统计面板">
   <h2>统计面板</h2>
