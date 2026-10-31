@@ -46,6 +46,9 @@ def main():
         raise SystemExit("[build_all] sources/ 下没有登记任何学科（应有 sources/<id>/tools）")
 
     extra = ["--skip-gates"] if args.skip_gates else []
+    # 学科门禁链里的单文件构建（build_quiz）需要 KaTeX 发行版：
+    # 统一注入平台级 vendor 路径，任何镜像都不必各自携带 3MB dist（CI/异机同理）。
+    platform_katex = os.path.join(PLATFORM, "tools", "vendor", "katex", "dist")
     for sid in ids:
         print("=" * 60)
         print("[subject] %s" % sid)
@@ -57,7 +60,7 @@ def main():
         run([sys.executable, os.path.join(sources, sid, "tools", "build_subject.py"),
              "--out", out] + extra,
             cwd=os.path.join(sources, sid, "tools"), label="%s 门禁+导出" % sid,
-            extra_env={"QUIZ_PROJECT_DIR": env_tmp})
+            extra_env={"QUIZ_PROJECT_DIR": env_tmp, "KATEX_DIR": platform_katex})
         run([sys.executable, os.path.join(HERE, "katex_assets.py"),
              "--subject-dir", out],
             cwd=HERE, label="%s KaTeX 自托管" % sid)
