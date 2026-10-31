@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>复习刷题平台</title>
 <meta name="description" content="多学科大学课程刷题平台：线性代数（500 题）、高等数学（856 题）已上线，机器学习、数据可视化接计划接入。逐题解析与考点出处，进度本地保存，可安装、可离线。">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/portal.css">
 <script>
@@ -18,6 +22,10 @@
 </head>
 <body>
 <a class="skip-link" href="#portal-main">跳到主内容</a>
+
+<div class="sw-banner" id="sw-banner" hidden>
+  检测到新版本。<button type="button" class="btn btn-sm" id="sw-reload">立即刷新</button>
+</div>
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -57,5 +65,36 @@
 </footer>
 
 <script src="assets/js/portal.js"></script>
+<script>
+/* PWA：仅 HTTPS（或 localhost）注册；SW 失效不影响任何页面功能 */
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  var ok = location.protocol === 'https:' ||
+    location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+  if (!ok) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').then(function (reg) {
+      function banner() {
+        var b = document.getElementById('sw-banner');
+        if (b && reg.waiting && navigator.serviceWorker.controller) b.hidden = false;
+      }
+      banner();
+      reg.addEventListener('updatefound', function () {
+        var w = reg.installing;
+        if (!w) return;
+        w.addEventListener('statechange', function () { if (w.state === 'installed') banner(); });
+      });
+      var btn = document.getElementById('sw-reload');
+      if (btn) btn.addEventListener('click', function () {
+        if (reg.waiting) reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+      });
+      var refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        if (!refreshing) { refreshing = true; location.reload(); }
+      });
+    }).catch(function () {});
+  });
+})();
+</script>
 </body>
 </html>

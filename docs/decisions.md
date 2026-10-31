@@ -65,3 +65,20 @@
 3. **三级比较**——字符串 → 浮点 → `simplify(val - expected) == 0`（处理 `sin(pi/2)**2/8` 与 `1/8` 这类数学等价但形态不同的结果）。
 
 **理由**：三条都是本轮真实踩到并修掉的缺陷；执行器行为差异会造成「数据其实没错、门禁却拦」或反向漏拦。
+
+## D17 · 进度导出/导入契约与 SW 策略（2026-10-31，迭代 3）
+
+**导出/导入契约**（`quiz-platform-progress` v1）：
+- 导出 = `{kind, version:1, subject, bankId, exportedAt, stats, checksum, state}`；
+  `state` 只含 `v/sessions/wrongBook`（settings 与 stats 不走文件——stats 由会话重算，settings 属本机偏好）；
+- `checksum` = 对 `JSON.stringify({v, sessions, wrongBook})` 的 djb2（32 位 hex）。导入端对解析后的 state
+  重新序列化再校验——键序即原文件键序，跨设备成立；
+- 合并规则：会话按 id 取 `updatedAt` 较新者；错题本按键合并（错次取大、订正状态取或、时间取新）；
+  settings 保留本机。bankId 不同也允许导入（失效题号在渲染层自动跳过）；
+- 导入入口为**粘贴文本**（模态框 textarea），不依赖 file input——IAB/部分内嵌浏览器禁文件选择器，
+  粘贴路径全环境可用；下载 `.json` 仅是导出侧的便利副本。
+
+**SW 策略**：导航 network-first（更新可达）+ 同域 assets/data 走 stale-while-revalidate（首访后离线可用）；
+activate 清旧缓存；`SKIP_WAITING` + 页面「检测到新版本」横幅 + controllerchange 自动刷新。
+注册仅在 HTTPS 或 localhost 生效——纯 HTTP 托管自动降级为普通网页（见实施方案迭代 3 约束）。
+Lighthouse 打分留给托管方自测；平台门禁只拦结构性缺失（manifest 字段/图标存在/sw 清理逻辑/注册与横幅齐备）。

@@ -92,7 +92,7 @@ def main():
         if os.path.isdir(dist):
             shutil.rmtree(dist)
         os.makedirs(dist)
-        for name in ("index.html", "assets", "subjects"):
+        for name in ("index.html", "sw.js", "manifest.webmanifest", "assets", "subjects"):
             src = os.path.join(PLATFORM, name)
             dst = os.path.join(dist, name)
             if os.path.isdir(src):

@@ -226,6 +226,50 @@ def check_subject_shell(sid, sdir):
                 err("%s: app.js 未调用 %s（R2 未接线）" % (sid, sym))
 
 
+def check_pwa(platform):
+    """PWA 结构门禁（迭代 3）：manifest / 图标 / sw.js / 页面注册齐备。
+    Lighthouse 打分属托管方自测（部署不在本项目范围）；这里拦「结构性缺失」。"""
+    mf = os.path.join(platform, "manifest.webmanifest")
+    if not os.path.isfile(mf):
+        err("缺 manifest.webmanifest")
+        return
+    try:
+        m = json.load(open(mf, encoding="utf-8"))
+        for k in ("name", "start_url", "display", "icons"):
+            if k not in m:
+                err("manifest.webmanifest 缺 %s" % k)
+        icons = m.get("icons") or []
+        if not any(i.get("src", "").endswith(".png") for i in icons):
+            warn("manifest 图标缺 PNG（部分浏览器安装要求 PNG）")
+        for i in icons:
+            p = os.path.join(platform, i.get("src", ""))
+            if not os.path.isfile(p):
+                err("manifest 图标不存在：%s" % i.get("src"))
+    except Exception as e:
+        err("manifest.webmanifest 解析失败：%s" % e)
+
+    sw = os.path.join(platform, "sw.js")
+    if not os.path.isfile(sw):
+        err("缺 sw.js")
+    else:
+        txt = open(sw, encoding="utf-8").read()
+        for need in ("activate", "SKIP_WAITING", "caches.delete"):
+            if need not in txt:
+                err("sw.js 缺 %s（版本清理/SKIP_WAITING 是更新横幅的前提）" % need)
+
+    for rel in ("index.html", os.path.join("subjects", "linalg", "index.html"),
+                os.path.join("subjects", "calculus", "index.html")):
+        p = os.path.join(platform, rel)
+        if not os.path.isfile(p):
+            continue
+        txt = open(p, encoding="utf-8").read()
+        if "serviceWorker" not in txt:
+            err("%s 缺 SW 注册脚本" % rel)
+        if "sw-banner" not in txt:
+            err("%s 缺 SW 更新横幅" % rel)
+    print("  [pwa] manifest/sw/注册/横幅 结构齐备" if not errors else "  [pwa] 见 FAIL 项")
+
+
 def main():
     subjects_dir = os.path.join(PLATFORM, "subjects")
     reg_path = os.path.join(subjects_dir, "registry.json")
@@ -259,6 +303,8 @@ def main():
         print("  [check] 学科 %s" % sid)
         check_subject(subjects_dir, sid)
         check_subject_shell(sid, os.path.join(subjects_dir, sid))
+
+    check_pwa(PLATFORM)
 
     check_external_refs(PLATFORM)
 

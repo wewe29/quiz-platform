@@ -1,0 +1,17 @@
+{
+  "name": "复习刷题平台",
+  "short_name": "刷题平台",
+  "description": "多学科大学课程刷题小应用：线代、高数等，逐题解析与采分点自评，进度保存在本地。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fbfbfc",
+  "theme_color": "#1d4ed8",
+  "icons": [
+    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "maskable" }
+  ]
+}

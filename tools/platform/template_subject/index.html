@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>大学《__SUBJECT_NAME__》题库刷题 · 复习刷题平台</title>
 <meta name="description" content="__SUBJECT_DESC__刷题子站：六题型、三难度、逐题解析与考点出处，全站资源自托管，进度保存在本地。">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icons/icon-180.png">
 <link rel="stylesheet" href="../../assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/subject.css">
 <link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
@@ -45,10 +48,15 @@
       <button type="button" class="btn btn-ghost" id="btn-stats">统计面板</button>
       <button type="button" class="btn btn-ghost" id="btn-wrong">错题本</button>
       <button type="button" class="btn btn-ghost" id="btn-sheet">答题卡</button>
+      <button type="button" class="btn btn-ghost" id="btn-share">分享</button>
       <button type="button" class="btn btn-ghost" id="btn-theme">主题：跟随系统</button>
     </div>
   </div>
 </header>
+
+<div class="sw-banner" id="sw-banner" hidden>
+  检测到新版本。<button type="button" class="btn btn-sm" id="sw-reload">立即刷新</button>
+</div>
 
 <div class="storage-warn" id="storage-warn" hidden>当前浏览器无法使用本地存储，本次作答记录不会被保存。</div>
 
@@ -92,6 +100,10 @@
       </div>
       <p class="hint kbd-hint">⌨️ 单题模式：← → 切题 · A–D 选选项 · Enter 确认多选</p>
       <p class="hint" id="f-count">—</p>
+      <div class="data-row">
+        <button type="button" class="btn btn-sm" id="btn-export">导出进度</button>
+        <button type="button" class="btn btn-sm" id="btn-import">导入进度</button>
+      </div>
     </details>
     <details class="filter-block">
       <summary>题库说明</summary>
@@ -124,9 +136,27 @@
   <div class="wrong-actions">
     <button type="button" class="btn" id="btn-wrong-practice">只练这些题</button>
     <button type="button" class="btn btn-ghost" id="btn-wrong-clear">清空错题本</button>
+    <button type="button" class="btn btn-ghost" id="btn-wrong-print">打印错题集</button>
   </div>
   <div id="wrong-list"></div>
 </section>
+
+<div class="modal" id="data-modal" hidden>
+  <div class="modal-box">
+    <h3 id="data-modal-title">导出进度</h3>
+    <textarea id="data-text" rows="9" spellcheck="false"
+      placeholder="导出时这里会填入进度 JSON；导入时把此前导出的 JSON 粘贴到这里。"></textarea>
+    <div class="modal-actions">
+      <button type="button" class="btn btn-sm" data-role="data-copy">复制</button>
+      <button type="button" class="btn btn-sm" data-role="data-download">下载 .json</button>
+      <button type="button" class="btn btn-sm btn-primary" data-role="data-apply">从文本导入</button>
+      <button type="button" class="btn btn-sm btn-ghost" data-role="data-close">关闭</button>
+    </div>
+    <p class="hint" id="data-hint"></p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
 
 <footer class="foot">
   <div id="foot-dynamic"></div>
@@ -139,5 +169,36 @@
 <script src="assets/js/core/store.js"></script>
 <script src="assets/js/core/bank.js"></script>
 <script src="assets/js/app.js"></script>
+<script>
+/* PWA：仅 HTTPS（或 localhost）下注册；注册失败静默——页面全部功能不依赖 SW */
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  var ok = location.protocol === 'https:' ||
+    location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+  if (!ok) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('../../sw.js').then(function (reg) {
+      function banner() {
+        var b = document.getElementById('sw-banner');
+        if (b && reg.waiting && navigator.serviceWorker.controller) b.hidden = false;
+      }
+      banner();
+      reg.addEventListener('updatefound', function () {
+        var w = reg.installing;
+        if (!w) return;
+        w.addEventListener('statechange', function () { if (w.state === 'installed') banner(); });
+      });
+      var btn = document.getElementById('sw-reload');
+      if (btn) btn.addEventListener('click', function () {
+        if (reg.waiting) reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+      });
+      var refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        if (!refreshing) { refreshing = true; location.reload(); }
+      });
+    }).catch(function () { /* 无 SW 也能完整使用 */ });
+  });
+})();
+</script>
 </body>
 </html>

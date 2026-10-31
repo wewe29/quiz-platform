@@ -560,6 +560,7 @@
     session.order = computeOrder();
     if (session.cursor >= session.order.length) session.cursor = Math.max(0, session.order.length - 1);
     session.updatedAt = now();
+    writeHash();   // 筛选状态同步到 URL（可分享/刷新还原）
   }
 
   /** 恢复的会话顺序可能来自**旧题库**（题库扩容/换版后旧记录仍在）。
@@ -1038,7 +1039,30 @@
       return;
     }
     ids.sort(function (a, b) { return (state.wrongBook[b].lastWrongAt || 0) - (state.wrongBook[a].lastWrongAt || 0); });
+    // 待订正知识点聚合 Top5：按未订正错题的知识点计数
+    var kpCount = {}, pending = 0;
+    ids.forEach(function (id) {
+      var q = qById[id];
+      if (!q) return;
+      if (!state.wrongBook[id].resolved) {
+        pending++;
+        var k = q.knowledgePoint || '—';
+        kpCount[k] = (kpCount[k] || 0) + 1;
+      }
+    });
     var h = '';
+    if (pending) {
+      var top = Object.keys(kpCount).sort(function (a, b) { return kpCount[b] - kpCount[a]; }).slice(0, 5);
+      var max = kpCount[top[0]] || 1;
+      h += '<div class="wrong-agg"><div class="selfgrade-h">待订正 ' + pending +
+        ' 题 · 知识点 Top ' + top.length + '（点击题号跳原题订正）</div>';
+      top.forEach(function (k) {
+        h += '<div class="bar-row"><span class="bar-name">' + esc(k) + '</span>' +
+          '<span class="bar"><i style="width:' + Math.round(kpCount[k] / max * 100) + '%"></i></span>' +
+          '<span class="bar-n">' + kpCount[k] + ' 题</span></div>';
+      });
+      h += '</div>';
+    }
     ids.forEach(function (id) {
       var q = qById[id];
       if (!q) return;
@@ -1185,10 +1209,160 @@
     }
   }
 
+  /* ---------- 数据自主权：导出 / 导入（D17） ---------- */
+  var EXPORT_KIND = 'quiz-platform-progress';
+  var EXPORT_VERSION = 1;
+
+  function djb2(str) {
+    var h = 5381;
+    for (var i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) >>> 0;
+    return h.toString(16);
+  }
+
+  function buildExportPayload() {
+    var stateJson = JSON.stringify({ v: state.v, sessions: state.sessions, wrongBook: state.wrongBook });
+    return {
+      kind: EXPORT_KIND,
+      version: EXPORT_VERSION,
+      subject: SUBJECT.id,
+      bankId: BANK_ID,
+      exportedAt: new Date().toISOString(),
+      stats: { answered: Object.keys(session ? session.answers : {}).length, wrongBook: Object.keys(state.wrongBook).length },
+      checksum: djb2(stateJson),
+      state: JSON.parse(stateJson)
+    };
+  }
+
+  /** 导入合并：会话按 id 取较新者；错题本按键合并（错次取大、订正状态取或）；
+   *  settings/stat 保留本地（stats 由会话重算）。返回 {merged, sessionsAdded}。 */
+  function applyImportPayload(payload) {
+    if (!payload || payload.kind !== EXPORT_KIND || payload.version !== EXPORT_VERSION) {
+      throw new Error('不是本平台的进度文件（kind/version 不符）');
+    }
+    if (!payload.state || payload.state.v !== 1) throw new Error('进度状态结构不符');
+    var body = JSON.stringify({ v: payload.state.v, sessions: payload.state.sessions, wrongBook: payload.state.wrongBook });
+    if (payload.checksum && djb2(body) !== payload.checksum) throw new Error('校验和不符，文件可能已损坏');
+    var added = 0;
+    Object.keys(payload.state.sessions || {}).forEach(function (sid) {
+      var incoming = payload.state.sessions[sid];
+      var local = state.sessions[sid];
+      if (!local) { state.sessions[sid] = incoming; added++; }
+      else if ((incoming.updatedAt || 0) > (local.updatedAt || 0)) state.sessions[sid] = incoming;
+    });
+    Object.keys(payload.state.wrongBook || {}).forEach(function (qid) {
+      var o = payload.state.wrongBook[qid], m = state.wrongBook[qid];
+      if (!m) { state.wrongBook[qid] = o; return; }
+      m.wrongCount = Math.max(m.wrongCount || 0, o.wrongCount || 0);
+      m.resolved = !!(m.resolved || o.resolved);
+      m.lastWrongAt = Math.max(m.lastWrongAt || 0, o.lastWrongAt || 0);
+      if (!m.firstWrongAt) m.firstWrongAt = o.firstWrongAt;
+    });
+    saveMerged();
+    return { sessionsAdded: added };
+  }
+
+  function showToast(msg, cls) {
+    var t = $('#toast');
+    if (!t) return;
+    t.textContent = msg;
+    t.className = 'toast show' + (cls ? ' ' + cls : '');
+    clearTimeout(showToast._h);
+    showToast._h = setTimeout(function () { t.className = 'toast'; }, 3200);
+  }
+
+  function openDataModal(mode) {
+    var modal = $('#data-modal');
+    var text = $('#data-text');
+    var hint = $('#data-hint');
+    if (!modal) return;
+    $('#data-modal-title').textContent = mode === 'import' ? '导入进度（粘贴 JSON）' : '导出进度';
+    if (mode === 'import') {
+      text.value = '';
+      hint.textContent = '粘贴此前导出的进度 JSON 后点「从文本导入」。合并规则：会话与错题本双向保留，设置以本机为准。';
+    } else {
+      text.value = JSON.stringify(buildExportPayload(), null, 1);
+      hint.textContent = '复制整段 JSON 带走（或点「下载 .json」）；换设备时在目标子站点「导入进度」粘贴。';
+    }
+    modal.hidden = false;
+    text.focus();
+  }
+
+  function downloadExport() {
+    try {
+      var payload = JSON.stringify(buildExportPayload(), null, 1);
+      var blob = new Blob([payload], { type: 'application/json' });
+      var a = document.createElement('a');
+      var d = new Date();
+      a.download = 'quiz-' + SUBJECT.id + '-progress-' +
+        d.getFullYear() + pad2(d.getMonth() + 1) + pad2(d.getDate()) + '.json';
+      a.href = URL.createObjectURL(blob);
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 800);
+      showToast('已开始下载进度文件');
+    } catch (e) {
+      showToast('下载失败，请用「复制」带走', 'bad');
+    }
+  }
+
+  function importFromText() {
+    var text = $('#data-text').value.trim();
+    if (!text) { showToast('请先粘贴进度 JSON', 'bad'); return; }
+    try {
+      var payload = JSON.parse(text);
+      var r = applyImportPayload(payload);
+      $('#data-modal').hidden = true;
+      refreshOrder(); renderFilters(); render();
+      showToast('导入完成：并入 ' + r.sessionsAdded + ' 个新会话（含错题本合并）', 'ok');
+    } catch (e) {
+      showToast('导入失败：' + (e && e.message || e), 'bad');
+    }
+  }
+
+  /* ---------- hash 路由（筛选状态可分享） ---------- */
+  function filterToHash() {
+    var f = session.filter;
+    var p = new URLSearchParams();
+    if (f.chapters && f.chapters.length) p.set('ch', f.chapters.join(','));
+    if (f.types && f.types.length) p.set('type', f.types.join(','));
+    if (f.diffs && f.diffs.length) p.set('diff', f.diffs.join(','));
+    if (f.onlyWrong) p.set('wrong', '1');
+    if (f.kw) p.set('kw', f.kw);
+    var qs = p.toString();
+    return '#/s/' + SUBJECT.id + (qs ? '?' + qs : '');
+  }
+
+  function applyHashToFilter() {
+    var h = location.hash || '';
+    if (h.indexOf('#/s/' + SUBJECT.id) !== 0) return false;
+    var f = session.filter;
+    var q = {};
+    h.slice(('#/s/' + SUBJECT.id).length).replace(/^\?/, '').split('&').forEach(function (kv) {
+      if (!kv) return;
+      var i = kv.indexOf('=');
+      q[kv.slice(0, i)] = decodeURIComponent(kv.slice(i + 1));
+    });
+    f.chapters = q.ch ? q.ch.split(',').map(function (x) { return parseInt(x, 10); }).filter(function (x) { return !isNaN(x); }) : [];
+    f.types = q.type ? q.type.split(',') : [];
+    f.diffs = q.diff ? q.diff.split(',') : [];
+    f.onlyWrong = q.wrong === '1';
+    f.kw = q.kw || '';
+    return true;
+  }
+
+  function writeHash() {
+    var h = filterToHash();
+    if (location.hash !== h) {
+      try { history.replaceState(null, '', h); } catch (e) { location.hash = h; }
+    }
+  }
+
   /* ---------- 初始化 ---------- */
   function init() {
     load();
     ensureSession();
+    // URL hash 携带的筛选状态（分享链接/刷新还原）优先于本地会话的旧筛选
+    if (applyHashToFilter()) refreshOrder();
     if (!session.order.length || orderIsStale()) refreshOrder();
     renderFilters();
     render();
@@ -1265,11 +1439,59 @@
       state.wrongBook = {};
       saveMerged(); renderWrong();
     });
+    $('#btn-wrong-print').addEventListener('click', function () {
+      document.body.classList.add('print-wrong');
+      var done = function () {
+        document.body.classList.remove('print-wrong');
+        window.removeEventListener('afterprint', done);
+      };
+      window.addEventListener('afterprint', done);
+      window.print();
+      setTimeout(done, 2000);  // afterprint 不触发时的兜底
+    });
+    $('#btn-share').addEventListener('click', function () {
+      var url = location.href;
+      var done = function () { showToast('链接已复制，粘贴给同学即可还原同一筛选视图', 'ok'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, function () { fallbackCopy(url); done(); });
+      } else { fallbackCopy(url); done(); }
+    });
+    $('#btn-export').addEventListener('click', function () { openDataModal('export'); });
+    $('#btn-import').addEventListener('click', function () { openDataModal('import'); });
+    $$('[data-role]', $('#data-modal')).forEach(function (btn) {
+      var role = btn.getAttribute('data-role');
+      if (role === 'data-copy') btn.addEventListener('click', function () {
+        var v = $('#data-text').value;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(v).then(function () { showToast('已复制', 'ok'); },
+            function () { fallbackCopy(v); showToast('已复制', 'ok'); });
+        } else { fallbackCopy(v); showToast('已复制', 'ok'); }
+      });
+      else if (role === 'data-download') btn.addEventListener('click', downloadExport);
+      else if (role === 'data-apply') btn.addEventListener('click', importFromText);
+      else if (role === 'data-close') btn.addEventListener('click', function () { $('#data-modal').hidden = true; });
+    });
+    window.addEventListener('hashchange', function () {
+      // 外部触发的 hash 变化（粘贴分享链接/前进后退）→ 反向应用为筛选
+      if (location.hash === filterToHash()) return;   // 自己写入的，忽略
+      if (applyHashToFilter()) { refreshOrder(); renderFilters(); render(); saveMerged(); }
+    });
 
     if (!storageOk) showStorageWarn();
     applyTheme();
     syncHudOffset();
     window.addEventListener('resize', syncHudOffset);
+  }
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    ta.remove();
   }
 
   /** manifest 注入：文案/章节/阈值全部来自构建产物，页面不写死任何题量数字。 */

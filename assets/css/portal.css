@@ -41,3 +41,9 @@
   .topbar-inner{padding:14px;}
   .aggregate{gap:6px 16px;}
 }
+
+/* ---------- SW 更新横幅 ---------- */
+.sw-banner{background:var(--accent-soft);color:#12306f;border-bottom:1px solid var(--rule);
+  padding:8px 20px;font-size:13.5px;text-align:center;}
+.sw-banner[hidden]{display:none;}
+[data-theme="dark"] .sw-banner{color:#b9c8ff;}
