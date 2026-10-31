@@ -36,6 +36,15 @@
    "total": 244,
    "chapters": 8,
    "realExamTagged": 0
+  },
+  {
+   "id": "probstat",
+   "name": "概率论与数理统计",
+   "textbook": "浙江大学《概率论与数理统计》第四版（高等教育出版社）",
+   "url": "subjects/probstat/",
+   "total": 100,
+   "chapters": 8,
+   "realExamTagged": 0
   }
  ]
 }

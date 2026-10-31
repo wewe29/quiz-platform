@@ -1,0 +1,324 @@
+{
+ "chapter": 8,
+ "questions": [
+  {
+   "id": "ps-092",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "假设检验的基本思想是",
+   "options": [
+    "概率反证法（小概率事件在一次试验中几乎不发生）",
+    "数学归纳法",
+    "反证法（逻辑矛盾）",
+    "贝叶斯更新"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：假设检验用小概率原理做概率反证。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础",
+    "假设检验"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-093",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "第一类错误是指",
+   "options": [
+    "$H_0$ 为真时拒绝了 $H_0$",
+    "$H_0$ 为假时接受了 $H_0$",
+    "$H_1$ 为真时拒绝了 $H_1$",
+    "样本量太大"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：第一类错误 = 弃真（$H_0$ 真但拒绝 $H_0$），概率 = α。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "两类错误"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-094",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "$p$ 值的含义是",
+   "options": [
+    "$H_0$ 为假的概率",
+    "在 $H_0$ 成立时，观测到当前或更极端结果的概率",
+    "犯第一类错误的概率",
+    "检验的功效"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$p$ 值 = $H_0$ 成立条件下，当前观测及更极端结果的概率。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "P值"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-095",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "检验正态总体的均值 $H_0:μ=μ_0$（σ 未知），应使用",
+   "options": [
+    "$u$ 检验",
+    "$t$ 检验",
+    "$χ^2$ 检验",
+    "$F$ 检验"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：σ 未知时用 $t=\u0000\u0000\\frac{Χ¯-μ_0}{S/√n}\\sim t(n-1)$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "t检验"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-096",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "关于原假设 $H_0$ 的选取，合理的做法有",
+   "options": [
+    "把不愿轻易否定的结论作为 $H_0$",
+    "把有充分先验依据的结论作为 $H_0$",
+    "等号总是放在 $H_0$ 中",
+    "把想证明的结论作为 $H_0$"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A、B、C 正确。D 错误：想证明的结论应放在 $H_1$（备择假设）中。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "假设检验"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-097",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "关于两类错误，正确的有",
+   "options": [
+    "第一类错误概率 = α（显著性水平）",
+    "第二类错误概率 = β（纳伪）",
+    "样本量增大时 α 和 β 可以同时减小",
+    "α + β = 1"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A、B、C 正确。D 错：α + β ≠ 1（它们是不同条件下的条件概率）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "两类错误"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-098",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "假设检验拒绝了 $H_0$，说明 $H_0$ 一定是错误的。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：拒绝 $H_0$ 只是说「在 α 水平下有充分证据反对 $H_0$」，仍可能犯第一类错误。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "假设检验"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-099",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "显著性水平 α = 0.05 表示当 $H_0$ 为真时，拒绝 $H_0$ 的概率不超过 ______。",
+   "options": null,
+   "answer": [
+    "$0.05$"
+   ],
+   "accept": [
+    "0.05",
+    "5%"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：α 就是第一类错误概率的上界。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "显著性水平"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-100",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "某零件长度标准为 μ = 10cm。取样本 $n = 16$，$Χ¯ = 10.2$，$S = 0.4$。取 α = 0.05（$t_{0.025}(15) = 2.131$），检验 $H_0: μ = 10$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**建立假设**：$H_0: μ = 10$，$H_1: μ ≠ 10$（双侧检验）。\n**检验统计量**：σ 未知，用 $t$ 检验：\n$t = \u0000\u0000\\frac{Χ¯ - μ_0}{S/√n} = \u0000\u0000\\frac{10.2 - 10}{0.4/4} = \u0000\u0000\\frac{0.2}{0.1} = 2$\n**判断**：$|t| = 2 < 2.131 = t_{0.025}(15)$，不在拒绝域内，**接受 $H_0$**。\n**结论**：在 0.05 水平下，没有充分证据表明均值偏离标准。",
+   "points": [
+    {
+     "text": "正确建立双侧假设",
+     "partial": 2
+    },
+    {
+     "text": "选择 $t$ 检验（σ 未知）",
+     "partial": 2
+    },
+    {
+     "text": "计算 $t = 2$",
+     "partial": 2
+    },
+    {
+     "text": "$|t| < t_{0.025}$，接受 $H_0$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§8.2 正态总体均值的 $t$ 检验（σ 未知，小样本）。",
+   "misconception": "⚠️ σ 未知时用 $t$ 检验（不是 $u$ 检验）；双侧检验用 $α/2$ 查表。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "t检验"
+   ],
+   "verify": [
+    {
+     "desc": "t 统计量",
+     "code": "(10.2-10)/(0.4/4)",
+     "expected": "2"
+    }
+   ],
+   "variantGroup": null
+  }
+ ]
+}

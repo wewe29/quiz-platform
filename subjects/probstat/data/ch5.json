@@ -1,0 +1,288 @@
+{
+ "chapter": 5,
+ "questions": [
+  {
+   "id": "ps-059",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "依概率收敛的定义：$X_n\\xrightarrow{P}a$ 意味着",
+   "options": [
+    "$\\forall\\varepsilon>0,\\lim P(|X_n-a|\\ge\\varepsilon)=0$",
+    "$\\lim X_n=a$（逐点）",
+    "$P(|X_n-a|=0)\\to1$",
+    "$\\mathrm{Var}(X_n)\\to0$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：依概率收敛的定义是 A——对任意 $ε>0$，$|X_n-a|\\ge\\varepsilon$ 的概率趋于 0。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "依概率收敛"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-060",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "切比雪夫大数定律要求 $X_1,\\dots,X_n$ 两两不相关且方差一致有界，结论是",
+   "options": [
+    "$\\frac{1}{n}\\sum X_i\\xrightarrow{P}E(X_i)$（相同的期望）",
+    "$\\bar{X}\\to0$",
+    "$E(X_n)\\to0$",
+    "$D(X_n)\\to0$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：样本均值依概率收敛于数学期望。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "大数定律"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-061",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "伯努利大数定律说的是",
+   "options": [
+    "频率 $\\frac{n_A}{n}\\xrightarrow{P}p$（事件概率）",
+    "样本方差趋于总体方差",
+    "$E(X_n)\\to\\mu$",
+    "独立同分布且方差有限"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：伯努利大数定律——频率依概率收敛于概率。A 正确。\n**创新点**：这是「频率估计概率」的理论依据（蒙特卡洛方法的基础）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "创新题",
+    "伯努利大数定律"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-062",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X_1,\\dots,X_n$ 独立同分布，$E(X_i)=\\mu, D(X_i)=\\sigma^2$。当 $n$ 充分大时，$\\bar{X}$ 近似服从",
+   "options": [
+    "$N(\\mu,\\sigma^2)$",
+    "$N(\\mu,\\sigma^2/n)$",
+    "$N(0,1)$",
+    "$N(0,\\sigma^2)$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：中心极限定理应用于 $Ω=ΣX_i$，再标准化。$Ω\\approx N(nμ,nσ^2)$，$Ω/n=Χ¯$ 近似 $N(μ,σ^2/n)$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "CLT"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-063",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "关于大数定律，正确的有",
+   "options": [
+    "伯努利大数定律是频率估计概率的理论依据",
+    "辛钦大数定律要求独立同分布且期望存在",
+    "切比雪夫大数定律允许不同分布但方差一致有界",
+    "大数定律说的是算术平均趋于零"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A、B、C 正确。D 错：算术平均趋于数学期望（不是零）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "大数定律"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-064",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "依概率收敛与高等数学中的数列极限（逐点收敛）是同一个概念。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：依概率收敛 weaker——$|X_n-a|\\geε$ 的概率趋于 0，不要求每项都接近。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "依概率收敛"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-065",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X_i$ 独立同分布于 $B(1,0.5)$，$n=100$。由 De Moivre-Laplace 定理，$P(40\\le\\sum X_i\\le60)\\approx$ ______（$\\Phi(2)=0.9772$）。",
+   "options": null,
+   "answer": [
+    "$0.9544$"
+   ],
+   "accept": [
+    "0.9544",
+    "0.95"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\sum X_i\\sim B(100,0.5)$，$E=50, D=25$。标准化 $P(-2\\le Z\\le2)=2Φ(2)-1=0.9544$。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "CLT",
+    "高频"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-066",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "某车间有 200 台车床独立工作，开工率 0.6。每台开工时耗电 1 千瓦。问供电所至少供应多少千瓦电，才能以 99.9% 的概率保证正常生产？（$\\Phi(3)=0.9987$）",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$X=\\sum X_i\\sim B(200,0.6)$，$E=120, D=48$。\n$P(X\\le k)\\ge0.999$，标准化 $P\\left(Z\\le\\frac{k-120}{\\sqrt{48}}\\right)\\ge0.999$。\n$\\frac{k-120}{\\sqrt{48}}\\ge3\\Rightarrow k\\ge120+3\\sqrt{48}\\approx120+20.8=140.8$。\n取 $k=141$（向上取整），即至少供应 **141 千瓦**。",
+   "points": [
+    {
+     "text": "识别为 De Moivre-Laplace 模型",
+     "partial": 2
+    },
+    {
+     "text": "标准化并求临界值",
+     "partial": 2
+    },
+    {
+     "text": "$k\\ge141$",
+     "partial": 2
+    },
+    {
+     "text": "向上取整说明",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§5.3 中心极限定理（De Moivre-Laplace）。\n**考点出处**：浙大《概率论与数理统计》第四版 §5.3；题型改编自：经典模型（供电问题）。",
+   "misconception": "⚠️ 向上取整——供电量是整数且必须超过临界值。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "CLT"
+   ],
+   "verify": [
+    {
+     "desc": "3*sqrt(48)",
+     "code": "round(120+3*sp.sqrt(48))",
+     "expected": "141"
+    }
+   ],
+   "variantGroup": null
+  }
+ ]
+}

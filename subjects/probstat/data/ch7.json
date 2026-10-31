@@ -1,0 +1,442 @@
+{
+ "chapter": 7,
+ "questions": [
+  {
+   "id": "ps-080",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "点估计的含义是",
+   "options": [
+    "用样本的函数（统计量）作为未知参数的近似值",
+    "给出参数的一个区间",
+    "对参数做假设检验",
+    "求参数的精确值"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：点估计 = 用统计量的值估计未知参数。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础",
+    "点估计"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-081",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "矩估计法的基本思想是",
+   "options": [
+    "使似然函数最大",
+    "用样本矩替换总体矩",
+    "使估计量无偏",
+    "使均方误差最小"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：矩估计 = 样本矩替换总体矩（大数定律保证合理性）。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "矩估计"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-082",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "极大似然估计法的基本思想是",
+   "options": [
+    "选取使观测到的样本出现概率最大的参数值",
+    "使样本矩等于总体矩",
+    "使方差最小",
+    "使偏差绝对值最小"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：极大似然 = 最大化 L(θ)。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "极大似然"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-083",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $E(X)=μ$，$T_1,T_2$ 是 μ 的两个无偏估计且 $D(T_1)<D(T_2)$，则",
+   "options": [
+    "$T_1$ 比 $T_2$ 有效",
+    "$T_2$ 比 $T_1$ 有效",
+    "两者一样好",
+    "无法比较"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：有效性 = 均无偏时方差小者有效。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "有效性"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-084",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim U(0,θ)$，$X_1,\\dots,X_n$ 为样本，则 θ 的极大似然估计为",
+   "options": [
+    "$2Χ¯$",
+    "$X_{(n)}=\\max(X_i)$",
+    "$\\frac{1}{n}ΣX_i$",
+    "$X_{(1)}=\\min(X_i)$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$L(θ)=\u0000\u0000\\prod\\frac{1}{θ}=θ^{-n}$（$0≤X_i≤θ$），θ 越小 L 越大，但 θ≥X_{(n)}，故 $\\hat{θ}=X_{(n)}$。B 正确。\n**创新点**：MLE 可能不在驻点处取得（边界最优），这与光滑情形不同。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "创新题",
+    "极大似然",
+    "均匀分布"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-085",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "关于矩估计和极大似然估计，正确的有",
+   "options": [
+    "矩估计用样本矩替换总体矩",
+    "极大似然估计使似然函数最大",
+    "两者可能给出不同结果",
+    "矩估计一定优于极大似然估计"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A、B、C 正确。D 错：两种方法各有优劣，无优劣必然关系。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "估计方法"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-086",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim N(μ,σ^2)$（σ 已知），μ 的 95% 置信区间是 $Χ¯\\pm1.96σ/√n$。正确的有",
+   "options": [
+    "置信水平 0.95 表示区间覆盖真值的概率",
+    "n 越大区间越短",
+    "σ 越大区间越宽",
+    "置信区间包含 μ 的概率是 0 或 1"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A、B、C 正确。D 错：频率学派解释——区间是随机的，μ 是固定值。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "置信区间"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-087",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "basic",
+   "chapter": 7,
+   "knowledgePoint": "7.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "置信区间 $[Χ¯±1.96σ/√n]$ 覆盖 $μ$ 的概率是 95%。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：95% 指的是「重复抽样时区间覆盖 μ」的频率。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "置信区间"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-088",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "无偏估计一定是有效估计。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：无偏是有效的前提（都无偏才比方差），但无偏不一定有效（可能方差很大）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "无偏性"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-089",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim P(λ)$，$X_1,\\dots,X_n$ 为样本，则 λ 的矩估计为 ______。",
+   "options": null,
+   "answer": [
+    "$Χ¯$"
+   ],
+   "accept": [
+    "样本均值",
+    "x̄"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$E(X)=λ$，用样本均值替换。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "矩估计"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-090",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim E(λ)$（密度 $f=λe^{-λx}$），$X_1,\\dots,X_n$ 为样本。求 λ 的矩估计和极大似然估计。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**矩估计**：$E(X)=1/λ$，令 $1/λ=Χ¯$，得 $\\hat{λ}_{矩}=1/Χ¯$。\n**极大似然**：$L(λ)=λ^n e^{-λΣX_i}$，$\\ln L=nλ-λΣX_i$，令导数为零：$n-ΣX_i=0$，$\\hat{λ}_{MLE}=1/Χ¯$。\n两者相同。",
+   "points": [
+    {
+     "text": "矩估计 $=1/Χ¯$",
+     "partial": 2
+    },
+    {
+     "text": "写出似然函数并取对数",
+     "partial": 2
+    },
+    {
+     "text": "MLE $=1/Χ¯$",
+     "partial": 2
+    },
+    {
+     "text": "两种方法结果一致",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§7.1 矩估计与极大似然估计。",
+   "misconception": "⚠️ 极大似然要检查驻点是否为最大值点（本题 $\\ln L$ 关于 λ 是凹的）。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "估计"
+   ],
+   "verify": [
+    {
+     "desc": "E(X)=1/λ",
+     "code": "1/Rational(1,2)",
+     "expected": "2"
+    }
+   ],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-091",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim N(μ,σ^2)$，$σ$ 未知，$X_1,\\dots,X_n$ 为样本。求 σ² 的极大似然估计。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "对数似然 $\\ln L=-\u0000\u0000\\frac{n}{2}\u0000\u0000\\ln(2π)-\u0000\u0000\\frac{n}{2}\u0000\u0000\\lnσ^2-\u0000\u0000\\frac{1}{2σ^2}Σ(X_i-μ)^2$\n对 σ² 求导并令为零：$\\hat{σ}^2=\u0000\u0000\\frac{1}{n}Σ(X_i-μ)^2$\nμ 未知时用 $Χ¯$ 替代：$\\hat{σ}^2=\u0000\u0000\\frac{1}{n}Σ(X_i-Χ¯)^2$\n**创新点**：MLE 的分母是 $n$ 而不是 $n-1$——所以 MLE 的 σ² 是**有偏**的。",
+   "points": [
+    {
+     "text": "写出对数似然函数",
+     "partial": 2
+    },
+    {
+     "text": "求导并令为零",
+     "partial": 2
+    },
+    {
+     "text": "得到 $\\hat{σ}^2=\\frac{1}{n}Σ(X_i-Χ¯)^2$",
+     "partial": 2
+    },
+    {
+     "text": "说明 MLE 有偏（分母 $n$ 而非 $n-1$）",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§7.1 极大似然估计。",
+   "misconception": "⚠️ MLE 的分母是 $n$（有偏），无偏估计用 $n-1$。",
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "MLE"
+   ],
+   "verify": [
+    {
+     "desc": "MLE 有偏",
+     "code": "True",
+     "expected": "True"
+    }
+   ],
+   "variantGroup": null
+  }
+ ]
+}
