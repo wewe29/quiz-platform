@@ -16,6 +16,10 @@
 import os
 
 from .latex import fix_structure as _fix_latex   # noqa: E402
+from .target import (TOTAL as TARGET_TOTAL,          # noqa: E402  口径单一事实源
+                     BY_TYPE as TARGET_BY_TYPE,
+                     BY_DIFF as TARGET_BY_DIFF,
+                     BY_CHAPTER as TARGET_BY_CHAPTER)
 
 # ---------------------------------------------------------------- 题型常量
 SINGLE, MULTI, JUDGE, BLANK, TERM, SHORT, CALC = (
@@ -146,7 +150,7 @@ def load_bank(chapters=None):
     """载入 ch1..ch12 全部题目，按 (章节, 题型, 难度, 知识点) 稳定排序并分配 idx。
 
     chapters 为 None 时载入全部十二章；缺失的章会被跳过并打印提示，
-    便于分章写作期间做「部分构建」预览（正式构建仍要求 180 题）。
+    便于分章写作期间做「部分构建」预览（正式构建的题量口径见 qa_bank/target.py）。
     """
     here = os.path.dirname(os.path.abspath(__file__))
     order = ["ch1", "ch2", "ch3", "ch4", "ch5", "ch6", "ch7",
@@ -184,8 +188,8 @@ def load_bank(chapters=None):
 def audit(questions, full=True):
     """返回 (报告字符串列表, 错误列表)。
 
-    full=True  校验全局不变量：题量 180、题型 36/24/36/24/24/36、难度 84/60/36、
-                章节 12 章各 15、单选/多选答案位置均衡。
+    full=True  校验全局不变量：题量、题型、难度、章节配额（口径见 qa_bank/target.py，
+                **单一事实源**，不要在本文件里另写死数字）。
     full=False 只校验逐题结构（选项合法性、采分点数、解析、出处等），
                 供单章自检使用——单章下全局计数必然不成立，不应报为错误。
     """
@@ -203,18 +207,17 @@ def audit(questions, full=True):
     rep.append("章节分布：%s" % dict(sorted(c_ch.items())))
 
     if full:
-        if len(questions) != 180:
-            err.append("题量 %d != 180" % len(questions))
-        for t, n in (("single", 36), ("multi", 24), ("judge", 36),
-                     ("blank", 24), ("short", 24), ("calc", 36)):
+        if len(questions) != TARGET_TOTAL:
+            err.append("题量 %d != %d" % (len(questions), TARGET_TOTAL))
+        for t, n in TARGET_BY_TYPE.items():
             if c_type.get(t, 0) != n:
                 err.append("题型 %s = %d != %d" % (t, c_type.get(t, 0), n))
-        for d, n in (("basic", 84), ("medium", 60), ("hard", 36)):
+        for d, n in TARGET_BY_DIFF.items():
             if c_diff.get(d, 0) != n:
                 err.append("难度 %s = %d != %d" % (d, c_diff.get(d, 0), n))
-        for ch in range(1, 13):
-            if c_ch.get(ch, 0) != 15:
-                err.append("章节 %d = %d != 15" % (ch, c_ch.get(ch, 0)))
+        for ch, n in TARGET_BY_CHAPTER.items():
+            if c_ch.get(ch, 0) != n:
+                err.append("章节 %d = %d != %d" % (ch, c_ch.get(ch, 0), n))
 
     # 客观题答案必须在选项内
     for q in questions:
