@@ -128,5 +128,5 @@ Lighthouse 打分留给托管方自测；平台门禁只拦结构性缺失（man
 - **换行符按内容判定，不按字节判定**：仓内由 `.gitattributes` 统一成 LF（D21），而正本是裸目录、换行符不统一（实测 4 个 v1 遗留文件 `assets/app.js`、`build_quiz.py`、`template.html`、`verify_quiz.py` 在正本是 CRLF，仓内 blob 是 LF）。所以 `--check` 把两侧 CRLF 归一后再比，并分三档报告「逐字节相同 / 仅换行符差异 / 真差异」——**只有缺文件与真差异算漂移**。若按字节硬比，重新 checkout 后会误报 4 处假漂移。
 - 镜像对 CI **完全惰性**：`build_all.py` 只调用各学科 `build_subject.py`，高数那份只读 `qa_bank/` 与门禁脚本，从不读 `assets/`；`validate_platform.py` 的外链检查显式跳过 `sources/` 与 `tools/`。⇒ 补镜像不改变 `dist/` 与 `subjects/` 的任何字节。
 - `sources/*/tools/research/_cache/` 已进 `.gitignore` 兜底。
-- **判据与反向测试**：`sync_mirror.py --check` 在镜像漂移时退出 1（本次实测：同步前报「缺 88 个」并退出 1，同步后 0 差异并退出 0）。沙盒反向测试 16 项全绿：改内容 → 退出 1；删文件 → 退出 1；**仅换行符差异 → 退出 0（不误报）**；单文件对与目录对各自的内容差异/缺失都能检出；排除规则确认 `__pycache__`/`_cache` 不进镜像。
+- **判据与反向测试**：`sync_mirror.py --check` 在镜像漂移时退出 1（本次实测：同步前报「缺 88 个」并退出 1，同步后 0 差异并退出 0）。反向测试**随仓入库**：`tools/platform/test_sync_mirror.py`，16 项断言全绿（改内容 → 退出 1；删文件 → 退出 1；**仅换行符差异 → 退出 0（不误报）**；单文件对与目录对各自的内容差异/缺失都能检出；排除规则确认 `__pycache__`/`_cache` 不进镜像），并已接进 CI 的 self-tests 步骤——**门禁自己也要有门禁**，测试放在仓里而不是本机临时目录（D:\Temp 会被清空）。
 

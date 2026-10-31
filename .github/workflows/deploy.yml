@@ -38,7 +38,9 @@ jobs:
       - name: Run platform self-tests (regression tests for the gates themselves)
         env:
           PYTHONIOENCODING: utf-8
-        run: python tools/platform/test_platform_gates.py
+        run: |
+          python tools/platform/test_platform_gates.py
+          python tools/platform/test_sync_mirror.py
 
       - name: Build all subjects (content gates + export + validate)
         env:
