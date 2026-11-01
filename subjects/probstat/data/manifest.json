@@ -50,29 +50,29 @@
   "8.2": "正态总体参数的假设检验"
  },
  "caliber": {
-  "total": 144,
+  "total": 156,
   "byType": {
-   "single": 63,
-   "multi": 24,
-   "judge": 16,
-   "blank": 17,
-   "short": 2,
-   "calc": 22
+   "single": 69,
+   "multi": 21,
+   "judge": 18,
+   "blank": 21,
+   "short": 0,
+   "calc": 27
   },
   "byDifficulty": {
-   "basic": 29,
-   "medium": 64,
+   "basic": 32,
+   "medium": 73,
    "hard": 51
   },
   "byChapter": {
    "1": 22,
    "2": 24,
-   "3": 20,
-   "4": 21,
-   "5": 12,
-   "6": 16,
-   "7": 16,
-   "8": 13
+   "3": 22,
+   "4": 23,
+   "5": 14,
+   "6": 18,
+   "7": 18,
+   "8": 15
   },
   "limits": {
    "singleMin": 0,
@@ -81,10 +81,10 @@
   }
  },
  "summary": {
-  "sub": "8 章 · 144 题 · 章节小测 + 综合测试",
-  "desc": "概率论与数理统计 144 题刷题子站：8 章、三难度、逐题解析与考点出处。",
-  "aboutHtml": "<p><b>内容来源</b>：以浙江大学《概率论与数理统计》第四版为基准出题，每题标注考点出处。</p><p><b>题型分布</b>：单选 63 · 多选 24 · 判断 16 · 填空 17 · 简答 2 · 计算 22；难度分基础 / 中等 / 困难三档。</p><p><b>判分口径</b>：客观题自动判分；简答与计算题<b>按采分点自评</b>。</p><p><b>自托管说明</b>：全站资源自托管，无第三方依赖；进度保存在浏览器本地。</p>",
-  "footerHtml": "<p>题库共 <b>144</b> 题（浙大第四版 §1–§8）。</p>",
+  "sub": "8 章 · 156 题 · 章节小测 + 综合测试",
+  "desc": "概率论与数理统计 156 题刷题子站：8 章、三难度、逐题解析与考点出处。",
+  "aboutHtml": "<p><b>内容来源</b>：以浙江大学《概率论与数理统计》第四版为基准出题，每题标注考点出处。</p><p><b>题型分布</b>：单选 69 · 多选 21 · 判断 18 · 填空 21 · 简答 0 · 计算 27；难度分基础 / 中等 / 困难三档。</p><p><b>判分口径</b>：客观题自动判分；简答与计算题<b>按采分点自评</b>。</p><p><b>自托管说明</b>：全站资源自托管，无第三方依赖；进度保存在浏览器本地。</p>",
+  "footerHtml": "<p>题库共 <b>156</b> 题（浙大第四版 §1–§8）。</p>",
   "realExamTagged": 0
  },
  "shards": [
@@ -92,49 +92,49 @@
    "file": "ch1.json",
    "chapter": 1,
    "count": 22,
-   "sha256": "13AE4069712FC544C517E614B432CDD9D7CBE7103BFA73E7EA4D1213DAF86F96"
+   "sha256": "12CE82AEF17C6E85EDC46FCC3CD0C6D54B579F5B8D1A734C1FB517520F3E7AD1"
   },
   {
    "file": "ch2.json",
    "chapter": 2,
    "count": 24,
-   "sha256": "E57DD74C5D7BD02036A822B94BC82275576AE09EAD0FD93C695AAF94073CD182"
+   "sha256": "F2EA212333FC35F0CA418F78B0E869DADB87D6BBEC867C3F6395F9DDE01186AC"
   },
   {
    "file": "ch3.json",
    "chapter": 3,
-   "count": 20,
-   "sha256": "0E8BC85BCEC6335461D1383CEC47D9452F4D1FE47DA68B8F994DF0E1E60B4C77"
+   "count": 22,
+   "sha256": "69397936334028F58D24BD5C29E822BC2C56FCD0B56B08AC89866A819708232B"
   },
   {
    "file": "ch4.json",
    "chapter": 4,
-   "count": 21,
-   "sha256": "B27F0E67FA6E7DAE61F08A33B719CAE94596DF0FC66E3E530D1EAF2F68032374"
+   "count": 23,
+   "sha256": "7318953D1ECCF3B329FADA061CE56E8048B1DC89CEF84D52D6933A86767E779F"
   },
   {
    "file": "ch5.json",
    "chapter": 5,
-   "count": 12,
-   "sha256": "E36A85A0FBCA5BF607F562AEEAD841D800325B5C5721E8D6AC90667DED2E995F"
+   "count": 14,
+   "sha256": "9745A73EBDE7D720520612905F7C8B1429EB59AAD13EA32D66BC90CA969EC046"
   },
   {
    "file": "ch6.json",
    "chapter": 6,
-   "count": 16,
-   "sha256": "F5FAB6DC094DB69B77CD1343B602CD2C69F2CB17A2C34FB93EB71A8BCC52D782"
+   "count": 18,
+   "sha256": "6D7A12610888D761A6917C8CB360308BDC2A0CE2CFCA6AD9848AEEE63DA8F6ED"
   },
   {
    "file": "ch7.json",
    "chapter": 7,
-   "count": 16,
-   "sha256": "EC595D8BB6A803EC03D249817716677463D801664F980696554AD461A105069C"
+   "count": 18,
+   "sha256": "D2B13D2B5C7A71511E4EED8702E637DB69B183E4E522F439094499F729FC20D0"
   },
   {
    "file": "ch8.json",
    "chapter": 8,
-   "count": 13,
-   "sha256": "7AB600859F9791762B54A89DA74E9055EF85B69DAAFA75F5E28BADC9FDA1E352"
+   "count": 15,
+   "sha256": "CC2AC8F51186F7F97AF0C7FCD367B9ECF3BF58E4105751551BC10C09F43BCC53"
   }
  ]
 }

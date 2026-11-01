@@ -285,45 +285,43 @@
    "variantGroup": null
   },
   {
-   "id": "ps-129",
+   "id": "ps-133",
    "type": "single",
    "typeGroup": "single",
    "difficulty": "medium",
    "chapter": 5,
-   "knowledgePoint": "5.3",
+   "knowledgePoint": "5.1",
    "source": {
     "text": "",
     "kind": "textbook"
    },
-   "stem": "用机器包装食盐，每袋净重 $X$（克）服从 $N(500,\\sigma^2)$。抽查 $n=100$ 袋，标准差 $σ=5$。$P(|Χ¯-500|>1)=$？（$\\Phi(2)=0.9772$）",
+   "stem": "依概率收敛的定义是",
    "options": [
-    "$0.0455$",
-    "$0.9545$",
-    "$0.9772$",
-    "$0.0228$"
+    "$\\forall\\varepsilon>0,\\lim P(|X_n-a|\\ge\\varepsilon)=0$",
+    "$\\lim X_n=a$",
+    "$P(|X_n-a|=0)\\to1$",
+    "$\\mathrm{Var}(X_n)\\to0$"
    ],
    "answer": [
-    "C"
+    "A"
    ],
    "accept": null,
    "answerText": null,
    "points": null,
-   "explanation": "**答案依据**：$Χ¯\\sim N(500,\\sigma^2/n)=N(500,0.25)$。\n$P(|Χ¯-500|>1)=P\\left(|Z|>\\frac{1}{0.5}\\right)=2(1-Φ(2))=2(1-0.9772)=0.0456$。C 正确。",
+   "explanation": "**答案依据**：依概率收敛定义。A 正确。",
    "misconception": null,
    "extension": null,
    "tags": [
-    "高频",
-    "CLT",
-    "质量控制"
+    "依概率收敛"
    ],
    "verify": [],
    "variantGroup": null
   },
   {
-   "id": "ps-130",
+   "id": "ps-134",
    "type": "single",
    "typeGroup": "single",
-   "difficulty": "hard",
+   "difficulty": "medium",
    "chapter": 5,
    "knowledgePoint": "5.2",
    "source": {
@@ -334,7 +332,7 @@
    "options": [
     "独立同分布且 $E(X_i)$ 存在",
     "独立但可以不同分布",
-    "两两不相关但可以不同分布",
+    "两两不相关",
     "方差必须一致有界"
    ],
    "answer": [
@@ -343,7 +341,7 @@
    "accept": null,
    "answerText": null,
    "points": null,
-   "explanation": "**答案依据**：辛钦大数定律只要求独立同分布且期望存在——不要求方差存在（比切比雪夫弱条件）。A 正确。",
+   "explanation": "**答案依据**：辛钦只要求独立同分布且期望存在。A 正确。",
    "misconception": null,
    "extension": null,
    "tags": [
@@ -354,9 +352,9 @@
    "variantGroup": null
   },
   {
-   "id": "ps-131",
-   "type": "multi",
-   "typeGroup": "multi",
+   "id": "ps-135",
+   "type": "single",
+   "typeGroup": "single",
    "difficulty": "hard",
    "chapter": 5,
    "knowledgePoint": "5.3",
@@ -364,42 +362,127 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "关于中心极限定理，正确的有",
+   "stem": "$X_i$ 独立同分布于 $B(1,0.5)$，$n=100$。由 CLT，$P(45\\le\\sum X_i\\le55)\\approx$",
    "options": [
-    "大量独立随机变量之和近似服从正态分布",
-    "不需要每个 $X_i$ 服从正态分布",
-    "要求每个 $X_i$ 服从正态分布",
-    "$n$ 越大近似越好"
+    "$0.9544$",
+    "$0.6826$",
+    "$0.9973$",
+    "$0.8413$"
    ],
    "answer": [
-    "A",
-    "B",
-    "D"
+    "B"
    ],
    "accept": null,
    "answerText": null,
    "points": null,
-   "explanation": "**答案依据**：A、B、D 正确。C 错——CLT 的核心就是「不管单个 $X_i$ 是什么分布，和近似正态」。",
+   "explanation": "**答案依据**：$E=50,\\sigma=\\sqrt{25}=5$。$P(45\\le\\sum\\le55)=P(-1\\le Z\\le1)=2\\Phi(1)-1=0.6826$。B 正确。",
    "misconception": null,
    "extension": null,
    "tags": [
+    "高频",
     "CLT"
    ],
    "verify": [],
    "variantGroup": null
   },
   {
-   "id": "ps-132",
-   "type": "judge",
-   "typeGroup": "judge",
-   "difficulty": "medium",
+   "id": "ps-136",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
    "chapter": 5,
    "knowledgePoint": "5.3",
    "source": {
     "text": "",
     "kind": "textbook"
    },
-   "stem": "中心极限定理说明：只要 $n$ 足够大，$ΣX_i$ 的分布就精确等于正态分布。",
+   "stem": "某车间 200 台车床独立工作，开工率 0.6。每台耗电 1 千瓦。供电所至少供应多少千瓦，才能以 99.9% 概率保证正常生产？（$\\Phi(3)=0.9987$）",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$X\\sim B(200,0.6)$，$E=120, D=48$。$\\frac{k-120}{\\sqrt{48}}\\ge3\\Rightarrow k\\ge141$。至少供应 **141 千瓦**。",
+   "points": [
+    {
+     "text": "识别为 De Moivre-Laplace 模型",
+     "partial": 2
+    },
+    {
+     "text": "标准化求临界值",
+     "partial": 2
+    },
+    {
+     "text": "$k\\ge141$",
+     "partial": 2
+    },
+    {
+     "text": "向上取整说明",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§5.3 CLT。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "CLT"
+   ],
+   "verify": [
+    {
+     "desc": "k",
+     "code": "round(120+3*sp.sqrt(48))",
+     "expected": "141"
+    }
+   ],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-137",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "关于大数定律，正确的有",
+   "options": [
+    "伯努利大数定律是频率估计概率的理论依据",
+    "辛钦大数定律要求独立同分布且期望存在",
+    "切比雪夫大数定律允许不同分布但方差一致有界",
+    "大数定律说的是算术平均趋于零"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A、B、C 正确。D 错：算术平均趋于数学期望。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "大数定律"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-138",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "依概率收敛与高等数学中的数列极限（逐点收敛）是同一个概念。",
    "options": [
     "正确",
     "错误"
@@ -410,11 +493,11 @@
    "accept": null,
    "answerText": null,
    "points": null,
-   "explanation": "**答案依据**：CLT 说的是「近似服从」正态分布（极限分布），不是精确等于。",
+   "explanation": "**答案依据**：依概率收敛 weaker 于逐点收敛。",
    "misconception": null,
    "extension": null,
    "tags": [
-    "CLT"
+    "依概率收敛"
    ],
    "verify": [],
    "variantGroup": null

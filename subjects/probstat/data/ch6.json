@@ -161,7 +161,7 @@
    "accept": null,
    "answerText": null,
    "points": null,
-   "explanation": "**答案依据**：$t$ 分布的定义——标准正态除以（独立 χ² 除以其自由度再开方）。A 正确。",
+   "explanation": "**答案依据**：$t$ 分布的定义——标准正态除以（独立 $\\chi^2$ 除以其自由度再开方）。A 正确。",
    "misconception": null,
    "extension": null,
    "tags": [
@@ -430,20 +430,88 @@
    "variantGroup": null
   },
   {
-   "id": "ps-133",
+   "id": "ps-139",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 6,
+   "knowledgePoint": "6.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "样本 $X_1,\\dots,X_n$ 满足的条件是",
+   "options": [
+    "与总体同分布且相互独立",
+    "同分布但不独立",
+    "独立但可以不同分布",
+    "正态分布"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：简单随机样本——同分布+独立。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础",
+    "简单随机样本"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-140",
    "type": "single",
    "typeGroup": "single",
    "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设总体 $X\\sim N(\\mu,\\sigma^2)$，样本均值 $\\bar{X}$ 服从",
+   "options": [
+    "$N(\\mu,\\sigma^2)$",
+    "$N(\\mu,\\sigma^2/n)$",
+    "$N(0,1)$",
+    "$N(n\\mu,n\\sigma^2)$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$\\bar{X}\\sim N(\\mu,\\sigma^2/n)$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "样本均值"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-141",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
    "chapter": 6,
    "knowledgePoint": "6.3",
    "source": {
     "text": "",
     "kind": "textbook"
    },
-   "stem": "设 $X\\sim N(0,1)$，$Y\\simχ^2(n)$ 且独立，则 $\\frac{X}{√(Y/n)}\\sim$",
+   "stem": "设 $X\\sim N(0,1)$，$Y\\sim\\chi^2(n)$ 独立，则 $\\frac{X}{\\sqrt{Y/n}}\\sim$",
    "options": [
     "$t(n)$",
-    "$χ^2(n)$",
+    "$\\chi^2(n)$",
     "$N(0,1)$",
     "$F(1,n)$"
    ],
@@ -453,7 +521,7 @@
    "accept": null,
    "answerText": null,
    "points": null,
-   "explanation": "**答案依据**：$t$ 分布的定义——标准正态除以独立的 $χ^2/' \\text{自由度}$ 再开方。A 正确。",
+   "explanation": "**答案依据**：$t$ 分布定义。A 正确。",
    "misconception": null,
    "extension": null,
    "tags": [
@@ -464,9 +532,9 @@
    "variantGroup": null
   },
   {
-   "id": "ps-134",
-   "type": "single",
-   "typeGroup": "single",
+   "id": "ps-142",
+   "type": "multi",
+   "typeGroup": "multi",
    "difficulty": "hard",
    "chapter": 6,
    "knowledgePoint": "6.3",
@@ -474,46 +542,12 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "设 $X\\simχ^2(m)$，$Y\\simχ^2(n)$ 独立，则 $\\frac{X/m}{Y/n}\\sim$",
+   "stem": "关于三大抽样分布，正确的有",
    "options": [
-    "$t(m+n)$",
-    "$F(m,n)$",
-    "$χ^2(m+n)$",
-    "$N(0,1)$"
-   ],
-   "answer": [
-    "B"
-   ],
-   "accept": null,
-   "answerText": null,
-   "points": null,
-   "explanation": "**答案依据**：$F$ 分布的定义——两个独立 $χ^2$ 除以各自自由度之比。B 正确。",
-   "misconception": null,
-   "extension": null,
-   "tags": [
-    "高频",
-    "F分布"
-   ],
-   "verify": [],
-   "variantGroup": null
-  },
-  {
-   "id": "ps-135",
-   "type": "multi",
-   "typeGroup": "multi",
-   "difficulty": "medium",
-   "chapter": 6,
-   "knowledgePoint": "6.3",
-   "source": {
-    "text": "",
-    "kind": "textbook"
-   },
-   "stem": "关于 $χ^2$ 分布，正确的有",
-   "options": [
-    "是非负的（取值 $≥0$）",
-    "期望 $=n$（自由度）",
-    "具有可加性（独立 $χ^2$ 之和仍为 $χ^2$）",
-    "关于原点对称"
+    "$\\chi^2$ 分布是非负的",
+    "$t$ 分布关于 0 对称",
+    "$F$ 分布是非负的",
+    "$t$ 分布的方差恒为 1"
    ],
    "answer": [
     "A",
@@ -523,18 +557,48 @@
    "accept": null,
    "answerText": null,
    "points": null,
-   "explanation": "**答案依据**：A、B、C 正确。D 错——$χ^2$ 分布是偏态的（右偏），不正负对称。",
+   "explanation": "**答案依据**：A、B、C 正确。D 错：$t$ 分布方差 $=\\frac{n}{n-2}$。",
    "misconception": null,
    "extension": null,
    "tags": [
-    "高频",
+    "三大分布"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-143",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim N(0,1)$，$X_1,\\dots,X_n$ 为样本，则 $\\sum X_i^2\\sim$ ______。",
+   "options": null,
+   "answer": [
+    "$\\chi^2(n)$"
+   ],
+   "accept": [
+    "chi2(n)"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：标准正态平方和。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础",
     "χ²分布"
    ],
    "verify": [],
    "variantGroup": null
   },
   {
-   "id": "ps-136",
+   "id": "ps-144",
    "type": "calc",
    "typeGroup": "calc",
    "difficulty": "medium",
@@ -544,30 +608,30 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "设总体 $X\\sim N(1,4)$，样本 $X_1,\\dots,X_9$。求 $P(Χ¯>2)$（$Φ(1.5)=0.9332$）。",
+   "stem": "设总体 $X\\sim N(2,9)$，样本 $n=9$。求 $P(\\bar{X}>3)$（$\\Phi(1)=0.8413$）。",
    "options": null,
    "answer": [],
    "accept": null,
-   "answerText": "Χ¯\\sim N(1,4/9)$\\text{。标准化：}$P(Χ¯>2)=P(Z>  \\frac{2-1}{2/3})=P(Z>1.5)=1-Φ(1.5)=0.0668$。",
+   "answerText": "$\\bar{X}\\sim N(2,1)$。$P(\\bar{X}>3)=1-\\Phi(1)=0.1587$。",
    "points": [
     {
-     "text": "Χ¯\\sim N(1,4/9)",
+     "text": "$\\bar{X}\\sim N(2,1)$",
      "partial": 2
     },
     {
-     "text": "标准化 $Z=1.5$",
+     "text": "标准化 $Z=1$",
      "partial": 2
     },
     {
-     "text": "结果 $=0.0668$",
+     "text": "结果 $=0.1587$",
      "partial": 2
     },
     {
-     "text": "样本量越大均值越集中于 $μ$",
+     "text": "样本量越大 $\\bar{X}$ 越集中",
      "partial": 2
     }
    ],
-   "explanation": "**答案依据**：§6.2 正态总体样本均值的分布。",
+   "explanation": "**答案依据**：§6.2 正态总体样本均值分布。",
    "misconception": null,
    "extension": null,
    "tags": [
@@ -577,9 +641,9 @@
    ],
    "verify": [
     {
-     "desc": "1-Φ(1.5)",
-     "code": "1-0.9332",
-     "expected": "0.0668"
+     "desc": "1-Φ(1)",
+     "code": "1-0.8413",
+     "expected": "0.1587"
     }
    ],
    "variantGroup": null

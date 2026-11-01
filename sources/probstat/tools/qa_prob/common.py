@@ -8,7 +8,7 @@ ALL_QUESTIONS = []
 
 
 def _clean(text):
-    """清除控制字符 + 修复数学模式内裸中文（用 \\text{} 包裹）。"""
+    """清除控制字符 + 修复数学模式内裸中文（用 \\text{} 包裹）+ 收敛重复包裹。"""
     import re
     if not text:
         return text
@@ -25,7 +25,9 @@ def _clean(text):
             elif p:
                 out += p
         return "$" + out + "$"
-    return re.sub(r"\$([^$]+)\$", _wrap, text)
+    text = re.sub(r"\$([^$]+)\$", _wrap, text)
+    # 收敛嵌套包裹：题面已写 \\text{其他} 时，上面会再包一层变成 \\text{\\text{其他}}
+    return re.sub(r"\\text\{\\text\{([^{}]*)\}\}", r"\\text{\1}", text)
 
 
 def Q(qtype, diff, kp, stem, answer=None, options=None, answer_text=None,

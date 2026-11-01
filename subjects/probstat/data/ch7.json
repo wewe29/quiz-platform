@@ -12,7 +12,7 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "点估计的含义是",
+   "stem": "用统计量 $\\hat{\\theta}$ 去估计未知参数 $\\theta$，「点估计」的含义是",
    "options": [
     "用样本的函数（统计量）作为未知参数的近似值",
     "给出参数的一个区间",
@@ -351,7 +351,7 @@
    "options": null,
    "answer": [],
    "accept": null,
-   "answerText": "**矩估计**：$E(X)=1/λ$，令 $1/λ=Χ¯$，得 $\\hat{λ}_{\\text{\\text{矩}}}=1/Χ¯$。\n**极大似然**：$L(λ)=λ^n e^{-λΣX_i}$，$\\ln L=nλ-λΣX_i$，令导数为零：$n-ΣX_i=0$，$\\hat{λ}_{MLE}=1/Χ¯$。\n两者相同。",
+   "answerText": "**矩估计**：$E(X)=1/λ$，令 $1/λ=Χ¯$，得 $\\hat{λ}_{\\text{矩}}=1/Χ¯$。\n**极大似然**：$L(λ)=λ^n e^{-λΣX_i}$，$\\ln L=nλ-λΣX_i$，令导数为零：$n-ΣX_i=0$，$\\hat{λ}_{MLE}=1/Χ¯$。\n两者相同。",
    "points": [
     {
      "text": "矩估计 $=1/Χ¯$",
@@ -439,7 +439,7 @@
    "variantGroup": null
   },
   {
-   "id": "ps-137",
+   "id": "ps-145",
    "type": "single",
    "typeGroup": "single",
    "difficulty": "medium",
@@ -449,20 +449,20 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "设 $X\\sim U(0,θ)$，则 θ 的矩估计为",
+   "stem": "矩估计法的基本思想是",
    "options": [
-    "$Χ¯$",
-    "$2Χ¯$",
-    "$Χ_{(n)}$",
-    "$Χ_{(1)}$"
+    "用样本矩替换总体矩",
+    "使似然函数最大",
+    "使方差最小",
+    "使偏差最小"
    ],
    "answer": [
-    "B"
+    "A"
    ],
    "accept": null,
    "answerText": null,
    "points": null,
-   "explanation": "**答案依据**：$E(X)=θ/2$，令 $θ/2=Χ¯$，得 $\\hat{θ}=2Χ¯$。B 正确。",
+   "explanation": "**答案依据**：矩估计 = 用样本矩替换相应的总体矩（令样本均值 = 总体期望等）。A 正确。B 是极大似然的思想。",
    "misconception": null,
    "extension": null,
    "tags": [
@@ -473,7 +473,41 @@
    "variantGroup": null
   },
   {
-   "id": "ps-138",
+   "id": "ps-146",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "极大似然估计法的基本思想是",
+   "options": [
+    "选取使观测到样本出现概率最大的参数值",
+    "用样本矩替换总体矩",
+    "使方差最小",
+    "使偏差绝对值最小"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：极大似然 = 最大化 L(θ)。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "极大似然"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-147",
    "type": "single",
    "typeGroup": "single",
    "difficulty": "hard",
@@ -483,12 +517,12 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "设 $\\hat{θ}_1$ 和 $\\hat{θ}_2$ 都是 θ 的无偏估计，且 $D(θ̂_1)<D(θ̂_2)$，则",
+   "stem": "设 $T_1, T_2$ 都是 $\\mu$ 的无偏估计且 $D(T_1) < D(T_2)$，则",
    "options": [
-    "$\\hat{\\theta}_1$ 比 $\\hat{\\theta}_2$ 有效",
-    "$\\hat{\\theta}_2$ 比 $\\hat{\\theta}_1$ 有效",
-    "两者同样有效",
-    "无法判断"
+    "$T_1$ 比 $T_2$ 有效",
+    "$T_2$ 比 $T_1$ 有效",
+    "两者一样好",
+    "无法比较"
    ],
    "answer": [
     "A"
@@ -500,15 +534,16 @@
    "misconception": null,
    "extension": null,
    "tags": [
+    "高频",
     "有效性"
    ],
    "verify": [],
    "variantGroup": null
   },
   {
-   "id": "ps-139",
-   "type": "blank",
-   "typeGroup": "blank",
+   "id": "ps-148",
+   "type": "calc",
+   "typeGroup": "calc",
    "difficulty": "medium",
    "chapter": 7,
    "knowledgePoint": "7.1",
@@ -516,76 +551,113 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "设 $X\\sim U(0,θ)$，$X_{(n)}=\\max(X_i)$ 是 θ 的极大似然估计，则 $E(X_{(n)})=$ ______（$n$ 个样本）。",
+   "stem": "设 $X\\sim U(0,\\theta)$，$X_1,\\dots,X_n$ 为样本。求 θ 的矩估计。",
    "options": null,
-   "answer": [
-    "$\\frac{n}{n+1}θ$"
+   "answer": [],
+   "accept": null,
+   "answerText": "$E(X)=\\theta/2$。令 $\\theta/2=\\bar{X}$，得 $\\hat{\\theta}=2\\bar{X}$。",
+   "points": [
+    {
+     "text": "$E(X)=\\theta/2$",
+     "partial": 2
+    },
+    {
+     "text": "令 $\\theta/2=\\bar{X}$",
+     "partial": 2
+    },
+    {
+     "text": "$\\hat{\\theta}=2\\bar{X}$",
+     "partial": 2
+    },
+    {
+     "text": "对比 MLE $=X_{(n)}$",
+     "partial": 2
+    }
    ],
-   "accept": [
-    "nθ/(n+1)",
-    "n*theta/(n+1)"
-   ],
-   "answerText": null,
-   "points": null,
-   "explanation": "**答案依据**：$F_{X_{(n)}}(x)=(x/θ)^n$，$E(X_{(n)})=\\frac{n}{n+1}θ$——**有偏**（低估 θ）。",
+   "explanation": "**答案依据**：§7.1 矩估计法。",
    "misconception": null,
    "extension": null,
    "tags": [
-    "MLE",
-    "有偏"
+    "计算",
+    "高频",
+    "矩估计"
    ],
    "verify": [],
    "variantGroup": null
   },
   {
-   "id": "ps-140",
-   "type": "calc",
-   "typeGroup": "calc",
-   "difficulty": "hard",
+   "id": "ps-149",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
    "chapter": 7,
    "knowledgePoint": "7.3",
    "source": {
     "text": "",
     "kind": "textbook"
    },
-   "stem": "设总体 $X\\sim N(μ,4)$，$n=16$，$Χ¯=10.5$。求 μ 的 95% 置信区间（$z_{0.025}=1.96$）。",
+   "stem": "正态总体 σ 已知时，$\\mu$ 的 95% 置信区间为 $\\bar{X}\\pm$ ______。",
    "options": null,
-   "answer": [],
-   "accept": null,
-   "answerText": "σ 已知，$u$ 区间：$Χ¯\\pm z_{α/2}σ/√n=10.5\\pm1.96\\times2/4=10.5\\pm0.98$\n置信区间：$\\boxed{[9.52,\\ 11.48]}$。\n置信水平 0.95 表示：重复抽样时，约 95% 的区间会覆盖 μ。",
-   "points": [
-    {
-     "text": "σ 已知用 $u$ 区间（不是 $t$ 区间）",
-     "partial": 2
-    },
-    {
-     "text": "半宽 $=1.96σ/√n=0.98$",
-     "partial": 2
-    },
-    {
-     "text": "区间 $=[9.52,11.48]$",
-     "partial": 2
-    },
-    {
-     "text": "频率学派解释",
-     "partial": 2
-    }
+   "answer": [
+    "$1.96\\frac{\\sigma}{\\sqrt{n}}$"
    ],
-   "explanation": "**答案依据**：§7.3 正态总体均值的置信区间（σ 已知）。",
+   "accept": [
+    "1.96sigma/sqrt(n)"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：σ 已知的 $u$ 区间。",
    "misconception": null,
    "extension": null,
    "tags": [
-    "计算",
-    "高频",
     "置信区间"
    ],
-   "verify": [
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-150",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $T$ 是 $\\mu$ 的无偏估计，证明 $E[(T-\\mu)^2]=D(T)$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$E[(T-\\mu)^2]=E(T^2-2\\mu T+\\mu^2)=E(T^2)-2\\mu E(T)+\\mu^2$。\n由无偏性 $E(T)=\\mu$：$=E(T^2)-\\mu^2$。\n又 $D(T)=E(T^2)-[E(T)]^2=E(T^2)-\\mu^2$。两者相等。$\\blacksquare$\n**创新点**：均方误差 = 方差 + 偏差²。无偏时偏差 = 0，故 MSE = 方差。",
+   "points": [
     {
-     "desc": "半宽",
-     "code": "Rational(196,100)*Rational(2,4)",
-     "expected": "49/50"
+     "text": "展开 $E[(T-\\mu)^2]$",
+     "partial": 2
+    },
+    {
+     "text": "代入无偏性 $E(T)=\\mu$",
+     "partial": 2
+    },
+    {
+     "text": "得到 $E(T^2)-\\mu^2=D(T)$",
+     "partial": 2
+    },
+    {
+     "text": "联系 MSE = 方差 + 偏差²",
+     "partial": 2
     }
    ],
+   "explanation": "**答案依据**：§7.2 无偏性与有效性的关系（MSE 分解）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "证明",
+    "无偏性",
+    "MSE"
+   ],
+   "verify": [],
    "variantGroup": null
   }
  ]

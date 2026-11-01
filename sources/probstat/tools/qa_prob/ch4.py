@@ -4,23 +4,23 @@ from .common import Q, SINGLE, MULTI, JUDGE, BLANK, SHORT, CALC
 
 Q = [
 Q(SINGLE, "basic", "4.1", "设 $P(X=k)=\\frac{1}{3}$（$k=1,2,3$），则 $E(X)=$",
-    answer=["B"], options=["$1$", "$2$", "$1$", "$3$"],
+    answer=["B"], options=["$1$", "$2$", "$3$", "$\\frac{5}{3}$"],
     expl="**答案依据**：$E(X)=1\\cdot\\frac13+2\\cdot\\frac13+3\\cdot\\frac13=2$。B 正确。", tags=["基础", "期望"]),
 
 Q(SINGLE, "basic", "4.1", "设 $X\\sim B(n,p)$，则 $E(X)=$",
     answer=["A"], options=["$np$", "$np(1-p)$", "$p$", "$n(1-p)$"], expl="**答案依据**：$E(X)=np$。A 正确。", tags=["基础", "二项分布"]),
 
 Q(SINGLE, "medium", "4.2", "设 $P(X=k)=\\frac13$（$k=1,2,3$），则 $D(X)=$",
-    answer=["C"], options=["$\\frac{2}{3}$", "$1$", "$\\frac{2}{3}$", "$\\frac{4}{3}$"],
-    expl="**答案依据**：$E(X^2)=\\frac{14}{3}$，$D(X)=\\frac{14}{3}-4=\\frac{2}{3}$。C 正确。", tags=["高频", "方差"]),
+    answer=["A"], options=["$\\frac{2}{3}$", "$1$", "$\\frac{4}{3}$", "$\\frac{8}{9}$"],
+    expl="**答案依据**：$E(X^2)=\\frac{14}{3}$，$D(X)=\\frac{14}{3}-4=\\frac{2}{3}$。A 正确。", tags=["高频", "方差"]),
 
 Q(SINGLE, "medium", "4.1", "设 $X\\sim E(\\lambda)$，则 $E(X)=$",
     answer=["A"], options=["$\\frac{1}{\\lambda}$", "$\\lambda$", "$\\lambda^2$", "$\\frac{1}{\\lambda^2}$"],
     expl="**答案依据**：$E(X)=\\frac{1}{\\lambda}$。A 正确。", tags=["高频", "指数分布"]),
 
 Q(SINGLE, "hard", "4.4", "设 $E(X)=\\mu, D(X)=\\sigma^2$，则 $P(|X-\\mu|\\ge3\\sigma)\\le$",
-    answer=["C"], options=["$\\frac{1}{9}$", "$\\frac{1}{3}$", "$\\frac{1}{9}$", "$\\frac{1}{4}$"],
-    expl="**答案依据**：切比雪夫不等式 $P(|X-\\mu|\\ge k\\sigma)\\le\\frac{1}{k^2}$。$k=3$ 得 $\\frac{1}{9}$。C 正确。", tags=["创新题", "切比雪夫不等式"]),
+    answer=["A"], options=["$\\frac{1}{9}$", "$\\frac{1}{3}$", "$\\frac{1}{4}$", "$\\frac{1}{6}$"],
+    expl="**答案依据**：切比雪夫不等式 $P(|X-\\mu|\\ge k\\sigma)\\le\\frac{1}{k^2}$。$k=3$ 得 $\\frac{1}{9}$。A 正确。", tags=["创新题", "切比雪夫不等式"]),
 
 Q(MULTI, "medium", "4.1", "关于数学期望，正确的有",
     answer=["A", "B", "D"], options=["$E(aX+bY)=aE(X)+bE(Y)$ 恒成立", "$E(XY)=E(X)E(Y)$ 当独立时成立", "$E(XY)=E(X)E(Y)$ 对任意 $X,Y$ 成立", "$E(C)=C$"],

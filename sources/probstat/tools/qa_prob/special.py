@@ -1,306 +1,280 @@
 # -*- coding: utf-8 -*-
-"""概率论与数理统计 —— 基础与中等扩充 60 题（2026-11-01）
-
-覆盖全部 8 章，基础/中等难度为主，含变式族（variantGroup）。
-所有计算答案均经 SymPy 逐题核验。
-"""
-Q_list = []
+"""概率论与数理统计 —— 基础与中等扩充 56 题（2026-11-01 第二批）"""
 from .common import Q as mk, SINGLE, MULTI, JUDGE, BLANK, SHORT, CALC
 
-Q_list = []
+_qlist = []
 
-# ═══════════ ch1 随机事件与概率（+8 题）═══════════
+# ═══ ch1 随机事件与概率（+8）═══
+_qlist.append(mk(SINGLE, "basic", "1.3", "从 5 名男同学和 3 名女同学中随机选 3 名，恰好选中 2 男 1 女的概率是",
+    answer=["B"], options=["$\\frac{15}{28}$", "$\\frac{15}{56}$", "$\\frac{5}{14}$", "$\\frac{3}{8}$"],
+    expl="**答案依据**：$P=\\frac{C_5^2 C_3^1}{C_8^3}=\\frac{10\\times3}{56}=\\frac{15}{28}$。B 正确。",
+    tags=["基础", "古典概型"],
+    verify=[{"desc": "P", "code": "Rational(sp.binomial(5,2)*sp.binomial(3,1), sp.binomial(8,3))", "expected": "15/28"}]))
 
-Q_list.append(mk(SINGLE, "basic", "1.2", "设 $A \\subset B$，则 $P(A \\cup B)=$",
-    answer=["B"], options=["$P(A)$", "$P(B)$", "$P(A)+P(B)$", "$P(A)P(B)$"],
-    expl="**答案依据**：$A \\subset B$ 时 $A \\cup B = B$，故 $P(A \\cup B) = P(B)$。B 正确。",
-    mis="⚠️ 包含关系下并集取「大」的那个事件。", tags=["基础", "事件关系"],
-    variant_group="vg-event-ops"))
+_qlist.append(mk(SINGLE, "medium", "1.4", "设 $P(A)=0.3, P(B)=0.4, P(A\\cup B)=0.6$，则 $P(A|B)=$",
+    answer=["A"], options=["$\\frac{1}{4}$", "$\\frac{1}{5}$", "$\\frac{3}{4}$", "$\\frac{1}{3}$"],
+    expl="**答案依据**：$P(AB)=P(A)+P(B)-P(A\\cup B)=0.1$。$P(A|B)=\\frac{0.1}{0.4}=\\frac14$。A 正确。",
+    tags=["中等", "条件概率"]))
 
-Q_list.append(mk(SINGLE, "basic", "1.2", "设 $P(A)=0.3$，$P(B)=0.4$，$A$ 与 $B$ 独立，则 $P(A \\cup B)=$",
-    answer=["C"], options=["$0.7$", "$0.58$", "$0.12$", "$0.42$"],
-    expl="**答案依据**：独立时 $P(AB)=P(A)P(B)=0.12$。\n"
-         "$P(A\\cup B)=0.3+0.4-0.12=0.58$。C 正确。",
-    mis="⚠️ 独立事件的并集不能直接加概率——要减去 $P(A)P(B)$。",
-    tags=["基础", "独立性"], variant_group="vg-event-ops",
-    verify=[{"desc": "P(A∪B)", "code": "Rational(3,10)+Rational(4,10)-Rational(3,10)*Rational(4,10)", "expected": "29/50"}]))
+_qlist.append(mk(SINGLE, "medium", "1.5", "三个口袋各 3 球：甲袋 2 红 1 白，乙袋 1 红 2 白，丙袋 2 红 2 白。随机选一袋再取一球，取到红球的概率是",
+    answer=["A"], options=["$\\frac{1}{2}$", "$\\frac{2}{3}$", "$\\frac{1}{3}$", "$\\frac{5}{9}$"],
+    expl="**答案依据**：全概率 $P(B)=\\frac13(\\frac23+\\frac13+\\frac12)=\\frac{1}{2}$。A 正确。",
+    tags=["中等", "全概率公式"], variant_group="vg-fullprob"))
 
-Q_list.append(mk(SINGLE, "medium", "1.4", "设 $P(A)=\\frac{1}{4}$，$P(B|A)=\\frac{1}{3}$，则 $P(AB)=$",
-    answer=["B"], options=["$\\frac{1}{12}$", "$\\frac{1}{12}$", "$\\frac{1}{4}$", "$\\frac{1}{3}$"],
-    expl="**答案依据**：乘法公式 $P(AB)=P(A)P(B|A)=\\frac14 \\times \\frac13=\\frac{1}{12}$。B 正确。",
-    tags=["条件概率", "乘法公式"]))
+_qlist.append(mk(SINGLE, "hard", "1.5", "接上题：已知取到红球，则来自甲袋的概率是",
+    answer=["A"], options=["$\\frac{4}{9}$", "$\\frac{2}{3}$", "$\\frac{1}{3}$", "$\\frac{5}{9}$"],
+    expl="**答案依据**：贝叶斯 $P(\\text{甲}|\\text{红})=\\frac{2/9}{1/2}=\\frac{4}{9}$。A 正确。",
+    tags=["创新题", "贝叶斯公式"], variant_group="vg-fullprob"))
 
-Q_list.append(mk(SINGLE, "medium", "1.4", "10 件产品中 3 件次品。不放回取 2 次，每次 1 件，则两次都取到正品的概率是",
-    answer=["A"], options=["$\\frac{7}{10}\\cdot\\frac{6}{9}$", "$\\frac{7}{10}\\cdot\\frac{7}{9}$", "$\\frac{3}{10}\\cdot\\frac{2}{9}$", "$\\frac{7}{15}$"],
-    expl="**答案依据**：第一次正品 $\\frac{7}{10}$，第二次（不放回后 6 件正品 3 件次品）$\\frac{6}{9}$。\n"
-         "$P=\\frac{7}{10}\\times\\frac{6}{9}=\\frac{7}{15}$。A 正确。",
-    mis="⚠️ 不放回抽样第二次的条件概率分母是 9 不是 10。", tags=["中等", "条件概率"]))
+_qlist.append(mk(MULTI, "medium", "1.6", "设 $A,B$ 为两事件且 $P(A)>0$，则 $P(B|A)$ 的正确表达式有",
+    answer=["A", "C"], options=["$\\frac{P(AB)}{P(A)}$", "$\\frac{P(AB)}{P(B)}$", "$\\frac{P(A|B)P(B)}{P(A)}$", "$P(A)P(B)$"],
+    expl="**答案依据**：条件概率定义 $P(B|A)=\\frac{P(AB)}{P(A)}$（A）；乘法公式 $P(AB)=P(B|A)P(A)$ 也可写作 $P(B|A)=\\frac{P(A|B)P(B)}{P(A)}$（C，由 $P(AB)=P(A|B)P(B)$ 变形）。B 分母错，D 是独立性结论。", tags=["条件概率"]))
 
-Q_list.append(mk(MULTI, "medium", "1.5", "关于全概率公式与贝叶斯公式，正确的有",
-    answer=["A", "B", "C"],
-    options=["全概率公式要求 $\\{A_i\\}$ 为完备事件组", "贝叶斯公式用于求后验概率",
-             "全概率公式把复杂事件按「原因」分解", "贝叶斯公式求的是先验概率"],
-    expl="**答案依据**：A、B、C 正确。D 错：贝叶斯求的是后验概率（不是先验）。",
-    tags=["全概率", "贝叶斯"]))
+_qlist.append(mk(JUDGE, "basic", "1.2", "$P(A\\cup B)\\le P(A)+P(B)$ 恒成立。",
+    answer=["A"], expl="**答案依据**：$P(A\\cup B)=P(A)+P(B)-P(AB)\\le P(A)+P(B)$。", tags=["基础"]))
 
-Q_list.append(mk(MULTI, "hard", "1.6", "设 $A,B,C$ 相互独立，则下列各组事件也相互独立的有",
-    options=["$A$ 与 $BC$", "$\\bar{A}$ 与 $B$", "$A\\cup B$ 与 $C$", "$A$ 与 $B\\cup C$ 一定不独立"],
-    expl="**答案依据**：相互独立的事件组中，任取若干事件及其对立事件的交并运算结果仍与剩余事件独立。"
-         "A、B、D 中 D 说「一定不独立」——这反而是错误的表述。D 正确：$A$ 与 $B\\cup C$ 也独立。\n"
-         "（D 选项说「一定不独立」，但 $A$ 与 $B\\cup C$ 实际上独立，所以 D 的内容错误。"
-         "但题目问的是哪些组独立，D 描述的是一个错误结论，不应选。）\n"
-         "——修正：A、B、D 中 D 的表述有误导。正确答案 A、B。",
-    mis="⚠️ 独立性可以传递到对立事件和交并组合。",
-    tags=["创新题", "独立性"],
-    answer=["A", "B"]))
+_qlist.append(mk(BLANK, "medium", "1.2", "德摩根律：$\\overline{A\\cup B}=$ ______ $\\cap$ ______。",
+    answer=["$\\bar{A}$", "$\\bar{B}$"], expl="**答案依据**：德摩根律。", tags=["中等", "德摩根律"]))
 
-Q_list.append(mk(BLANK, "basic", "1.3", "从 $0,1,\\dots,9$ 中随机取两个数字（不放回），其和为偶数的概率为 ______。",
-    answer=["$\\frac{4}{9}$"], accept=["4/9"],
-    expl="**答案依据**：$|\\Omega|=C_{10}^2=45$。有利：奇+奇（$C_5^2=10$）或偶+偶（$C_5^2=10$），共 20 种。\n"
-         "$P=\\frac{20}{45}=\\frac{4}{9}$。",
-    tags=["中等", "古典概型"],
-    verify=[{"desc": "P", "code": "Rational(20,45)", "expected": "4/9"}]))
+_qlist.append(mk(CALC, "hard", "1.4", "（创新）甲、乙、丙三人独立破译同一密码，破译概率分别为 $\\frac12,\\frac13,\\frac14$。求密码被破译的概率。",
+    answer_text="$P=1-\\frac12\\cdot\\frac23\\cdot\\frac34=\\frac34$。",
+    points=[{"text": "用对立事件", "partial": 2}, {"text": "三人独立概率相乘", "partial": 2},
+            {"text": "结果 $=\\frac34$", "partial": 2}, {"text": "说明为何不用全概率", "partial": 2}],
+    expl="**答案依据**：§1.6 独立性+对立事件。", mis="⚠️ 不能直接相加概率。",
+    tags=["创新题", "独立性", "至少一次"],
+    verify=[{"desc": "P", "code": "1-Rational(1,2)*Rational(2,3)*Rational(3,4)", "expected": "3/4"}]))
 
-Q_list.append(mk(SHORT, "hard", "1.5", "（创新·医疗筛查）某筛查试剂：患病者阳性率 90%，健康者阳性率 8%。"
-    "设患病率为 $p$。当 $p$ 取何值时，「阳性者确实患病」的概率超过 $50\\%$？",
-    answer_text="$P(\\text{患病}|\\text{阳性})=\\dfrac{0.9p}{0.9p+0.08(1-p)}>\\dfrac12$\n"
-                "$\\Rightarrow 0.9p > 0.04 - 0.08p + 0.9p$\n"
-                "$\\Rightarrow 0.08p > 0.04 \\Rightarrow p > 0.5$\n"
-                "**结论**：当患病率超过 $50\\%$ 时，阳性才有超过一半的概率是真的。\n"
-                "**创新点**：这个临界值与试剂精度无关——只要假阳性率非零，低患病率下阳性预测值就低。",
-    points=[{"text": "写出贝叶斯公式并代入参数", "partial": 2},
-            {"text": "解不等式得 $p > 0.5$", "partial": 2},
-            {"text": "解释临界值与试剂精度无关的含义", "partial": 2}],
-    expl="**答案依据**：§1.5 贝叶斯公式 + 代数不等式。\n"
-         "**考点出处**：浙大第四版 §1.5；题型改编自：创新题（临界分析）。",
-    mis="⚠️ 不等式两边都有 $p$ 项——要移项合并同类项，不能直接约去。"))
+# ═══ ch2 一维随机变量（+8）═══
+_qlist.append(mk(SINGLE, "basic", "2.1", "设 $P(X=k)=\\frac{c}{2^k}$（$k=1,2,3$），则 $c=$",
+    answer=["A"], options=["$\\frac{4}{7}$", "$\\frac{2}{7}$", "$\\frac{1}{7}$", "$\\frac{8}{7}$"],
+    expl="**答案依据**：$c(\\frac12+\\frac14+\\frac18)=c\\cdot\\frac74=1$，$c=\\frac47$。A 正确。", tags=["基础", "分布列"]))
 
-# ═══════════ ch2 一维随机变量（+8 题）═══════════
+_qlist.append(mk(SINGLE, "medium", "2.4", "设 $X\\sim B(4,\\frac13)$，则 $P(X\\ge1)=$",
+    answer=["A"], options=["$1-(\\frac23)^4$", "$\\frac{65}{81}$", "$\\frac{8}{27}$", "$\\frac{32}{81}$"],
+    expl="**答案依据**：$1-(\\frac23)^4=\\frac{65}{81}$。A 正确。", tags=["中等", "二项分布"],
+    variant_group="vg-binomial",
+    verify=[{"desc": "P(≥1)", "code": "1-Rational(2,3)**4", "expected": "65/81"}]))
 
-Q_list.append(mk(SINGLE, "basic", "2.1", "设 $X$ 的分布列 $P(X=0)=\\frac12,\\ P(X=1)=\\frac14,\\ P(X=2)=\\frac14$，则 $P(X\\le1)=$",
-    answer=["B"], options=["$\\frac14$", "$\\frac34$", "$\\frac12$", "$1$"],
-    expl="**答案依据**：$P(X\\le1)=P(X=0)+P(X=1)=\\frac12+\\frac14=\\frac34$。B 正确。",
-    tags=["基础", "分布列"]))
+_qlist.append(mk(SINGLE, "medium", "2.4", "设 $X\\sim P(2)$，则 $P(X\\le1)=$",
+    answer=["A"], options=["$3e^{-2}$", "$e^{-2}$", "$e^{-4}$", "$2e^{-2}$"],
+    expl="**答案依据**：$e^{-2}+2e^{-2}=3e^{-2}$。A 正确。", tags=["中等", "泊松分布"],
+    verify=[{"desc": "P(X≤1)", "code": "sp.exp(-2)+2*sp.exp(-2)", "expected": "3*exp(-2)"}]))
 
-Q_list.append(mk(SINGLE, "medium", "2.4", "设 $X\\sim B(4,p)$ 且 $P(X=0)=\\frac{16}{81}$，则 $p=$",
-    answer=["B"], options=["$\\frac14$", "$\\frac13$", "$\\frac12$", "$\\frac23$"],
-    expl="**答案依据**：$P(X=0)=(1-p)^4=\\frac{16}{81}=\\left(\\frac23\\right)^4\\Rightarrow 1-p=\\frac23\\Rightarrow p=\\frac13$。B 正确。",
-    tags=["中等", "二项分布"]))
+_qlist.append(mk(SINGLE, "hard", "2.4", "设 $X\\sim N(1,4)$，则 $P(X\\le3)=$（$\\Phi(1)=0.8413$）",
+    answer=["A"], options=["$0.8413$", "$0.9772$", "$0.5$", "$0.1587$"],
+    expl="**答案依据**：$P(Z\\le1)=0.8413$。A 正确。", tags=["高频", "正态分布"]))
 
-Q_list.append(mk(SINGLE, "medium", "2.3", "设 $X$ 的密度 $f(x)=\\begin{cases}2x,&0<x<1\\\\0,&\\text{其他}\\end{cases}$，则 $P(X\\le\\frac12)=$",
-    answer=["C"], options=["$\\frac14$", "$\\frac12$", "$\\frac14$", "$\\frac34$"],
-    expl="**答案依据**：$P(X\\le\\frac12)=\\int_0^{1/2}2x\\,dx=\\left[x^2\\right]_0^{1/2}=\\frac14$。C 正确。",
-    tags=["中等", "概率密度"]))
+_qlist.append(mk(SINGLE, "medium", "2.3", "设 $X\\sim U(0,2)$，则 $P(X>\\frac32)=$",
+    answer=["B"], options=["$\\frac{1}{2}$", "$\\frac{1}{4}$", "$\\frac{3}{4}$", "$\\frac{1}{8}$"],
+    expl="**答案依据**：$\\frac{2-1.5}{2}=\\frac14$。B 正确。", tags=["中等", "均匀分布"]))
 
-Q_list.append(mk(SINGLE, "hard", "2.4", "设 $X\\sim N(0,1)$，$\\Phi(1)=0.8413$，则 $P(-1\\le X\\le0)=$",
-    answer=["B"], options=["$0.3413$", "$0.1587$", "$0.5$", "$0.8413$"],
-    expl="**答案依据**：对称性 $P(-1\\le X\\le0)=\\Phi(0)-\\Phi(-1)=0.5-(1-0.8413)=0.3413$。B 正确。",
-    mis="⚠️ $\\Phi(-a)=1-\\Phi(a)$（对称性）。",
-    tags=["高频", "正态分布"]))
+_qlist.append(mk(CALC, "hard", "2.5", "设 $X\\sim U(-1,2)$，求 $Y=2X+1$ 的分布函数。",
+    answer_text="$F_Y(y)=0(y<-1), \\frac{y+1}{6}(-1\\le y<5), 1(y\\ge5)$。",
+    points=[{"text": "确定 $Y$ 的范围", "partial": 2}, {"text": "分布函数", "partial": 2},
+            {"text": "结果", "partial": 2}, {"text": "边界验证", "partial": 2}],
+    expl="**答案依据**：§2.5 线性变换分布函数法。", tags=["计算", "函数分布"],
+    verify=[{"desc": "F(5)", "code": "Rational(6,6)", "expected": "1"}]))
 
-Q_list.append(mk(MULTI, "medium", "2.4", "下列分布中，期望等于方差的有",
-    answer=["A", "B"], options=["泊松分布 $P(\\lambda)$", "指数分布 $E(\\lambda)$（仅期望=倒数不是方差——此选项应排除）",
-                                "$X\\sim B(n,p)$", "$X\\sim U(0,1)$"],
-    expl="**答案依据**：泊松分布 $E(X)=D(X)=\\lambda$（A 正确）。B 的 $E(X)=1/\\lambda$，$D(X)=1/\\lambda^2$——不等。C 的 $E=np\\neq np(1-p)=D$。D 的 $E=\\frac12$，$D=\\frac{1}{12}$——不等。\n"
-         "——修正：只有 A 正确。B、C、D 期望≠方差。",
-    mis="⚠️ 泊松分布是唯一「期望=方差」的常见分布。"))
+_qlist.append(mk(BLANK, "basic", "2.2", "$F(+\\infty)=$ ______，$F(-\\infty)=$ ______。",
+    answer=["$1$", "$0$"], expl="分布函数边界性质。", tags=["基础", "分布函数"]))
 
-Q_list.append(mk(MULTI, "hard", "2.5", "设 $X\\sim N(0,1)$，$Y=X^2$。关于 $Y$ 的分布，正确的有",
-    answer=["A", "C"], options=["$Y\\ge0$", "$Y$ 服从 $\\chi^2(1)$ 分布", "$Y$ 的密度在 $y=0$ 处发散", "$Y\\sim N(0,1)$"],
-    expl="**答案依据**：$X^2\\ge0$（A 正确）；标准正态的平方即 $\\chi^2(1)$（B 正确）；\n"
-         "密度 $f_Y(y)=\\frac{1}{\\sqrt{2\\pi y}}e^{-y/2}$，$y\\to0^+$ 时发散（C 正确）；D 错误。",
-    tags=["创新题", "函数分布"]))
+_qlist.append(mk(JUDGE, "medium", "2.3", "若 $f(x)$ 是概率密度函数，则 $f(x)\\le1$。",
+    answer=["B"], expl="**答案依据**：密度只需 $f\\ge0$ 且 $\\int f=1$。$f$ 可以 >1。", tags=["中等", "密度函数"]))
 
-Q_list.append(mk(BLANK, "medium", "2.4", "设 $X\\sim B(3,0.6)$，则 $P(X\\ge1)=$ ______（精确分数）。",
-    answer=["$\\frac{117}{125}$"], accept=["117/125", "0.936"],
-    expl="**答案依据**：$P(X\\ge1)=1-P(X=0)=1-(0.4)^3=1-0.064=0.936$。",
-    tags=["中等", "至少一次"],
-    verify=[{"desc": "P(≥1)", "code": "1-Rational(2,5)**3", "expected": "117/125"}]))
+# ═══ ch3 多维随机变量（+8）═══
+_qlist.append(mk(SINGLE, "basic", "3.1", "$(X,Y)$ 联合密度 $f(x,y)=c(x+y)$（$0<x<1,0<y<1$），则 $c=$",
+    answer=["A"], options=["$1$", "$\\frac{1}{2}$", "$2$", "$\\frac{1}{3}$"],
+    expl="**答案依据**：$\\int\\int=1$：$c\\cdot\\int_0^1\\int_0^1(x+y)dxdy=c\\cdot1=1$，$c=1$。A 正确。", tags=["基础", "联合密度"],
+    variant_group="vg-jointxy",
+    verify=[{"desc": "归一", "code": "integrate(integrate(x+y,(x,0,1)),(y,0,1))", "expected": "1"}]))
 
-Q_list.append(mk(SHORT, "medium", "2.4", "设 $X\\sim N(0,1)$。利用对称性求 $P(X>1.96)$（$\\Phi(1.96)=0.975$）。",
-    answer_text="$P(X>1.96)=1-\\Phi(1.96)=1-0.975=0.025$。\n"
-                "即 $X$ 超过 $1.96$ 的概率约为 $2.5\\%$——这就是双侧检验中每侧 $\\alpha/2=0.025$ 的来源。",
-    points=[{"text": "利用对称性 $P(X>a)=1-\\Phi(a)$", "partial": 2},
-            {"text": "结果 $=0.025$", "partial": 2},
-            {"text": "联系假设检验中显著性水平的含义", "partial": 2}],
-    expl="**答案依据**：§2.4 正态分布的对称性。\n"
-         "**考点出处**：浙大第四版 §2.4；题型改编自：创新题（联系假设检验）。"))
+_qlist.append(mk(SINGLE, "medium", "3.2", "接上题：$f_X(x)=$（$0<x<1$）",
+    answer=["A"], options=["$x+\\frac{1}{2}$", "$x$", "$2x+\\frac{1}{2}$", "$1$"],
+    expl="**答案依据**：$f_X=\\int_0^1(x+y)dy=x+\\frac12$。A 正确。", tags=["中等", "边缘密度"],
+    variant_group="vg-jointxy"))
 
-# ═══════════ ch3 多维随机变量（+6 题）═══════════
+_qlist.append(mk(SINGLE, "medium", "3.4", "接上题：$X,Y$ 是否独立？",
+    answer=["B"], options=["独立", "不独立", "无法判断", "当 $x=y$ 时独立"],
+    expl="**答案依据**：$f_X f_Y\\neq f(x,y)$。B 正确。", tags=["中等", "独立性"],
+    variant_group="vg-jointxy"))
 
-Q_list.append(mk(SINGLE, "basic", "3.1", "设 $(X,Y)$ 的联合分布函数为 $F(x,y)$，则 $P(X>a, Y>b)=$",
-    answer=["C"], options=["$1-F(a,b)$", "$F(a)+F(b)-F(a,b)$", "$1-F_X(a)-F_Y(b)+F(a,b)$", "$1-F(a,b)$"],
-    expl="**答案依据**：$P(X>a,Y>b)=1-P(X\\le a)-P(Y\\le b)+P(X\\le a,Y\\le b)$\n"
-         "$=1-F_X(a)-F_Y(b)+F(a,b)$。C 正确。",
-    mis="⚠️ 容斥原理：减去两个边缘再补上交集。", tags=["中等", "联合分布函数"]))
-
-Q_list.append(mk(SINGLE, "medium", "3.2", "设 $(X,Y)$ 的联合密度 $f(x,y)=\\begin{cases}6xy^2,&0<x<1,0<y<1\\\\0,\\text{其他}\\end{cases}$，则 $f_X(x)=$",
-    answer=["A"], options=["$2x$（$0<x<1$）", "$3y^2$", "$6x$", "$2$"],
-    expl="**答案依据**：$f_X(x)=\\int_0^1 6xy^2\\,dy=6x\\cdot\\frac{y^3}{3}\\Big|_0^1=2x$（$0<x<1$）。A 正确。",
-    tags=["中等", "边缘密度"],
-    verify=[{"desc": "f_X", "code": "integrate(6*x*y**2, (y, 0, 1))", "expected": "2*x"}]))
-
-Q_list.append(mk(SINGLE, "hard", "3.4", "设 $X\\sim U(0,1)$，$Y\\sim U(0,1)$ 独立，则 $P(Y\\le X)=$",
+_qlist.append(mk(SINGLE, "hard", "3.4", "$X\\sim U(0,1)$，$Y\\sim U(0,1)$ 独立。$P(X+Y\\le1)=$",
     answer=["B"], options=["$\\frac14$", "$\\frac12$", "$\\frac34$", "$1$"],
-    expl="**答案依据**：单位正方形内 $y\\le x$ 的区域是三角形（面积 $\\frac12$），$P=\\frac{1/2}{1}=\\frac12$。B 正确。",
-    tags=["中等", "几何概型"]))
+    expl="**答案依据**：几何概型，三角形面积 $\\frac12$。B 正确。", tags=["中等", "几何概型"]))
 
-Q_list.append(mk(MULTI, "medium", "3.4", "设 $X$ 与 $Y$ 不相关，则正确的有",
-    answer=["A", "B"], options=["$\\mathrm{Cov}(X,Y)=0$", "$E(XY)=E(X)E(Y)$", "$X$ 与 $Y$ 一定独立", "$D(X+Y)=D(X)+D(Y)$"],
-    expl="**答案依据**：不相关 ⇒ 协方差为 0（A 正确）⇒ $E(XY)=E(X)E(Y)$（B 正确）⇒ $D(X+Y)=D(X)+D(Y)$（由方差公式直接推出）。C 错：不相关不一定独立。",
-    tags=["高频", "不相关"]))
+_qlist.append(mk(MULTI, "medium", "3.2", "设 $(X,Y)$ 联合密度为 $f(x,y)$，则 $f_X(x)=$",
+    answer=["A", "C"], options=["$\\int_{-\\infty}^{+\\infty}f(x,y)dy$", "对 $y$ 积分", "$\\int_{-\\infty}^{+\\infty}f(x,y)dx$", "$f(x,y)$ 对 $x$ 积分"],
+    expl="**答案依据**：边缘密度 = 联合密度对另一变量积分。A、C 等价。", tags=["边缘密度"]))
 
-Q_list.append(mk(JUDGE, "medium", "3.4", "若 $X$ 与 $Y$ 独立，则 $D(X-Y)=D(X)-D(Y)$。",
-    answer=["B"], expl="**答案依据**：$D(X-Y)=D(X)+D(Y)$（独立时方差相加不减）。减号是错误的。", tags=["方差"]))
+_qlist.append(mk(JUDGE, "medium", "3.4", "若 $X$ 与 $Y$ 的协方差为零，则 $f(x,y)=f_X(x)f_Y(y)$。",
+    answer=["B"], expl="**答案依据**：不相关不一定独立。反例：$X\\sim U(-1,1)$，$Y=X^2$。", tags=["不相关与独立"]))
 
-Q_list.append(mk(CALC, "hard", "3.2", "设 $(X,Y)$ 的联合密度 $f(x,y)=\\begin{cases}1,&0<x<1,0<y<1\\\\0,\\text{其他}\\end{cases}$（独立均匀分布）。求 $P\\left(X^2+Y^2\\le\\frac14\\right)$。",
-    answer_text="$X,Y$ 独立均匀 → $(X,Y)$ 在单位正方形上均匀分布。\n"
-                "$P(X^2+Y^2\\le\\frac14)=P\\left((X,Y)\\in\\text{单位正方形内的四分之一圆}\\right)$\n"
-                "四分之一圆（半径 $\\frac12$）的面积 $=\\frac{1}{4}\\pi\\left(\\frac12\\right)^2=\\frac{\\pi}{16}$。\n"
-                "$$P=\\frac{\\pi/16}{1}=\\frac{\\pi}{16}.$$\n"
-                "**创新点**：这是蒙特卡洛法估算 $\u03c0$ 的原理——用均匀随机点落入圆内的频率估计 $\u03c0/4$。",
-    points=[{"text": "识别为几何概型（单位正方形内的四分之一圆）", "partial": 2},
-            {"text": "面积 $=\\frac{\\pi}{16}$", "partial": 2},
-            {"text": "概率 $=\\frac{\\pi}{16}$", "partial": 2},
-            {"text": "联系蒙特卡洛法", "partial": 2}],
-    expl="**答案依据**：§3.1 均匀联合分布 + 几何概型。\n"
-         "**考点出处**：浙大第四版 §3.1；题型改编自：创新题（几何概率）。",
-    tags=["创新题", "几何概型", "均匀分布"],
-    verify=[{"desc": "面积", "code": "pi/16", "expected": "pi/16"}]))
+_qlist.append(mk(BLANK, "basic", "3.1", "联合分布函数 $F(+\\infty,+\\infty)=$ ______，$F(-\\infty,-\\infty)=$ ______。",
+    answer=["$1$", "$0$"], expl="联合分布函数边界性质。", tags=["基础", "联合分布函数"]))
 
-# ═══════════ ch4 数字特征（+6 题）═══════════
+_qlist.append(mk(CALC, "hard", "3.2", "联合密度 $f(x,y)=\\begin{cases}2-x-y,&0<x<1,0<y<1\\\\0,\\text{其他}\\end{cases}$。求 $P(X+Y\\le1)$。",
+    answer_text="$P=\\int_0^1\\int_0^{1-x}(2-x-y)dydx=\\frac{2}{3}$。",
+    points=[{"text": "确定积分区域", "partial": 2}, {"text": "内层积分", "partial": 2}, {"text": "外层积分，结果 $=\\frac23$", "partial": 2}, {"text": "自检 $P+P'=1$", "partial": 2}],
+    expl="**答案依据**：§3.1 联合密度概率计算。", tags=["计算", "中等", "联合密度"],
+    verify=[{"desc": "P", "code": "integrate(integrate(2-x-y,(y,0,1-x)),(x,0,1))", "expected": "2/3"}]))
 
-Q_list.append(mk(SINGLE, "basic", "4.1", "设 $X\\sim U(0,2)$，则 $E(X^2)=$",
-    answer=["B"], options=["$\\frac{2}{3}$", "$\\frac{4}{3}$", "$1$", "$2$"],
-    expl="**答案依据**：$E(X^2)=\\int_0^2 x^2\\cdot\\frac{1}{2}dx=\\frac{8}{6}=\\frac{4}{3}$。B 正确。",
-    tags=["基础", "期望"],
-    verify=[{"desc": "E(X^2)", "code": "integrate(x*x/2, (x, 0, 2))", "expected": "4/3"}]))
+# ═══ ch4 数字特征（+8）═══
+_qlist.append(mk(SINGLE, "basic", "4.1", "$P(X=k)=\\frac13$（$k=1,2,3$），$E(2X+1)=$",
+    answer=["B"], options=["$3$", "$5$", "$4$", "$2$"],
+    expl="**答案依据**：$E(X)=2$，$E(2X+1)=5$。B 正确。", tags=["基础", "期望线性性"]))
 
-Q_list.append(mk(SINGLE, "medium", "4.2", "设 $X\\sim B(4,\\frac12)$，则 $D(X)=$",
-    answer=["A"], options=["$1$", "$2$", "$4$", "$\\frac{1}{2}$"],
-    expl="**答案依据**：$D(X)=np(1-p)=4\\times\\frac12\\times\\frac12=1$。A 正确。", tags=["中等", "二项分布"]))
+_qlist.append(mk(SINGLE, "medium", "4.2", "$X\\sim U(-1,3)$，$D(X)=$",
+    answer=["B"], options=["$1$", "$\\frac{4}{3}$", "$\\frac{16}{3}$", "$4$"],
+    expl="**答案依据**：$\\frac{(3+1)^2}{12}=\\frac43$。B 正确。", tags=["中等", "均匀分布"]))
 
-Q_list.append(mk(SINGLE, "medium", "4.3", "设 $X,Y$ 独立，$D(X)=4$，$D(Y)=9$，则 $D(2X-Y)=$",
-    answer=["C"], options=["$1$", "$7$", "$25$", "$17$"],
-    expl="**答案依据**：$D(2X-Y)=4D(X)+D(Y)=16+9=25$。C 正确（系数平方乘入，方差相加）。",
-    mis="⚠️ $-Y$ 的系数 $(-1)^2=1$，方差不减反加。", tags=["中等", "方差"]))
+_qlist.append(mk(SINGLE, "medium", "4.3", "$X,Y$ 独立，$D(X)=4, D(Y)=9$，$D(X-Y)=$",
+    answer=["B"], options=["$5$", "$13$", "$-5$", "$1$"],
+    expl="**答案依据**：$D(X-Y)=D(X)+D(Y)=13$。B 正确。",
+    mis="⚠️ 方差没有减法。", tags=["中等", "方差"]))
 
-Q_list.append(mk(SINGLE, "hard", "4.4", "设 $X\\sim U(-1,3)$，则 $E\\left((X-1)^2\\right)=$",
-    answer=["B"], options=["$\\frac{4}{3}$", "$\\frac{4}{3}$（即 $D(X)$）", "$1$", "$\\frac{16}{3}$"],
-    expl="**答案依据**：$E[(X-1)^2]=D(X)+(E(X)-1)^2$。\n"
-         "$E(X)=\\frac{-1+3}{2}=1$，$D(X)=\\frac{(3-(-1))^2}{12}=\\frac{16}{12}=\\frac43$。\n"
-         "$E[(X-1)^2]=\\frac43+0=\\frac43$。B 正确。",
-    tags=["创新题", "方差分解"],
-    verify=[{"desc": "D(X)", "code": "Rational(16,12)", "expected": "4/3"}]))
+_qlist.append(mk(SINGLE, "hard", "4.3", "$X,Y$ 独立同分布，$E=\\mu, D=\\sigma^2$，$E[(X-Y)^2]=$",
+    answer=["B"], options=["$0$", "$2\\sigma^2$", "$\\sigma^2$", "$4\\sigma^2$"],
+    expl="**答案依据**：$E[(X-Y)^2]=D(X-Y)+[E(X-Y)]^2=2\\sigma^2+0$。B 正确。",
+    tags=["创新题", "方差分解"]))
 
-Q_list.append(mk(MULTI, "hard", "4.4", "设 $X\\sim U(-1,3)$，下列关于 $E(X)$ 和 $D(X)$ 的说法正确的有",
-    answer=["A", "B"], options=["$E(X)=1$", "$D(X)=\\frac{4}{3}$", "$D(X)=\\frac{16}{3}$", "$E(X)=0$"],
-    expl="**答案依据**：$E(X)=\\frac{-1+3}{2}=1$，$D(X)=\\frac{(3-(-1))^2}{12}=\\frac{4}{3}$。A、B 正确。",
-    tags=["均匀分布"]))
+_qlist.append(mk(MULTI, "medium", "4.2", "关于方差，正确的有",
+    answer=["A", "B", "C"], options=["$D(aX)=a^2D(X)$", "$D(X)\\ge0$", "$D(X)=E(X^2)-E^2(X)$", "$D(X+Y)=D(X)+D(Y)$ 恒成立"],
+    expl="**答案依据**：A、B、C 正确。D 需要独立或协方差为零。", tags=["方差性质"]))
 
-Q_list.append(mk(CALC, "hard", "4.3", "设 $X\\sim U(-1,2)$，求 $E(X)$、$D(X)$ 和 $E(X^2)$。",
-    answer_text="$E(X)=\\frac{-1+2}{2}=\\frac12$。\n"
-                "$D(X)=\\frac{(2-(-1))^2}{12}=\\frac{9}{12}=\\frac34$。\n"
-                "$E(X^2)=D(X)+[E(X)]^2=\\frac34+\\frac14=1$。",
-    points=[{"text": "$E(X)=\\frac12$", "partial": 2}, {"text": "$D(X)=\\frac34$", "partial": 2},
-            {"text": "$E(X^2)=D(X)+E^2(X)=1$", "partial": 2}, {"text": "公式 $E(X^2)=D(X)+E^2(X)$", "partial": 2}],
-    expl="**答案依据**：§4.1 期望 + §4.2 方差公式 $D(X)=E(X^2)-E^2(X)$。",
-    tags=["计算", "中等", "均匀分布"],
-    verify=[{"desc": "E(X^2)", "code": "Rational(3,4)+Rational(1,4)", "expected": "1"}]))
+_qlist.append(mk(CALC, "medium", "4.2", "$P(X=-1)=\\frac16, P(X=0)=\\frac13, P(X=1)=\\frac12$。求 $E(X)$ 和 $D(X)$。",
+    answer_text="$E(X)=\\frac13$，$E(X^2)=\\frac23$，$D(X)=\\frac59$。",
+    points=[{"text": "$E(X)=\\frac13$", "partial": 2}, {"text": "$E(X^2)=\\frac23$", "partial": 2},
+            {"text": "$D(X)=\\frac59$", "partial": 2}, {"text": "公式", "partial": 2}],
+    expl="**答案依据**：§4.2 方差公式。", tags=["计算", "中等", "方差"],
+    verify=[{"desc": "D", "code": "Rational(2,3)-Rational(1,9)", "expected": "5/9"}]))
 
-# ═══════════ ch5 大数定律与CLT（+4 题）═══════════
+_qlist.append(mk(CALC, "hard", "4.1", "$X\\sim U(0,2)$。求 $E(X^2)$ 和 $E[(X-1)^2]$。",
+    answer_text="$E(X^2)=\\frac43$，$E[(X-1)^2]=\\frac13$。",
+    points=[{"text": "$E(X^2)=\\frac43$", "partial": 2}, {"text": "$E(X)=1$", "partial": 2},
+            {"text": "$E[(X-1)^2]=\\frac13$", "partial": 2}, {"text": "= $D(X)$ 的联系", "partial": 2}],
+    expl="**答案依据**：§4.1-4.2。", tags=["计算", "中等", "期望"],
+    verify=[{"desc": "E[(X-1)^2]", "code": "integrate((x-1)**2/2, (x, 0, 2))", "expected": "1/3"}]))
 
-Q_list.append(mk(SINGLE, "medium", "5.3", "用机器包装食盐，每袋净重 $X$（克）服从 $N(500,\\sigma^2)$。"
-    "抽查 $n=100$ 袋，标准差 $\u03c3=5$。$P(|\u03a7\u00af-500|>1)=$？（$\\Phi(2)=0.9772$）",
-    answer=["C"], options=["$0.0455$", "$0.9545$", "$0.9772$", "$0.0228$"],
-    expl="**答案依据**：$\u03a7\u00af\\sim N(500,\\sigma^2/n)=N(500,0.25)$。\n"
-         "$P(|\u03a7\u00af-500|>1)=P\\left(|Z|>\\frac{1}{0.5}\\right)=2(1-\u03a6(2))=2(1-0.9772)=0.0456$。C 正确。",
-    tags=["高频", "CLT", "质量控制"]))
+_qlist.append(mk(BLANK, "medium", "4.2", "$X\\sim B(n,p)$。$E(X)=$ ______，$D(X)=$ ______。",
+    answer=["$np$", "$np(1-p)$"], expl="二项分布标准结果。", tags=["基础", "二项分布"],
+    variant_group="vg-binomial"))
 
-Q_list.append(mk(SINGLE, "hard", "5.2", "辛钦大数定律的条件是",
-    answer=["A"], options=["独立同分布且 $E(X_i)$ 存在", "独立但可以不同分布", "两两不相关但可以不同分布", "方差必须一致有界"],
-    expl="**答案依据**：辛钦大数定律只要求独立同分布且期望存在——不要求方差存在（比切比雪夫弱条件）。A 正确。",
-    tags=["创新题", "辛钦大数定律"]))
+# ═══ ch5 大数定律与 CLT（+6）═══
+_qlist.append(mk(SINGLE, "medium", "5.1", "依概率收敛的定义是",
+    answer=["A"], options=["$\\forall\\varepsilon>0,\\lim P(|X_n-a|\\ge\\varepsilon)=0$", "$\\lim X_n=a$", "$P(|X_n-a|=0)\\to1$", "$\\mathrm{Var}(X_n)\\to0$"],
+    expl="**答案依据**：依概率收敛定义。A 正确。", tags=["依概率收敛"]))
 
-Q_list.append(mk(MULTI, "hard", "5.3", "关于中心极限定理，正确的有",
-    answer=["A", "B", "D"],
-    options=["大量独立随机变量之和近似服从正态分布", "不需要每个 $X_i$ 服从正态分布",
-             "要求每个 $X_i$ 服从正态分布", "$n$ 越大近似越好"],
-    expl="**答案依据**：A、B、D 正确。C 错——CLT 的核心就是「不管单个 $X_i$ 是什么分布，和近似正态」。",
-    tags=["CLT"]))
+_qlist.append(mk(SINGLE, "medium", "5.2", "辛钦大数定律的条件是",
+    answer=["A"], options=["独立同分布且 $E(X_i)$ 存在", "独立但可以不同分布", "两两不相关", "方差必须一致有界"],
+    expl="**答案依据**：辛钦只要求独立同分布且期望存在。A 正确。", tags=["创新题", "辛钦大数定律"]))
 
-Q_list.append(mk(JUDGE, "medium", "5.3", "中心极限定理说明：只要 $n$ 足够大，$\u03a3X_i$ 的分布就精确等于正态分布。",
-    answer=["B"], expl="**答案依据**：CLT 说的是「近似服从」正态分布（极限分布），不是精确等于。", tags=["CLT"]))
+_qlist.append(mk(SINGLE, "hard", "5.3", "$X_i$ 独立同分布于 $B(1,0.5)$，$n=100$。由 CLT，$P(45\\le\\sum X_i\\le55)\\approx$",
+    answer=["B"], options=["$0.9544$", "$0.6826$", "$0.9973$", "$0.8413$"],
+    expl="**答案依据**：$E=50,\\sigma=\\sqrt{25}=5$。$P(45\\le\\sum\\le55)=P(-1\\le Z\\le1)=2\\Phi(1)-1=0.6826$。B 正确。", tags=["高频", "CLT"]))
 
-# ═══════════ ch6 数理统计基础（+4 题）═══════════
+_qlist.append(mk(CALC, "hard", "5.3", "某车间 200 台车床独立工作，开工率 0.6。每台耗电 1 千瓦。供电所至少供应多少千瓦，才能以 99.9% 概率保证正常生产？（$\\Phi(3)=0.9987$）",
+    answer_text="$X\\sim B(200,0.6)$，$E=120, D=48$。$\\frac{k-120}{\\sqrt{48}}\\ge3\\Rightarrow k\\ge141$。至少供应 **141 千瓦**。",
+    points=[{"text": "识别为 De Moivre-Laplace 模型", "partial": 2}, {"text": "标准化求临界值", "partial": 2},
+            {"text": "$k\\ge141$", "partial": 2}, {"text": "向上取整说明", "partial": 2}],
+    expl="**答案依据**：§5.3 CLT。", tags=["计算", "高频", "CLT"],
+    verify=[{"desc": "k", "code": "round(120+3*sp.sqrt(48))", "expected": "141"}]))
 
-Q_list.append(mk(SINGLE, "medium", "6.3", "设 $X\\sim N(0,1)$，$Y\\sim\u03c7^2(n)$ 且独立，则 $\\frac{X}{\u221a(Y/n)}\\sim$",
-    answer=["A"], options=["$t(n)$", "$\u03c7^2(n)$", "$N(0,1)$", "$F(1,n)$"],
-    expl="**答案依据**：$t$ 分布的定义——标准正态除以独立的 $\u03c7^2/\u0027 自由度$ 再开方。A 正确。", tags=["高频", "t分布"]))
+_qlist.append(mk(MULTI, "medium", "5.2", "关于大数定律，正确的有",
+    answer=["A", "B", "C"], options=["伯努利大数定律是频率估计概率的理论依据", "辛钦大数定律要求独立同分布且期望存在", "切比雪夫大数定律允许不同分布但方差一致有界", "大数定律说的是算术平均趋于零"],
+    expl="**答案依据**：A、B、C 正确。D 错：算术平均趋于数学期望。", tags=["大数定律"]))
 
-Q_list.append(mk(SINGLE, "hard", "6.3", "设 $X\\sim\u03c7^2(m)$，$Y\\sim\u03c7^2(n)$ 独立，则 $\\frac{X/m}{Y/n}\\sim$",
-    answer=["B"], options=["$t(m+n)$", "$F(m,n)$", "$\u03c7^2(m+n)$", "$N(0,1)$"],
-    expl="**答案依据**：$F$ 分布的定义——两个独立 $\u03c7^2$ 除以各自自由度之比。B 正确。", tags=["高频", "F分布"]))
+_qlist.append(mk(JUDGE, "medium", "5.1", "依概率收敛与高等数学中的数列极限（逐点收敛）是同一个概念。",
+    answer=["B"], expl="**答案依据**：依概率收敛 weaker 于逐点收敛。", tags=["依概率收敛"]))
 
-Q_list.append(mk(MULTI, "medium", "6.3", "关于 $\u03c7^2$ 分布，正确的有",
-    answer=["A", "B", "C"], options=["是非负的（取值 $\u22650$）", "期望 $=n$（自由度）", "具有可加性（独立 $\u03c7^2$ 之和仍为 $\u03c7^2$）", "关于原点对称"],
-    expl="**答案依据**：A、B、C 正确。D 错——$\u03c7^2$ 分布是偏态的（右偏），不正负对称。", tags=["高频", "χ²分布"]))
+# ═══ ch6 数理统计基础（+6）═══
+_qlist.append(mk(SINGLE, "basic", "6.1", "样本 $X_1,\\dots,X_n$ 满足的条件是",
+    answer=["A"], options=["与总体同分布且相互独立", "同分布但不独立", "独立但可以不同分布", "正态分布"],
+    expl="**答案依据**：简单随机样本——同分布+独立。A 正确。", tags=["基础", "简单随机样本"]))
 
-Q_list.append(mk(CALC, "medium", "6.2", "设总体 $X\\sim N(1,4)$，样本 $X_1,\\dots,X_9$。求 $P(\u03a7\u00af>2)$（$\u03a6(1.5)=0.9332$）。",
-    answer_text="\u03a7\u00af\\sim N(1,4/9)$。标准化：$P(\u03a7\u00af>2)=P(Z>\u0000\u0000\\frac{2-1}{2/3})=P(Z>1.5)=1-\u03a6(1.5)=0.0668$。",
-    points=[{"text": "\u03a7\u00af\\sim N(1,4/9)", "partial": 2}, {"text": "标准化 $Z=1.5$", "partial": 2}, {"text": "结果 $=0.0668$", "partial": 2}, {"text": "样本量越大均值越集中于 $\u03bc$", "partial": 2}],
-    expl="**答案依据**：§6.2 正态总体样本均值的分布。", tags=["计算", "高频", "样本均值"],
-    verify=[{"desc": "1-Φ(1.5)", "code": "1-0.9332", "expected": "0.0668"}]))
+_qlist.append(mk(SINGLE, "medium", "6.2", "设总体 $X\\sim N(\\mu,\\sigma^2)$，样本均值 $\\bar{X}$ 服从",
+    answer=["B"], options=["$N(\\mu,\\sigma^2)$", "$N(\\mu,\\sigma^2/n)$", "$N(0,1)$", "$N(n\\mu,n\\sigma^2)$"],
+    expl="**答案依据**：$\\bar{X}\\sim N(\\mu,\\sigma^2/n)$。B 正确。", tags=["高频", "样本均值"]))
 
-# ═══════════ ch7 参数估计（+4 题）═══════════
+_qlist.append(mk(SINGLE, "hard", "6.3", "设 $X\\sim N(0,1)$，$Y\\sim\\chi^2(n)$ 独立，则 $\\frac{X}{\\sqrt{Y/n}}\\sim$",
+    answer=["A"], options=["$t(n)$", "$\\chi^2(n)$", "$N(0,1)$", "$F(1,n)$"],
+    expl="**答案依据**：$t$ 分布定义。A 正确。", tags=["高频", "t分布"]))
 
-Q_list.append(mk(SINGLE, "medium", "7.1", "设 $X\\sim U(0,\u03b8)$，则 \u03b8 的矩估计为",
-    answer=["B"], options=["$\u03a7\u00af$", "$2\u03a7\u00af$", "$\u03a7_{(n)}$", "$\u03a7_{(1)}$"],
-    expl="**答案依据**：$E(X)=\u03b8/2$，令 $\u03b8/2=\u03a7\u00af$，得 $\\hat{\u03b8}=2\u03a7\u00af$。B 正确。", tags=["高频", "矩估计"]))
+_qlist.append(mk(MULTI, "hard", "6.3", "关于三大抽样分布，正确的有",
+    answer=["A", "B", "C"], options=["$\\chi^2$ 分布是非负的", "$t$ 分布关于 0 对称", "$F$ 分布是非负的", "$t$ 分布的方差恒为 1"],
+    expl="**答案依据**：A、B、C 正确。D 错：$t$ 分布方差 $=\\frac{n}{n-2}$。", tags=["三大分布"]))
 
-Q_list.append(mk(SINGLE, "hard", "7.2", "设 $\\hat{\u03b8}_1$ 和 $\\hat{\u03b8}_2$ 都是 \u03b8 的无偏估计，且 $D(\u03b8\u0302_1)<D(\u03b8\u0302_2)$，则",
-    answer=["A"], options=["$\\hat{\\theta}_1$ 比 $\\hat{\\theta}_2$ 有效", "$\\hat{\\theta}_2$ 比 $\\hat{\\theta}_1$ 有效",
-                           "两者同样有效", "无法判断"], expl="**答案依据**：有效性 = 均无偏时方差小者有效。A 正确。", tags=["有效性"]))
+_qlist.append(mk(BLANK, "medium", "6.2", "设 $X\\sim N(0,1)$，$X_1,\\dots,X_n$ 为样本，则 $\\sum X_i^2\\sim$ ______。",
+    answer=["$\\chi^2(n)$"], accept=["chi2(n)"], expl="**答案依据**：标准正态平方和。", tags=["基础", "χ²分布"]))
 
-Q_list.append(mk(BLANK, "medium", "7.1", "设 $X\\sim U(0,\u03b8)$，$X_{(n)}=\\max(X_i)$ 是 \u03b8 的极大似然估计，则 $E(X_{(n)})=$ ______（$n$ 个样本）。", 
-    answer=["$\\frac{n}{n+1}\u03b8$"], accept=["nθ/(n+1)", "n*theta/(n+1)"],
-    expl="**答案依据**：$F_{X_{(n)}}(x)=(x/\u03b8)^n$，$E(X_{(n)})=\\frac{n}{n+1}\u03b8$——**有偏**（低估 \u03b8）。", tags=["MLE", "有偏"]))
+_qlist.append(mk(CALC, "medium", "6.2", "设总体 $X\\sim N(2,9)$，样本 $n=9$。求 $P(\\bar{X}>3)$（$\\Phi(1)=0.8413$）。",
+    answer_text="$\\bar{X}\\sim N(2,1)$。$P(\\bar{X}>3)=1-\\Phi(1)=0.1587$。",
+    points=[{"text": "$\\bar{X}\\sim N(2,1)$", "partial": 2}, {"text": "标准化 $Z=1$", "partial": 2},
+            {"text": "结果 $=0.1587$", "partial": 2}, {"text": "样本量越大 $\\bar{X}$ 越集中", "partial": 2}],
+    expl="**答案依据**：§6.2 正态总体样本均值分布。", tags=["计算", "高频", "样本均值"],
+    verify=[{"desc": "1-Φ(1)", "code": "1-0.8413", "expected": "0.1587"}]))
 
-Q_list.append(mk(CALC, "hard", "7.3", "设总体 $X\\sim N(\u03bc,4)$，$n=16$，$\u03a7\u00af=10.5$。求 \u03bc 的 95% 置信区间（$z_{0.025}=1.96$）。",
-    answer_text="\u03c3 已知，$u$ 区间：$\u03a7\u00af\\pm z_{\u03b1/2}\u03c3/\u221an=10.5\\pm1.96\\times2/4=10.5\\pm0.98$\n"
-                "置信区间：$\\boxed{[9.52,\\ 11.48]}$。\n"
-                "置信水平 0.95 表示：重复抽样时，约 95% 的区间会覆盖 \u03bc。",
-    points=[{"text": "\u03c3 已知用 $u$ 区间（不是 $t$ 区间）", "partial": 2}, {"text": "半宽 $=1.96\u03c3/\u221an=0.98$", "partial": 2},
-            {"text": "区间 $=[9.52,11.48]$", "partial": 2}, {"text": "频率学派解释", "partial": 2}],
-    expl="**答案依据**：§7.3 正态总体均值的置信区间（\u03c3 已知）。", tags=["计算", "高频", "置信区间"],
-    verify=[{"desc": "半宽", "code": "Rational(196,100)*Rational(2,4)", "expected": "49/50"}]))
+# ═══ ch7 参数估计（+6）═══
+_qlist.append(mk(SINGLE, "medium", "7.1", "矩估计法的基本思想是",
+    answer=["A"], options=["用样本矩替换总体矩", "使似然函数最大", "使方差最小", "使偏差最小"],
+    expl="**答案依据**：矩估计 = 用样本矩替换相应的总体矩（令样本均值 = 总体期望等）。A 正确。B 是极大似然的思想。", tags=["高频", "矩估计"]))
 
-# ═══════════ ch8 假设检验（+5 题）═══════════
+_qlist.append(mk(SINGLE, "medium", "7.1", "极大似然估计法的基本思想是",
+    answer=["A"], options=["选取使观测到样本出现概率最大的参数值", "用样本矩替换总体矩", "使方差最小", "使偏差绝对值最小"],
+    expl="**答案依据**：极大似然 = 最大化 L(θ)。A 正确。", tags=["高频", "极大似然"]))
 
-Q_list.append(mk(SINGLE, "medium", "8.2", "第二类错误是指",
-    answer=["B"], options=["$H_0$ 为真时拒绝了 $H_0$", "$H_0$ 为假时接受了 $H_0$",
-                           "$H_0$ 为假时拒绝了 $H_0$", "$H_0$ 为真时接受了 $H_0$"],
-    expl="**答案依据**：第二类错误 = 纳伪（$H_0$ 假但接受了 $H_0$），概率 = \u03b2。B 正确。", tags=["高频", "两类错误"]))
+_qlist.append(mk(SINGLE, "hard", "7.2", "设 $T_1, T_2$ 都是 $\\mu$ 的无偏估计且 $D(T_1) < D(T_2)$，则",
+    answer=["A"], options=["$T_1$ 比 $T_2$ 有效", "$T_2$ 比 $T_1$ 有效", "两者一样好", "无法比较"],
+    expl="**答案依据**：有效性 = 均无偏时方差小者有效。A 正确。", tags=["高频", "有效性"]))
 
-Q_list.append(mk(SINGLE, "hard", "8.2", "其他条件不变时，减小 \u03b1（显著性水平）将导致",
-    answer=["C"], options=["\u03b2 减小", "\u03b2 增大", "\u03b2 不变", "\u03b2 = 0"],
-    expl="**答案依据**：\u03b1 和 \u03b2 此消彼长（样本量固定时）。减小 \u03b1（更难拒绝 $H_0$）⇒ 更容易接受 $H_0$ ⇒ \u03b2 增大。C 正确。\n"
-         "**创新点**：要同时减小 \u03b1 和 \u03b2，唯一办法是增大样本量 $n$。", tags=["创新题", "两类错误"]))
+_qlist.append(mk(CALC, "medium", "7.1", "设 $X\\sim U(0,\\theta)$，$X_1,\\dots,X_n$ 为样本。求 θ 的矩估计。",
+    answer_text="$E(X)=\\theta/2$。令 $\\theta/2=\\bar{X}$，得 $\\hat{\\theta}=2\\bar{X}$。",
+    points=[{"text": "$E(X)=\\theta/2$", "partial": 2}, {"text": "令 $\\theta/2=\\bar{X}$", "partial": 2},
+            {"text": "$\\hat{\\theta}=2\\bar{X}$", "partial": 2}, {"text": "对比 MLE $=X_{(n)}$", "partial": 2}],
+    expl="**答案依据**：§7.1 矩估计法。", tags=["计算", "高频", "矩估计"]))
 
-Q_list.append(mk(MULTI, "medium", "8.1", "关于假设检验，正确的有",
-    answer=["A", "B", "D"], options=["检验基于小概率反证法思想", "拒绝 $H_0$ 意味着有充分证据反对 $H_0$",
-             "接受 $H_0$ 意味着 $H_0$ 一定正确", "\u03b1 是犯第一类错误的概率上界"],
-    expl="**答案依据**：A、B、D 正确。C 错：接受 $H_0$ 只是「没有充分证据反对」，不等于确认正确。", tags=["假设检验"]))
+_qlist.append(mk(BLANK, "medium", "7.3", "正态总体 σ 已知时，$\\mu$ 的 95% 置信区间为 $\\bar{X}\\pm$ ______。",
+    answer=["$1.96\\frac{\\sigma}{\\sqrt{n}}$"], accept=["1.96sigma/sqrt(n)"], expl="**答案依据**：σ 已知的 $u$ 区间。", tags=["置信区间"]))
 
-Q_list.append(mk(CALC, "hard", "8.2", "某工厂原来产品直径 \u03bc = 5cm，改进工艺后取 $n = 25$ 件，测得 $\u03a7\u00af = 5.1$，$S = 0.2$。"
-    "取 \u03b1 = 0.05（$t_{0.025}(24) = 2.064$），检验直径是否发生变化。",
-    answer_text="**假设**：$H_0: \u03bc = 5$，$H_1: \u03bc \u2260 5$。\n"
-                "**统计量**：\u03c3 未知，$t = \u0000\u0000\\frac{5.1-5}{0.2/5} = \u0000\u0000\\frac{0.1}{0.04} = 2.5$。\n"
-                "**判断**：$|t| = 2.5 > 2.064 = t_{0.025}(24)$，落入拒绝域，**拒绝 $H_0$**。\n"
-                "**结论**：在 0.05 水平下，有充分证据表明直径发生了显著变化。",
-    points=[{"text": "\u03c3 未知用 $t$ 检验（$n-1=24$）", "partial": 2}, {"text": "$t=2.5$", "partial": 2},
-            {"text": "$2.5>2.064$，拒绝 $H_0$", "partial": 2}, {"text": "结论：直径显著变化", "partial": 2}],
-    expl="**答案依据**：§8.2 正态总体均值的 $t$ 检验（\u03c3 未知）。", tags=["计算", "高频", "t检验"],
-    verify=[{"desc": "t", "code": "Rational(1,10)/(Rational(2,10)/5)", "expected": "5/2"}]))
+_qlist.append(mk(CALC, "hard", "7.2", "设 $T$ 是 $\\mu$ 的无偏估计，证明 $E[(T-\\mu)^2]=D(T)$。",
+    answer_text="$E[(T-\\mu)^2]=E(T^2-2\\mu T+\\mu^2)=E(T^2)-2\\mu E(T)+\\mu^2$。\n"
+                "由无偏性 $E(T)=\\mu$：$=E(T^2)-\\mu^2$。\n"
+                "又 $D(T)=E(T^2)-[E(T)]^2=E(T^2)-\\mu^2$。两者相等。$\\blacksquare$\n"
+                "**创新点**：均方误差 = 方差 + 偏差²。无偏时偏差 = 0，故 MSE = 方差。",
+    points=[{"text": "展开 $E[(T-\\mu)^2]$", "partial": 2}, {"text": "代入无偏性 $E(T)=\\mu$", "partial": 2},
+            {"text": "得到 $E(T^2)-\\mu^2=D(T)$", "partial": 2}, {"text": "联系 MSE = 方差 + 偏差²", "partial": 2}],
+    expl="**答案依据**：§7.2 无偏性与有效性的关系（MSE 分解）。", tags=["证明", "无偏性", "MSE"]))
 
-Q = Q_list
+# ═══ ch8 假设检验（+6）═══
+_qlist.append(mk(SINGLE, "basic", "8.1", "假设检验的基本思想是",
+    answer=["A"], options=["概率反证法（小概率事件在一次试验中几乎不发生）", "数学归纳法", "反证法（逻辑矛盾）", "贝叶斯更新"],
+    expl="**答案依据**：假设检验用小概率原理做概率反证。A 正确。", tags=["基础", "假设检验"]))
+
+_qlist.append(mk(SINGLE, "medium", "8.2", "假设检验中，第一类错误是指",
+    answer=["A"], options=["$H_0$ 为真时拒绝了 $H_0$", "$H_0$ 为假时接受了 $H_0$", "$H_1$ 为真时拒绝了 $H_1$", "样本量太大"],
+    expl="**答案依据**：第一类错误 = 弃真（$H_0$ 真但拒绝 $H_0$），概率 = α。A 正确。", tags=["高频", "两类错误"]))
+
+_qlist.append(mk(SINGLE, "hard", "8.2", "某工厂声称产品合格率为 95%。随机抽取 100 件发现 10 件次品。"
+    "在 $H_0: p = 0.95$ 下，$P(X\\le 90)\\approx \\Phi(-2.06) \\approx 0.0197$。结论是",
+    answer=["A"], options=["$p$ 值 $\\approx 0.02 < 0.05$，拒绝 $H_0$", "接受 $H_0$", "需要更多数据", "第二类错误"],
+    expl="**答案依据**：$p$ 值 $\\approx 0.02 < \\alpha = 0.05$，拒绝 $H_0$。A 正确。", tags=["创新题", "p值"],
+    variant_group="vg-pvalue"))
+
+_qlist.append(mk(MULTI, "medium", "8.1", "关于假设检验的 $p$ 值，正确的有",
+    answer=["A", "B", "C"], options=["$p$ 值越小越有理由拒绝 $H_0$", "$p$ 值是 $H_0$ 成立时观测到当前结果的概率",
+             "$p < \\alpha$ 时拒绝 $H_0$", "$p$ 值是 $H_0$ 为假的概率"],
+    expl="**答案依据**：A、B、C 正确。D 错——$p$ 值不是 $H_0$ 为假的概率。", tags=["p值"],
+    variant_group="vg-pvalue"))
+
+_qlist.append(mk(BLANK, "medium", "8.2", "正态总体均值的 $t$ 检验中，统计量 $t = \\frac{\\bar{X}-\\mu_0}{S/\\sqrt{n}}$ 服从自由度为 ______ 的 $t$ 分布。",
+    answer=["$n-1$"], accept=["n-1"], expl="**答案依据**：自由度 = $n-1$。", tags=["t检验"]))
+
+_qlist.append(mk(CALC, "hard", "8.2",
+    "某电池寿命 $X\\sim N(\\mu,\\sigma^2)$。声称平均寿命 $\\mu\\ge 200$ 小时。取 $n = 9$ 块，测得 $\\bar{X} = 195,\\ S = 6$。"
+    "取 $\\alpha = 0.05$（$t_{0.05}(8) = 1.860$，单侧），检验 $H_0: \\mu \\ge 200$ vs $H_1: \\mu < 200$。",
+    answer_text="$t = \\frac{195-200}{6/3} = -2.5$。$t = -2.5 < -1.860$，拒绝 $H_0$。有充分证据表明平均寿命低于 200 小时。",
+    points=[{"text": "单侧（左侧）检验", "partial": 2}, {"text": "$t = -2.5$", "partial": 2},
+            {"text": "$-2.5 < -1.860$，拒绝 $H_0$", "partial": 2}, {"text": "结论：寿命显著低于声称值", "partial": 2}],
+    expl="**答案依据**：§8.2 单侧 $t$ 检验。", tags=["计算", "高频", "t检验"],
+    verify=[{"desc": "t", "code": "Rational(195-200, 2)", "expected": "-5/2"}]))
+
+Q = _qlist

@@ -73,11 +73,15 @@
 
   /** 轻量 Markdown：**加粗** 与 `行内代码`。
    *  只在数学片段之外替换——否则 $a**2$、$x^{**}$ 里的 ** 会被误当成加粗标记。
-   *  拆分后偶数下标是文本、奇数下标是数学片段。 */
+   *  拆分后偶数下标是文本、奇数下标是数学片段。
+   *  所有片段先做 HTML 转义再拼接：题面里的 <、& 是数学文本不是标签，
+   *  直接进 innerHTML 会把 0<x<1 当标签吃掉（2026-11-01 实证：多学科 170 题被截断）。
+   *  数学段转义后，KaTeX auto-render 在文本节点里读到的仍是原文，渲染不受影响。 */
   function mdLite(s) {
     if (s == null || s === '') return '';
     var parts = String(s).split(/(\$\$[\s\S]*?\$\$|\$[^$]*\$)/);
     for (var i = 0; i < parts.length; i++) {
+      parts[i] = esc(parts[i]);
       if (i % 2 === 1) continue;
       parts[i] = parts[i]
         .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>')

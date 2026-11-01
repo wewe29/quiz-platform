@@ -46,7 +46,7 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "第一类错误是指",
+   "stem": "在假设检验中，「第一类错误」是指",
    "options": [
     "$H_0$ 为真时拒绝了 $H_0$",
     "$H_0$ 为假时接受了 $H_0$",
@@ -321,7 +321,41 @@
    "variantGroup": null
   },
   {
-   "id": "ps-141",
+   "id": "ps-151",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "假设检验的基本思想是",
+   "options": [
+    "概率反证法（小概率事件在一次试验中几乎不发生）",
+    "数学归纳法",
+    "反证法（逻辑矛盾）",
+    "贝叶斯更新"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：假设检验用小概率原理做概率反证。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础",
+    "假设检验"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-152",
    "type": "single",
    "typeGroup": "single",
    "difficulty": "medium",
@@ -331,20 +365,20 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "第二类错误是指",
+   "stem": "假设检验中，第一类错误是指",
    "options": [
     "$H_0$ 为真时拒绝了 $H_0$",
     "$H_0$ 为假时接受了 $H_0$",
-    "$H_0$ 为假时拒绝了 $H_0$",
-    "$H_0$ 为真时接受了 $H_0$"
+    "$H_1$ 为真时拒绝了 $H_1$",
+    "样本量太大"
    ],
    "answer": [
-    "B"
+    "A"
    ],
    "accept": null,
    "answerText": null,
    "points": null,
-   "explanation": "**答案依据**：第二类错误 = 纳伪（$H_0$ 假但接受了 $H_0$），概率 = β。B 正确。",
+   "explanation": "**答案依据**：第一类错误 = 弃真（$H_0$ 真但拒绝 $H_0$），概率 = α。A 正确。",
    "misconception": null,
    "extension": null,
    "tags": [
@@ -355,7 +389,7 @@
    "variantGroup": null
   },
   {
-   "id": "ps-142",
+   "id": "ps-153",
    "type": "single",
    "typeGroup": "single",
    "difficulty": "hard",
@@ -365,31 +399,31 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "其他条件不变时，减小 α（显著性水平）将导致",
+   "stem": "某工厂声称产品合格率为 95%。随机抽取 100 件发现 10 件次品。在 $H_0: p = 0.95$ 下，$P(X\\le 90)\\approx \\Phi(-2.06) \\approx 0.0197$。结论是",
    "options": [
-    "β 减小",
-    "β 增大",
-    "β 不变",
-    "β = 0"
+    "$p$ 值 $\\approx 0.02 < 0.05$，拒绝 $H_0$",
+    "接受 $H_0$",
+    "需要更多数据",
+    "第二类错误"
    ],
    "answer": [
-    "C"
+    "A"
    ],
    "accept": null,
    "answerText": null,
    "points": null,
-   "explanation": "**答案依据**：α 和 β 此消彼长（样本量固定时）。减小 α（更难拒绝 $H_0$）⇒ 更容易接受 $H_0$ ⇒ β 增大。C 正确。\n**创新点**：要同时减小 α 和 β，唯一办法是增大样本量 $n$。",
+   "explanation": "**答案依据**：$p$ 值 $\\approx 0.02 < \\alpha = 0.05$，拒绝 $H_0$。A 正确。",
    "misconception": null,
    "extension": null,
    "tags": [
     "创新题",
-    "两类错误"
+    "p值"
    ],
    "verify": [],
-   "variantGroup": null
+   "variantGroup": "vg-pvalue"
   },
   {
-   "id": "ps-143",
+   "id": "ps-154",
    "type": "multi",
    "typeGroup": "multi",
    "difficulty": "medium",
@@ -399,32 +433,62 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "关于假设检验，正确的有",
+   "stem": "关于假设检验的 $p$ 值，正确的有",
    "options": [
-    "检验基于小概率反证法思想",
-    "拒绝 $H_0$ 意味着有充分证据反对 $H_0$",
-    "接受 $H_0$ 意味着 $H_0$ 一定正确",
-    "α 是犯第一类错误的概率上界"
+    "$p$ 值越小越有理由拒绝 $H_0$",
+    "$p$ 值是 $H_0$ 成立时观测到当前结果的概率",
+    "$p < \\alpha$ 时拒绝 $H_0$",
+    "$p$ 值是 $H_0$ 为假的概率"
    ],
    "answer": [
     "A",
     "B",
-    "D"
+    "C"
    ],
    "accept": null,
    "answerText": null,
    "points": null,
-   "explanation": "**答案依据**：A、B、D 正确。C 错：接受 $H_0$ 只是「没有充分证据反对」，不等于确认正确。",
+   "explanation": "**答案依据**：A、B、C 正确。D 错——$p$ 值不是 $H_0$ 为假的概率。",
    "misconception": null,
    "extension": null,
    "tags": [
-    "假设检验"
+    "p值"
+   ],
+   "verify": [],
+   "variantGroup": "vg-pvalue"
+  },
+  {
+   "id": "ps-155",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "正态总体均值的 $t$ 检验中，统计量 $t = \\frac{\\bar{X}-\\mu_0}{S/\\sqrt{n}}$ 服从自由度为 ______ 的 $t$ 分布。",
+   "options": null,
+   "answer": [
+    "$n-1$"
+   ],
+   "accept": [
+    "n-1"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：自由度 = $n-1$。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "t检验"
    ],
    "verify": [],
    "variantGroup": null
   },
   {
-   "id": "ps-144",
+   "id": "ps-156",
    "type": "calc",
    "typeGroup": "calc",
    "difficulty": "hard",
@@ -434,30 +498,30 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "某工厂原来产品直径 μ = 5cm，改进工艺后取 $n = 25$ 件，测得 $Χ¯ = 5.1$，$S = 0.2$。取 α = 0.05（$t_{0.025}(24) = 2.064$），检验直径是否发生变化。",
+   "stem": "某电池寿命 $X\\sim N(\\mu,\\sigma^2)$。声称平均寿命 $\\mu\\ge 200$ 小时。取 $n = 9$ 块，测得 $\\bar{X} = 195,\\ S = 6$。取 $\\alpha = 0.05$（$t_{0.05}(8) = 1.860$，单侧），检验 $H_0: \\mu \\ge 200$ vs $H_1: \\mu < 200$。",
    "options": null,
    "answer": [],
    "accept": null,
-   "answerText": "**假设**：$H_0: μ = 5$，$H_1: μ ≠ 5$。\n**统计量**：σ 未知，$t =   \\frac{5.1-5}{0.2/5} =   \\frac{0.1}{0.04} = 2.5$。\n**判断**：$|t| = 2.5 > 2.064 = t_{0.025}(24)$，落入拒绝域，**拒绝 $H_0$**。\n**结论**：在 0.05 水平下，有充分证据表明直径发生了显著变化。",
+   "answerText": "$t = \\frac{195-200}{6/3} = -2.5$。$t = -2.5 < -1.860$，拒绝 $H_0$。有充分证据表明平均寿命低于 200 小时。",
    "points": [
     {
-     "text": "σ 未知用 $t$ 检验（$n-1=24$）",
+     "text": "单侧（左侧）检验",
      "partial": 2
     },
     {
-     "text": "$t=2.5$",
+     "text": "$t = -2.5$",
      "partial": 2
     },
     {
-     "text": "$2.5>2.064$，拒绝 $H_0$",
+     "text": "$-2.5 < -1.860$，拒绝 $H_0$",
      "partial": 2
     },
     {
-     "text": "结论：直径显著变化",
+     "text": "结论：寿命显著低于声称值",
      "partial": 2
     }
    ],
-   "explanation": "**答案依据**：§8.2 正态总体均值的 $t$ 检验（σ 未知）。",
+   "explanation": "**答案依据**：§8.2 单侧 $t$ 检验。",
    "misconception": null,
    "extension": null,
    "tags": [
@@ -468,8 +532,8 @@
    "verify": [
     {
      "desc": "t",
-     "code": "Rational(1,10)/(Rational(2,10)/5)",
-     "expected": "5/2"
+     "code": "Rational(195-200, 2)",
+     "expected": "-5/2"
     }
    ],
    "variantGroup": null
