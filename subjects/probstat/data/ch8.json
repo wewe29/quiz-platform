@@ -319,6 +319,160 @@
     }
    ],
    "variantGroup": null
+  },
+  {
+   "id": "ps-141",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "第二类错误是指",
+   "options": [
+    "$H_0$ 为真时拒绝了 $H_0$",
+    "$H_0$ 为假时接受了 $H_0$",
+    "$H_0$ 为假时拒绝了 $H_0$",
+    "$H_0$ 为真时接受了 $H_0$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：第二类错误 = 纳伪（$H_0$ 假但接受了 $H_0$），概率 = β。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "两类错误"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-142",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "其他条件不变时，减小 α（显著性水平）将导致",
+   "options": [
+    "β 减小",
+    "β 增大",
+    "β 不变",
+    "β = 0"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：α 和 β 此消彼长（样本量固定时）。减小 α（更难拒绝 $H_0$）⇒ 更容易接受 $H_0$ ⇒ β 增大。C 正确。\n**创新点**：要同时减小 α 和 β，唯一办法是增大样本量 $n$。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "创新题",
+    "两类错误"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-143",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 8,
+   "knowledgePoint": "8.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "关于假设检验，正确的有",
+   "options": [
+    "检验基于小概率反证法思想",
+    "拒绝 $H_0$ 意味着有充分证据反对 $H_0$",
+    "接受 $H_0$ 意味着 $H_0$ 一定正确",
+    "α 是犯第一类错误的概率上界"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A、B、D 正确。C 错：接受 $H_0$ 只是「没有充分证据反对」，不等于确认正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "假设检验"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-144",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 8,
+   "knowledgePoint": "8.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "某工厂原来产品直径 μ = 5cm，改进工艺后取 $n = 25$ 件，测得 $Χ¯ = 5.1$，$S = 0.2$。取 α = 0.05（$t_{0.025}(24) = 2.064$），检验直径是否发生变化。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "**假设**：$H_0: μ = 5$，$H_1: μ ≠ 5$。\n**统计量**：σ 未知，$t =   \\frac{5.1-5}{0.2/5} =   \\frac{0.1}{0.04} = 2.5$。\n**判断**：$|t| = 2.5 > 2.064 = t_{0.025}(24)$，落入拒绝域，**拒绝 $H_0$**。\n**结论**：在 0.05 水平下，有充分证据表明直径发生了显著变化。",
+   "points": [
+    {
+     "text": "σ 未知用 $t$ 检验（$n-1=24$）",
+     "partial": 2
+    },
+    {
+     "text": "$t=2.5$",
+     "partial": 2
+    },
+    {
+     "text": "$2.5>2.064$，拒绝 $H_0$",
+     "partial": 2
+    },
+    {
+     "text": "结论：直径显著变化",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§8.2 正态总体均值的 $t$ 检验（σ 未知）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "t检验"
+   ],
+   "verify": [
+    {
+     "desc": "t",
+     "code": "Rational(1,10)/(Rational(2,10)/5)",
+     "expected": "5/2"
+    }
+   ],
+   "variantGroup": null
   }
  ]
 }

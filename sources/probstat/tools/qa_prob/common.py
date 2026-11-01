@@ -7,6 +7,27 @@ SINGLE, MULTI, JUDGE, BLANK, SHORT, CALC = (
 ALL_QUESTIONS = []
 
 
+def _clean(text):
+    """清除控制字符 + 修复数学模式内裸中文（用 \\text{} 包裹）。"""
+    import re
+    if not text:
+        return text
+    text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", " ", text)
+    def _wrap(m):
+        inner = m.group(1)
+        if not any("\u4e00" <= c <= "\u9fff" for c in inner):
+            return m.group(0)
+        parts = re.split(r"([\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]+)", inner)
+        out = ""
+        for p in parts:
+            if p and any("\u4e00" <= c <= "\u9fff" for c in p):
+                out += "\\text{" + p + "}"
+            elif p:
+                out += p
+        return "$" + out + "$"
+    return re.sub(r"\$([^$]+)\$", _wrap, text)
+
+
 def Q(qtype, diff, kp, stem, answer=None, options=None, answer_text=None,
       points=None, expl="", mis=None, tags=None, variant_group=None,
       verify=None, qid=None, accept=None):
@@ -29,13 +50,13 @@ def Q(qtype, diff, kp, stem, answer=None, options=None, answer_text=None,
         "chapter": chapter,
         "knowledgePoint": kp,
         "source": {"text": "", "kind": "textbook"},
-        "stem": stem,
-        "options": options,
+        "stem": _clean(stem),
+        "options": [_clean(o) if isinstance(o, str) else o for o in (options or [])] or options,
         "answer": answer or [],
         "accept": accept,
-        "answerText": answer_text,
+        "answerText": _clean(answer_text),
         "points": pts,
-        "explanation": expl,
+        "explanation": _clean(expl),
         "misconception": mis,
         "extension": None,
         "tags": tags or [],

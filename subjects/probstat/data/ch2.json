@@ -463,7 +463,7 @@
     "text": "",
     "kind": "textbook"
    },
-   "stem": "设 $f(x)=\\begin{cases}ax, & 0\\le x\\le1\\\\ a(2-x), & 1<x\\le2\\\\ 0, & \\text{其他}\\end{cases}$。求 $a$ 及 $P(\\frac12\\le X\\le\\frac32)$。",
+   "stem": "设 $f(x)=\\begin{cases}ax, & 0\\le x\\le1\\\\ a(2-x), & 1<x\\le2\\\\ 0, & \\text{\\text{其他}}\\end{cases}$。求 $a$ 及 $P(\\frac12\\le X\\le\\frac32)$。",
    "options": null,
    "answer": [],
    "accept": null,
@@ -589,6 +589,284 @@
    "tags": [
     "泊松分布"
    ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-109",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 2,
+   "knowledgePoint": "2.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X$ 的分布列 $P(X=0)=\\frac12,\\ P(X=1)=\\frac14,\\ P(X=2)=\\frac14$，则 $P(X\\le1)=$",
+   "options": [
+    "$\\frac14$",
+    "$\\frac34$",
+    "$\\frac12$",
+    "$1$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$P(X\\le1)=P(X=0)+P(X=1)=\\frac12+\\frac14=\\frac34$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础",
+    "分布列"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-110",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim B(4,p)$ 且 $P(X=0)=\\frac{16}{81}$，则 $p=$",
+   "options": [
+    "$\\frac14$",
+    "$\\frac13$",
+    "$\\frac12$",
+    "$\\frac23$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$P(X=0)=(1-p)^4=\\frac{16}{81}=\\left(\\frac23\\right)^4\\Rightarrow 1-p=\\frac23\\Rightarrow p=\\frac13$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "二项分布"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-111",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X$ 的密度 $f(x)=\\begin{cases}2x,&0<x<1\\\\0,&\\text{\\text{其他}}\\end{cases}$，则 $P(X\\le\\frac12)=$",
+   "options": [
+    "$\\frac14$",
+    "$\\frac12$",
+    "$\\frac14$",
+    "$\\frac34$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$P(X\\le\\frac12)=\\int_0^{1/2}2x\\,dx=\\left[x^2\\right]_0^{1/2}=\\frac14$。C 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "概率密度"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-112",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim N(0,1)$，$\\Phi(1)=0.8413$，则 $P(-1\\le X\\le0)=$",
+   "options": [
+    "$0.3413$",
+    "$0.1587$",
+    "$0.5$",
+    "$0.8413$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：对称性 $P(-1\\le X\\le0)=\\Phi(0)-\\Phi(-1)=0.5-(1-0.8413)=0.3413$。B 正确。",
+   "misconception": "⚠️ $\\Phi(-a)=1-\\Phi(a)$（对称性）。",
+   "extension": null,
+   "tags": [
+    "高频",
+    "正态分布"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-113",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "下列分布中，期望等于方差的有",
+   "options": [
+    "泊松分布 $P(\\lambda)$",
+    "指数分布 $E(\\lambda)$（仅期望=倒数不是方差——此选项应排除）",
+    "$X\\sim B(n,p)$",
+    "$X\\sim U(0,1)$"
+   ],
+   "answer": [
+    "A",
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：泊松分布 $E(X)=D(X)=\\lambda$（A 正确）。B 的 $E(X)=1/\\lambda$，$D(X)=1/\\lambda^2$——不等。C 的 $E=np\\neq np(1-p)=D$。D 的 $E=\\frac12$，$D=\\frac{1}{12}$——不等。\n——修正：只有 A 正确。B、C、D 期望≠方差。",
+   "misconception": "⚠️ 泊松分布是唯一「期望=方差」的常见分布。",
+   "extension": null,
+   "tags": [],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-114",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 2,
+   "knowledgePoint": "2.5",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim N(0,1)$，$Y=X^2$。关于 $Y$ 的分布，正确的有",
+   "options": [
+    "$Y\\ge0$",
+    "$Y$ 服从 $\\chi^2(1)$ 分布",
+    "$Y$ 的密度在 $y=0$ 处发散",
+    "$Y\\sim N(0,1)$"
+   ],
+   "answer": [
+    "A",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$X^2\\ge0$（A 正确）；标准正态的平方即 $\\chi^2(1)$（B 正确）；\n密度 $f_Y(y)=\\frac{1}{\\sqrt{2\\pi y}}e^{-y/2}$，$y\\to0^+$ 时发散（C 正确）；D 错误。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "创新题",
+    "函数分布"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-115",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim B(3,0.6)$，则 $P(X\\ge1)=$ ______（精确分数）。",
+   "options": null,
+   "answer": [
+    "$\\frac{117}{125}$"
+   ],
+   "accept": [
+    "117/125",
+    "0.936"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$P(X\\ge1)=1-P(X=0)=1-(0.4)^3=1-0.064=0.936$。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "至少一次"
+   ],
+   "verify": [
+    {
+     "desc": "P(≥1)",
+     "code": "1-Rational(2,5)**3",
+     "expected": "117/125"
+    }
+   ],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-116",
+   "type": "short",
+   "typeGroup": "short",
+   "difficulty": "medium",
+   "chapter": 2,
+   "knowledgePoint": "2.4",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim N(0,1)$。利用对称性求 $P(X>1.96)$（$\\Phi(1.96)=0.975$）。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$P(X>1.96)=1-\\Phi(1.96)=1-0.975=0.025$。\n即 $X$ 超过 $1.96$ 的概率约为 $2.5\\%$——这就是双侧检验中每侧 $\\alpha/2=0.025$ 的来源。",
+   "points": [
+    {
+     "text": "利用对称性 $P(X>a)=1-\\Phi(a)$",
+     "partial": 2
+    },
+    {
+     "text": "结果 $=0.025$",
+     "partial": 2
+    },
+    {
+     "text": "联系假设检验中显著性水平的含义",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§2.4 正态分布的对称性。\n**考点出处**：浙大第四版 §2.4；题型改编自：创新题（联系假设检验）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [],
    "verify": [],
    "variantGroup": null
   }

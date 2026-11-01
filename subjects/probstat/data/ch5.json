@@ -283,6 +283,141 @@
     }
    ],
    "variantGroup": null
+  },
+  {
+   "id": "ps-129",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "用机器包装食盐，每袋净重 $X$（克）服从 $N(500,\\sigma^2)$。抽查 $n=100$ 袋，标准差 $σ=5$。$P(|Χ¯-500|>1)=$？（$\\Phi(2)=0.9772$）",
+   "options": [
+    "$0.0455$",
+    "$0.9545$",
+    "$0.9772$",
+    "$0.0228$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$Χ¯\\sim N(500,\\sigma^2/n)=N(500,0.25)$。\n$P(|Χ¯-500|>1)=P\\left(|Z|>\\frac{1}{0.5}\\right)=2(1-Φ(2))=2(1-0.9772)=0.0456$。C 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "CLT",
+    "质量控制"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-130",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "辛钦大数定律的条件是",
+   "options": [
+    "独立同分布且 $E(X_i)$ 存在",
+    "独立但可以不同分布",
+    "两两不相关但可以不同分布",
+    "方差必须一致有界"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：辛钦大数定律只要求独立同分布且期望存在——不要求方差存在（比切比雪夫弱条件）。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "创新题",
+    "辛钦大数定律"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-131",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "关于中心极限定理，正确的有",
+   "options": [
+    "大量独立随机变量之和近似服从正态分布",
+    "不需要每个 $X_i$ 服从正态分布",
+    "要求每个 $X_i$ 服从正态分布",
+    "$n$ 越大近似越好"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "D"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A、B、D 正确。C 错——CLT 的核心就是「不管单个 $X_i$ 是什么分布，和近似正态」。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "CLT"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-132",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 5,
+   "knowledgePoint": "5.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "中心极限定理说明：只要 $n$ 足够大，$ΣX_i$ 的分布就精确等于正态分布。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：CLT 说的是「近似服从」正态分布（极限分布），不是精确等于。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "CLT"
+   ],
+   "verify": [],
+   "variantGroup": null
   }
  ]
 }

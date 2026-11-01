@@ -565,6 +565,239 @@
     }
    ],
    "variantGroup": null
+  },
+  {
+   "id": "ps-123",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 4,
+   "knowledgePoint": "4.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim U(0,2)$，则 $E(X^2)=$",
+   "options": [
+    "$\\frac{2}{3}$",
+    "$\\frac{4}{3}$",
+    "$1$",
+    "$2$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$E(X^2)=\\int_0^2 x^2\\cdot\\frac{1}{2}dx=\\frac{8}{6}=\\frac{4}{3}$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "基础",
+    "期望"
+   ],
+   "verify": [
+    {
+     "desc": "E(X^2)",
+     "code": "integrate(x*x/2, (x, 0, 2))",
+     "expected": "4/3"
+    }
+   ],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-124",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim B(4,\\frac12)$，则 $D(X)=$",
+   "options": [
+    "$1$",
+    "$2$",
+    "$4$",
+    "$\\frac{1}{2}$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$D(X)=np(1-p)=4\\times\\frac12\\times\\frac12=1$。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "二项分布"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-125",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X,Y$ 独立，$D(X)=4$，$D(Y)=9$，则 $D(2X-Y)=$",
+   "options": [
+    "$1$",
+    "$7$",
+    "$25$",
+    "$17$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$D(2X-Y)=4D(X)+D(Y)=16+9=25$。C 正确（系数平方乘入，方差相加）。",
+   "misconception": "⚠️ $-Y$ 的系数 $(-1)^2=1$，方差不减反加。",
+   "extension": null,
+   "tags": [
+    "中等",
+    "方差"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-126",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim U(-1,3)$，则 $E\\left((X-1)^2\\right)=$",
+   "options": [
+    "$\\frac{4}{3}$",
+    "$\\frac{4}{3}$（即 $D(X)$）",
+    "$1$",
+    "$\\frac{16}{3}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$E[(X-1)^2]=D(X)+(E(X)-1)^2$。\n$E(X)=\\frac{-1+3}{2}=1$，$D(X)=\\frac{(3-(-1))^2}{12}=\\frac{16}{12}=\\frac43$。\n$E[(X-1)^2]=\\frac43+0=\\frac43$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "创新题",
+    "方差分解"
+   ],
+   "verify": [
+    {
+     "desc": "D(X)",
+     "code": "Rational(16,12)",
+     "expected": "4/3"
+    }
+   ],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-127",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.4",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim U(-1,3)$，下列关于 $E(X)$ 和 $D(X)$ 的说法正确的有",
+   "options": [
+    "$E(X)=1$",
+    "$D(X)=\\frac{4}{3}$",
+    "$D(X)=\\frac{16}{3}$",
+    "$E(X)=0$"
+   ],
+   "answer": [
+    "A",
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$E(X)=\\frac{-1+3}{2}=1$，$D(X)=\\frac{(3-(-1))^2}{12}=\\frac{4}{3}$。A、B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "均匀分布"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-128",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 4,
+   "knowledgePoint": "4.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim U(-1,2)$，求 $E(X)$、$D(X)$ 和 $E(X^2)$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$E(X)=\\frac{-1+2}{2}=\\frac12$。\n$D(X)=\\frac{(2-(-1))^2}{12}=\\frac{9}{12}=\\frac34$。\n$E(X^2)=D(X)+[E(X)]^2=\\frac34+\\frac14=1$。",
+   "points": [
+    {
+     "text": "$E(X)=\\frac12$",
+     "partial": 2
+    },
+    {
+     "text": "$D(X)=\\frac34$",
+     "partial": 2
+    },
+    {
+     "text": "$E(X^2)=D(X)+E^2(X)=1$",
+     "partial": 2
+    },
+    {
+     "text": "公式 $E(X^2)=D(X)+E^2(X)$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§4.1 期望 + §4.2 方差公式 $D(X)=E(X^2)-E^2(X)$。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "中等",
+    "均匀分布"
+   ],
+   "verify": [
+    {
+     "desc": "E(X^2)",
+     "code": "Rational(3,4)+Rational(1,4)",
+     "expected": "1"
+    }
+   ],
+   "variantGroup": null
   }
  ]
 }

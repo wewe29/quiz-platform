@@ -351,7 +351,7 @@
    "options": null,
    "answer": [],
    "accept": null,
-   "answerText": "**矩估计**：$E(X)=1/λ$，令 $1/λ=Χ¯$，得 $\\hat{λ}_{\\text{矩}}=1/Χ¯$。\n**极大似然**：$L(λ)=λ^n e^{-λΣX_i}$，$\\ln L=nλ-λΣX_i$，令导数为零：$n-ΣX_i=0$，$\\hat{λ}_{MLE}=1/Χ¯$。\n两者相同。",
+   "answerText": "**矩估计**：$E(X)=1/λ$，令 $1/λ=Χ¯$，得 $\\hat{λ}_{\\text{\\text{矩}}}=1/Χ¯$。\n**极大似然**：$L(λ)=λ^n e^{-λΣX_i}$，$\\ln L=nλ-λΣX_i$，令导数为零：$n-ΣX_i=0$，$\\hat{λ}_{MLE}=1/Χ¯$。\n两者相同。",
    "points": [
     {
      "text": "矩估计 $=1/Χ¯$",
@@ -434,6 +434,156 @@
      "desc": "MLE 有偏",
      "code": "True",
      "expected": "True"
+    }
+   ],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-137",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim U(0,θ)$，则 θ 的矩估计为",
+   "options": [
+    "$Χ¯$",
+    "$2Χ¯$",
+    "$Χ_{(n)}$",
+    "$Χ_{(1)}$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$E(X)=θ/2$，令 $θ/2=Χ¯$，得 $\\hat{θ}=2Χ¯$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "矩估计"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-138",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $\\hat{θ}_1$ 和 $\\hat{θ}_2$ 都是 θ 的无偏估计，且 $D(θ̂_1)<D(θ̂_2)$，则",
+   "options": [
+    "$\\hat{\\theta}_1$ 比 $\\hat{\\theta}_2$ 有效",
+    "$\\hat{\\theta}_2$ 比 $\\hat{\\theta}_1$ 有效",
+    "两者同样有效",
+    "无法判断"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：有效性 = 均无偏时方差小者有效。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "有效性"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-139",
+   "type": "blank",
+   "typeGroup": "blank",
+   "difficulty": "medium",
+   "chapter": 7,
+   "knowledgePoint": "7.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim U(0,θ)$，$X_{(n)}=\\max(X_i)$ 是 θ 的极大似然估计，则 $E(X_{(n)})=$ ______（$n$ 个样本）。",
+   "options": null,
+   "answer": [
+    "$\\frac{n}{n+1}θ$"
+   ],
+   "accept": [
+    "nθ/(n+1)",
+    "n*theta/(n+1)"
+   ],
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$F_{X_{(n)}}(x)=(x/θ)^n$，$E(X_{(n)})=\\frac{n}{n+1}θ$——**有偏**（低估 θ）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "MLE",
+    "有偏"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-140",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 7,
+   "knowledgePoint": "7.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设总体 $X\\sim N(μ,4)$，$n=16$，$Χ¯=10.5$。求 μ 的 95% 置信区间（$z_{0.025}=1.96$）。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "σ 已知，$u$ 区间：$Χ¯\\pm z_{α/2}σ/√n=10.5\\pm1.96\\times2/4=10.5\\pm0.98$\n置信区间：$\\boxed{[9.52,\\ 11.48]}$。\n置信水平 0.95 表示：重复抽样时，约 95% 的区间会覆盖 μ。",
+   "points": [
+    {
+     "text": "σ 已知用 $u$ 区间（不是 $t$ 区间）",
+     "partial": 2
+    },
+    {
+     "text": "半宽 $=1.96σ/√n=0.98$",
+     "partial": 2
+    },
+    {
+     "text": "区间 $=[9.52,11.48]$",
+     "partial": 2
+    },
+    {
+     "text": "频率学派解释",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§7.3 正态总体均值的置信区间（σ 已知）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "置信区间"
+   ],
+   "verify": [
+    {
+     "desc": "半宽",
+     "code": "Rational(196,100)*Rational(2,4)",
+     "expected": "49/50"
     }
    ],
    "variantGroup": null

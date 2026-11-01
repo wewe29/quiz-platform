@@ -507,6 +507,231 @@
    ],
    "verify": [],
    "variantGroup": null
+  },
+  {
+   "id": "ps-117",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "basic",
+   "chapter": 3,
+   "knowledgePoint": "3.1",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $(X,Y)$ 的联合分布函数为 $F(x,y)$，则 $P(X>a, Y>b)=$",
+   "options": [
+    "$1-F(a,b)$",
+    "$F(a)+F(b)-F(a,b)$",
+    "$1-F_X(a)-F_Y(b)+F(a,b)$",
+    "$1-F(a,b)$"
+   ],
+   "answer": [
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$P(X>a,Y>b)=1-P(X\\le a)-P(Y\\le b)+P(X\\le a,Y\\le b)$\n$=1-F_X(a)-F_Y(b)+F(a,b)$。C 正确。",
+   "misconception": "⚠️ 容斥原理：减去两个边缘再补上交集。",
+   "extension": null,
+   "tags": [
+    "中等",
+    "联合分布函数"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-118",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $(X,Y)$ 的联合密度 $f(x,y)=\\begin{cases}6xy^2,&0<x<1,0<y<1\\\\0,\\text{\\text{其他}}\\end{cases}$，则 $f_X(x)=$",
+   "options": [
+    "$2x$（$0<x<1$）",
+    "$3y^2$",
+    "$6x$",
+    "$2$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$f_X(x)=\\int_0^1 6xy^2\\,dy=6x\\cdot\\frac{y^3}{3}\\Big|_0^1=2x$（$0<x<1$）。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "边缘密度"
+   ],
+   "verify": [
+    {
+     "desc": "f_X",
+     "code": "integrate(6*x*y**2, (y, 0, 1))",
+     "expected": "2*x"
+    }
+   ],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-119",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 3,
+   "knowledgePoint": "3.4",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim U(0,1)$，$Y\\sim U(0,1)$ 独立，则 $P(Y\\le X)=$",
+   "options": [
+    "$\\frac14$",
+    "$\\frac12$",
+    "$\\frac34$",
+    "$1$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：单位正方形内 $y\\le x$ 的区域是三角形（面积 $\\frac12$），$P=\\frac{1/2}{1}=\\frac12$。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "中等",
+    "几何概型"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-120",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3.4",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X$ 与 $Y$ 不相关，则正确的有",
+   "options": [
+    "$\\mathrm{Cov}(X,Y)=0$",
+    "$E(XY)=E(X)E(Y)$",
+    "$X$ 与 $Y$ 一定独立",
+    "$D(X+Y)=D(X)+D(Y)$"
+   ],
+   "answer": [
+    "A",
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：不相关 ⇒ 协方差为 0（A 正确）⇒ $E(XY)=E(X)E(Y)$（B 正确）⇒ $D(X+Y)=D(X)+D(Y)$（由方差公式直接推出）。C 错：不相关不一定独立。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "不相关"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-121",
+   "type": "judge",
+   "typeGroup": "judge",
+   "difficulty": "medium",
+   "chapter": 3,
+   "knowledgePoint": "3.4",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "若 $X$ 与 $Y$ 独立，则 $D(X-Y)=D(X)-D(Y)$。",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$D(X-Y)=D(X)+D(Y)$（独立时方差相加不减）。减号是错误的。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "方差"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-122",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "hard",
+   "chapter": 3,
+   "knowledgePoint": "3.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $(X,Y)$ 的联合密度 $f(x,y)=\\begin{cases}1,&0<x<1,0<y<1\\\\0,\\text{\\text{其他}}\\end{cases}$（独立均匀分布）。求 $P\\left(X^2+Y^2\\le\\frac14\\right)$。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "$X,Y$ 独立均匀 → $(X,Y)$ 在单位正方形上均匀分布。\n$P(X^2+Y^2\\le\\frac14)=P\\left((X,Y)\\in\\text{\\text{单位正方形内的四分之一圆}}\\right)$\n四分之一圆（半径 $\\frac12$）的面积 $=\\frac{1}{4}\\pi\\left(\\frac12\\right)^2=\\frac{\\pi}{16}$。\n$$P=\\frac{\\pi/16}{1}=\\frac{\\pi}{16}.$$\n**\\text{创新点}**\\text{：这是蒙特卡洛法估算} $π$ \\text{的原理}——\\text{用均匀随机点落入圆内的频率估计} $π/4$。",
+   "points": [
+    {
+     "text": "识别为几何概型（单位正方形内的四分之一圆）",
+     "partial": 2
+    },
+    {
+     "text": "面积 $=\\frac{\\pi}{16}$",
+     "partial": 2
+    },
+    {
+     "text": "概率 $=\\frac{\\pi}{16}$",
+     "partial": 2
+    },
+    {
+     "text": "联系蒙特卡洛法",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§3.1 均匀联合分布 + 几何概型。\n**考点出处**：浙大第四版 §3.1；题型改编自：创新题（几何概率）。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "创新题",
+    "几何概型",
+    "均匀分布"
+   ],
+   "verify": [
+    {
+     "desc": "面积",
+     "code": "pi/16",
+     "expected": "pi/16"
+    }
+   ],
+   "variantGroup": null
   }
  ]
 }

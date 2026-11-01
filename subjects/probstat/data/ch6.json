@@ -428,6 +428,161 @@
    ],
    "verify": [],
    "variantGroup": null
+  },
+  {
+   "id": "ps-133",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\sim N(0,1)$，$Y\\simχ^2(n)$ 且独立，则 $\\frac{X}{√(Y/n)}\\sim$",
+   "options": [
+    "$t(n)$",
+    "$χ^2(n)$",
+    "$N(0,1)$",
+    "$F(1,n)$"
+   ],
+   "answer": [
+    "A"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$t$ 分布的定义——标准正态除以独立的 $χ^2/' \\text{自由度}$ 再开方。A 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "t分布"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-134",
+   "type": "single",
+   "typeGroup": "single",
+   "difficulty": "hard",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设 $X\\simχ^2(m)$，$Y\\simχ^2(n)$ 独立，则 $\\frac{X/m}{Y/n}\\sim$",
+   "options": [
+    "$t(m+n)$",
+    "$F(m,n)$",
+    "$χ^2(m+n)$",
+    "$N(0,1)$"
+   ],
+   "answer": [
+    "B"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：$F$ 分布的定义——两个独立 $χ^2$ 除以各自自由度之比。B 正确。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "F分布"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-135",
+   "type": "multi",
+   "typeGroup": "multi",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.3",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "关于 $χ^2$ 分布，正确的有",
+   "options": [
+    "是非负的（取值 $≥0$）",
+    "期望 $=n$（自由度）",
+    "具有可加性（独立 $χ^2$ 之和仍为 $χ^2$）",
+    "关于原点对称"
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C"
+   ],
+   "accept": null,
+   "answerText": null,
+   "points": null,
+   "explanation": "**答案依据**：A、B、C 正确。D 错——$χ^2$ 分布是偏态的（右偏），不正负对称。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "高频",
+    "χ²分布"
+   ],
+   "verify": [],
+   "variantGroup": null
+  },
+  {
+   "id": "ps-136",
+   "type": "calc",
+   "typeGroup": "calc",
+   "difficulty": "medium",
+   "chapter": 6,
+   "knowledgePoint": "6.2",
+   "source": {
+    "text": "",
+    "kind": "textbook"
+   },
+   "stem": "设总体 $X\\sim N(1,4)$，样本 $X_1,\\dots,X_9$。求 $P(Χ¯>2)$（$Φ(1.5)=0.9332$）。",
+   "options": null,
+   "answer": [],
+   "accept": null,
+   "answerText": "Χ¯\\sim N(1,4/9)$\\text{。标准化：}$P(Χ¯>2)=P(Z>  \\frac{2-1}{2/3})=P(Z>1.5)=1-Φ(1.5)=0.0668$。",
+   "points": [
+    {
+     "text": "Χ¯\\sim N(1,4/9)",
+     "partial": 2
+    },
+    {
+     "text": "标准化 $Z=1.5$",
+     "partial": 2
+    },
+    {
+     "text": "结果 $=0.0668$",
+     "partial": 2
+    },
+    {
+     "text": "样本量越大均值越集中于 $μ$",
+     "partial": 2
+    }
+   ],
+   "explanation": "**答案依据**：§6.2 正态总体样本均值的分布。",
+   "misconception": null,
+   "extension": null,
+   "tags": [
+    "计算",
+    "高频",
+    "样本均值"
+   ],
+   "verify": [
+    {
+     "desc": "1-Φ(1.5)",
+     "code": "1-0.9332",
+     "expected": "0.0668"
+    }
+   ],
+   "variantGroup": null
   }
  ]
 }
