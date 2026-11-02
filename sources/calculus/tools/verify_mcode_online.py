@@ -16,7 +16,7 @@ r"""tools/verify_mcode_online.py — mcode 公网站的线上核验
     ukhfwff2y0f0h   高数专站（活，905 题）
     6aww9gws3iacg   已下线 → 指路页
     7qzdvmxrwxnez   离线单文件版下载页（页面 + 单文件包本体）
-    study-math      五学科平台版（2060 题）
+    study-math      五学科平台版（题量以本地 dist 的 registry.json 为准，不写死数字）
 
 用法：python tools\verify_mcode_online.py
 """
@@ -217,8 +217,9 @@ def main():
             if reg == local_reg:
                 r = json.loads(reg.decode("utf-8"))
                 tot = sum(x["total"] for x in r["subjects"])
-                check("五学科题量合计 = 2060", tot == 2060,
-                      "线上 %d 题（%s）" % (tot, ", ".join("%s %d" % (x["id"], x["total"]) for x in r["subjects"])))
+                ltot = sum(x["total"] for x in json.loads(local_reg.decode("utf-8"))["subjects"])
+                check("题量合计与本地一致（口径单一事实源，不写死数字）", tot == ltot,
+                      "线上 %d 题 / 本地 %d 题（%s）" % (tot, ltot, ", ".join("%s %d" % (x["id"], x["total"]) for x in r["subjects"])))
             try:
                 _s7, mcalc, _h7 = fetch(url + "/subjects/calculus/data/manifest.json")
                 lmc = io.open(os.path.join(LOCAL_DIST, "subjects", "calculus", "data", "manifest.json"), "rb").read()
