@@ -15,7 +15,13 @@ r"""tools/stage_mcode.py — 把高数站的产物暂存到 E:\抗菌肽\_deploy
     math-quiz-v2         ← site_pages\retired-notice.html → node 457267271725402  已下线：指路页
     math-quiz-v2-single  ← site_pages\offline-download.html + 单文件包
                                                         → node 458301517873724  离线单文件下载页
-    （平台版属另一个仓，不在本脚本范围：node 458302907191686）
+    quiz-platform-dist   ← 平台仓 dist\                   → node 458302907191686  五学科平台版（主站）
+
+⚠ 平台版为什么也归本脚本管：它的产物在**另一个仓**（quiz-platform），
+    但发布动作同样要「暂存 → 逐字节校验 → 带 node_id 原地更新」。
+    2026-11-03 实测的坑：平台仓 11-01 把 probstat 扩到 156 题并由 CI 自动发布到 GitHub Pages，
+    **mcode 主站却没人重发**，线上还停在 10-31 的 2060 题版 ⇒ 主站比仓库少 56 题。
+    所以「改了内容」必须同时过三个渠道：CI（GitHub Pages）+ 本脚本暂存 + mcode 原地更新。
 
 用法：
     python tools\stage_mcode.py            # 从正本暂存 + 逐字节校验
@@ -40,6 +46,11 @@ OFFLINE_NAME = "calculus-quiz-offline.html"
 TOOLS = os.path.join(CANON, "tools")
 SKIP_DIRS = {"__pycache__", "research"}
 
+# 平台仓（平台版的产物正本在那边；dist/ 是构建产物，tools/ 是构建链）
+PLATFORM_REPO = r"D:\workspace\5-docs\quiz-platform"
+PLATFORM_DIST = os.path.join(PLATFORM_REPO, "dist")
+PLATFORM_SKIP_DIRS = {"__pycache__", ".git", "dist", ".build-tmp"}
+
 # 节点台账：目录 ↔ 源码快照目录 ↔ node_id ↔ 公网 URL。**改版时原样传 node_id。**
 NODES = [
     ("calculus-quiz", "calculus-quiz-src", "457098400059681",
@@ -49,9 +60,9 @@ NODES = [
     ("math-quiz-v2-single", "math-quiz-v2-src", "458301517873724",
      "https://7qzdvmxrwxnez.space.mcode.cn", "离线单文件版下载页（不在此刷题）"),
 ]
-# 平台版（另一个仓管，节点与 URL 仅作记录）
+# 平台版主站（产物在 quiz-platform 仓的 dist/；节点与 URL 必须原样传）
 PLATFORM_NODE = ("quiz-platform-dist", "quiz-platform-src", "458302907191686",
-                 "https://study-math.space.mcode.cn", "五学科平台版 2060 题")
+                 "https://study-math.space.mcode.cn", "五学科平台版主站（2116 题，2026-11-03）")
 
 errors = []
 
@@ -143,6 +154,18 @@ def main():
             print("[stage] %-20s <- 正本 tools（去 __pycache__/research）+ 页面源：%d 文件 / %s B"
                   % (name, n, format(total, ",")))
 
+        # 5) 平台版：dist（公开）+ 源码快照（私有上传）
+        if not os.path.isdir(PLATFORM_DIST):
+            print("[FAIL] 平台仓没有 dist/：%s（先跑 build_all.py --dist）" % PLATFORM_DIST)
+            return 2
+        n, total = mirror_tree(PLATFORM_DIST, os.path.join(DEPLOY, "quiz-platform-dist"))
+        print("[stage] %-20s <- 平台仓 dist/：%d 文件 / %s B"
+              % ("quiz-platform-dist", n, format(total, ",")))
+        n2, total2 = mirror_tree(PLATFORM_REPO, os.path.join(DEPLOY, "quiz-platform-src"),
+                                  skip_dirs=PLATFORM_SKIP_DIRS)
+        print("[stage] %-20s <- 平台仓源码（去 .git/dist/.build-tmp/__pycache__）：%d 文件 / %s B"
+              % ("quiz-platform-src", n2, format(total2, ",")))
+
     # 5) 逐字节校验
     src_index = index_tree(SITE_SRC)
     dst_index = index_tree(os.path.join(DEPLOY, "calculus-quiz"))
@@ -162,6 +185,22 @@ def main():
         errors.append("math-quiz-v2-single 内的单文件包与正本不一致")
     else:
         print("  [OK ] math-quiz-v2-single：下载页 + 单文件包均与正本逐字节一致")
+
+    if os.path.isdir(PLATFORM_DIST):
+        pdst = index_tree(os.path.join(DEPLOY, "quiz-platform-dist"))
+        psrc = index_tree(PLATFORM_DIST)
+        if pdst != psrc:
+            errors.append("quiz-platform-dist 与平台仓 dist/ 不一致")
+        else:
+            print("  [OK ] quiz-platform-dist：%d 文件与平台仓 dist/ 逐字节一致" % len(pdst))
+        reg = os.path.join(DEPLOY, "quiz-platform-dist", "subjects", "registry.json")
+        if os.path.isfile(reg):
+            import json as _json
+            with open(reg, encoding="utf-8") as f:
+                rg = _json.load(f)
+            tot = sum(s["total"] for s in rg["subjects"])
+            print("  [OK ] 暂存的平台版题量：%s 合计 %d 题"
+                  % (" ".join("%s=%d" % (s["id"], s["total"]) for s in rg["subjects"]), tot))
 
     print("\n下一步：调用 website_deploy（**必须带 node_id**）")
     for name, src_name, node, url, note in NODES + [PLATFORM_NODE]:
