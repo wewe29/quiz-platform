@@ -1,109 +1,43 @@
 # -*- coding: utf-8 -*-
 r"""tools/verify_mcode_online.py — mcode 公网站的线上核验
 
-**判据为什么不是「线上字节 = 本地字节」**：
-    宿主在每个被服务的 HTML 文件里都会注入埋点与悬浮球（实测正文 +6,530 字节，
-    注入点是 `</body>` 前的 `<script data-minimax-analytics="...">` 块）。
-    所以线上字节**必然**比本地多，拿整文件判等会把「发布成功」误判成「发布失败」。
-    正确判据：
-        ① **剥掉宿主注入块后**，线上文件与本地成品逐字节相同；
-        ② 题库 JSON 逐字节相同 + 题量一致；
-        ③ Last-Modified 是本次发布时间。
-    再加上浏览器实答 + 控制台 0 error（字节对不代表渲染对，更不代表交互对）。
-    CDN / Service Worker 缓存要绕：URL 追加 `?cb=<随机>`。
+**核验的是「线上 == 当前 HEAD 的成品」，不是「线上 == 某个写死的数字」。**
 
-站点结构（2026-10-31 合并后）：
-    ukhfwff2y0f0h   高数专站（活，905 题）
-    6aww9gws3iacg   已下线 → 指路页
-    7qzdvmxrwxnez   离线单文件版下载页（页面 + 单文件包本体）
-    study-math      五学科平台版（题量以本地 dist 的 registry.json 为准，不写死数字）
+判据（核心实现见 tools/online_judge.py）：
+    剥掉宿主在 </body> 前注入的那一整块遥测内容后，线上文件与本地成品**逐字节相同**。
+    ① 注入块大小不是常数（实测高数专站 6,530 B、线代单文件站 1,523 B）
+       ⇒ 不能用「线上 = 本地 + 固定字节数」；
+    ② 差异必须**只有一块连续插入**且含宿主遥测标记
+       ⇒ 线上正文被改过（少一段 / 标签被吃 / 多一段）就会判失败；
+    ③ 核验 URL 一律追加 `?cb=<随机>`，绕开 CDN / Service Worker 的旧副本。
 
-用法：python tools\verify_mcode_online.py
+**这一道门禁覆盖了语义级断言**：基准文件就是当前 HEAD 的成品，所以「线上是否含某个修复」
+不必再单独断言（字节相同 ⇒ 修复在位；字节不同 ⇒ 失败）。这比堆一串零散断言更严。
+
+节点台账见 tools/mcode_nodes.json（node_id / URL / 基准产物的唯一事实源）。
+    ⚠ 2026-11-03 的教训：此前这个脚本按站点类型写死分支，**漏了线代单文件站**，
+      而那个站恰恰是落后 HEAD 两天的那个 —— 漏核验 = 漂移可以潜伏。
+
+用法：
+    python tools\verify_mcode_online.py                # 全部节点
+    python tools\verify_mcode_online.py --only linalg-single
+    python tools\verify_mcode_online.py --root platform=D:\somewhere\else
 """
-import gzip
-import hashlib
-import io
+import argparse
 import json
 import os
-import random
 import sys
-import urllib.request
 
-for k in ("HTTP_PROXY", "HTTPS_PROXY", "http_proxy", "https_proxy"):
-    os.environ.pop(k, None)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from online_judge import (  # noqa: E402
+    build_url, count_questions, fetch, judge, read_file, sha256_bytes,
+)
 
-CANON = r"D:\workspace\5-docs\高等数学复习资料"
-LOCAL_SITE = os.path.join(CANON, "_site_v2")
-LOCAL_SINGLE = os.path.join(CANON, "01《高等数学》题库刷题网页 v2.html")
-LOCAL_PAGES = os.path.join(CANON, "site_pages")
-LOCAL_DIST = r"D:\workspace\5-docs\quiz-platform\dist"
-
-MARK = b"window.__BANK__ = "
-INJECT_START = b'<script data-minimax-analytics="minimax-website-analytics-v1">'
-
-SITES = [
-    ("高数专站(活)", "https://ukhfwff2y0f0h.space.mcode.cn", "quiz"),
-    ("孪生站(已下线)", "https://6aww9gws3iacg.space.mcode.cn", "notice"),
-    ("离线单文件下载页", "https://7qzdvmxrwxnez.space.mcode.cn", "download"),
-    ("五学科平台版", "https://study-math.space.mcode.cn", "platform"),
-]
+HERE = os.path.dirname(os.path.abspath(__file__))
+DEFAULT_LEDGER = os.path.join(HERE, "mcode_nodes.json")
 
 fails = []
-
-
-def sha256_bytes(b):
-    return hashlib.sha256(b).hexdigest().upper()
-
-
-def fetch(url):
-    sep = "&" if "?" in url else "?"
-    req = urllib.request.Request(
-        "%s%scb=%d" % (url, sep, random.randint(10 ** 9, 10 ** 10 - 1)),
-        headers={"User-Agent": "Mozilla/5.0 verify/1.0", "Accept-Encoding": "identity",
-                 "Cache-Control": "no-cache"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        data = r.read()
-        if r.headers.get("Content-Encoding") == "gzip":
-            data = gzip.decompress(data)
-        return r.status, data, dict(r.headers)
-
-
-def diff_vs_local(online, local):
-    """返回 (线上相对本地多出来的那一块, 剥掉后的字节)。
-
-    宿主在 `</body>` 前插入一整块连续内容（实测 6,530 字节：analytics 脚本 +
-    悬浮球样式 + div + 初始化脚本），并在插入处多留一个换行。
-    所以判据不是「猜注入长什么样」，而是：
-        **线上与本地的差异必须只有一块连续插入，且这一块只能含宿主遥测标记。**
-    用最长公共前缀 + 最长公共后缀定位插入点；若线上被改过正文（比如漏了标签），
-    差异会变成两块或更多 ⇒ 判等失败。
-
-    注意：不能反过来用「先 diff 再断言相等」——那样是同义反复、必然通过。
-    这里额外断言插入块含 minimax 遥测标记，才是有意义的判据。
-    """
-    n = min(len(online), len(local))
-    p = 0
-    while p < n and online[p] == local[p]:
-        p += 1
-    s = 0
-    while s < n - p and online[len(online) - 1 - s] == local[len(local) - 1 - s]:
-        s += 1
-    inserted = online[p:len(online) - s]
-    return inserted, online[:p] + online[len(online) - s:]
-
-
-def check_host_injection(label, online, local):
-    """线上文件与本地成品的差异，必须**只有一块宿主遥测插入**；其余逐字节相同。"""
-    inserted, stripped = diff_vs_local(online, local)
-    only_telemetry = (b"minimax" in inserted.lower()) and (b"minimax-analytics" in inserted.lower()
-                                                          or b"floating-ball" in inserted.lower())
-    ok = check("线上仅多出宿主遥测块（%d 字节）" % len(inserted), only_telemetry,
-               "" if only_telemetry else "插入块内容异常")
-    ok = check("剥掉遥测块后与本地逐字节相同", stripped == local,
-               "剥后 %d B / sha %s vs 本地 %d B / sha %s"
-               % (len(stripped), sha256_bytes(stripped)[:16],
-                  len(local), sha256_bytes(local)[:16])) and ok
-    return stripped
+notes = []
 
 
 def check(label, cond, detail=""):
@@ -113,131 +47,158 @@ def check(label, cond, detail=""):
     return cond
 
 
-def count_questions(data):
-    m = data.find(MARK)
-    if m < 0:
-        return None
-    obj = json.JSONDecoder().raw_decode(data[m + len(MARK):].decode("utf-8"))[0]
-    return len(obj.get("questions") or [])
+def resolve(spec, roots):
+    """`root:relpath` → 绝对路径；绝对路径原样返回。"""
+    if ":" in spec:
+        root, rel = spec.split(":", 1)
+        if root not in roots:
+            raise SystemExit("[verify] 台账里的 root %r 不在 roots 中（%s）" % (root, ", ".join(roots)))
+        return os.path.join(roots[root], rel.replace("/", os.sep))
+    return spec
 
 
-def main():
-    local_index = io.open(os.path.join(LOCAL_SITE, "data", "index.json"), "rb").read()
-    total = json.loads(local_index.decode("utf-8"))["total"]
-    local_single = io.open(LOCAL_SINGLE, "rb").read()
-    local_notice = io.open(os.path.join(LOCAL_PAGES, "retired-notice.html"), "rb").read()
-    local_dl = io.open(os.path.join(LOCAL_PAGES, "offline-download.html"), "rb").read()
-    print("本地基准：index.json %d B / total=%d ；单文件包 %d B / %d 题；指路页 %d B；下载页 %d B"
-          % (len(local_index), total, len(local_single), count_questions(local_single),
-             len(local_notice), len(local_dl)))
+def walk_files(root):
+    """列出目录下所有文件（相对路径，posix 风格），排序保证顺序稳定。"""
+    out = []
+    for dirpath, dirnames, filenames in os.walk(root):
+        dirnames.sort()
+        for fn in sorted(filenames):
+            full = os.path.join(dirpath, fn)
+            rel = os.path.relpath(full, root).replace(os.sep, "/")
+            out.append((rel, full))
+    out.sort()
+    return out
 
-    for label, url, kind in SITES:
-        print("\n--- %s\n    %s" % (label, url))
+
+def compare_file(node, spec):
+    """一个文件对一个 URL 路径。"""
+    local_path = resolve(spec["local"], ROOTS)
+    url = node["url"].rstrip("/") + spec.get("url_path", "/")
+    if not os.path.isfile(local_path):
+        check("本地基准存在 %s" % spec["local"], False, local_path)
+        return
+    local = read_file(local_path)
+    try:
+        status, body, hdrs = fetch(url)
+    except Exception as e:
+        check("可取 %s" % spec.get("url_path", "/"), False, str(e))
+        return
+    if status != 200:
+        check("HTTP 200 %s" % spec.get("url_path", "/"), False, "status=%d" % status)
+        return
+    v = judge(body, local)
+    check("%s 与本地逐字节一致（线上 %d B / 本地 %d B）"
+          % (spec.get("url_path", "/"), len(body), len(local)), v["ok"], v["reason"])
+    n_q = count_questions(body)
+    if n_q is not None:
+        notes.append("%s：单文件内联题库 %d 题" % (node["label"], n_q))
+    print("    Last-Modified: %s" % (hdrs.get("Last-Modified") or hdrs.get("last-modified") or "—"))
+
+
+def compare_tree(node, spec):
+    """整棵树逐文件比对。"""
+    local_root = resolve(spec["local"], ROOTS)
+    url_prefix = spec.get("url_prefix", "").strip("/")
+    if not os.path.isdir(local_root):
+        check("本地基准目录存在 %s" % spec["local"], False, local_root)
+        return
+    files = walk_files(local_root)
+    if not files:
+        check("本地基准目录非空 %s" % spec["local"], False, local_root)
+        return
+    print("    基准 %s：%d 个文件" % (spec["local"], len(files)))
+    bad = []
+    total_bytes = 0
+    for rel, full in files:
+        url = node["url"].rstrip("/") + "/" + ((url_prefix + "/") if url_prefix else "") + rel
+        local = read_file(full)
         try:
-            status, html, hdrs = fetch(url + ("/" if url.endswith("space.mcode.cn") else "/index.html"))
+            status, body, hdrs = fetch(url)
         except Exception as e:
-            check("HTTP 200", False, str(e))
+            bad.append("%s 取失败：%s" % (rel, e))
             continue
-        check("HTTP 200", status == 200, "status=%d" % status)
-        print("    Last-Modified: %s" % (hdrs.get("Last-Modified") or hdrs.get("last-modified")))
-        print("    线上 %d 字节（本地对应文件 %d 字节）" % (len(html), len(local_index)))
+        if status != 200:
+            bad.append("%s status=%d" % (rel, status))
+            continue
+        v = judge(body, local)
+        if not v["ok"]:
+            bad.append("%s：%s" % (rel, v["reason"]))
+        total_bytes += len(local)
+    check("%d 个文件全部与本地一致（合计 %d B）" % (len(files), total_bytes),
+          not bad, "" if not bad else "；".join(bad[:6]) + ("…" if len(bad) > 6 else ""))
+    # 题量口径（人眼对账用，不参与判定）
+    reg = os.path.join(local_root, "subjects", "registry.json")
+    idx = os.path.join(local_root, "data", "index.json")
+    if os.path.isfile(reg):
+        try:
+            r = json.loads(read_file(reg).decode("utf-8"))
+            notes.append("%s：题量合计 %d（%s）" % (
+                node["label"], sum(x["total"] for x in r["subjects"]),
+                ", ".join("%s %d" % (x["id"], x["total"]) for x in r["subjects"])))
+        except Exception:
+            pass
+    if os.path.isfile(idx):
+        try:
+            j = json.loads(read_file(idx).decode("utf-8"))
+            notes.append("%s：题量 %s" % (node["label"], j.get("total")))
+        except Exception:
+            pass
 
-        if kind == "quiz":
-            check_host_injection("高数专站 index.html", html,
-                                 io.open(os.path.join(LOCAL_SITE, "index.html"), "rb").read())
-            try:
-                _s, idx, _h = fetch(url + "/data/index.json")
-            except Exception as e:
-                check("data/index.json 可取", False, str(e))
-                continue
-            check("data/index.json 与本地逐字节相同", idx == local_index,
-                  "线上 %d B / sha %s" % (len(idx), sha256_bytes(idx)[:16]))
-            q_total = 0
-            shard_ok = True
-            for ch in range(1, 13):
-                fn = "ch%02d.json" % ch
-                try:
-                    _s3, b3, _h3 = fetch(url + "/data/" + fn)
-                except Exception as e:
-                    shard_ok = False
-                    print("       分片 %s 取失败：%s" % (fn, e))
-                    continue
-                if b3 != io.open(os.path.join(LOCAL_SITE, "data", fn), "rb").read():
-                    shard_ok = False
-                    print("       分片 %s 与本地不一致" % fn)
-                try:
-                    q_total += len(json.loads(b3.decode("utf-8"))["questions"])
-                except Exception:
-                    shard_ok = False
-            check("12 个分片全部逐字节相同", shard_ok)
-            check("分片题数合计 = %d" % total, q_total == total, "线上合计 %d 题" % q_total)
-            try:
-                _s4, rjs, _h4 = fetch(url + "/assets/js/ui/render.js")
-                ljs = io.open(os.path.join(LOCAL_SITE, "assets", "js", "ui", "render.js"), "rb").read()
-                check("线上 render.js 与本地逐字节相同", rjs == ljs,
-                      "线上 %d B / sha %s" % (len(rjs), sha256_bytes(rjs)[:16]))
-                bad = b"addEventListener('keydown'" in rjs or b'addEventListener("keydown"' in rjs
-                check("线上 render.js 无选项 keydown 处理器（Enter=提交 修复已上线）", not bad,
-                      "命中" if bad else "未命中")
-            except Exception as e:
-                check("线上 render.js 可取", False, str(e))
 
-        elif kind == "notice":
-            stripped = check_host_injection("指路页", html, local_notice)
-            t = stripped.decode("utf-8", "replace")
-            check("是「已合并」指路页", "这个链接已经合并了" in t)
-            check("指向主站 study-math", "https://study-math.space.mcode.cn/" in t)
-            check("指向高数专站 ukhfwff2y0f0h", "https://ukhfwff2y0f0h.space.mcode.cn/" in t)
-            check("已不含刷题界面", "window.__BANK__" not in t and "当前筛选命中" not in t)
+def parse_args(argv):
+    ap = argparse.ArgumentParser(description="mcode 公网站线上核验（线上 == 当前 HEAD 成品）")
+    ap.add_argument("--ledger", default=DEFAULT_LEDGER, help="节点台账路径")
+    ap.add_argument("--only", default="", help="只核验这些节点 id（逗号分隔）")
+    ap.add_argument("--root", action="append", default=[], metavar="NAME=PATH",
+                    help="覆盖台账里的 root（可重复）")
+    return ap.parse_args(argv)
 
-        elif kind == "download":
-            stripped = check_host_injection("下载页", html, local_dl)
-            t = stripped.decode("utf-8", "replace")
-            check("是下载页标题", "离线单文件版下载" in t)
-            check("有下载链接", 'href="calculus-quiz-offline.html"' in t)
-            check("本页不再是在线刷题站", "window.__BANK__" not in t)
-            try:
-                _s5, pkg, _h5 = fetch(url + "/calculus-quiz-offline.html")
-            except Exception as e:
-                check("单文件包可下载", False, str(e))
-                continue
-            p_stripped = check_host_injection("下载包 calculus-quiz-offline.html", pkg, local_single)
-            check("下载包内含 %d 题" % total, count_questions(pkg) == total,
-                  "实际 %s 题" % count_questions(pkg))
 
-        elif kind == "platform":
-            local_reg = io.open(os.path.join(LOCAL_DIST, "subjects", "registry.json"), "rb").read()
-            try:
-                _s6, reg, _h6 = fetch(url + "/subjects/registry.json")
-            except Exception as e:
-                check("registry.json 可取", False, str(e))
-                continue
-            check("registry.json 与本地逐字节相同", reg == local_reg,
-                  "线上 %d B / sha %s" % (len(reg), sha256_bytes(reg)[:16]))
-            if reg == local_reg:
-                r = json.loads(reg.decode("utf-8"))
-                tot = sum(x["total"] for x in r["subjects"])
-                ltot = sum(x["total"] for x in json.loads(local_reg.decode("utf-8"))["subjects"])
-                check("题量合计与本地一致（口径单一事实源，不写死数字）", tot == ltot,
-                      "线上 %d 题 / 本地 %d 题（%s）" % (tot, ltot, ", ".join("%s %d" % (x["id"], x["total"]) for x in r["subjects"])))
-            try:
-                _s7, mcalc, _h7 = fetch(url + "/subjects/calculus/data/manifest.json")
-                lmc = io.open(os.path.join(LOCAL_DIST, "subjects", "calculus", "data", "manifest.json"), "rb").read()
-                check("高数子站 manifest.json 与本地逐字节相同", mcalc == lmc,
-                      "线上 %d B / sha %s" % (len(mcalc), sha256_bytes(mcalc)[:16]))
-            except Exception as e:
-                check("高数子站 manifest 可取", False, str(e))
+def main(argv=None):
+    global ROOTS
+    args = parse_args(argv or sys.argv[1:])
+    with open(args.ledger, "rb") as f:
+        ledger = json.loads(f.read().decode("utf-8"))
+    ROOTS = dict(ledger.get("roots") or {})
+    for item in args.root:
+        if "=" not in item:
+            raise SystemExit("[verify] --root 格式应为 NAME=PATH")
+        k, v = item.split("=", 1)
+        ROOTS[k] = v
+    only = [x.strip() for x in args.only.split(",") if x.strip()]
+
+    print("判据：%s" % ledger.get("judge"))
+    print("台账：%s（更新于 %s，%d 个节点）" % (args.ledger, ledger.get("updated"), len(ledger["nodes"])))
+    print("根目录：" + "；".join("%s=%s" % (k, v) for k, v in sorted(ROOTS.items())))
+
+    for node in ledger["nodes"]:
+        if only and node["id"] not in only:
+            continue
+        print("\n--- %s（%s）" % (node["label"], node["id"]))
+        print("    %s   node_id=%s" % (node["url"], node.get("node_id", "—")))
+        for spec in node.get("checks") or []:
+            if spec.get("type") == "tree":
+                compare_tree(node, spec)
+            elif spec.get("type") == "file":
+                compare_file(node, spec)
+            else:
+                check("台账 check 类型已知", False, spec.get("type"))
 
     print()
+    for n in notes:
+        print("  · %s" % n)
     if fails:
         print("[结果] %d 项不通过：" % len(fails))
         for f in fails:
             print("   - %s" % f)
+        print("提醒：字节不一致先看是「线上落后 HEAD」还是「本地基准没重建」，再决定补发还是重建。")
         return 1
-    print("[结果] 全部线上核验通过")
-    print("提醒：字节一致 ≠ 渲染正确 ≠ 交互正确 —— 还要在浏览器里实答一次，并查控制台。")
+    print("[结果] 全部线上核验通过：线上 == 当前 HEAD 成品（剥掉宿主遥测块后逐字节相同）")
+    print("提醒：字节一致 ≠ 渲染正确 ≠ 交互正确 —— 发布后还要在浏览器里实答一次，并查控制台。")
     return 0
 
+
+ROOTS = {}
 
 if __name__ == "__main__":
     sys.exit(main())

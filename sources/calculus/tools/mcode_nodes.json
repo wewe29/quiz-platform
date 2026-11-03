@@ -1,0 +1,97 @@
+{
+  "schema": "mcode-node-ledger-v1",
+  "updated": "2026-11-03",
+  "judge": "剥掉宿主在 </body> 前注入的那一整块遥测内容后，线上文件与本地成品逐字节相同",
+  "note": [
+    "这是 mcode 渠道的**节点台账**，线上核验的唯一事实源：node_id / URL / 基准产物都在这里。",
+    "基准一律取「当前 HEAD 的成品」：平台站取平台仓 dist/，高数站取高数正本 _site_v2/，",
+    "线代站取发布仓 index.html。判据核心见 tools/online_judge.py。",
+    "roots 写的是本机绝对路径；CI 或别的机器上用 `--root NAME=PATH` 覆盖，不要改这张表。",
+    "「注入块大小不是常数」——不能用「线上 = 本地 + 固定字节数」当判据。"
+  ],
+  "roots": {
+    "calculus": "D:\\workspace\\5-docs\\高等数学复习资料",
+    "platform": "D:\\workspace\\5-docs\\quiz-platform",
+    "linalg": "D:\\workspace\\5-docs\\线性代数复习资料"
+  },
+  "nodes": [
+    {
+      "id": "platform-main",
+      "label": "五学科平台主站",
+      "node_id": "458302907191686",
+      "url": "https://study-math.space.mcode.cn",
+      "published_from": "平台仓 dist/（221 文件）",
+      "checks": [
+        {
+          "type": "tree",
+          "local": "platform:dist",
+          "url_prefix": "",
+          "comment": "整棵树逐文件比对（dist/ 与线上根路径一一对应）"
+        }
+      ]
+    },
+    {
+      "id": "calculus-site",
+      "label": "高数专站",
+      "node_id": "457098400059681",
+      "url": "https://ukhfwff2y0f0h.space.mcode.cn",
+      "published_from": "高数正本 _site_v2/（56 文件）",
+      "checks": [
+        {
+          "type": "tree",
+          "local": "calculus:_site_v2",
+          "url_prefix": "",
+          "comment": "整棵树逐文件比对（含 12 个分片 + katex 字体 + assets）"
+        }
+      ]
+    },
+    {
+      "id": "retired-notice",
+      "label": "已下线指路页",
+      "node_id": "457267271725402",
+      "url": "https://6aww9gws3iacg.space.mcode.cn",
+      "published_from": "高数正本 site_pages/retired-notice.html",
+      "checks": [
+        {
+          "type": "file",
+          "local": "calculus:site_pages/retired-notice.html",
+          "url_path": "/index.html"
+        }
+      ]
+    },
+    {
+      "id": "calculus-offline",
+      "label": "离线单文件下载页",
+      "node_id": "458301517873724",
+      "url": "https://7qzdvmxrwxnez.space.mcode.cn",
+      "published_from": "高数正本 site_pages/offline-download.html + 单文件包",
+      "checks": [
+        {
+          "type": "file",
+          "local": "calculus:site_pages/offline-download.html",
+          "url_path": "/index.html"
+        },
+        {
+          "type": "file",
+          "local": "calculus:01《高等数学》题库刷题网页 v2.html",
+          "url_path": "/calculus-quiz-offline.html"
+        }
+      ]
+    },
+    {
+      "id": "linalg-single",
+      "label": "线代单文件站",
+      "node_id": "457086899044553",
+      "url": "https://u44tlmu73tjcs.space.mcode.cn",
+      "published_from": "发布仓 index.html（= 线代正本成品）",
+      "checks": [
+        {
+          "type": "file",
+          "local": "linalg:publish/linear-algebra-quiz/index.html",
+          "url_path": "/index.html",
+          "comment": "2026-11-03 补进台账：此前核验器漏了这个站，正是它悄悄落后 HEAD 两天"
+        }
+      ]
+    }
+  ]
+}
