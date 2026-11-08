@@ -18,8 +18,19 @@ r"""tools/platform/check_worktree_eol.py — 工作区 vs 仓内 blob 的逐字�
 
 用法：
     python tools/platform/check_worktree_eol.py            # 检查全部已跟踪文件
+    python tools/platform/check_worktree_eol.py --fix      # 检查并修复行尾污染
     python tools/platform/check_worktree_eol.py --path X    # 只检查某些路径
 退出码：0 = 干净；1 = 有污染或真差异；2 = 环境问题（不是 git 仓等）。
+
+为什么自带 --fix 而不让人去跑 `git checkout -- <路径>`：
+    git 的 index **stat cache 记的就是污染后（CRLF）的尺寸**，于是 git 认为文件
+    「未变」而**连内容都不读** —— `git checkout -- .` 与 `git checkout-index -f --all`
+    都会因此跳过重写（2026-11-07 实测：两者都跑完，污染依旧）。
+    ⇒ 修复必须**绕过 git 的快捷路径，直接把 blob 字节写回工作区**。
+
+为什么 --fix 只修行尾污染、不碰「真差异」：
+    「真差异」可能是使用者**还没提交的工作**。自动覆盖会毁掉它
+    （2026-11-07 实测踩到过：门禁把自己尚未提交的新版本覆盖成了 blob 里的旧版）。
 """
 import argparse
 import os
@@ -74,6 +85,8 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description="工作区已跟踪文本文件必须与 blob 逐字节一致")
     ap.add_argument("--path", action="append", default=[],
                     help="只检查这些路径前缀（可重复）")
+    ap.add_argument("--fix", action="store_true",
+                    help="把行尾污染的文件用 blob 字节重新物化（绕过 git 的 stat cache）")
     args = ap.parse_args(argv or sys.argv[1:])
 
     if not os.path.isdir(os.path.join(PLATFORM, ".git")):
@@ -119,7 +132,44 @@ def main(argv=None):
         for rel, a, b in real_bad[:40]:
             print("   %-72s 工作区 %d B vs blob %d B" % (rel, a, b))
     if eol_bad or real_bad:
-        print("修法：git checkout -- <路径>（从 blob 重新物化工作区，仓内 blob 已是 LF）")
+        if args.fix:
+            # ⚠ 只修「行尾污染」这一类（内容一致、仅 CRLF↔LF）。
+            # 「真差异」**一律不动** —— 那可能是使用者还没提交的工作，
+            # 自动覆盖会毁掉未提交的改动（2026-11-07 实测踩到过：
+            # 门禁把自己尚未提交的新版本覆盖成了 blob 里的旧版）。
+            fixed = 0
+            for rel, _n in eol_bad:
+                blob = blobs.get(rel)
+                if blob is None:
+                    continue
+                full = os.path.join(PLATFORM, rel.replace("/", os.sep))
+                with open(full, "wb") as f:
+                    f.write(blob)
+                fixed += 1
+            print("[FIX ] 已从 blob 重新物化 %d 个行尾污染文件" % fixed)
+            if real_bad:
+                print("[WARN] %d 个「真差异」文件**未改动**（可能是未提交的工作）：" % len(real_bad))
+                for rel, a, b in real_bad[:20]:
+                    print("   %-72s 工作区 %d B vs blob %d B" % (rel, a, b))
+            remain = 0
+            for rel, _n in eol_bad:
+                full = os.path.join(PLATFORM, rel.replace("/", os.sep))
+                blob = blobs.get(rel)
+                if blob is None or not os.path.isfile(full):
+                    continue
+                with open(full, "rb") as f:
+                    if f.read() != blob:
+                        remain += 1
+            if remain:
+                print("[FAIL] 修复后仍有 %d 个行尾污染文件与 blob 不一致" % remain)
+                return 1
+            if real_bad:
+                print("[FAIL] 仍有 %d 个真差异文件未处理（--fix 不动它们，需人工确认）" % len(real_bad))
+                return 1
+            print("[OK ] 修复后工作区与 blob 逐字节一致")
+            return 0
+        print("修法：python tools/platform/check_worktree_eol.py --fix（从 blob 重新物化行尾污染）")
+        print("      注意：`git checkout -- .` 会被 index 的 stat cache 短路，不可靠。")
         return 1
     print("[OK ] 工作区与 blob 逐字节一致（无行尾污染、无真差异）")
     return 0

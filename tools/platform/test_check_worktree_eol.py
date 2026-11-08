@@ -68,12 +68,14 @@ def make_repo(base):
     return repo
 
 
-def run_gate(repo, paths=()):
+def run_gate(repo, paths=(), fix=False):
     """把门禁的 PLATFORM 指到临时仓再跑（门禁是从仓根推导路径的）。"""
     old = cw.PLATFORM
     cw.PLATFORM = repo
     try:
         argv = []
+        if fix:
+            argv.append("--fix")
         for p in paths:
             argv += ["--path", p]
         return cw.main(argv)
@@ -116,6 +118,17 @@ def main():
         write(os.path.join(repo, "a.txt"), b"line1\r\nline2\r\n")
         case("只查 b.py 时不报 a.txt 的污染", run_gate(repo, paths=("b.py",)) == 0)
         case("查 a.txt 时报污染", run_gate(repo, paths=("a.txt",)) == 1)
+
+        print("T8 --fix 只修行尾污染，**不得动真差异文件**（那可能是未提交的工作）")
+        write(os.path.join(repo, "a.txt"), b"line1\r\nline2\r\n")   # 行尾污染
+        write(os.path.join(repo, "b.py"), b"x = 999\n")              # 真差异（未提交的工作）
+        case("--fix 退出 1（真差异未处理）", run_gate(repo, fix=True) == 1)
+        with open(os.path.join(repo, "a.txt"), "rb") as f:
+            got_a = f.read()
+        with open(os.path.join(repo, "b.py"), "rb") as f:
+            got_b = f.read()
+        case("行尾污染已修成 LF", got_a == b"line1\nline2\n", repr(got_a))
+        case("真差异文件**原样保留**（未被覆盖）", got_b == b"x = 999\n", repr(got_b))
     finally:
         shutil.rmtree(base, ignore_errors=True)
 
