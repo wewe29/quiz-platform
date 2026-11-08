@@ -7,6 +7,14 @@
 
 判据来源：镜像漂移检查若按字节比对，会被 .gitattributes 的换行归一（D21）误伤，
 所以「仅换行符差异」必须**不**算漂移；而内容真差异与缺失必须**要**被抓出来。
+
+2026-11-07 实测事故（本次新增 T8/T9/T10 的由来）：
+    正本是裸目录、13 个文件是 CRLF；同步器原样复制 → 镜像工作区也带 CRLF；
+    git 提交时按 `text=auto` 把 blob 归一成 LF → git 报「工作区干净」，
+    但**本地构建读的是工作区** ⇒ 本地产物是 CRLF 字节、CI 产物（从 blob）是 LF 字节
+    ⇒ 本地 dist 与线上 Pages 差 1,716 字节（app.js），页面照跑、肉眼完全看不出来。
+    现在同步器在复制时把文本文件归一成 LF，且不变式是「镜像 == 归一后的正本」
+    （不是「镜像 == 正本的原始字节」——那会被「正本 CRLF + 镜像 CRLF」骗过去）。
 """
 import importlib.util
 import os
@@ -93,7 +101,25 @@ def main():
             got = f.read()
         case("镜像内容已对齐正本", got == b"line1\nline2\n", repr(got))
 
-        print("T8 多路径对（目录对 + 单文件对）：同步与漂移判定")
+        print("T8 正本是 CRLF：同步后镜像必须是 LF（2026-11-07 污染的回归锁）")
+        with open(os.path.join(dst, "a.txt"), "rb") as f:
+            got = f.read()
+        case("CRLF 正本已被归一成 LF", got == b"line1\nline2\n", repr(got))
+
+        print("T9 镜像是 CRLF 形态（内容一致）：同步必须把它拉回 LF")
+        write(os.path.join(dst, "a.txt"), b"line1\r\nline2\r\n")
+        case("同步退出 0", sm.main([src, dst]) == 0)
+        with open(os.path.join(dst, "a.txt"), "rb") as f:
+            got = f.read()
+        case("污染被拉回 LF", got == b"line1\nline2\n", repr(got))
+        case("同步后无漂移", sm.main([src, dst, "--check"]) == 0)
+
+        print("T10 --check 不把「仅行尾形态不同」当内容漂移（退出 0），但必须点名报出来")
+        write(os.path.join(dst, "a.txt"), b"line1\r\nline2\r\n")
+        case("仅行尾形态不同不误报", sm.main([src, dst, "--check"]) == 0)
+        case("同步修复后仍无漂移", sm.main([src, dst]) == 0)
+
+        print("T11 多路径对（目录对 + 单文件对）：同步与漂移判定")
         src2 = os.path.join(base, "sub_src")
         dst2 = os.path.join(base, "sub_dst")
         os.makedirs(os.path.join(src2, "inner"))

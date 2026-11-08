@@ -20,8 +20,17 @@
     · _cache             —— 外部抓取缓存（高数 research/_cache 实测 156 MB，非源码）
     · _drops*.jsonl      —— 丢弃记录日志（2 MB，非源码）
 
+行尾归一（2026-11-07 实测事故后加）：
+    正本是裸目录、行尾不统一（实测 13 个文件是 CRLF）。早期这里用 copyfile 原样复制，
+    于是**镜像工作区也变成 CRLF**；而 git 提交时按 `text=auto` 把 blob 归一成了 LF ——
+    git 因此报「工作区干净」，但**本地构建读的是工作区**，产出的就是 CRLF 字节，
+    于是「本机构建 ≠ CI 构建 ≠ 线上 Pages」，实测差 1,716 字节（app.js）。
+    页面照跑、肉眼完全看不出来，只有字节级核验才能发现。
+    ⇒ 现在复制时**文本文件统一 CRLF → LF**，与仓内 `.gitattributes` 的 `eol=lf` 对齐，
+      镜像工作区从此永远等于 blob。**归一发生在同步边界上**，正本不必改。
+
 换行符：仓内由 .gitattributes 统一成 LF（D21），而正本是裸目录、换行符不统一
-（实测 4 个 v1 遗留文件在正本是 CRLF，仓内 blob 是 LF）。所以比对**按内容**判定：
+（实测 13 个文件在正本是 CRLF，仓内 blob 是 LF）。所以比对**按内容**判定：
 把两侧的 CRLF 归一成 LF 再比，并分三档如实报告——
     逐字节相同 / 仅换行符差异 / 真差异。
 只有「缺文件」与「真差异」算漂移（--check 退出 1）；「仅换行符差异」不算。
@@ -46,6 +55,11 @@ import sys
 
 DEFAULT_EXCLUDE_DIRS = ("__pycache__", "_cache")
 DEFAULT_EXCLUDE_FILES = ("*.pyc", "_drops*.jsonl")
+
+# 文本扩展名：复制时把 CRLF 归一成 LF（与仓内 .gitattributes 的 eol=lf 对齐）。
+# 二进制（png/woff2/zip…）一律原样复制，任何字节都不能动。
+TEXT_EXT = (".py", ".md", ".html", ".txt", ".css", ".js", ".json", ".yml", ".yaml",
+            ".svg", ".ts", ".c", ".h", ".cpp", ".cfg", ".ini", ".xml")
 
 # 学科登记：正本 → 镜像（禁止反向，见 D10）
 # pairs = [(正本根下的相对路径, 镜像根下的相对路径), ...]
@@ -80,6 +94,37 @@ def sha256(path):
 def sha256_norm(path):
     """换行归一后的摘要：CRLF → LF，用于跨仓比较（.gitattributes 会把仓内统一成 LF）。"""
     return _digest(path, normalize_eol=True)
+
+
+def is_text(path):
+    """文本文件才做行尾归一；二进制一个字节都不许动。"""
+    return path.lower().endswith(TEXT_EXT)
+
+
+def copy_normalized(src, dst):
+    """复制到镜像：**文本文件 CRLF → LF**，二进制原样。
+
+    为什么必须归一（2026-11-07 实测）：
+        正本是裸目录、行尾不统一。原样复制会让镜像工作区也带 CRLF；
+        git 提交时按 `text=auto` 把 blob 归一成 LF，于是 git 报「工作区干净」，
+        但本地构建读工作区 → 本地产物是 CRLF 字节，CI 构建（从 blob）是 LF 字节
+        ⇒ 两条渠道的线上内容差 1,716 字节，肉眼完全看不出来。
+        归一放在同步边界上做，镜像工作区从此永远等于 blob。
+    """
+    with open(src, "rb") as f:
+        data = f.read()
+    if is_text(src):
+        data = data.replace(b"\r\n", b"\n")
+    parent = os.path.dirname(dst)
+    if parent and not os.path.isdir(parent):
+        os.makedirs(parent, exist_ok=True)
+    with open(dst, "wb") as f:
+        f.write(data)
+    try:
+        shutil.copystat(src, dst)
+    except (OSError, AttributeError):
+        pass
+    return data
 
 
 def walk(root, exclude_dirs, exclude_files):
@@ -149,9 +194,13 @@ def main(argv=None):
                 missing += 1
                 to_copy.append((rel, s, d))
                 continue
-            if sha256(s) == sha256(d):
+            # 不变式：镜像里的文本文件必须**等于归一后的正本**（即 LF 形态），
+            # 而不是「正本的原始字节」。只看「正本 == 镜像」会被
+            # 「正本 CRLF + 镜像 CRLF」骗过去 —— 那正是 2026-11-07 的污染形态。
+            expect = sha256_norm(s) if is_text(s) else sha256(s)
+            if sha256(d) == expect:
                 identical += 1
-            elif sha256_norm(s) == sha256_norm(d):
+            elif is_text(s) and sha256_norm(s) == sha256_norm(d):
                 eol_only += 1
                 to_copy.append((rel, s, d))
             else:
@@ -166,42 +215,48 @@ def main(argv=None):
             extra = len(set(dm) - src_rels)
 
         print("[pair] %s → %s" % (src_path, dst_path))
-        print("[pair]   文件 %d；逐字节相同 %d；仅换行符差异 %d；真差异 %d；缺 %d；镜像多出 %d"
+        print("[pair]   文件 %d；已是归一形态 %d；仅行尾形态不同 %d；真差异 %d；缺 %d；镜像多出 %d"
               % (len(items), identical, eol_only, changed, missing, extra))
         if args.check:
             for rel, s, d in items:
                 if not os.path.isfile(d):
                     print("   MISS  %s" % rel)
-                elif sha256(s) != sha256(d) and sha256_norm(s) != sha256_norm(d):
+                    continue
+                expect = sha256_norm(s) if is_text(s) else sha256(s)
+                if sha256(d) == expect:
+                    continue
+                if is_text(s) and sha256_norm(s) == sha256_norm(d):
+                    # 内容一致，但形态不对：镜像是 CRLF 而正本归一后是 LF。
+                    # 这会让「本地构建 ≠ CI 构建」，需要重新同步（不算内容漂移）。
+                    print("   EOLF  %s（内容一致但行尾形态不是 LF；重新同步即可修）" % rel)
+                else:
                     print("   DIFF  %s" % rel)
-                elif sha256(s) != sha256(d):
-                    print("   EOL   %s（仓内按 .gitattributes 统一 LF，内容一致）" % rel)
 
         total_missing += missing
         total_changed += changed
         total_eol += eol_only
         total_same += identical
 
-    print("[subject] %s：缺 %d 个；逐字节相同 %d 个；仅换行符差异 %d 个；真差异 %d 个"
+    print("[subject] %s：缺 %d 个；已是归一形态 %d 个；仅行尾形态不同 %d 个；真差异 %d 个"
           % (label, total_missing, total_same, total_eol, total_changed))
 
     if args.check:
         if total_missing or total_changed:
             print("[FAIL] 镜像与正本不一致（缺 %d / 真差异 %d）" % (total_missing, total_changed))
             return 1
+        if total_eol:
+            print("[WARN] 有 %d 个文件的行尾形态不是 LF（内容一致）：重新同步即可修" % total_eol)
         print("[OK ] 镜像与正本一致（无缺失、无内容差异）")
         return 0
 
     for rel, s, d in to_copy:
-        parent = os.path.dirname(d)
-        if parent and not os.path.isdir(parent):
-            os.makedirs(parent, exist_ok=True)
-        shutil.copy2(s, d)
+        copy_normalized(s, d)
 
-    # 不轻信 copy2 的返回：拷贝后逐文件回读比对
+    # 不轻信拷贝的返回：拷贝后逐文件回读比对（按「归一后的期望字节」比）
     bad = []
     for rel, s, d in to_copy:
-        if not os.path.isfile(d) or sha256(s) != sha256(d):
+        expect = sha256_norm(s) if is_text(s) else sha256(s)
+        if not os.path.isfile(d) or sha256(d) != expect:
             bad.append(rel)
     if bad:
         print("[FAIL] 拷贝后回读校验不一致 %d 个：" % len(bad))
@@ -209,7 +264,7 @@ def main(argv=None):
             print("   " + rel)
         return 1
 
-    print("[OK ] 同步完成：新增 %d 个、更新 %d 个、换行对齐 %d 个，回读逐字节校验通过"
+    print("[OK ] 同步完成：新增 %d 个、更新 %d 个、换行归一 %d 个，回读逐字节校验通过"
           % (total_missing, total_changed, total_eol))
     return 0
 
