@@ -29,6 +29,7 @@ import io
 import json
 import os
 import random
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -36,6 +37,17 @@ import urllib.request
 # 本机代理指向无监听的端口，urllib 默认会走它 → 必须显式禁用。
 # 放在模块级，构造一次即可（默认 opener 是懒建的，但显式更可控）。
 _OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+
+# 并发取文件时每个线程用自己的 opener（共享一个 opener 不是线程安全的）。
+_local = threading.local()
+
+
+def _thread_opener():
+    op = getattr(_local, "opener", None)
+    if op is None:
+        op = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+        _local.opener = op
+    return op
 
 # 宿主遥测块的标记。注入形如：
 #   <script data-minimax-analytics="minimax-website-analytics-v1"> ... </script>
@@ -82,7 +94,8 @@ def fetch(url, timeout=60, cb=None, opener=None, retries=3, backoff=1.5):
                          "Cache-Control": "no-cache",
                          "Pragma": "no-cache"},
             )
-            op = opener or _OPENER
+            op = opener or (_thread_opener() if threading.current_thread() is not threading.main_thread()
+                            else _OPENER)
             with op.open(req, timeout=timeout) as r:
                 data = r.read()
                 if r.headers.get("Content-Encoding") == "gzip":

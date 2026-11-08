@@ -35,6 +35,7 @@ import argparse
 import json
 import os
 import sys
+from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from online_judge import (  # noqa: E402
@@ -124,7 +125,7 @@ def compare_file(node, spec, ci_mode=False):
     print("    Last-Modified: %s" % (hdrs.get("Last-Modified") or hdrs.get("last-modified") or "—"))
 
 
-def compare_tree(node, spec, ci_mode=False):
+def compare_tree(node, spec, ci_mode=False, jobs=6):
     """整棵树逐文件比对。"""
     raw = spec_local(spec, ci_mode)
     if not raw:
@@ -142,21 +143,30 @@ def compare_tree(node, spec, ci_mode=False):
     print("    基准 %s：%d 个文件" % (raw, len(files)))
     bad = []
     total_bytes = 0
-    for rel, full in files:
+
+    def one(item):
+        rel, full = item
         url = node["url"].rstrip("/") + "/" + ((url_prefix + "/") if url_prefix else "") + rel
         local = read_file(full)
         try:
             status, body, hdrs = fetch(url)
         except Exception as e:
-            bad.append("%s 取失败：%s" % (rel, e))
-            continue
+            return rel, "取失败：%s" % e, len(local)
         if status != 200:
-            bad.append("%s status=%d" % (rel, status))
-            continue
+            return rel, "status=%d" % status, len(local)
         v = judge(body, local)
         if not v["ok"]:
-            bad.append("%s：%s" % (rel, v["reason"]))
-        total_bytes += len(local)
+            return rel, v["reason"], len(local)
+        return rel, None, len(local)
+
+    # 并发取：221 个文件串行请求要十几分钟（实测 CI runner 上更久），
+    # 这个门禁每次 push 都跑，必须够快。judge 是纯函数，并发安全。
+    with ThreadPoolExecutor(max_workers=max(1, jobs)) as ex:
+        for rel, reason, nbytes in ex.map(one, files):
+            if reason:
+                bad.append("%s：%s" % (rel, reason))
+            else:
+                total_bytes += nbytes
     check("%d 个文件全部与本地一致（合计 %d B）" % (len(files), total_bytes),
           not bad, "" if not bad else "；".join(bad[:6]) + ("…" if len(bad) > 6 else ""))
     # 题量口径（人眼对账用，不参与判定）
@@ -188,6 +198,8 @@ def parse_args(argv):
                     help="CI 模式：只跑台账里标了 ci:true 的核验项（拿不到基准的不假装覆盖）")
     ap.add_argument("--ci-repo", default="", choices=["", "platform", "publish"],
                     help="只跑属于这个仓的核验项（台账的 ci_repo 字段）")
+    ap.add_argument("--jobs", type=int, default=6,
+                    help="并发取文件的线程数（实测串行 221 个文件要十几分钟）")
     return ap.parse_args(argv)
 
 
@@ -236,7 +248,7 @@ def main(argv=None):
                     print("    · %s" % s["ci_note"])
         for spec in specs:
             if spec.get("type") == "tree":
-                compare_tree(node, spec, args.ci)
+                compare_tree(node, spec, args.ci, args.jobs)
             elif spec.get("type") == "file":
                 compare_file(node, spec, args.ci)
             else:
