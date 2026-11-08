@@ -29,6 +29,8 @@ import io
 import json
 import os
 import random
+import time
+import urllib.error
 import urllib.request
 
 # 本机代理指向无监听的端口，urllib 默认会走它 → 必须显式禁用。
@@ -60,25 +62,40 @@ def build_url(url, cb=None):
     return "%s%scb=%s" % (url, sep, cb)
 
 
-def fetch(url, timeout=60, cb=None, opener=None):
+def fetch(url, timeout=60, cb=None, opener=None, retries=3, backoff=1.5):
     """取回一个 URL 的原始字节。
 
     返回 (status, body, headers)。请求头强制 `Accept-Encoding: identity`，
     避免服务端压缩后与本地字节对不上（万一服务端仍压缩，则就地解压）。
+
+    **必须重试**：实测本机到 github.io 的 DNS 会间歇性抽风
+    （`getaddrinfo failed` / 读超时），一次失败就判红会变成假警报；
+    CI runner 上同样会抖。没有重试的核验器 = 不稳定的门禁。
     """
-    req = urllib.request.Request(
-        build_url(url, cb),
-        headers={"User-Agent": "Mozilla/5.0 mcode-online-judge/1.0",
-                 "Accept-Encoding": "identity",
-                 "Cache-Control": "no-cache",
-                 "Pragma": "no-cache"},
-    )
-    op = opener or _OPENER
-    with op.open(req, timeout=timeout) as r:
-        data = r.read()
-        if r.headers.get("Content-Encoding") == "gzip":
-            data = gzip.decompress(data)
-        return r.status, data, dict(r.headers)
+    last = None
+    for attempt in range(max(1, retries)):
+        try:
+            req = urllib.request.Request(
+                build_url(url, cb),
+                headers={"User-Agent": "Mozilla/5.0 mcode-online-judge/1.0",
+                         "Accept-Encoding": "identity",
+                         "Cache-Control": "no-cache",
+                         "Pragma": "no-cache"},
+            )
+            op = opener or _OPENER
+            with op.open(req, timeout=timeout) as r:
+                data = r.read()
+                if r.headers.get("Content-Encoding") == "gzip":
+                    data = gzip.decompress(data)
+                return r.status, data, dict(r.headers)
+        except urllib.error.HTTPError as e:
+            # 4xx/5xx 不重试（重试也不会变好），直接抛给调用方判红
+            raise
+        except Exception as e:
+            last = e
+            if attempt + 1 < max(1, retries):
+                time.sleep(backoff * (attempt + 1))
+    raise last
 
 
 def is_telemetry(block):

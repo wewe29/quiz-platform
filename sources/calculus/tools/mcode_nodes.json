@@ -1,13 +1,21 @@
 {
   "schema": "mcode-node-ledger-v1",
-  "updated": "2026-11-03",
+  "updated": "2026-11-07",
   "judge": "剥掉宿主在 </body> 前注入的那一整块遥测内容后，线上文件与本地成品逐字节相同",
   "note": [
     "这是 mcode 渠道的**节点台账**，线上核验的唯一事实源：node_id / URL / 基准产物都在这里。",
     "基准一律取「当前 HEAD 的成品」：平台站取平台仓 dist/，高数站取高数正本 _site_v2/，",
     "线代站取发布仓 index.html。判据核心见 tools/online_judge.py。",
     "roots 写的是本机绝对路径；CI 或别的机器上用 `--root NAME=PATH` 覆盖，不要改这张表。",
-    "「注入块大小不是常数」——不能用「线上 = 本地 + 固定字节数」当判据。"
+    "「注入块大小不是常数」——不能用「线上 = 本地 + 固定字节数」当判据。",
+    "",
+    "ci 字段：该项能不能在 CI 里核验（CI 上拿得到基准吗）。",
+    "  ci:true  → CI job 会核验它；ci_local 指定 CI 专用的基准路径（缺省用 local）。",
+    "  ci:false → **不假装覆盖**，并用 ci_note 写明为什么（由本地核验覆盖）。",
+    "    高数 v2 静态站与它的单文件包，CI 上重建不出来：构建链依赖项目外的 KaTeX 资源",
+    "    （tools/katex_assets.py 指向 5-docs\\exam\\数据库\\node_modules\\katex\\dist），",
+    "    那是 5-docs 下唯一的 git 仓之外的外部依赖。⇒ 这两项仍靠本地每日核验覆盖。",
+    "ci_repo：该核验项属于哪个仓的 CI（platform / publish）。"
   ],
   "roots": {
     "calculus": "D:\\workspace\\5-docs\\高等数学复习资料",
@@ -25,8 +33,12 @@
         {
           "type": "tree",
           "local": "platform:dist",
+          "ci_local": "platform:dist",
           "url_prefix": "",
-          "comment": "整棵树逐文件比对（dist/ 与线上根路径一一对应）"
+          "ci": true,
+          "ci_note": "基准 = CI 构建的 dist/（= 刚上线的 GitHub Pages 那一份）",
+          "comment": "整棵树逐文件比对（dist/ 与线上根路径一一对应）",
+          "ci_repo": "platform"
         }
       ]
     },
@@ -41,7 +53,10 @@
           "type": "tree",
           "local": "calculus:_site_v2",
           "url_prefix": "",
-          "comment": "整棵树逐文件比对（含 12 个分片 + katex 字体 + assets）"
+          "ci": false,
+          "ci_note": "高数 v2 静态站的构建链依赖项目外的 KaTeX 资源，CI 上重建不出来；本地核验覆盖",
+          "comment": "整棵树逐文件比对（含 12 个分片 + katex 字体 + assets）",
+          "ci_repo": "platform"
         }
       ]
     },
@@ -55,7 +70,11 @@
         {
           "type": "file",
           "local": "calculus:site_pages/retired-notice.html",
-          "url_path": "/index.html"
+          "ci_local": "calculus:site_pages/retired-notice.html",
+          "url_path": "/index.html",
+          "ci": true,
+          "ci_note": "基准 = 仓内镜像 sources/calculus/site_pages/retired-notice.html",
+          "ci_repo": "platform"
         }
       ]
     },
@@ -69,12 +88,19 @@
         {
           "type": "file",
           "local": "calculus:site_pages/offline-download.html",
-          "url_path": "/index.html"
+          "ci_local": "calculus:site_pages/offline-download.html",
+          "url_path": "/index.html",
+          "ci": true,
+          "ci_note": "基准 = 仓内镜像 sources/calculus/site_pages/offline-download.html",
+          "ci_repo": "platform"
         },
         {
           "type": "file",
           "local": "calculus:01《高等数学》题库刷题网页 v2.html",
-          "url_path": "/calculus-quiz-offline.html"
+          "url_path": "/calculus-quiz-offline.html",
+          "ci": false,
+          "ci_note": "单文件包需要 build_single.py + 项目外 KaTeX 资源，CI 上重建不出来；本地核验覆盖",
+          "ci_repo": "platform"
         }
       ]
     },
@@ -88,8 +114,12 @@
         {
           "type": "file",
           "local": "linalg:publish/linear-algebra-quiz/index.html",
+          "ci_local": "linalg:index.html",
           "url_path": "/index.html",
-          "comment": "2026-11-03 补进台账：此前核验器漏了这个站，正是它悄悄落后 HEAD 两天"
+          "ci": true,
+          "ci_note": "基准 = 发布仓已提交的 index.html（CI 的 content-gates 已断言它 == 按源码重建的产物）",
+          "comment": "2026-11-03 补进台账：此前核验器漏了这个站，正是它悄悄落后 HEAD 两天",
+          "ci_repo": "publish"
         }
       ]
     }

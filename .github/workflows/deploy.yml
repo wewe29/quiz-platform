@@ -66,3 +66,74 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # ── mcode 渠道核验（2026-11-07 起纳入正式发布流程）─────────────────────────
+  # 为什么要有这个 job：
+  #   CI 绿 ≠ 线上是最新。CI 只比对「仓内已提交成品」与「按当前源码重建的结果」，
+  #   **查不到「线上那个 mcode 节点有没有重发过」**。
+  #   2026-11-01 15:28 的 mdLite 修复提交后 CI 与 GitHub Pages 都更新了，
+  #   而 mcode 渠道整整两天没重发（线上落后 HEAD 两天，线上还少 56 题）。
+  #   ⇒ 发布流程里必须有一步**单独核验 mcode 渠道**。
+  #
+  # 这个 job 红 = **mcode 渠道待补发**（不是代码坏了）。
+  #   代码本身是否健康，看 build-and-deploy（它门禁 Pages 发布）。
+  #   mcode 是**手动补发**渠道（website_deploy 要在本机跑），所以这个 job 只报警不阻塞。
+  verify-mcode-online:
+    name: 线上核验：mcode 渠道是否已跟上 HEAD
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install sympy
+
+      - name: 按当前源码重建产物（基准 = 从 HEAD 构建的成品）
+        env:
+          PYTHONIOENCODING: utf-8
+        run: python tools/platform/build_all.py --dist
+
+      - name: Fail on drift (committed subjects/ != regenerated subjects/)
+        run: |
+          if ! git diff --exit-code --quiet -- subjects/; then
+            echo "::error::subjects/ 与按当前源码重建的结果不一致：本地产物与 HEAD 不是同一份，线上核验的基准不可信"
+            git diff --stat -- subjects/
+            exit 1
+          fi
+          echo "::notice::CI 重建的 subjects/ 与仓内 HEAD 成品逐字节一致（基准可信）"
+
+      - name: 判据反向测试（造错必须报错）
+        env:
+          PYTHONIOENCODING: utf-8
+        run: python sources/calculus/tools/test_online_judge.py
+
+      - name: 两棵正本的节点台账必须同字节
+        run: |
+          cmp sources/calculus/tools/mcode_nodes.json sources/linalg/tools/mcode_nodes.json \
+            || (echo "::error::高数正本与线代正本的节点台账不是同一份 —— 「同一张台账」的前提没了" && exit 1)
+
+      - name: 核验 mcode 渠道：线上 == HEAD 成品
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          python sources/calculus/tools/verify_mcode_online.py --ci --ci-repo platform \
+            --root platform="$GITHUB_WORKSPACE" \
+            --root calculus="$GITHUB_WORKSPACE/sources/calculus"
+
+      - name: 自证有牙齿：故意注入漂移，核验器必须报红
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          mkdir -p drift-root
+          cp -r dist drift-root/dist
+          printf 'x' >> drift-root/dist/index.html
+          if python sources/calculus/tools/verify_mcode_online.py --ci --ci-repo platform \
+               --only platform-main --root platform="$GITHUB_WORKSPACE/drift-root"; then
+            echo "::error::核验器对注入的漂移没有报错 —— 这道门禁没有牙齿"
+            exit 1
+          fi
+          echo "::notice::核验器对注入的漂移正确报错（门禁有牙齿）"

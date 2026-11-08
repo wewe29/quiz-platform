@@ -18,10 +18,18 @@ r"""tools/verify_mcode_online.py — mcode 公网站的线上核验
     ⚠ 2026-11-03 的教训：此前这个脚本按站点类型写死分支，**漏了线代单文件站**，
       而那个站恰恰是落后 HEAD 两天的那个 —— 漏核验 = 漂移可以潜伏。
 
+CI 模式（--ci）：
+    只跑台账里标记了 `"ci": true` 的核验项 —— 也就是**在 CI 里拿得到基准**的那些。
+    拿不到基准的项（例如高数 v2 站：它的构建链依赖项目外的 KaTeX 资源，
+    CI 上重建不出来）标记 `"ci": false` 并写明 `ci_note`，**不假装覆盖了**。
+    CI 里用 `--root NAME=PATH` 覆盖 roots（台账里写的是本机绝对路径）。
+    某个 check 可以用 `ci_local` 指定 CI 专用的基准路径（缺省用 `local`）。
+
 用法：
     python tools\verify_mcode_online.py                # 全部节点
     python tools\verify_mcode_online.py --only linalg-single
     python tools\verify_mcode_online.py --root platform=D:\somewhere\else
+    python tools\verify_mcode_online.py --ci            # 只跑台账标了 ci:true 的项
 """
 import argparse
 import json
@@ -70,12 +78,33 @@ def walk_files(root):
     return out
 
 
-def compare_file(node, spec):
+def spec_local(spec, ci_mode):
+    """取基准路径。
+
+    `ci_local` 是「CI 环境下的路径」，**只有当它所属的 root 被 `--root` 显式覆盖时
+    才使用**；否则用 `local`。
+    这样：
+      · CI 里 `--root linalg=$GITHUB_WORKSPACE` ⇒ 用 ci_local（发布仓根的 index.html）；
+      · 本地跑 `--ci` 演练时没覆盖那个 root ⇒ 用 local（正本里的路径），仍然可跑。
+    """
+    raw = spec.get("local")
+    if ci_mode and spec.get("ci_local"):
+        croot = spec["ci_local"].split(":", 1)[0] if ":" in spec["ci_local"] else None
+        if croot and croot in OVERRIDDEN:
+            raw = spec["ci_local"]
+    return raw
+
+
+def compare_file(node, spec, ci_mode=False):
     """一个文件对一个 URL 路径。"""
-    local_path = resolve(spec["local"], ROOTS)
+    raw = spec_local(spec, ci_mode)
+    if not raw:
+        check("核验项 %s 写明了基准路径" % node["id"], False, "缺 local")
+        return
+    local_path = resolve(raw, ROOTS)
     url = node["url"].rstrip("/") + spec.get("url_path", "/")
     if not os.path.isfile(local_path):
-        check("本地基准存在 %s" % spec["local"], False, local_path)
+        check("本地基准存在 %s" % raw, False, local_path)
         return
     local = read_file(local_path)
     try:
@@ -95,18 +124,22 @@ def compare_file(node, spec):
     print("    Last-Modified: %s" % (hdrs.get("Last-Modified") or hdrs.get("last-modified") or "—"))
 
 
-def compare_tree(node, spec):
+def compare_tree(node, spec, ci_mode=False):
     """整棵树逐文件比对。"""
-    local_root = resolve(spec["local"], ROOTS)
+    raw = spec_local(spec, ci_mode)
+    if not raw:
+        check("核验项 %s 写明了基准路径" % node["id"], False, "缺 local")
+        return
+    local_root = resolve(raw, ROOTS)
     url_prefix = spec.get("url_prefix", "").strip("/")
     if not os.path.isdir(local_root):
-        check("本地基准目录存在 %s" % spec["local"], False, local_root)
+        check("本地基准目录存在 %s" % raw, False, local_root)
         return
     files = walk_files(local_root)
     if not files:
-        check("本地基准目录非空 %s" % spec["local"], False, local_root)
+        check("本地基准目录非空 %s" % raw, False, local_root)
         return
-    print("    基准 %s：%d 个文件" % (spec["local"], len(files)))
+    print("    基准 %s：%d 个文件" % (raw, len(files)))
     bad = []
     total_bytes = 0
     for rel, full in files:
@@ -151,20 +184,26 @@ def parse_args(argv):
     ap.add_argument("--only", default="", help="只核验这些节点 id（逗号分隔）")
     ap.add_argument("--root", action="append", default=[], metavar="NAME=PATH",
                     help="覆盖台账里的 root（可重复）")
+    ap.add_argument("--ci", action="store_true",
+                    help="CI 模式：只跑台账里标了 ci:true 的核验项（拿不到基准的不假装覆盖）")
+    ap.add_argument("--ci-repo", default="", choices=["", "platform", "publish"],
+                    help="只跑属于这个仓的核验项（台账的 ci_repo 字段）")
     return ap.parse_args(argv)
 
 
 def main(argv=None):
-    global ROOTS
+    global ROOTS, OVERRIDDEN
     args = parse_args(argv or sys.argv[1:])
     with open(args.ledger, "rb") as f:
         ledger = json.loads(f.read().decode("utf-8"))
     ROOTS = dict(ledger.get("roots") or {})
+    OVERRIDDEN = set()
     for item in args.root:
         if "=" not in item:
             raise SystemExit("[verify] --root 格式应为 NAME=PATH")
         k, v = item.split("=", 1)
         ROOTS[k] = v
+        OVERRIDDEN.add(k)
     only = [x.strip() for x in args.only.split(",") if x.strip()]
 
     print("判据：%s" % ledger.get("judge"))
@@ -174,13 +213,32 @@ def main(argv=None):
     for node in ledger["nodes"]:
         if only and node["id"] not in only:
             continue
+        specs = node.get("checks") or []
+        if args.ci:
+            ci_specs = [s for s in specs if s.get("ci")]
+            if args.ci_repo:
+                ci_specs = [s for s in ci_specs
+                            if (s.get("ci_repo") or "platform") == args.ci_repo]
+            skipped = [s for s in specs if not s.get("ci")]
+            if not ci_specs:
+                print("\n--- %s（%s）" % (node["label"], node["id"]))
+                print("    %s   node_id=%s" % (node["url"], node.get("node_id", "—")))
+                reason = "；".join((s.get("ci_note") or s.get("local", "?"))
+                                  for s in (skipped or specs))
+                print("    [SKIP] CI 里没有可用基准（ci 标记为 false 或不属于本仓）：%s" % reason)
+                continue
+            specs = ci_specs
         print("\n--- %s（%s）" % (node["label"], node["id"]))
         print("    %s   node_id=%s" % (node["url"], node.get("node_id", "—")))
-        for spec in node.get("checks") or []:
+        if args.ci:
+            for s in specs:
+                if s.get("ci_note"):
+                    print("    · %s" % s["ci_note"])
+        for spec in specs:
             if spec.get("type") == "tree":
-                compare_tree(node, spec)
+                compare_tree(node, spec, args.ci)
             elif spec.get("type") == "file":
-                compare_file(node, spec)
+                compare_file(node, spec, args.ci)
             else:
                 check("台账 check 类型已知", False, spec.get("type"))
 
@@ -199,6 +257,7 @@ def main(argv=None):
 
 
 ROOTS = {}
+OVERRIDDEN = set()
 
 if __name__ == "__main__":
     sys.exit(main())
