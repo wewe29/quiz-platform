@@ -1671,6 +1671,10 @@
   function fillStaticTexts(meta) {
     var s = meta.summary || {};
     document.title = '大学《' + meta.subject.name + '》题库刷题 · 复习刷题平台';
+    // 页面上那颗大标题同样取自 manifest：静态壳里的名字可能被盖章命令写空，
+    // 运行时再取一次 manifest，页面标题与浏览器标题就永远一致（2026-11-08 线上五站点空名实录）。
+    var h1 = document.querySelector('.hud-title h1');
+    if (h1) h1.textContent = '大学《' + meta.subject.name + '》题库刷题';
     $('#hud-sub').textContent = s.sub || '';
     var about = $('#about-block');
     if (about) about.innerHTML = s.aboutHtml || '';

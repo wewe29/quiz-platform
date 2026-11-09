@@ -22,6 +22,7 @@ PLATFORM = os.path.abspath(os.path.join(HERE, "..", ".."))
 
 sys.path.insert(0, HERE)   # portal_meta 与本脚本同目录；被当模块导入时也要能找到
 from portal_meta import describe as portal_desc, read_meta, apply_meta  # noqa: E402
+import subject_shell  # noqa: E402
 
 
 def run(cmd, cwd, label, extra_env=None):
@@ -158,6 +159,15 @@ def main():
         run([sys.executable, os.path.join(HERE, "katex_assets.py"),
              "--subject-dir", out],
             cwd=HERE, label="%s KaTeX 自托管" % sid)
+
+    # 壳重盖：壳名/描述来自 manifest，离线链接来自平台台账——
+    # 壳是**构建产物**，不是手工维护的文件。
+    # 2026-11-08 的教训：手工 `new_subject.py --restamp`（漏传 --name）把五个学科的
+    # 壳名写空，线上标题变成「大学《》题库刷题」，而门禁全绿（门禁只做模板重放，
+    # 看不出盖戳参数本身是错的）。把重盖放进流水线，这一步就没有手滑的余地。
+    print("=" * 60)
+    print("[shell] 按 manifest 重盖学科壳")
+    subject_shell.restamp_all()
 
     # 注册表：门户唯一数据源（题量/章节数/真题标注数全部来自 manifest，门户不手写）
     registry = {"schema": "quiz-platform-registry-v1", "subjects": []}

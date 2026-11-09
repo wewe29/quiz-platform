@@ -12,6 +12,7 @@
 Windows 特例说明：真实目录锁只在 Windows 上成立（Linux 下进程 CWD 不阻止 rmtree），
 所以 T1 分两半——「降级分支」在所有平台都确定性验证，「真实文件锁」仅 Windows 跑。
 """
+import json
 import os
 import shutil
 import subprocess
@@ -24,6 +25,7 @@ sys.path.insert(0, HERE)
 
 import build_all                                          # noqa: E402
 import validate_platform                                  # noqa: E402
+import subject_shell                                      # noqa: E402
 from portal_meta import describe as portal_desc, read_meta, apply_meta  # noqa: E402
 
 failures = []
@@ -201,6 +203,141 @@ def test_katex_strict_gate():
         shutil.rmtree(tmp, ignore_errors=True)
 
 
+def _fake_subject(tmp, sid, name, desc, stamp_name=None, stamp_desc=None,
+                  stamp_offline=None, html=None, render_spec=None):
+    """造一个学科壳目录（盖戳清单 + index.html），返回 (目录, manifest 事实)。
+
+    render_spec=None 表示「按平台台账渲染正确链接」；要造错就显式给一个错的 spec。
+    """
+    sdir = os.path.join(tmp, sid)
+    os.makedirs(os.path.join(sdir, "data"), exist_ok=True)
+    meta = {"subject": {"name": name, "id": sid}, "summary": {"desc": desc}}
+    stamp = {
+        "templateVersion": subject_shell.template_version(),
+        "name": name if stamp_name is None else stamp_name,
+        "desc": desc if stamp_desc is None else stamp_desc,
+        "offline": stamp_offline,
+    }
+    with open(os.path.join(sdir, ".stamp.json"), "w", encoding="utf-8") as f:
+        json.dump(stamp, f, ensure_ascii=False, indent=1)
+    if html is None:
+        spec = subject_shell.offline_spec(sid) if render_spec is None else render_spec
+        html = subject_shell.render(subject_shell.read_template(),
+                                    stamp["name"], stamp["desc"], spec)
+    with open(os.path.join(sdir, "index.html"), "w", encoding="utf-8", newline="\n") as f:
+        f.write(html)
+    return sdir, meta
+
+
+def _run_identity(tmp, sid, sdir, meta):
+    validate_platform.errors.clear()
+    validate_platform.check_subject_identity(sid, sdir, meta)
+    return list(validate_platform.errors)
+
+
+def test_subject_identity_gate():
+    """T5–T10：壳的身份门禁——**造错必须报错**，好的时候不得误报。
+
+    2026-11-08 实证反面：一次 --restamp 漏传 --name 把五个学科的壳名写空，
+    线上标题变成「大学《》题库刷题」，而当时全部门禁全绿——
+    因为门禁只会拿盖戳参数去重放模板，参数本身错了它照样通过。
+    """
+    tmp = tempfile.mkdtemp(prefix="shellgate-")
+    name, desc = "演示学科", "演示学科 10 题刷题子站：示例说明。"
+    try:
+        # T5 盖戳里的壳名为空 → 必须报错（这正是 2026-11-08 线上那副样子）
+        sdir, meta = _fake_subject(tmp, "demo", name, desc, stamp_name="")
+        errs = _run_identity(tmp, "demo", sdir, meta)
+        check("T5 空壳名被门禁拦下", any("壳名为空" in e for e in errs), "errors=%r" % errs[:3])
+
+        # T6 壳名与 manifest 不一致 → 必须报错
+        sdir, meta = _fake_subject(tmp, "demo", name, desc, stamp_name="别的学科")
+        errs = _run_identity(tmp, "demo", sdir, meta)
+        check("T6 壳名与 manifest 不符被拦下", any("与 manifest" in e for e in errs),
+              "errors=%r" % errs[:3])
+
+        # T7 index.html 里出现空壳名「大学《》」（壳名对、页面被改坏）→ 必须报错
+        sdir, meta = _fake_subject(tmp, "demo", name, desc)
+        idx = os.path.join(sdir, "index.html")
+        with open(idx, encoding="utf-8") as f:
+            good_html = f.read()
+        with open(idx, "w", encoding="utf-8", newline="\n") as f:
+            f.write(good_html.replace("大学《%s》" % name, "大学《》"))
+        errs = _run_identity(tmp, "demo", sdir, meta)
+        check("T7 页面里出现「大学《》」被拦下", any("大学《》" in e for e in errs),
+              "errors=%r" % errs[:3])
+
+        # T8 描述停在旧题量（manifest 已更新）→ 必须报错
+        sdir, meta = _fake_subject(tmp, "demo", name, desc,
+                                   stamp_desc="演示学科 8 题刷题子站：示例说明。")
+        errs = _run_identity(tmp, "demo", sdir, meta)
+        check("T8 陈旧描述被拦下", any("描述" in e for e in errs), "errors=%r" % errs[:3])
+
+        # T9 页脚离线链接与平台台账不符（模板曾把它写死成线代）→ 必须报错
+        links = subject_shell.load_offline_links()
+        with_link = sorted(links)[0] if links else None
+        if with_link:
+            wrong = {"url": "https://example.invalid/wrong", "label": "错的离线版"}
+            sdir, meta = _fake_subject(tmp, with_link, links[with_link]["label"], desc,
+                                       stamp_offline=wrong, render_spec=wrong)
+            errs = _run_identity(tmp, with_link, sdir, meta)
+            check("T9 页脚离线链接错配被拦下", any("离线链接" in e for e in errs),
+                  "errors=%r" % errs[:3])
+        else:
+            print("  [skip] T9 offline_links.json 为空，无带离线版的学科可测")
+
+        # T10 一切正确 → 不得误报
+        sdir, meta = _fake_subject(tmp, "demo", name, desc)
+        errs = _run_identity(tmp, "demo", sdir, meta)
+        check("T10 正确的壳不误报", not errs, "errors=%r" % errs[:3])
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+def test_resolve_facts_precedence():
+    """T11：重盖时 manifest 优先于旧盖戳清单。
+
+    题量涨了以后，旧盖戳里的描述就是陈旧的；留着它等于让 meta description
+    停在旧题量上（2026-10-31 门户 meta 就是这么悄悄过期了很久）。
+    """
+    tmp = tempfile.mkdtemp(prefix="facts-")
+    try:
+        sdir = os.path.join(tmp, "demo")
+        os.makedirs(os.path.join(sdir, "data"))
+        with open(os.path.join(sdir, "data", "manifest.json"), "w", encoding="utf-8") as f:
+            json.dump({"subject": {"name": "新名字"}, "summary": {"desc": "新描述 12 题"}},
+                      f, ensure_ascii=False)
+        with open(os.path.join(sdir, ".stamp.json"), "w", encoding="utf-8") as f:
+            json.dump({"templateVersion": "3", "name": "旧名字", "desc": "旧描述 10 题"},
+                      f, ensure_ascii=False)
+        name, desc = subject_shell.resolve_facts("demo", subjects_dir=tmp)
+        check("T11 壳名取 manifest", name == "新名字", "name=%r" % name)
+        check("T11 描述取 manifest", desc == "新描述 12 题", "desc=%r" % desc)
+
+        name, desc = subject_shell.resolve_facts("demo", name="命令行优先", subjects_dir=tmp)
+        check("T11 命令行参数优先于 manifest", name == "命令行优先", "name=%r" % name)
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+def test_new_subject_refuses_empty_name():
+    """T12：解析不出壳名时 new_subject.py 必须报错退出，绝不写空壳。"""
+    import new_subject
+    old_argv = sys.argv
+    try:
+        # 「ghost」学科：没有 manifest、没有盖戳清单 → 名字解析不出来
+        sys.argv = ["new_subject.py", "--id", "ghost"]
+        raised = None
+        try:
+            new_subject.main()
+        except SystemExit as e:
+            raised = str(e)
+        check("T12 解析不出名字时报错退出", raised is not None and "拒绝写出空壳" in raised,
+              "raised=%r" % raised)
+    finally:
+        sys.argv = old_argv
+
+
 def main():
     print("[test] 平台自检开始")
     test_dist_fallback_branch()
@@ -208,6 +345,9 @@ def main():
     test_portal_meta_gate()
     test_portal_meta_roundtrip()
     test_katex_strict_gate()
+    test_subject_identity_gate()
+    test_resolve_facts_precedence()
+    test_new_subject_refuses_empty_name()
     print("-" * 60)
     if failures:
         print("平台自检 FAIL：%d 项 -> %s" % (len(failures), ", ".join(failures)))

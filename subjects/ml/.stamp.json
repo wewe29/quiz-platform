@@ -1,5 +1,6 @@
 {
- "templateVersion": "2",
- "name": "",
- "desc": ""
+ "templateVersion": "3",
+ "name": "机器学习",
+ "desc": "机器学习 244 题刷题子站：章节小测 A/B 卷 + 5 套综合卷，逐题解析与课件出处，进度保存在本地。",
+ "offline": null
 }

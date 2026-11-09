@@ -14,9 +14,10 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 PLATFORM = os.path.abspath(os.path.join(HERE, "..", ".."))
 
-sys.path.insert(0, HERE)   # portal_meta / katex_lint 与本脚本同目录
+sys.path.insert(0, HERE)   # portal_meta / katex_lint / subject_shell 与本脚本同目录
 from portal_meta import describe as portal_desc, read_meta  # noqa: E402
 import katex_lint  # noqa: E402
+import subject_shell  # noqa: E402
 
 SHARD_BUDGET = 200 * 1024          # 单分片字节上限
 SHELL_BUDGET = 300 * 1024          # 学科壳（html + js + css，不含 vendor/data）上限
@@ -211,8 +212,9 @@ def check_subject_shell(sid, sdir):
             err("%s: %s 与模板不一致（改模板后需 new_subject.py --restamp）" % (sid, rel))
 
     tpl_html = open(os.path.join(tpl, "index.html"), encoding="utf-8").read()
-    expect_html = tpl_html.replace("__SUBJECT_NAME__", stamp.get("name", "")) \
-                          .replace("__SUBJECT_DESC__", stamp.get("desc", ""))
+    expect_html = subject_shell.render(tpl_html, stamp.get("name", "") or "",
+                                       stamp.get("desc", "") or "",
+                                       stamp.get("offline") or None)
     idx = os.path.join(sdir, "index.html")
     if os.path.isfile(idx):
         got = open(idx, encoding="utf-8").read()
@@ -228,6 +230,74 @@ def check_subject_shell(sid, sdir):
         for sym in ("LAStore", "LABank"):
             if sym not in txt:
                 err("%s: app.js 未调用 %s（R2 未接线）" % (sid, sym))
+
+
+def check_subject_identity(sid, sdir, meta=None):
+    """壳的**身份**门禁：壳名 / 描述 / 离线链接必须与 manifest、平台台账一致。
+
+    2026-11-08 实证反面：一次 `new_subject.py --restamp`（漏传 --name）把五个
+    学科的壳名写成了空字符串，线上五个子站的标题变成「大学《》题库刷题」，
+    而当时**全部门禁全绿**——因为 check_subject_shell 只做「模板重放」这种
+    自洽式校验：盖戳参数本身错了，重放照样通过。
+    这道门禁把「参数的值」与「独立事实源」对起来，才有牙齿：
+      · 壳名非空，且等于 manifest 的 subject.name；
+      · 描述等于 manifest 的 summary.desc（题量变了必须重盖）；
+      · index.html 的 <title>/<h1> 真的带着这个壳名，且不含空壳「大学《》」；
+      · 页脚离线链接等于 offline_links.json 里的那一条（模板曾把它写死成线代）。
+    """
+    stamp_p = os.path.join(sdir, ".stamp.json")
+    if not os.path.isfile(stamp_p):
+        return                      # 缺盖戳清单已由 check_subject_shell 报过
+    with open(stamp_p, encoding="utf-8") as f:
+        stamp = json.load(f)
+    if meta is None:
+        meta = {}
+    m_name = (meta.get("subject") or {}).get("name") or ""
+    m_desc = (meta.get("summary") or {}).get("desc") or ""
+
+    name = (stamp.get("name") or "").strip()
+    desc = stamp.get("desc") or ""
+    if not name:
+        err("%s: 盖戳清单里的壳名为空（线上标题会变成「大学《》」）——2026-11-08 就是这么上线五天的"
+            % sid)
+    elif m_name and name != m_name:
+        err("%s: 壳名 %r 与 manifest 的 %r 不一致" % (sid, name, m_name))
+    if not desc:
+        err("%s: 盖戳清单里的描述为空" % sid)
+    elif m_desc and desc != m_desc:
+        err("%s: 壳描述与 manifest.summary.desc 不一致（题量或说明已变，需重新盖章）：\n"
+            "        期望：%s\n        实际：%s" % (sid, m_desc, desc))
+
+    idx = os.path.join(sdir, "index.html")
+    if not os.path.isfile(idx):
+        return
+    with open(idx, encoding="utf-8") as f:
+        html = f.read()
+    if "大学《》" in html:
+        err("%s: index.html 里出现空壳名「大学《》」" % sid)
+    if name:
+        want_title = "大学《%s》题库刷题 · 复习刷题平台" % name
+        want_h1 = "大学《%s》题库刷题" % name
+        mt = subject_shell.TITLE_RE.search(html)
+        mh = subject_shell.H1_RE.search(html)
+        if not mt or mt.group(1) != want_title:
+            err("%s: index.html 的 <title> 不是 %r（实际 %r）"
+                % (sid, want_title, mt.group(1) if mt else None))
+        if not mh or mh.group(1) != want_h1:
+            err("%s: index.html 的 <h1> 不是 %r（页面上看到的那颗大标题就是它，实际 %r）"
+                % (sid, want_h1, mh.group(1) if mh else None))
+    mm = subject_shell.META_RE.search(html)
+    if m_desc and (not mm or mm.group(2) != m_desc):
+        err("%s: index.html 的 meta description 与 manifest.summary.desc 不一致（实际 %r）"
+            % (sid, mm.group(2) if mm else None))
+
+    spec = subject_shell.offline_spec(sid)
+    want_line = subject_shell.offline_line(spec)
+    mf = subject_shell.FOOT_RE.search(html)
+    got_line = mf.group(2) if mf else None
+    if got_line != want_line:
+        err("%s: 页脚离线链接与 offline_links.json 不一致（应为 %r，实际 %r）"
+            % (sid, want_line, got_line))
 
 
 def check_pwa(platform):
@@ -362,8 +432,9 @@ def main():
 
     for sid in sorted(listed):
         print("  [check] 学科 %s" % sid)
-        check_subject(subjects_dir, sid)
+        meta = check_subject(subjects_dir, sid)
         check_subject_shell(sid, os.path.join(subjects_dir, sid))
+        check_subject_identity(sid, os.path.join(subjects_dir, sid), meta)
 
     check_katex_strict(subjects_dir, listed)
 
