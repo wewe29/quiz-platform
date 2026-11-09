@@ -214,7 +214,8 @@ def main():
         },
         "summary": {
             "sub": summary["SUMMARY_SUB"],
-            "desc": summary["SUMMARY_DESC"],
+            # 平台子站用子站措辞（不是「单文件刷题网页」——那是单文件版的说法）
+            "desc": summary["SUMMARY_DESC_SUBJECT"],
             "aboutHtml": compose_about_html(questions, summary),
             "footerHtml": compose_footer_html(summary),
             "realExamTagged": tagged,

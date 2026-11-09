@@ -1,7 +1,7 @@
 {
  "templateVersion": "3",
  "name": "线性代数",
- "desc": "大学线性代数 528 题单文件刷题网页：六题型、三难度、逐题解析与考点出处，零外部依赖。",
+ "desc": "大学线性代数 528 题刷题子站：六题型、三难度、逐题解析与考点出处，零外部依赖。",
  "offline": {
   "url": "https://wewe29.github.io/linear-algebra-quiz/",
   "label": "linear-algebra-quiz"

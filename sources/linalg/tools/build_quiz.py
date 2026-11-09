@@ -67,8 +67,14 @@ def build_summary(questions):
     type_part = " · ".join("%s %d" % (T.TYPE_LABEL[t], c_type.get(t, 0)) for t in T.TYPE_ORDER)
     diff_part = " · ".join("%s %d" % (T.DIFF_LABEL[d], c_diff.get(d, 0)) for d in T.DIFF_ORDER)
     sub = "同济第六版 %d 章 · %d 题 · 六题型 · 三难度" % (T.CHAPTERS, total)
+    # 两套措辞，各归各的渠道（2026-11-08 立的规矩）：
+    #   SUMMARY_DESC        —— **单文件版**页面的 meta description（它确实是单文件网页）；
+    #   SUMMARY_DESC_SUBJECT —— **平台子站**（多文件 PWA）的 manifest 文案。
+    # 之前两边共用「单文件刷题网页」那一句，于是平台子站也自称单文件网页——对外说的是假话。
     desc = ("大学线性代数 %d 题单文件刷题网页：六题型、三难度、逐题解析与考点出处，"
             "零外部依赖。" % total)
+    desc_subject = ("大学线性代数 %d 题刷题子站：六题型、三难度、逐题解析与考点出处，"
+                    "零外部依赖。" % total)
     footer = "<p>题库共 <b>%d</b> 题：%s；难度 %s。</p>" % (total, type_part, diff_part)
 
     # 只有真题存在「真题改编」题时才写对应段落——没有就别写，免得说假话
@@ -110,6 +116,7 @@ def build_summary(questions):
     return {
         "SUMMARY_SUB": sub,
         "SUMMARY_DESC": desc,
+        "SUMMARY_DESC_SUBJECT": desc_subject,
         "SUMMARY_FOOTER": footer,
         "ABOUT_COUNT": str(total),
         "ABOUT_EXTRA": about_extra,
