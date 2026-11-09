@@ -20,7 +20,39 @@ import os
 import re
 import shutil
 
-KATEX_DIR = r"D:\workspace\5-docs\exam\数据库\node_modules\katex\dist"
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+class KaTeXError(RuntimeError):
+    pass
+
+
+def _find_katex_dir():
+    """KaTeX 发行版目录：env → 平台仓共享 vendor → 学科自带 → 本机 node_modules。
+
+    以前这里是硬编码的本机 node_modules 绝对路径 —— 那意味着**高数 v2 静态站与它的
+    单文件包在 CI 上根本构建不出来**（CI 里既没有 node_modules，也没有这个盘符路径），
+    于是这两个节点只能靠本地每日核验覆盖，CI 核验覆盖不到。
+    平台仓已把共享 vendor 入库（`quiz-platform\\tools\\vendor\\katex\\dist`），
+    实测它与本机 node_modules **逐字节相同**（83 个文件 / 2,966,601 B，逐文件 sha256 一致），
+    所以换源**不改变任何产物的字节**，高数站不需要重发。
+    """
+    candidates = []
+    env = os.environ.get("KATEX_DIR")
+    if env:
+        candidates.append(env)
+    candidates.append(r"D:\workspace\5-docs\quiz-platform\tools\vendor\katex\dist")
+    candidates.append(os.path.join(HERE, "vendor", "katex", "dist"))
+    candidates.append(r"D:\workspace\5-docs\exam\数据库\node_modules\katex\dist")
+    for c in candidates:
+        if c and os.path.isdir(c) and os.path.isfile(os.path.join(c, "katex.min.css")):
+            return c
+    raise KaTeXError(
+        "找不到 KaTeX 发行版。设环境变量 KATEX_DIR 指向一份 katex/dist，"
+        "或把发行版放到 %s" % os.path.join(HERE, "vendor", "katex", "dist"))
+
+
+KATEX_DIR = _find_katex_dir()
 
 KATEX_CSS = os.path.join(KATEX_DIR, "katex.min.css")
 KATEX_JS = os.path.join(KATEX_DIR, "katex.min.js")
@@ -34,10 +66,6 @@ SRC3 = re.compile(
     r'url\(fonts/[A-Za-z0-9_\-]+\.ttf\)\s*format\("truetype"\)')
 # 其它形态的单一引用
 SRC1 = re.compile(r'url\(fonts/([A-Za-z0-9_\-]+\.(?:woff2|woff|ttf))\)')
-
-
-class KaTeXError(RuntimeError):
-    pass
 
 
 def read_text(path):

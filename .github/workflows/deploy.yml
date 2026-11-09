@@ -89,6 +89,10 @@ jobs:
         with:
           python-version: '3.12'
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Install deps
         run: pip install sympy
 
@@ -96,6 +100,20 @@ jobs:
         env:
           PYTHONIOENCODING: utf-8
         run: python tools/platform/build_all.py --dist
+
+      - name: 构建高数 v2 两件产物（高数专站与离线单文件包的核验基准）
+        env:
+          PYTHONIOENCODING: utf-8
+          # 高数正本的 katex_assets.py 原来硬编码本机 node_modules 路径 ⇒ CI 上构建不出来；
+          # 现在按「KATEX_DIR → 平台仓共享 vendor → 学科自带 → 本机 node_modules」找，
+          # 而平台仓这份 vendor 已入库且与本机那份逐字节相同 ⇒ 换源不改产物字节。
+          KATEX_DIR: ${{ github.workspace }}/tools/vendor/katex/dist
+        run: |
+          mkdir -p sources/calculus/ci-build
+          python sources/calculus/tools/build_static.py \
+            --out="$GITHUB_WORKSPACE/sources/calculus/ci-build/site_v2"
+          python sources/calculus/tools/build_single.py \
+            --out="$GITHUB_WORKSPACE/sources/calculus/ci-build/calculus-quiz-offline.html"
 
       - name: Fail on drift (committed subjects/ != regenerated subjects/)
         run: |

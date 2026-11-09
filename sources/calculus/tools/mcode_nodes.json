@@ -12,10 +12,13 @@
     "ci 字段：该项能不能在 CI 里核验（CI 上拿得到基准吗）。",
     "  ci:true  → CI job 会核验它；ci_local 指定 CI 专用的基准路径（缺省用 local）。",
     "  ci:false → **不假装覆盖**，并用 ci_note 写明为什么（由本地核验覆盖）。",
-    "    高数 v2 静态站与它的单文件包，CI 上重建不出来：构建链依赖项目外的 KaTeX 资源",
     "    （tools/katex_assets.py 指向 5-docs\\exam\\数据库\\node_modules\\katex\\dist），",
-    "    那是 5-docs 下唯一的 git 仓之外的外部依赖。⇒ 这两项仍靠本地每日核验覆盖。",
-    "ci_repo：该核验项属于哪个仓的 CI（platform / publish）。"
+    "ci_repo：该核验项属于哪个仓的 CI（platform / publish）。",
+    "  2026-11-07 起高数 v2 静态站与它的单文件包也进 CI：",
+    "    高数正本的 katex_assets.py 原来硬编码本机 node_modules 路径 ⇒ CI 上根本构建不出来；",
+    "    现在按「KATEX_DIR 环境变量 → 平台仓共享 vendor（已入库）→ 学科自带 → 本机 node_modules」找，",
+    "    实测仓内那份与本机那份逐字节相同（83 文件 / 2,966,601 B）⇒ 换源不改变产物字节，高数站不用重发。",
+    "    CI 里把两件产物构建到 sources/calculus/ 下的同名位置 ⇒ 台账的 local 直接可用，不需要 ci_local。"
   ],
   "roots": {
     "calculus": "D:\\workspace\\5-docs\\高等数学复习资料",
@@ -53,10 +56,11 @@
           "type": "tree",
           "local": "calculus:_site_v2",
           "url_prefix": "",
-          "ci": false,
-          "ci_note": "高数 v2 静态站的构建链依赖项目外的 KaTeX 资源，CI 上重建不出来；本地核验覆盖",
+          "ci": true,
+          "ci_note": "基准 = CI 构建的 sources/calculus/ci-build/site_v2（注入 KATEX_DIR=平台仓共享 vendor）",
           "comment": "整棵树逐文件比对（含 12 个分片 + katex 字体 + assets）",
-          "ci_repo": "platform"
+          "ci_repo": "platform",
+          "ci_local": "calculus:ci-build/site_v2"
         }
       ]
     },
@@ -98,9 +102,10 @@
           "type": "file",
           "local": "calculus:01《高等数学》题库刷题网页 v2.html",
           "url_path": "/calculus-quiz-offline.html",
-          "ci": false,
-          "ci_note": "单文件包需要 build_single.py + 项目外 KaTeX 资源，CI 上重建不出来；本地核验覆盖",
-          "ci_repo": "platform"
+          "ci": true,
+          "ci_note": "基准 = CI 构建的 sources/calculus/ci-build/calculus-quiz-offline.html",
+          "ci_repo": "platform",
+          "ci_local": "calculus:ci-build/calculus-quiz-offline.html"
         }
       ]
     },
