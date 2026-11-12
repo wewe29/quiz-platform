@@ -52,6 +52,19 @@ jobs:
           git diff --exit-code -- index.html \
             || (echo "::error::门户 index.html 与按 registry 重新生成的结果不一致：改了学科/题量却没提交重生成后的 index.html" && exit 1)
 
+      - name: 方案文档里的数字必须与真实产物一致（文档这一层此前没有门禁）
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          # 为什么要有这一步（2026-11-13 实测）：
+          #   《应用化实施方案与迭代计划.md》里写着「当前全量：221 文件 / 8.11 MB；
+          #   题量见 registry.json（… 概率统计 100 …）」——那是**扩题之前**的数字，
+          #   而内容门禁只看题库、字节门禁只看「线上 == HEAD」，**文档层没有任何门禁**，
+          #   数字静默腐烂。修法：把文档钉在 registry.json 与真实 dist/ 上。
+          python tools/platform/check_plan_doc.py
+          # 这道门禁自己也得有牙齿：造错必须报错、历史陈述不得误报
+          python tools/platform/test_check_plan_doc.py
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
