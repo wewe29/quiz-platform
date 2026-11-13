@@ -13,6 +13,7 @@ r"""check_public_copy 的反向测试：**造错必须报错**，好的时候不
 """
 import io
 import os
+import re
 import shutil
 import sys
 import tempfile
@@ -72,7 +73,6 @@ def main():
         good_rn = f.read()
 
     # 页面里声明的单文件字节数（当期望值用；产物在不在都不影响这几项测试）
-    import re
     m = re.search(r"· ([\d,]+) 字节", good_dl)
     if not m:
         print("[FAIL] 页面上找不到单文件字节数声明")
