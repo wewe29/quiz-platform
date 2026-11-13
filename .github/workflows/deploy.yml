@@ -65,6 +65,32 @@ jobs:
           # 这道门禁自己也得有牙齿：造错必须报错、历史陈述不得误报
           python tools/platform/test_check_plan_doc.py
 
+      - name: 构建高数单文件包（对外文案页声明的字节数的基准）
+        env:
+          PYTHONIOENCODING: utf-8
+          KATEX_DIR: ${{ github.workspace }}/tools/vendor/katex/dist
+        run: |
+          mkdir -p sources/calculus/ci-build
+          python sources/calculus/tools/build_single.py \
+            --out="$GITHUB_WORKSPACE/sources/calculus/ci-build/calculus-quiz-offline.html"
+
+      - name: 对外文案页里的数字必须与真实产物一致（对外文案这一层此前没有门禁）
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          # 为什么要有这一步（2026-11-14 浏览器实答时实测）：
+          #   离线下载页 https://7qzdvmxrwxnez.space.mcode.cn 上写着
+          #   「主站 · 五学科 2060 题」，真实题量是 **2116**（概率统计 2026-11-03
+          #   从 100 扩到 156，**对外文案没跟着改**，线上错了一个多月）。
+          #   当时全部门禁全绿 —— 内容门禁只看题库、字节门禁只看「线上 == HEAD」，
+          #   **对外文案页根本没人管**。跟文档层是同一条病根：数字写在哪儿，
+          #   哪儿就得有门禁；对外文案更是给用户看的假话。
+          #   修法：把对外文案页钉在 registry.json / 学科构建产物 / 单文件产物上。
+          python tools/platform/check_public_copy.py \
+            --single-file "$GITHUB_WORKSPACE/sources/calculus/ci-build/calculus-quiz-offline.html"
+          # 这道门禁自己也得有牙齿：造错必须报错、**删掉声明也算错**（解析不到 ⇒ 报红）
+          python tools/platform/test_check_public_copy.py
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
