@@ -477,3 +477,61 @@ test('bank 内联模式：setInline 后全程不碰 fetch（单文件包的命�
     global.fetch = realFetch;
   }
 });
+
+/* ---------------- 计时口径 + 错题本计数（2026-11-22） ---------------- */
+
+test('session.tick：关掉页面的那段时间不计入用时', () => {
+  // 2026-11-22 线上实测：会话 2026-11-14 开始、当天就关掉了页面，
+  // 统计面板的「用时」显示 191:43:32 —— 实际只练了几分钟。
+  // 根因：lastTick 存在 localStorage 里，页面一关就是几小时的空档。
+  const QX = H.loadCore();
+  const { session, store, bus, judge } = QX;
+  const GAP = 8 * 24 * 3600 * 1000;      // 页面关了 8 天
+  store.load('test-bank');
+  store.set((s) => {
+    s.sessions['s-gap'] = {
+      id: 's-gap', startedAt: Date.now() - GAP, updatedAt: Date.now(),
+      elapsedMs: 60000, lastTick: Date.now() - GAP, hidden: false,
+      endedAt: null, order: [], cursor: 0, status: 'active', answers: {},
+      filter: { types: [], diffs: [], chapters: [], onlyWrong: false, kw: '' }
+    };
+  });
+  session.init({ store: store, bus: bus, judge: judge });
+  session.setQuestions([H.mkQ()]);
+  session.ensureSession();
+  session.tick();
+  assert.ok(session.elapsed() <= 61000,
+    '关掉页面的 8 天不该计入用时，实际 ' + session.elapsed() + ' ms');
+  assert.ok(session.elapsed() >= 60000, '种子里的 1 分钟不该丢');
+});
+
+test('session.tick：页面切到后台的时间不计入用时', () => {
+  const QX = H.loadCore();
+  const { session, store, bus, judge } = QX;
+  store.load('test-bank');
+  store.set((s) => {
+    s.sessions['s-hide'] = {
+      id: 's-hide', startedAt: Date.now() - 10000, updatedAt: Date.now(),
+      elapsedMs: 0, lastTick: Date.now() - 10000, hidden: true,
+      endedAt: null, order: [], cursor: 0, status: 'active', answers: {},
+      filter: { types: [], diffs: [], chapters: [], onlyWrong: false, kw: '' }
+    };
+  });
+  session.init({ store: store, bus: bus, judge: judge });
+  session.setQuestions([H.mkQ()]);
+  session.ensureSession();
+  session.tick();
+  assert.strictEqual(session.elapsed(), 0, '标签在后台时不该累计用时');
+});
+
+test('session.wrongBookIds：题库里不存在的题号不计入任何计数', () => {
+  // 2026-11-22 实测：错题本显示「共 2 题」而列表只有 1 题 —— badge 说谎。
+  const QX = H.loadCore();
+  const { session } = QX;
+  session.setQuestions([H.mkQ({ id: 't-001' })]);
+  const ids = session.wrongBookIds({
+    't-001': { resolved: false, wrongCount: 1 },
+    'q-ghost-001': { resolved: false, wrongCount: 1 }
+  });
+  assert.deepStrictEqual(ids, ['t-001'], '失效题号必须被滤掉');
+});

@@ -321,10 +321,20 @@
 
   /* ---------- 计时 ---------- */
   var timerHandle = null;
+  /** 两次 tick 的正常间隔就是 1 秒（计时器间隔）。间隔大到超过这个量级，
+   *  只有一种解释：**页面被关掉了**（或者机器睡了/关了）——那段时间用户
+   *  根本没在练，把它算进「用时」就是假的。
+   *  2026-11-22 线上实测：会话 2026-11-14 开始、当天就关掉了页面，
+   *  统计面板的「用时」显示 **191:43:32**，而实际只练了几分钟。
+   *  （页面切到后台由 hidden 标记单独处理，见 visibilitychange。） */
+  var MAX_TICK_GAP = 60000;   // ms：超过这个间隔就不计入用时
   function tick() {
     if (!session || session.status !== 'active') return;
     var t = now();
-    if (session.lastTick && !session.hidden) session.elapsedMs += (t - session.lastTick);
+    if (session.lastTick && !session.hidden) {
+      var gap = t - session.lastTick;
+      if (gap >= 0 && gap <= MAX_TICK_GAP) session.elapsedMs += gap;
+    }
     session.lastTick = t;
     updateHudTime();
   }
@@ -1023,8 +1033,17 @@
   }
 
   /* ---------- 错题本 ---------- */
+  /** 错题本里「当前题库仍然存在」的题号。
+   *
+   *  失效题号（题库换版删题、旧版进度迁移遗留）不该出现在任何计数里——
+   *  否则页面显示「共 2 题」而列表只有 1 题（2026-11-22 浏览器实答实测）。
+   *  badge 说谎比不显示更糟：用户会以为还有一道错题没订正。 */
+  function wrongBookIds() {
+    return Object.keys(state.wrongBook).filter(function (id) { return !!qById[id]; });
+  }
+
   function renderWrong() {
-    var ids = Object.keys(state.wrongBook);
+    var ids = wrongBookIds();
     $('#wrong-count').textContent = ids.length ? '共 ' + ids.length + ' 题' : '';
     if (!ids.length) {
       $('#wrong-list').innerHTML = '<div class="empty">错题本为空。得分率低于 100% 的题会自动收入此处。</div>';
@@ -1099,7 +1118,7 @@
       answered++; earned += a.earned; full += a.full;
       if (!a.selfGraded) { objA++; if (a.correct === true) objC++; }
     });
-    var wrongIds = Object.keys(state.wrongBook);
+    var wrongIds = wrongBookIds();
     var h = '';
     h += '<div class="stat-grid">';
     h += '<div class="stat-box"><h4>本次结算</h4>' +
@@ -1182,6 +1201,9 @@
   function init() {
     load();
     ensureSession();
+    // 上次关闭页面时标签在后台（hidden=true）会被持久化下来；重新打开时
+    // 必须按**当前**可见性重置，否则计时器一直不累计（用时永远停在 0）。
+    session.hidden = !!document.hidden;
     if (!session.order.length || orderIsStale()) refreshOrder();
     renderFilters();
     render();

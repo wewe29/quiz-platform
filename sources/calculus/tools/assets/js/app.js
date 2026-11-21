@@ -126,6 +126,9 @@
       }
       session.setQuestions(questions);
       var s = session.ensureSession();
+      // 上次关闭页面时标签在后台（hidden=true）会被持久化下来；重新打开时
+      // 必须按**当前**可见性重置，否则计时器一直不累计（用时永远停在 0）。
+      session.setHidden(!!document.hidden);
       if (session.orderIsStale() || !s.order.length) session.refreshOrder();
       filters.tally(questions);
       filters.build();

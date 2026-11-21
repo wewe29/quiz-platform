@@ -323,10 +323,20 @@
 
   /* ---------- 计时 ---------- */
   var timerHandle = null;
+  /** 两次 tick 的正常间隔就是 1 秒（计时器间隔）。间隔大到超过这个量级，
+   *  只有一种解释：**页面被关掉了**（或者机器睡了/关了）——那段时间用户
+   *  根本没在练，把它算进「用时」就是假的。
+   *  2026-11-22 线上实测：会话 2026-11-14 开始、当天就关掉了页面，
+   *  统计面板的「用时」显示 **191:43:32**，而实际只练了几分钟。
+   *  （页面切到后台由 hidden 标记单独处理，见 visibilitychange。） */
+  var MAX_TICK_GAP = 60000;   // ms：超过这个间隔就不计入用时
   function tick() {
     if (!session || session.status !== 'active') return;
     var t = now();
-    if (session.lastTick && !session.hidden) session.elapsedMs += (t - session.lastTick);
+    if (session.lastTick && !session.hidden) {
+      var gap = t - session.lastTick;
+      if (gap >= 0 && gap <= MAX_TICK_GAP) session.elapsedMs += gap;
+    }
     session.lastTick = t;
     updateHudTime();
   }
@@ -1555,6 +1565,9 @@
   function init() {
     load();
     ensureSession();
+    // 上次关闭页面时标签在后台（hidden=true）会被持久化下来；重新打开时
+    // 必须按**当前**可见性重置，否则计时器一直不累计（用时永远停在 0）。
+    session.hidden = !!document.hidden;
     // URL hash 携带的筛选状态（分享链接/刷新还原）优先于本地会话的旧筛选
     if (applyHashToFilter()) refreshOrder();
     if (!session.order.length || orderIsStale()) refreshOrder();

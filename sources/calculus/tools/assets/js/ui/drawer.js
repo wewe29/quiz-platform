@@ -103,7 +103,7 @@
     grid.appendChild(tile('总得分', st.totalEarned || 0, '/ ' + (st.totalFull || 0)));
     grid.appendChild(tile('本次作答', m.answered, '/ ' + m.total));
     grid.appendChild(tile('本次得分率', m.rate === null ? '—' : m.rate, m.rate === null ? '' : '%'));
-    grid.appendChild(tile('错题本', Object.keys(store.get().wrongBook || {}).filter(function (k) {
+    grid.appendChild(tile('错题本', session.wrongBookIds(store.get().wrongBook).filter(function (k) {
       return !(store.get().wrongBook[k] || {}).resolved;
     }).length, '题'));
     body.appendChild(grid);
@@ -149,7 +149,10 @@
   function renderWrong() {
     titleEl.textContent = '错题本';
     var wb = store.get().wrongBook || {};
-    var allIds = Object.keys(wb);
+    // 只统计题库里真实存在的题号：失效题号（换版删题、旧版进度迁移遗留）
+    // 不该出现在任何计数里——否则「累计记录 N 道」而列表只有 M 条
+    // （2026-11-22 浏览器实答实测：badge 说谎）。
+    var allIds = session.wrongBookIds(wb);
     // 未订正的排前面；**已订正的也保留在列表里**并标注「已订正」——
     // 订正过的题要看得见，才知道哪些已经补上、哪些还没补。
     allIds.sort(function (a, b) {

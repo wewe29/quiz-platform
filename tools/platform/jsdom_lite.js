@@ -157,10 +157,13 @@ function makeDocument() {
 /* ---------- 沙箱 ---------- */
 /**
  * 建一个能跑 app.js 的全局环境。
- * @param {object} opts.subject  window.SUBJECT（学科配置）
+ * @param {object} opts.subject  window.SUBJECT（学科配置；平台版需要）
  * @param {object} opts.meta     manifest 内容
  * @param {Array}  opts.questions 题库
  * @param {object} opts.initialState 预置到 localStorage 的旧进度（用于模拟历史遗留）
+ * @param {string} opts.storageKey 预置进度用的存储键（单文件版用自己的 KEY）
+ * @param {boolean} opts.selfContained true = 单文件版变体（自带题库逻辑，
+ *        不需要 SUBJECT/LABank/LAStore，题库走 window.__BANK__）
  */
 function createSandbox(opts) {
   const doc = makeDocument();
@@ -193,8 +196,9 @@ function createSandbox(opts) {
   sandbox.window = sandbox;
   sandbox.self = sandbox;
 
-  if (opts.initialState) {
-    store.setItem(opts.subject.storageKey, JSON.stringify(opts.initialState));
+  const key = opts.storageKey || (opts.subject && opts.subject.storageKey);
+  if (opts.initialState && key) {
+    store.setItem(key, JSON.stringify(opts.initialState));
   }
 
   // 弹窗里的四个 [data-role] 按钮（app.js 用 $$('[data-role]', $('#data-modal')) 接线）
@@ -212,16 +216,20 @@ function createSandbox(opts) {
     vm.runInContext(code, ctx, { filename: file });
   };
 
-  // 学科配置（真实页面由 subject.js 提供；这里直接给等价物）
-  sandbox.SUBJECT = opts.subject;
-  // 题库装载（真实页面由 core/bank.js 走 fetch；这里给同形状的内存实现）
-  sandbox.LABank = {
-    load: function () {
-      return Promise.resolve({ meta: opts.meta, questions: opts.questions });
-    }
-  };
-  const storeFile = opts.storeFile;
-  if (storeFile && fs.existsSync(storeFile)) load(storeFile);
+  if (opts.selfContained) {
+    // 单文件版变体（高数专站 / 线代单文件站）：题库由 window.__BANK__ 注入
+    sandbox.__BANK__ = opts.bank || { questions: [] };
+  } else {
+    // 平台子站变体：学科配置 + 题库装载（真实页面由 subject.js / core/bank.js 提供）
+    sandbox.SUBJECT = opts.subject;
+    sandbox.LABank = {
+      load: function () {
+        return Promise.resolve({ meta: opts.meta, questions: opts.questions });
+      }
+    };
+    const storeFile = opts.storeFile;
+    if (storeFile && fs.existsSync(storeFile)) load(storeFile);
+  }
   load(opts.appFile);
 
   return { sandbox: sandbox, doc: doc, store: store, modal: modal };

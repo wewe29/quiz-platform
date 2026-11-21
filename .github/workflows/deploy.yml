@@ -42,7 +42,15 @@ jobs:
           python tools/platform/test_platform_gates.py
           python tools/platform/test_sync_mirror.py
           # 这道门禁自己也得有牙齿：撤掉修复必须报错（否则它不是门禁而是摆设）
-          python tools/platform/test_check_import_guard.py
+          python tools/platform/test_check_app_behavior.py
+
+      - name: 高数模块化代码的单测（node --test）
+        run: |
+          # 高数正本自带 tools/tests/（node --test：core/ui 两层），
+          # 但**此前从来没进过 CI** —— 2026-11-22 修「用时」与「错题本计数」
+          # 两处缺陷时，断言只在本地跑过，流水线管不到 ⇒ 这里接进去。
+          node --test sources/calculus/tools/tests/core.test.js
+          node --test sources/calculus/tools/tests/ui.test.js
 
       - name: Build all subjects (content gates + export + validate)
         env:
@@ -54,20 +62,25 @@ jobs:
           git diff --exit-code -- index.html \
             || (echo "::error::门户 index.html 与按 registry 重新生成的结果不一致：改了学科/题量却没提交重生成后的 index.html" && exit 1)
 
-      - name: 导入守卫与错题本计数的行为门禁（真实 app.js）
+      - name: 子站运行期行为门禁（真实 app.js）
         env:
           PYTHONIOENCODING: utf-8
         run: |
           # 为什么要有这一步（2026-11-22 浏览器实答时实测）：
-          #   平台子站的「导入进度」只校验 kind/version/state.v/checksum，
-          #   **从不校验文件里明写着的 subject/bankId** ⇒ 跨学科的进度文件被
-          #   静默合并，页面只提示「导入完成」；而错题本的计数用了未过滤的
-          #   Object.keys(state.wrongBook).length，题库里不存在的题号也计数，
-          #   页面显示「共 2 题」而列表只有 1 题。
+          #   前六轮实答验的都是内容与渲染，**交互功能一次都没被点过** ——
+          #   导出/导入进度、错题本、答题卡、统计面板、主题切换、组卷练习、
+          #   分享，在门禁眼里根本不存在。于是抓到三个真缺陷：
+          #   ① 平台子站的「导入进度」只校验 kind/version/state.v/checksum，
+          #      **从不校验文件里明写着的 subject/bankId** ⇒ 跨学科的进度文件被
+          #      静默合并，页面只提示「导入完成」；
+          #   ② 错题本的计数用了未过滤的 Object.keys(state.wrongBook).length，
+          #      题库里不存在的题号也计数 ⇒ 页面显示「共 2 题」而列表只有 1 题；
+          #   ③ 「用时」把关页面的时间也算进去 ⇒ 实际练了 5 分钟，线上显示
+          #      191:43:32。
           #   当时全部门禁全绿 —— 内容门禁只看题库、字节门禁只看「线上 == HEAD」，
-          #   **交互行为根本没人管**。这次改成在 Node 里装载真实的 app.js、
+          #   **运行期行为根本没人管**。这次改成在 Node 里装载真实的 app.js、
           #   点真的按钮、断言真的状态（grep 源码＝拿参数重放自己，没有牙齿）。
-          python tools/platform/check_import_guard.py
+          python tools/platform/check_app_behavior.py
 
       - name: 方案文档里的数字必须与真实产物一致（文档这一层此前没有门禁）
         env:

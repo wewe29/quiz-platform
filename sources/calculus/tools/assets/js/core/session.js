@@ -40,6 +40,15 @@
   function allQuestions() { return questions; }
   function questionById(id) { return qById[id] || null; }
 
+  /** 错题本里「当前题库仍然存在」的题号。
+   *
+   *  失效题号（题库换版删题、旧版进度迁移遗留）不该出现在任何计数里——
+   *  否则页面显示「累计记录 2 道」而列表只有 1 条（2026-11-22 浏览器实答实测：
+   *  badge 说谎比不显示更糟，用户会以为还有一道错题没订正）。 */
+  function wrongBookIds(wb) {
+    return Object.keys(wb || {}).filter(function (id) { return !!qById[id]; });
+  }
+
   /* ---------------- 会话生命周期 ---------------- */
 
   function ensureSession() {
@@ -347,10 +356,21 @@
 
   /* ---------------- 计时 ---------------- */
 
+  /** 两次 tick 的正常间隔就是 1 秒（计时器间隔）。间隔大到超过这个量级，
+   *  只有一种解释：**页面被关掉了**（或者机器睡了/关了）——那段时间用户
+   *  根本没在练，把它算进「用时」就是假的。
+   *  2026-11-22 线上实测：会话 2026-11-14 开始、当天就关掉了页面，
+   *  统计面板的「用时」显示 **191:43:32**，而实际只练了几分钟。
+   *  （页面切到后台由 hidden 标记单独处理，见 setHidden。） */
+  var MAX_TICK_GAP = 60000;   // ms：超过这个间隔就不计入用时
+
   function tick() {
     if (!session || session.status !== 'active') return;
     var t = now();
-    if (session.lastTick && !session.hidden) session.elapsedMs += (t - session.lastTick);
+    if (session.lastTick && !session.hidden) {
+      var gap = t - session.lastTick;
+      if (gap >= 0 && gap <= MAX_TICK_GAP) session.elapsedMs += gap;
+    }
     session.lastTick = t;
     bus.emit('time:tick', session.elapsedMs);
   }
@@ -378,6 +398,7 @@
     setQuestions: setQuestions,
     allQuestions: allQuestions,
     questionById: questionById,
+    wrongBookIds: wrongBookIds,
     ensureSession: ensureSession,
     resetSession: resetSession,
     endSession: endSession,

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-r"""反向测试：check_import_guard 这道门禁自己有没有牙齿（2026-11-22）。
+r"""反向测试：check_app_behavior 这道门禁自己有没有牙齿（2026-11-22）。
 
 规则（项目纪律）：**每加一道门禁必须配反向测试——造错必须报错**。
 这道门禁特别需要自证：它跑的是真实 app.js，万一它「怎么都过」，
@@ -21,7 +21,8 @@ import sys
 import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-GATE = os.path.join(HERE, "check_import_guard.py")
+PLATFORM = os.path.abspath(os.path.join(HERE, "..", ".."))
+GATE = os.path.join(HERE, "check_app_behavior.py")
 TPL_JS = os.path.join(HERE, "template_subject", "assets", "js")
 TPL_APP = os.path.join(TPL_JS, "app.js")
 TPL_STORE = os.path.join(TPL_JS, "core", "store.js")
@@ -37,6 +38,11 @@ MUTATIONS = [
      "    var ids = Object.keys(state.wrongBook);\n", "badge"),
     ("导入时不再忽略失效题号（外来题号又进错题本）",
      "      if (!qById[qid]) { skipped++; return; }\n", "", "题库里没有的题号"),
+    ("撤掉计时上限（关页面的时间又被算进用时）",
+     "      if (gap >= 0 && gap <= MAX_TICK_GAP) session.elapsedMs += gap;\n",
+     "      session.elapsedMs += gap;\n", "用时"),
+    ("去掉 hidden 重置（重新打开页面后计时不恢复）",
+     "    session.hidden = !!document.hidden;\n", "", "计时要恢复"),
 ]
 
 failures = []
@@ -69,6 +75,35 @@ def run_gate(app_path):
     return p.returncode, p.stdout.decode("utf-8", "replace")
 
 
+def run_calculus_tests_with_defect(root):
+    """把高数模块化路径拷到临时目录，撤掉计时上限，跑它自己的单测。
+
+    高数走的是**另一套架构**（多文件 core/ + ui/，自带 tools/tests/ 的
+    node --test 套件），所以它的断言不归 check_app_behavior 管，而是归
+    这套自带单测管 —— 但「自带单测」也得有牙齿，所以这里也做一次反向注入。
+    """
+    node = shutil.which("node") or shutil.which("node.exe")
+    if not node:
+        return 0, "找不到 node（反向测试无法执行 ⇒ 判失败）"
+    src_root = os.path.join(PLATFORM, "sources", "calculus", "tools")
+    if not os.path.isdir(os.path.join(src_root, "tests")):
+        return 0, "高数镜像里没有 tools/tests（反向测试无法执行 ⇒ 判失败）"
+    dst_root = os.path.join(root, "calculus", "tools")
+    for rel in ("assets/js", "tests"):
+        shutil.copytree(os.path.join(src_root, rel), os.path.join(dst_root, rel))
+    sess = os.path.join(dst_root, "assets", "js", "core", "session.js")
+    b = open(sess, "rb").read()
+    needle = b"      if (gap >= 0 && gap <= MAX_TICK_GAP) session.elapsedMs += gap;\n"
+    if b.count(needle) != 1:
+        return 0, "高数 session.js 的计时锚点命中 %d 次（应为 1）" % b.count(needle)
+    b = b.replace(needle, b"      session.elapsedMs += gap;\n", 1)
+    with open(sess, "wb") as f:
+        f.write(b)
+    p = subprocess.run([node, "--test", os.path.join(dst_root, "tests", "core.test.js")],
+                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    return p.returncode, p.stdout.decode("utf-8", "replace")
+
+
 def main():
     if not os.path.isfile(TPL_APP):
         print("[FAIL] 模板 app.js 不存在：%s" % TPL_APP)
@@ -76,13 +111,14 @@ def main():
     with open(TPL_APP, encoding="utf-8") as f:
         original = f.read()
 
-    root = tempfile.mkdtemp(prefix="import-guard-", dir=os.environ.get("QUIZ_TMPDIR") or None)
+    root = tempfile.mkdtemp(prefix="app-behavior-", dir=os.environ.get("QUIZ_TMPDIR") or None)
     try:
         # 0) 正样本：未改动的模板必须通过（门禁不能见谁报谁）
         print("· 未改动的模板应当通过")
         app = stage(root, "clean", original)
         rc, out = run_gate(app)
-        check("未改动的 app.js 通过门禁（门禁不误报）", rc == 0, out.strip().splitlines()[-1] if out.strip() else "")
+        check("未改动的 app.js 通过门禁（门禁不误报）", rc == 0,
+              out.strip().splitlines()[-1] if out.strip() else "")
 
         # 1) 反向样本：逐个撤掉修复，门禁必须报错
         for i, (name, needle, repl, keyword) in enumerate(MUTATIONS):
@@ -115,6 +151,13 @@ def main():
         print("· 被测文件不存在时必须报错")
         rc, out = run_gate(os.path.join(root, "nonexistent", "assets", "js", "app.js"))
         check("门禁对缺失文件报错", rc != 0)
+
+        # 4) 反向样本：高数**模块化**路径 —— 它有自己的单测（tools/tests/），
+        #    撤掉计时上限后，它自己的单测必须报错（否则那处修复没有牙齿）
+        print("· 高数模块化路径：撤掉计时上限后它自己的单测必须报错")
+        rc, out = run_calculus_tests_with_defect(root)
+        check("高数模块化路径的单测对注入的缺陷报错", rc != 0,
+              "单测居然通过了：%s" % out.strip().splitlines()[-1] if out.strip() else "")
     finally:
         shutil.rmtree(root, ignore_errors=True)
 
