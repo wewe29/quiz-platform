@@ -1089,8 +1089,19 @@
   }
 
   /* ---------- 错题本 ---------- */
+  /** 错题本里「当前题库仍然存在」的题号。
+   *
+   *  失效题号（题库换版删题、旧版进度迁移遗留、别的学科的文件被合并进来）
+   *  都不该出现在任何计数里——store.js 的注释早就写着「错题本里失效的题号
+   *  在渲染时自动跳过」，但**计数**没有跟着过滤，于是页面出现
+   *  「共 2 题」而列表只有 1 题（2026-11-22 浏览器实答实测）。
+   *  badge 说谎比不显示更糟：用户会以为还有一道错题没订正。 */
+  function wrongBookIds() {
+    return Object.keys(state.wrongBook).filter(function (id) { return !!qById[id]; });
+  }
+
   function renderWrong() {
-    var ids = Object.keys(state.wrongBook);
+    var ids = wrongBookIds();
     $('#wrong-count').textContent = ids.length ? '共 ' + ids.length + ' 题' : '';
     if (!ids.length) {
       $('#wrong-list').innerHTML = '<div class="empty">错题本为空。得分率低于 100% 的题会自动收入此处。</div>';
@@ -1188,7 +1199,7 @@
       answered++; earned += a.earned; full += a.full;
       if (!a.selfGraded) { objA++; if (a.correct === true) objC++; }
     });
-    var wrongIds = Object.keys(state.wrongBook);
+    var wrongIds = wrongBookIds();
     var h = '';
     h += '<div class="stat-grid">';
     h += '<div class="stat-box"><h4>本次结算</h4>' +
@@ -1285,10 +1296,30 @@
       subject: SUBJECT.id,
       bankId: BANK_ID,
       exportedAt: new Date().toISOString(),
-      stats: { answered: Object.keys(session ? session.answers : {}).length, wrongBook: Object.keys(state.wrongBook).length },
+      stats: { answered: Object.keys(session ? session.answers : {}).length, wrongBook: wrongBookIds().length },
       checksum: djb2(stateJson),
       state: JSON.parse(stateJson)
     };
+  }
+
+  /** 导入来源校验：只接受「本学科 + 本题库版本」的进度文件。
+   *
+   *  2026-11-22 浏览器实答实测：原来只校验 kind/version/state.v/checksum，
+   *  **跨学科的进度文件被静默合并**——把别的学科的会话与错题题号原样并进来，
+   *  页面上看不出任何异常（只提示「导入完成」），错题本计数还被撑大。
+   *  校验必须在**任何写操作之前**做完，否则拒绝时已经污染了一半状态。 */
+  function assertImportMatchesBank(payload) {
+    if (!payload.subject || !payload.bankId) {
+      throw new Error('进度文件里没有学科标识（subject/bankId），无法确认来源，已拒绝导入');
+    }
+    if (payload.subject !== SUBJECT.id) {
+      throw new Error('这是「' + payload.subject + '」学科的进度文件，当前是「' + SUBJECT.id +
+        '」——跨学科进度不能合并，已拒绝导入');
+    }
+    if (payload.bankId !== BANK_ID) {
+      throw new Error('进度文件对应的是另一个题库版本（bankId ' + payload.bankId +
+        ' ≠ ' + BANK_ID + '），已拒绝导入');
+    }
   }
 
   /** 导入合并：会话按 id 取较新者；错题本按键合并（错次取大、订正状态取或）；
@@ -1297,6 +1328,7 @@
     if (!payload || payload.kind !== EXPORT_KIND || payload.version !== EXPORT_VERSION) {
       throw new Error('不是本平台的进度文件（kind/version 不符）');
     }
+    assertImportMatchesBank(payload);
     if (!payload.state || payload.state.v !== 1) throw new Error('进度状态结构不符');
     var body = JSON.stringify({ v: payload.state.v, sessions: payload.state.sessions, wrongBook: payload.state.wrongBook });
     if (payload.checksum && djb2(body) !== payload.checksum) throw new Error('校验和不符，文件可能已损坏');
@@ -1307,7 +1339,10 @@
       if (!local) { state.sessions[sid] = incoming; added++; }
       else if ((incoming.updatedAt || 0) > (local.updatedAt || 0)) state.sessions[sid] = incoming;
     });
+    var skipped = 0;
     Object.keys(payload.state.wrongBook || {}).forEach(function (qid) {
+      // 当前题库里没有的题号（换版删题/旧版遗留）不进错题本：留着只会让计数说谎
+      if (!qById[qid]) { skipped++; return; }
       var o = payload.state.wrongBook[qid], m = state.wrongBook[qid];
       if (!m) { state.wrongBook[qid] = o; return; }
       m.wrongCount = Math.max(m.wrongCount || 0, o.wrongCount || 0);
@@ -1316,7 +1351,7 @@
       if (!m.firstWrongAt) m.firstWrongAt = o.firstWrongAt;
     });
     saveMerged();
-    return { sessionsAdded: added };
+    return { sessionsAdded: added, wrongSkipped: skipped };
   }
 
   function showToast(msg, cls) {
@@ -1336,7 +1371,7 @@
     $('#data-modal-title').textContent = mode === 'import' ? '导入进度（粘贴 JSON）' : '导出进度';
     if (mode === 'import') {
       text.value = '';
-      hint.textContent = '粘贴此前导出的进度 JSON 后点「从文本导入」。合并规则：会话与错题本双向保留，设置以本机为准。';
+      hint.textContent = '粘贴此前导出的进度 JSON 后点「从文本导入」。只接受本学科本题库版本的进度文件（跨学科会报错拒绝）；合并规则：会话与错题本双向保留，设置以本机为准。';
     } else {
       text.value = JSON.stringify(buildExportPayload(), null, 1);
       hint.textContent = '复制整段 JSON 带走（或点「下载 .json」）；换设备时在目标子站点「导入进度」粘贴。';
@@ -1371,7 +1406,8 @@
       var r = applyImportPayload(payload);
       $('#data-modal').hidden = true;
       refreshOrder(); renderFilters(); render();
-      showToast('导入完成：并入 ' + r.sessionsAdded + ' 个新会话（含错题本合并）', 'ok');
+      showToast('导入完成：并入 ' + r.sessionsAdded + ' 个新会话（含错题本合并）' +
+        (r.wrongSkipped ? '，忽略 ' + r.wrongSkipped + ' 条本学科没有的题号' : ''), 'ok');
     } catch (e) {
       showToast('导入失败：' + (e && e.message || e), 'bad');
     }

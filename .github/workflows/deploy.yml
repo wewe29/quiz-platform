@@ -41,6 +41,8 @@ jobs:
         run: |
           python tools/platform/test_platform_gates.py
           python tools/platform/test_sync_mirror.py
+          # 这道门禁自己也得有牙齿：撤掉修复必须报错（否则它不是门禁而是摆设）
+          python tools/platform/test_check_import_guard.py
 
       - name: Build all subjects (content gates + export + validate)
         env:
@@ -51,6 +53,21 @@ jobs:
         run: |
           git diff --exit-code -- index.html \
             || (echo "::error::门户 index.html 与按 registry 重新生成的结果不一致：改了学科/题量却没提交重生成后的 index.html" && exit 1)
+
+      - name: 导入守卫与错题本计数的行为门禁（真实 app.js）
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          # 为什么要有这一步（2026-11-22 浏览器实答时实测）：
+          #   平台子站的「导入进度」只校验 kind/version/state.v/checksum，
+          #   **从不校验文件里明写着的 subject/bankId** ⇒ 跨学科的进度文件被
+          #   静默合并，页面只提示「导入完成」；而错题本的计数用了未过滤的
+          #   Object.keys(state.wrongBook).length，题库里不存在的题号也计数，
+          #   页面显示「共 2 题」而列表只有 1 题。
+          #   当时全部门禁全绿 —— 内容门禁只看题库、字节门禁只看「线上 == HEAD」，
+          #   **交互行为根本没人管**。这次改成在 Node 里装载真实的 app.js、
+          #   点真的按钮、断言真的状态（grep 源码＝拿参数重放自己，没有牙齿）。
+          python tools/platform/check_import_guard.py
 
       - name: 方案文档里的数字必须与真实产物一致（文档这一层此前没有门禁）
         env:

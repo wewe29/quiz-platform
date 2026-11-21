@@ -201,6 +201,10 @@ def main():
 
     print("=" * 60)
     run([sys.executable, os.path.join(HERE, "validate_platform.py")], cwd=HERE, label="平台校验")
+    # 行为门禁：导入守卫 + 错题本计数（2026-11-22）。
+    # 放在构建链里 ⇒ 这道门禁对「CI 就是部署者」同样生效：谁把 app.js 改坏了，
+    # 门禁当场报红，坏产物出不了 dist/。
+    run([sys.executable, os.path.join(HERE, "check_import_guard.py")], cwd=HERE, label="导入守卫行为门禁")
 
     if args.dist:
         dist = os.path.join(PLATFORM, "dist")
