@@ -491,7 +491,8 @@ test('session.tick：关掉页面的那段时间不计入用时', () => {
   store.set((s) => {
     s.sessions['s-gap'] = {
       id: 's-gap', startedAt: Date.now() - GAP, updatedAt: Date.now(),
-      elapsedMs: 60000, lastTick: Date.now() - GAP, hidden: false,
+      // elapsedV=2 = 新口径会话（这里测的是「间隔封顶」，不是「旧会话归零」）
+      elapsedMs: 60000, elapsedV: 2, lastTick: Date.now() - GAP, hidden: false,
       endedAt: null, order: [], cursor: 0, status: 'active', answers: {},
       filter: { types: [], diffs: [], chapters: [], onlyWrong: false, kw: '' }
     };
@@ -512,7 +513,7 @@ test('session.tick：页面切到后台的时间不计入用时', () => {
   store.set((s) => {
     s.sessions['s-hide'] = {
       id: 's-hide', startedAt: Date.now() - 10000, updatedAt: Date.now(),
-      elapsedMs: 0, lastTick: Date.now() - 10000, hidden: true,
+      elapsedMs: 0, elapsedV: 2, lastTick: Date.now() - 10000, hidden: true,
       endedAt: null, order: [], cursor: 0, status: 'active', answers: {},
       filter: { types: [], diffs: [], chapters: [], onlyWrong: false, kw: '' }
     };
@@ -522,6 +523,29 @@ test('session.tick：页面切到后台的时间不计入用时', () => {
   session.ensureSession();
   session.tick();
   assert.strictEqual(session.elapsed(), 0, '标签在后台时不该累计用时');
+});
+
+test('session.ensureSession：旧会话里被污染的用时必须归零', () => {
+  // 2026-11-22 实测：统计面板显示「用时 191:43:32」，实际只练了几分钟。
+  // 修了「间隔封顶」只是止血 —— 旧代码已经膨胀的 elapsedMs 还躺在存储里，
+  // 用户今天打开看到的仍是假话 ⇒ 没有口径版本标记的旧会话，用时一律归零。
+  const QX = H.loadCore();
+  const { session, store, bus, judge } = QX;
+  const LEGACY = 191 * 3600 * 1000 + 43 * 60 * 1000 + 32 * 1000;   // 191:43:32
+  store.load('test-bank');
+  store.set((s) => {
+    s.sessions['s-legacy'] = {
+      id: 's-legacy', startedAt: Date.now() - LEGACY, updatedAt: Date.now(),
+      elapsedMs: LEGACY, lastTick: Date.now() - 1000, hidden: false,   // 没有 elapsedV = 旧口径
+      endedAt: null, order: [], cursor: 0, status: 'active', answers: {},
+      filter: { types: [], diffs: [], chapters: [], onlyWrong: false, kw: '' }
+    };
+  });
+  session.init({ store: store, bus: bus, judge: judge });
+  session.setQuestions([H.mkQ()]);
+  session.ensureSession();
+  assert.ok(session.elapsed() < 60000,
+    '旧会话被污染的用时必须归零，实际 ' + session.elapsed() + ' ms');
 });
 
 test('session.wrongBookIds：题库里不存在的题号不计入任何计数', () => {

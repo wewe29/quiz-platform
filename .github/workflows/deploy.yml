@@ -82,6 +82,23 @@ jobs:
           #   点真的按钮、断言真的状态（grep 源码＝拿参数重放自己，没有牙齿）。
           python tools/platform/check_app_behavior.py
 
+      - name: 门禁清单对账（CI 与本地构建链必须跑同一套门禁）
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          # 为什么要有这一步（2026-11-22 实测）：
+          #   本地 `build_all.py --dist` 全绿，CI 却红了 —— 红的不是代码，
+          #   是「离线下载页对外声明的单文件字节数已经过期」。
+          #   根因不是漏改一个数字，而是**检查集合两边不一样**：
+          #   CI 跑 10 道，本地构建链只跑 1 道，对外文案门禁本地根本没跑
+          #   ⇒「本地全绿」是假信号，本地永远发现不了对外文案的数字腐烂。
+          #   修法：门禁清单收敛成唯一事实源（tools/platform/gate_manifest.json），
+          #   两边按它走，这道门禁负责对账，防止以后再漂。
+          python tools/platform/check_gate_coverage.py
+          # 这道门禁自己也得有牙齿：注入漂移必须报红
+          python tools/platform/test_check_gate_coverage.py
+          python tools/platform/test_gate_chain.py
+
       - name: 方案文档里的数字必须与真实产物一致（文档这一层此前没有门禁）
         env:
           PYTHONIOENCODING: utf-8
@@ -116,7 +133,7 @@ jobs:
           #   **对外文案页根本没人管**。跟文档层是同一条病根：数字写在哪儿，
           #   哪儿就得有门禁；对外文案更是给用户看的假话。
           #   修法：把对外文案页钉在 registry.json / 学科构建产物 / 单文件产物上。
-          python tools/platform/check_public_copy.py \
+          python tools/platform/check_public_copy.py --strict \
             --single-file "$GITHUB_WORKSPACE/sources/calculus/ci-build/calculus-quiz-offline.html"
           # 这道门禁自己也得有牙齿：造错必须报错、**删掉声明也算错**（解析不到 ⇒ 报红）
           python tools/platform/test_check_public_copy.py

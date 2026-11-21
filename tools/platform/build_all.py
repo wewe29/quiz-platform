@@ -23,6 +23,7 @@ PLATFORM = os.path.abspath(os.path.join(HERE, "..", ".."))
 sys.path.insert(0, HERE)   # portal_meta 与本脚本同目录；被当模块导入时也要能找到
 from portal_meta import describe as portal_desc, read_meta, apply_meta  # noqa: E402
 import subject_shell  # noqa: E402
+import gate_chain  # noqa: E402
 
 
 def run(cmd, cwd, label, extra_env=None):
@@ -201,10 +202,6 @@ def main():
 
     print("=" * 60)
     run([sys.executable, os.path.join(HERE, "validate_platform.py")], cwd=HERE, label="平台校验")
-    # 行为门禁：子站运行期行为（导入来源校验 / 错题本计数 / 用时口径）（2026-11-22）。
-    # 放在构建链里 ⇒ 这道门禁对「CI 就是部署者」同样生效：谁把 app.js 改坏了，
-    # 门禁当场报红，坏产物出不了 dist/。
-    run([sys.executable, os.path.join(HERE, "check_app_behavior.py")], cwd=HERE, label="子站运行期行为门禁")
 
     if args.dist:
         dist = os.path.join(PLATFORM, "dist")
@@ -227,6 +224,27 @@ def main():
         size = sum(os.path.getsize(os.path.join(r, f)) for r, _, fs in os.walk(dist) for f in fs)
         print("[OK ] dist/ 组装完成（%s）：%d 个文件 / %.2f MB，逐字节核对通过"
               % (mode, n, size / 1048576.0))
+
+    # 门禁链：按唯一清单（gate_manifest.json）逐道跑。
+    # 2026-11-22 实测的教训：本地构建链原本只跑 1 道门禁（check_app_behavior.py），
+    # 而 CI 的 build job 跑 10 道 —— 对外文案门禁本地**根本没跑**，
+    # 于是「离线下载页对外声明的单文件字节数已经过期」本地永远发现不了，
+    # 只有 CI 能发现 ⇒「本地全绿」是个假信号。
+    # 清单驱动之后两边跑的是同一套门禁；check_gate_coverage.py 负责对账，
+    # 防止以后再漂。
+    #
+    # 位置在 dist/ 组装**之后**：有的门禁（check_plan_doc）要读真实 dist/ 的
+    # 文件数与体积，组装前跑就只能对着旧 dist/ 说假话。
+    # 代价是「坏产物先落进 dist/ 再报红」—— 但 CI 红就不发布，
+    # 线上不会拿到坏产物；本地则由下面这行红字指出来源。
+    print("=" * 60)
+    manifest = gate_chain.load_manifest()
+    ok, failures, ran = gate_chain.run_chain(manifest, dist_ready=bool(args.dist))
+    if not ok:
+        for label, script, why in failures:
+            print("[FAIL] 门禁 %s（%s）：%s" % (label, script, why))
+        raise SystemExit("[build_all] 门禁链失败，中止。")
+    print("[OK ] 门禁链：%d 道全绿" % len(ran))
     return 0
 
 

@@ -43,6 +43,9 @@ MUTATIONS = [
      "      session.elapsedMs += gap;\n", "用时"),
     ("去掉 hidden 重置（重新打开页面后计时不恢复）",
      "    session.hidden = !!document.hidden;\n", "", "计时要恢复"),
+    ("撤掉旧会话用时归零（污染过的用时又继续显示）",
+     "    if (s.elapsedV !== ELAPSED_V) { s.elapsedMs = 0; s.elapsedV = ELAPSED_V; }\n",
+     "", "归零"),
 ]
 
 failures = []
@@ -75,12 +78,12 @@ def run_gate(app_path):
     return p.returncode, p.stdout.decode("utf-8", "replace")
 
 
-def run_calculus_tests_with_defect(root):
-    """把高数模块化路径拷到临时目录，撤掉计时上限，跑它自己的单测。
+def run_calculus_tests_with_defect(root, tag, needle, repl):
+    """把高数模块化路径拷到临时目录，撤掉一处修复，跑它自己的单测。
 
     高数走的是**另一套架构**（多文件 core/ + ui/，自带 tools/tests/ 的
     node --test 套件），所以它的断言不归 check_app_behavior 管，而是归
-    这套自带单测管 —— 但「自带单测」也得有牙齿，所以这里也做一次反向注入。
+    这套自带单测管 —— 但「自带单测」也得有牙齿，所以这里也做反向注入。
     """
     node = shutil.which("node") or shutil.which("node.exe")
     if not node:
@@ -88,15 +91,14 @@ def run_calculus_tests_with_defect(root):
     src_root = os.path.join(PLATFORM, "sources", "calculus", "tools")
     if not os.path.isdir(os.path.join(src_root, "tests")):
         return 0, "高数镜像里没有 tools/tests（反向测试无法执行 ⇒ 判失败）"
-    dst_root = os.path.join(root, "calculus", "tools")
+    dst_root = os.path.join(root, "calculus-" + tag, "tools")
     for rel in ("assets/js", "tests"):
         shutil.copytree(os.path.join(src_root, rel), os.path.join(dst_root, rel))
     sess = os.path.join(dst_root, "assets", "js", "core", "session.js")
     b = open(sess, "rb").read()
-    needle = b"      if (gap >= 0 && gap <= MAX_TICK_GAP) session.elapsedMs += gap;\n"
     if b.count(needle) != 1:
-        return 0, "高数 session.js 的计时锚点命中 %d 次（应为 1）" % b.count(needle)
-    b = b.replace(needle, b"      session.elapsedMs += gap;\n", 1)
+        return 0, "高数 session.js 的锚点命中 %d 次（应为 1）：%r" % (b.count(needle), needle[:60])
+    b = b.replace(needle, repl, 1)
     with open(sess, "wb") as f:
         f.write(b)
     p = subprocess.run([node, "--test", os.path.join(dst_root, "tests", "core.test.js")],
@@ -153,10 +155,21 @@ def main():
         check("门禁对缺失文件报错", rc != 0)
 
         # 4) 反向样本：高数**模块化**路径 —— 它有自己的单测（tools/tests/），
-        #    撤掉计时上限后，它自己的单测必须报错（否则那处修复没有牙齿）
+        #    撤掉修复后，它自己的单测必须报错（否则那处修复没有牙齿）
         print("· 高数模块化路径：撤掉计时上限后它自己的单测必须报错")
-        rc, out = run_calculus_tests_with_defect(root)
+        rc, out = run_calculus_tests_with_defect(
+            root, "timer",
+            b"      if (gap >= 0 && gap <= MAX_TICK_GAP) session.elapsedMs += gap;\n",
+            b"      session.elapsedMs += gap;\n")
         check("高数模块化路径的单测对注入的缺陷报错", rc != 0,
+              "单测居然通过了：%s" % out.strip().splitlines()[-1] if out.strip() else "")
+
+        print("· 高数模块化路径：撤掉旧会话用时归零后它自己的单测必须报错")
+        rc, out = run_calculus_tests_with_defect(
+            root, "legacy",
+            b"    if (s.elapsedV !== ELAPSED_V) { s.elapsedMs = 0; s.elapsedV = ELAPSED_V; }\n",
+            b"")
+        check("高数模块化路径的单测对「旧会话归零」缺陷报错", rc != 0,
               "单测居然通过了：%s" % out.strip().splitlines()[-1] if out.strip() else "")
     finally:
         shutil.rmtree(root, ignore_errors=True)

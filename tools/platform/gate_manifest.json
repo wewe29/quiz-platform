@@ -1,0 +1,82 @@
+{
+ "version": 1,
+ "note": "平台门禁的唯一事实源。CI（.github/workflows/deploy.yml）与本地构建链（build_all.py → gate_chain.py）都必须覆盖这份清单；check_gate_coverage.py 负责对账，防止两边悄悄漂移。2026-11-22 实测：本地构建链原本只跑 1 道门禁、CI 跑 10 道 ⇒「本地全绿」是假信号（对外文案的数字过期本地根本发现不了）。",
+ "gates": [
+  {
+   "id": "build-driver",
+   "script": "build_all.py",
+   "kind": "driver",
+   "reverse_test": null,
+   "in_ci": true,
+   "in_build_chain": false,
+   "why": "平台总构建入口：CI 与本地都通过它跑门禁链（它本身不是门禁，但 CI 引用了它 ⇒ 必须登记，否则清单与现实脱节）"
+  },
+  {
+   "id": "app-behavior",
+   "script": "check_app_behavior.py",
+   "reverse_test": "test_check_app_behavior.py",
+   "in_ci": true,
+   "in_build_chain": true,
+   "why": "子站运行期行为：导入来源校验 / 错题本计数 / 用时口径"
+  },
+  {
+   "id": "plan-doc",
+   "script": "check_plan_doc.py",
+   "reverse_test": "test_check_plan_doc.py",
+   "in_ci": true,
+   "in_build_chain": true,
+   "requires_dist": true,
+   "why": "方案文档里的数字必须与真实产物一致（要读真实 dist/ 的文件数与体积 ⇒ 只有本次构建组装了 dist/ 才能跑）"
+  },
+  {
+   "id": "public-copy",
+   "script": "check_public_copy.py",
+   "reverse_test": "test_check_public_copy.py",
+   "in_ci": true,
+   "in_build_chain": true,
+   "args": ["--strict"],
+   "needs_single_file": true,
+   "why": "对外文案页里的数字必须与真实产物一致 —— 本地漏跑的就是它（2026-11-22 CI 抓到的红）"
+  },
+  {
+   "id": "gate-coverage",
+   "script": "check_gate_coverage.py",
+   "reverse_test": "test_check_gate_coverage.py",
+   "in_ci": true,
+   "in_build_chain": true,
+   "why": "门禁清单对账：CI 与本地构建链必须跑同一套门禁"
+  },
+  {
+   "id": "chain-self-test",
+   "script": "test_gate_chain.py",
+   "reverse_test": null,
+   "in_ci": true,
+   "in_build_chain": true,
+   "why": "门禁链执行器自身的反向测试：清单驱动的链真的执行了清单里的门禁吗"
+  },
+  {
+   "id": "platform-self-test",
+   "script": "test_platform_gates.py",
+   "reverse_test": null,
+   "in_ci": true,
+   "in_build_chain": true,
+   "why": "平台自检回归（造错必须报错）"
+  },
+  {
+   "id": "mirror-self-test",
+   "script": "test_sync_mirror.py",
+   "reverse_test": null,
+   "in_ci": true,
+   "in_build_chain": true,
+   "why": "镜像同步的回归测试"
+  },
+  {
+   "id": "worktree-eol",
+   "script": "check_worktree_eol.py",
+   "reverse_test": "test_check_worktree_eol.py",
+   "in_ci": false,
+   "in_build_chain": false,
+   "why": "比较工作区与 HEAD blob：提交前必然报红 ⇒ 只能在提交后手动跑；CI 里工作区就是 HEAD，跑它没有意义"
+  }
+ ]
+}

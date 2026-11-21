@@ -51,12 +51,20 @@
 
   /* ---------------- 会话生命周期 ---------------- */
 
+  /* 「用时」的口径版本。
+   * v2（2026-11-22）：tick 的间隔封顶 60 秒，页面关掉的那段时间不算进用时。
+   *   但**旧版本累积出来的 elapsedMs 已经被污染** —— 老代码把「页面关着的
+   *   几天空档」也加了进去（线上实录 191:43:32，实际只练了几分钟）。
+   *   止血不等于治伤：用户今天打开看到的仍是那个假数。
+   *   ⇒ 没有这个版本标记的旧会话，用时一律归零（答题记录与错题本照旧保留）。 */
+  var ELAPSED_V = 2;
+
   function ensureSession() {
     var s = latestActive();
     if (!s) {
       s = {
         id: newSessionId(), startedAt: now(), updatedAt: now(), endedAt: null,
-        elapsedMs: 0, lastTick: null, hidden: false,
+        elapsedMs: 0, elapsedV: ELAPSED_V, lastTick: null, hidden: false,
         filter: blankFilter(false),
         order: [], cursor: 0, status: 'active', answers: {}
       };
@@ -64,6 +72,8 @@
     }
     if (!s.answers) s.answers = {};
     if (!s.filter) s.filter = blankFilter(false);
+    // 旧会话的「用时」不可信（见 ELAPSED_V）：归零重来，别让污染过的数继续显示。
+    if (s.elapsedV !== ELAPSED_V) { s.elapsedMs = 0; s.elapsedV = ELAPSED_V; }
     // 兼容旧记录：早期版本把 pointsHit 初始化成全 false（= 已判「未得到」）
     Object.keys(s.answers).forEach(function (k) {
       var a = s.answers[k];
@@ -101,7 +111,7 @@
     }
     session = {
       id: newSessionId(), startedAt: now(), updatedAt: now(), endedAt: null,
-      elapsedMs: 0, lastTick: null, hidden: false,
+      elapsedMs: 0, elapsedV: ELAPSED_V, lastTick: null, hidden: false,
       filter: blankFilter(!!keepWrong),
       order: [], cursor: 0, status: 'active', answers: {}
     };

@@ -225,6 +225,8 @@ def main(argv=None):
                     help="高数正本目录（给了就额外检查正本那份，并要求与镜像逐字节一致）")
     ap.add_argument("--single-file", default=None,
                     help="单文件离线版构建产物路径（给了才检查字节数声明）")
+    ap.add_argument("--strict", action="store_true",
+                    help="把「未检查」也当失败：查不到事实源就不许装作检查过（构建链里必须这么用）")
     args = ap.parse_args(argv)
 
     errors = []
@@ -282,6 +284,18 @@ def main(argv=None):
                               % (name, paths[0], paths[-1]))
             else:
                 print("  [OK ] %s：正本与镜像逐字节一致" % name)
+
+    # --strict：构建链里「查不到事实源」不能被当成通过。
+    # 2026-11-22 实测：本地构建链根本没跑这道门禁，于是「对外声明的字节数过期」
+    # 本地永远发现不了，只有 CI 能发现 ⇒ 本地全绿是假信号。
+    # 现在构建链按清单跑，且必须带着真实产物来查；查不到 ⇒ 报红。
+    if args.strict:
+        if not args.single_file:
+            print("[FAIL] --strict 要求同时提供 --single-file：查不到事实源就不能装作检查过")
+            return 2
+        for n in notes:
+            errors.append("[strict] %s" % n)
+        notes = []
 
     for n in notes:
         print("[注意] %s" % n)

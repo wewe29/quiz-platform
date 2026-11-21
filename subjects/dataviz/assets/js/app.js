@@ -278,12 +278,21 @@
     ids.sort(function (a, b) { return (state.sessions[b].startedAt || 0) - (state.sessions[a].startedAt || 0); });
     return state.sessions[ids[0]];
   }
+  /* 「用时」的口径版本。
+   * v2（2026-11-22）：tick 的间隔封顶 60 秒，页面关掉的那段时间不算进用时。
+   *   但**旧版本累积出来的 elapsedMs 已经被污染** —— 老代码把「页面关着的
+   *   几天空档」也加了进去（线上实录 191:43:32，实际只练了几分钟）。
+   *   止血不等于治伤：用户今天打开看到的仍是那个假数。
+   *   ⇒ 没有这个版本标记的旧会话，用时一律归零（答题记录与错题本照旧保留）。
+   *   新会话从 0 开始、逐拍累加，不受影响。 */
+  var ELAPSED_V = 2;
+
   function ensureSession() {
     var s = latestActive();
     if (!s) {
       s = {
         id: newSessionId(), startedAt: now(), updatedAt: now(), endedAt: null,
-        elapsedMs: 0, lastTick: null, hidden: false,
+        elapsedMs: 0, elapsedV: ELAPSED_V, lastTick: null, hidden: false,
         filter: { types: [], diffs: [], chapters: [], onlyWrong: false, kw: '' },
         order: [], cursor: 0, status: 'active', answers: {}
       };
@@ -291,6 +300,8 @@
     }
     if (!s.answers) s.answers = {};
     if (!s.filter) s.filter = { types: [], diffs: [], chapters: [], onlyWrong: false, kw: '' };
+    // 旧会话的「用时」不可信（见 ELAPSED_V）：归零重来，别让污染过的数继续显示。
+    if (s.elapsedV !== ELAPSED_V) { s.elapsedMs = 0; s.elapsedV = ELAPSED_V; }
     // 兼容旧记录：早期版本把 pointsHit 初始化成全 false（= 已判「未得到」），
     // 这里迁移成 null（尚未自评），否则老记录一打开就显示「未得到任何采分点」。
     Object.keys(s.answers).forEach(function (k) {
@@ -312,7 +323,7 @@
     if (session) { session.status = 'finished'; session.endedAt = now(); }
     session = {
       id: newSessionId(), startedAt: now(), updatedAt: now(), endedAt: null,
-      elapsedMs: 0, lastTick: null, hidden: false,
+      elapsedMs: 0, elapsedV: ELAPSED_V, lastTick: null, hidden: false,
       filter: keepWrong ? { types: [], diffs: [], chapters: [], onlyWrong: true, kw: '' }
                         : { types: [], diffs: [], chapters: [], onlyWrong: false, kw: '' },
       order: [], cursor: 0, status: 'active', answers: {}

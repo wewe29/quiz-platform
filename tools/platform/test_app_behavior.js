@@ -258,7 +258,8 @@ function caseTimerIgnoresClosedTabGap() {
     sessions: {
       's-gap': {
         id: 's-gap', startedAt: Date.now() - GAP, updatedAt: Date.now(),
-        elapsedMs: 60000, lastTick: Date.now() - GAP, hidden: false,
+        // elapsedV=2 = 新口径会话（这个种子测的是「间隔封顶」，不是「旧会话归零」）
+        elapsedMs: 60000, elapsedV: 2, lastTick: Date.now() - GAP, hidden: false,
         endedAt: null, filter: { types: [], diffs: [], chapters: [], onlyWrong: false, kw: '' },
         order: [], cursor: 0, status: 'active', answers: {}
       }
@@ -285,7 +286,7 @@ function caseTimerResetsHiddenFlag() {
     sessions: {
       's-hidden': {
         id: 's-hidden', startedAt: Date.now() - 60000, updatedAt: Date.now(),
-        elapsedMs: 0, lastTick: Date.now() - 5000, hidden: true,
+        elapsedMs: 0, elapsedV: 2, lastTick: Date.now() - 5000, hidden: true,
         endedAt: null, filter: { types: [], diffs: [], chapters: [], onlyWrong: false, kw: '' },
         order: [], cursor: 0, status: 'active', answers: {}
       }
@@ -303,6 +304,37 @@ function caseTimerResetsHiddenFlag() {
     });
 }
 
+/* ---------- 用例 11：旧会话里被污染的「用时」必须归零（止血之后还要治伤） ---------- */
+function caseLegacyElapsedIsZeroed() {
+  // 线上实录：会话 2026-11-14 开始、当天关掉页面，统计面板显示 191:43:32，
+  // 实际只练了几分钟。老代码把「页面关着的 8 天空档」也加进了用时。
+  // 2026-11-22 修好了「间隔封顶」（不再新增空档），但**已经膨胀的数还躺在
+  // localStorage 里**——用户今天打开看到的仍是假话 ⇒ 旧会话的用时必须归零。
+  const LEGACY = 191 * 3600 * 1000 + 43 * 60 * 1000 + 32 * 1000;   // 191:43:32
+  const initial = {
+    v: 1, bank: BANK_ID, updatedAt: Date.now(),
+    sessions: {
+      's-legacy': {
+        id: 's-legacy', startedAt: Date.now() - LEGACY, updatedAt: Date.now(),
+        elapsedMs: LEGACY, lastTick: Date.now() - 5000, hidden: false,   // 没有 elapsedV = 旧口径会话
+        endedAt: null, filter: { types: [], diffs: [], chapters: [], onlyWrong: false, kw: '' },
+        order: [], cursor: 0, status: 'active', answers: {}
+      }
+    },
+    wrongBook: {}, stats: {}, settings: {}
+  };
+  const ctx = boot(initial);
+  return H.settle()
+    .then(() => new Promise((r) => setTimeout(r, 1600)))
+    .then(() => {
+      const m = ctx.doc.getElementById('m-time').textContent || '';
+      const sec = clockSeconds(m);
+      check('旧会话被污染的「用时」必须归零（191:43:32 不许继续显示）',
+        isFinite(sec) && sec < 60, 'HUD「用时」= ' + m + '（' + sec + ' 秒）');
+      check('旧会话归零后仍在继续计时（不是卡死）', isFinite(sec) && sec >= 0, 'HUD「用时」= ' + m);
+    });
+}
+
 /* ---------- 主流程 ---------- */
 const DATA_CASES = [
   ['导出的文件必须带来源标识', caseExportCarriesIdentity],
@@ -316,7 +348,8 @@ const DATA_CASES = [
 const COMMON_CASES = [
   ['错题本 badge 不得说谎', caseWrongBookCountHonest],
   ['关掉页面的时间不得算进「用时」', caseTimerIgnoresClosedTabGap],
-  ['重新打开页面时 hidden 标记必须重置', caseTimerResetsHiddenFlag]
+  ['重新打开页面时 hidden 标记必须重置', caseTimerResetsHiddenFlag],
+  ['旧会话被污染的「用时」必须归零', caseLegacyElapsedIsZeroed]
 ];
 
 (async function main() {
