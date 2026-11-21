@@ -92,10 +92,13 @@ def main():
         else:
             bad += 1
             print("[FAIL] %s —— 行为门禁不通过：" % rel(p))
+            # 输出契约：每条失败断言一行，以 "- " 开头（node 测试的汇总行）。
+            # 反向测试 test_check_import_guard.py 依赖这个前缀来确认
+            # 「门禁确实点名了被撤掉的那条断言」——改格式前必须重跑那个反向测试。
             for l in lines:
                 s = l.strip()
                 if s.startswith("- "):
-                    print("       " + s[2:])
+                    print("       " + s)
     if bad:
         raise SystemExit("[import-guard] %d 个被测文件未通过行为门禁。" % bad)
     print("[OK ] 导入守卫 + 错题本计数：%d 个被测文件全部通过（真实 app.js 行为）"

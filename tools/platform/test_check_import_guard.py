@@ -26,15 +26,17 @@ TPL_JS = os.path.join(HERE, "template_subject", "assets", "js")
 TPL_APP = os.path.join(TPL_JS, "app.js")
 TPL_STORE = os.path.join(TPL_JS, "core", "store.js")
 
-# (用例名, 要替换的原样片段, 替换成什么) —— 每一条都等价于「把修复撤掉」
+# (用例名, 要替换的原样片段, 替换成什么, 门禁报错里必须出现的关键字)
+# 关键字这一列不是装饰：它保证门禁**点名了被撤掉的那条断言**，
+# 而不是随便报个错就算数（否则「门禁坏了」也会被当成「抓到缺陷了」）。
 MUTATIONS = [
     ("撤掉导入来源校验（跨学科文件又被静默合并）",
-     "    assertImportMatchesBank(payload);\n", ""),
+     "    assertImportMatchesBank(payload);\n", "", "被拒绝"),
     ("错题本计数改回未过滤（badge 又开始说谎）",
      "    var ids = wrongBookIds();\n",
-     "    var ids = Object.keys(state.wrongBook);\n"),
+     "    var ids = Object.keys(state.wrongBook);\n", "badge"),
     ("导入时不再忽略失效题号（外来题号又进错题本）",
-     "      if (!qById[qid]) { skipped++; return; }\n", ""),
+     "      if (!qById[qid]) { skipped++; return; }\n", "", "题库里没有的题号"),
 ]
 
 failures = []
@@ -83,7 +85,7 @@ def main():
         check("未改动的 app.js 通过门禁（门禁不误报）", rc == 0, out.strip().splitlines()[-1] if out.strip() else "")
 
         # 1) 反向样本：逐个撤掉修复，门禁必须报错
-        for i, (name, needle, repl) in enumerate(MUTATIONS):
+        for i, (name, needle, repl, keyword) in enumerate(MUTATIONS):
             print("· 注入缺陷：" + name)
             if needle not in original:
                 check("注入缺陷的锚点存在（源码改了名字就要同步改这里）", False,
@@ -99,6 +101,9 @@ def main():
                 hit = [l for l in out.splitlines() if l.strip().startswith("- ")]
                 check("报错里点名了被撤掉的那条断言：" + name, len(hit) > 0,
                       "报错里没有任何断言明细")
+                check("报错里点名的是**对的那条**断言：" + name,
+                      any(keyword in l for l in hit),
+                      "报错明细里找不到关键字 %r" % keyword)
 
         # 2) 反向样本：被测文件根本不是 app.js 时，门禁必须报错而不是「通过」
         print("· 被测文件不是 app.js 时必须报错")
